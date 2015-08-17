@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <!-- <style type="text/css">code{white-space: pre-wrap;}</style> -->
+    <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//css/slidy_custom_sh.css" />
+    <!--<link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>--> 
+    <script src="..//js/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+
+<script src="..//js/jquery-1.11.2.min.js"
+    charset="utf-8" type="text/javascript"></script>
+    <script src="..//js/jquery.snippet.js"
+    charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="..//css/jquery.snippet.css" />
+    <script type="text/javascript">
+            $(document).ready(function(){
+    
+    $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+        // Finds <pre> element
+        // and snippet highlights the CSS code within
+        // using the "greenlcd" styling.
+    });
+    </script>
+</head>
+<body>
+<div id="topic-putting-the-files-to-use-xpath-and-xslt" class="slide section level1">
+<h1>Topic: Putting the files to use: XPath and XSLT</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and the <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS code</a> of the W3C.</p>
+</div>
+<div id="what-is-the-xsl-family" class="slide section level1">
+<h1>What is the XSL family?</h1>
+<ul>
+<li><em>XPath</em>: a language for expressing paths through XML trees</li>
+<li><em>XSLT</em>: a programming language for transforming XML</li>
+<li><em>XSL FO</em>: an XML vocabulary for describing formatted pages (we won't cover this)</li>
+</ul>
+</div>
+<div id="xslt" class="slide section level1">
+<h1>XSLT</h1>
+<p>The XSLT language is</p>
+<ul>
+<li>expressed in XML</li>
+<li>uses namespaces to distinguish output from instructions</li>
+<li>purely functional</li>
+<li>reads and writes XML trees</li>
+</ul>
+<p>It was designed to generate XSL FO, but now widely used to generate HTML.</p>
+</div>
+<div id="what-is-a-transformation" class="slide section level1">
+<h1>What is a transformation?</h1>
+<p>Take this:</p>
+<pre><code>&lt;persName&gt;
+    &lt;forename&gt;Milo&lt;/forename&gt;
+    &lt;surname&gt;Casagrande&lt;/surname&gt;
+&lt;/persName&gt;
+&lt;persName&gt;
+    &lt;forename&gt;Corey&lt;/forename&gt;
+    &lt;surname&gt;Burger&lt;/surname&gt;
+&lt;/persName&gt;
+&lt;persName&gt;
+    &lt;forename&gt;Naaman&lt;/forename&gt;
+    &lt;surname&gt;Campbell&lt;/surname&gt;
+&lt;/persName&gt;</code></pre>
+<p>and make this:</p>
+<pre><code>&lt;item n=&quot;1&quot;&gt;
+    &lt;name&gt;Burger&lt;/name&gt;
+&lt;/item&gt;
+&lt;item n=&quot;2&quot;&gt;
+    &lt;name&gt;Campbell&lt;/name&gt;
+&lt;/item&gt;
+&lt;item n=&quot;3&quot;&gt;
+    &lt;name&gt;Casagrande&lt;/name&gt;
+&lt;/item&gt;</code></pre>
+</div>
+<div id="a-text-example" class="slide section level1">
+<h1>A text example</h1>
+<p>Take this:</p>
+<pre><code>&lt;div n=&quot;34&quot; type=&quot;recipe&quot;&gt;
+    &lt;head&gt;Pasta for beginners&lt;/head&gt;
+    &lt;list&gt;
+        &lt;item&gt;Pasta&lt;/item&gt;
+        &lt;item&gt;Grated cheese&lt;/item&gt;
+    &lt;/list&gt;
+    &lt;p&gt;Cook the pasta and mix with the cheese&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>and make this:</p>
+<pre><code>&lt;html&gt;
+    &lt;h1&gt;34: Pasta for beginners&lt;/h1&gt;
+    &lt;p&gt;Ingredients: Pasta Grated cheese&lt;/p&gt;
+    &lt;p&gt;Cook the pasta and mix with the cheese&lt;/p&gt;
+&lt;/html&gt;</code></pre>
+</div>
+<div id="how-do-you-express-that-in-xsl" class="slide section level1">
+<h1>How do you express that in XSL?</h1>
+<pre><code>&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;xsl:template match=&quot;div&quot;&gt;
+        &lt;html&gt;
+            &lt;h1&gt;
+                &lt;xsl:value-of select=&quot;@n&quot;/&gt;:
+                &lt;xsl:value-of select=&quot;head&quot;/&gt;&lt;/h1&gt;
+            &lt;p&gt;Ingredients:
+                &lt;xsl:apply-templates select=&quot;list/item&quot;/&gt;&lt;/p&gt;
+            &lt;p&gt;
+                &lt;xsl:value-of select=&quot;p&quot;/&gt;
+            &lt;/p&gt;
+        &lt;/html&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+<p>Note: the namespace declaration linking xsl: to http://www.w3.org/1999/XSL/Transform</p>
+</div>
+<div id="structure-of-an-xsl-file" class="slide section level1">
+<h1>Structure of an XSL file</h1>
+<pre><code>&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;xsl:template match=&quot;div&quot;&gt;
+        &lt;!-- .... do something with div elements....--&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&quot;p&quot;&gt;
+        &lt;!-- .... do something with p elements....--&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+<ul>
+<li>The <code>div</code> and <code>p</code> are <em>XPath expressions</em>, which specify which bit of the document is matched by the template.</li>
+<li>Any element not starting with <strong>xsl:</strong> in a template body is put into the output.</li>
+</ul>
+</div>
+<div id="the-golden-rules-of-xslt" class="slide section level1">
+<h1>The golden rules of XSLT</h1>
+<ol style="list-style-type: decimal">
+<li>If there is no template matching an element, we go on and process the elements inside it</li>
+<li>If there are no elements to process by Rule 1, any text inside the element is output</li>
+<li>Children elements are not processed by a template unless you explicitly say so</li>
+<li><code>&lt;xsl:apply-templates select=&quot;XX&quot;/&gt;</code> looks for templates which match element &quot;XX&quot;; <code>&lt;xsl:value-of select=&quot;XX&quot;/&gt;</code> simply gets any text from that element</li>
+<li>The order of templates in your program file is immaterial</li>
+<li>You can process any part of the document from any template</li>
+<li>Everything is well-formed XML. Everything!</li>
+</ol>
+</div>
+<div id="important-magic" class="slide section level1">
+<h1>Important &quot;magic&quot;</h1>
+<p>Our examples and exercises all start with two important attributes on <code>&lt;stylesheet&gt;</code>:</p>
+<pre><code>&lt;xsl:stylesheet 
+    xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; 
+    xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot; 
+    version=&quot;2.0&quot;&gt;</code></pre>
+<p>This indicates that</p>
+<ol style="list-style-type: decimal">
+<li>In our XPath expressions, any element name without a namespace is assumed to be in the TEI namespace</li>
+<li>We want to use version 2.0 of the XSLT specification. This means that we must use the Saxon processor for our work.</li>
+</ol>
+</div>
+<div id="a-simple-test-file" class="slide section level1">
+<h1>A simple test file</h1>
+<pre><code>&lt;text&gt;
+    &lt;front&gt;
+        &lt;div&gt;
+            &lt;p&gt;Material up front&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;head&gt;Introduction&lt;/head&gt;
+            &lt;p rend=&quot;it&quot;&gt;Some sane words&lt;/p&gt;
+            &lt;p&gt;Rather more surprising words&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;back&gt;
+        &lt;div&gt;
+            &lt;p&gt;Material in the back&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/back&gt;
+&lt;/text&gt;</code></pre>
+</div>
+<div id="xsl-feature-apply-templates" class="slide section level1">
+<h1>XSL feature: apply-templates</h1>
+<pre><code>&lt;xsl:stylesheet version=&quot;2.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;xsl:template match=&quot;/&quot;&gt;
+        &lt;html&gt;
+            &lt;xsl:apply-templates/&gt;
+        &lt;/html&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&quot;TEI&quot;&gt;
+        &lt;xsl:apply-templates select=&quot;text&quot;/&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&quot;text&quot;&gt;
+        &lt;h1&gt;FRONT MATTER&lt;/h1&gt;
+        &lt;xsl:apply-templates select=&quot;front&quot;/&gt;
+        &lt;h1&gt;BODY MATTER&lt;/h1&gt;
+        &lt;xsl:apply-templates select=&quot;body&quot;/&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+</div>
+<div id="xsl-feature-value-of" class="slide section level1">
+<h1>XSL feature: value-of</h1>
+<p>Templates for paragraphs and headings</p>
+<pre><code>&lt;xsl:template match=&quot;p&quot;&gt;
+        &lt;p&gt;
+            &lt;xsl:apply-templates/&gt;
+        &lt;/p&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&quot;div&quot;&gt;
+        &lt;h2&gt;
+            &lt;xsl:value-of select=&quot;head&quot;/&gt;
+        &lt;/h2&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;div/head&quot;/&gt;</code></pre>
+<p>Notice how we avoid getting the heading text twice. Why did we need to qualify it to deal with just <code>&lt;head&gt;</code> inside <code>&lt;div&gt;</code>?</p>
+</div>
+<div id="more-complex-patterns" class="slide section level1">
+<h1>More complex patterns</h1>
+<p>The <span class="citation">@select</span> attribute can point to any part of the document. Using XPath expressions, we can find:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">expression</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">/</td>
+<td align="left">the root of document (outside the root element)</td>
+</tr>
+<tr class="even">
+<td align="left">*</td>
+<td align="left">any element</td>
+</tr>
+<tr class="odd">
+<td align="left">text()</td>
+<td align="left">only the text content of a node</td>
+</tr>
+<tr class="even">
+<td align="left">name</td>
+<td align="left">an element called <code>name</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="citation">@name</span></td>
+<td align="left">an attribute called <code>name</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example of a complete path in <code>&lt;value-of&gt;</code>: <code>&lt;xsl:value-of select=&quot;/TEI/teiHeader/fileDesc/titleStmt/title&quot;/&gt;</code></p>
+</div>
+<div id="xpath" class="slide section level1">
+<h1>XPath</h1>
+<p>XPath is the basis of most other XML querying and transformation languages.</p>
+<ul>
+<li>It is a syntax for accessing parts of an XML document</li>
+<li>It uses a path structure to define XML elements</li>
+<li>It has a library of standard functions</li>
+<li>It is a W3C Standard and one of the main components of XQuery and XSLT</li>
+</ul>
+</div>
+<div id="example-text" class="slide section level1">
+<h1>Example text</h1>
+<pre><code>&lt;body n=&quot;anthology&quot;&gt;
+    &lt;div type=&quot;poem&quot;&gt;
+        &lt;head&gt;The SICK ROSE &lt;/head&gt;
+        &lt;lg type=&quot;stanza&quot;&gt;
+            &lt;l n=&quot;1&quot;&gt;O Rose thou art sick.&lt;/l&gt;
+            &lt;l n=&quot;2&quot;&gt;The invisible worm,&lt;/l&gt;
+            &lt;l n=&quot;3&quot;&gt;That flies in the night &lt;/l&gt;
+            &lt;l n=&quot;4&quot;&gt;In the howling storm:&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;lg type=&quot;stanza&quot;&gt;
+            &lt;l n=&quot;5&quot;&gt;Has found out thy bed &lt;/l&gt;
+            &lt;l n=&quot;6&quot;&gt;Of crimson joy:&lt;/l&gt;
+            &lt;l n=&quot;7&quot;&gt;And his dark secret love &lt;/l&gt;
+            &lt;l n=&quot;8&quot;&gt;Does thy life destroy.&lt;/l&gt;
+        &lt;/lg&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+</div>
+<div id="example-xpath-expressions" class="slide section level1">
+<h1>Example XPath expressions</h1>
+<div class="figure">
+<img src="images/XPathExercise01.png" alt="XPathExercise 01" /><p class="caption">XPathExercise 01</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise02.png" alt="XPathExercise 02" /><p class="caption">XPathExercise 02</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise03.png" alt="XPathExercise 03" /><p class="caption">XPathExercise 03</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise04.png" alt="XPathExercise 04" /><p class="caption">XPathExercise 04</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise05.png" alt="XPathExercise 05" /><p class="caption">XPathExercise 05</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise06.png" alt="XPathExercise 06" /><p class="caption">XPathExercise 06</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise07.png" alt="XPathExercise 07" /><p class="caption">XPathExercise 07</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise08.png" alt="XPathExercise 08" /><p class="caption">XPathExercise 08</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise09.png" alt="XPathExercise 09" /><p class="caption">XPathExercise 09</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise10.png" alt="XPathExercise 10" /><p class="caption">XPathExercise 10</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise11.png" alt="XPathExercise 11" /><p class="caption">XPathExercise 11</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise12.png" alt="XPathExercise 12" /><p class="caption">XPathExercise 12</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise13.png" alt="XPathExercise 13" /><p class="caption">XPathExercise 13</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise14.png" alt="XPathExercise 14" /><p class="caption">XPathExercise 14</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise15.png" alt="XPathExercise 15" /><p class="caption">XPathExercise 15</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise16.png" alt="XPathExercise 16" /><p class="caption">XPathExercise 16</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise17.png" alt="XPathExercise 17" /><p class="caption">XPathExercise 17</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise18.png" alt="XPathExercise 18" /><p class="caption">XPathExercise 18</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise19.png" alt="XPathExercise 19" /><p class="caption">XPathExercise 19</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise20.png" alt="XPathExercise 20" /><p class="caption">XPathExercise 20</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise21.png" alt="XPathExercise 21" /><p class="caption">XPathExercise 21</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise22.png" alt="XPathExercise 22" /><p class="caption">XPathExercise 22</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise23.png" alt="XPathExercise 23" /><p class="caption">XPathExercise 23</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise24.png" alt="XPathExercise 24" /><p class="caption">XPathExercise 24</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise25.png" alt="XPathExercise 25" /><p class="caption">XPathExercise 25</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/XPathExercise26.png" alt="XPathExercise 26" /><p class="caption">XPathExercise 26</p>
+</div>
+</div>
+<div id="xpath-more-about-paths" class="slide section level1">
+<h1>XPath: More about paths</h1>
+<ul>
+<li>A location path results in a node-set</li>
+<li>Paths can be absolute: <code>/div/lg[1]/l</code></li>
+<li>Paths can be relative: <code>l/../../head</code></li>
+<li>Formal Syntax: <code>axisname::nodetest[predicate]</code></li>
+<li>For example: <code>child::div[contains(head, 'ROSE')]</code></li>
+</ul>
+</div>
+<div id="xpath-axes-1" class="slide section level1">
+<h1>XPath: axes (1)</h1>
+<ul>
+<li><code>self::</code> Contains the current node</li>
+<li><code>attribute::</code> Contains all attributes of the current node</li>
+<li><code>parent::</code> Contains the parent of the current node</li>
+<li><code>ancestor::</code> Contains all ancestors (parent, grandparent, etc.) of the current node</li>
+<li><code>ancestor-or-self::</code> Contains the current node plus all its ancestors (parent, grandparent, etc.)</li>
+<li><code>child::</code> Contains all children of the current node</li>
+<li><code>descendant::</code> Contains all descendants (children, grandchildren, etc.) of the current node</li>
+<li><code>descendant-or-self::</code> Contains the current node plus all its descendants (children, grandchildren, etc.)</li>
+</ul>
+</div>
+<div id="xpath-axes-2" class="slide section level1">
+<h1>XPath: axes (2)</h1>
+<ul>
+<li><code>following::</code> Contains everything in the document after the closing tag of the current node</li>
+<li><code>following-sibling::</code> Contains all siblings after the current node</li>
+<li><code>preceding::</code> Contains everything in the document that is before the starting tag of the current node</li>
+<li><code>preceding-sibling::</code> Contains all siblings before the current node</li>
+</ul>
+</div>
+<div id="example-xpath-axes" class="slide section level1">
+<h1>Example: XPath axes</h1>
+<ul>
+<li><code>ancestor::lg</code> = all <code>&lt;lg&gt;</code> ancestors</li>
+<li><code>ancestor-or-self::div</code> = all <code>&lt;div&gt;</code> ancestors or current</li>
+<li><code>attribute::n</code> = <code>n</code> attribute of current node</li>
+<li><code>child::l</code> = <code>&lt;l&gt;</code> elements directly under current node</li>
+<li><code>descendant::l</code> = <code>&lt;l&gt;</code> elements anywhere under current node</li>
+<li><code>descendant-or-self::div</code> = all <code>&lt;div&gt;</code> children or current</li>
+<li><code>following-sibling::l[1]</code> = next <code>&lt;l&gt;</code> element at this level</li>
+<li><code>preceding-sibling::l[1]</code> = previous <code>&lt;l&gt;</code> element at this level</li>
+<li><code>self::head</code> = current <code>&lt;head&gt;</code> element</li>
+</ul>
+</div>
+<div id="xpath-predicates-conditions" class="slide section level1">
+<h1>XPath: predicates (conditions)</h1>
+<ul>
+<li><code>child::lg[attribute::type='stanza']</code></li>
+<li><code>child::l[@n='4']</code></li>
+<li><code>child::div[position()=3]</code></li>
+<li><code>child::div[4]</code></li>
+<li><code>child::l[last()]</code></li>
+<li><code>child::lg[last()-1]</code></li>
+</ul>
+</div>
+<div id="xpath-abbreviated-syntax" class="slide section level1">
+<h1>XPath: abbreviated syntax</h1>
+<ul>
+<li>nothing is the same as <code>child::</code>, so <code>lg</code> is short for <code>child::lg</code></li>
+<li><code>@</code> is the same as <code>attribute::</code>, so <code>@type</code> is short for <code>attribute::type</code></li>
+<li><code>.</code> is the same as <code>self::</code>, so <code>./head</code> is short for <code>self::node()/child::head</code></li>
+<li><code>..</code> is the same as <code>parent::</code>, so <code>../lg</code> is short for <code>parent::node()/child::lg</code></li>
+<li><code>//</code> is the same as <code>descendant-or-self::</code>, so <code>div//l</code> is short for <code>child::div/descendant-or-self::node()/child::l</code></li>
+</ul>
+</div>
+<div id="xsl-example-context-dependent-matches" class="slide section level1">
+<h1>XSL example: context-dependent matches</h1>
+<p>Compare</p>
+<pre><code>&lt;xsl:template match=&quot;head&quot;&gt; .... &lt;/xsl:template&gt;</code></pre>
+<p>with</p>
+<pre><code>&lt;xsl:template match=&quot;div/head&quot;&gt; ... &lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;figure/head&quot;&gt; ....&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="xsl-processor-priorities-when-templates-conflict" class="slide section level1">
+<h1>XSL processor: priorities when templates conflict</h1>
+<p>It is possible for it to be ambiguous which template is to be used:</p>
+<pre><code>&lt;xsl:template match=&quot;person/name&quot;&gt;... &lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;name&quot;&gt;... &lt;/xsl:template&gt;</code></pre>
+<p>Which template is used when the processor meets a <code>&lt;name&gt;</code> element?</p>
+</div>
+<div id="xsl-processor-solving-priorities" class="slide section level1">
+<h1>XSL processor: solving priorities</h1>
+<p>There is a <span class="citation">@priority</span> attribute on <code>&lt;template&gt;</code>; the <strong>higher</strong> the value, the more inclined the XSLT engine is to use it:</p>
+<pre><code>&lt;xsl:template match=&quot;name&quot; priority=&quot;1&quot;&gt;
+    &lt;xsl:apply-templates/&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;person/name&quot; priority=&quot;2&quot;&gt; 
+    A name
+&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="xsl-processor-general-template-priority" class="slide section level1">
+<h1>XSL processor: general template priority</h1>
+<p>The normal rule is that <strong>the most specific template is applied</strong>.</p>
+<pre><code>&lt;xsl:template match=&quot;*&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;tei:*&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;p&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;div/p&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;div/p/@n&quot;&gt;
+    &lt;!-- ... --&gt;
+&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="xsl-pushing-and-pulling" class="slide section level1">
+<h1>XSL: pushing and pulling</h1>
+<p>XSLT stylesheets can be characterized as being of two types:</p>
+<ol style="list-style-type: decimal">
+<li><em>push</em>: In this type of stylesheet, there is a different template for every element, communication via <code>&lt;xsl:apply-templates&gt;</code> and the overall result is assembled from bits in each template. It is sometimes hard to visualize the final design. <strong>Common for data-oriented processing where the structure is fixed</strong>.</li>
+<li><em>pull</em>: In this type, there is a master template (usually matching <code>/</code>) with the main structure of the output, and specific <code>&lt;xsl:for-each&gt;</code> or <code>&lt;xsl:value-of&gt;</code> commands to grab what is needed for each part. The templates tend to get large and unwieldy. <strong>Common for document-oriented processing where the input document structure varies</strong>.</li>
+</ol>
+</div>
+<div id="xsl-attribute-value-template-1" class="slide section level1">
+<h1>XSL: attribute value template (1)</h1>
+<p>How can we turn this:</p>
+<pre><code>&lt;ref target=&quot;http://www.oucs.ox.ac.uk/&quot;&gt;OUCS&lt;/ref&gt;</code></pre>
+<p>into that:</p>
+<pre><code>&lt;a href=&quot;http://www.oucs.ox.ac.uk/&quot;/&gt;</code></pre>
+<p>if the following <strong>does not</strong> work:</p>
+<pre><code>&lt;xsl:template match=&quot;ref&quot;&gt;
+    &lt;a href=&quot;@target&quot;&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>as it will produce:</p>
+<pre><code>&lt;a href=&quot;@target&quot;&gt;OUCS&lt;/ref&gt;</code></pre>
+</div>
+<div id="xsl-attribute-value-template-1-1" class="slide section level1">
+<h1>XSL: attribute value template (1)</h1>
+<p>Instead we have two options to give the <span class="citation">@href</span> attribute whatever value the <span class="citation">@target</span> attribute has</p>
+<p>Use <code>{}</code> to indicate that the expression must be <strong>evaluated</strong>:</p>
+<pre><code>&lt;xsl:template match=&quot;ref&quot;&gt;
+    &lt;a href=&quot;{@target}&quot;&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>Use <code>&lt;xsl:attribute&gt;</code></p>
+<pre><code>&lt;xsl:template match=&quot;ref&quot;&gt;
+    &lt;a&gt;
+        &lt;xsl:attribute name=&quot;href&quot; select=&quot;@target&quot;/&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="xsl-feature-for-each" class="slide section level1">
+<h1>XSL feature: for-each</h1>
+<p>If we want to avoid lots of templates, we can do in-line looping over a set of elements. For example:</p>
+<pre><code>&lt;xsl:template match=&quot;listPerson&quot;&gt;
+    &lt;ul&gt;
+        &lt;xsl:for-each select=&quot;person&quot;&gt;
+            &lt;li&gt;
+                &lt;xsl:value-of select=&quot;persName&quot;/&gt;
+            &lt;/li&gt;
+        &lt;/xsl:for-each&gt;
+    &lt;/ul&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>compare to:</p>
+<pre><code>&lt;xsl:template match=&quot;listPerson&quot;&gt;
+    &lt;ul&gt;
+        &lt;xsl:apply-templates select=&quot;person&quot;/&gt;
+    &lt;/ul&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;person&quot;&gt;
+    &lt;li&gt;
+        &lt;xsl:value-of select=&quot;persName&quot;/&gt;
+    &lt;/li&gt;
+&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="xsl-feature-if" class="slide section level1">
+<h1>XSL feature: if</h1>
+<p>We can make code conditional on a test being passed. The <span class="citation">@test</span> can use <strong>any</strong> XPath facilities:</p>
+<pre><code>&lt;xsl:template match=&quot;person&quot;&gt;
+    &lt;xsl:if test=&quot;@sex=&#39;2&#39;&quot;&gt;
+        &lt;li&gt;
+            &lt;xsl:value-of select=&quot;persName&quot;/&gt;
+        &lt;/li&gt;
+    &lt;/xsl:if&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>compare to:</p>
+<pre><code>&lt;xsl:template match=&quot;person[@sex=&#39;1&#39;]&quot;&gt;
+    &lt;li&gt;
+        &lt;xsl:value-of select=&quot;persName&quot;/&gt;
+    &lt;/li&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&quot;person&quot;/&gt;</code></pre>
+</div>
+<div id="xsl-feature-choose" class="slide section level1">
+<h1>XSL feature: choose</h1>
+<p>We can make a multi-value choice conditional on what we find in the text:</p>
+<pre><code>&lt;xsl:template match=&quot;person&quot;&gt;
+    &lt;xsl:apply-templates/&gt;
+    &lt;xsl:choose&gt;
+        &lt;xsl:when test=&quot;@sex=&#39;1&#39;&quot;&gt;(male) &lt;/xsl:when&gt;
+        &lt;xsl:when test=&quot;@sex=&#39;2&#39;&quot;&gt;(female) &lt;/xsl:when&gt;
+        &lt;xsl:when test=&quot;not(@sex)&quot;&gt;(no sex specified) &lt;/xsl:when&gt;
+        &lt;xsl:otherwise&gt;(unknown sex)&lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+&lt;/xsl:template&gt;</code></pre>
+</div>
+<div id="summary-next" class="slide section level1">
+<h1>Summary / next</h1>
+<p>Now you can</p>
+<ol style="list-style-type: decimal">
+<li>Write templates which match any element or attribute</li>
+<li>Pick out text from anywhere</li>
+<li>Write code conditional on something in the text</li>
+</ol>
+<p>And we are going to put this knowledge to use on our XML files</p>
+</div>
+</body>
+</html>

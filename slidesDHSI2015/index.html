@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI Introduction</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI Introduction</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">1 Jun 2015</p>
+</div>
+<div id="introduction" class="slide section level1">
+<h1>Introduction</h1>
+<h2 id="text-encoding-fundamentals-and-their-application">Text Encoding Fundamentals and their Application</h2>
+<p>Dates and location: 1-5 June 2015, 9-12 and 1:30 to 4:30 at MacLaurin D016</p>
+<p>Instructor: Till Grallert, OIB, <script type="text/javascript">
+<!--
+h='&#x6f;&#114;&#x69;&#x65;&#110;&#116;&#x2d;&#x69;&#110;&#x73;&#116;&#x69;&#116;&#x75;&#116;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#x67;&#114;&#x61;&#108;&#108;&#x65;&#114;&#116;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x67;&#114;&#x61;&#108;&#108;&#x65;&#114;&#116;&#32;&#x61;&#116;&#32;&#x6f;&#114;&#x69;&#x65;&#110;&#116;&#x2d;&#x69;&#110;&#x73;&#116;&#x69;&#116;&#x75;&#116;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript></p>
+<p>General information on the schedule: <a href="http://dhsi.org/schedule.php">http://dhsi.org/schedule.php</a></p>
+<p>Course material: <a href="http://tinyurl.com/dhsi2015tei">http://tinyurl.com/dhsi2015tei</a>; password “dhsiUvic2015tei” (due to some of the images being copyrighted). The PDF course pack is available at <a href="http://goo.gl/6rSeFd">http://goo.gl/6rSeFd</a>.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS code</a>.</p>
+</div>
+<div id="goals" class="slide section level1">
+<h1>Goals:</h1>
+<p>By the end of this week you’ll have a basic knowledge of</p>
+<ul>
+<li>XML</li>
+<li>TEI P5</li>
+<li>oXygen</li>
+<li>XPath</li>
+<li>XSLT</li>
+<li>and a tiny bit of HTML and CSS</li>
+</ul>
+<p>You will also have encountered multilingual source material and transcriptions, including Arabic.</p>
+</div>
+<div id="goals-1" class="slide section level1">
+<h1>Goals:</h1>
+<p>… or, in less giberish terms, of</p>
+<ul>
+<li>data capture / recording in XML</li>
+<li>data modelling following the TEI</li>
+<li>data analysis and transformation through XSLT</li>
+<li>presentation of your data (on the web using HTML and CSS)</li>
+</ul>
+</div>
+<div id="goals-2" class="slide section level1">
+<h1>Goals:</h1>
+<p>… or, since a picture is worth more than a thousand words, as the saying goes, how to get from the paper copies in front of you …</p>
+<div class="figure">
+<img src="images/kawkab-img.jpg" alt="Image of Kawkab America" /><p class="caption">Image of <em>Kawkab America</em></p>
+</div>
+</div>
+<div id="goals-3" class="slide section level1">
+<h1>Goals:</h1>
+<p>… to this …</p>
+<div class="figure">
+<img src="images/kawkab-oxygen.png" alt="Kawkab America as TEI XML file in oXygen" /><p class="caption"><em>Kawkab America</em> as TEI XML file in oXygen</p>
+</div>
+</div>
+<div id="goals-4" class="slide section level1">
+<h1>Goals:</h1>
+<p>… and finally to that:</p>
+<div class="figure">
+<img src="images/kawkab-html.png" alt="Kawkab America as website" /><p class="caption"><em>Kawkab America</em> as website</p>
+</div>
+<!-- 
+# Goals:
+
+You will also have seen four different early-twentieth century newspapers from Beirut--*al-Bashīr*, *al-Iqbāl*, *Lisān al-Ḥāl*, and *Thamarāt al-Funūn*--and their reaction to the Young Turk Revolution and the restoration of the Ottoman constitution in July 1908. In addition, you will have encountered three different Arabic translations of that very constitution.
+-->
+
+</div>
+<div id="tentative-schedule" class="slide section level1">
+<h1>Tentative schedule</h1>
+<p>The schedule is preliminary and tentative and we’ll adopt it to the needs and the tempo of the course:</p>
+<ul>
+<li>Day 1: Introducing the game of XML and TEI</li>
+<li>Day 2: Data capture and organisation</li>
+<li>Day 3: Retrieving and displaying your data</li>
+<li>Day 4: Enriching your data with names and named entities</li>
+<li>Day 5: Facsimile linking</li>
+</ul>
+</div>
+<div id="day-1-introduction-to-the-game" class="slide section level1">
+<h1>Day 1: Introduction to the game</h1>
+<h2 id="morning-session-9-12">1 Morning Session, 9-12</h2>
+<ul>
+<li>Introductory round</li>
+<li><a href="TeiDhsi-Session01-TeiXml-Slidy.html">Lecture 1: Introduction to XML and TEI</a></li>
+<li>Introduce our sources / examples</li>
+<li>Exercise 1: first look at actual XML files</li>
+</ul>
+<h2 id="afternoon-session-130-345">2 Afternoon Session, 1:30-3:45</h2>
+<ul>
+<li><a href="TeiDhsi-Session02-TeiCoreModule-Slidy.html">Lecture 2: core module / structural mark-up</a></li>
+<li>Exercise 2a: contemplate the structure of newspaper texts (pen and paper)</li>
+</ul>
+</div>
+<div id="day-2-data-capture-and-organisation" class="slide section level1">
+<h1>Day 2: data capture and organisation</h1>
+<h2 id="morning-session-9-12-1">3 Morning Session, 9-12</h2>
+<ul>
+<li>Exercise 2b:
+<ul>
+<li>data entry / structural mark-up</li>
+<li>produce <em>well-formed</em> XML</li>
+</ul></li>
+<li><a href="TeiDhsi-Session03-SchemaCustomization-Slidy.html">Lecture 3: customisation / schemas</a></li>
+<li>Exercise 3: schema customisation
+<ul>
+<li>produce our own schema and validate our files against it</li>
+<li>produce <em>valid</em> TEI XML</li>
+</ul></li>
+</ul>
+<h2 id="afternoon-session-130-430">4 Afternoon Session, 1:30-4:30</h2>
+<ul>
+<li><a href="TeiDhsi-Session04-TeiMetadata-Slidy.html">Lecture 4: metadata</a></li>
+<li>Exercise 4: enrich our examples with relevant metadata</li>
+</ul>
+</div>
+<div id="day-3-retrieving-and-displaying-data" class="slide section level1">
+<h1>Day 3: retrieving and displaying data</h1>
+<h2 id="morning-session-9-12-2">5 Morning Session, 9-12</h2>
+<ul>
+<li><a href="TeiDhsi-Session05-XpathXslt-Slidy.html">Lecture 5: introduction to XPath and XSLT</a></li>
+<li>Exercise: XSLT
+<ul>
+<li>produce a toc</li>
+</ul></li>
+</ul>
+<h2 id="afternoon-session-130-430-1">6 Afternoon Session, 1:30-4:30</h2>
+<ul>
+<li>Continue exercise from morning session: XSLT
+<ul>
+<li>produce a toc</li>
+<li>produce a HTML view of our XML files</li>
+</ul></li>
+<li>Having a look at TEI Boilerplate</li>
+</ul>
+</div>
+<div id="day-4-names-and-named-entities" class="slide section level1">
+<h1>Day 4: names and named entities</h1>
+<h2 id="morning-session-9-12-3">7 Morning Session, 9-12</h2>
+<ul>
+<li><a href="TeiDhsi-Session06-SemanticMarkUp-Slidy.html">Lecture 6: names, people, places, and dates</a></li>
+<li>XML Exercise: Semantic mark-up</li>
+<li>XSLT Exercise: include semantic mark-up in HTML output</li>
+</ul>
+<h2 id="afternoon-session-130-4">8 Afternoon Session, 1:30-4</h2>
+<ul>
+<li><a href="TeiDhsi-Session07-Ontologies-Slidy.html">Lecture 7: Ontologies of named entities, linking</a></li>
+<li>XSLT Exercise: retrieve lists of names</li>
+<li>XML/ XSLT Exercise: link names to ontologies in the teiHeader</li>
+<li>XML Exercise: link to external authorities</li>
+</ul>
+</div>
+<div id="day-5-facsimile-linking-and-wrap-up" class="slide section level1">
+<h1>Day 5: Facsimile linking and wrap-up</h1>
+<h2 id="morning-session-9-12-4">9 Morning Session, 9-12</h2>
+<ul>
+<li><a href="TeiDhsi-Session08-FacsimileLinking-Slidy.html">Lecture 8: Facisimile linking</a></li>
+<li>XML Exercise: link <code>&lt;pb&gt;</code>s to facsimiles</li>
+<li>XSLT Exercise: retrieve the image links and display them in the HTML output</li>
+</ul>
+<h2 id="afternoon-session-130-230">10 Afternoon Session, 1:30-2:30</h2>
+<ul>
+<li>presentation of results</li>
+<li>group discussion</li>
+<li>wrap-up</li>
+</ul>
+</div>
+<div id="useful-links" class="slide section level1">
+<h1>Useful links</h1>
+<p>(this slide will come up again)</p>
+<ul>
+<li>the TEI Consortium’s <a href="http://www.tei-c.org/index.xml">website</a> at http://www.tei-c.org/index.xml:
+<ul>
+<li>the <a href="http://www.tei-c.org/Guidelines/P5/">TEI guidelines</a> at http://www.tei-c.org/Guidelines/P5/</li>
+<li><a href="http://www.teibyexample.org/TBE.htm">TEI by Example</a> at http://www.teibyexample.org/TBE.htm</li>
+<li>the TEI mailing list, <script type="text/javascript">
+<!--
+h='&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#46;&#66;&#82;&#x4f;&#x57;&#78;&#46;&#x45;&#68;&#x55;';a='&#64;';n='&#84;&#x45;&#x49;&#x2d;&#76;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#84;&#x45;&#x49;&#x2d;&#76;&#32;&#x61;&#116;&#32;&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#32;&#100;&#x6f;&#116;&#32;&#66;&#82;&#x4f;&#x57;&#78;&#32;&#100;&#x6f;&#116;&#32;&#x45;&#68;&#x55;</noscript></li>
+<li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at http://wiki.tei-c.org/: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.</li>
+</ul></li>
+<li>Further resources provided by the TEI council and Oxford computing centre:
+<ul>
+<li><a href="http://www.tei-c.org/Roma/">ROMA</a> at <a href="http://www.tei-c.org/Roma/">tei-c.org/Roma/</a>: customising TEI schemas for XML validation</li>
+<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/">OxGarage</a> at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.</li>
+<li><a href="http://digital.humanities.ox.ac.uk/dhoxss/">DHOxSS</a> at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.</li>
+</ul></li>
+<li><a href="http://dcl.ils.indiana.edu/teibp/">TEI Boilerplate</a> at <a href="http://teiboilerplate.org/">teiboilerplate.org/</a>: a light-weight solution for publishing styled TEI P5 content directly in modern web browsers (the implementation uses XSL which is processed by the browser).</li>
+</ul>
+</div>
+</body>
+</html>

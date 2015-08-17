@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI 1 — Introduction to Markup, XML, and the TEI</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI 1 — Introduction to Markup, XML, and the TEI</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">2 March 2015</p>
+</div>
+<div id="introduction-to-markup-xml-and-tei" class="slide section level1">
+<h1>Introduction to Markup, XML, and TEI</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="textual-markup" class="slide section level1">
+<h1>Textual Markup</h1>
+<p>In order to talk about texts, markup and encoding of texts, we need to understand what we mean by these basic concepts.</p>
+<p>When we talk about text encoding, what do we mean by a <em>text</em>? What is in a text and what assumptions do we make in reading them?</p>
+</div>
+<div id="what-is-a-text" class="slide section level1">
+<h1>What is a text?</h1>
+<!-- The Ottoman constitution: Arabic translation in *al-Bashīr*, 3 August 1908 -->
+
+<div class="figure">
+<img src="images/constitution-bashir.png" alt="Ḳānūn-i Esāsī in al-Bashīr, 3 August 1908" /><p class="caption">Ḳānūn-i Esāsī in <em>al-Bashīr</em>, 3 August 1908</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<!-- The Ottoman constitution: Arabic translation in *Thamarāt al-Funūn*, 27 July 1908 -->
+
+<div class="figure">
+<img src="images/constitution-thamarat.png" alt="Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" /><p class="caption">Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<!-- The Ottoman constitution: Arabic translation in *Lisān al-Ḥāl*, 27 July 1908 -->
+
+<div class="figure">
+<img src="images/constitution-lisan.png" alt="Ḳānūn-i Esāsī in Lisān al-Ḥāl, 27 July 1908" /><p class="caption">Ḳānūn-i Esāsī in <em>Lisān al-Ḥāl</em>, 27 July 1908</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/constitution-jinan.png" alt="Ḳānūn-i Esāsī in al-Jinān, 15 January 1877" /><p class="caption">Ḳānūn-i Esāsī in <em>al-Jinān</em>, 15 January 1877</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/constitution-ottoman.png" alt="Ḳānūn-i Esāsī, 1876" /><p class="caption">Ḳānūn-i Esāsī, 1876</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/constitution-salname1.png" alt="Ḳānūn-i Esāsī in Sālnāme-yi Vilāyet-i Sūriye #24, 1892" /><p class="caption">Ḳānūn-i Esāsī in <em>Sālnāme-yi Vilāyet-i Sūriye</em> #24, 1892</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/constitution-parallel-arabic.png" alt="Three Arabic translations of the Ottoman constitution in a digital parallel edition" /><p class="caption">Three Arabic translations of the Ottoman constitution in a digital parallel edition</p>
+</div>
+<!-- # What is a text? -->
+
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/constitution-parallel-ottoman.png" alt="Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation" /><p class="caption">Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation</p>
+</div>
+</div>
+<div id="a-text-is-not-a-document" class="slide section level1">
+<h1>A text is not a document</h1>
+<p>Where is the text?</p>
+<ul>
+<li>in the shape of letters and their layout?</li>
+<li>in the original from which this copy derives?</li>
+<li>in the stories we read into it?</li>
+<li>or in its author’s intentions?</li>
+</ul>
+<p><strong>TEI’s definition</strong>:</p>
+<ul>
+<li><hi style="color:red">A “document” is something that exists in the world, which we can <strong>digitize</strong></hi>.</li>
+<li><hi style="color:red">A “text” is an abstraction, created by or for a community of readers, which we can <strong>encode</strong></hi>.</li>
+</ul>
+</div>
+<div id="encoding-of-texts" class="slide section level1">
+<h1>Encoding of texts</h1>
+<ul>
+<li>A text is more than a sequence of encoded glyphs or lexical tokens
+<ul>
+<li>It has a <em>structure</em> and a <em>communicative function</em></li>
+<li>It also has multiple possible <em>readings</em></li>
+</ul></li>
+<li>Encoding, or markup, is a way of making these things explicit</li>
+</ul>
+<p><hi style="color:red">Only that which is explicit can be reliably found again and displayed</hi></p>
+</div>
+<div id="what-is-the-point-of-markup" class="slide section level1">
+<h1>What is the point of markup?</h1>
+<ul>
+<li>To make <em>explicit</em> (to a machine) what is <em>implicit</em> (to a person)</li>
+<li>To add value by supplying <em>multiple annotations</em></li>
+<li>To facilitate <em>re-use</em> of the same material
+<ul>
+<li>in different formats</li>
+<li>in different contexts</li>
+<li>by different users</li>
+</ul></li>
+</ul>
+<p><hi style="color:red">We don’t have to be limited to the view of one editor or consumer</hi></p>
+</div>
+<div id="styles-of-markup" class="slide section level1">
+<h1>Styles of markup</h1>
+<ul>
+<li>In the beginning there was <em>procedural</em> markup: <code>RED INK ON; print balance; RED INK OFF</code></li>
+<li>which being generalised became <em>descriptive</em> or <em>semantic</em> markup: <code>&lt;balance type='overdrawn'&gt;some numbers&lt;/balance&gt;</code></li>
+<li>also known as <strong>encoding</strong> or <strong>annotation</strong> <hi style="color:red">descriptive markup allows for easier re-use of data</hi></li>
+</ul>
+</div>
+<div id="some-more-definitions" class="slide section level1">
+<h1>Some more definitions</h1>
+<ul>
+<li>Markup makes explicit the distinctions we want to make when processing a string of bytes</li>
+<li>Markup is a way of naming and characterizing the parts of a text in a formalized way</li>
+<li>It’s (usually) more useful to markup what we think things <em>are</em> than what they <em>look</em> like</li>
+</ul>
+</div>
+<div id="separation-of-form-and-content" class="slide section level1">
+<h1>Separation of form and content</h1>
+<ul>
+<li><em>Presentational</em> markup cares more about fonts and layout than meaning</li>
+<li><em>Descriptive</em> markup says what things are, and leaves the rendition of them for a separate step</li>
+<li>Separating the form of something from its content makes its re-use more flexible</li>
+<li>It also allows easy changes of presentation across a large number of documents</li>
+</ul>
+</div>
+<div id="markup-as-scholarly-activity" class="slide section level1">
+<h1>Markup as scholarly activity</h1>
+<ul>
+<li>The application of markup to a document can be an intellectual activity</li>
+<li>In deciding what markup to apply, and how this represents the original, one is undertaking the task of an editor</li>
+<li>There is (almost) no such thing as neutral markup – all of it involves interpretation</li>
+<li>Markup can assist in answering research questions, and deciding what markup is needed to enable such questions to be answered can be a research activity in itself</li>
+<li>Good textual encoding is never as easy or quick as people would believe</li>
+<li>Detailed document analysis is needed before encoding for the resulting markup to be useful</li>
+</ul>
+</div>
+<div id="compare-markup" class="slide section level1">
+<h1>Compare markup</h1>
+<p>Example 1:</p>
+<pre><code>&lt;hi rend=&quot;dropcap&quot;&gt;H&lt;/hi&gt;&amp;WYN;ÆT WE GARDE &lt;lb/&gt;na in gear-dagum þeod-cyninga &lt;lb/&gt;þrym gefrunon, hu ða æþelingas &lt;lb/&gt;ellen fremedon. oft scyld scefing sceaþe &lt;add&gt;na&lt;/add&gt;
+&lt;lb/&gt;þreatum, moneg&lt;expan&gt;um&lt;/expan&gt; mægþum meodo-setl &lt;add&gt;a&lt;/add&gt;
+&lt;lb/&gt;of&lt;damage&gt;
+&lt;desc&gt;blot&lt;/desc&gt; &lt;/damage&gt;teah ...</code></pre>
+<p>Example 2:</p>
+<pre><code>&lt;lg&gt;
+    &lt;l&gt;Hwæt! we Gar-dena in gear-dagum&lt;/l&gt;
+    &lt;l&gt;þeod-cyninga þrym gefrunon,&lt;/l&gt;
+    &lt;l&gt;hu ða æþelingas ellen fremedon,&lt;/l&gt;
+&lt;/lg&gt; 
+&lt;lg&gt;
+    &lt;l&gt;Oft Scyld Scefing sceaþena þreatum,&lt;/l&gt;
+    &lt;l&gt;monegum mægþum meodo-setla ofteah;&lt;/l&gt;
+    &lt;l&gt;egsode Eorle, syððan ærest wearþ&lt;/l&gt;
+    &lt;l&gt;feasceaft funden...&lt;/l&gt;
+&lt;/lg&gt;</code></pre>
+</div>
+<div id="a-useful-mental-exercise" class="slide section level1">
+<h1>A useful mental exercise</h1>
+<p>Imagine you are going to markup several thousand pages of complex material….</p>
+<ul>
+<li>Which features are you going to markup?</li>
+<li>Why are you choosing to markup this feature?</li>
+<li>How reliably and consistently can you do this?</li>
+</ul>
+<p>Now, imagine your budget has been halved. Repeat the exercise!</p>
+</div>
+<div id="some-alphabet-soup" class="slide section level1">
+<h1>Some alphabet soup</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">abbr</th>
+<th align="left">expan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SGML</td>
+<td align="left">Standard Generalized Markup Language</td>
+</tr>
+<tr class="even">
+<td align="left">HTML</td>
+<td align="left">Hypertext Markup Language</td>
+</tr>
+<tr class="odd">
+<td align="left">W3C</td>
+<td align="left">World Wide Web Consortium</td>
+</tr>
+<tr class="even">
+<td align="left">XML</td>
+<td align="left">eXtensible Markup Language</td>
+</tr>
+<tr class="odd">
+<td align="left">DTD</td>
+<td align="left">Document Type Definition (or Declaration)</td>
+</tr>
+<tr class="even">
+<td align="left">CSS</td>
+<td align="left">Cascading Style Sheet</td>
+</tr>
+<tr class="odd">
+<td align="left">Xpath</td>
+<td align="left">XML Path Language</td>
+</tr>
+<tr class="even">
+<td align="left">XSLT</td>
+<td align="left">eXtensible Stylesheet Language - Transformations</td>
+</tr>
+<tr class="odd">
+<td align="left">XQuery</td>
+<td align="left">XML Querying</td>
+</tr>
+<tr class="even">
+<td align="left">RELAXNG</td>
+<td align="left">Regular Expression Language for XML (New Generation)</td>
+</tr>
+</tbody>
+</table>
+<p>… and then there’s also <hi style="color:red">TEI, the Text Encoding Initiative</hi></p>
+</div>
+<div id="xml" class="slide section level1">
+<h1>XML</h1>
+<p>Extensible Markup Language (XML) is a simple, very flexible text format derived from SGML (ISO 8879). Originally designed to meet the challenges of large-scale electronic publishing, XML also now plays an indispensible role in the exchange of a wide variety of data on the Web and elsewhere.</p>
+</div>
+<div id="xml-what-it-is-and-why-you-should-care" class="slide section level1">
+<h1>XML: what it is and why you should care</h1>
+<ul>
+<li>XML is <em>structured data</em> represented as strings of text</li>
+<li>XML looks like HTML, except that:
+<ul>
+<li>XML is <em>extensible</em></li>
+<li>XML must be <em>well-formed</em></li>
+<li>XML can be <em>validated</em></li>
+</ul></li>
+<li>XML is application-, platform-, and vendor- independent</li>
+<li>XML empowers the <em>content provider</em> and facilitates data integration</li>
+</ul>
+</div>
+<div id="xml-terminology-1" class="slide section level1">
+<h1>XML terminology 1</h1>
+<p>An XML document may contain:</p>
+<ul>
+<li>processing instructions: e.g. <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code></li>
+<li>elements (also: node(), tags) wrapped in angled brackets: <code>&lt;node/&gt;</code>. Nodes can carry attributes and contain a mix of text() and child elements.</li>
+<li><span class="citation">@attributes</span>: describe specific qualities of the element’s content; attached to elements inside the angled brackets: <code>&lt;node attribute1=&quot;someValue&quot; attribute2=&quot;someOtherValue&quot;/&gt;</code></li>
+<li>text(): the content of a node; between the opening and closing element tag: <code>&lt;node&gt;Some text including whitespaces etc.&lt;/node&gt;</code></li>
+<li>entity references: “escaped” characters; as &amp; and &lt; are special symbols, they cannot be used as they are but must be written as entity reference. All entity references start with &amp; and end with ; E.g. <code>&amp;amp;</code>, <code>&amp;quot;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;apos;</code></li>
+<li>CDATA: All text is parsed, but text in <code>&lt;![CDATA[</code> <code>]]&gt;</code></li>
+<li>namespaces</li>
+</ul>
+</div>
+<div id="xml-terminology-2" class="slide section level1">
+<h1>XML terminology 2</h1>
+<ul>
+<li>The data is encoded in Unicode (UTF-8 or UTF-16)</li>
+<li><em>must</em> be well-formed:
+<ul>
+<li>nodes can only nest,</li>
+<li>all nodes/elements must be closed,</li>
+<li>the document contains only a single <em>root</em> node</li>
+</ul></li>
+<li><em>can</em> be validated against schema(s)</li>
+<li>can contain xml valid against different schemas if differentiated by <em>namespaces</em></li>
+</ul>
+</div>
+<div id="the-rules-of-the-xml-game" class="slide section level1">
+<h1>The rules of the XML Game</h1>
+<ul>
+<li>An XML document represents a (kind of) <em>tree</em></li>
+<li>It has a single <em>root</em> and many nodes</li>
+<li>Each node can be
+<ul>
+<li>a subtree</li>
+<li>a single <em>element</em> (possibly bearing some <em>attributes</em>)</li>
+<li>a string of <em>character data</em></li>
+</ul></li>
+<li>Each element has a name or <em>generic identifier</em></li>
+<li>XML elements and attributes are <em>case sensitive</em></li>
+</ul>
+</div>
+<div id="representing-an-xml-tree" class="slide section level1">
+<h1>Representing an XML tree</h1>
+<!-- somewhat redundant with the ealier slide "XMl terminology 1" -->
+
+<ul>
+<li>An XML document is encoded as a linear string of unicode characters</li>
+<li>It begins with a special <em>processing instruction</em></li>
+<li>Element occurrences are marked by <em>start-</em> and <em>end-tags</em></li>
+<li>The characters &lt; and &amp; are Magic and must always be “escaped” if you want to use them as themselves, i.e. <code>&amp;lt;</code> and <code>&amp;amp;</code></li>
+<li>Comments are delimited by <code>&lt;!-- and --&gt;</code></li>
+<li>Attribute name=value pairs are supplied on the start-tag and may be given in any order, separated by spaces</li>
+<li>Entity references (eg &lt; for &lt; or Ç for Ç) are delimited by &amp; and ; CDATA sections are delimited by <code>&lt;![CDATA[ and ]]&gt;</code> (but we won’t use these here)</li>
+</ul>
+</div>
+<div id="parts-of-a-real-xml-document" class="slide section level1">
+<h1>Parts of a real XML document</h1>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;greetings xmlns=&quot;http://www.example.org/greetings&quot;&gt;
+    &lt;hello type=&quot;enthusiastic&quot;&gt;hello world!&lt;/hello&gt;
+&lt;/greetings&gt;</code></pre>
+<ul>
+<li>The XML declaration</li>
+<li>Namespace declarations</li>
+<li>The root element of the document itself</li>
+<li>Other elements and content</li>
+<li>Attribute and value</li>
+</ul>
+</div>
+<div id="the-xml-declaration" class="slide section level1">
+<h1>The XML declaration</h1>
+<p>An XML document must begin with an XML declaration which does three things:</p>
+<ul>
+<li>specifies that this <em>is</em> an XML document</li>
+<li>specifies which version of the XML standard it follows</li>
+<li>specifies which character encoding the document uses; the default, and recommended, encoding is ‘UTF-8’ (Unicode)</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot; ?&gt;</code></pre>
+</div>
+<div id="declaring-namespaces" class="slide section level1">
+<h1>Declaring namespaces</h1>
+<p>All TEI documents are declared within the TEI namespace — a way of distinguishing one set of elements from another with the same names (like <code>&lt;p&gt;</code>):</p>
+<pre><code>&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt; ... &lt;/TEI&gt;</code></pre>
+<p>XML documents can include elements declared in different namespaces.</p>
+<ul>
+<li>a namespace declaration associates a namespace prefix with an external URI-like identifier</li>
+<li>the default namespace may be declared using an xmlns</li>
+<li>other name spaces must all use a specially declared prefix</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot; xmlns:math=&quot;http://www.mathml.org&quot;&gt;
+&lt;p&gt;...
+    &lt;math:expr&gt;...&lt;/math:expr&gt;
+    ...&lt;/p&gt;
+&lt;/TEI&gt;</code></pre>
+<p>The xml namespace is used by the TEI for global attributes <span class="citation">@xml:id</span> and <span class="citation">@xml:lang</span></p>
+</div>
+<div id="example-thamarāt-al-funūn-1683-27-july-1908" class="slide section level1">
+<h1>Example: <em>Thamarāt al-Funūn</em> #1683, 27 July 1908</h1>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;div xmlns=&quot;http://www.tei-c.org/ns/1.0&quot; type=&quot;article&quot; xml:lang=&quot;ar&quot;&gt;
+    &lt;head xml:lang=&quot;ar&quot;&gt;الصدارة العظمى&lt;/head&gt;
+    &lt;p&gt;بشرة الانباء البرقية بصدور الارادة 
+    &lt;lb/&gt; السنية السلطانية باسناد مسند الصدارة 
+    &lt;lb/&gt;العظمى الى عهدة الوزير الخطير &lt;persName&gt; حضرة 
+    &lt;lb/&gt; صاحب الفخامة الدولة سعيد باشا&lt;/persName&gt;الصدر 
+    &lt;lb/&gt; الأعظم الأسبق، فسر الكل بهذا التوجيه 
+    &lt;lb/&gt; الوجيه لما عرف به الصدر المشار اليه من 
+    &lt;lb/&gt; التفاني في خدمة الجناب العالي السلطاني 
+    &lt;lb/&gt; بنبالة قصد وسعة علم مع اقتدار باهر 
+    &lt;lb/&gt; واخلاص عظيم فنرفع لفخامته فروض 
+    &lt;lb/&gt; التهاني والتبريك ونضرع الى المولى المتعال 
+    &lt;lb/&gt; ان يقرن اموره بالتوفيق وتنفيذ نيات حضرة 
+    &lt;lb/&gt; مولانا الخليفة الاعظم المنصرف في خير 
+    &lt;lb/&gt; العباد وعمران البلاد،&lt;/p&gt;
+    &lt;p&gt;وهذا تعريب التلغراف السامي الوارد 
+    &lt;lb/&gt; من فخامته الى مقام الولاية الجليلة:&lt;/p&gt;
+    &lt;p&gt;
+        &lt;quote&gt;سنحت عواطف الحضرة العلية 
+        &lt;lb/&gt; السلطانية بتوجيه خدمة الصدارة هذه 
+        &lt;lb/&gt; المرة ايضاً على عهدة هذا المثنى . ان 
+        &lt;lb/&gt; وظيفة مأموري المملكية الاساسية هي المحافظة
+        &lt;lb/&gt; على الامن والراحة وحسن رؤْية المصالح 
+        &lt;lb/&gt; ووظائف الادارة العدلية والحكام هي
+        &lt;lb/&gt; اجراء العدالة في الحقوق العمومية والشخصية 
+        &lt;lb/&gt; ضمن دائرة القوانين العدلية الموضوعة مع 
+        &lt;lb/&gt; قيام كل مأمور بوظيفة مأموريته بكمال 
+        &lt;lb/&gt; العفة والاستقامة لهذا نخطركم ان الذين 
+        &lt;lb/&gt; يقومون بالخدمات الصحيحة الصادقة تكون 
+        &lt;lb/&gt; مساعيهم مظهراً لشرف تقدير &lt;rs ref=&quot;#pers-1&quot;&gt; حضرة 
+        &lt;lb/&gt; صاحب الخلافة العظمى&lt;/rs&gt;كما ان من يخالف 
+        &lt;lb/&gt;ذلك يقع بالطبع تحت ظائلة المسؤلية 
+        &lt;lb/&gt; في &lt;date calendar=&quot;#cal_ottomanfiscal&quot;
+                datingMethod=&quot;#cal_ottomanfiscal&quot; when-custom=&quot;1324-05-09&quot;&gt;٩ تموز سنة
+            ٣٢٤&lt;/date&gt;&lt;/quote&gt;
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="example-deconstructed-root-node" class="slide section level1">
+<h1>Example deconstructed: root node</h1>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;div type=&quot;article&quot; xml:lang=&quot;ar&quot;&gt;
+&lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="example-deconstructed-head" class="slide section level1">
+<h1>Example deconstructed: head</h1>
+<pre><code>&lt;head xml:lang=&quot;ar&quot;&gt;الصدارة العظمى&lt;/head&gt;</code></pre>
+</div>
+<div id="example-deconstructed-paragraph-quote-and-date" class="slide section level1">
+<h1>Example deconstructed: paragraph, quote, and date</h1>
+<pre><code>&lt;p&gt;
+    &lt;quote&gt;سنحت عواطف الحضرة العلية 
+    &lt;lb/&gt; السلطانية بتوجيه خدمة الصدارة هذه 
+    &lt;lb/&gt; المرة ايضاً على عهدة هذا المثنى . ان 
+    &lt;lb/&gt; وظيفة مأموري المملكية الاساسية هي المحافظة
+    &lt;lb/&gt; على الامن والراحة وحسن رؤْية المصالح 
+    &lt;lb/&gt; ووظائف الادارة العدلية والحكام هي
+    &lt;lb/&gt; اجراء العدالة في الحقوق العمومية والشخصية 
+    &lt;lb/&gt; ضمن دائرة القوانين العدلية الموضوعة مع 
+    &lt;lb/&gt; قيام كل مأمور بوظيفة مأموريته بكمال 
+    &lt;lb/&gt; العفة والاستقامة لهذا نخطركم ان الذين 
+    &lt;lb/&gt; يقومون بالخدمات الصحيحة الصادقة تكون 
+    &lt;lb/&gt; مساعيهم مظهراً لشرف تقدير &lt;rs ref=&quot;#pers-1&quot;&gt; حضرة 
+    &lt;lb/&gt; صاحب الخلافة العظمى&lt;/rs&gt;كما ان من يخالف 
+    &lt;lb/&gt;ذلك يقع بالطبع تحت ظائلة المسؤلية 
+    &lt;lb/&gt; في &lt;date calendar=&quot;#cal_ottomanfiscal&quot;
+            datingMethod=&quot;#cal_ottomanfiscal&quot; when-custom=&quot;1324-05-09&quot;&gt;٩ تموز سنة
+        ٣٢٤&lt;/date&gt;&lt;/quote&gt;
+&lt;/p&gt;</code></pre>
+</div>
+<div id="xml-syntax-the-small-print" class="slide section level1">
+<h1>XML syntax: the small print</h1>
+<p>What does it mean to be <strong>well-formed</strong>?</p>
+<ol style="list-style-type: decimal">
+<li>There is a single root node containing the whole of an XML document</li>
+<li>Each subtree is properly nested within the root node</li>
+<li>Element/attribute/etc. names are always case sensitive</li>
+<li>Start-tags and end-tags are always mandatory (except there is a combined start-and-end tag, e.g. <code>&lt;pb/&gt;</code>)</li>
+<li>Attribute values are always quoted</li>
+</ol>
+<p>A file can be <strong>valid</strong> in addition to being well-formed. This means you obey the rules of a specified schema, such as the TEI.</p>
+</div>
+<div id="test-your-xml-knowledge" class="slide section level1">
+<h1>Test your XML knowledge</h1>
+<p>Which are correct?</p>
+<pre><code> &lt;seg&gt;some text&lt;/seg&gt;
+ &lt;seg&gt; &lt;foo&gt;some&lt;/foo&gt; &lt;bar&gt;text&lt;/bar&gt; &lt;/seg&gt;
+ &lt;seg&gt; &lt;foo&gt;some &lt;bar&gt;&lt;/foo&gt; text&lt;/bar&gt; &lt;/seg&gt;
+ &lt;seg type=&quot;text&quot;&gt;some text&lt;/seg&gt;
+ &lt;seg type=&#39;text&#39;&gt;some text&lt;/seg&gt;
+ &lt;seg type=text&gt;some text&lt;/seg&gt;
+ &lt;seg type=&quot;text&quot;&gt; some text &lt;seg/&gt;
+ &lt;seg type=&quot;text&quot;&gt; some text&lt;gap/&gt; &lt;/seg&gt;
+ &lt;seg type=&quot;text&quot;&gt;some text&lt;/Seg&gt;</code></pre>
+</div>
+<div id="xml-is-an-international-standard" class="slide section level1">
+<h1>XML is an international standard</h1>
+<ul>
+<li>XML requires use of ISO 10646 (also known as Unicode)
+<ul>
+<li>a 31 bit character repertoire including most human writing systems</li>
+<li>encoded as UTF8 or UTF16</li>
+</ul></li>
+<li>other encodings may be specified at the document level</li>
+<li>language may be specified at the element level using <code>@xml:lang</code></li>
+</ul>
+<p>(The <code>@xml:id</code> attribute is another W3C-defined attribute.)</p>
+</div>
+<div id="the-tei" class="slide section level1">
+<h1>The TEI</h1>
+<p>The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of Guidelines which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.</p>
+</div>
+<div id="was-a-long-time-ago" class="slide section level1">
+<h1>1987 was a long time ago…</h1>
+<p>The Text Encoding Initiative was born into a very different world</p>
+<ul>
+<li>the world wide web did not exist</li>
+<li>the tunnel beneath the English Channel was still being built</li>
+<li>a state called the Soviet Union had just launched a space station called Mir</li>
+<li>serious computing was done on mainframes</li>
+<li>most people didn’t have mobile phones</li>
+</ul>
+</div>
+<div id="but-also-a-familiar-problems" class="slide section level1">
+<h1>…but also a familiar problems</h1>
+<ul>
+<li>Corpus linguistics and ‘artificial intelligence’ had created a demand for large scale lexical resources in academia and beyond</li>
+<li>Advances in text processing were beginning to affect lexicography and document management systems (e.g. TeX, Scribe, tRoff..)</li>
+<li>The Internet existed and theories about how to use it ‘hypertextually’ abounded</li>
+<li>Books, articles, and even courses in something called “Computing in the Humanities” were becoming commonplace</li>
+</ul>
+</div>
+<div id="the-birth-of-the-text-encoding-initiative" class="slide section level1">
+<h1>The birth of the Text Encoding Initiative</h1>
+<ul>
+<li>Spring 1987: European workshops on standardisation of historical data (J.P. Genet, M. Thaller )</li>
+<li>Autumn 1987: In the US, the NEH funds an exploratory international workshop on the feasibility of defining “text encoding guidelines”</li>
+<li>this resulted in the “Poughkeepsie principles”</li>
+<li>Summer 1990: first draft (<em>P1</em>, with the ‘P’ standing for proposal ever since) of guidelines circulated</li>
+</ul>
+</div>
+<div id="tei-is-old" class="slide section level1">
+<h1>TEI is old!</h1>
+<ul>
+<li>So the TEI is <em>very old</em>!</li>
+<li>It comes from a time before the Web, before the DVD, smart mobile phones, cable tv, the iPod, and <em>even XML</em> (which was finalised in 1998)!</li>
+<li>Not much in computing survives 5 years, never mind 25</li>
+<li>Why is it still here, and how has it survived?</li>
+<li>What relevance can it possibly have today?</li>
+</ul>
+</div>
+<div id="why-the-tei" class="slide section level1">
+<h1>Why the TEI</h1>
+<p>The TEI provides</p>
+<ul>
+<li>a language-independent framework for defining markup languages</li>
+<li>a very simple consensus-based way of organizing and structuring textual (and other) resources…</li>
+<li>… which can be enriched and personalized in highly idiosyncratic or specialised ways</li>
+<li>a very rich library of existing specialised components</li>
+<li>an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats</li>
+<li>a large and active open source style user community</li>
+</ul>
+</div>
+<div id="relevance" class="slide section level1">
+<h1>Relevance</h1>
+<p>Why would you want those things?</p>
+<ul>
+<li>because we need to interchange resources
+<ul>
+<li>between people</li>
+<li>(increasingly) between machines</li>
+</ul></li>
+<li>because we need to integrate resources
+<ul>
+<li>of different media types</li>
+<li>from different technical contexts</li>
+</ul></li>
+<li>because we need to preserve resources
+<ul>
+<li>cryogenics is not the answer!</li>
+<li>we need to preserve metadata as well as data</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-scope-of-intelligent-markup" class="slide section level1">
+<h1>The scope of intelligent markup</h1>
+<p>Even within the original scope of the TEI we have</p>
+<ul>
+<li>basic structural and functional components</li>
+<li>diplomatic transcription, images, annotation</li>
+<li>links, correspondence, alignment</li>
+<li>data-like objects such as dates, times, places, persons, events (named entity recognition)</li>
+<li>meta-textual annotations (correction, deletion, etc) linguistic analysis at all levels</li>
+<li>contextual metadata of all kinds</li>
+<li>… and so on and so forth</li>
+</ul>
+</div>
+<div id="reasons-for-attempting-to-define-a-common-framework" class="slide section level1">
+<h1>Reasons for attempting to define a common framework</h1>
+<ul>
+<li>re-usability and repurposing of resources</li>
+<li>modular software development</li>
+<li>lower training costs</li>
+<li>‘frequently answered questions’—common technical solutions for different application areas</li>
+</ul>
+<p>The TEI was designed to support multiple views of the same resource. The TEI is an evolving model of the concerns of Digital Humanities.</p>
+<!-- # Purpose of the guidelines
+
+- guidance for individual or local practice in text creation and data capture; 
+- support of data interchange; 
+- support of application-independent local processing. -->
+
+</div>
+<div id="tei-adopted-xml" class="slide section level1">
+<h1>TEI adopted XML</h1>
+<p>In 2002, the TEI consortium published the P4 Guidelines, which were essentially an adaptation of P3 to XML that had been finalised as W3C standard in 1998.</p>
+<p>P5, a complete overhaul of the guidelines, was published in 2008. Updates are regularly published every half a year ever since.</p>
+<p>The Guidelines are currently maintained as an open source project on the Sourceforge site <a href="http://tei.sf.net/">http://tei.sf.net/</a>, from which released and development versions may be freely downloaded.</p>
+</div>
+<div id="tei-xml" class="slide section level1">
+<h1>TEI XML</h1>
+<ul>
+<li>all of XML.</li>
+<li>In addition, TEI XML <em>must</em> be valid against the schema “TEI all”
+<ul>
+<li>TEI all: <code>&lt;?xml-model href=&quot;http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng&quot; type=&quot;application/xml&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;?&gt;</code></li>
+<li>this <em>processing instruction</em> means that the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.</li>
+<li>this provides <em>interchangability</em> and a certain degree of <em>interoperability</em> (the latter is often only theoretically applicable)</li>
+</ul></li>
+</ul>
+</div>
+<div id="note-namespaces-vs-schemas" class="slide section level1">
+<h1>Note: namespaces vs schemas</h1>
+<ul>
+<li>a <em>namespace</em> is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.</li>
+<li>a <em>schema</em> allows you to
+<ul>
+<li>ensure that your documents use only predefined elements, attributes, and entities</li>
+<li>enforce structural rules such as ‘every chapter must begin with a heading’ or ‘recipes must include an ingredient list’</li>
+</ul></li>
+<li>a namespace is just a URI; a schema is a formal specification written in a formal language</li>
+</ul>
+</div>
+<div id="conformance-issues" class="slide section level1">
+<h1>Conformance issues</h1>
+<p>A document is <em>TEI Conformant</em> if and only if it:</p>
+<ul>
+<li>is a well-formed XML document</li>
+<li>can be validated against a TEI Schema, that is, a schema derived from the TEI Guidelines</li>
+<li>conforms to the TEI Abstract Model</li>
+<li>uses the TEI Namespace (and other namespaces where relevant) correctly</li>
+<li>is documented by means of a TEI Conformant ODD file which refers to the TEI Guidelines</li>
+</ul>
+<p>or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered <em>TEI-conformable</em>).</p>
+</div>
+<div id="a-final-note-on-standardization" class="slide section level1">
+<h1>A final note on standardization</h1>
+<p>Standardization should not mean “Do what I do”, but rather <hi style="color:red">“Explain what you do in terms I can understand”.</hi></p>
+<p>Instead of an abstract set of rules and norms, standardisation should be thought of as a <hi style="color:red">community of practice.</hi></p>
+</div>
+<div id="useful-links-resources" class="slide section level1">
+<h1>Useful links / resources</h1>
+<ul>
+<li>the TEI Consortium’s <a href="http://www.tei-c.org/index.xml">website</a> at http://www.tei-c.org/index.xml:
+<ul>
+<li>the <a href="http://www.tei-c.org/Guidelines/P5/">TEI guidelines</a> at http://www.tei-c.org/Guidelines/P5/</li>
+<li><a href="http://www.teibyexample.org/TBE.htm">TEI by Example</a> at http://www.teibyexample.org/TBE.htm</li>
+<li>the TEI mailing list, <script type="text/javascript">
+<!--
+h='&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#46;&#66;&#82;&#x4f;&#x57;&#78;&#46;&#x45;&#68;&#x55;';a='&#64;';n='&#84;&#x45;&#x49;&#x2d;&#76;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#84;&#x45;&#x49;&#x2d;&#76;&#32;&#x61;&#116;&#32;&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#32;&#100;&#x6f;&#116;&#32;&#66;&#82;&#x4f;&#x57;&#78;&#32;&#100;&#x6f;&#116;&#32;&#x45;&#68;&#x55;</noscript></li>
+<li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at http://wiki.tei-c.org/: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.</li>
+</ul></li>
+<li>Further resources provided by the TEI council and Oxford computing centre:
+<ul>
+<li><a href="http://www.tei-c.org/Roma/">ROMA</a> at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation</li>
+<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/">OxGarage</a> at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.</li>
+<li><a href="http://digital.humanities.ox.ac.uk/dhoxss/">DHOxSS</a> at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.</li>
+</ul></li>
+</ul>
+</div>
+</body>
+</html>

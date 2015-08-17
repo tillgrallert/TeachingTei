@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI 6 — Markup of named entities</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI 6 — Markup of named entities</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">4 Jun 2015</p>
+</div>
+<div id="topic-markup-of-named-entities" class="slide section level1">
+<h1>Topic: Markup of named entities</h1>
+<h2 id="names-people-places-and-dates-or-the-stuff-that-is-most-important-to-social-historians">Names, people, places, and dates, or the stuff that is most important to social historians</h2>
+<p>Covered in chapter 13 of the TEI P5 guidelines</p>
+<!-- what about measures? -->
+
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="names-people-and-places" class="slide section level1">
+<h1>Names, people, and places</h1>
+<p>We are going to look at <strong>names</strong> of things first. Instances of names are distinct from the entities which they reference. One entity (person, place, organisation) might be known by many names.</p>
+</div>
+<div id="names-in-the-tei" class="slide section level1">
+<h1>Names in the TEI</h1>
+<p>TEI provides several ways of marking up names and nominal expressions:</p>
+<ul>
+<li><code>&lt;rs&gt;</code> (“referring string”): any phrase which refers to a person or place, e.g. ‘the girl you mentioned’, ‘my husband’…</li>
+<li><code>&lt;name&gt;</code>: any lexical item recognized as a proper name e.g. ‘Siegfried Sassoon’ , ‘Calais’, ‘John Doe’ …</li>
+<li><code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code>, <code>&lt;orgName&gt;</code>: ‘syntactic sugar’ for <code>&lt;name type=&quot;person&quot;&gt;</code> etc.</li>
+<li>A rich set of elements for the components of such nominal expressions, e.g. <code>&lt;surname&gt;</code>, <code>&lt;forename&gt;</code>, <code>&lt;geogName&gt;</code>, <code>&lt;geogFeat&gt;</code> etc.</li>
+</ul>
+</div>
+<div id="entities" class="slide section level1">
+<h1>Entities</h1>
+<p>Recognising the need to distinguish clearly the encoding of references from the encoding of referenced entities (occurrences in the real world) themselves, the TEI provides provides:</p>
+<ul>
+<li><code>&lt;person&gt;</code> corresponding with <code>&lt;persName&gt;</code></li>
+<li><code>&lt;place&gt;</code> corresponding with <code>&lt;placeName&gt;</code></li>
+<li><code>&lt;org&gt;</code> corresponding with <code>&lt;orgName&gt;</code></li>
+<li>and in addition <code>&lt;relation&gt;</code>, <code>&lt;event&gt;</code> and others</li>
+</ul>
+</div>
+<div id="why" class="slide section level1">
+<h1>Why?</h1>
+<ul>
+<li>To facilitate a more detailed and explicit encoding source documents (historical materials for example) which are primarily of interest because they concern objects in the real world</li>
+<li>To support the encoding of “data-centric” documents, such as authority files, biographical or geographical dictionaries and gazeteers etc.</li>
+<li>To represent and model in a uniform way data which is only implicit in readings of many different documents</li>
+</ul>
+</div>
+<div id="reference-theory" class="slide section level1">
+<h1>Reference theory</h1>
+<p><em>Reference</em> is a fundamental semiotic concept</p>
+<ul>
+<li>We can talk about the real world using natural languages because we know that some types of word are closely associated with real, specific, objects</li>
+<li>Proper names and technical terms are canonical examples of this kind of word:
+<ul>
+<li>‘<em>ʿUṭūfetli Meḥmet ʿAlī Bey Efendi</em>’ and ‘George Pollard Devey’ refer to a single real world entities;</li>
+<li>‘Lyon’ and ‘River Thames’ to others: a specific place, a specific river respectively</li>
+</ul></li>
+<li>When we translate between natural languages, usually the proper names don’t change, or are conventionally equivalent</li>
+</ul>
+</div>
+<div id="how-do-we-represent-this-association" class="slide section level1">
+<h1>How do we represent this association?</h1>
+<p>Every element which is a member of the <code>att.naming</code> class inherits two attributes from the <code>att.canonical</code> class:</p>
+<ul>
+<li><code>@key</code>: provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</li>
+<li><code>@ref</code>: provides an explicit means of locating a full definition for the entity being named by means of one or more URIs.</li>
+</ul>
+<p><em>Note</em>: Arguably, <code>@key</code> is redundant, since <code>@ref</code> is defined as anyURI, this can point from the name instance to the <code>@xml:id</code> of metadata about the entity, prefixing it with a ‘#’ if in the same file.</p>
+</div>
+<div id="other-linking-attributes" class="slide section level1">
+<h1>Other linking attributes</h1>
+<ul>
+<li><code>@role</code>: may be used to specify further information about the entity referenced by this name, for example the occupation of a person, or the status of a place.</li>
+<li><code>@nymRef</code>: provides a means of locating the canonical form (<code>&lt;nym&gt;</code>) of the <em>names</em> associated with the object named by the element bearing it.</li>
+</ul>
+<p><em>Note</em>: <code>@nymRef</code> is particularly important for multi-lingual examples:</p>
+<pre><code>&lt;persName xml:lang=&quot;ar&quot;&gt;
+    &lt;forename nymRef=&quot;#nym1&quot;&gt;شكري&lt;/forename&gt;
+    &lt;addName type=&quot;title&quot; nymRef=&quot;#nym2&quot;&gt;باشا&lt;/addName&gt;
+&lt;/persName&gt;
+    &lt;persName xml:lang=&quot;ota-Latn-x-ijmes&quot;&gt;
+    &lt;forename nymRef=&quot;#nym1&quot;&gt;Şükrü&lt;/forename&gt;
+    &lt;addName type=&quot;title&quot; nymRef=&quot;#nym2&quot;&gt;Paşa&lt;/addName&gt;
+&lt;/persName&gt;
+&lt;/persName&gt;
+    &lt;persName xml:lang=&quot;ar-Latn-EN&quot;&gt;
+    &lt;forename nymRef=&quot;#nym1&quot;&gt;Shukri&lt;/forename&gt;
+    &lt;addName type=&quot;title&quot; nymRef=&quot;#nym2&quot;&gt;Pasha&lt;/addName&gt;
+&lt;/persName&gt;</code></pre>
+</div>
+<div id="examples" class="slide section level1">
+<h1>Examples</h1>
+<pre><code>&lt;p&gt;... &lt;name ref=&quot;#jsbach&quot; type=&quot;person&quot;&gt;Johann Sebastian Bach&lt;/name&gt; the German composer was born in 1685... &lt;/p&gt;</code></pre>
+<p>or</p>
+<pre><code>&lt;p&gt;The &lt;orgName ref=&quot;entities:otc&quot;&gt;Oriental Theatre Company&lt;/orgName&gt; numbering 54 people, and under the direction of &lt;persName ref=&quot;#pers_3&quot;&gt;Mr. Butros Tanfous&lt;/persName&gt; arrived this week at the &lt;orgName ref=&quot;#org_usib&quot;&gt;U.S. Immigration Bureau&lt;/orgName&gt;. Several Oriental specialists from various parts of Turkey have been secured in order to give the American public a correct idea of the customs and manners of the people in different parts of the Empire.&lt;/p&gt;</code></pre>
+</div>
+<div id="references-take-many-forms" class="slide section level1">
+<h1>References take many forms</h1>
+<p>Even within a single language, in a single document, there may be many ways of referencing the same person:</p>
+<pre><code>&lt;persName&gt;Leslie Gunston&lt;/persName&gt;.... &lt;persName&gt;Leslie&lt;/persName&gt; .... &lt;. rs&gt;Wilfred&#39;s cousin&lt;/rs&gt;</code></pre>
+<p>The <code>@ref</code> can be used simply to combine all references to a specified person:</p>
+<pre><code>&lt;persName ref=&quot;#LG&quot;&gt;Leslie Gunston&lt;/persName&gt;.... 
+&lt;persName ref=&quot;#LG&quot;&gt;Leslie&lt;/persName&gt; ....
+&lt;rs ref=&quot;#LG&quot;&gt;Wilfred&#39;s cousin&lt;/rs&gt; 
+    &lt;!-- ... elsewhere --&gt;
+&lt;person xml:id=&quot;LG&quot;&gt;
+    &lt;persName&gt;Leslie Gunston&lt;/persName&gt;
+    &lt;!-- everything we want to say about Leslie --&gt;
+&lt;/person&gt;</code></pre>
+</div>
+<div id="references-are-also-ambiguous" class="slide section level1">
+<h1>References are also ambiguous</h1>
+<pre><code>&lt;s&gt;Jean likes &lt;name ref=&quot;#NN123&quot;&gt;Nancy&lt;/name&gt;&lt;/s&gt;</code></pre>
+<p>Using a more precise element (<code>&lt;persName&gt;</code> or <code>&lt;placeName&gt;</code>) is one way of resolving the ambiguity; another is to follow the pointer:</p>
+<pre><code>&lt;person xml:id=&quot;NN123&quot;&gt; 
+    &lt;persName&gt;
+        &lt;forename&gt;Nancy&lt;/forename&gt;
+        &lt;surname&gt;Ide&lt;/surname&gt; 
+    &lt;/persName&gt;
+    &lt;!-- ... --&gt;
+&lt;/person&gt;</code></pre>
+<p>or:</p>
+<pre><code>&lt;place xml:id=&quot;N123&quot;&gt;
+    &lt;placeName notBefore=&quot;1400&quot;&gt;Nancy&lt;/placeName&gt;
+    &lt;placeName notAfter=&quot;0056&quot;&gt;Nantium&lt;/placeName&gt;
+    &lt;!-- ... --&gt;
+&lt;/place&gt;</code></pre>
+</div>
+<div id="components-of-persname-elements" class="slide section level1">
+<h1>Components of <code>&lt;persName&gt;</code> elements</h1>
+<!--
+    <persName xml:lang="ota" ref="pers1">
+        <forename nymRef="#nym1">شكري</forename>
+        <addName type="title" nymRef="#nym2">باشا</addName>
+    </persName>
+    <persName xml:lang="ar" ref="pers2">
+        <forename nymRef="#nym1">شكري</forename>
+        <addName xml:lang="ota" type="title" nymRef="#nym3">بك</addName>
+        <surname nymRef="#nym4">العسلي</surname>
+    </persName>
+-->
+
+<pre><code>&lt;person xml:id=&quot;pers_2&quot;&gt;
+  &lt;persName xml:lang=&quot;ar&quot;&gt;
+    &lt;addName type=&quot;title&quot; nymRef=&quot;#nym1&quot;&gt;الدكتور&lt;/addName&gt; 
+    &lt;forename nymRef=&quot;#nym2&quot;&gt;ابراهيم&lt;/forename&gt; 
+    &lt;surname nymRef=&quot;#nym3&quot;&gt;عربيلي&lt;/surname&gt;&lt;/persName&gt;
+  &lt;persName xml:lang=&quot;en&quot;&gt;
+    &lt;addName type=&quot;title&quot; nymRef=&quot;#nym1&quot;&gt;Dr.&lt;/addName&gt; 
+    &lt;forename nymRef=&quot;#nym2&quot;&gt;Abraham&lt;/forename&gt; 
+    &lt;surname nymRef=&quot;#nym3&quot;&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+&lt;/person&gt;
+&lt;person xml:id=&quot;pers_3&quot;&gt;
+  &lt;persName xml:lang=&quot;ar&quot;&gt;
+     &lt;forename nymRef=&quot;#nym4&quot;&gt;نجيب&lt;/forename&gt; 
+     &lt;forename nymRef=&quot;#nym5&quot;&gt;يوسف&lt;/forename&gt; 
+     &lt;surname nymRef=&quot;#nym3&quot;&gt;عربيلي&lt;/surname&gt;&lt;/persName&gt;
+  &lt;persName xml:lang=&quot;en&quot;&gt;
+     &lt;forename  nymRef=&quot;#nym4&quot;&gt;Najeeb&lt;/forename&gt; 
+     &lt;forename  nymRef=&quot;#nym5&quot;&gt;Joseph&lt;/forename&gt; 
+     &lt;surname nymRef=&quot;#nym3&quot;&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+&lt;/person&gt;</code></pre>
+<p>Not to mention: <code>&lt;roleName&gt;</code> (e.g. ‘Emperor’), <code>&lt;genName&gt;</code> (eg ‘the Elder’) <code>&lt;addName&gt;</code> (e.g. ‘Hammer of the Scots’), <code>&lt;nameLink&gt;</code> a link between components (e.g. ‘van’) etc. all of which can carry <code>@type</code> attributes</p>
+</div>
+<div id="persname-works-well-for-western-names-but-arabic-or-ottoman" class="slide section level1">
+<h1><code>&lt;persName&gt;</code> works well for Western names, but Arabic or Ottoman?</h1>
+<p>The canonical scheme of <code>&lt;surname&gt;</code> and <code>&lt;forename&gt;</code> is insufficient to markup the components of personal names in pre-modern and/or non-Western contexts: How should we mark up the following names?</p>
+<ul>
+<li>حضرة صاحب الدولة المشير عبد الله باشا</li>
+<li>جناب رفعتلو فريد افندي كركبي</li>
+<li>حضرة سعادتلو احمد برهان الدين بك افندي</li>
+<li>جناب عزتلو صبحي بك ابو النصر</li>
+<li>جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني</li>
+</ul>
+</div>
+<div id="soualah-and-hassouns-proposal-for-classical-arabic-names" class="slide section level1">
+<h1>Soualah and Hassoun’s proposal for classical Arabic names</h1>
+<p><a href="http://jtei.revues.org/398">Soulah and Hassoun 2012</a> propose to use available elements <code>&lt;surname&gt;</code>, <code>&lt;forename&gt;</code>, and <code>&lt;addName&gt;</code> with a controlled vocabulary of <code>@type</code> and <code>@subtype</code> attributes.</p>
+<ul>
+<li><code>&lt;surname&gt;</code>: to encode the <em>laqab</em> evoking a real or assigned quality</li>
+<li><code>&lt;forename&gt;</code>: for the <em>ism</em></li>
+<li><code>&lt;addName&gt;</code> with <code>@type</code>
+<ul>
+<li>“patronym”: introduced by “ibn” or “ibnat”</li>
+<li>“kunyah”: a mark of distinction applied to prominent figures to honor them. For example, “Abū Yūsuf” is often used for someone called Yaʿqūb</li>
+<li>“khitab”: an honorific name, which is usually ended by the suffix al-Dīn</li>
+<li>“nisbah”: an adjective formed by using the suffix ī in order to indicate the person origin, his birth place, or his residence. It represents the relationship name, which can be a genealogical, political or ideological affiliation of a person.</li>
+</ul></li>
+</ul>
+</div>
+<div id="extended-proposal-for-late-ottoman-contexts" class="slide section level1">
+<h1>Extended proposal for late Ottoman contexts</h1>
+<p>I suggest to add the following values to the <code>@type</code> attribute of <code>&lt;addName&gt;</code></p>
+<ul>
+<li>“title”: covering the wide range of Ottoman titles, e.g. Pasha, Bey, Efendi</li>
+<li>“honorific”: for the highly regularised honorific addresses and salutations, e.g. rif’etli, saadetli, utufetli, lizetli, devletli</li>
+</ul>
+</div>
+<div id="example" class="slide section level1">
+<h1>Example</h1>
+<pre><code>&lt;persName xml:lang=&quot;ar&quot;&gt; جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني&lt;/persName&gt;</code></pre>
+<p>Could be marked up as:</p>
+<pre><code>&lt;persName xml:lang=&quot;ar&quot;&gt;
+    &lt;addName type=&quot;nisbah&quot;&gt;جزائري&lt;/addName&gt;
+    &lt;addName type=&quot;honorific&quot; xml:lang=&quot;ota&quot;&gt;زاده&lt;/addName&gt;
+    &lt;addName type=&quot;title&quot;&gt;الامير&lt;/addName&gt;
+    &lt;forename&gt;علي&lt;/forename&gt;
+    &lt;addName type=&quot;title&quot; xml:lang=&quot;ota&quot;&gt;باشا&lt;/addName&gt;
+    &lt;addName type=&quot;patronym&quot;&gt;ابن 
+        &lt;forename&gt;عبد القادر&lt;/forename&gt; 
+        &lt;addName type=&quot;title&quot; xml:lang=&quot;ota&quot;&gt;افندي&lt;/addName&gt;
+    &lt;/addName&gt;
+    &lt;surname type=&quot;laqab&quot;&gt;الحسني&lt;/surname&gt;
+&lt;/persName&gt;</code></pre>
+</div>
+<div id="components-of-place-names" class="slide section level1">
+<h1>Components of place names</h1>
+<ul>
+<li><code>&lt;placeName&gt;</code> (names can be made up of other names)</li>
+<li><code>&lt;geogName&gt;</code> a name associated with some geographical feature such as a mountain or river</li>
+<li><code>&lt;geogFeat&gt;</code> a term for some particular kind of geographical feature e.g. ‘Mount’, ‘Lake’</li>
+</ul>
+<p>For example:</p>
+<pre><code>&lt;placeName&gt;
+    &lt;geogFeat&gt;Mont&lt;/geogFeat&gt; 
+    &lt;geogName&gt;Blanc&lt;/geogName&gt;
+&lt;/placeName&gt;</code></pre>
+</div>
+<div id="geo-political-place-names" class="slide section level1">
+<h1>Geo-political place names</h1>
+<ol style="list-style-type: decimal">
+<li><code>&lt;bloc&gt;</code>: name of a geo-political unit consisting of two or more nation states or countries.</li>
+<li><code>&lt;country&gt;</code>: name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc.</li>
+<li><code>&lt;region&gt;</code>: name of an administrative unit such as a state, province, or county, larger than a settlement, but smaller than a country.</li>
+<li><code>&lt;settlement&gt;</code>: name of a settlement such as a city, town, or village identified as a single geo-political or administrative unit.</li>
+<li><code>&lt;district&gt;</code>: contains the name of any kind of subdivision of a settlement, such as a parish, ward, or other administrative or geographic unit.</li>
+</ol>
+</div>
+<div id="the-date-element" class="slide section level1">
+<h1>The <code>&lt;date&gt;</code> element</h1>
+<p>Temporal information can be encoded with:</p>
+<ul>
+<li><code>&lt;date&gt;</code>: contains a date in any format.</li>
+<li><code>&lt;time&gt;</code> contains a phrase defining a time of day in any format. <!-- - `<offset>` marks that part of a relative temporal or spatial expression which indicates the direction of the offset between the two place names, dates, or times involved in the expression.--></li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;div type=&quot;article&quot; xml:lang=&quot;en&quot;&gt;
+    &lt;head xml:lang=&quot;ar&quot;&gt;المرمح الحميدي&lt;/head&gt;
+    &lt;head xml:lang=&quot;en&quot;&gt;The Hamidieh Hipodrome&lt;/head&gt;
+    &lt;ab rend=&quot;center&quot;&gt;---&lt;/ab&gt;
+    &lt;p&gt;At the &lt;orgName&gt;U.S. Immigration Bureau&lt;/orgName&gt; the steamer &lt;orgName&gt;Cyntiana&lt;/orgName&gt; whitch sailed from &lt;placeName&gt;Beyrouth&lt;/placeName&gt; on the &lt;date when=&quot;1893-03-29&quot;&gt;29th of March&lt;/date&gt; arrived &lt;date when=&quot;1893-04-24&quot;&gt;Monday evening, April the 24th, &lt;time&gt;at 7 P.M.&lt;/time&gt;&lt;/date&gt; She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the &lt;orgName&gt;Hamidieh Hipodrome Company&lt;/orgName&gt; to which we made reference in out last issue, promissing to write a special article on its arrival.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<!--
+    <div type="article">
+        <p>
+            <date>يوم السبت الماضي</date>عاد الينا على
+            <lb/>الباخرة الافرنسية <persName>جناب الوجيه الخواجا
+            <lb/>سركست</persName> صاحب محل وبر المشهور
+            <lb/>وقنصل كل من <placeName>الداتمرك</placeName> و<placeName>اسوج</placeName> فلقيه
+            <lb/>على البحر موظفو المحل وعدد من 
+            <lb/>الاصدقاء فنهنئه بالعود سالماً</p>
+        <ab rend="center">---</ab>
+    </div>
+-->
+
+</div>
+<div id="w3c-date-formats" class="slide section level1">
+<h1>W3C Date Formats</h1>
+<p>All the elements above are ‘datable’ and so can be associated with a more or less exact date or date range using any combination of the following attributes (class <code>att.datable</code>):</p>
+<ul>
+<li><code>@when</code>: supplies the value of a date or time in a standard form</li>
+<li><code>@notBefore</code>: specifies the earliest possible date for the event in standard form</li>
+<li><code>@notAfter</code>: specifies the latest possible date for the event in standard form</li>
+<li><code>@from</code>: indicates the starting point of the period in standard form</li>
+<li><code>@to</code>: indicates the ending point of the period in standard form</li>
+</ul>
+</div>
+<div id="calendars" class="slide section level1">
+<h1>Calendars</h1>
+<p>Similar to the conceptualisation of personal names, current dating standards favour the contemporary Western model–i.e. without further specification all dated attributes refer to the Gregorian calendar.</p>
+<p>All other calendars–in our case this means <em>hijrī</em>, <em>mālī</em>, and <em>rūmī</em>–should be declared and documented using the <code>&lt;calendarDesc&gt;</code> in the <code>&lt;profileDesc&gt;</code> in the TEI header. They can then be referenced through:</p>
+<ul>
+<li><code>@calendar</code>: indicates the system or calendar to which the date represented by the content of this element belongs.</li>
+<li><code>@datingMethod</code>: supplies a pointer to a <code>&lt;calendar&gt;</code> element or other means of interpreting the values of the custom dating attributes:
+<ul>
+<li>the members of <code>att.datable.custom</code>: <code>@when-custom</code>, <code>@notBefore-custom</code> etc.</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-islamic-calendar-hijrī" class="slide section level1">
+<h1>The islamic calendar: <em>hijrī</em></h1>
+<pre><code>&lt;calendar xml:id=&quot;cal_islamic&quot;&gt;
+  &lt;p&gt;Islamic &lt;hi&gt;hijrī&lt;/hi&gt; calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as the beginning of the month is based on sightings of the new moon.&lt;/p&gt;
+  &lt;p&gt;E.g. &lt;date calendar=&quot;#cal_islamic&quot; datingMethod=&quot;#cal_islamic&quot; when=&quot;1841-05-23&quot; when-custom=&quot;1257-04-01&quot;&gt;1 Rab II 1257, Sunday&lt;/date&gt;, &lt;date calendar=&quot;#cal_islamic&quot; datingMethod=&quot;#cal_islamic&quot; when=&quot;1908-03-05&quot; when-custom=&quot;1326-02-01&quot;&gt;1 Ṣaf 1326, Thursday&lt;/date&gt;.&lt;/p&gt;
+&lt;/calendar&gt;</code></pre>
+<p><em>Note</em>: The official <strong>XPath</strong> specifications have a bug that prevents the computation of Islamic <em>hijrī</em> dates. To remedy this and other issues, I wrote a number of <em>XSLT stylesheets</em> for converting dates between the four calendars in use in the Ottoman Empire, which can be found on <a href="https://github.com/tillgrallert/xslt-calendar-conversion">GitHub</a> (<a href="https://github.com/tillgrallert/xslt-calendar-conversion">https://github.com/tillgrallert/xslt-calendar-conversion</a>).</p>
+</div>
+<div id="the-reformed-julian-calendar-rūmī-sharqī" class="slide section level1">
+<h1>The (reformed) Julian calendar: <em>rūmī</em>, <em>sharqī</em></h1>
+<pre><code>&lt;calendar xml:id=&quot;cal_julian&quot;&gt;
+  &lt;p&gt;Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as &lt;hi&gt;rūmī&lt;/hi&gt;. Arabic newspapers usually labelled this calendar as &lt;hi&gt;sharqī&lt;/hi&gt;.&lt;/p&gt;
+  &lt;p&gt;All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars, even-numbered) year at the end of February (the last day of the old Julian calendar). The Gregorian calendar suppresses this rule in centesimal years that cannot be divided by 400. This difference creates a growing offset between Gregorian and Julian calendars: while 1900 R was a leap year, 1900 was not, which in turn caused the difference between the Gregorian calendar, on the one hand, and the &lt;hi&gt;mālī&lt;/hi&gt; and &lt;hi&gt;rūmī&lt;/hi&gt; calendars, on the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900) onwards.&lt;/p&gt;
+  &lt;p&gt;E.g. &lt;date calendar=&quot;#cal_julian&quot; datingMethod=&quot;#cal_julian&quot; when=&quot;1841-05-23&quot; when-custom=&quot;1841-05-11&quot;&gt;11 Ayyār 1841, Sunday&lt;/date&gt;, &lt;date calendar=&quot;#cal_julian&quot; datingMethod=&quot;#cal_julian&quot; when=&quot;1908-03-05&quot; when-custom=&quot;1908-02-21&quot;&gt;21 Shub 1908, Thursday&lt;/date&gt;.&lt;/p&gt;
+&lt;/calendar&gt;</code></pre>
+</div>
+<div id="the-ottoman-fiscal-calendar-mālī-rūmī-sic" class="slide section level1">
+<h1>The Ottoman fiscal calendar: <em>mālī</em>, <em>rūmī</em> (sic!)</h1>
+<pre><code>&lt;calendar xml:id=&quot;cal_ottomanfiscal&quot;&gt;
+  &lt;p&gt;Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as &lt;hi&gt;mālī&lt;/hi&gt; and sometimes, confusingly, also as &lt;hi&gt;rūmī&lt;/hi&gt;. Every 33 lunar years, a &lt;hi&gt;hijrī&lt;/hi&gt; year would complete within a single solar &lt;hi&gt;mālī&lt;/hi&gt; year. In this case the counting of the &lt;hi&gt;mālī&lt;/hi&gt; years skipped a year to catch up with the faster &lt;hi&gt;hijrī&lt;/hi&gt; calendar. Due to a printing error in the coupon booklets for the consolidated debt repayment program for 1872 (1288 M instead of 1289 M), synchronisation of &lt;hi&gt;mālī&lt;/hi&gt; and &lt;hi&gt;hijrī&lt;/hi&gt; years was henceforth abolished. As &lt;hi&gt;mālī&lt;/hi&gt; years began with 1 March, &lt;hi&gt;mālī&lt;/hi&gt; leap years preceded their &lt;hi&gt;rūmī&lt;/hi&gt; and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).&lt;/p&gt;
+  &lt;p&gt;E.g. &lt;date calendar=&quot;#cal_ottomanfiscal&quot; datingMethod=&quot;#cal_ottomanfiscal&quot; when=&quot;1841-05-23&quot; when-custom=&quot;1257-03-11&quot;&gt;11 Māyis 1257, Sunday&lt;/date&gt;, &lt;date calendar=&quot;#cal_ottomanfiscal&quot; datingMethod=&quot;#cal_ottomanfiscal&quot; when=&quot;1908-03-05&quot; when-custom=&quot;1323-12-21&quot;&gt;21 Shub 1323, Thursday&lt;/date&gt;.&lt;/p&gt;
+&lt;/calendar&gt;</code></pre>
+</div>
+<div id="next" class="slide section level1">
+<h1>Next:</h1>
+<p>Now let’s do an exercise where we markup entities in the newspaper texts using <code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code>, <code>&lt;orgName&gt;</code>, and <code>&lt;date&gt;</code> with their various attributes.</p>
+</div>
+</body>
+</html>

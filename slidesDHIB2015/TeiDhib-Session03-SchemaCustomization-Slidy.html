@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <!-- <style type="text/css">code{white-space: pre-wrap;}</style> -->
+    <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//css/slidy_custom_sh.css" />
+    <!--<link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>--> 
+    <script src="..//js/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+
+<script src="..//js/jquery-1.11.2.min.js"
+    charset="utf-8" type="text/javascript"></script>
+    <script src="..//js/jquery.snippet.js"
+    charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="..//css/jquery.snippet.css" />
+    <script type="text/javascript">
+            $(document).ready(function(){
+    
+    $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+        // Finds <pre> element
+        // and snippet highlights the CSS code within
+        // using the "greenlcd" styling.
+    });
+    </script>
+</head>
+<body>
+<div id="schema-and-customisation-producing-valid-tei" class="slide section level1">
+<h1>Schema and customisation: producing valid TEI</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and the <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS code</a> of the W3C.</p>
+</div>
+<div id="customising-the-tei" class="slide section level1">
+<h1>Customising the TEI</h1>
+<p>We will cover: <!-- check these claims against the final syllabus --></p>
+<ul>
+<li>How the TEI is constructed</li>
+<li>Making a TEI schema</li>
+<li>Specifying your profile of the TEI</li>
+<li>Generating your own documentation</li>
+</ul>
+<p><strong>Every</strong> use of the TEI involves making use of a customisation of the TEI.</p>
+</div>
+<div id="terminology-again" class="slide section level1">
+<h1>Terminology again</h1>
+<ul>
+<li>The TEI encoding scheme consists of a number of <em>modules</em></li>
+<li>Each module contains a number of <em>element specifications</em></li>
+<li>Each element specification contains:
+<ul>
+<li>a canonical name (<code>&lt;gi&gt;</code>) for the element, and optionally other names in other languages</li>
+<li>a canonical description (also possibly translated) of its function</li>
+<li>a declaration of the <em>classes</em> to which it belongs</li>
+<li>a definition for each of its <em>attributes</em></li>
+<li>a definition of its <em>content model</em></li>
+<li>usage examples and notes</li>
+</ul></li>
+<li>a TEI <em>schema</em> specification (<code>&lt;schemaSpec&gt;</code>) is made by selecting modules or elements and (optionally) modifying their contents</li>
+<li>a TEI document containing a schema specification is called an <em>ODD</em> (One Document Does it all)</li>
+</ul>
+</div>
+<div id="what-is-a-module" class="slide section level1">
+<h1>What is a module?</h1>
+<ul>
+<li>A convenient way of grouping together a number of element declarations</li>
+<li>These are usually on a related topic or specific application</li>
+<li>Most chapters of P5 focus on elements drawn from a single module, which that chapter then defines</li>
+<li>A TEI Schema is created by selecting modules and adding or removing elements from them as needed</li>
+</ul>
+</div>
+<div id="which-modules-are-available" class="slide section level1">
+<h1>Which modules are available?</h1>
+<!-- mark those that we might need -->
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Module name</th>
+<th align="left">Chapter of the P5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">analysis</td>
+<td align="left">Simple analytical mechanisms</td>
+</tr>
+<tr class="even">
+<td align="left">certainty</td>
+<td align="left">Certainty and responsibility</td>
+</tr>
+<tr class="odd">
+<td align="left">core</td>
+<td align="left">Elements available in ALL TEI documents</td>
+</tr>
+<tr class="even">
+<td align="left">corpus</td>
+<td align="left">Language corpora</td>
+</tr>
+<tr class="odd">
+<td align="left">dictionaries</td>
+<td align="left">Dictionaries</td>
+</tr>
+<tr class="even">
+<td align="left">drama</td>
+<td align="left">Performance texts</td>
+</tr>
+<tr class="odd">
+<td align="left">figure</td>
+<td align="left">Tables, formulae, and graphics</td>
+</tr>
+<tr class="even">
+<td align="left">gaiji</td>
+<td align="left">Representation of non-standard characters and glyphs</td>
+</tr>
+<tr class="odd">
+<td align="left">header</td>
+<td align="left">the TEI header</td>
+</tr>
+<tr class="even">
+<td align="left">iso-fs</td>
+<td align="left">Feature structures</td>
+</tr>
+<tr class="odd">
+<td align="left">linking</td>
+<td align="left">Linking, segmentation, and alignment</td>
+</tr>
+<tr class="even">
+<td align="left">msdescription</td>
+<td align="left">Manuscript description</td>
+</tr>
+<tr class="odd">
+<td align="left">namesdates</td>
+<td align="left">Names, dates, people, and places</td>
+</tr>
+<tr class="even">
+<td align="left">nets</td>
+<td align="left">Graphs, networks, and trees</td>
+</tr>
+<tr class="odd">
+<td align="left">spoken</td>
+<td align="left">Transcription of speech</td>
+</tr>
+<tr class="even">
+<td align="left">tagdocs</td>
+<td align="left">Documentation elements</td>
+</tr>
+<tr class="odd">
+<td align="left">tei</td>
+<td align="left">the TEI infrastructure</td>
+</tr>
+<tr class="even">
+<td align="left">textcrit</td>
+<td align="left">Critical apparatus</td>
+</tr>
+<tr class="odd">
+<td align="left">textstructure</td>
+<td align="left">Default text structure</td>
+</tr>
+<tr class="even">
+<td align="left">transcr</td>
+<td align="left">Representation of primary sources</td>
+</tr>
+<tr class="odd">
+<td align="left">verse</td>
+<td align="left">verse</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="how-do-you-choose" class="slide section level1">
+<h1>How do you choose?</h1>
+<ul>
+<li>Just choose everything (not really a good idea)</li>
+<li>The TEI provides a small set of predefined combinations (TEI Lite, TEI Bare...)</li>
+<li>Or you could roll your own (but then you need to know what you're choosing)</li>
+</ul>
+<p>Here comes <hi style="color:red">Roma</hi> acommand line script,with a web frontend, designed to make this process much easier <a href="http://www.tei-c.org/Roma/">http://www.tei-c.org/Roma/</a></p>
+</div>
+<div id="roma-design-a-new-schema" class="slide section level1">
+<h1>Roma: design a new schema</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma1.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="roma-customise" class="slide section level1">
+<h1>Roma: customise</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma2.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="roma-schema" class="slide section level1">
+<h1>Roma: schema</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma3.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="roma-documentation" class="slide section level1">
+<h1>Roma: documentation</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma4.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="what-did-we-just-do" class="slide section level1">
+<h1>What did we just do?</h1>
+<p>We processed a pre-existing ODD file which contained (as well as some discursive prose) the following schema specification:</p>
+<pre><code>&lt;schemaSpec ident=&quot;tei_bare&quot; start=&quot;TEI&quot;&gt;
+    &lt;moduleRef key=&quot;core&quot;/&gt;
+    &lt;moduleRef key=&quot;tei&quot;/&gt;
+    &lt;moduleRef key=&quot;header&quot;/&gt;
+    &lt;moduleRef key=&quot;textstructure&quot;/&gt;
+    &lt;elementSpec ident=&quot;abbr&quot; mode=&quot;delete&quot; module=&quot;core&quot;/&gt;
+    &lt;elementSpec ident=&quot;add&quot; mode=&quot;delete&quot; module=&quot;core&quot;/&gt;
+    &lt;!-- ... --&gt;
+    &lt;elementSpec ident=&quot;trailer&quot; mode=&quot;delete&quot; module=&quot;textstructure&quot;/&gt;
+    &lt;elementSpec ident=&quot;title&quot; mode=&quot;change&quot; module=&quot;core&quot;&gt;
+        &lt;attList&gt;
+            &lt;attDef ident=&quot;level&quot; mode=&quot;delete&quot;/&gt;
+        &lt;/attList&gt;
+    &lt;/elementSpec&gt;
+    &lt;!-- ... --&gt;
+&lt;/schemaSpec&gt;</code></pre>
+<p>We selected four modules, deleted loads of elements, and also deleted an attribute.</p>
+</div>
+<div id="roma-provides-an-interface-to-the-detail" class="slide section level1">
+<h1>Roma provides an interface to the detail</h1>
+<ul>
+<li>The [Modules] tab shows the modules available</li>
+<li>Selecting a module from it shows the elements within that module, and gives you the choice to
+<ul>
+<li>include all of them (and then remove some)</li>
+<li>exclude all of them (and then put back the ones you want)</li>
+</ul></li>
+<li>You can also change an element's attribute list, and the values they permit</li>
+</ul>
+</div>
+<div id="roma-select-modules" class="slide section level1">
+<h1>Roma: select modules</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma5.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="roma-edit-modules" class="slide section level1">
+<h1>Roma: edit modules</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma6.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="what-do-we-need-for-our-newspapers" class="slide section level1">
+<h1>What do we need for our newspapers?</h1>
+<p>A simple selection of elements, but also</p>
+<ul>
+<li>we want only only certain values of <span class="citation">@type</span> on <code>&lt;div&gt;</code>, for instance, &quot;section&quot;, &quot;article&quot;, &quot;masthead&quot;, &quot;verse&quot;, &quot;bill&quot;</li>
+<li>we may want to provide a list of suggested values for <span class="citation">@xml:lang</span>, such as, &quot;ar&quot;, &quot;ar-Latn-x-ijmes&quot;, &quot;ota&quot;, &quot;ota-Latn-x-ijmes&quot;, &quot;en&quot;, &quot;fr&quot;</li>
+<li>we may want to create a new element (do we? what would that be?)</li>
+</ul>
+<p>Other constrains are possible--we might want to insist that a <code>&lt;div @type=&quot;bill&quot;&gt;</code> contains only <code>&lt;div type=&quot;section&quot;&gt;</code> and <code>&lt;div type=&quot;article&quot;&gt;</code> and that the latter should be numbered through a <span class="citation">@n</span> attribute</p>
+</div>
+<div id="the-odd-advantage" class="slide section level1">
+<h1>The ODD advantage</h1>
+<p>We can express these constraints in our ODD meta-schema, and then generate a formal schema to enforce them using whichever schema language we like.</p>
+<ul>
+<li>TEI schemas can be generated in
+<ul>
+<li>ISO RELAX NG language</li>
+<li>W3C Schema Language</li>
+<li>XML DTD language</li>
+</ul></li>
+<li>ODD itself defines an element's content models using a subset of RELAX NG syntax</li>
+<li>Datatypes are defined in terms of W3C datatypes</li>
+<li>Some facilities (e.g. alternation, namespaces) cannot be expressed in DTDs--RELAX NG schema is recommended</li>
+<li>Additional constraints can be expressed in Schematron</li>
+</ul>
+</div>
+<div id="roma-select-attributes" class="slide section level1">
+<h1>Roma: select attributes</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma7.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="roma-constrain-attribute-values" class="slide section level1">
+<h1>Roma: constrain attribute values</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma8.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="what-did-we-just-do-1" class="slide section level1">
+<h1>What did we just do?</h1>
+<p>Our ODD now includes something like this:</p>
+<pre><code>&lt;elementSpec ident=&quot;div&quot; mode=&quot;change&quot; module=&quot;textstructure&quot;&gt;
+    &lt;attList&gt;
+        &lt;attDef ident=&quot;type&quot; mode=&quot;change&quot; usage=&quot;req&quot;&gt;
+            &lt;valList mode=&quot;replace&quot; type=&quot;closed&quot;&gt;
+                &lt;valItem ident=&quot;section&quot;/&gt;
+                &lt;valItem ident=&quot;article&quot;/&gt;
+                &lt;valItem ident=&quot;verse&quot;/&gt;
+                &lt;valItem ident=&quot;masthead&quot;/&gt;
+                &lt;valItem ident=&quot;bill&quot;/&gt;
+                &lt;valItem ident=&quot;letter&quot;/&gt;
+                &lt;!-- ... --&gt;
+            &lt;/valList&gt;
+        &lt;/attDef&gt;
+    &lt;/attList&gt;
+&lt;/elementSpec&gt;</code></pre>
+<p>Note that we can also add documentation to the ODD</p>
+<pre><code>&lt;valItem ident=&quot;verse&quot;&gt;
+    &lt;gloss&gt;contains (parts of ) a poem&lt;/gloss&gt;
+&lt;/valItem&gt;</code></pre>
+</div>
+<div id="defining-a-new-element" class="slide section level1">
+<h1>Defining a new element</h1>
+<p>When defining a new element, we need to consider</p>
+<ul>
+<li>its name and description</li>
+<li>what attributes it can carry</li>
+<li>what it can contain</li>
+<li>where it can appear in a document</li>
+</ul>
+<p>The TEI class system helps us answer all these questions (except the first).</p>
+</div>
+<div id="the-tei-class-system" class="slide section level1">
+<h1>The TEI class system</h1>
+<ul>
+<li>The TEI distinguishes over 500 elements,</li>
+<li>Having these organised into classes aids comprehension, modularity, and modification.</li>
+<li><em>Attribute class</em>: the members share common attributes</li>
+<li><em>Model class</em>: they can appear in the same locations (and are often semantically related)</li>
+<li>Classes may contain other classes</li>
+<li>An element can be a member of any number of classes, irrespective of the module it belongs to.</li>
+</ul>
+</div>
+<div id="tei-attribute-classes" class="slide section level1">
+<h1>TEI attribute classes</h1>
+<ul>
+<li>Attribute classes are given (usually adjectival) names beginning with <strong>att.</strong>; e.g. att.naming, att.typed</li>
+<li>all members of att.naming inherit from it attributes <span class="citation">@key</span> and <span class="citation">@ref</span> ; all members of att.typed inherit from it <span class="citation">@type</span> and <span class="citation">@subtype</span></li>
+<li>If we want an element to carry the <span class="citation">@type</span> attribute, therefore, we add the element to the att.typed class, rather than define those attributes explicitly.</li>
+</ul>
+</div>
+<div id="att.global-a-very-important-attribute-class" class="slide section level1">
+<h1>att.global: a very important attribute class</h1>
+<p>All elements are usually members of att.global; this class provides, among others:</p>
+<ul>
+<li><span class="citation">@xml:id</span>: a <em>unique</em> identifier</li>
+<li><span class="citation">@xml:lang</span>: thel anguage of the element content</li>
+<li><span class="citation">@n</span>: a number or name for an element</li>
+<li><span class="citation">@rend</span>: how the element in question was rendered or presented in the source text.</li>
+</ul>
+</div>
+<div id="model-classes" class="slide section level1">
+<h1>Model Classes</h1>
+<ul>
+<li>Model classes contain groups of elements which are allowed in the same place. e.g. if you are adding an element which is wanted wherever the <code>&lt;bibl&gt;</code> is allowed, add it to the <code>model.biblLike</code> class</li>
+<li>Model classes are usually named with a <em>Like</em> or <em>Part</em> suffix:
+<ul>
+<li>members of <code>model.pLike</code> are all things that ‘behave like’ paragraphs, and are permitted in the same places as paragraphs</li>
+<li>members of <code>model.pPart</code> are all things which can appear within paragraphs. This class is subdivided into
+<ul>
+<li><code>model.pPart.edit</code> elements for simple editorial intervention such as <code>&lt;corr&gt;</code>, <code>&lt;del&gt;</code> etc.</li>
+<li><code>model.pPart.data</code> ‘data-like’ elements such as <code>&lt;name&gt;</code>, <code>&lt;num&gt;</code>, <code>&lt;date&gt;</code> etc.</li>
+<li><code>model.pPart.msdesc</code> extra elements for manuscript description such as <code>&lt;seal&gt;</code> or <code>&lt;origPlace&gt;</code></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="basic-model-class-structure" class="slide section level1">
+<h1>Basic model class structure</h1>
+<p>Simplifying wildly, one may say that the TEI recognises three kinds of element:</p>
+<ul>
+<li>divisions: high level major divisions of texts</li>
+<li>chunks: elements such as paragraphs appearing within texts or divisions, but not other chunks</li>
+<li>phrase-level elements: elements such as highlighted phrases which can occur only within chunks</li>
+</ul>
+<p>There are ‘base model classes’ corresponding with each of these, and also with the following groupings:</p>
+<ul>
+<li>inter-level elements: elements such as lists which can appear either in or between chunks</li>
+<li>components: elements which can appear directly within texts or text divisions</li>
+</ul>
+<p>And yes, there is a class <code>model.global</code> for elements that can appear anywhere inside a text — at any hierarchic level.</p>
+</div>
+<div id="break" class="slide section level1">
+<h1>Break</h1>
+</div>
+<div id="defining-a-new-element-1" class="slide section level1">
+<h1>Defining a new element</h1>
+<ul>
+<li>What other elements is it like?</li>
+<li>What other elements can contain it?</li>
+<li>What can it contain?</li>
+<li>Conclusions:
+<ul>
+<li>What model do we select?</li>
+<li>What content model do we select?</li>
+</ul></li>
+</ul>
+</div>
+<div id="roma-defining-a-new-element" class="slide section level1">
+<h1>Roma: Defining a new element</h1>
+<div class="figure">
+<img src="images/ScreenShot-Roma9.png" alt="Screen shot of Roma" /><p class="caption">Screen shot of Roma</p>
+</div>
+</div>
+<div id="defining-a-content-model" class="slide section level1">
+<h1>Defining a content model</h1>
+<ul>
+<li>A typical TEI element defines its content by referencing classes of element which it can contain, rather than using specific elements.</li>
+<li>Content models are defined using the RELAXNG vocabulary</li>
+<li>Here are some very common predefined content models:
+<ul>
+<li>macro.paraContent content of paragraphs and similar elements</li>
+<li>macro.limitedContent content of prose elements that are not used for transcription of extant materials</li>
+<li>macro.phraseSeq a sequence of character data and phrase-level elements</li>
+<li>macro.phraseSeq.limited a sequence of character data and those phrase-level elements that are not typically used for transcribing extant documents</li>
+<li>macro.specialPara the content model of elements which either contain a series of component-level elements or else contain a series of phrase-level elements</li>
+</ul></li>
+</ul>
+</div>
+<div id="roma-defining-a-new-element-2" class="slide section level1">
+<h1>Roma: Defining a new element 2</h1>
+</div>
+<div id="what-did-we-just-do-2" class="slide section level1">
+<h1>What did we just do?</h1>
+<p>We added a new element specification to our ODD, like this:</p>
+<pre><code>&lt;elementSpec ident=&quot;something&quot; mode=&quot;add&quot; ns=&quot;http://www.example.org/ns/nonTEI&quot;&gt;
+    &lt;desc&gt;contains something division like.&lt;/desc&gt;
+    &lt;classes&gt;
+        &lt;memberOf key=&quot;model.divPart&quot;/&gt;
+        &lt;memberOf key=&quot;att.typed&quot;/&gt;
+    &lt;/classes&gt;
+    &lt;content&gt;
+        &lt;rng:ref name=&quot;someThing&quot;/&gt; 
+        &lt;rng:oneOrMore&gt;
+            &lt;rng:ref name=&quot;model.pLike&quot;/&gt;
+        &lt;/rng:oneOrMore&gt;
+    &lt;/content&gt;
+&lt;/elementSpec&gt;</code></pre>
+<p>Note that this new element is not in the TEI namespace. It belongs to this specific project only!</p>
+</div>
+<div id="other-kinds-of-constraints" class="slide section level1">
+<h1>Other kinds of constraints</h1>
+<ul>
+<li>You can also constrain the content of an element or the value of an attribute to be of a particular datatype (for example, to insist that the <span class="citation">@when</span> attribute of the element <code>&lt;date&gt;</code> contains only a date)</li>
+<li>This can be done by using one of a set of predefined macros to define the content. Examples include
+<ul>
+<li><code>data.word</code> a single word or token</li>
+<li><code>data.name</code> an XML Name</li>
+<li><code>data.enumerated</code> a single XML name taken from a documented list</li>
+<li><code>data.temporal.w3c</code> a W3C date</li>
+<li><code>data.truthValue</code> a truth value (true/false)</li>
+<li><code>data.language</code> a human language</li>
+<li><code>data.sex</code> human or animal sex</li>
+</ul></li>
+<li>Or you can define a more complex constraint, e.g. using Schematron</li>
+</ul>
+</div>
+<div id="schematron-constraints" class="slide section level1">
+<h1>Schematron constraints</h1>
+<p>An element specification can also contain a <code>&lt;constraintSpec&gt;</code> element which contains rules about its content expressed as ISO Schematron constraints</p>
+<pre><code>&lt;elementSpec ident=&quot;div&quot; mode=&quot;change&quot; module=&quot;teistructure&quot; xmlns:s=&quot;http://purl.oclc.org/dsdl/schematron&quot;&gt;
+    &lt;constraintSpec ident=&quot;div&quot; scheme=&quot;isoschematron&quot;&gt;
+        &lt;constraint&gt;
+            &lt;s:assert test=&quot;@type=&#39;bill&#39; and .//tei:div[@type=&#39;article&#39;]&quot;&gt;prose must include a paragraph&lt;/s:assert&gt;
+        &lt;/constraint&gt;
+    &lt;/constraintSpec&gt;
+&lt;/elementSpec&gt;</code></pre>
+<p>However... - You can only add such rules by editing your ODD file: Roma doesn't know about them. - Not all schema languages can implement these constraints.</p>
+</div>
+</body>
+</html>

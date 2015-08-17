@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI 2 — TEI core module</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI 2 — TEI core module</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">2 March 2015</p>
+</div>
+<div id="tei-core-module-introducing-structural-markup" class="slide section level1">
+<h1>TEI core module: Introducing structural markup</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="al-iqbāl" class="slide section level1">
+<h1><em>al-Iqbāl</em></h1>
+<div class="figure">
+<img src="images/mic164_alikbal_1908-1909_0118_150dpi.jpg" alt="Front page of al-Iqbāl #257, 27 July 1908" /><p class="caption">Front page of <em>al-Iqbāl</em> #257, 27 July 1908</p>
+</div>
+</div>
+<div id="al-bashīr" class="slide section level1">
+<h1><em>al-Bashīr</em></h1>
+<div class="figure">
+<img src="images/mic54_albashir_1907-19011_0171_150dpi.jpg" alt="Front page of al-Bashīr #1868, 27 July 1908" /><p class="caption">Front page of <em>al-Bashīr</em> #1868, 27 July 1908</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="images/mic54_albashir_1907-19011_0175_150dpi.jpg" alt="Front page of al-Bashīr, 3 August 1908" /><p class="caption">Front page of <em>al-Bashīr</em>, 3 August 1908</p>
+</div>
+</div>
+<div id="lisān-al-ḥāl" class="slide section level1">
+<h1><em>Lisān al-Ḥāl</em></h1>
+<div class="figure">
+<img src="images/na111_lisanulhal_1907-08_0912_150dpi.jpg" alt="Front page of Lisān al-Ḥāl #5773, 27 July 1908" /><p class="caption">Front page of <em>Lisān al-Ḥāl</em> #5773, 27 July 1908</p>
+</div>
+</div>
+<div id="thamarāt-al-funūn" class="slide section level1">
+<h1><em>Thamarāt al-Funūn</em></h1>
+<div class="figure">
+<img src="images/TF-1908-0215_150dpi.jpg" alt="Front page of Thamarāt al-Funūn #1683, 27 July 1908" /><p class="caption">Front page of <em>Thamarāt al-Funūn</em> #1683, 27 July 1908</p>
+</div>
+</div>
+<div id="looking-at-the-material-what-do-we-need-to-mark-up" class="slide section level1">
+<h1>Looking at the material, what do we need to mark up?</h1>
+<ul>
+<li>Identification information, page numbers, sources</li>
+<li>“chunks” or divisions of text, which may contain a picture, a poem, some prose, or a combination</li>
+<li>within the chunks, we can identify formal units such as
+<ul>
+<li>a picture,</li>
+<li>a caption</li>
+<li>stanzas,</li>
+<li>lines</li>
+<li>paragraphs</li>
+<li>and more…</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-document-structure" class="slide section level1">
+<h1>The document structure</h1>
+<p>All TEI documents are structured in a particular manner. This section attempts to describe the different variations on this as briefly as possible.</p>
+</div>
+<div id="structure-of-a-tei-document" class="slide section level1">
+<h1>Structure of a TEI Document</h1>
+<p>There are two basic types of TEI document:</p>
+<ul>
+<li><code>&lt;TEI&gt;</code> contains a single TEI-conformant document, comprising a TEI header and a text, in various forms.</li>
+<li><code>&lt;teiCorpus&gt;</code> contains a TEI-encoded corpus, comprising a single corpus header and one or more <code>&lt;TEI&gt;</code> elements, each containing its own header and a text.</li>
+</ul>
+<p>The text may be in the form of:</p>
+<ul>
+<li>a <code>&lt;facsimile&gt;</code>: pictures of pages</li>
+<li>a <code>&lt;sourceDoc&gt;</code>: a pure transcription, or</li>
+<li>a <code>&lt;text&gt;</code>: an edited document</li>
+</ul>
+</div>
+<div id="tei-basic-structure" class="slide section level1">
+<h1>TEI basic structure</h1>
+<pre><code>&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;teiHeader&gt;
+        &lt;!-- required --&gt;
+    &lt;/teiHeader&gt;
+    &lt;facsimile&gt;
+        &lt;!-- optional--&gt;
+    &lt;/facsimile&gt;
+    &lt;sourceDoc&gt;
+        &lt;!-- optional --&gt;
+    &lt;/sourceDoc&gt;
+    &lt;text&gt;
+        &lt;!-- required if no facsimile or sourceDoc--&gt;
+    &lt;/text&gt;
+&lt;/TEI&gt;</code></pre>
+</div>
+<div id="tei-basic-structure-2" class="slide section level1">
+<h1>TEI basic structure 2</h1>
+<pre><code>&lt;teiCorpus xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;teiHeader&gt;
+        &lt;!-- required --&gt;
+    &lt;/teiHeader&gt;
+    &lt;TEI&gt;
+        &lt;!-- required --&gt;
+    &lt;/TEI&gt;
+    &lt;!-- More &lt;TEI&gt;elements --&gt;
+&lt;/teiCorpus&gt;</code></pre>
+</div>
+<div id="the-text-element" class="slide section level1">
+<h1>The <code>&lt;text&gt;</code> element</h1>
+<p>What is a text? (remember that one?)</p>
+<ul>
+<li>A text may be unitary or composite
+<ul>
+<li>unitary: forming an organic whole</li>
+<li>composite: consisting of several components which are in some important sense independent of each other</li>
+</ul></li>
+<li>a unitary text contains
+<ul>
+<li><code>&lt;front&gt;</code>: optional front matter</li>
+<li><code>&lt;body&gt;</code>: (required)</li>
+<li><code>&lt;back&gt;</code>: optional back matter</li>
+</ul></li>
+</ul>
+</div>
+<div id="tei-text-structure-1" class="slide section level1">
+<h1>TEI text structure 1</h1>
+<p>A simple document:</p>
+<pre><code>&lt;text&gt;
+    &lt;front&gt;
+        &lt;!-- optional --&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+        &lt;!-- required --&gt;
+    &lt;/body&gt;
+    &lt;back&gt;
+        &lt;!-- optional --&gt;
+    &lt;/back&gt;
+&lt;/text&gt;</code></pre>
+</div>
+<div id="macrostructure-composite-texts" class="slide section level1">
+<h1>Macrostructure: composite texts</h1>
+<p>Newspaper issues are usually grouped into volumes (or years). If we consider them as a single composite text, we could treat each issue as a <code>&lt;div&gt;</code> within it. Or (even better) we could use the <code>&lt;group&gt;</code> element:</p>
+<pre><code>&lt;text n=&quot;35&quot; xml:id=&quot;v35&quot; xml:lang=&quot;ar&quot;&gt;
+    &lt;front&gt;
+        &lt;!-- some introductory material for the current volume --&gt;
+    &lt;/front&gt;
+    &lt;group&gt;
+        &lt;text n=&quot;1869&quot; xml:id=&quot;v35-i1869&quot; xml:lang=&quot;ar&quot;&gt;
+            &lt;front&gt;
+                &lt;!-- the masthead of issue 1869 --&gt;
+            &lt;/front&gt;
+            &lt;body&gt;
+                &lt;!-- issue 1869 --&gt;
+            &lt;/body&gt;
+        &lt;/text&gt;
+        &lt;text n=&quot;1870&quot; xml:id=&quot;v35-i1870&quot; xml:lang=&quot;ar&quot;&gt;
+            &lt;front&gt;
+                &lt;!-- the masthead of issue 1870 --&gt;
+            &lt;/front&gt;
+            &lt;body&gt;
+                &lt;!-- issue 1870 --&gt;
+            &lt;/body&gt;
+        &lt;/text&gt;
+    &lt;/group&gt;
+    &lt;back&gt;
+        &lt;!-- volume index, appendices etc. --&gt;
+    &lt;/back&gt;
+&lt;/text&gt;</code></pre>
+</div>
+<div id="the-high-level-structure" class="slide section level1">
+<h1>The high level structure</h1>
+<p>Each identifiable division within <code>&lt;text&gt;</code> is a <code>&lt;div&gt;</code> element. It can optionally be given a particular type (e.g. cartoon, verse, prose), using a free-text attribute.</p>
+<p>For example, page 1 has two divisions:</p>
+<pre><code>&lt;pb n=&quot;1&quot;/&gt;
+&lt;div type=&quot;article&quot;&gt;
+    &lt;p&gt;....&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div type=&quot;poem&quot;&gt; 
+    &lt;head&gt;Strange Meeting&lt;/head&gt; 
+    &lt;lg&gt;
+        &lt;l&gt;....&lt;/l&gt; 
+    &lt;/lg&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="why-divisions-rather-than-pages" class="slide section level1">
+<h1>Why divisions rather than pages</h1>
+<p>Because a division can start on one page and finish on another, or cross other physical boundaries</p>
+<p>We use an empty element <code>&lt;pb/&gt;</code> to mark the boundary between pages, rather than enclosing each page in a <code>&lt;div type=&quot;page&quot;&gt;</code>.</p>
+<pre><code>&lt;pb n=&quot;5&quot;/&gt;
+&lt;div type=&quot;article&quot;&gt;
+    &lt;p&gt;...&lt;/p&gt; 
+&lt;/div&gt;
+&lt;div type=&quot;poem&quot;&gt;
+    &lt;head&gt;Strange Meeting&lt;/head&gt;
+    &lt;lg&gt; ...
+    &lt;pb n=&quot;6&quot;/&gt;
+    ...
+    &lt;/lg&gt;
+&lt;/div&gt;
+&lt;div type=&quot;article&quot;&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="divisions-can-contain-divisions" class="slide section level1">
+<h1>Divisions can contain divisions …</h1>
+<pre><code>&lt;div type=&quot;postcard&quot;&gt;
+    &lt;div type=&quot;postmark&quot;&gt;
+        &lt;div type=&quot;advert&quot;&gt;
+            &lt;ab&gt;BUY NATIONAL &lt;lb/&gt;WAR BONDS&lt;/ab&gt;
+        &lt;/div&gt;
+        &lt;div type=&quot;dateStamp&quot;&gt;
+            &lt;dateline&gt;
+                &lt;placeName&gt;SCARBOROUGH&lt;/placeName&gt;
+                &lt;lb/&gt;
+                &lt;time&gt;6.30 PM&lt;/time&gt;
+                &lt;lb/&gt;
+            &lt;/dateline&gt;
+        &lt;/div&gt;
+        &lt;div type=&quot;advert&quot;&gt;
+            &lt;ab&gt;BUY NATIONAL &lt;lb/&gt;WAR BONDS&lt;/ab&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;address&quot;&gt;
+        &lt;!-- &lt;address&gt; here --&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;prose&quot;&gt;
+        &lt;!-- text here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="more-about-divisions" class="slide section level1">
+<h1>More about divisions</h1>
+<ul>
+<li>generic, hierarchic subdivisions, each incomplete as a text as a whole</li>
+<li>the <code>@type</code> attribute is used to label a particular level e.g. as ‘part’ or ‘chapter’</li>
+<li>the <span class="citation">@n</span> attribute gives a particular division a name or number (not necessarily unique)</li>
+<li>the <code>@xml:id</code> attribute gives a particular division a unique identifier</li>
+<li>Divisions must always tessellate: once “down” a level, you cannot pop “up” again within the same division (see next slide)</li>
+</ul>
+</div>
+<div id="tessellation" class="slide section level1">
+<h1>Tessellation</h1>
+<p><code>&lt;div&gt;</code>s must tesselate over the entire text</p>
+<pre><code>&lt;div1&gt;
+    &lt;div2&gt;
+        &lt;!-- content --&gt;
+    &lt;/div2&gt;
+    &lt;div2&gt;
+        &lt;!-- content --&gt;
+    &lt;/div2&gt;
+&lt;/div1&gt;</code></pre>
+<p>is valid, while</p>
+<pre><code>&lt;div1&gt;
+    &lt;!-- content --&gt;
+    &lt;div2&gt;
+        &lt;!-- content --&gt;
+    &lt;/div2&gt;
+    &lt;!-- content --&gt;
+&lt;/div1&gt;</code></pre>
+<p>is not valid!</p>
+</div>
+<div id="divisions-may-have-heads-and-trailer" class="slide section level1">
+<h1>Divisions may have heads and trailer</h1>
+<pre><code>&lt;div&gt;
+    &lt;head&gt;Preface&lt;/head&gt;
+    &lt;p&gt;
+        &lt;!-- content of the div --&gt;
+    &lt;/p&gt;
+    &lt;trailer&gt;...&lt;/trailer&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="numbered-and-unnumbered-divisions" class="slide section level1">
+<h1>Numbered and unnumbered divisions</h1>
+<p>The level can be made explicit by using ‘numbered’ divs (div1, div2). Opinions vary:</p>
+<p><code>&lt;div1&gt;</code> vs. <code>&lt;div n=&quot;1&quot;&gt;</code></p>
+<ul>
+<li>numbered: the number indicates the depth of this particular division within the hierarchy, the largest such division being ‘div1’, any subdivision within it being ‘div2’, etc.</li>
+<li>unnumbered: nest recursively to indicate their hierarchic depth. (And computers can count very well!)</li>
+<li>The two styles must not be combined within a single <code>&lt;front&gt;</code>, <code>&lt;body&gt;</code>, or <code>&lt;back&gt;</code> element.</li>
+</ul>
+</div>
+<div id="groups-vs-floating-texts" class="slide section level1">
+<h1>Groups vs floating texts</h1>
+<p>The <code>&lt;group&gt;</code> element should be used to represent a collection of independent texts which is to be regarded as a single unit for processing or other purposes.</p>
+<p><code>&lt;floatingText&gt;</code> contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes.</p>
+</div>
+<div id="floating-text-example" class="slide section level1">
+<h1>Floating text example</h1>
+<p>The <code>&lt;floatingText&gt;</code> element can appear within any division level element in the same way as a paragraph.</p>
+<pre><code>&lt;p&gt;She was thus ruminating, when a Gentleman enter&#39;d the Room, the Door being a jar... calling for a Candle, she beg&#39;d a thousandPardons, engaged him to sit down, and let her know, what had so long conceal&#39;d him from her Correspondence. &lt;/p&gt;
+&lt;pb n=&quot;5&quot;/&gt;
+&lt;floatingText&gt;
+    &lt;body&gt;
+        &lt;head&gt;The Story of &lt;hi&gt;Captain Manly&lt;/hi&gt;&lt;/head&gt;
+        &lt;p&gt;
+            &lt;!-- Captain Manly&#39;s store here --&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/floatingText&gt;
+&lt;pb n=&quot;37&quot;/&gt;
+&lt;p&gt;The Gentleman having finish&#39;d his Story ... 
+    &lt;!-- more --&gt;
+&lt;/p&gt;</code></pre>
+</div>
+<div id="document-order-vs.xml-order" class="slide section level1">
+<h1>Document order vs. XML order</h1>
+<p>The order of XML encoding does not necessarily reflect the order of the source document. Compare:</p>
+<!-- This is a good point and should be emphasized. The example should be changed -->
+
+<pre><code>&lt;div type=&quot;postcard&quot;&gt;
+    &lt;div type=&quot;address&quot;&gt;
+        &lt;!-- &lt;address&gt;here --&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;prose&quot;&gt;
+        &lt;!-- text here --&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;postmark&quot;&gt;
+        &lt;div type=&quot;advert&quot;&gt;
+            &lt;ab&gt;BUY NATIONAL &lt;lb/&gt;WAR BONDS&lt;/ab&gt;
+        &lt;/div&gt;
+        &lt;div type=&quot;dateStamp&quot;&gt;
+            &lt;dateline&gt;
+                &lt;placeName&gt;SCARBOROUGH&lt;/placeName&gt;
+                &lt;lb/&gt;&lt;time&gt;6.30 PM&lt;/time&gt;
+                &lt;lb/&gt;
+            &lt;/dateline&gt;
+        &lt;/div&gt;
+        &lt;div type=&quot;advert&quot;&gt;
+            &lt;ab&gt;BUY NATIONAL &lt;lb/&gt;WAR BONDS&lt;/ab&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="core-elements" class="slide section level1">
+<h1>Core elements</h1>
+<p>The <em>core</em> module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:</p>
+<ul>
+<li>paragraphs</li>
+<li>highlighting, emphasis and quotation</li>
+<li>simple editorial changes</li>
+<li>basic names numbers, dates, addresses</li>
+<li>simple links and cross-references</li>
+<li>lists, notes, annotation, indexing</li>
+<li>graphics</li>
+<li>reference systems, bibliographic</li>
+<li>citations simple verse and drama</li>
+</ul>
+</div>
+<div id="paragraphs" class="slide section level1">
+<h1>Paragraphs</h1>
+<p><code>&lt;p&gt;</code>: paragraph; marks paragraphs in prose</p>
+<ul>
+<li>Fundamental unit for prose texts</li>
+<li><code>&lt;p&gt;</code> can contain all the phrase-level elements in the core</li>
+<li><code>&lt;p&gt;</code> can appear directly inside <code>&lt;body&gt;</code> or inside <code>&lt;div&gt;</code></li>
+</ul>
+<p>Example</p>
+<pre><code>&lt;p&gt;ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى
+&lt;lb/&gt;&lt;quote&gt;صدرت ارادة حضرة صاحب الخلافة العظمى
+    &lt;lb/&gt;بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
+    &lt;lb/&gt;تشكيله في القانون الاساسي الذي هو من تأسيس
+    &lt;lb/&gt;حضرة الخليفة الاعظم وبما انه ابلغ حكم هذه الارادة
+    &lt;lb/&gt;السنية الجليل الى جميع الولايات الشاهانية
+    &lt;lb/&gt;المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء
+    &lt;lb/&gt;حائزين الضفات المندرجة في &lt;rs&gt;القانون المذكور&lt;/rs&gt;&lt;/quote&gt;
+    في&lt;date&gt;١٠ تموز سنة ١٣٢٤&lt;/date&gt;&lt;/p&gt;</code></pre>
+</div>
+<div id="highlighting" class="slide section level1">
+<h1>Highlighting</h1>
+<p>By <em>highlighting</em> we mean the use of any combination of typographic features (font, size, hue, etc.) in a printed or written text in order to distinguish some passage of a text from its surroundings. For words and phrases which are:</p>
+<ul>
+<li>distinct in some way (e.g. foreign, archaic, technical)</li>
+<li>emphatic or stressed when spoken</li>
+<li>not really part of the text (e.g. cross references, titles, headings)</li>
+<li>a distinct narrative stream (e.g. an internal monologue, commentary)</li>
+<li>attributed to some other agency inside or outside the text (e.g. direct speech, quotation)</li>
+<li>set apart in another way (e.g. proverbial phrases, words mentioned but not used)</li>
+</ul>
+</div>
+<div id="example-highlighting" class="slide section level1">
+<h1>Example: Highlighting</h1>
+<ul>
+<li><code>&lt;hi&gt;</code>: general purpose highlighting;</li>
+<li><code>&lt;distinct&gt;</code>: linguistically distinct</li>
+<li>Other similar elements include: <code>&lt;emph&gt;</code>, <code>&lt;mentioned&gt;</code>, <code>&lt;soCalled&gt;</code>, <code>&lt;term&gt;</code> and <code>&lt;gloss&gt;</code></li>
+</ul>
+<p>Example</p>
+<pre><code>&lt;calendar xml:id=&quot;cal_islamic&quot;&gt;
+    &lt;p&gt;Islamic  &lt;hi rend=&quot;italics&quot;&gt;hijrī&lt;/hi&gt;calendar: lunar calendar beginning the Year with 1 &lt;hi rend=&quot;italics&quot;&gt;Muḥarram&lt;/hi&gt;. Dates differ between locations as the beginning of the month is based on sightings of the new moon.&lt;/p&gt;
+    &lt;p&gt;E.g. 
+        &lt;date calendar=&quot;#cal_islamic&quot; datingMethod=&quot;#cal_islamic&quot; when=&quot;1841-05-23&quot; when-custom=&quot;1257-04-01&quot;&gt;1 Rab II 1257, Sunday&lt;/date&gt;,   
+        &lt;date calendar=&quot;#cal_islamic&quot; datingMethod=&quot;#cal_islamic&quot; when=&quot;1908-03-05&quot; when-custom=&quot;1326-02-01&quot;&gt;1 Ṣaf 1326,
+                        Thursday&lt;/date&gt;.
+        &lt;/p&gt;
+&lt;/calendar&gt;</code></pre>
+</div>
+<div id="quotation" class="slide section level1">
+<h1>Quotation</h1>
+<p>Quotation marks can be used to set off text for many reasons, so the TEI has the following elements:</p>
+<ul>
+<li><code>&lt;q&gt;</code>: indicated by quotation marks</li>
+<li><code>&lt;said&gt;</code>: speech or thought</li>
+<li><code>&lt;quote&gt;</code>: passage attributed to an external source</li>
+<li><code>&lt;cit&gt;</code>: groups a quotation and citation</li>
+<li><code>&lt;bibl&gt;</code> is used to give the source of a quote</li>
+</ul>
+<p>Example <!--
+    <quote>
+        <l>... How Earth herself empowered him with her trick,</l>
+        <l>Gave him the grip and stringency of Winter,</l>
+        <l>And all the ardour of th' invincible Spring;</l>
+        <bibl>
+            <author>Wilfred Owen</author>
+            <title>Letter to Leslie Gunston / The Wrestler</title>
+            <date when="1917-07"/>
+        </bibl>
+    </quote>
+--></p>
+<pre><code> &lt;quote&gt;
+    &lt;bibl&gt;ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى&lt;/bibl&gt;
+    &lt;lb/&gt;صدرت ارادة حضرة صاحب الخلافة العظمى
+    &lt;lb/&gt;بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
+    &lt;lb/&gt;تشكيله في القانون الاساسي الذي هو من تأسيس
+    &lt;lb/&gt;حضرة الخليفة الاعظم وبما انه ابلغ حكم هذه الارادة
+    &lt;lb/&gt;السنية الجليل الى جميع الولايات الشاهانية
+    &lt;lb/&gt;المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء
+    &lt;lb/&gt;حائزين الضفات المندرجة في &lt;rs&gt;القانون المذكور&lt;/rs&gt;&lt;
+    bibl&gt;في &lt;date&gt;١٠ تموز سنة ١٣٢٤&lt;/date&gt;&lt;/bibl&gt;
+&lt;/quote&gt;</code></pre>
+</div>
+<div id="lists" class="slide section level1">
+<h1>Lists</h1>
+<ul>
+<li><code>&lt;list&gt;</code>: a sequence of items forming a list</li>
+<li><code>&lt;item&gt;</code>: one component of a list</li>
+<li><code>&lt;label&gt;</code>: label associated with an item</li>
+</ul>
+</div>
+<div id="example-simple-list" class="slide section level1">
+<h1>Example: simple list</h1>
+<pre><code>&lt;p&gt;
+    &lt;hi&gt;To which is added,&lt;/hi&gt;A Collection of LETTERS of Friendship, and other Occasional LETTERS, written by
+    &lt;list&gt;
+        &lt;item&gt;
+            Mr. 
+            &lt;hi&gt;Dryden,&lt;/hi&gt;&lt;/item&gt;
+        &lt;item&gt;Mr. 
+            &lt;hi&gt;Wycherly,&lt;/hi&gt;&lt;/item&gt;
+        &lt;item&gt;Mr.—&lt;/item&gt;
+        &lt;item&gt;Mr. 
+            &lt;hi&gt;Congreve,&lt;/hi&gt;&lt;/item&gt;
+        &lt;item&gt;Mr. 
+            &lt;hi&gt;Dennis,&lt;/hi&gt;
+            and other Hands.&lt;/item&gt;
+    &lt;/list&gt;
+&lt;/p&gt;</code></pre>
+<!-- we can stop here and move to an exercise -->
+<!-- shift in topics -->
+
+</div>
+<div id="notes" class="slide section level1">
+<h1>Notes</h1>
+<ul>
+<li><code>&lt;note&gt;</code>: contains a note or annotation</li>
+<li>Notes can be those existing in the text, or provided by the editor of the electronic text</li>
+<li>A <span class="citation">@place</span> attribute can be used to indicate the physical location of the note</li>
+<li>Notes should usually be encoded where the identifier/mark first appears; notes can also be kept separately and point back to their location with a <span class="citation">@target</span> attribute</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;note place=&quot;foot&quot;&gt;Painted by &lt;persName&gt;John Singer Sargent&lt;/persName&gt;, 1.918&lt;/note&gt;</code></pre>
+</div>
+<div id="simple-editorial-changes-choice-and-friends" class="slide section level1">
+<h1>Simple editorial changes: <code>&lt;choice&gt;</code> and friends</h1>
+<ul>
+<li><code>&lt;choice&gt;</code>: groups alternative editorial encodings</li>
+<li>Errors:
+<ul>
+<li><code>&lt;sic&gt;</code>: apparent error</li>
+<li><code>&lt;corr&gt;</code>: corrected error</li>
+</ul></li>
+<li>Regularization:
+<ul>
+<li><code>&lt;orig&gt;</code>: original form</li>
+<li><code>&lt;reg&gt;</code>: regularized form</li>
+</ul></li>
+<li>Abbreviation:
+<ul>
+<li><code>&lt;abbr&gt;</code>: abbreviated form</li>
+<li><code>&lt;expan&gt;</code>: expanded form</li>
+</ul></li>
+</ul>
+</div>
+<div id="example-choice-1" class="slide section level1">
+<h1>Example: choice 1</h1>
+<pre><code>&lt;dateline xml:lang=&quot;ar&quot;&gt;
+    &lt;date calendar=&quot;#cal_julian&quot; datingMethod=&quot;#cal_julian&quot; when=&quot;1908-07-27&quot; when-custom=&quot;1908-07-14&quot;&gt;١٤ تموز 
+        &lt;choice&gt;
+            &lt;abbr&gt;ش&lt;/abbr&gt;
+            &lt;expan&gt;شرقي&lt;/expan&gt;
+        &lt;/choice&gt;
+    &lt;/date&gt;
+    &lt;date&gt;٢٧ 
+        &lt;choice&gt;
+            &lt;abbr&gt;غ&lt;/abbr&gt;
+            &lt;expan&gt;غربي&lt;/expan&gt;
+        &lt;/choice&gt;سنة ١٩٠٨&lt;/date&gt;
+&lt;/dateline&gt;</code></pre>
+</div>
+<div id="example-choice-2" class="slide section level1">
+<h1>Example: choice 2</h1>
+<p>Consider: “Excuse me sir, but would you like to buy a nice little dawg?”</p>
+<p>We can:</p>
+<ul>
+<li>use <code>&lt;orig&gt;</code> to show that “dawg” is what it says, even though this is a nonstandard spelling</li>
+<li>use <code>&lt;reg&gt;</code> to show that “dog” is an editorially-supplied regularisation of what it says</li>
+<li>or provide both within a <code>&lt;choice&gt;</code> element to say either is a valid encoding</li>
+</ul>
+<p>Example:</p>
+<pre><code>...a nice little &lt;choice&gt;&lt;orig&gt;dawg&lt;/orig&gt;&lt;reg&gt;dog&lt;/reg&gt;&lt;/choice&gt;?</code></pre>
+</div>
+<div id="additions-deletions-and-omissions" class="slide section level1">
+<h1>Additions, Deletions, and Omissions</h1>
+<ul>
+<li><code>&lt;add&gt;</code>: addition to the text, e.g. marginal gloss</li>
+<li><code>&lt;del&gt;</code>: phrase marked as deleted in the text</li>
+<li><code>&lt;gap&gt;</code>: indicates point where material is omitted</li>
+<li><code>&lt;unclear&gt;</code>: contains text unable to be transcribed clearly</li>
+</ul>
+</div>
+<div id="example-additions-deletions-omissions" class="slide section level1">
+<h1>Example: additions, deletions, omissions</h1>
+<pre><code>&lt;p&gt;&lt;add place=&quot;left&quot;&gt;My &lt;/add&gt;
+    &lt;del rend=&quot;stroked&quot;&gt;It&#39;s &lt;/del&gt;
+    &lt;add place=&quot;above&quot;&gt;
+        &lt;del rend=&quot;stroked&quot;&gt;The &lt;/del&gt;
+    &lt;/add&gt;subject &lt;del rend=&quot;stroked&quot;&gt;of&lt;/del&gt; is War, and the 
+    &lt;unclear&gt;pity &lt;/unclear&gt;
+    of &lt;del rend=&quot;stroked&quot;&gt;it&lt;/del&gt; War. 
+    &lt;lb/&gt;The Poetry is in the pity.&lt;/p&gt;</code></pre>
+<!-- further shift in topics to named entities and linking -->
+
+</div>
+<div id="basic-names" class="slide section level1">
+<h1>Basic names</h1>
+<ul>
+<li><code>&lt;name&gt;</code>: a name in the text, contains a proper noun or noun phrase</li>
+<li><code>&lt;rs&gt;</code>: a general-purpose name or referencing string</li>
+</ul>
+<p>The <span class="citation">@type</span> attribute is useful for categorizing these, and they both also have <span class="citation">@key</span>, <span class="citation">@ref</span>, and <span class="citation">@nymRef</span> attributes.</p>
+</div>
+<div id="addresses" class="slide section level1">
+<h1>Addresses</h1>
+<ul>
+<li><code>&lt;email&gt;</code>: an electronic mail address</li>
+<li><code>&lt;address&gt;</code>: a postal address</li>
+<li><code>&lt;addrLine&gt;</code>: a non-specific address line</li>
+<li><code>&lt;street&gt;</code>: a full street address</li>
+<li><code>&lt;postCode&gt;</code>: a postal (or zip) code</li>
+<li><code>&lt;postBox&gt;</code>: a postal box number</li>
+<li><code>&lt;name&gt;</code> can also be used</li>
+<li>and the ‘namesdates’ module extends this with more geographic names</li>
+</ul>
+</div>
+<div id="basic-numbers-and-measures" class="slide section level1">
+<h1>Basic numbers and measures</h1>
+<ul>
+<li><code>&lt;num&gt;</code>: marks a number of any sort</li>
+<li><code>&lt;measure&gt;</code>: marks a quantity or commodity</li>
+<li><code>&lt;measureGrp&gt;</code>: groups specifications relating to a single object</li>
+<li>While <code>&lt;num&gt;</code> has simple <span class="citation">@type</span> and <span class="citation">@value</span> attributes, <code>&lt;measure&gt;</code> has <span class="citation">@type</span>, <span class="citation">@quantity</span>, <span class="citation">@unit</span> and <span class="citation">@commodity</span> attributes</li>
+</ul>
+<p>Example: numbers and measures</p>
+<pre><code>&lt;l&gt;With a &lt;num value=&quot;1000&quot;&gt;thousand&lt;/num&gt; pains that vision&#39;s face was grained;&lt;/l&gt;
+... only &lt;measure type=&quot;distance&quot; unit=&quot;m&quot; quantity=&quot;3218.69&quot;&gt;two miles&lt;/measure&gt; from the front....</code></pre>
+</div>
+<div id="dates" class="slide section level1">
+<h1>Dates</h1>
+<ul>
+<li><code>&lt;date&gt;</code>: contains a date in any format and includes a <span class="citation">@when</span> attribute for a regularised form and a <span class="citation">@calendar</span> attribute to specify what calendar system</li>
+<li><code>&lt;time&gt;</code>: contains a time in any format and includes a <span class="citation">@when</span> attribute for a regularised form</li>
+</ul>
+<p>Example</p>
+<pre><code>&lt;date when=&quot;1917-07&quot;&gt;July 1917.&lt;lb/&gt; Wednesday&lt;/date&gt;</code></pre>
+</div>
+<div id="simple-linking" class="slide section level1">
+<h1>Simple Linking</h1>
+<ul>
+<li><code>&lt;ptr&gt;</code>: defines a pointer to another location</li>
+<li><code>&lt;ref&gt;</code>: defines a reference to another location, with optional linking text</li>
+<li>Both elements have:
+<ul>
+<li><span class="citation">@target</span> attribute taking a URI reference</li>
+<li><span class="citation">@cRef</span> attribute for canonical referencing schemes</li>
+</ul></li>
+</ul>
+<p>Example</p>
+<pre><code>See &lt;ref target=&quot;#Section12&quot;&gt;section 12 on page 34&lt;/ref&gt;.
+See &lt;ptr target=&quot;#Section12&quot;/&gt;.
+The &lt;ref target=&quot;http://www.bbc.co.uk/&quot;&gt;BBC web site&lt;/ref&gt; has a good sports section</code></pre>
+</div>
+<div id="indexing" class="slide section level1">
+<h1>Indexing</h1>
+<ul>
+<li>If converting an existing index, use nested lists.</li>
+<li>For auto-generated indexes:
+<ul>
+<li><code>&lt;index&gt;</code> (marks an index entry) with optional <span class="citation">@indexName</span> attribute</li>
+<li>The <code>&lt;term&gt;</code> element is used to mark a term inside an <code>&lt;index&gt;</code> element</li>
+<li>The <code>&lt;index&gt;</code> element can self-nest for hierarchical index entries</li>
+</ul></li>
+</ul>
+<p>Example</p>
+<pre><code>&lt;p&gt;Last week I wrote (to order) a strong &lt;lb/&gt;bit of Blank&lt;index&gt;
+    &lt;term&gt;Verse&lt;/term&gt;
+    &lt;index&gt;
+        &lt;term&gt;Blank Verse&lt;/term&gt;
+    &lt;/index&gt;
+&lt;/index&gt;:&lt;/p&gt;</code></pre>
+</div>
+<div id="graphics" class="slide section level1">
+<h1>Graphics</h1>
+<ul>
+<li><code>&lt;graphic&gt;</code>: indicates the location of an inline graphic, illustration, or figure</li>
+<li><code>&lt;binaryObject&gt;</code>: encoded binary data embedding a graphic or other object</li>
+<li>The figures module provides <code>&lt;figure&gt;</code> and <code>&lt;figDesc&gt;</code> for more complex graphics</li>
+</ul>
+<p>Example</p>
+<pre><code>&lt;div type=&quot;article&quot; xml:lang=&quot;ar&quot;&gt;
+    &lt;head&gt;تعريب الفرمان العالي السلطاني&lt;/head&gt;
+    &lt;figure&gt;
+        &lt;graphic url=&quot;#facs-2-1-z-1&quot;/&gt;
+        &lt;head xml:lang=&quot;en&quot;&gt;The Ottoman Tughra&lt;/head&gt;
+        &lt;figDesc&gt;Reproduction of the Ottoman coat of arms / Sultanic seal&lt;/figDesc&gt;
+    &lt;/figure&gt;
+    &lt;q&gt;افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي&lt;/q&gt;
+&lt;/div&gt;</code></pre>
+<div class="figure">
+<img src="images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" /><p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+</div>
+</div>
+<div id="simple-verse" class="slide section level1">
+<h1>Simple verse</h1>
+<pre><code>&lt;lg type=&quot;stanza&quot;&gt;
+    &lt;l&gt;It seemed that out of battle I escaped&lt;/l&gt;
+    &lt;l&gt;Down some profound dull tunnel, long since scooped&lt;/l&gt;
+    &lt;l&gt;Through granites which titanic wars had groined.&lt;/l&gt;
+&lt;/lg&gt;
+&lt;lg type=&quot;stanza&quot;&gt;
+    &lt;l&gt;Yet also there encumbered sleepers groaned, &lt;/l&gt;
+    &lt;l&gt;Too fast in thought or death to be bestirred. &lt;/l&gt;
+    &lt;l&gt;Then, as I probed them, one sprang up, and stared &lt;/l&gt;
+    &lt;l&gt;With piteous recognition in fixed eyes, &lt;/l&gt;
+    &lt;l&gt;Lifting distressful hands, as if to bless. &lt;/l&gt;
+    &lt;l&gt;And by his smile, I knew that sullen hall,--- &lt;/l&gt;
+    &lt;l&gt;By his dead smile I knew we stood in Hell.&lt;/l&gt;
+&lt;/lg&gt;</code></pre>
+</div>
+<div id="next" class="slide section level1">
+<h1>Next</h1>
+<p>And now we’re going to move on to another exercise where you get to apply some of the more structural elements you have learned about.</p>
+<!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
