@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI 7 — Ontologies of named entities and linking</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI 7 — Ontologies of named entities and linking</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">4 Jun 2015</p>
+</div>
+<div id="topic-prosopographical-records-ontologies-and-links-to-external-authoritiy-files" class="slide section level1">
+<h1>Topic: prosopographical records, ontologies, and links to external authoritiy files</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="general-notes" class="slide section level1">
+<h1>General notes</h1>
+<!-- some note on the difference between names and named entities and the idea of stand-off markup -->
+
+<p>Names refer to (named) entities. Information describing entities in detail can be kept in ontologies in the <code>&lt;profileDesc&gt;</code> of the TEI header (c.f. our session on metadata). They are then linked to by means of <code>@ref</code> attributes on the names.</p>
+<!-- a slide on listPerson, listPlace, and listOrg -->
+<!-- links to external authorities -->
+
+</div>
+<div id="what-can-we-say-about-named-entities" class="slide section level1">
+<h1>What can we say about named entities?</h1>
+<p>Potentially, quite a lot…</p>
+<pre><code>&lt;person xml:id=&quot;VM1893&quot;&gt;
+    &lt;persName xml:lang=&quot;ru&quot;&gt;Владимир Владимирович Маяковский&lt;/persName&gt;
+    &lt;persName xml:lang=&quot;fr&quot;&gt;Wladimir Maïakowski&lt;/persName&gt;
+    &lt;birth when=&quot;1893-07-19&quot;&gt;7 July (OS) 1893, 
+        &lt;placeName ref=&quot;#BGDT&quot; xml:lang=&quot;en&quot;&gt;
+            &lt;settlement&gt;Baghdati&lt;settlement&gt;, &lt;country&gt;Georgia&lt;country&gt;
+        &lt;/placeName&gt;
+    &lt;/birth&gt;
+    &lt;death when=&quot;1930-04-14&quot;/&gt;
+    &lt;occupation&gt;Poet and playwright&lt;/occupation&gt;
+    &lt;note&gt;Among the foremost representatives of early-20th century Russian Futurism.&lt;/note&gt;
+&lt;/person&gt;</code></pre>
+<p>What elements should the TEI provide for such a purposes?</p>
+</div>
+<div id="traits-states-and-events" class="slide section level1">
+<h1>Traits, states, and events</h1>
+<p>As elsewhere in the TEI, we resolve this question by adding a layer of abstraction. We distinguish three <em>classes</em> of information:</p>
+<ul>
+<li><code>&lt;state&gt;</code>: more general-purpose, but usually a time-related property (e.g. occupation for a person, population for a place)</li>
+<li><code>&lt;trait&gt;</code>: if you want to a distinguish between time-bound and static, use this for properties that (usually) don’t change over time (e.g. eye colour for a person, location for a place)</li>
+<li><code>&lt;event&gt;</code>: an independent event in the real world which may lead to a change in state or trait (e.g. birth for a person, a war for a place)</li>
+</ul>
+<p>All these elements are members of the <code>att.datable</code> class and thus can have time/dating attributes.</p>
+</div>
+<div id="states" class="slide section level1">
+<h1>States</h1>
+<p>Some typical states for a person</p>
+<ul>
+<li><code>&lt;occupation&gt;</code>: an informal description of a person’s trade, profession or occupation</li>
+<li><code>&lt;residence&gt;</code>: a person’s present or past places of residence</li>
+<li><code>&lt;affiliation&gt;</code>: an informal description of a person’s present or past affiliation with some organization</li>
+<li><code>&lt;education&gt;</code>: a description of the educational experience of a person</li>
+<li><code>&lt;floruit&gt;</code> contains information about a person’s period of activity</li>
+</ul>
+</div>
+<div id="traits" class="slide section level1">
+<h1>Traits</h1>
+<p>Some typical traits of a person</p>
+<ul>
+<li><code>&lt;faith&gt;</code>: faith, belief system, religion etc. of a person</li>
+<li><code>&lt;langKnowledge&gt;</code>: linguistic knowledge of a person</li>
+<li><code>&lt;nationality&gt;</code>: nationality (socio-politico status)</li>
+<li><code>&lt;sex&gt;</code>: sex</li>
+<li><code>&lt;socecStatus&gt;</code>: socio-economic status</li>
+</ul>
+<p>Some typical traits of a place:</p>
+<ul>
+<li><code>&lt;climate&gt;</code>: describes the climate</li>
+<li><code>&lt;location&gt;</code>: describes where a place is (see later)</li>
+<li><code>&lt;population&gt;</code>: describes its population</li>
+<li><code>&lt;terrain&gt;</code>: describes its terrain</li>
+</ul>
+<p>Some of these (e.g. sex) have normalised attributes, but mostly they contain free text descriptions.</p>
+</div>
+<div id="events" class="slide section level1">
+<h1>Events</h1>
+<p>For persons, only two specific event elements are defined: <code>&lt;birth&gt;</code> and <code>&lt;death&gt;</code>. Anything else must be defined using the generic <code>&lt;event&gt;</code> element and its <code>@type</code> attribute.</p>
+<pre><code>&lt;person xml:id=&quot;pers_3&quot;&gt;
+    &lt;persName xml:lang=&quot;ar&quot;&gt;
+        &lt;forename&gt;نجيب&lt;/forename&gt; &lt;forename&gt;يوسف&lt;/forename&gt; &lt;surname&gt;عربيلي&lt;/surname&gt;&lt;/persName&gt;
+    &lt;persName xml:lang=&quot;ar-Latn-EN&quot;&gt;
+        &lt;forename&gt;Najeeb&lt;/forename&gt; &lt;forename xml:lang=&quot;en&quot;&gt;Joseph&lt;/forename&gt; &lt;surname&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+    &lt;birth&gt;
+        &lt;date when=&quot;1861&quot;&gt;1861&lt;/date&gt;, in &lt;placeName&gt;Damascus&lt;/placeName&gt;
+    &lt;/birth&gt;
+    &lt;death&gt;
+        &lt;date when=&quot;1904&quot;&gt;1904, February&lt;/date&gt;, in &lt;placeName&gt;New York&lt;/placeName&gt;
+    &lt;/death&gt;
+    &lt;event when=&quot;1878&quot;&gt;
+        &lt;p&gt;Migration to the &lt;placeName&gt;USA&lt;/placeName&gt;&lt;/p&gt;
+    &lt;/event&gt;
+    &lt;state from=&quot;1885&quot;&gt;
+        &lt;p&gt;American consul in &lt;placeName&gt;Jerusalem&lt;/placeName&gt;&lt;/p&gt;
+    &lt;/state&gt;
+    &lt;state notBefore=&quot;1886&quot;&gt;
+        &lt;p&gt;Inspector in the &lt;orgName&gt;Bureau of Immigration&lt;/orgName&gt; at the port of &lt;placeName&gt;New York&lt;/placeName&gt;&lt;/p&gt;
+    &lt;/state&gt;
+    &lt;state from=&quot;1892-04-15&quot; xml:lang=&quot;en&quot;&gt;
+        &lt;p&gt;Editor of &lt;orgName&gt;Kawkab America&lt;/orgName&gt;.&lt;/p&gt;
+    &lt;/state&gt;
+&lt;/person&gt;</code></pre>
+</div>
+<div id="a-place-as-being-defined-by-its-location" class="slide section level1">
+<h1>A place as being defined by its location</h1>
+<p>The <code>&lt;location&gt;</code> element can contain</p>
+<ul>
+<li>a more or less well-structured description using the hierarchy of place name components mentioned earlier (a politico-geographical location)</li>
+<li>a set of geographical co-ordinates</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;place type=&quot;neighbourhood&quot; xml:id=&quot;ltg000001&quot;&gt;
+    &lt;placeName xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Bāb al-Jābiyya&lt;/placeName&gt;
+    &lt;placeName xml:lang=&quot;ar&quot;&gt;باب الجابية&lt;/placeName&gt;
+    &lt;settlement xml:lang=&quot;ar&quot; type=&quot;city&quot;&gt;دمشق الشام&lt;/settlement&gt;
+    &lt;region xml:lang=&quot;ota&quot; type=&quot;province&quot; notAfter=&quot;1918-10-01&quot;&gt;ولاية سورية&lt;/region&gt;
+    &lt;location&gt;
+        &lt;geo&gt;33.507628, 36.301395&lt;/geo&gt;
+    &lt;/location&gt;
+&lt;/place&gt;</code></pre>
+</div>
+<div id="places-can-self-nest" class="slide section level1">
+<h1>Places can self-nest</h1>
+<pre><code>&lt;place type=&quot;state&quot;&gt;
+    &lt;placeName xml:lang=&quot;en&quot;&gt;Ottoman Empire&lt;/placeName&gt;
+    &lt;placeName xml:lang=&quot;ar&quot;&gt;الدولة العثمانية العالية&lt;/placeName&gt;
+    &lt;place type=&quot;province&quot;&gt;
+        &lt;placeName notAfter=&quot;1918-10-01&quot; xml:lang=&quot;ota ar&quot;&gt;ولاية سورية&lt;/placeName&gt;
+        &lt;placeName notAfter=&quot;1918-10-01&quot; xml:lang=&quot;en&quot;&gt;Province of Syria&lt;/placeName&gt;
+        &lt;place type=&quot;city&quot;&gt;
+            &lt;placeName type=&quot;city&quot; xml:lang=&quot;ar&quot;&gt;دمشق الشام&lt;/placeName&gt;
+            &lt;placeName type=&quot;city&quot; xml:lang=&quot;en&quot;&gt;Damascus&lt;/placeName&gt;
+            &lt;place type=&quot;neighbourhood&quot;&gt;
+                &lt;placeName xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Bāb al-Jābiyya&lt;/placeName&gt;
+                &lt;placeName xml:lang=&quot;ar&quot;&gt;باب الجابية&lt;/placeName&gt;
+                &lt;location&gt;
+                    &lt;geo&gt;33.507628, 36.301395&lt;/geo&gt;
+                &lt;/location&gt;
+            &lt;/place&gt;
+        &lt;/place&gt;
+    &lt;/place&gt;
+&lt;/place&gt;</code></pre>
+</div>
+<div id="organizational-names" class="slide section level1">
+<h1>Organizational names</h1>
+<p>Organizations have names as well. These are any named collection of people regarded as a single unit. An <code>&lt;orgName&gt;</code> can point back to an <code>&lt;org&gt;</code> in the header.</p>
+<pre><code>&lt;p&gt;it is debated &lt;date notAfter=&quot;1908-10-01&quot;&gt;now&lt;/date&gt; among ‘&lt;orgName ref=&quot;#CUP&quot;&gt;Young Turkey&lt;/orgName&gt;’ adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp;amp; its frequent irregularity.&lt;/p&gt;
+
+&lt;org xml:id=&quot;CUP&quot;&gt;
+    &lt;!-- Information about the organization --&gt;
+    &lt;orgName xml:lang=&quot;en&quot;&gt;Committee of Union and Progress&lt;/orgName&gt;
+&lt;/org&gt;</code></pre>
+</div>
+<div id="all-entities-can-be-fictional" class="slide section level1">
+<h1>All entities can be fictional</h1>
+<pre><code>&lt;place type=&quot;imaginary&quot;&gt;
+    &lt;placeName&gt;Atlantis&lt;/placeName&gt;
+    &lt;location&gt;
+        &lt;offset&gt;fifty leagues beyond&lt;/offset&gt;
+        &lt;placeName&gt;Pillars of 
+            &lt;persName&gt;Hercules&lt;/persName&gt;&lt;/placeName&gt;
+    &lt;/location&gt;
+&lt;/place&gt;</code></pre>
+</div>
+<div id="personal-relationships" class="slide section level1">
+<h1>Personal relationships</h1>
+<ul>
+<li>The <code>&lt;relation&gt;</code> (relationship) element describes any kind of relationship or linkage amongst other entities. We distinguish
+<ul>
+<li>‘mutual’ relationships (e.g. sibling) from</li>
+<li>non-mutual or directed relationships (e.g. parent-of ).</li>
+</ul></li>
+<li>The following attributes are available:
+<ul>
+<li><code>@name</code>: supplies a name for the kind of relationship of which this is an instance</li>
+<li><code>@active</code>: identifies the ‘active’ participants in a non-mutual relationship, or all the participants in a mutual one</li>
+<li><code>@mutual</code>: supplies a list of participants amongst all of whom the relationship holds equally</li>
+<li><code>@passive</code>: identifies the ‘passive’ participants in a non-mutual relationship</li>
+</ul></li>
+</ul>
+</div>
+<div id="example" class="slide section level1">
+<h1>Example</h1>
+<pre><code>&lt;person xml:id=&quot;pers_2&quot;&gt;
+    &lt;persName xml:lang=&quot;en&quot;&gt;&lt;addName type=&quot;title&quot;&gt;Dr.&lt;/addName&gt; &lt;forename&gt;Abraham&lt;/forename&gt; &lt;surname&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+    &lt;!-- ... --&gt;
+&lt;/person&gt;
+&lt;person xml:id=&quot;pers_3&quot;&gt;
+    &lt;persName xml:lang=&quot;en&quot;&gt;&lt;addName type=&quot;title&quot;&gt;Prof.&lt;/addName&gt; &lt;forename&gt;Abraham&lt;/forename&gt; &lt;forename&gt;Joseph&lt;/forename&gt; &lt;surname&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+&lt;!-- ... --&gt;
+&lt;/person&gt;
+&lt;person xml:id=&quot;pers_4&quot;&gt;
+    &lt;persName xml:lang=&quot;en&quot;&gt;&lt;forename&gt;Najeeb&lt;/forename&gt; &lt;forename&gt;Joseph&lt;/forename&gt; &lt;surname&gt;Arbeely&lt;/surname&gt;&lt;/persName&gt;
+&lt;!-- ... --&gt;
+&lt;/person&gt;
+&lt;!--....--&gt;
+&lt;relationGrp type=&quot;children&quot;&gt;
+    &lt;relation name=&quot;parent&quot; active=&quot;#pers_4&quot; passive=&quot;#pers_2 #pers_3&quot;/&gt;
+&lt;/relationGrp&gt;
+&lt;relationGrp type=&quot;siblings&quot;&gt;
+    &lt;realtion name=&quot;sibling&quot; mutual=&quot;#pers_2 #pers_3&quot;/&gt;
+&lt;/relationGrp&gt;</code></pre>
+</div>
+<div id="nyms" class="slide section level1">
+<h1>Nyms</h1>
+<p>The elements <code>&lt;listNym&gt;</code> and <code>&lt;nym&gt;</code> are used to document the canonical form of a name or name-component.</p>
+<ul>
+<li><code>&lt;nym&gt;</code>
+<ul>
+<li>Like a dictionary entry, it can contain model.entryParts (e.g. <code>&lt;form&gt;</code>, <code>&lt;orth&gt;</code>, <code>&lt;etym&gt;</code>) and may also include a number of other <code>&lt;nym&gt;</code>s</li>
+<li>in addition to global attributes and att.typed, it includes the attribute <code>@parts</code> to point to constituent <code>&lt;nym&gt;</code>s</li>
+</ul></li>
+<li><code>&lt;listNym&gt;</code> a list of canonical names</li>
+<li><code>@nymRef</code> has been added to the attribute class <code>att.naming</code> to refer to the canonical name</li>
+</ul>
+</div>
+<div id="example-1" class="slide section level1">
+<h1>Example</h1>
+<pre><code>&lt;nym xml:id=&quot;nym-F-737&quot;&gt;
+    &lt;form xml:lang=&quot;ar&quot;&gt;شكري&lt;/form&gt;
+    &lt;form xml:lang=&quot;ar-Latn-EN&quot;&gt;Shukri&lt;/form&gt;
+    &lt;form xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Shukrī&lt;/form&gt;
+    &lt;form xml:lang=&quot;tr&quot;&gt;Şükrü&lt;/form&gt;
+&lt;/nym&gt;
+&lt;nym xml:id=&quot;nym-F-406&quot;&gt;
+    &lt;form xml:lang=&quot;ar&quot;&gt;يوسف&lt;/form&gt;
+    &lt;form xml:lang=&quot;ar-Latn-EN&quot;&gt;Yusef&lt;/form&gt;
+    &lt;form xml:lang=&quot;ar-Latn-FR&quot;&gt;Youssouf&lt;/form&gt;
+    &lt;form xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Yūsuf&lt;/form&gt;
+    &lt;form xml:lang=&quot;de&quot;&gt;Josef&lt;/form&gt;
+    &lt;form xml:lang=&quot;en&quot;&gt;Joseph&lt;/form&gt;
+    &lt;form xml:lang=&quot;tr&quot;&gt;Yusuf&lt;/form&gt;
+&lt;/nym&gt;</code></pre>
+</div>
+<div id="next" class="slide section level1">
+<h1>Next</h1>
+<p>Now let’s do an exercise where we make an existing <code>&lt;teiHeader&gt;</code> element better by supplying stand-of markup for entities linked to <code>&lt;persName&gt;</code> and <code>&lt;placeName&gt;</code> elements in the text.</p>
+</div>
+</body>
+</html>

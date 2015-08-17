@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <title>Tei@DHSI 8 — Facisimile linking</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
+  <script type="text/javascript">
+              $(document).ready(function(){
+      
+      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+          // Finds <pre> element
+          // and snippet highlights the CSS code within
+          // using the "emacs" styling.
+      });
+      </script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Tei@DHSI 8 — Facisimile linking</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">5 June 2015</p>
+</div>
+<div id="topic-facsimile-linking" class="slide section level1">
+<h1>Topic: Facsimile linking</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="a-special-case-of-linking-facsimiles" class="slide section level1">
+<h1>A special case of linking: facsimiles</h1>
+<p>Increasingly people want to do not just ‘text’ editions but text editions with facing page (or otherwise linked) facsimile images. Indeed, some people want to just have images and create and electronic facsimile (perhaps with a view to later eventual transcription). The <code>&lt;facsimile&gt;</code> element, a sibling of <code>&lt;teiHeader&gt;</code> and <code>&lt;text&gt;</code>, is provided to accommodate this desire.</p>
+</div>
+<div id="digital-facsimiles" class="slide section level1">
+<h1>Digital facsimiles</h1>
+<ul>
+<li><code>&lt;facsimile&gt;</code> contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text</li>
+<li><code>&lt;surface&gt;</code> defines a written surface in terms of a rectangular coordinate space
+<ul>
+<li><code>@start</code> points to an element which encodes the starting position of the text</li>
+</ul></li>
+<li><code>&lt;zone&gt;</code> defines a rectangular area contained within a <code>&lt;surface&gt;</code> element</li>
+<li>Global <code>@facs</code> (facsimile) points directly to an image, or to a part of a facsimile element which corresponds with this element.</li>
+</ul>
+</div>
+<div id="most-simple-case-mapping-11-with-facs" class="slide section level1">
+<h1>Most simple case: mapping 1:1 with <code>@facs</code></h1>
+<p>If a digital text contains one image per page or column (or similar unit), and no more complex mapping between text and image is envisaged, then the <code>@facs</code> attribute may be used to point directly to a graphic resource.</p>
+</div>
+<div id="example-the-facsimile" class="slide section level1">
+<h1>Example: the facsimile</h1>
+<p>This image of the first page of a consular report is found at “../images/pro-fo/618-3/DSCN9874_150dpi.jpg”</p>
+<div class="figure">
+<img src="../images/pro-fo/618-3/DSCN9874_150dpi.jpg" alt="first page of PRO FO 618/3, Damascus 30, 3 Aug 1908, Devey to Lowther" /><p class="caption">first page of PRO FO 618/3, Damascus 30, 3 Aug 1908, Devey to Lowther</p>
+</div>
+</div>
+<div id="example-the-text-linking-to-the-facsimile" class="slide section level1">
+<h1>Example: the text linking to the facsimile</h1>
+<pre><code>&lt;pb n=&quot;1&quot; facs=&quot;../images/pro-fo/618-3/DSCN9874_150dpi.jpg&quot;/&gt;
+&lt;div&gt;
+    &lt;head&gt;Ex-Mushir Fuad P. released&lt;/head&gt;
+    &lt;dateline&gt;&lt;date&gt;August 3, 1908&lt;/date&gt;&lt;/dateline&gt;
+    &lt;dateline&gt;Dft&lt;lb/&gt;
+        &lt;persName&gt;Sir Gerald A. Lowther&lt;/persName&gt;&lt;lb/&gt; K.C.M.G.,C.B., &lt;lb/&gt;
+        &lt;placeName&gt;&lt;choice&gt;
+                &lt;abbr&gt;Cple&lt;/abbr&gt;
+                &lt;expan&gt;Constantinople&lt;/expan&gt;
+            &lt;/choice&gt;&lt;/placeName&gt;
+        &lt;lb/&gt; No. &lt;del&gt;30&lt;/del&gt;
+        &lt;del&gt;29&lt;/del&gt; 30&lt;/dateline&gt;
+    &lt;dateline&gt;42 Emb.&lt;/dateline&gt;
+    &lt;p&gt;Sir, 
+        &lt;lb/&gt;I have the honour to report to Y.E. that the General Amnesty granted by 
+        &lt;persName&gt;&lt;choice&gt;
+                &lt;abbr&gt;H.I.M.&lt;/abbr&gt;
+                &lt;expan&gt;His Imperial Majesty&lt;/expan&gt;
+        &lt;/choice&gt; the Sultan&lt;/persName&gt; to &lt;del&gt;all&lt;/del&gt; Political
+        &lt;del&gt;criminals was after some hesitation taken to&lt;/del&gt;
+        &lt;add&gt;exciles was after some hesitation taken to&lt;/add&gt; include the Ex-Mushir
+        &lt;persName&gt;Fuad Pasha&lt;/persName&gt; who has been imprisoned under the
+        strictest confinement for the last six and a half years
+        &lt;!-- ... --&gt;
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div id="using-facs-in-conjunction-with-facsimile-surface-and-zone" class="slide section level1">
+<h1>Using <code>@facs</code> in conjunction with <code>&lt;facsimile&gt;</code>, <code>&lt;surface&gt;</code>, and <code>&lt;zone&gt;</code></h1>
+<p>Using these attributes and elements together enables an editor to</p>
+<ul>
+<li>associate multiple images with each page</li>
+<li>record arbitrary planar coordinates of textual elements on any kind of surface and link such elements to digital facsimile images of them</li>
+</ul>
+</div>
+<div id="the-facsimile-element-in-the-tei-header" class="slide section level1">
+<h1>The <code>&lt;facsimile&gt;</code> element in the TEI header</h1>
+<p>The facsimile element is used to represent a digital facsimile. It appears within a TEI document along with, or instead of, the text element introduced in earlier in this course. When this module is selected therefore, a <em>valid</em> TEI document may thus comprise any of the following:</p>
+<ul>
+<li>a TEI Header and a text element</li>
+<li>a TEI Header and a facsimile element</li>
+<li>a TEI Header, a facsimile element, and a text element</li>
+</ul>
+</div>
+<div id="example-facsimile" class="slide section level1">
+<h1>Example: <code>&lt;facsimile&gt;</code></h1>
+<pre><code>&lt;TEI&gt;
+    &lt;teiHeader&gt;
+    &lt;!-- ... --&gt;
+    &lt;/teiHeader&gt;
+   &lt;facsimile&gt;
+        &lt;graphic xml:id=&quot;facs_1&quot; url=&quot;../images/pro-fo/371-560/DSCN7960_150dpi.jpg&quot;/&gt;
+        &lt;graphic xml:id=&quot;facs_2&quot; url=&quot;../images/pro-fo/371-560/DSCN7961_150dpi.jpg&quot;/&gt;
+        &lt;graphic xml:id=&quot;facs_3&quot; url=&quot;../images/pro-fo/371-560/DSCN7962_150dpi.jpg&quot;/&gt;
+   &lt;/facsimile&gt;
+   &lt;text&gt;
+   &lt;!-- ... --&gt;
+   &lt;/text&gt;
+&lt;/TEI&gt;</code></pre>
+</div>
+<div id="example-surface" class="slide section level1">
+<h1>Example: <code>&lt;surface&gt;</code></h1>
+<pre><code>&lt;TEI&gt;
+    &lt;teiHeader&gt;
+    &lt;!-- all the header elements --&gt;
+    &lt;/teiHeader&gt;
+   &lt;facsimile&gt;
+      &lt;surface xml:id=&quot;facs_1&quot;&gt;
+         &lt;graphic url=&quot;../images/pro-fo/371-560/DSCN7960_150dpi.jpg&quot;/&gt;
+         &lt;graphic url=&quot;../images/pro-fo/371-560/DSCN7960_300dpi.jpg&quot;/&gt;
+      &lt;/surface&gt;
+      &lt;surface xml:id=&quot;facs_2&quot;&gt;
+         &lt;graphic url=&quot;../images/pro-fo/371-560/DSCN7961_150dpi.jpg&quot;/&gt;
+      &lt;/surface&gt;
+      &lt;surface xml:id=&quot;facs_3&quot;&gt;
+         &lt;graphic url=&quot;../images/pro-fo/371-560/DSCN7962_150dpi.jpg&quot;/&gt;
+      &lt;/surface&gt;
+   &lt;/facsimile&gt;
+   &lt;text&gt;
+   &lt;!-- the body of the document, i.e. digital text --&gt;
+   &lt;/text&gt;
+&lt;/TEI&gt;</code></pre>
+</div>
+<div id="dimensions" class="slide section level1">
+<h1>Dimensions</h1>
+<p>The actual dimensions of the object represented are not documented by the surface element; instead, the surface is located within an abstract coordinate space, which is defined by the following attributes, supplied by the <code>att.coordinated</code> class:</p>
+<ul>
+<li><code>@ulx</code> gives the x coordinate value for the upper left corner of a rectangular space</li>
+<li><code>@uly</code> gives the y coordinate value for the upper left corner of a rectangular space.</li>
+<li><code>@lrx</code> gives the x coordinate value for the lower right corner of a rectangular space.</li>
+<li><code>@lry</code> gives the y coordinate value for the lower right corner of a rectangular space.</li>
+</ul>
+</div>
+<div id="example-surface-1" class="slide section level1">
+<h1>Example: <code>&lt;surface&gt;</code></h1>
+<pre><code>&lt;facsimile&gt;
+    &lt;surface ulx=&quot;0&quot; uly=&quot;0&quot; lrx=&quot;820&quot; lry=&quot;1182&quot; xml:id=&quot;facs_1&quot;/&gt;
+&lt;/facsimile&gt;</code></pre>
+<p><em>Note</em>: if no further unit of measurement is provided, pixels are presumed.</p>
+</div>
+<div id="drawing-rectangular-shapes" class="slide section level1">
+<h1>Drawing rectangular shapes</h1>
+<div class="figure">
+<img src="images/Facsimile1.jpg" alt="Kawkab America #55, 28 Apr 1893, p1. (English)" /><p class="caption">Kawkab America #55, 28 Apr 1893, p1. (English)</p>
+</div>
+</div>
+<div id="addressing-the-rectangular-shapes-as-zone-elements" class="slide section level1">
+<h1>Addressing the rectangular shapes as <code>&lt;zone&gt;</code> elements</h1>
+<p>The rectangular shapes form the previous can be modelled as <code>&lt;zone&gt;</code>s on a larger surface of the page for analytical purposes:</p>
+<pre><code>&lt;surface xml:id=&quot;facs_v2-i55_4&quot;&gt;
+     &lt;graphic url=&quot;../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif&quot; xml:id=&quot;facs_v2-i55_4_source&quot;/&gt;
+     &lt;graphic url=&quot;../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg&quot; xml:id=&quot;facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z1&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;59&quot; uly=&quot;253&quot; lrx=&quot;326&quot; lry=&quot;964&quot; xml:id=&quot;facs_v2-i55_4_z2&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;574&quot; uly=&quot;39&quot; lrx=&quot;804&quot; lry=&quot;208&quot; xml:id=&quot;facs_v2-i55_4_z3&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z4&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+ &lt;/surface&gt;</code></pre>
+<p><em>Note</em>: as there are two image files, zones indicate on which graphic they were drawn through the <code>@facs</code> attribute.</p>
+</div>
+<div id="optional-a-description-of-a-zones-content" class="slide section level1">
+<h1>Optional: a description of a zone’s content</h1>
+<p>The <code>&lt;desc&gt;</code> element may be used within either <code>&lt;surface&gt;</code> or <code>&lt;zone&gt;</code> to provide some further information about the area being defined.</p>
+<pre><code>&lt;surface xml:id=&quot;facs_v2-i55_4&quot;&gt;
+    &lt;desc&gt;A printed page&lt;/desc&gt;
+    &lt;zone ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z1&quot; facs=&quot;#facs_v2-i55_4_web&quot;&gt;
+        &lt;desc&gt;The issue&#39;s masthead&lt;/desc&gt;
+    &lt;/zone&gt;
+&lt;/surface&gt;</code></pre>
+</div>
+<div id="linking-facsimile-and-transcription-xmlid-and-facs" class="slide section level1">
+<h1>Linking facsimile and transcription: <code>@xml:id</code> and <code>@facs</code></h1>
+<ul>
+<li>give each relevant part of the facsimile an <code>@xml:id</code> identifier</li>
+<li>use the <code>@facs</code> attribute to point from the transcription into the <code>&lt;facsimile&gt;</code></li>
+</ul>
+</div>
+<div id="linking-facsimile-and-transcription-the-same-facsimile-again" class="slide section level1">
+<h1>Linking facsimile and transcription: the same <code>&lt;facsimile&gt;</code> again</h1>
+<pre><code>&lt;surface xml:id=&quot;facs_v2-i55_4&quot;&gt;
+     &lt;graphic url=&quot;../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif&quot; xml:id=&quot;facs_v2-i55_4_source&quot;/&gt;
+     &lt;graphic url=&quot;../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg&quot; xml:id=&quot;facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z1&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;59&quot; uly=&quot;253&quot; lrx=&quot;326&quot; lry=&quot;964&quot; xml:id=&quot;facs_v2-i55_4_z2&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;574&quot; uly=&quot;39&quot; lrx=&quot;804&quot; lry=&quot;208&quot; xml:id=&quot;facs_v2-i55_4_z3&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z4&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+ &lt;/surface&gt;</code></pre>
+</div>
+<div id="linking-facsimile-and-transcription-the-text" class="slide section level1">
+<h1>Linking facsimile and transcription: the text</h1>
+<pre><code>&lt;text corresp=&quot;#v2-i55_ar&quot; n=&quot;55en&quot; type=&quot;issue&quot; xml:id=&quot;v2-i55_en&quot; xml:lang=&quot;en&quot;&gt;
+    &lt;pb facs=&quot;#facs_v2-i55_4&quot; n=&quot;1&quot; xml:id=&quot;pb_v2-i55_1en&quot;/&gt;
+    &lt;front facs=&quot;#facs_v2-i55_4_z1&quot; xml:id=&quot;v2-i55_en_front&quot;&gt;
+       &lt;!-- the masthead --&gt;
+       &lt;!-- the main body, which usually does not change between issues --&gt;
+       &lt;div style=&quot;border-bottom:double black&quot;&gt;
+          &lt;bibl xml:lang=&quot;en&quot;&gt;&lt;title level=&quot;j&quot;&gt;Kawkab America&lt;/title&gt;&lt;lb/&gt;
+             &lt;title level=&quot;j&quot; type=&quot;sub&quot;&gt;&quot;The Star of America&quot;&lt;/title&gt;&lt;/bibl&gt;
+          &lt;bibl rend=&quot;center&quot; xml:lang=&quot;ar&quot; facs=&quot;#facs_v2-i55_4_z3&quot;&gt;&lt;title level=&quot;j&quot;&gt;كوكب اميركا&lt;/title&gt;&lt;lb/&gt;
+             &lt;title level=&quot;j&quot; type=&quot;sub&quot;&gt;جريدة سياسية علمية تجارية ادبية&lt;/title&gt;&lt;/bibl&gt;
+       &lt;/div&gt;
+       &lt;!-- the bottom line, commonly containing dating information --&gt;
+       &lt;div style=&quot;border-bottom:solid black&quot; xml:lang=&quot;en&quot; facs=&quot;#facs_v2-i55_4_z4&quot;&gt;
+          &lt;bibl xml:lang=&quot;en&quot;&gt;&lt;biblScope n=&quot;2&quot; unit=&quot;volume&quot;&gt;Vol. 2.&lt;/biblScope&gt;
+             &lt;biblScope n=&quot;55&quot; unit=&quot;issue&quot;&gt;No. 55&lt;/biblScope&gt;
+             &lt;cb/&gt;&lt;pubPlace&gt;New York&lt;/pubPlace&gt;, &lt;date when=&quot;1893-04-28&quot;&gt;Friday, April 28, 1893&lt;/date&gt;.&lt;/bibl&gt;
+       &lt;/div&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+    &lt;!-- the body of the issue --&gt;
+    &lt;/body&gt;
+&lt;/text&gt;</code></pre>
+</div>
+<div id="pointing-from-facsimile-to-the-transcription-using-start" class="slide section level1">
+<h1>Pointing from <code>&lt;facsimile&gt;</code> to the transcription using <code>@start</code></h1>
+<p>It is also possible to point in the other direction, from a <code>&lt;surface&gt;</code> or <code>&lt;zone&gt;</code> to the corresponding text. This is the function of the <code>@start</code>attribute, which supplies the identifier of the element containing the transcribed text found within the <code>&lt;surface&gt;</code> or <code>&lt;zone&gt;</code> concerned.</p>
+</div>
+<div id="example" class="slide section level1">
+<h1>Example</h1>
+<p>Consider this truncated text:</p>
+<pre><code>&lt;text corresp=&quot;#v2-i55_ar&quot; n=&quot;55en&quot; type=&quot;issue&quot; xml:id=&quot;v2-i55_en&quot; xml:lang=&quot;en&quot;&gt;
+    &lt;pb facs=&quot;#facs_v2-i55_4&quot; n=&quot;1&quot; xml:id=&quot;pb_v2-i55_1en&quot;/&gt;
+    &lt;front facs=&quot;#facs_v2-i55_4_z1&quot; xml:id=&quot;v2-i55_en_front&quot;&gt;
+        &lt;!-- ... --&gt;
+    &lt;/front&gt;
+    &lt;!-- ... --&gt;
+&lt;/text&gt;</code></pre>
+<p>And this facsimile linking to it:</p>
+<pre><code>&lt;surface start=&quot;#pb_v2-i55_1en&quot; xml:id=&quot;facs_v2-i55_4&quot;&gt;
+     &lt;graphic url=&quot;../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg&quot; xml:id=&quot;facs_v2-i55_4_web&quot;/&gt;
+     &lt;zone start=&quot;#v2-i55_en_front&quot; ulx=&quot;71&quot; uly=&quot;33&quot; lrx=&quot;1344&quot; lry=&quot;270&quot; xml:id=&quot;facs_v2-i55_4_z1&quot; facs=&quot;#facs_v2-i55_4_web&quot;/&gt;
+     &lt;!-- ... --&gt;
+ &lt;/surface&gt;</code></pre>
+</div>
+<div id="conclusion" class="slide section level1">
+<h1>Conclusion</h1>
+<p>The linking and transcr modules provides a wide range of tools to let you describe relationships between parts of your text. If you use these techniques, remember:</p>
+<ul>
+<li>You should work out a naming scheme to assign ID attributes. You will need a lot of them.</li>
+<li>There are often several ways to do things; use the more specialized markup when you can to make it easier for others to read. Don’t rely on <code>@type</code> attributes with undefined meanings everywhere.</li>
+<li>Control your vocabulary for token attributes like <code>@type</code></li>
+<li>The TEI only takes you as far as markup. Implementing all this to make a fancy interactive text exploration web site may be a lot of work.</li>
+</ul>
+</div>
+<div id="the-elephant-in-the-room-software-implementations" class="slide section level1">
+<h1>The Elephant in the room: software implementations</h1>
+<p>Despite <code>&lt;facsimile&gt;</code> being part of TEI P5 from the very beginning, there are <strong>almost no</strong> software implementations available that provide an easy and convenient (graphic) interface for drawing shapes on image files, recording them as zones, and linking them to the transcription. In consequence, most large projects wrote their own software, while small projects use only the most basic function of linking one image per page to the <code>&lt;pb/&gt;</code> elements.</p>
+<p>Equally, there are <strong>no</strong> out-of-the box software implementations to transform and display the encoded links between bits of transcriptions and zones on the images for presentation purposes.</p>
+</div>
+<div id="available-options" class="slide section level1">
+<h1>Available options</h1>
+<ul>
+<li>The <strong>Image Markup Tool</strong>, Windows-only sofware developed by Martin Holmes at UVic
+<ul>
+<li>writes the <code>&lt;zones&gt;</code> and the link to the text to a new TEI P5 file, using its own schema</li>
+<li>last update in 2012</li>
+<li>available at <a href="http://www.tapor.uvic.ca/~mholmes/image_markup/">http://www.tapor.uvic.ca/~mholmes/image_markup/</a></li>
+</ul></li>
+<li><strong>TextGrid</strong>’s TBLE
+<ul>
+<li>writes the <code>&lt;zones&gt;</code> and the link to the text to a new TEI P5 file, using SVG (Scalable Vector Graphics) and its own schema</li>
+<li>TextGridLab is freely available at <a href="https://www.textgrid.de/en/registrationdownload/download-and-installation/">https://www.textgrid.de/en/registrationdownload/download-and-installation</a>, but requires a free <em>DAHRIA</em> account</li>
+</ul></li>
+<li>The <strong>TEI Facsimile Plugin</strong> for oXygen:
+<ul>
+<li>allows to draw <code>&lt;zone&gt;</code> elements</li>
+<li>this functional proof of concept was developed by oXygen’s Alex Jitianu for the DIXIT camp in Graz, 2014</li>
+<li>source available at <a href="https://github.com/oxygenxml/TEI-Facsimile-Plugin">https://github.com/oxygenxml/TEI-Facsimile-Plugin</a> <!-- - **TILE** ([Text-Image Linking Environment](http://mith.umd.edu/tile/)) --></li>
+</ul></li>
+</ul>
+<p>Literature:</p>
+<ul>
+<li>Al-Hajj and Küster, 2011 <a href="dh2011abstracts.stanford.edu/xtf/view?docId=tei/ab-197.xml">The Text-Image-Link-Editor: A tool for Linking Facsimiles &amp; Transcriptions and Image Annotations</a></li>
+</ul>
+</div>
+</body>
+</html>

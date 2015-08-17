@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <!-- <style type="text/css">code{white-space: pre-wrap;}</style> -->
+    <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//css/slidy_custom_sh.css" />
+    <!--<link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>--> 
+    <script src="..//js/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+
+<script src="..//js/jquery-1.11.2.min.js"
+    charset="utf-8" type="text/javascript"></script>
+    <script src="..//js/jquery.snippet.js"
+    charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="..//css/jquery.snippet.css" />
+    <script type="text/javascript">
+            $(document).ready(function(){
+    
+    $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
+        // Finds <pre> element
+        // and snippet highlights the CSS code within
+        // using the "greenlcd" styling.
+    });
+    </script>
+</head>
+<body>
+<div id="topic-tei-metadata" class="slide section level1">
+<h1>Topic: TEI Metadata</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and the <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS code</a> of the W3C.</p>
+</div>
+<div id="what-is-metadata" class="slide section level1">
+<h1>What is metadata?</h1>
+<ul>
+<li>often called &quot;data about data&quot;</li>
+<li>term originally used with electronic data but its meaning has broadened</li>
+<li>data about the content, context, and structure of information resources</li>
+</ul>
+</div>
+<div id="general-purposes-of-metadata" class="slide section level1">
+<h1>General purposes of metadata</h1>
+<ul>
+<li>supports the identification, retrieval, use, re-use, management, and preservation of information resources</li>
+<li>enriches the informational value of an object</li>
+<li>can describe a collection, a single resource, or a component part of a larger resource</li>
+</ul>
+</div>
+<div id="tei-metadata" class="slide section level1">
+<h1>TEI metadata</h1>
+<p>TEI requires metadata to be stored inside the XML document, prefixed to the content. This information comprises the TEI header although, as we will see, some can be included inside the <code>&lt;body&gt;</code>.</p>
+<ul>
+<li>used to store bibliographical information about both the electronic version(s) of the text as well as any physical, or analogue, source(s)</li>
+<li>basic information is similar to library cataloguing and supports interroperability with other metadata standards</li>
+<li>much like an electronic version of a title page attached to a printed work</li>
+</ul>
+</div>
+<div id="the-tei-header-teiheader" class="slide section level1">
+<h1>The TEI header: <code>&lt;teiHeader&gt;</code></h1>
+<p>The TEI header was designed with two goals in mind</p>
+<ul>
+<li>needs of bibliographers and librarians trying to document ‘electronic books’</li>
+<li>needs of text analysts trying to document ‘coding practices’ within digital resources</li>
+</ul>
+<p>The result is that discussion of the header tends to be pulled in two directions...</p>
+</div>
+<div id="the-librarians-header" class="slide section level1">
+<h1>The librarian's header</h1>
+<ul>
+<li>Conforms to standard bibliographic model, using similar terminology</li>
+<li>Organized as a single source of information for bibliographic description of a digital resource, with established mappings to other such records (e.g. MARC, EAD, etc.)</li>
+<li>General consensus on 'Best Practical for TEI for Libraries' from TEI-LIB SIG</li>
+<li>Pressure for greater and more exact constraints to improve precision of description: <strong>preference for structured data over loose prose</strong></li>
+</ul>
+</div>
+<div id="everywomans-header" class="slide section level1">
+<h1>Everywoman's header</h1>
+<ul>
+<li>Gives a polite nod to common bibliographic practice, but has a far wider scope</li>
+<li>Supports a (potentially) huge range of very miscellaneous information, organized in fairly ad hoc or individualistic ways</li>
+<li>Many different codes of practice in different user communities</li>
+<li>Unpredictable combinations of narrowly encoded documentation systems and loose prose descriptions</li>
+</ul>
+</div>
+<div id="tei-header-structure" class="slide section level1">
+<h1>TEI header structure</h1>
+<p>The TEI header has four main components:</p>
+<ul>
+<li><code>&lt;fileDesc&gt;</code> (file description) contains a full bibliographic description of a computer file. (&quot;computer file&quot; may actually correspond with several files across different operating system.)</li>
+<li><code>&lt;encodingDesc&gt;</code> (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived.</li>
+<li><code>&lt;profileDesc&gt;</code> (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements</li>
+<li><code>&lt;revisionDesc&gt;</code> (revision description) summarizes the revision history for a file.</li>
+</ul>
+<p>Only <code>&lt;fileDesc&gt;</code> is required; the others are optional.</p>
+</div>
+<div id="example-header-minimal-required-header" class="slide section level1">
+<h1>Example header: minimal required header</h1>
+<pre><code>&lt;teiHeader&gt;
+    &lt;fileDesc&gt;
+        &lt;titleStmt&gt;
+            &lt;title&gt;A title?&lt;/title&gt;
+        &lt;/titleStmt&gt;
+        &lt;publicationStmt&gt;
+            &lt;p&gt;Who published?&lt;/p&gt;
+        &lt;/publicationStmt&gt;
+        &lt;sourceDesc&gt;
+            &lt;p&gt;Where from?&lt;/p&gt;
+        &lt;/sourceDesc&gt;
+    &lt;/fileDesc&gt;
+&lt;/teiHeader&gt;</code></pre>
+</div>
+<div id="two-levels-of-tei-headers" class="slide section level1">
+<h1>Two levels of TEI headers</h1>
+<ul>
+<li><em>corpus level</em> metadata sets default properties for everything in a corpus</li>
+<li><em>text level</em> metadata sets specific properties for one component text of a corpus</li>
+</ul>
+</div>
+<div id="corpus-header-example" class="slide section level1">
+<h1>Corpus header example</h1>
+<pre><code>&lt;teiCorpus xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+    &lt;!-- Add xmlns and version in &lt;teiCorpus&gt;--&gt;
+    &lt;teiHeader type=&quot;corpus&quot;&gt;
+        &lt;!-- corpus-level metadata here --&gt;
+        &lt;!-- Must contain one TEI header for the corpus. --&gt;
+    &lt;/teiHeader&gt;
+    &lt;TEI&gt;
+        &lt;teiHeader type=&quot;text&quot;&gt;
+            &lt;!-- metadata specific to this text here --&gt;
+            &lt;!-- Must contain a series of TEI elements, one for each text. --&gt;
+        &lt;/teiHeader&gt;
+        &lt;text&gt;
+            &lt;!-- ... --&gt;
+        &lt;/text&gt;
+    &lt;/TEI&gt;
+    &lt;TEI&gt;
+        &lt;teiHeader type=&quot;text&quot;&gt;
+            &lt;!-- metadata specific to this text here --&gt;
+        &lt;/teiHeader&gt;
+        &lt;text&gt;
+            &lt;!-- ... --&gt;
+        &lt;/text&gt;
+    &lt;/TEI&gt;
+&lt;/teiCorpus&gt;</code></pre>
+</div>
+<div id="types-of-content-in-the-tei-header" class="slide section level1">
+<h1>Types of content in the TEI header</h1>
+<ul>
+<li>free prose
+<ul>
+<li>prose description: series of paragraphs</li>
+<li>phrase: character data, interspersed with phrase-level elements, but not paragraphs</li>
+</ul></li>
+<li>grouping elements: specialised elements recording some structured information</li>
+<li>declarations: Elements whose names end with the suffix Decl (e.g. <code>&lt;subjectDecl&gt;</code>, <code>&lt;refsDecl&gt;</code>) enclose information about specific encoding practices applied in the electronic text.</li>
+<li>descriptions: Elements whose names end with the suffix Desc (e.g. <code>&lt;settingDesc&gt;</code>, <code>&lt;projectDesc&gt;</code>) contain a prose description, possibly, but not necessarily, organised under some specific headings by suggested sub-elements.</li>
+</ul>
+</div>
+<div id="example-source-al-iqbāl-257-27-july-1908" class="slide section level1">
+<h1>Example source: al-Iqbāl #257, 27 July 1908</h1>
+<div class="figure">
+<img src="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" alt="Front page of al-Iqbāl #257, 27 July 1908" /><p class="caption">Front page of al-Iqbāl #257, 27 July 1908</p>
+</div>
+</div>
+<div id="example-header-minimal-required-header-1" class="slide section level1">
+<h1>Example header: minimal required header</h1>
+<pre><code>&lt;teiHeader xml:lang=&quot;en&quot;&gt;
+    &lt;fileDesc&gt;
+        &lt;titleStmt&gt;
+            &lt;title level=&quot;j&quot; xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;al-Iqbāl&lt;/title&gt;
+            &lt;title type=&quot;sub&quot;&gt;Digital Edition&lt;/title&gt;
+        &lt;/titleStmt&gt;
+        &lt;publicationStmt&gt;
+            &lt;p&gt;Unpublished example edition for the DHI Beirut 2015&lt;/p&gt;
+        &lt;/publicationStmt&gt;
+        &lt;sourceDesc&gt;
+            &lt;p&gt;Transcribed from microfilm copies (classmark Mic-Na:164) located in the AUB library&lt;/p&gt;
+        &lt;/sourceDesc&gt;
+    &lt;/fileDesc&gt;
+&lt;/teiHeader&gt;</code></pre>
+</div>
+<div id="file-description-filedesc-1" class="slide section level1">
+<h1>File description <code>&lt;fileDesc&gt;</code> 1</h1>
+<ul>
+<li>has some <strong>mandatory</strong> elements:
+<ul>
+<li><code>&lt;titleStmt&gt;</code>: provides a title for the resource and any associated statements of responsibility</li>
+<li><code>&lt;sourceDesc&gt;</code>: documents the sources from which the encoded text derives (if any)</li>
+<li><code>&lt;publicationStmt&gt;</code>: documents how the encoded text is published or distributed</li>
+</ul></li>
+<li>and some <strong>optional</strong> ones:
+<ul>
+<li><code>&lt;editionStmt&gt;</code>: yes, digital texts have editions too</li>
+<li><code>&lt;seriesStmt&gt;</code>: and they also fit into &quot;series&quot;.</li>
+<li><code>&lt;extent&gt;</code>: how many CDs, gigabytes, files?</li>
+<li><code>&lt;notesStmt&gt;</code>: notes of various types</li>
+</ul></li>
+</ul>
+</div>
+<div id="file-description-filedesc-2" class="slide section level1">
+<h1>File description <code>&lt;fileDesc&gt;</code> 2</h1>
+<ul>
+<li><code>&lt;titleStmt&gt;</code>: contains a mandatory <code>&lt;title&gt;</code> which identifies the electronic file (not its source!)</li>
+<li>optionally followed by additional titles, and by ‘statements of responsibility’, as appropriate, using <code>&lt;author&gt;</code>, <code>&lt;editor&gt;</code>, <code>&lt;sponsor&gt;</code>, <code>&lt;funder&gt;</code>, <code>&lt;principal&gt;</code> or the generic <code>&lt;respStmt&gt;</code></li>
+<li><code>&lt;publicationStmt&gt;</code>: may contain
+<ul>
+<li>plain text (e.g. to say the text is unpublished)</li>
+<li>one or more <code>&lt;publisher&gt;</code>, <code>&lt;distributor&gt;</code>, <code>&lt;authority&gt;</code>, each followed by <code>&lt;pubPlace&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;availability&gt;</code>, <code>&lt;idno&gt;</code></li>
+</ul></li>
+</ul>
+</div>
+<div id="title-and-responsibility-statements" class="slide section level1">
+<h1>Title and responsibility statements</h1>
+<p>Within <code>&lt;titleStatement&gt;</code>, you can repeat any of these elements as necessary, and document additional responsbilities with a generic <code>&lt;respStmt&gt;</code></p>
+<pre><code>&lt;titleStmt xml:lang=&quot;en&quot;&gt;
+    &lt;title level=&quot;j&quot; xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;al-Iqbāl&lt;/title&gt;
+    &lt;title type=&quot;sub&quot;&gt;Digital Edition&lt;/title&gt;
+    &lt;author xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;ʿAbd al-Bāsiṭ al-Unsī&lt;/author&gt;
+    &lt;author xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Muḥammad al-Jisr&lt;/author&gt;
+    &lt;respStmt&gt;
+        &lt;resp&gt;created the TEI files&lt;/resp&gt;
+        &lt;name&gt;Till Grallert&lt;/name&gt;
+    &lt;/respStmt&gt;
+&lt;/titleStmt&gt;</code></pre>
+<!-- - The title of the electronic work should be derived from the source text, but clearly distinguishable from it.
+- At a minimum, identify the author of the text and (where appropriate) the creator of the file or corpus -->
+
+</div>
+<div id="edition-and-extent-statements" class="slide section level1">
+<h1>Edition and extent statements</h1>
+<ul>
+<li><code>&lt;editionStmt&gt;</code>
+<ul>
+<li>can be used to document the details of this particular edition</li>
+<li>optional for the first release, but is mandatory for each later release</li>
+</ul></li>
+<li><code>&lt;extent&gt;</code>
+<ul>
+<li>approximate size of a text stored on some carrier medium or of some other object, digital or non-digital</li>
+<li>is sometimes used to document number of words in a corpus</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-publication-statement-publicationstmt" class="slide section level1">
+<h1>The publication statement <code>&lt;publicationStmt&gt;</code></h1>
+<ul>
+<li>mandatory element</li>
+<li><code>&lt;publisher&gt;</code>, <code>&lt;distributor&gt;</code> and/or <code>&lt;authority&gt;</code> must be present unless the entire publication statement is given as prose</li>
+<li>If the creation date is different than the date of publication, creation date should be given within <code>&lt;profileDesc&gt;</code>, not in the <code>&lt;publicationStmt&gt;</code></li>
+<li>formal license may be entered in <code>&lt;licence&gt;</code> included in <code>&lt;availability&gt;</code></li>
+</ul>
+</div>
+<div id="example-publication-statement" class="slide section level1">
+<h1>Example: publication statement</h1>
+<pre><code>&lt;publicationStmt&gt;
+    &lt;publisher&gt;AUB&lt;/publisher&gt;
+    &lt;distributor&gt;Digital Humanities Institute Beirut&lt;/distributor&gt;
+    &lt;authority&gt;Till Grallert&lt;/authority&gt;
+    &lt;pubPlace&gt;Beirut&lt;/pubPlace&gt;
+    &lt;date from=&quot;2015-03-02&quot; to=&quot;2015-03-06&quot;&gt;2-6 March 2015&lt;/date&gt;
+    &lt;availability&gt;
+        &lt;licence&gt;Licensed with a 
+            &lt;ref target=&quot;http://creativecommons.org/licenses/by/3.0/&quot;&gt;Creative Commons Attribution&lt;/ref&gt;
+            licence.&lt;/licence&gt;
+    &lt;/availability&gt;
+&lt;/publicationStmt&gt;</code></pre>
+</div>
+<div id="series-statement-seriesstmt" class="slide section level1">
+<h1>Series statement: <code>&lt;seriesStmt&gt;</code></h1>
+<p>These include</p>
+<ul>
+<li>separate items that share a collective title applicable to the group</li>
+<li>two or more volumes of items, similar in character and issued in sequence</li>
+<li>separately numbered sequence of volumes within a serial or serials</li>
+</ul>
+</div>
+<div id="example-series-statement" class="slide section level1">
+<h1>Example: series statement</h1>
+<pre><code>&lt;seriesStmt&gt;
+    &lt;title level=&quot;s&quot;&gt;Machine-Readable Texts for the Study of Indian Literature&lt;/title&gt;
+    &lt;respStmt&gt;
+        &lt;resp&gt;ed. by&lt;/resp&gt;
+        &lt;name&gt;Jan Gonda&lt;/name&gt;
+    &lt;/respStmt&gt;
+    &lt;biblScope unit=&quot;vol&quot;&gt;1.2&lt;/biblScope&gt;
+    &lt;idno type=&quot;ISSN&quot;&gt;0 345 6789&lt;/idno&gt;
+&lt;/seriesStmt&gt;</code></pre>
+</div>
+<div id="notes-statement-notesstmt" class="slide section level1">
+<h1>Notes statement: <code>&lt;notesStmt&gt;</code></h1>
+<p>The optional <code>&lt;notesStmt&gt;</code> can contain notes on almost any aspect of the file or its contents:</p>
+<pre><code>&lt;notesStmt&gt;
+    &lt;note&gt;Transcribed for DHI Beirut TEI Workshop&lt;/note&gt;
+&lt;/notesStmt&gt;</code></pre>
+<p>These notes can be short statements, or many parargaphs long. Take care to encode such information with more precise elements elsewhere in the TEI header, when such elements are available. For example, text types, such as reportage or detective stories, should be described under <code>&lt;profileDesc&gt;</code></p>
+</div>
+<div id="the-source-description-statement-sourcedesc" class="slide section level1">
+<h1>The source description statement: <code>&lt;sourceDesc&gt;</code></h1>
+<p>All electronic works need to document their source, <strong>even 'born digital' ones</strong>! There are variety of elements you may draw from:</p>
+<ul>
+<li>prose description, just a <code>&lt;p&gt;</code></li>
+<li><code>&lt;bibl&gt;</code> (bibliographic citation): contains free text and/or any mixture of bibliographic elements such as <code>&lt;author&gt;</code>, <code>&lt;publisher&gt;</code> etc.</li>
+<li><code>&lt;biblStruct&gt;</code> (structured) contains similar elements but constrained in various ways according to bibliographic standards</li>
+<li><code>&lt;biblFull&gt;</code> (fully-structured) special-cases texts which were born TEI by replicating an embedded <code>&lt;fileDesc&gt;</code></li>
+<li><code>&lt;listBibl&gt;</code> may be used for lists of such descriptions, e.g. bibliographies</li>
+<li>Specialised elements for spoken texts (<code>&lt;recordingStmt&gt;</code> etc.) and for manuscripts (<code>&lt;msDesc&gt;</code>) <!-- Discussed later! --></li>
+<li>Authority lists: <code>&lt;listPerson&gt;</code>, <code>&lt;listPlace&gt;</code>, <code>&lt;listOrg&gt;</code></li>
+</ul>
+</div>
+<div id="example-source-al-iqbāl-257-27-july-1908-1" class="slide section level1">
+<h1>Example source: al-Iqbāl #257, 27 July 1908</h1>
+<div class="figure">
+<img src="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" alt="Front page of al-Iqbāl #257, 27 July 1908" /><p class="caption">Front page of al-Iqbāl #257, 27 July 1908</p>
+</div>
+</div>
+<div id="example-sourcedesc" class="slide section level1">
+<h1>Example: <code>&lt;sourceDesc&gt;</code></h1>
+<pre><code>&lt;sourceDesc xml:lang=&quot;en&quot;&gt;
+    &lt;biblStruct&gt;
+        &lt;monogr&gt;
+            &lt;title level=&quot;j&quot; xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;al-Iqbāl&lt;/title&gt;
+            &lt;title level=&quot;j&quot; xml:lang=&quot;ar&quot;&gt;الاقبال &lt;/title&gt;
+            &lt;title level=&quot;j&quot; type=&quot;sub&quot; xml:lang=&quot;ar&quot;&gt;جريدة اسبوعية تصدر كل يوم الاثنين في &lt;placeName&gt;بيروت&lt;/placeName&gt;&lt;/title&gt;
+            &lt;imprint&gt;
+                &lt;publisher xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;ʿAbd al-Bāsiṭ al-Unsī&lt;/publisher&gt;
+                &lt;publisher xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Muḥammad al-Jisr&lt;/publisher&gt;
+                &lt;date when=&quot;1908-07-27&quot;&gt;Mon, 27 July 1908&lt;/date&gt;
+                &lt;pubPlace&gt;Beirut&lt;/pubPlace&gt;
+                &lt;biblScope type=&quot;vol&quot;&gt;7&lt;/biblScope&gt;
+                &lt;biblScope type=&quot;issue&quot;&gt;257&lt;/biblScope&gt;
+                &lt;biblScope type=&quot;pp&quot;&gt;1-8&lt;/biblScope&gt;
+            &lt;/imprint&gt;
+        &lt;/monogr&gt;
+        &lt;idno type=&quot;class-mark&quot;&gt;Mic-Na:164&lt;/idno&gt;
+    &lt;/biblStruct&gt;
+&lt;/sourceDesc&gt;</code></pre>
+</div>
+<div id="association-between-header-and-text" class="slide section level1">
+<h1>Association between header and text</h1>
+<p>By default everything asserted by a header is true of the text to which it is prefixed. This can be over-ridden:</p>
+<ul>
+<li>as when a text header over-rides or amplifies a corpus-header setting</li>
+<li>when model.declarable elements are selected by means of the <span class="citation">@decls</span> attribute (available on all model.declaring elements)</li>
+<li>using special purpose selection/definition elements e.g. <code>&lt;catRef&gt;</code> and <code>&lt;taxonomy&gt;</code></li>
+</ul>
+<p>Most components of the encoding description are declarable.</p>
+</div>
+<div id="encoding-description-encodingdesc" class="slide section level1">
+<h1>Encoding description: <code>&lt;encodingDesc&gt;</code></h1>
+<p><code>&lt;encodingDesc&gt;</code> groups notes about the procedures used when the text was encoded, either summarised in prose or within specific elements such as</p>
+<ul>
+<li><code>&lt;projectDesc&gt;</code>: goals of the project</li>
+<li><code>&lt;samplingDecl&gt;</code>: sampling principles</li>
+<li><code>&lt;editorialDecl&gt;</code>: editorial principals, e.g. <code>&lt;correction&gt;</code>, <code>&lt;normalization&gt;</code>, <code>&lt;quotation&gt;</code>, <code>&lt;hyphenation&gt;</code>, <code>&lt;segmentation&gt;</code>, <code>&lt;interpretation&gt;</code></li>
+<li><code>&lt;classDecl&gt;</code>: classification system/s used</li>
+<li><code>&lt;tagsDecl&gt;</code>: specifics about usage of particular elements</li>
+</ul>
+<p>Detailed notes in <code>&lt;encodingDesc&gt;</code> could be used to generate section of an editorial description.</p>
+</div>
+<div id="example-encodingdesc-1" class="slide section level1">
+<h1>Example: <code>&lt;encodingDesc&gt;</code> 1</h1>
+<pre><code>&lt;encodingDesc xml:lang=&quot;en&quot;&gt;
+    &lt;projectDesc&gt;
+        &lt;p&gt;Creation of a digital corpus of Arabic newspapers from Beirut published in the aftermath of the Young Turk Revolution&lt;/p&gt;
+    &lt;/projectDesc&gt;
+    &lt;editorialDecl&gt;
+        &lt;correction&gt;
+            &lt;p&gt;Apparent errors have been marked as &lt;sic&gt;sic&lt;/sic&gt; but correct readings are not provided&lt;/p&gt;
+        &lt;/correction&gt;
+        &lt;hyphenation&gt;
+            &lt;p&gt;Hyphenation is not common to Arabic texts&lt;/p&gt;
+        &lt;/hyphenation&gt;
+    &lt;/editorialDecl&gt;
+&lt;/encodingDesc&gt;</code></pre>
+</div>
+<div id="example-encodingdesc-1-1" class="slide section level1">
+<h1>Example: <code>&lt;encodingDesc&gt;</code> 1</h1>
+<pre><code>&lt;encodingDesc&gt;
+    &lt;classDecl&gt;
+        &lt;taxonomy xml:id=&quot;part-of-speech&quot;&gt;
+            &lt;category xml:id=&quot;adje&quot;&gt;
+                &lt;catDesc&gt;adjectives&lt;/catDesc&gt;
+                &lt;category xml:id=&quot;AJ0&quot;&gt;
+                    &lt;catDesc&gt;adjective (unmarked) (e.g. GOOD, OLD)&lt;/catDesc&gt;
+                &lt;/category&gt;
+                &lt;category xml:id=&quot;AJC&quot;&gt;
+                    &lt;catDesc&gt;comparative adjective (e.g. BETTER, OLDER)&lt;/catDesc&gt;
+                &lt;/category&gt;
+                &lt;category xml:id=&quot;AJS&quot;&gt;
+                    &lt;catDesc&gt;superlative adjective (e.g. BEST, OLDEST)&lt;/catDesc&gt;
+                &lt;/category&gt;
+            &lt;/category&gt;
+            &lt;category xml:id=&quot;AT0&quot;&gt;
+                &lt;catDesc&gt;article (e.g. THE, A, AN)&lt;/catDesc&gt;
+            &lt;/category&gt;
+            &lt;!-- ... --&gt;
+        &lt;/taxonomy&gt;
+    &lt;/classDecl&gt;
+&lt;/encodingDesc&gt;</code></pre>
+</div>
+<div id="the-tagging-declaration-tagsdecl" class="slide section level1">
+<h1>The tagging declaration: <code>&lt;tagsDecl&gt;</code></h1>
+<p>The <code>&lt;tagsDecl&gt;</code> records elements namespace, tag frequency, information about the usage of particular tags not specified elsewhere, and default text appearance in source</p>
+</div>
+<div id="the-rendition-element" class="slide section level1">
+<h1>The <code>&lt;rendition&gt;</code> element</h1>
+<ul>
+<li><code>&lt;rendition&gt;</code>: structured information about appearance in the source document</li>
+<li>rendered using informal prose description, standard stylesheet language (CSS, XSL-FO), or project-defined language.</li>
+</ul>
+<p>consider this example:</p>
+<pre><code>&lt;tagsDecl&gt;
+    &lt;rendition scheme=&quot;css&quot; xml:id=&quot;r-center&quot;&gt;text-align: center;&lt;/rendition&gt;
+    &lt;rendition scheme=&quot;css&quot; xml:id=&quot;r-small&quot;&gt;font-size: small;&lt;/rendition&gt;
+    &lt;rendition scheme=&quot;css&quot; xml:id=&quot;r-large&quot;&gt;font-size: large;&lt;/rendition&gt;
+&lt;/tagsDecl&gt;</code></pre>
+<p>which you can easily point to from the text</p>
+<pre><code>&lt;hi rendition=&quot;#r-center #r-large&quot;&gt;this bit of text was large and centred&lt;/hi&gt;</code></pre>
+<p>But compare:</p>
+<pre><code>&lt;hi rend=&quot;large center&quot;&gt;this bit of text was large and centred&lt;/hi&gt;</code></pre>
+</div>
+<div id="the-profile-description-profiledesc" class="slide section level1">
+<h1>The profile description: <code>&lt;profileDesc&gt;</code></h1>
+<p>A collection of descriptions, categorised only as ‘non-bibliographic’. Default members of the model.profileDescPart class include:</p>
+<ul>
+<li><code>&lt;creation&gt;</code>: information about the origination of the intellectual content of the text, e.g. time and place</li>
+<li><code>&lt;langUsage&gt;</code>: information about languages, registers, writing systems etc. used in the text; <strong>this is particularly important to our example</strong></li>
+<li><code>&lt;calendarDesc&gt;</code>: information about calendars and dating methods as used in the text; <strong>this is particularly important to our example</strong></li>
+<li><code>&lt;textDesc&gt;</code> and <code>&lt;textClass&gt;</code>: classifications applied to the text by means of a list of specified criteria or by means of a collection of pointers, respectively</li>
+<li><code>&lt;particDesc&gt;</code> and <code>&lt;settingDesc&gt;</code>: information about the ‘participants’, either real or depicted, in the text</li>
+<li><code>&lt;handNotes&gt;</code>: information about the particular style or hand distinguished within a manuscript</li>
+</ul>
+</div>
+<div id="example-creation" class="slide section level1">
+<h1>Example <code>&lt;creation&gt;</code></h1>
+<pre><code>&lt;creation&gt;
+    &lt;date when=&quot;1918-05&quot;/&gt;
+    &lt;placeName&gt;Ripon&lt;/placeName&gt;
+    &lt;listChange ordered=&quot;true&quot;&gt;
+        &lt;change xml:id=&quot;CHG-1&quot;&gt;First stage, written in pencil in Owen&#39;s hand &lt;/change&gt;
+        &lt;change xml:id=&quot;CHG-2&quot;&gt;Second stage, revised in pencil in Owen&#39;s hand&lt;/change&gt;
+        &lt;change xml:id=&quot;CHG-3&quot;&gt;Fixation of the revised passages and further minor revisions by Owen using ink&lt;/change&gt;
+        &lt;change xml:id=&quot;CHG-4&quot;&gt;Addition of another stanza with a different ink, probably at a later stage&lt;/change&gt;
+    &lt;/listChange&gt;
+&lt;/creation&gt;</code></pre>
+<p>Here <code>&lt;listChange&gt;</code> records stages in changes to the document. Further down, in <code>&lt;revisionDesc&gt;</code> the same element is used to record changes to the electronic file.</p>
+</div>
+<div id="language-and-character-set-usage" class="slide section level1">
+<h1>Language and character set usage</h1>
+<p>The <code>&lt;langUsage&gt;</code> element is provided to document usage of languages and writing systems in the text. Languages are identified by their ISO codes:</p>
+<pre><code>&lt;langUsage&gt;
+    &lt;language ident=&quot;ar&quot;&gt;Arabic&lt;/language&gt;
+    &lt;language ident=&quot;ar-Latn-x-ijmes&quot;&gt;Arabic transcribed into Latin script following the IJMES conventions&lt;/language&gt;
+    &lt;language ident=&quot;ar-Latn-EN&quot;&gt;Arabic transcribed into Latin script following common English practices&lt;/language&gt;
+    &lt;language ident=&quot;ar-Latn-FR&quot;&gt;Arabic transcribed into Latin script following common French practices&lt;/language&gt;
+    &lt;language ident=&quot;en&quot;&gt;English&lt;/language&gt;
+    &lt;language ident=&quot;fa&quot;&gt;Farsi&lt;/language&gt;
+    &lt;language ident=&quot;fa-Latn-x-ijmes&quot;&gt;Farsi transcribed into Latin script following the IJMES conventions&lt;/language&gt;
+    &lt;language ident=&quot;fr&quot;&gt;French&lt;/language&gt;
+    &lt;language ident=&quot;ota&quot;&gt;Ottoman&lt;/language&gt;
+    &lt;language ident=&quot;ota-Latn-x-ijmes&quot;&gt;Ottoman transcribed into Latin script following the IJMES conventions&lt;/language&gt;
+    &lt;language ident=&quot;tr&quot;&gt;Turkish&lt;/language&gt;
+&lt;/langUsage&gt;</code></pre>
+</div>
+<div id="the-calendar-description" class="slide section level1">
+<h1>The calendar description</h1>
+<ul>
+<li>The <code>&lt;calendarDesc&gt;</code> contains a description of the calendar system used in any dating expression found in the text. This element may contain one or more <code>&lt;calendar&gt;</code> elements, but it is generally presumed that the absence of any specific declaration signifies the Gregorian calendar</li>
+<li>Each <code>&lt;calendar&gt;</code> element contains one or more paragraphs of description for the calendar system concerned, and also supplies an identifying code for it as the value of its <span class="citation">@xml:id</span> attribute.</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;calendarDes&gt;
+    &lt;calendar xml:id=&quot;cal_islamic&quot;&gt;
+        &lt;p&gt;Islamic &lt;hi&gt;hijrī&lt;/hi&gt; calendar: lunar calendar beginning the Year with 1 Muḥarram.&lt;/p&gt;
+    &lt;/calendar&gt;
+    &lt;calendar xml:id=&quot;cal_julian&quot;&gt;
+        &lt;p&gt;Reformed Julian calendar beginning the Year with 1 January.&lt;/p&gt;
+    &lt;/calendar&gt;
+    &lt;calendar xml:id=&quot;cal_ottomanfiscal&quot;&gt;
+        &lt;p&gt;Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1 March and synchronised with &lt;hi&gt;hijrī&lt;/hi&gt; year count every 33 years.&lt;/p&gt;
+    &lt;/calendar&gt;
+&lt;/calendarDes&gt;</code></pre>
+</div>
+<div id="classification-methods" class="slide section level1">
+<h1>Classification Methods</h1>
+<p><code>&lt;textClass&gt;</code> groups information which describes the nature or topic of a text in terms of a standard classification scheme, thesaurus, etc. using one or more of the following ways:</p>
+<ul>
+<li><code>&lt;catRef&gt;</code>: direct reference to a locally defined (e.g.in the corpus header) category</li>
+<li><code>&lt;classCode&gt;</code>: reference to some standard and externally defined classification scheme</li>
+<li><code>&lt;keywords&gt;</code>: assign arbitrary descriptive terms taken from a bibliographic controlled vocabulary or a tag cloud</li>
+</ul>
+<p>This categorization applies to the whole text. For more fine grained classification, use <span class="citation">@decls</span> on e.g. a <code>&lt;div&gt;</code> element to point to applicable variation in header.</p>
+</div>
+<div id="detailed-characterization-of-a-text" class="slide section level1">
+<h1>Detailed characterization of a text</h1>
+<p><code>&lt;textDesc&gt;</code> provides a description of a text in terms of its ‘Situational parameters’, a description of the situation whithin which the text was produced or experienced.</p>
+<pre><code>&lt;textDesc n=&quot;novel&quot;&gt;
+    &lt;channel mode=&quot;w&quot;&gt;print; part issues&lt;/channel&gt;
+    &lt;constitution type=&quot;single&quot;/&gt;
+    &lt;derivation type=&quot;original&quot;/&gt;
+    &lt;domain type=&quot;art&quot;/&gt;
+    &lt;factuality type=&quot;fiction&quot;/&gt;
+    &lt;interaction type=&quot;none&quot;/&gt;
+    &lt;preparedness type=&quot;prepared&quot;/&gt;
+    &lt;purpose degree=&quot;high&quot; type=&quot;entertain&quot;/&gt;
+    &lt;purpose degree=&quot;medium&quot; type=&quot;inform&quot;/&gt;
+&lt;/textDesc&gt;</code></pre>
+</div>
+<div id="the-participants-description-particdesc" class="slide section level1">
+<h1>The participants description: <code>&lt;particDesc&gt;</code></h1>
+<p><code>&lt;particDesc&gt;</code> can just contain paragraphs of prose, or a more structured <code>&lt;person&gt;</code> element in <code>&lt;listPerson&gt;</code></p>
+<p>Example 1:</p>
+<pre><code>&lt;particDesc xml:id=&quot;p2&quot;&gt;
+    &lt;p&gt;Female informant, well-educated, born in Shropshire UK, 12 Jan 1950, of unknown occupation. Speaks French fluently. Socio-Economic status B2 in the PEP classification scheme &lt;/p&gt;
+&lt;/particDesc&gt;</code></pre>
+</div>
+<div class="slide section level1">
+
+<p>Example 2:</p>
+<pre><code>&lt;particDesc xml:lang=&quot;ar&quot;&gt;
+    &lt;listPerson&gt;
+        &lt;head&gt;People mentioned in the text&lt;/head&gt;
+        &lt;person xml:id=&quot;pers-1&quot; xml:lang=&quot;ar&quot;&gt;
+            &lt;persName xml:lang=&quot;ar&quot;&gt;عبد الحميد الثاني&lt;/persName&gt;
+            &lt;birth&gt;
+                &lt;date calendar=&quot;#cal_islamic&quot; datingMethod=&quot;#cal_islamic&quot; when=&quot;1842&quot; when-custom=&quot;1258-08-16&quot;&gt;١٦ شعبان ١٢٥٨ &lt;/date&gt;
+            &lt;/birth&gt;
+            &lt;death&gt;
+                &lt;date when=&quot;1918&quot;&gt;١٩١٨&lt;/date&gt;
+            &lt;/death&gt;
+            &lt;idno type=&quot;GND&quot;&gt;118646435&lt;/idno&gt;
+            &lt;idno type=&quot;VIAF&quot;&gt;9880442&lt;/idno&gt;
+            &lt;state calendar=&quot;#cal_ottomanfiscal&quot; datingMethod=&quot;#cal_ottomanfiscal&quot; notBefore-custom=&quot;1876-06-18&quot; xml:lang=&quot;en&quot;&gt;
+                &lt;p&gt;Sultan of the Ottoman Empire, 1876-1909&lt;/p&gt;
+            &lt;/state&gt;
+            &lt;note xml:lang=&quot;en&quot;&gt;
+                &lt;ref target=&quot;https://en.wikipedia.org/wiki/Abdul_Hamid_II&quot;&gt;Wikipedia article&lt;/ref&gt;
+            &lt;/note&gt;
+        &lt;/person&gt;
+        &lt;person xml:id=&quot;pers-2&quot;&gt;
+            &lt;persName xml:lang=&quot;ar&quot;&gt;
+                &lt;forename xml:lang=&quot;ar&quot;&gt;احمد&lt;/forename&gt;
+                &lt;forename xml:lang=&quot;ar&quot;&gt;حسن&lt;/forename&gt;
+                &lt;surname xml:lang=&quot;ar&quot;&gt;طباره&lt;/surname&gt;
+            &lt;/persName&gt;
+            &lt;state xml:lang=&quot;en&quot;&gt;
+                &lt;p&gt;Editor of &lt;orgName xml:lang=&quot;ar-Latn-x-ijmes&quot;&gt;Thamarāt al-Funūn&lt;/orgName&gt;.&lt;/p&gt;
+            &lt;/state&gt;
+        &lt;/person&gt;
+    &lt;/listPerson&gt;
+&lt;/particDesc&gt;</code></pre>
+</div>
+<div id="revision-description-revisiondesc" class="slide section level1">
+<h1>Revision Description: <code>&lt;revisionDesc&gt;</code></h1>
+<ul>
+<li>A list of <code>&lt;change&gt;</code> elements, each with a <span class="citation">@date</span> and <span class="citation">@who</span> attributes, indicating significant stages in the evolution of a document. Most recent first.</li>
+<li>Can be grouped into <listChange> elements. Used here it is about the electronic file, used in <code>&lt;creation&gt;</code> it is about the document.</li>
+<li>Can be maintained manually, or done by means of a version control system (like SVN)</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;revisionDesc&gt;
+    &lt;change when=&quot;2015-02-07&quot;&gt;Added detailed profileDesc containing information on languages, calendars, and persons&lt;/change&gt;
+    &lt;change when=&quot;2015-02-06&quot;&gt;Added mark-up&lt;/change&gt;
+    &lt;change when=&quot;2015-02-05&quot;&gt;&lt;persName&gt;Till Grallert&lt;/persName&gt; Created file&lt;/change&gt;
+&lt;/revisionDesc&gt;</code></pre>
+</div>
+<div id="some-more-metadata-acronym-soup" class="slide section level1">
+<h1>Some more metadata acronym soup</h1>
+<ul>
+<li>DCMI: Dublin Core Metadata Initiative: Very simple standard for describing web resources: 15 ‘lowest common denominator’ fields</li>
+<li>RDF: Resource Description Framework: W3C standard for representing any kind of resource description using object oriented concepts: basis of the ‘semantic web’</li>
+<li>EAD: Encoded Archival Description: International standard for describing archival collections</li>
+<li>METS: Metadata Encoding and Transcription Standard: generalised method to integrate different metadata systems</li>
+</ul>
+<p>TEI provides a richer vocabulary than EAD or DCMI, and is less abstract than RDF or METS</p>
+</div>
+<div id="next" class="slide section level1">
+<h1>Next</h1>
+<p>That was a whirlwind tour of the kinds of things you can put in the <code>&lt;teiHeader&gt;</code>, however be aware that adding some of the other TEI modules can expand what is allowed in the header. (e.g. Manuscript Description) Now let's do an exercise where we make an existing <code>&lt;teiHeader&gt;</code> element better!</p>
+</div>
+</body>
+</html>
