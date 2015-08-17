@@ -17,7 +17,7 @@
     
     <!-- generate a new file -->
     <xsl:template match="TEI">
-        <xsl:result-document href="{substring-before(base-uri(), '.xml')}-toc.html">
+        <xsl:result-document href="{substring-before(base-uri(), '.TEIP5.xml')}-toc.html">
             <html> 
                 <head>
                     <title><xsl:apply-templates select="./teiHeader//titleStmt/title"/></title>
@@ -33,7 +33,7 @@
     
     <!-- create the toc -->
     <xsl:template match="text[@type='issue']">
-        <div>
+        <div class="cToc" id="toc">
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
             </xsl:call-template>

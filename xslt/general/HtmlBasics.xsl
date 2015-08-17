@@ -27,6 +27,23 @@
         </xsl:choose>
     </xsl:template>
     
+    <!-- front, body, back -->
+    <xsl:template match="front">
+        <div class="cFront">
+            <xsl:apply-templates select="@rend | @style | node()"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="body">
+        <div class="cBody">
+            <xsl:apply-templates select="@rend | @style | node()"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="back">
+        <div class="cBack">
+            <xsl:apply-templates select="@rend | @style | node()"/>
+        </div>
+    </xsl:template>
+    
     <!-- divs -->
     <xsl:template match="div">
         <div>
@@ -41,7 +58,7 @@
                     <xsl:text>cArt</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:apply-templates select="@* | node()"/>
+            <xsl:apply-templates select="@rend | @style | node()"/>
         </div>
     </xsl:template>
     <!-- ps -->
@@ -50,7 +67,7 @@
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
             </xsl:call-template>
-            <xsl:apply-templates select="@* | node()"/>
+            <xsl:apply-templates select="@rend | @style | node()"/>
         </p>
     </xsl:template>
     <!-- heads -->
@@ -65,7 +82,7 @@
     <xsl:template match="div/head">
         <h1><xsl:apply-templates/></h1>
     </xsl:template>
-    <!-- title -->
+    <!-- titles -->
     <xsl:template match="bibl[ancestor::text]/title">
         <span>
             <xsl:attribute name="class" select="'cTitle'"/>
@@ -100,15 +117,18 @@
     </xsl:template>
     <!-- the separating marks encoded as <ab> (anonymous blocks) -->
     <xsl:template match="ab">
-        <div>
-            <xsl:apply-templates select="@* | node()"/>
-        </div>
+        <span class="cAb">
+            <xsl:apply-templates select="@rend | @style | node()"/>
+        </span>
     </xsl:template>
     
-    <!-- highlights -->
-    <xsl:template match="hi">
+    <!-- highlights, bibls  -->
+    <xsl:template match="hi | bibl">
         <span>
-            <xsl:apply-templates select="@* | node()"/>
+            <xsl:call-template name="templHtmlAttrLang">
+                <xsl:with-param name="pInput" select="."/>
+            </xsl:call-template>
+            <xsl:apply-templates select="@rend | @style | node()"/>
         </span>
     </xsl:template>
     
@@ -153,5 +173,8 @@
         </a>
         </span>
     </xsl:template>
+    
+    <!-- omit attributes from HTML output -->
+    <xsl:template match="@xml:lang | @n | @type"/>
     
 </xsl:stylesheet>

@@ -18,7 +18,7 @@
     <xsl:include href="https://raw.githubusercontent.com/tillgrallert/xslt-calendar-conversion/master/DateFunction%20v1.xsl"/>
     
     <xsl:template match="TEI">
-        <xsl:result-document href="{substring-before(base-uri(), '.xml')}.html">
+        <xsl:result-document href="{substring-before(base-uri(), '.TEIP5.xml')}.html">
         <html> 
             <head>
                 <title><xsl:apply-templates select="./teiHeader//titleStmt/title"/></title>
