@@ -1,0 +1,71 @@
+[xml\:lang="ar"]{
+    direction:rtl;
+    /*text-align:right;*/
+    /*font-size:120%;*/
+}
+[lang="ar"], [lang="ota"] {
+    direction:rtl;
+    /*text-align:right;*/
+    /*font-size:110%;*/
+}
+
+[lang="en"], [lang="ar-Latn-x-ijmes"] {
+    direction:ltr;
+    /*text-align:right;*/
+    /*font-size:110%;*/
+}
+body {
+         font-size:18px;
+         }
+
+/*div {
+    font-size:inherit;
+}*/
+
+div.cDoc1 {
+      float: left;
+      clear: left;
+      position: relative;
+         display:block;
+         width:300px;
+         font-weight: inherit;
+         
+         }
+div.cDoc2, div.cDoc3 {
+         float: left;
+         clear: none;
+         padding-left:1em;
+         position: relative;
+         display:block;
+         width:300px;
+         font-weight: inherit;
+         }
+.cBreak {
+         clear:both;
+         }
+/*div.cSec, div.cArt, div.cPara {
+         padding:5px;
+         }*/
+div.cPara {
+    font-weight:normal;
+        }
+div.cH1 {
+         font-size:150%;
+         }
+div.cH2 {
+         font-size:120%;
+         }
+ .cFnMarker {
+     font-size:50%;
+     vertical-align:top;
+     direction:inherit;
+ }
+         
+div.cH1, div.cH2, div.cH3 {
+         font-weight: bold;
+         }
+      
+div.cNote {
+    display:inline;
+    font-weight:normal;
+    }
