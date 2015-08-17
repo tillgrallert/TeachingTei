@@ -209,8 +209,8 @@
                   </div>
                   <cb n="3"/>
                   <div style="width:33%;float:right" xml:lang="fr">
-                     <head><title level="j">AL-BACHIR</title>
-                        <lb/><title level="j" type="sub">JOURNAL ARABE HEBDOMADAIRE</title></head>
+                     <bibl><title level="j">AL-BACHIR</title>
+                        <lb/><title level="j" type="sub">JOURNAL ARABE HEBDOMADAIRE</title></bibl>
                      <ab rend="center">---</ab>
                      <div>
                         <head>ABONNEMENTS.</head>
