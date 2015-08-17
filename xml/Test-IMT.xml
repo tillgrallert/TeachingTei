@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oasis-schema href="imt_1_8.rng" type="application/xml"?>
+<?oxygen RNGSchema="imt_1_8.rng" type="xml"?>
+<TEI version="5.0" xml:id="Test-IMT" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>dds-54634_Page_09_Image_0001_2R.jpg</title>
+      </titleStmt>
+
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p>1397 x 1804</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <tagsDecl xml:id="imtAnnotationCategories">
+        <rendition xml:id="Default">
+          <label>Explanation of this annotation category...</label>
+          <code lang="text/css" rend="rectangle">color: #0000ff</code>
+        </rendition>
+        <rendition xml:id="structuralElement">
+          <label>This is a purely structural form of annotation</label>
+          <code lang="text/css" rend="rectangle">color: #0000ff</code>
+        </rendition>
+        <rendition xml:id="textualElement">
+          <desc>transcriptional</desc>
+          <label>These annotations should contain transcriptions of the text found in the marked-up zone</label>
+          <code lang="text/css" rend="rectangle">color: #ff0000</code>
+        </rendition>
+      </tagsDecl>
+      <appInfo>
+        <application ident="ImageMarkupTool01" notAfter="2015-05-27T15:50:58" version="1.8.2.0">
+          <label> Image Markup Tool</label>
+          <desc> Tool for annotating images using TEI</desc>
+          <ref target="http://www.tapor.uvic.ca/~mholmes/image_markup/" type="appURI"> </ref>
+          <ptr target="#imtAnnotatedImage"/>
+          <ptr target="#imtImageAnnotations"/>
+          <ptr target="#imtAnnotationCategories"/>
+        </application>
+
+
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <facsimile xml:id="imtAnnotatedImage">
+    <surface>
+      <graphic height="1804px" url="..\images\kawkab\dds-54634_Page_09_Image_0001_2R.jpg"
+        width="1397px"/>
+      <zone lrx="1338" lry="280" rend="visible" rendition="structuralElement" ulx="60" uly="31"
+        xml:id="imtArea_0"/>
+      <zone lrx="1340" lry="1788" rend="visible" rendition="structuralElement" ulx="65" uly="262"
+        xml:id="imtArea_1"/>
+      <zone lrx="1340" lry="270" rend="visible" rendition="textualElement" ulx="60" uly="200"
+        xml:id="imtArea_2"/>
+      <zone lrx="1287" lry="156" rend="visible" rendition="textualElement" ulx="106" uly="44"
+        xml:id="imtArea_3"/>
+      <zone lrx="1083" lry="208" rend="visible" rendition="textualElement" ulx="325" uly="138"
+        xml:id="imtArea_4"/>
+      <zone lrx="810" lry="208" rend="visible" rendition="textualElement" ulx="571" uly="40"
+        xml:id="imtArea_5"/>
+      <zone lrx="319" lry="965" rend="visible" rendition="textualElement" ulx="70" uly="266"
+        xml:id="imtArea_6"/>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div xml:id="imtImageAnnotations">
+        <div corresp="#imtArea_0" type="imtAnnotation">
+          <head>masthead</head>
+          <div>
+            <p>[Annotation text]</p>
+          </div>
+        </div>
+        <div corresp="#imtArea_1" type="imtAnnotation">
+          <head>page body</head>
+          <div>
+            <p>[Annotation text]</p>
+          </div>
+        </div>
+        <div facs="#imtArea_2" type="imtAnnotation">
+          <head>dateline</head>
+          <div>
+            <p>Vol. 2. No. 55 New York, Friday, April 28, 1893</p>
+          </div>
+        </div>
+        <div facs="#imtArea_3" type="imtAnnotation">
+          <head>title</head>
+          <div>
+            <p>Kawkab America</p>
+          </div>
+        </div>
+        <div facs="#imtArea_4" type="imtAnnotation">
+          <head>title</head>
+          <div>
+            <p>"The Star of America"</p>
+          </div>
+        </div>
+        <div facs="#imtArea_5" type="imtAnnotation">
+          <head>arabic title</head>
+          <div>
+            <p>كوكب اميركا</p>
+          </div>
+        </div>
+        <div facs="#imtArea_6" type="imtAnnotation">
+          <head>imprint</head>
+          <div>
+            <p>[Annotation text]</p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

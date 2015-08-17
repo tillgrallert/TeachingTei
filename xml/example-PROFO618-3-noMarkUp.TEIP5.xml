@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway,
+                    reports on local politics etc., 1908</title>
+                <respStmt>
+                    <resp>Transcription and encoding in TEI</resp>
+                    <persName xml:id="pers_TG">Till Grallert</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>The digital text is freely available for re-use.</p>
+            </publicationStmt>
+            <sourceDesc>
+            <p>Some prose providing information on the source of the text</p>
+         </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <samplingDecl>
+                <p>Some of the letters in this file have been transcribed as detailed as possible to demonstrate the application of TEI P5 to an introductory course</p>
+            </samplingDecl>
+            <editorialDecl>
+                <hyphenation eol="none">
+                    <p>Hyphenation that might occur at the end of a line has been silently removed</p>
+                </hyphenation>
+                <normalization method="silent">
+                    <p>In case spelling or punctuation have been corrected in the transcription, it has been done without further comment.</p>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+        
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus-30_19080803" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 30, Devey to Lowther 3 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+               <p>Some prose providing information on the source of the text</p>
+            </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <p>
+            
+                
+                
+                    Ex-Mushir Fuad P. released
+                    August 3, 1908
+                    Dft
+                        Sir Gerald A. Lowther K.C.M.G.,C.B., 
+                        
+                                Cple
+                                Constantinople
+                            
+                         No. 30
+                        29 30
+                    42 Emb.
+                    Sir, I have the honour to report to Y.E. that the General Amnesty
+                        granted by 
+                                H.I.M.
+                                His Imperial Majesty
+                             the Sultan to all Political
+                            criminals was after some hesitation taken to
+                        exciles was after some hesitation taken to include the Ex-Mushir
+                            Fuad Pasha who has been imprisoned under the
+                        strictest confinement for the last six and a half years; and on the
+                            evening of
+                        about  on the 30th. ultimo the
+                            Commander of the 5th A.C.Colonel of Gendarmerie
+                        went in person, dismissed the numerous guards around the prisoner’s house of
+                        confinement and communicated to him the news of his being at liberty to go
+                        wherever he likes. On the following day
+                        Fuad P
+                                .
+                                asha
+                            
+                        w while going for the prayer in the Great
+                            Mosque, was very enthusiastically applauded &amp; cheered by
+                            
+                        the thousands
+                        crowds of people who assembled &amp; walked before &amp;
+                            after his
+                        mobbing his carriage &amp; showing their extreme
+                            joy for
+                        happiness at his release, in every possible way.
+                            Even inside the Mosque after the usual Friday prayers he
+                            was surrounded &amp; his hand shaken or kissed by great numbers with
+                            much emotion. It is credible that had he not been set at liberty for the
+                                31st being Friday some noisy demonstration
+                            manifestation w
+                                .
+                                oul
+                            d have been called to protest against his detention.
+                    On the evening of the 31st ultimo he attended the demonstration
+                        held in the Defterdar Garden in honour of the
+                        Constitution and his presence there added very greatly
+                            toaccentuated the zeal and joy manifested
+                            byof the public crowded in the garden
+                        crowd. Most of the notables and chief officials have already
+                        called at on Fuad Pasha in his house &amp;
+                        expressed sympathy. He will probably leave Damascus
+                        for Cple.
+                        by the end of this week the 6th or 7th
+                            inst.
+                        &amp; meet his&amp; reunite his numerous family
+                            of 12 sons &amp; 8 daughters:for the last a 3
+                            years his son aged 13aged 11 years old son has been boarding
+                            for the last 3 years in the local Idadie high school &amp;
+                            permitted to visit his father a month, but  on each occasion
+                            with a company here.During his stay here he had the society
+                            of one wife, two daughters and one son now 14 yrs. old.
+                    Some of the foreign Consuls had called in the Friday afternoon, &amp; I
+                        arranged to visit him on the morning of the 1st inst. when I
+                        had the privilege of an affecting interview, as
+                        he was still deeply moved by long suffering. Many visitors were present
+                        &amp; constantly coming &amp; going, as also the Acting
+                            Russian Consul &amp; Russian Dragoman &amp;
+                            FerikLiva
+                        Husini Pasha of of
+                        the Technical
+                        fortification worksDepartment &amp; various officers
+                        &amp; Ulema, many being known to H. Exy. of you. In the afternoon he
+                        returned my visit at the Consulate &amp; I understand is punctiliously
+                        returning as many visits of great &amp; small as possible. When I took
+                        leave, he courteously accompanied on a little way &amp; made profession to
+                        my private care of continued Anglophile sentiments.
+                    On Sat. afternoon I felt that I 
+                            cd.
+                            could
+                         not but let Him. Exy. know that Hr. M.y has
+                        offered congratulations in the matter of the inestimable boon of the
+                        reestablished Constitution, &amp; trusted that recent  wd.
+                            lead with athe new departure may tend to better Gov.t
+                        &amp; true reforms in Turkey. I have etc.
+                                G.P.D.The Marshal’s very
+                            outspoken opinions show that he abides by the well known liberal
+                            opinions professed throughout his career.
+                    I have etc. 
+                                G.P.D.
+                                George Pollard Devey
+                            
+                
+            
+        </p>
+         </body>
+      </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus-33_19080912" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 33, Devey to Lowther 12 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+               <p>Some prose providing information on the source of the text</p>
+            </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <p>
+            
+                
+                
+                    State of affairs in Damascus relating to the new Regime
+                    Damascus.August 12. 1908.
+                    DftSir G.A. LowtherCpleNo. 33
+                    Sir,with ref.ce to my des.ch No. 29 of the 3.rd ins. I have the honour
+                        to report some of theupon the more interesting
+                        proceedings that took place here since that date
+                            respectingconnected with the new Constitutional
+                        movement.
+                    The ManyLoud Popular demonstrations and
+                            happygreat manifestations of joy with
+                        illuminations and street decorations have been going on in all the
+                            quarters of the city showing the utmost zeal and enthusiasm on the part
+                            of the public who hardly understand the situation or appreciate the
+                            foundation of their joy; but fortunately no
+                        throughout the city from were continuous from the 31st ult.imo
+                            until yesterday, some of them attended also by numerous
+                                masses
+                            throngs from neighbouring villages; though indeed few
+                                present could have really appreciated at their true value
+                            the great privileges accorded. Happily scarcely a
+                        slight accidents occurred, though
+                            withfearing the excessive use of rifles +
+                        revolvers bullets was continuous
+                        was at first rather dangerous; except that a bullet broke the
+                        tramway electric wire which fell on the mob &amp; the current killed three
+                        people &amp; injoured
+                        three
+                        two others.
+                    Five general meetings were held in honour of the Constitution four of which
+                        in two public gardens attended by several thousands of spectators including
+                        the Vali and the three Mushirs now in Damascus, and one in a large theatre;
+                        these meetings were given by provisional societies, military and civil, and
+                        on each occasion more than a dozen speeches were delivered by various
+                        speakers of liberal views, which were almost without exception temperate and
+                        conducive to allay excitement.
+                    Army officers started a club under the name of ‘Liberty’
+                        and inaugurated it on the 10th instant; one of the conditions
+                        for joining the club being supporting the Constitution; and the membership
+                        may be granted to worthy civilians also. The members amount now to more than
+                        a hundred officers who joined in the last two days.
+                    The liberal civilians are now forming another club with nearly similar
+                        conditions as those of the  of the “Liberty Club”
+                        and undoubtedly most of the chief notables will join it.
+                    No serious steps have been taken as yet on any side towards the elections for
+                        the Parliament but the clubs above mentioned intend to give their influence
+                        for the choice of competent persons who are not yet indicated.
+                    The Union &amp; Progress Society, whose individual members
+                        can only be conjectend [?] vaguely here, is practically directed[?], the
+                        Government gestation, military and administration in a prudent and energetic
+                        way. The Vali at the Society’s demand began on the 10th instant
+                        to dismiss or compel resignation of corrupt and mischievous officials such
+                        as the the Chief of Police Oman Jamal, Said
+                            Effendi Banna, the Muhassebji, the Caim.ms of
+                            Douma, Zibadan &amp;
+                            Dera’a Cazas, the last being a cousin of
+                            Izzet Pasha. The Alai Bey of Gendarmerie is also
+                        likely to be dismissed with a particularly corrupt Major Ahmed
+                            Bey of the Zaptiehs and several other functionaries of ill
+                        repute will be in similar case [?], for the  the society intend to
+                        improve the government departments gradually so as to replace the old
+                        corrupt system by a new hones set of officials who are not to be found at
+                        once.
+                    There is some discontent on the part of the ulema and certain leaders in town
+                        for the Union &amp; Progress Society, is going forward in
+                        its own way and removing officials without consulting them, but there seem
+                        no reason to fear that such discontent might provoke any substantial
+                        resistance, at present.
+                    Izzet Pasha’s partisans and creatures here are not few,
+                        but, having the public sentiments against them, they are rather afraid for
+                        their own safety and trying to gain as many liberal friends as possible.
+                    It is a good things that the demonstrations &amp; calling together
+                        of crowds are now at an end for it is evident that the loss of the 
+                        prestige o the government and the palpable decrease of its influence might
+                        easily afford an opportunity for malcontents to provoke disturbance and
+                        cause trouble in order to show the bad results of the liberal views.
+                    It is true that there are no symptoms of animosity here between Moslems and
+                        Christians but, as is always the case when the government power relaxes and
+                        the public order endangered the weaker element would be the actual sufferer.
+                        For this reason the Christians and Jews here rather felt a certain amount of
+                        anxiety during the last fortnight, but the liberal chiefs among Moslems have
+                        been all the time preaching equality and emphasising the necessity of order
+                        and good behaviour.
+                    As to the effect of promulgating the constitution in the other towns of this
+                        Vilayet, very little can be said, for the people of the 
+                        Hauran and Kerak Sanjak are
+                        too ignorant to appreciate the difference between autocratic and
+                        constitutional government” […]
+                     In conclusion, I might add here that a pessimistic observer does not
+                            fail to see some faint reasons for anxiety in Damascus and would, but
+                            not without hesitation, foretell the rise of antagonistic parties who
+                            might deal with each other corporally and endanger the public security.
+                            The garrison of the town, I am sorry to say, is rather too small to cope
+                            with such emergencies if they would ever come to action 
+                        Trouble so easily arises out of small incidents, e.g. the Bab Tuma
+                            tumult (v. No. 30 of Aug 2/07[?]) or again the death of a policeman in
+                            1902 that one cannot but feel some slight uneasiness without being
+                            unduly pessimistic. Then again the conditions of the city are very
+                            dissimilar from those of most others, in having here great notables of
+                            various classes, races, &amp; ideas, accustomed to influence and power;
+                            and there is a 
+                         new element in the presence of the Hamidiyye
+                            troops still in temporary camp here the wide +rambling extent
+                        of the town with the relative fewness of troops in garrison, so many being
+                        employed in the Hejaz railway construction, do not concur
+                        to allay such apprehension, at a moment when local police are likely to be
+                        called to a reckoning as in general more or less corrupt + inefficient.
+                
+            
+        </p>
+         </body>
+      </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus 51 draft, General Report for September Quarter,
+                        Devey to Lowther 1 Oct. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+               <p>Some prose providing information on the source of the text</p>
+            </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <p>
+            
+                
+                    
+                    General Report for September Quarter
+                    DamascusOctober 1. 1908.
+                    DftSir G.A. LowtherCpleNo. 51
+                    Sir,I have the honour to submit herwith mya
+                        general report for
+                        on events during the last quarter.
+                     The great ‘coup d’Etat’ which took place in Turkey on
+                        the 24th July occupied all minds and engaged
+                        aroused every emotion with the proclamation of the Constitution,
+                        in Damascus as in all other important centres in the
+                            Empire. The chief  interests
+                        Among its results worthy of remark here during this
+                            time were 
+                            (a) celebrations and festivities
+                            (b) dismissal or withdrawalresignation of
+                                notoriously corrupt officials
+                            (c) formation of clubs and associations
+                            (d) parliamentary elections
+                            (e) reforms in various governmental departments.
+                            (f) release or rehabilitation
+                                made to of political exiles or persons
+                        
+                    Rejoicings and joyful manifestation came now
+                        are only coming now to an end, after lasting more than two
+                        months: more than 25 well organized great meetings were held int
+                        he different quarters of the city, mostly attended by several
+                        thousands demonstrators and spectators, and hundreds of speeches were
+                        delivered, all condemning autocracy as despotic &amp; tyrannical and
+                        eulogizing liberty and constitutional government. About £2000 were spent on
+                        the festivities and had not notables of Damascus with
+                        the young Turks lately recommended their cessation they
+                        might have continued for another month or more. It is to be remarked with
+                        pleasure that all these gathering &amp; demonstrations were conducted most
+                        orderly without any dispute or ill feeling among those who assembled.
+                    Many corrupt officials were either dismissed or withdrew themselves.
+                    The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six
+                        Caimacams of Cazas, Moh.d P. Adm of Idara
+                            Mejliss with about 30 other minor officials vacated their
+                        posts, mostly to the general satisfaction of the public and it is debated
+                        now among ‘Young Turkey’ adherents whether it would be
+                        right to punish the officials who were led to bribery by the littleness of
+                        their pay &amp; its frequent irregularity. Doubtless the proper course will
+                        be followed in leaving this matter to the jurisdiction  of Parliament
+                        when it assembles, and the ignorious[?] dismissal of the more corrupt,
+                        rapacious &amp; outrageous among officials suffices for the moment.
+                        Moreover, the vacancies are not being easily filled up by really good
+                        substitutes, for such persons are at present rare, and often unwilling to
+                        serve. 
+                    Damascus Clubs &amp; associations, besides the Union &amp;
+                            Progress number now five viz Hurriyet,
+                            Ulema, Medical,
+                            Commercial, Free Ottoman besides a
+                            Shoemaker guild. the first two are showing much
+                        activity wh.[ich] is likely to excite mutation . The misapprehension &amp;
+                        with uncalled solicitude Ulema are anxious to
+                            comcure &amp; uphold Islam against the liberal views of the
+                            Young Turks, while the latter have no intention at
+                        present to interfere with religious precepts. The first point of dispute was
+                        about women’s wear which the Ulema wanted to be cut on a very simple mode,
+                        one piece enveloping the whole body, and the liberals denied them the right
+                        of interfering with this matter which should be regarded as pertaining to
+                        individual free choice. In this campaign the Ulema were defeated but not
+                        without their rivals using threats of applying force.
+                    There is little record as to practical work effected [?] by other clubs
+                        though their moral influence cannot be other than good.
+                    
+                    The Parliamentary elections are under preparation the last two months and in
+                        some cazas the voters have already voted for the electors, but in
+                            Damascus city this process will begin in a week’s
+                        time. It is not even announced yet how many deputies will represent this
+                        Vilayet in the Parliament but it is supposed that they will be seven or
+                        eight. The Hauran people still reject their privilege
+                        to elect a deputy and the efforts of the government in dissuading them from
+                        this self-inflicted loss seem to be futile. The Mutessarif of
+                            Kerak lately resigned on grounds of health, but
+                        before doing so had been able to set going a local society or club for
+                        instruction of the people of his district who indeed are little less
+                        backward &amp;ignorant than this of Hauran.
+                    The reforms in the various departments of the government proceed slowly. The
+                            Municipality suppressed most improperly awarded
+                        pensions paid to persons doing nothing for it and succeeded in amassing
+                        about £3000 through various economies. The Public Instruction
+                            Department formed a new chamber to consider the reorganization
+                        of the educational system in this Vilayet. In the departments no special
+                        reforms worth mentioning have been introduced but many are being talked of
+                        &amp; discussed. 
+                    The political exiles who had been releases or rehabilitated included many
+                        persons of rank, both military and civil. Mushir Fuad
+                            Pasha’s release was the occasion of great demonstrations in
+                            Damascus, but the rehabilitation of others, with
+                        a few exceptions, was not publicly noticed, for this disgraces persons were
+                        always enjoying personal freedom  and a very few persons knew that they
+                        were ‘Ikamet Mamours’ [iqāma maʾmūr]. The chief names among these were,
+                            Nouri P. Ferik of Cavalry, another Ferik called
+                            Nouri Pasha sent to live here without duties,
+                            Ferik Ibrahim Pasha (those three Feriks kept for
+                            Constantinople), Ferik Lt. Osman
+                            P., Liva Behjet Pasha (those two died
+                        recently), Colonel Bedri Bey (now of Liva
+                            Bedri P. in Constantinople). The
+                        Maàriz Mushiri [?] &amp; his assistant, and many minor officials or private
+                        persons; such as members of the Bedr Khan family,
+                        numbering more than a hundred. Further as reported in desp. No.
+                            32, the Ismailians subjected to religious persecution were
+                        pardoned. Happily no sort of disorder or riotous intention was displayed
+                        here for the purpose of releasing prisoners and ordinary criminals
+                        generally, as took place in some other places.”
+                    Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908.
+                        four of the five battalions employed for earthworks on the line were allowed
+                        to return to their garrisons. 
+                    “about 1400 of these battalions on expiry of service were disbanded.
+                        Moreover, the four battalions of the 40th Reg, sent to
+                            Medina from this Army Corps in June
+                            last, to guard the line, are also ordered back to their
+                        headquarters. At present only two battalions are to be kept there to take
+                        care of the line as regards repairs &amp; protection.” No aspirations to
+                        commence construction beyond Medina due to increasing Bedouin raids
+                        
+                    “Public security in the Vilayet has been during the quarter satisfactory and
+                        order was properly kept. The Bedouins have been quiet &amp; peaceful during
+                        the summer, and only on two or three occasions made petty rais &amp; drove
+                        or carried away animals or goods but the spoils were restored to their
+                        owners without great difficulties.” Druze and Bedouins seem under the spell
+                        of the government and calmly wait for the implementation of the promised
+                        reforms
+                    “the crops this year were in general very good and the grain harvest in most
+                        of the districts of the Province was exceptionally abundant. The apricot
+                        produce was above the average while walnuts were much below. All prices of
+                        fruit and cereals are still high and the peasants this year will do well. An
+                        exception might be mentioned as  as regards locusts which made a
+                        perceptible damage in the Kalamoun
+                            district but had a very slight effect in some other Cazas.
+                        But the loss to the Vilayet in general has been small.
+                    As respects trade, no special remarks need be made; strikes at
+                            Beirut at the Customs and on local railways have
+                        produced only exiguous loss here. With reference to the latter we may note
+                        that public opinion judges that the smaller employés were underpaid, while
+                        the profits of the Company &amp; of its directors were considerable and the
+                        public at the same time ill served.
+                    Public health has been satisfactory on the whole this summer, but the
+                            Ain Fijeh water has not been received the general
+                        approbation anticipated which is to be regretted, as theres is absolute
+                        proof the it is the best &amp; purest spring water of al this neighbourhood.
+                        Its distribution to all quarters of the city proceeds slowly.”
+                
+            
+        </p>
+         </body>
+      </text>
+    </TEI>
+</teiCorpus>

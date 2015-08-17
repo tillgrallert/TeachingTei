@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/TeiJaraid.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ar-Latn-x-ijmes">al-Iqbāl, volume 7, 1908</title>
+            <title type="sub">Digital Edition</title>
+            <respStmt>
+               <resp>TEI version</resp>
+               <persName>Till Grallert</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>unpublished</p>
+            <!--<publisher></publisher>
+                <distributor></distributor>
+                <availability>
+                    <p>unpublished</p>
+                </availability>-->
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+               <title level="j" xml:lang="ar">الاقبال </title>
+            </bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar">الاقبال </title>
+               </titleStmt>
+               <publicationStmt xml:lang="en">
+                  <publisher xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                  <publisher xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</publisher>
+                  <date notAfter="1929-12-31" notBefore="1902-01-01">Published between 1902 and
+                     1929</date>
+                  <pubPlace>Beirut</pubPlace>
+                  <availability>
+                     <p>Microfilm copies of al-Iqbāl, held by the American University in Beirut</p>
+                  </availability>
+               </publicationStmt>
+            </biblFull>
+            <biblStruct>
+               <monogr>
+                  <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar">الاقبال </title>
+                  <imprint>
+                     <publisher xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                     <publisher xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</publisher>
+                     <date notAfter="1929-12-31" notBefore="1902-01-01">Published between 1902 and
+                        1929</date>
+                     <biblScope type="vol">7</biblScope>
+                     <pubPlace>Beirut</pubPlace>
+                  </imprint>
+               </monogr>
+               <idno type="class-mark">Mic-Na:164</idno>
+            </biblStruct>
+            
+
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Some project description</p>
+         </projectDesc>
+         <editorialDecl>
+            <p>providing information on our decisions concerning the actual transcription of a
+               newspaper structure into a TEI P5 XML file</p>
+
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+         <calendarDesc>
+            <calendar>
+               <p>Following the hegemonial approach of standards rooted in the English language, the
+                  Gregorian calendar is presumed as the norm and must not be specified.</p>
+               <p>The @when attribute always provides W3C dates, while the @when-custom attribute
+                  follows the inherent logic of the chosen calendar.</p>
+               <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5
+                     Mar 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_islamic">
+               <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                  Muḥarram. Dates differ between locations as the beginning of the month is based on
+                  sightings of the new moon.</p>
+               <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_julian">
+               <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi>rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi>sharqī</hi>.</p>
+               <p>All solar calendars add an intercalated 366th day every fourth (and, in the case
+                  of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
+                  last day of the old Julian calendar). The Gregorian calendar suppresses this rule
+                  in centesimal years that cannot be divided by 400. This difference creates a
+                  growing offset between Gregorian and Julian calendars: while 1900 R was a leap
+                  year, 1900 was not, which in turn caused the difference between the Gregorian
+                  calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on
+                  the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
+                  (13 March 1900) onwards.</p>
+               <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_ottomanfiscal">
+               <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                  calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
+                  and in the Ottoman context usually referred to as <hi>mālī</hi> and sometimes,
+                  confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year
+                  would complete within a single solar <hi>mālī</hi> year. In this case the counting
+                  of the <hi>mālī</hi> years skipped a year to catch up with the faster
+                     <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
+                  synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was henceforth
+                  abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years
+                  preceded their <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  commenced on 13 March 1899).</p>
+               <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
+            </calendar>
+         </calendarDesc>
+         <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+               English practices</language>
+            <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+               French practices</language>
+            <language ident="en">English</language>
+            <language ident="fa">Farsi</language>
+            <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="fr">French</language>
+            <language ident="ota">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="tr">Turkish</language>
+         </langUsage>
+         <!--<particDesc>
+                <listPerson>
+                    <head>People mentioned in the text</head>
+                    <person xml:id="pers-1">
+                        
+                    </person>
+                </listPerson>
+            </particDesc>-->
+      </profileDesc>
+      <revisionDesc>
+         <change when="2015-02-28">Generated this file by stripping all semantic mark-up from file:/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/xml/exampleTEI5-Iqbal-v7.xml</change>
+      </revisionDesc>
+   </teiHeader>
+   <!-- providing links to the image files either remote or local -->
+   <facsimile>
+      <surface xml:id="facs-1-1">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg"
+                  xml:id="facs-1-1_source"/>
+         <zone lrx="3596"
+               lry="459"
+               ulx="261"
+               uly="258"
+               xml:id="facs-1-1-z-1"/>
+         <zone lrx="3677"
+               lry="1678"
+               ulx="159"
+               uly="431"
+               xml:id="facs-1-1-z-2"/>
+         <zone lrx="3628"
+               lry="2016"
+               ulx="195"
+               uly="1635"
+               xml:id="facs-1-1-z-3"/>
+         <zone lrx="3640"
+               lry="1631"
+               ulx="2633"
+               uly="458"
+               xml:id="facs-1-1-z-4"/>
+         <zone lrx="2658"
+               lry="1615"
+               ulx="1231"
+               uly="469"
+               xml:id="facs-1-1-z-5"/>
+         <zone lrx="1093"
+               lry="1670"
+               ulx="167"
+               uly="439"
+               xml:id="facs-1-1-z-6"/>
+      </surface>
+      <surface xml:id="facs-1-2">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg"
+                  xml:id="facs-1-2_source"/>
+      </surface>
+      <surface xml:id="facs-1-3">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg"
+                  xml:id="facs-1-3_source"/>
+      </surface>
+      <surface xml:id="facs-1-4">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg"
+                  xml:id="facs-1-4_source"/>
+      </surface>
+      <surface xml:id="facs-1-5">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg"
+                  xml:id="facs-1-5_source"/>
+      </surface>
+      <surface xml:id="facs-1-6">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg"
+                  xml:id="facs-1-6_source"/>
+      </surface>
+      <surface xml:id="facs-1-7">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg"
+                  xml:id="facs-1-7_source"/>
+      </surface>
+      <surface xml:id="facs-1-8">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg"
+                  xml:id="facs-1-8_source"/>
+      </surface>
+
+   </facsimile>
+   <text xml:lang="ar" xml:id="v7" n="7" type="vol">
+      <front>
+         <!-- some introductory material for the current volume -->
+      </front>
+      <group>
+            <!-- individual issues -->
+            <text n="254" type="issue" xml:lang="ar" xml:id="v7-i254">
+               <pb n="1"/>
+               <front>
+                  <div style="border-top:double black; border-bottom:sing black">
+                     <bibl xml:lang="ar">
+                     <biblScope n="254" type="issue">العدد ٢٥٤</biblScope>
+                     <title level="j" type="sub">جريدة اسبوعية تصدر كل يوم الاثنين في
+                           بيروت</title>
+                     <biblScope>العدد ٢٢</biblScope> من <biblScope n="7" type="vol">السنة
+                        السابعة</biblScope>
+                  </bibl>
+                  </div>
+                  <!-- the main body, which usually does not change between issues -->
+                  <div facs="#facs-1-1-z-2">
+                     <cb n="1"/>
+                     <div facs="#facs-1-1-z-4" style="width:33%;float:right" xml:lang="ar">
+                        <head>اشتراك الأقبال</head>
+                        <table cols="2" rows="3">
+                           <row n="1" role="data">
+                              <cell>في بيروت
+                                 ولبنان</cell>
+                              <cell>
+                              <measure>٢ ريالان مجيديان</measure>
+                           </cell>
+                           </row>
+                           <row n="2" role="data">
+                              <cell>في جميع الولايات المحروسة</cell>
+                              <cell>
+                              <measure>٢،٥ ريالان ونصف مجيدي</measure>
+                           </cell>
+                           </row>
+                           <row n="3" role="data">
+                              <cell>في سائر الجهات</cell>
+                              <cell>
+                              <measure>١٥ فرنكا</measure>
+                           </cell>
+                           </row>
+                        </table>
+                        <p>ثمن النسخة <measure>قرش ونصف</measure>
+                     </p>
+                        <ab rend="double-line"/>
+                        <p>القيمة تدفع سلفا</p>
+                        <p>ندرج الاعلانات باسعار موافقة<lb/>الرسائل الخصوصية تفاوض الادارة
+                           بنشرها</p>
+                     </div>
+                     <cb n="2"/>
+                     <div facs="#facs-1-1-z-5" style="width:33%;float:right" xml:lang="ar">
+                        <bibl>
+                        <title level="j">الاقبال</title>
+                        <lb/>١٣٢٠</bibl>
+                     </div>
+                     <cb n="3"/>
+                     <div facs="#facs-1-1-z-6" style="width:33%;float:right" xml:lang="ar">
+                        <head>مكاتبات الاقبال</head>
+                        <p>يجب ان تكون المكاتبات خالصة اجرة البريد<lb/>باسم صاحب الاقبال ورئيس
+                              تحريرها<lb/>عبد الباسط الانسي<lb/>لا ترد الاحصاب
+                           ادرجت ام لم تدرج</p>
+                        <ab rend="double-line"/>
+                        <p>احد محرري الجريدة * محيي الدين الخياط<lb/>ترجع
+                           الارادة (بمكتبتنا الانسية)<lb/>او بمطبعتنا
+                              المعارف في بيروت</p>
+                     </div>
+                  </div>
+                  <!-- the bottom line, commonly containing dating information -->
+                  <div style="border-top:double black; border-bottom:double black">
+                     <div>
+                        <ab>تقبل الرسائل والمقالات</ab>
+                        <ab/>
+                        <ab>المستملة على الخدمة الملية</ab>
+                        <ab/>
+                        <ab>الجامعة العثمانية</ab>
+                     </div>
+                     <dateline>الاثنين في ٧ جمادی الثاني سنة ١٣٢٦ وفي ٢٣ حزيران سنة ١٣٢٤ وفي ٦ تموز سنة ١٩٠٨</dateline>
+                  </div>
+               </front>
+               <body>
+                  <p/>
+               </body>
+            </text>
+            <!-- individual issue -->
+            <text n="257" type="issue" xml:lang="ar" xml:id="v7-i257">
+               <pb facs="#facs-1-1" n="1"/>
+               <!-- the masthead -->
+               <front>
+                  <!-- the top line -->
+                  <div facs="#facs-1-1-z-1"
+                    style="border-top:double black; border-bottom:sing black">
+                     <bibl xml:lang="ar">
+                     <biblScope type="issue" n="257">العدد ٢٥٧</biblScope>
+                     <title level="j" type="sub">جريدة اسبوعية تصدر كل يوم الاثنين في
+                           بيروت</title> العدد ٢٥ من <biblScope type="vol" n="7">السنة
+                           السابعة</biblScope>
+                  </bibl>
+                  </div>
+                  <!-- the main body, which usually does not change between issues -->
+                  <div facs="#facs-1-1-z-2">
+                     <cb n="1"/>
+                     <div facs="#facs-1-1-z-4" style="width:33%;float:right" xml:lang="ar">
+                        <head>اشتراك الأقبال</head>
+                        <table cols="2" rows="3">
+                           <row n="1" role="data">
+                              <cell>في بيروت
+                                 ولبنان</cell>
+                              <cell>
+                              <measure>٢ ريالان مجيديان</measure>
+                           </cell>
+                           </row>
+                           <row n="2" role="data">
+                              <cell>في جميع الولايات المحروسة</cell>
+                              <cell>
+                              <measure>٢،٥ ريالان ونصف مجيدي</measure>
+                           </cell>
+                           </row>
+                           <row n="3" role="data">
+                              <cell>في سائر الجهات</cell>
+                              <cell>
+                              <measure>١٥ فرنكا</measure>
+                           </cell>
+                           </row>
+                        </table>
+                        <p>ثمن النسخة <measure>قرش ونصف</measure>
+                     </p>
+                        <ab rend="double-line"/>
+                        <p>القيمة تدفع سلفا</p>
+                        <p>ندرج الاعلانات باسعار موافقة<lb/>الرسائل الخصوصية تفاوض الادارة
+                           بنشرها</p>
+                     </div>
+                     <cb n="2"/>
+                     <div facs="#facs-1-1-z-5" style="width:33%;float:right" xml:lang="ar">
+                        <bibl>
+                        <title level="j">الاقبال</title>
+                        <lb/>١٣٢٠</bibl>
+                     </div>
+                     <cb n="3"/>
+                     <div facs="#facs-1-1-z-6" style="width:33%;float:right" xml:lang="ar">
+                        <head>مكاتبات الاقبال</head>
+                        <p>يجب ان تكون المكاتبات خالصة اجرة البريد<lb/>باسم صاحب الاقبال ورئيس
+                              تحريرها<lb/>عبد الباسط الانسي<lb/>لا ترد الاحصاب
+                           ادرجت ام لم تدرج</p>
+                        <ab rend="double-line"/>
+                        <p>احد محرري الجريدة * محيي الدين الخياط<lb/>ترجع
+                           الارادة (بمكتبتنا الانسية)<lb/>او بمطبعتنا
+                              المعارف في بيروت</p>
+                     </div>
+                  </div>
+                  <!-- the bottom line -->
+                  <div facs="#facs-1-1-z-3"
+                    style="border-top:double black; border-bottom:double black">
+                     <div>
+                        <ab>تقبل الرسائل والمقالات</ab>
+                        <ab/>
+                        <ab>المستملة على الخدمة الملية</ab>
+                        <ab/>
+                        <ab>الجامعة العثمانية</ab>
+                     </div>
+                     <dateline>الاثنين في ٢٨ جمادی الثاني سنة ١٣٢٦ وفي ١٤ تموز سنة ١٣٢٤ وفي ٢٧ تموز سنة ١٩٠٨</dateline>
+                  </div>
+               </front>
+               <!-- body of the issue -->
+               <body>
+               <cb n="1"/>
+               <div type="article" xml:lang="ar">
+                  <head>الصادره العظمى</head>
+                  <p>ورد تلغراف سام من حضرة
+                        فخامتلو
+                        دولتلو
+                        سعيدباشا الى الولاية الجليلة مفاده ان مسند الصدارة
+                     الجليل<lb/>قد وجه هذه المرة ايضاً عَلَى عهدة فخامته وهاك تعريبه</p>
+                  <p>
+                     <quote>سنحت عواطف الحضرة العلية السلطانية بتوجيه<lb/>خدمة الصدارة هذه المرة
+                        ايضاً عَلَى عهد هذا المثني،<lb/>ان وظيفة مأموري الملكية الاساسية هي المحافظة
+                        على<lb/> الامن والراحة وحسن رؤْية المصالح ووظائف الادارة<lb/> العدلية
+                        والحكام هي اجراء العدالة في الحقوق العمومية<lb/> والشخصية ضمن دائرة القوانين
+                        العدلية الموضوعة مع<lb/>قيام كل مأمور بوظيفة مأموريته بكمال العفة
+                        والاستقامة<lb/> لهذا نخطركم ان الذين يقومون بالخدمات الصحيحة<lb/> الصادقة
+                        تكون مساعيهم مظهراً لشرف تقدير حضرةصاحب الخلافة
+                           العظمى كما ان من يخالف ذلك يقع<lb/> بالطبع تحت ظائلة المسؤلية في
+                           ٩ تموز سنة ٣٢٤</quote>
+                  </p>
+               </div>
+               <div type="article" xml:lang="ar">
+                  <head>مجلس المبعوثان</head>
+                  <p>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى<lb/>
+                     <quote>صدرت ارادة حضرة
+                        صاحب الخلافة العظمى<lb/>بان يدعى الى الاجتماع مجلس المبعوثان المبينة
+                        كيفية<lb/>تشكيله في القانون الاساسي الذي هو من تأسيس<lb/>حضرة الخليفة الاعظم
+                        وبما انه ابلغ حكم هذه الارادة<lb/>السنية الجليل الى جميع الولايات
+                        الشاهانية<lb/>المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء<lb/>حائزين
+                        الضفات المندرجة في القانون المذكور</quote>في ١٠ تموز سنة
+                        ١٣٢٤</p>
+                  <p>(الاقبال) لا ريب ان هذا النبأ او هذه النبأة<lb/>التي طارت عَلَى لسان البرق من
+                     مركز الخلافة العظمى</p>
+                  <p>
+                     <cb n="2"/>ستطير لها القلوب جزلاً في جميع ارجأ البلاد العثمانية،<lb/>بل سترقص
+                     لها الالباب طرباً في سائر البلاد التي<lb/>يسكنها كل عثماني مخلص لدولته وبلاده،
+                     من اقصى<lb/>الغرب الى اقصى الشرق، ومن اعلى ذروة الشمال،<lb/>الى ادنى وهدة
+                     الجنوب، لانها امنية كل عثماني مخلص،<lb/>وضالة كل صادق امين</p>
+                  <p>ان هذه البشري ستجعل جميع القلوب المتفرقة في جميع<lb/>ارجاء الارض حائمة حول نقطة
+                     واحدة، ومركز واحد،<lb/>ومليك واحد، الا وهو المليك الوحيد الذي كانت
+                     فاتحة<lb/>سلطنته العظمى انالة رعيته هذه النعمة الجزيلة التي<lb/>انالهم اياها
+                     لهذا العهد بل ...</p>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>نظارة الحربية</head>
+                  <p/>
+                  <p>
+                     <cb/>
+                  </p>
+               </div>
+               <div type="article">
+                  <head>الخط العالب الحجازي</head>
+                  <p/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>جزيرة سيسام</head>
+                  <p/>
+               </div>
+               <pb facs="#facs-1-2" n="2"/>
+               <cb n="1"/>
+               <div type="section">
+                  <head>السكة الحميدية الحجازية</head>
+                  <div>
+                     <head>وما عَلَى الخط الحجازية</head>
+                     <p>ذكرنا في عدد ٢٥٥ من الاقبال مؤدى كتاب دبجه يراع<lb/>باحث الماني
+                        نقاب الا وهو "سعادتلو
+                           آولر
+                           باشا" احد حجاب <lb/>الحضرة العلية السلطانية
+                        ذلك بعد ان شارف الخط وتفقد<lb/>عمليته وصناعياته وسائر انشاآته واليك تتمة ما
+                        قاله المشار اليه</p>
+                     <ab/>
+                  </div>
+                  <div type="article">
+                     <head>تابع لما قبل</head>
+                     <p>ركبنا القطار من دمشق قاصدين
+                           العلاء وهو<lb/>مؤلف من سبع مركبات ثم التحقت به
+                        مركبتان<lb/>من محطة درعا
+                        والاخضر احداهما ...</p>
+                     <p>تبع الحظ من دمشق حتى معان عن
+                        طريق الحج<lb/>القديم تماماً وكذلك سار عليه بين معان و
+                           العلاء، غير<lb/>انه انحرف عنه في عدة ...<cb n="2"/>
+                     </p>
+                     <p>ويرى الانسان قبل الوصول الى تبوك على بعد<lb/>٢٢
+                        كيلومتراً من شرقيها جبل غريب الشكل قد امتد<lb/>نحوة السماء شامحاً بانفه، اما
+                           محطة تبوك فهي على
+                        بعد<lb/>مائة متر من واحتها الشهيرة ...</p>
+                     <p>ولما خرج القطار من تبوك دخل صحراء وسيعة<lb/>في
+                           وادي الاثيل وفيها يسير الخط ال حديدي على
+                        خط<lb/>مستقيم ...<cb n="3"/>
+                     </p>
+                     <p>ومن اهم المسائل في الخط الحجازي امر الماء فانه<lb/>يصعب جداً تدارك الماء بين
+                           معان والعلاء، ...</p>
+                     <p> اما في موقف ذات الحج ...</p>
+                     <p>وفي تبوك ينابيع كثيرة واعظمها نبع القلعة، ...</p>
+                     <p>ولا يوجد اثر الماء بين الاخضر ومدائن
+                           صالح<lb/>ويبلغ طول مسافته ١٩٥ كيلومتراً سوى ...<pb n="3" facs="#facs-1-3"/>
+                     </p>
+                  </div>
+               </div>
+               <div type="section">
+                  <head>الاخبار العمومية</head>
+                  <div type="article">
+                     <head>الوزارة الخارجية</head>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>مراكش</head>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>العجم</head>
+                     <p>
+                        <cb/>
+                     </p>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>ايطاليا والحبش</head>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+
+                  
+               </div>
+                  <div type="section">
+                     <head>زبدة اخبار</head>
+                     <div type="article">
+                        <head>فيشي</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>باريز</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>فالير</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>برلين</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>بطرسبرج</head>
+                        <p/>
+                     </div>
+                  </div>
+                  <div type="section">
+                     <head>دار السعادة</head>
+                     <div type="section">
+                        <head>التوجيهات</head>
+                        <div type="article">
+                           <head>مأمورية</head>
+                           <p>فوضت مكتوبية ولاية
+                                 طربزون الى
+                                 صادقوجداني افندي مكتوبي
+                                 مناستر</p>
+                           <p>ومكتوبية ولاية مناستر
+                              الى سعادتلو احمد بك<lb/>
+                           <cb n="3"/>مكتوبي
+                                 طربزون</p>
+                           <p>وقئمقامية انطاكيه الى سعادتلو محرم
+                                 باشا<lb/>قئمقام لريوز</p>
+                           <p>ومكتوبية سويدة (سورية)
+                                 الى اليوز باشي فتوتلوعثمان افندي من
+                              المستخدمين في الفيلق الهمايوني الخامس</p>
+                        </div>
+                        <div type="article">
+                           <head>رتبة</head>
+                           <p/>
+                           <p/>
+                           <p/>
+                           <p/>
+                           <p/>
+                           <p/>
+                        </div>
+                        <div type="article">
+                           <head>نشان</head>
+                           <p/>
+                           <p/>
+                        </div>
+                        <div type="article">
+                           <head>مدالية</head>
+                           <p/>
+                        </div>
+                     </div>
+                  </div>
+               <div type="article">
+                  <head>جامع سيدنا يونس</head>
+                  <p>بناء على صدور الارادة السنية القاضية بتصليح<lb/>وترميم جامع سيدنا
+                     يونس عليه ...</p>
+               </div>
+               <pb n="4" facs="#facs-1-4"/>
+               <cb n="1"/>
+               <div type="article">
+                  <head>جامع سلطان سليم</head>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>الدولة العلية ورومانية</head>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>سفير باريس</head>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>مفتش الزراعة في القدس</head>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>المركبات السيارة في بغداد</head>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head>ولاية قونية</head>
+                  <p/>
+                  <p/>
+               </div>
+               <cb/>
+               <div type="section">
+                  <head>العالم السلامس</head>
+                  <div type="article">
+                     <head>الاسلام في الصين</head>
+                     <p/>
+                  </div>
+               </div>
+               <div type="section">
+                  <head>اخبار محلية</head>
+                  <div type="article">
+                     <head>ترميم في الجامع العمري</head>
+                     <p>الجامع العمري الكبير هو اقدم جوامع البلدة لانه<lb/>من آثار الفتح الاسلامي
+                        السوري في اوائل القرن<lb/>الاول من الهجرة ايام استولى المسلمون على
+                        السواحل<lb/>(سنة ١٦ للهجرة)</p>
+                     <p>بيد ان الجامع طرأت عليه ادوار واحوال رمم<lb/>في اكثرها وايتحدث فيه ما استحدث
+                        يدل على ذلك<lb/>التواريخ المختلفة المنقوشة في بعض جدرانه
+                        كالتاريخ<lb/>الموجود عند الاثر الشريف، والتاريخ الموجود تحت<lb/>المنبر،
+                        والتاريخ الموجود فوق الباب الداخلي بالعربي،<lb/>
+                        <cb/>والتاريخ الموجود
+                        ...</p>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>الترامواي الكهربائي<lb/>في الثغر</head>
+                     <p>لا ننكر ان الترامواي الكهربائي في الثغر فوائد<lb/>جليلة يقرب الاطراف
+                        المتنائية ويسهل المواصولات<lb/>وينفخ في التجارج روحاً جديدة يجعلها تنشط الى
+                        الحياة<lb/>باكثر مما هي عليه الآن ...<pb n="5" facs="#facs-1-5"/>
+                        <cb n="1"/>
+                     </p>
+                     
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>الشارع الجديد<lb/>ورأي جديد</head>
+                     <p>هذا الشارع المعروف الآن باسم (الشارع الجديد)<lb/>قد فتح قسم منه منذ سنين ثم
+                        ظل الباقي بدون فتح<lb/>الى ان قضت الحال في السنة المنصرمة لاكمال
+                        فتحه<lb/>ليتسنى مرور الترامواي الكهربائي فيه</p>
+                     <p>وقد قلنا في الشذرة الآنفة ان هذا الشارع قد<lb/>مدَّ فيه خطان ذهبا برونقه
+                        وروائه وضيقا على المارة<lb/>والسابله، ...</p>
+                     <p>
+                        <cb n="2"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head>الوفد الحجازي</head>
+                     <p>وافي دمشق الشام بطريق حيفا
+                        حضرة صاحبالدولة المشير عبد الله باشا مع اركان
+                        الهيئة المحترمة اميري<lb/>اللواء صاحب السعادة سعيد باشا
+                           ومصطفى كريم باشا<lb/>وباقي المأمورين لاجل حضور
+                        الاحتفال بالخط العالي<lb/>الحجازي الذي سيعقد في جلوس السلطاني
+                           السعيد<lb/>بالمدينة المنورة فقوبل حتى
+                           محطة القدم بكل احتفاء
+                        واكرام</p>
+                  </div>
+                  <div type="article">
+                     <head>وكالة والي بغداد</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>رئيس المحاسبة في رسومات بيروت</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>تهنئة بالوسام العثماني الثاني</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>مدير بوليس القدس الشريف</head>
+                     <p/>
+                  </div>
+                  <cb n="3"/>
+                  <div type="article">
+                     <head>نائب جبله</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>حريق على المرفأ</head>
+                     <p>عند الاربعاء المنصرم شبت النار في مستودع<lb/>الاخشاب خاصة الخواجات خليل
+                        وبتراكى خوري <lb/>فرح آخر المرفأ "في بناية الشركة السورية
+                        التجارية<lb/>الانكليزية" فالتهم اللهيب كل ...</p>
+                     <p/>
+                     <ab rend="center">* * *</ab>
+                  </div>
+                  <div type="article">
+                     <head>المدارس في الثغر</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>تهنئة بالرتبة الثالثة</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>تعيين</head>
+                     <p/>
+                  </div>
+                  <pb n="6" facs="#facs-1-6"/>
+                  <cb n="1"/>
+                  <div type="article">
+                     <head>والي بيروت الجديد</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>والي ولاية سوزية</head>
+                     <p/>
+                     <p/>
+                     <p>
+                        <cb n="2"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head>القانون الاساسي</head>
+                     <p>رغب الينا البعض ان ننشر مواد القانون الاساسي<lb/>ولما كان هذا القانون
+                        موجوداً للبيع في مكتبات بيروت<lb/>ومدروجاً في مجموعة
+                        القوانين وفي جميع (سالنامات <choice>
+                           <corr>)</corr>
+                        </choice>
+                        <lb/>المملكة العثمانية فننكتفى باحالة القراء اليه وربما
+                        ننشر<lb/>بعض مواده في ما سنكتبه في الاعداد الآتية</p>
+                  </div>
+                  <div type="article">
+                     <head>قدوم</head>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>الويركو المتراكم</head>
+                     <p/>
+                     <p>
+                        <cb n="3"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head>لجان التحصيلات</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>تبادل مأمورين</head>
+                     <p>انبأت نظارة العدلية الجليلة انه صدرت ارادة<lb/>حضرة صاحب الخلافة
+                           العظمى بتبادل المأمورية بين<lb/>عبد الله مجدي
+                           افندي رئيس محكمة الجزاء في
+                           نابلس<lb/>وتوفيق افندي رئيس
+                           محكمة التجارة في مركز ولاية
+                                 البصرة<lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head>الخبز في الاستانة</head>
+                     <p>ظهر من منطوق البلاغ الرسمي ان الحكومة السنية<lb/>ضبطت من تاريخ ٢٠
+                           اياز الى ٢٠ حزيران زهاء <measure>٣٥<lb/>الف رغيف
+                           خبز</measure> وزنها ناقص وقد قالت احدى جرائد<lb/>دار
+                           السعادة العلية ان الخبازين يسرقون الخبز من كل<lb/>الوجوه
+                        وحقهم ان يبيعوه باثمان خفيفة لان اثمان الحبوب<lb/>سقطت بالنظر الكثرتها وان
+                           الاستانة والبلاد
+                        الثلاث<lb/>صرف كل يوم <measure>٤٠ الف اقة خبز</measure> ومن
+                        البلاغ الرسمي<lb/>يظهر انها ضبطت مقدار رغيف او اقل من كل
+                           <measure>اقة<lb/>خبز</measure> في تلك المدة</p>
+                     <p>وتقول الجريدة المذكورة ان احسن دواء لهذا<lb/>الداء هو بيع الخبز بالميزان لا
+                        بالرغيف</p>
+                  </div>
+                  <div type="article">
+                     <head>تصحيح خطأ</head>
+                     <p>ذكرنا في عدد ٢٥٣ من الاقبال اسماء بعض من<lb/>هضموا حقوق الصحافة
+                        وذكرنا بينهم خطأ جناب السرىالاديب رفعتلو فريد افندي
+                           كركبي من اعيان حيفا<lb/>وقد تبين ان
+                        المذكور ليست عليه ذمة للجريدة <lb/>فاقتضى التصحيح</p>
+                  </div>
+                  <div type="article">
+                     <head>الذهب في اسيا<lb/>والزمرد في
+                           مصر</head>
+                     <p>درس محمد افندي رشدي الخبير بالمحاكم طبائع<lb/>الارض
+                        والبقاع وعرف مواقع ...</p>
+                  </div>
+                  <pb n="7" facs="#facs-1-7"/>
+                  <cb n="1"/>
+                  <div type="article">
+                     <head>اخبار صحية</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>اذاعة تجارية</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>اسلحة في طرابلس</head>
+                     <p>قبض في احد المركبات الشراعية على <measure>مئتي بارودة<lb/>مارتين</measure>
+                        من روع غرا و<measure>خمسة صناديق خرطوش</measure> واجزاء<lb/>منتهبة من المركب
+                        المسمي (<name>ماريكه</name>) فسلمت الى المستودع<lb/>العسكري حسب الرظام
+                        واجريت التحقيقات<lb/>اللازمة بذلك</p>
+                  </div>
+               </div>
+                  <div type="section">
+                     <head>لبنان</head>
+                  <div type="article">
+                     <head>القاء قبض</head>
+                     <p/>
+                  </div>
+                     <div type="article">
+                        <head>لوكندة عين صوفر الكبرى</head>
+                     <p/>
+                        <p/>
+                     </div>
+                  <div type="article">
+                        <head>وفاة في صيدا</head>
+                        <p/>
+                     </div>
+                     <cb n="2"/>
+                     <div type="article">
+                        <head>مقاصد الامام النووي</head>
+                        <p/>
+                     </div>
+                  <div type="article">
+                        <head>صرعى البناء</head>
+                        <p/>
+                     </div>
+                  </div>
+               <div type="article">
+                  <head>مطبوعات جديدة</head>
+                  <p/>
+               </div>
+               <div type="section">
+                  <head>قضاء عكار</head>
+                  <byline>لوكيلنا ومكاتبنا المتجول</byline>
+                  <div type="article">
+                     <head>القرعة العسكرية</head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>زفاف</head>
+                     <p/>
+                  </div>
+                  
+                  
+               </div>
+               <cb n="3"/>
+               <div type="article">
+                  <head>صافيتا</head>
+                  <byline>لوكيلنا ايضاً</byline>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="ad">
+                  <head>طبيب اسنان في دمشق</head>
+                  <figure/>
+                  <p/>
+                  <p/>
+                  <byline>محمد فارس الدرويش</byline>
+               </div>
+                  
+                  <pb n="8" facs="#facs-1-8"/>
+                  <cb n="1"/>
+               <div type="section">
+                  <head>فوائد منزيلة</head>
+                  <div type="article">
+                     <head>شذزات نافعة</head>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <ab rend="center">* * *</ab>
+                  </div>
+               </div>
+                  <cb n="2"/>
+                  <div type="section">
+                     <head>شعرقات</head>
+                     <div type="article">
+                        <head>مكروب السكل (البلادة)</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>بنذقية بلا صوت</head>
+                     <p/>
+                        <p>
+                        <cb/>
+                     </p>
+                     </div>
+                     <div type="article">
+                        <head>التلفون بلا سلك</head>
+                        <p/>
+                        <ab rend="center">* * *</ab>
+                     </div>
+                     <div type="article">
+                        <head>الاسلطيل الهوائية وا<unclear/>ها</head>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head>الاتومبيل في لندرا</head>
+                        <p/>
+                     </div>
+                  </div>
+               <div type="section">
+                  <head>تقويم الاقبال</head>
+                  <table>
+                     <head/>
+                     <row role="label">
+                        <cell/>
+                     </row>
+                     <row role="label">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     
+                  </table>
+               </div>
+                  <!-- the byline could also be encoded as the <back/> of the text -->
+               <byline>صاحب مطبعة المعارف * والمكتبة الانسية * في بيروت (عبذ الباسط الانسي)</byline>
+               </body>
+               </text>
+            
+      </group>
+   </text>
+</TEI>

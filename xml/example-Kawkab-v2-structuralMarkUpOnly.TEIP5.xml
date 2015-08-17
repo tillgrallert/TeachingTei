@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt xml:lang="en">
+            <title xml:lang="ar-Latn-x-ijmes">Kawkab Amīrkā</title>
+            <title type="sub">Digital Edition</title>
+            <editor>
+               <persName>Dr. A. Arbeely</persName>
+            </editor>
+            <editor>
+               <persName>N.J. Arbeely</persName>
+            </editor>
+            <respStmt>
+               <resp>TEI version</resp>
+               <persName>Till Grallert</persName>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date when="2015-05-01">1 May 2015</date>
+            </edition>
+            <respStmt>
+               <resp>Created the original TEI P5 XML file</resp>
+               <persName xml:id="pTG">Till Grallert</persName>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <p>The digital text is freely available for re-use.</p>
+            <p>The image files are subject to the following copyright and provided by the Center for Research Libraries:</p>
+            <p>Materials digitized by the Center for Research Libraries are intended for the personal educational and research use of students, scholars, and other researchers of the CRL member community. Copyrighted images and texts are not to be reproduced, displayed, distributed, broadcast, or downloaded for other purposes without the expressed, written permission of the copyright owner.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title level="j" xml:lang="ar-Latn-x-ijmes">Kawkab Amīrkā</title>
+                  <title level="j" xml:lang="en">The Star of America</title>
+                  <title level="j" type="alternative" xml:lang="en">Kawkab America</title>
+                  <title level="j" type="sub" xml:lang="ar-Latn-x-ijmes">Jarīda siyāsiyya ʿilmiyya
+                     tijāriyya adabiyya</title>
+                  <editor xml:lang="ar-Latn-x-ijmes">
+                     <persName>
+                        <addName type="title">Dr.</addName>
+                        <forename>Ibrāhīm</forename>
+                        <surname>Arbīlī</surname>
+                     </persName>
+                  </editor>
+                  <editor xml:lang="ar-Latn-x-ijmes">
+                     <persName>
+                        <forename>Najīb</forename>
+                        <forename>Yūsuf</forename>
+                        <surname>Arbīlī</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <publisher xml:lang="ar-Latn-x-ijmes">al-Maṭbaʿat al-Sharqiyya</publisher>
+                     <pubPlace xml:lang="ar-Latn-x-ijmes">Niyū Yūrk</pubPlace>
+                     <publisher xml:lang="en">The Oriental Publishing House</publisher>
+                     <pubPlace xml:lang="en">New York</pubPlace>
+                     <date notAfter="1894-04-14" notBefore="1893-04-15" xml:lang="en">1893-1894</date>
+                     <biblScope unit="volume">2</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="callNumber"/>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>The TEI file was produced for teaching a course on the basics of scholarly encoding
+               using TEI P5 and XML.</p>
+            <p>The newspaper "Kawkab America" was published between 1892 and 1896 in New York. The first 55 issues were bi-lingual editions of three Arabic pages and a single English page. From issue 54 onwards, despite continuing its English masthead on page 4, the paper was a monolingual Arabic one.</p>
+         </projectDesc>
+         <editorialDecl>
+            <p>providing information on our decisions concerning the actual transcription of the
+               newspaper structure into a TEI P5 XML file</p>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+         <calendarDesc>
+            <calendar>
+               <p>Following the hegemonial approach of standards rooted in the English language, the
+                  Gregorian calendar is presumed as the norm and must not be specified.</p>
+               <p>The @when attribute always provides W3C dates, while the @when-custom attribute
+                  follows the inherent logic of the chosen calendar.</p>
+               <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5
+                     Mar 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_islamic">
+               <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                  Muḥarram. Dates differ between locations as the beginning of the month is based on
+                  sightings of the new moon.</p>
+               <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_julian">
+               <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi>rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi>sharqī</hi>.</p>
+               <p>All solar calendars add an intercalated 366th day every fourth (and, in the case
+                  of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
+                  last day of the old Julian calendar). The Gregorian calendar suppresses this rule
+                  in centesimal years that cannot be divided by 400. This difference creates a
+                  growing offset between Gregorian and Julian calendars: while 1900 R was a leap
+                  year, 1900 was not, which in turn caused the difference between the Gregorian
+                  calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on
+                  the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
+                  (13 March 1900) onwards.</p>
+               <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_ottomanfiscal">
+               <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                  calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
+                  and in the Ottoman context usually referred to as <hi>mālī</hi> and sometimes,
+                  confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year
+                  would complete within a single solar <hi>mālī</hi> year. In this case the counting
+                  of the <hi>mālī</hi> years skipped a year to catch up with the faster
+                     <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
+                  synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was henceforth
+                  abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years
+                  preceded their <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  commenced on 13 March 1899).</p>
+               <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
+            </calendar>
+         </calendarDesc>
+         <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+               English practices</language>
+            <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+               French practices</language>
+            <language ident="en">English</language>
+            <language ident="fa">Farsi</language>
+            <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="fr">French</language>
+            <language ident="ota">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="tr">Turkish</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc>
+         <change when="2015-05-31">Generated this file by stripping all semantic mark-up and text from file:/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/xml/example-Kawkab-v2.TEIP5.xml</change>
+      </revisionDesc>
+   </teiHeader>
+   
+   <text n="2" type="volume">
+      <front><!-- some introductory material for the current volume --></front>
+      <group>
+         <text xml:lang="ar"
+               type="issue"
+               xml:id="v2-i53_ar"
+               corresp="#v2-i53_en"
+               n="53">
+            <front><!-- top line, commonly containing the information on issue numbers and sometimes dates -->
+               <div style="border-bottom:solid black">
+                  <cb n="1"/>
+                  <bibl xml:lang="ar">
+                     <biblScope n="53" unit="issue"/>
+                  </bibl>
+                  <cb n="2"/>
+                  <figure rend="center">
+                     <figDesc xml:lang="en"/>
+                  </figure>
+                  <cb n="3"/>
+                  <bibl xml:lang="ar">
+                     <biblScope n="2" unit="volume"/>
+                  </bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:solid black;">
+                  <cb n="1"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <div>
+                        <head/>
+                        <p>
+                           <lb/>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                     </div>
+                     <div>
+                        <p>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                        <p>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                        <p/>
+                        <ab rend="center"/>
+                        <p>
+                           <lb/>
+                        </p>
+                     </div>
+                  </div>
+                  <cb n="2"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <bibl>
+                        <title level="j"/>
+                        <lb/>
+                        <title level="j" type="sub"/>
+                     </bibl>
+                  </div>
+                  <cb n="3"/>
+                  <div style="width:33%;float:right" xml:lang="en">
+                     <head/>
+                     <ab rend="center"/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:double black" xml:lang="ar">
+                  <dateline xml:lang="ar">
+                     <cb n="1"/>
+                     <cb n="2"/>
+                     <cb n="3"/>
+                  </dateline>
+               </div>
+            </front>
+            <body>
+               <pb n="1"/>
+               <div type="article"/>
+            </body>
+         </text>
+         <text xml:lang="en"
+               type="issue"
+               xml:id="v2-i53_en"
+               corresp="#v2-i53_ar">
+            <front><!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:double black">
+                  <bibl xml:lang="en">
+                     <title level="j"/>
+                     <lb/>
+                     <title level="j" type="sub"/>
+                  </bibl>
+                  <bibl rend="center" xml:lang="ar">
+                     <title level="j"/>
+                     <lb/>
+                     <title level="j" type="sub"/>
+                  </bibl>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:solid black" xml:lang="en">
+                  <bibl xml:lang="en">
+                     <biblScope n="2" unit="volume"/>
+                     <biblScope n="53" unit="issue"/>
+                     <cb/>
+                     <pubPlace/>
+                  </bibl>
+               </div>
+            </front>
+            <body>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+               </div>
+            </body>
+         </text>
+         <text corresp="#v2-i55_en"
+               n="55ar"
+               type="issue"
+               xml:id="v2-i55_ar"
+               xml:lang="ar">
+            <front><!-- top line, commonly containing the information on issue numbers and sometimes dates -->
+               <div style="border-bottom:solid black">
+                  <cb n="1"/>
+                  <bibl xml:lang="ar">
+                     <biblScope n="55" unit="issue"/>
+                  </bibl>
+                  <cb n="2"/>
+                  <figure rend="center">
+                     <figDesc xml:lang="en"/>
+                  </figure>
+                  <cb n="3"/>
+                  <bibl xml:lang="ar">
+                     <biblScope n="2" unit="volume"/>
+                  </bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:solid black;">
+                  <cb n="1"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <div>
+                        <head/>
+                        <p>
+                           <lb/>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                     </div>
+                     <div>
+                        <p>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                        <p>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                        <p/>
+                        <ab rend="center"/>
+                        <p>
+                           <lb/>
+                        </p>
+                     </div>
+                  </div>
+                  <cb n="2"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <bibl>
+                        <title level="j"/>
+                        <lb/>
+                        <title level="j" type="sub"/>
+                     </bibl>
+                  </div>
+                  <cb n="3"/>
+                  <div style="width:33%;float:right" xml:lang="en">
+                     <head/>
+                     <ab rend="center"/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:double black" xml:lang="ar">
+                  <dateline xml:lang="ar">
+                     <cb n="1"/>
+                     <cb n="2"/>
+                     <cb n="3"/>
+                  </dateline>
+               </div>
+            </front>
+            <body>
+               <pb n="1"/>
+               <div type="article" xml:lang="ar">
+                  <head/>
+                  <p>
+                     <lb/>
+                     <geogFeat/>
+                     <geogName/>
+                     <lb/>
+                  </p>
+               </div>
+               <div type="article" xml:lang="ar">
+                  <p>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                  </p>
+                  <figure>
+                     <head xml:lang="ar"/>
+                     <head xml:lang="en"/>
+                  </figure>
+                  <p/>
+               </div>
+               <div type="section" xml:lang="ar">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <div type="section" xml:lang="ar">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article" xml:lang="ar">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <cb/>
+                     </p>
+                  </div>
+                  <div type="article" xml:lang="ar">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article" xml:lang="ar">
+                     <head/>
+                     <p>
+                        <cb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article" xml:lang="ar">
+                     <p/>
+                  </div>
+               </div>
+               <div type="section" xml:lang="ar">
+                  <head/>
+                  <p/>
+               </div>
+               <pb n="2"/>
+               <pb n="3"/>
+               <pb n="4"/>
+            </body>
+         </text>
+         <text corresp="#v2-i55_ar"
+               n="55en"
+               type="issue"
+               xml:id="v2-i55_en"
+               xml:lang="en">
+            <pb n="1"/>
+            <front><!-- the masthead --><!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:double black">
+                  <bibl xml:lang="en">
+                     <title level="j"/>
+                     <lb/>
+                     <title level="j" type="sub"/>
+                  </bibl>
+                  <bibl rend="center" xml:lang="ar">
+                     <title level="j"/>
+                     <lb/>
+                     <title level="j" type="sub"/>
+                  </bibl>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:solid black" xml:lang="en">
+                  <bibl xml:lang="en">
+                     <biblScope n="2" unit="volume"/>
+                     <biblScope n="55" unit="issue"/>
+                     <cb/>
+                     <pubPlace/>
+                  </bibl>
+                  <!-- alternative encoding -->
+                  <!--<dateline xml:lang="en"><placeName>New York</placeName>, <date when="1893-04-28">Friday, April 28, 1893</date>.</dateline>-->
+               </div>
+            </front>
+            <body>
+               <div type="article" xml:lang="en">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <ab rend="center"/>
+               </div>
+               <div type="article" xml:lang="en">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <ab rend="center"/>
+                  <p/>
+                  <p>
+                     <cb/>
+                  </p>
+                  <ab rend="center"/>
+               </div>
+               <div type="article" xml:lang="en">
+                  <head xml:lang="ar"/>
+                  <head xml:lang="en"/>
+                  <p>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <quote>
+                        <foreign xml:lang="ar-Latn-EN">
+                           <lb/>
+                        </foreign>
+                     </quote>
+                     <quote>
+                        <foreign xml:lang="ar-Latn-EN">
+                           <gap/>
+                        </foreign>
+                     </quote>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <q>
+                        <lb/>
+                     </q>
+                  </p>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p>
+                     <q/>
+                     <cb/>
+                  </p>
+                  <p/>
+                  <p>
+                     <geogFeat/>
+                  </p>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p>
+                     <gap/>
+                  </p>
+                  <p/>
+                  <p/>
+                  <p>
+                     <sic/>
+                     <cb/>
+                  </p>
+                  <p>
+                     <sic/>
+                  </p>
+                  <p/>
+               </div>
+            </body>
+         </text>
+      </group>
+      <back><!-- back of a volume, potentially gathering indeces, appendices, etc.  --></back>
+   </text>
+</TEI>

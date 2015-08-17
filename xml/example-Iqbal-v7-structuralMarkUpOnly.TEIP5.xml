@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ar-Latn-x-ijmes">al-Iqbāl, volume 7, 1908</title>
+            <title type="sub">Digital Edition</title>
+            <respStmt>
+               <resp>TEI version</resp>
+               <persName>Till Grallert</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>unpublished</p>
+            <!--<publisher></publisher>
+                <distributor></distributor>
+                <availability>
+                    <p>unpublished</p>
+                </availability>-->
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+               <title level="j" xml:lang="ar">الاقبال </title>
+            </bibl>
+            <biblFull>
+               <titleStmt>
+                  <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar">الاقبال </title>
+               </titleStmt>
+               <publicationStmt xml:lang="en">
+                  <publisher xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                  <publisher xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</publisher>
+                  <date notAfter="1929-12-31" notBefore="1902-01-01">Published between 1902 and
+                     1929</date>
+                  <pubPlace>Beirut</pubPlace>
+                  <availability>
+                     <p>Microfilm copies of al-Iqbāl, held by the American University in Beirut</p>
+                  </availability>
+               </publicationStmt>
+            </biblFull>
+            <biblStruct>
+               <monogr>
+                  <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar">الاقبال </title>
+                  <imprint>
+                     <publisher xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                     <publisher xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</publisher>
+                     <date notAfter="1929-12-31" notBefore="1902-01-01">Published between 1902 and
+                        1929</date>
+                     <biblScope unit="vol">7</biblScope>
+                     <pubPlace>Beirut</pubPlace>
+                  </imprint>
+               </monogr>
+               <idno type="class-mark">Mic-Na:164</idno>
+            </biblStruct>
+            
+
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Some project description</p>
+         </projectDesc>
+         <editorialDecl>
+            <p>providing information on our decisions concerning the actual transcription of a
+               newspaper structure into a TEI P5 XML file</p>
+
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc>
+         <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+         <calendarDesc>
+            <calendar>
+               <p>Following the hegemonial approach of standards rooted in the English language, the
+                  Gregorian calendar is presumed as the norm and must not be specified.</p>
+               <p>The @when attribute always provides W3C dates, while the @when-custom attribute
+                  follows the inherent logic of the chosen calendar.</p>
+               <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5
+                     Mar 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_islamic">
+               <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                  Muḥarram. Dates differ between locations as the beginning of the month is based on
+                  sightings of the new moon.</p>
+               <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_julian">
+               <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi>rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi>sharqī</hi>.</p>
+               <p>All solar calendars add an intercalated 366th day every fourth (and, in the case
+                  of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
+                  last day of the old Julian calendar). The Gregorian calendar suppresses this rule
+                  in centesimal years that cannot be divided by 400. This difference creates a
+                  growing offset between Gregorian and Julian calendars: while 1900 R was a leap
+                  year, 1900 was not, which in turn caused the difference between the Gregorian
+                  calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on
+                  the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
+                  (13 March 1900) onwards.</p>
+               <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_ottomanfiscal">
+               <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                  calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
+                  and in the Ottoman context usually referred to as <hi>mālī</hi> and sometimes,
+                  confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year
+                  would complete within a single solar <hi>mālī</hi> year. In this case the counting
+                  of the <hi>mālī</hi> years skipped a year to catch up with the faster
+                     <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
+                  synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was henceforth
+                  abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years
+                  preceded their <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  commenced on 13 March 1899).</p>
+               <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
+            </calendar>
+         </calendarDesc>
+         <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+               English practices</language>
+            <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+               French practices</language>
+            <language ident="en">English</language>
+            <language ident="fa">Farsi</language>
+            <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="fr">French</language>
+            <language ident="ota">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="tr">Turkish</language>
+         </langUsage>
+         <!--<particDesc>
+                <listPerson>
+                    <head>People mentioned in the text</head>
+                    <person xml:id="pers-1">
+                        
+                    </person>
+                </listPerson>
+            </particDesc>-->
+      </profileDesc>
+      <revisionDesc>
+         <change when="2015-02-28">Generated this file by stripping all semantic mark-up and text from file:/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/xml/exampleTEI5-Iqbal-v7.xml</change>
+      </revisionDesc>
+   </teiHeader>
+   <!-- providing links to the image files either remote or local -->
+   
+   <text xml:lang="ar" xml:id="v7" n="7" type="vol">
+      <front><!-- some introductory material for the current volume --></front>
+      <group><!-- individual issues -->
+         <text n="254" type="issue" xml:lang="ar" xml:id="v7-i254">
+            <pb n="1"/>
+            <front>
+               <div style="border-top:double black; border-bottom:sing black">
+                  <bibl xml:lang="ar">
+                     <biblScope n="254" unit="issue"/>
+                     <title level="j" type="sub"/>
+                     <biblScope/>
+                     <biblScope n="7" unit="vol"/>
+                  </bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div>
+                  <cb n="1"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <head/>
+                     <table cols="2" rows="3">
+                        <row n="1" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                        <row n="2" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                        <row n="3" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                     </table>
+                     <p>
+                        <measure/>
+                     </p>
+                     <ab rend="double-line"/>
+                     <p/>
+                     <p>
+                        <lb/>
+                     </p>
+                  </div>
+                  <cb n="2"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <bibl>
+                        <title level="j"/>
+                        <lb/>
+                     </bibl>
+                  </div>
+                  <cb n="3"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="double-line"/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-top:double black; border-bottom:double black">
+                  <div>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                  </div>
+                  <dateline/>
+               </div>
+            </front>
+            <body>
+               <p/>
+            </body>
+         </text>
+         <!-- individual issue -->
+         <text n="257" type="issue" xml:lang="ar" xml:id="v7-i257">
+            <pb n="1"/>
+            <!-- the masthead -->
+            <front><!-- the top line -->
+               <div style="border-top:double black; border-bottom:sing black">
+                  <bibl xml:lang="ar">
+                     <biblScope unit="issue" n="257"/>
+                     <title level="j" type="sub"/>
+                     <biblScope unit="vol" n="7"/>
+                  </bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div>
+                  <cb n="1"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <head/>
+                     <table cols="2" rows="3">
+                        <row n="1" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                        <row n="2" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                        <row n="3" role="data">
+                           <cell/>
+                           <cell>
+                              <measure/>
+                           </cell>
+                        </row>
+                     </table>
+                     <p>
+                        <measure/>
+                     </p>
+                     <ab rend="double-line"/>
+                     <p/>
+                     <p>
+                        <lb/>
+                     </p>
+                  </div>
+                  <cb n="2"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <bibl>
+                        <title level="j"/>
+                        <lb/>
+                     </bibl>
+                  </div>
+                  <cb n="3"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="double-line"/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+               </div>
+               <!-- the bottom line -->
+               <div style="border-top:double black; border-bottom:double black">
+                  <div>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                     <ab/>
+                  </div>
+                  <dateline/>
+               </div>
+            </front>
+            <!-- body of the issue -->
+            <body>
+               <cb n="1"/>
+               <div type="article" xml:lang="ar">
+                  <head/>
+                  <p>
+                     <lb/>
+                     <lb/>
+                  </p>
+                  <p>
+                     <quote>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </quote>
+                  </p>
+               </div>
+               <div type="article" xml:lang="ar">
+                  <head/>
+                  <p>
+                     <lb/>
+                     <quote>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </quote>
+                  </p>
+                  <p>
+                     <lb/>
+                  </p>
+                  <p>
+                     <cb n="2"/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                  </p>
+                  <p>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                  </p>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+                  <p>
+                     <cb/>
+                  </p>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <pb n="2"/>
+               <cb n="1"/>
+               <div type="section">
+                  <head/>
+                  <div>
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <cb n="2"/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <cb n="3"/>
+                     </p>
+                     <p>
+                        <lb/>
+                     </p>
+                     <p/>
+                     <p/>
+                     <p>
+                        <lb/>
+                        <pb n="3"/>
+                     </p>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <cb/>
+                     </p>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <div type="section">
+                     <head/>
+                     <div type="article">
+                        <head/>
+                        <p>
+                           <lb/>
+                        </p>
+                        <p>
+                           <lb/>
+                           <cb n="3"/>
+                        </p>
+                        <p>
+                           <lb/>
+                        </p>
+                        <p>
+                           <lb/>
+                        </p>
+                     </div>
+                     <div type="article">
+                        <head/>
+                        <p/>
+                        <p/>
+                        <p/>
+                        <p/>
+                        <p/>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head/>
+                        <p/>
+                        <p/>
+                     </div>
+                     <div type="article">
+                        <head/>
+                        <p/>
+                     </div>
+                  </div>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p>
+                     <lb/>
+                  </p>
+               </div>
+               <pb n="4"/>
+               <cb n="1"/>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+                  <p/>
+               </div>
+               <cb/>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <cb/>
+                     </p>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>
+                        <lb/>
+                     </head>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <pb n="5"/>
+                        <cb n="1"/>
+                     </p>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head>
+                        <lb/>
+                     </head>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <cb n="2"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <cb n="3"/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p/>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <pb n="6"/>
+                  <cb n="1"/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p>
+                        <cb n="2"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <choice>
+                           <corr/>
+                        </choice>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p>
+                        <cb n="3"/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <measure>
+                           <lb/>
+                        </measure>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <measure/>
+                        <lb/>
+                        <measure>
+                           <lb/>
+                        </measure>
+                     </p>
+                     <p>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head>
+                        <lb/>
+                     </head>
+                     <p>
+                        <lb/>
+                     </p>
+                  </div>
+                  <pb n="7"/>
+                  <cb n="1"/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p>
+                        <measure>
+                           <lb/>
+                        </measure>
+                        <measure/>
+                        <lb/>
+                        <name/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <cb n="2"/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+               </div>
+               <div type="article">
+                  <head/>
+                  <p/>
+               </div>
+               <div type="section">
+                  <head/>
+                  <byline/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+               </div>
+               <cb n="3"/>
+               <div type="article">
+                  <head/>
+                  <byline/>
+                  <p/>
+                  <p/>
+                  <p/>
+                  <p/>
+               </div>
+               <div type="ad">
+                  <head/>
+                  <figure/>
+                  <p/>
+                  <p/>
+                  <byline/>
+               </div>
+               <pb n="8"/>
+               <cb n="1"/>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <p/>
+                     <ab rend="center"/>
+                  </div>
+               </div>
+               <cb n="2"/>
+               <div type="section">
+                  <head/>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <p>
+                        <cb/>
+                     </p>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <head>
+                        <unclear/>
+                     </head>
+                     <p/>
+                  </div>
+                  <div type="article">
+                     <head/>
+                     <p/>
+                  </div>
+               </div>
+               <div type="section">
+                  <head/>
+                  <table>
+                     <head/>
+                     <row role="label">
+                        <cell/>
+                     </row>
+                     <row role="label">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                     <row role="data">
+                        <cell/>
+                     </row>
+                  </table>
+               </div>
+               <!-- the byline could also be encoded as the <back/> of the text -->
+               <byline/>
+            </body>
+         </text>
+      </group>
+   </text>
+</TEI>

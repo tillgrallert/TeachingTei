@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/TeiJaraid.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="ar-Latn-x-ijmes">Lisān al-Ḥāl، volume 31, 1908-1909</title>
+                <title type="sub">Digital Edition</title>
+                <respStmt>
+                    <resp>TEI version</resp>
+                    <persName>Till Grallert</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>unpublished</p>
+                <!--<publisher></publisher>
+                <distributor></distributor>
+                <availability>
+                    <p>unpublished</p>
+                </availability>-->
+            </publicationStmt>
+            <sourceDesc>
+                <!--<p>Copies of the newspaper Lisān al-Ḥāl  from 1908 held by the American University in Beirut</p>-->
+                <bibl>
+                    <title level="j" xml:lang="ar-Latn-x-ijmes">Lisān al-Ḥāl</title>
+                    <title level="j" xml:lang="ar">لسان الحال</title>
+                </bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="j" xml:lang="ar-Latn-x-ijmes">Lisān al-Ḥāl</title>
+                        <title level="j" xml:lang="ar">لسان الحال</title>
+                    </titleStmt>
+                    <publicationStmt>
+                        <publisher xml:lang="ar-Latn-x-ijmes">Khalīl Sarkīs</publisher>
+                        <date notAfter="1908-08-31" notBefore="1908-07-01">July-August 1908</date>
+                        <pubPlace>Beirut</pubPlace>
+                        <availability>
+                            <p>Microfilm copies of Lisān al-Ḥāl held by the American University in
+                                Beirut</p>
+                        </availability>
+                    </publicationStmt>
+                </biblFull>
+                <biblStruct>
+                    <monogr>
+                        <title level="j" xml:lang="ar-Latn-x-ijmes">Lisān al-Ḥāl</title>
+                        <title level="j" xml:lang="ar">لسان الحال</title>
+                        <imprint>
+                            <publisher xml:lang="ar-Latn-x-ijmes">Khalīl Sarkīs</publisher>
+                            <date>1 July 1908 - </date>
+                            <pubPlace>Beirut</pubPlace>
+                            <biblScope type="vol">31</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Some project description</p>
+            </projectDesc>
+            <editorialDecl>
+                <p>providing information on our decisions concerning the actual transcription of a
+                    newspaper structure into a TEI P5 XML file</p>
+
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+            <calendarDesc>
+                <calendar>
+                    <p>Following the hegemonial approach of standards rooted in the English
+                        language, the Gregorian calendar is presumed as the norm and must not be
+                        specified.</p>
+                    <p>The @when attribute always provides W3C dates, while the @when-custom
+                        attribute follows the inherent logic of the chosen calendar.</p>
+                    <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5 Mar 1908, Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_islamic">
+                    <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                        Muḥarram. Dates differ between locations as the beginning of the month is
+                        based on sightings of the new moon.</p>
+                    <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
+                            <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_julian">
+                    <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman
+                        context usually referred to as <hi>rūmī</hi>. Arabic newspapers usually
+                        labelled this calendar as <hi>sharqī</hi>.</p>
+                    <p>All solar calendars add an intercalated 366th day every fourth (and, in the
+                        case of Gregorian and rūmī calendars, even-numbered) year at the end of
+                        February (the last day of the old Julian calendar). The Gregorian calendar
+                        suppresses this rule in centesimal years that cannot be divided by 400. This
+                        difference creates a growing offset between Gregorian and Julian calendars:
+                        while 1900 R was a leap year, 1900 was not, which in turn caused the
+                        difference between the Gregorian calendar, on the one hand, and the
+                            <hi>mālī</hi> and <hi>rūmī</hi> calendars, on the other, to grow from 12
+                        to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900)
+                        onwards.</p>
+                    <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>,
+                            <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_ottomanfiscal">
+                    <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                        calendar beginning the Year with 1 March. Introduced as fiscal calendar in
+                        1676 and in the Ottoman context usually referred to as <hi>mālī</hi> and
+                        sometimes, confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a
+                            <hi>hijrī</hi> year would complete within a single solar <hi>mālī</hi>
+                        year. In this case the counting of the <hi>mālī</hi> years skipped a year to
+                        catch up with the faster <hi>hijrī</hi> calendar. Due to a printing error in
+                        the coupon booklets for the consolidated debt repayment program for 1872
+                        (1288 M instead of 1289 M), synchronisation of <hi>mālī</hi> and
+                            <hi>hijrī</hi> years was henceforth abolished. As <hi>mālī</hi> years
+                        began with 1 March, <hi>mālī</hi> leap years preceded their <hi>rūmī</hi>
+                        and Gregorian counterpart (the leap year 1315 M commenced on 13 March
+                        1899).</p>
+                    <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>,
+                            <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323,
+                        Thursday</date>.</p>
+                </calendar>
+            </calendarDesc>
+            <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+            <langUsage>
+                <language ident="ar">Arabic</language>
+                <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+                    English practices</language>
+                <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+                    French practices</language>
+                <language ident="en">English</language>
+                <language ident="fa">Farsi</language>
+                <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="fr">French</language>
+                <language ident="ota">Ottoman</language>
+                <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following
+                    the IJMES conventions</language>
+                <language ident="tr">Turkish</language>
+            </langUsage>
+            <particDesc>
+                <listPerson>
+                    <person>
+                        <persName xml:lang="fr">KHALIL SARKIS</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">مدحت باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة دولتلو عمر رشدي باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة اطوفتلو حمدي بك</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة دولتلو شفيق باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة صاحب العطوفة محمد علي بك</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة دولتلو شكري باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">عصمت باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">خليل باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">رضى بك</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة سعادتلو ناصيف بك الريس</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة صاحب الدولة يوسف باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">دولتلو شكري باشا</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">حضرة سعادتلو احمد برهار الدين بك افندي</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">جناب عزتلو صبحي بك ابو النصر</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">جناب الوجيه الخواجا سركست</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">سعادتلو الشيخ علي افندي يوسف</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">عزتلو محمود بك الباجوري</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">جناب الفاضل ايوب افندي حنا الصائغ</persName>
+                    </person>
+                    <person>
+                        <persName xml:lang="ar">خليل سركيس</persName>
+                    </person>
+                </listPerson>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+         <change when="2015-02-28">Generated this file by stripping all semantic mark-up and text from file:/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/xml/exampleTEI5-Lisan-v31.xml</change>
+      </revisionDesc>
+    </teiHeader>
+    <!-- providing links to the actual image files either remote or local -->
+    
+    <text n="31" type="vol" xml:id="v31" xml:lang="ar">
+      <front><!-- some introductory material for the current volume --></front>
+      <group><!-- language attributes are inherited by children nodes -->
+         <text n="5773" type="issue" xml:id="v31-i5773" xml:lang="ar">
+            <pb n="1"/>
+            <!-- the masthead of the issue comprising all the bibliographic information -->
+            <front xml:lang="ar"><!-- the masthead has a main block of three columns with a line of bibliographic information above and below --><!-- top line, commonly containing the information on issue numbers and sometimes dates -->
+               <div style="border-bottom:double black" xml:lang="ar">
+                  <bibl xml:lang="ar">
+                     <biblScope rend="right" type="issue" xml:lang="ar"/>
+                     <bibl rend="center" xml:lang="fr">
+                        <biblScope type="vol"/>
+                        <biblScope type="issue"/>
+                     </bibl>
+                     <biblScope rend="left" type="vol" xml:lang="ar"/>
+                  </bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:double black">
+                  <cb n="1"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <head xml:lang="ar"/>
+                     <div>
+                        <head/>
+                        <p>
+                           <hi/>
+                        </p>
+                        <p>
+                           <hi/>
+                        </p>
+                     </div>
+                     <div>
+                        <head/>
+                        <p>
+                           <hi/>
+                           <hi/>
+                        </p>
+                     </div>
+                     <div>
+                        <p>
+                           <lb/>
+                           <lb/>
+                        </p>
+                     </div>
+                     <div>
+                        <head/>
+                        <p/>
+                        <p>
+                           <hi/>
+                           <hi/>
+                        </p>
+                        <p>
+                           <hi/>
+                        </p>
+                        <p>
+                           <lb/>
+                        </p>
+                        <p/>
+                     </div>
+                  </div>
+                  <cb n="2"/>
+                  <div style="width:33%;float:right" xml:lang="ar">
+                     <bibl>
+                        <title level="j" xml:lang="ar"/>
+                        <lb/>
+                        <title level="j" type="sub" xml:lang="ar"/>
+                        <lb/>
+                        <title level="j" xml:lang="fr"/>
+                     </bibl>
+                  </div>
+                  <cb n="3"/>
+                  <div style="width:33%;float:right" xml:lang="fr">
+                     <div>
+                        <head/>
+                        <div>
+                           <head/>
+                           <p>
+                              <lb/>
+                           </p>
+                           <p/>
+                           <ab rend="center"/>
+                        </div>
+                        <div>
+                           <head/>
+                           <p/>
+                           <p/>
+                           <ab rend="center"/>
+                        </div>
+                     </div>
+                     <div>
+                        <head/>
+                        <p/>
+                        <p/>
+                     </div>
+                     <div>
+                        <p/>
+                        <ab rend="center"/>
+                     </div>
+                     <div>
+                        <p>
+                           <lb/>
+                           <lb/>
+                           <lb/>
+                        </p>
+                        <ab rend="center"/>
+                     </div>
+                  </div>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:double black">
+                  <dateline xml:lang="ar">
+                     <cb n="1"/>
+                  </dateline>
+               </div>
+            </front>
+            <body><!-- sections and individual articles are mixed -->
+               <cb n="1"/>
+               <div type="section" xml:lang="ar">
+                  <head/>
+                  <div type="article">
+                     <p>
+                        <damage/>
+                        <lb/>
+                        <lb/>
+                        <name/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <cb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                     </p>
+                  </div>
+                  <div type="section">
+                     <head/>
+                     <div type="letter">
+                        <salute/>
+                        <p/>
+                        <dateline/>
+                     </div>
+                     <div corresp="#law-ottoman-constitution-1876" type="bill" xml:lang="ar">
+                        <head/>
+                        <div n="1" type="section">
+                           <head/>
+                           <div n="1" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="2" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="3" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <cb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="4" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="5" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="6" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="7" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                                 <unclear/>
+                                 <unclear/>
+                                 <lb/>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                        </div>
+                        <div n="2" type="section">
+                           <head/>
+                           <!-- articles 8-26 -->
+                           <div n="8" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <div n="9" type="article">
+                              <head/>
+                              <p>
+                                 <lb/>
+                              </p>
+                           </div>
+                           <closer/>
+                        </div>
+                     </div>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <cb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <unclear/>
+                        <cb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <div type="article">
+                     <p>
+                        <lb/>
+                        <sic/>
+                        <lb/>
+                     </p>
+                     <ab rend="center"/>
+                  </div>
+                  <cb/>
+                  <div type="section">
+                     <head/>
+                     <ab rend="center"/>
+                  </div>
+                  <pb n="2"/>
+               </div>
+               <byline/>
+            </body>
+         </text>
+         <text n="5774" type="issue" xml:id="v31-i5774" xml:lang="ar">
+            <pb n="1"/>
+            <front/>
+            <body>
+               <p/>
+            </body>
+         </text>
+         <text n="5775" type="issue" xml:id="v31-5775" xml:lang="ar">
+            <pb n="1"/>
+            <front/>
+            <body>
+               <cb n="1"/>
+               <div type="section">
+                  <head/>
+                  <p>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                     <lb/>
+                  </p>
+                  <div/>
+               </div>
+            </body>
+         </text>
+      </group>
+   </text>
+</TEI>

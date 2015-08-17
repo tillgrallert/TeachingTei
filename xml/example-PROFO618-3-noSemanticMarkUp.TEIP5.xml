@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway,
+                    reports on local politics etc., 1908</title>
+                <respStmt>
+                    <resp>Transcription and encoding in TEI</resp>
+                    <persName xml:id="pers_TG">Till Grallert</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>The digital text is freely available for re-use.</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This text is a partical transcription of British consular reports from the
+                    consulate in Damascus to the Embassy in Constantinople as found in the National
+                    Archives, Kew Gardens, Great Britain (formerly known as Public Record Office)
+                    kept in the file PRO FO 618/3, Despatches to Constantinople etc., 1908</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <samplingDecl>
+                <p>Some of the letters in this file have been transcribed as detailed as possible to demonstrate the application of TEI P5 to an introductory course</p>
+            </samplingDecl>
+            <editorialDecl>
+                <hyphenation eol="none">
+                    <p>Hyphenation that might occur at the end of a line has been silently removed</p>
+                </hyphenation>
+                <normalization method="silent">
+                    <p>In case spelling or punctuation have been corrected in the transcription, it has been done without further comment.</p>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <!-- as we deal with sources from an area and period which also used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+            <calendarDesc>
+                <calendar xml:id="cal_gregorian">
+                    <p>Following the hegemonial approach of standards rooted in the English
+                        language, the Gregorian calendar is presumed as the norm and must not be
+                        specified.</p>
+                    <p>The @when attribute always provides W3C dates, while the @when-custom
+                        attribute follows the inherent logic of the chosen calendar.</p>
+                    <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5 Mar 1908, Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_islamic">
+                    <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                        Muḥarram. Dates differ between locations as the beginning of the month is
+                        based on sightings of the new moon.</p>
+                    <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
+                            <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_julian">
+                    <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman
+                        context usually referred to as <hi>rūmī</hi>. Arabic newspapers usually
+                        labelled this calendar as <hi>sharqī</hi>.</p>
+                    <p>All solar calendars add an intercalated 366th day every fourth (and, in the
+                        case of Gregorian and rūmī calendars, even-numbered) year at the end of
+                        February (the last day of the old Julian calendar). The Gregorian calendar
+                        suppresses this rule in centesimal years that cannot be divided by 400. This
+                        difference creates a growing offset between Gregorian and Julian calendars:
+                        while 1900 R was a leap year, 1900 was not, which in turn caused the
+                        difference between the Gregorian calendar, on the one hand, and the
+                            <hi>mālī</hi> and <hi>rūmī</hi> calendars, on the other, to grow from 12
+                        to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900)
+                        onwards.</p>
+                    <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>,
+                            <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_ottomanfiscal">
+                    <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                        calendar beginning the Year with 1 March. Introduced as fiscal calendar in
+                        1676 and in the Ottoman context usually referred to as <hi>mālī</hi> and
+                        sometimes, confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a
+                            <hi>hijrī</hi> year would complete within a single solar <hi>mālī</hi>
+                        year. In this case the counting of the <hi>mālī</hi> years skipped a year to
+                        catch up with the faster <hi>hijrī</hi> calendar. Due to a printing error in
+                        the coupon booklets for the consolidated debt repayment program for 1872
+                        (1288 M instead of 1289 M), synchronisation of <hi>mālī</hi> and
+                            <hi>hijrī</hi> years was henceforth abolished. As <hi>mālī</hi> years
+                        began with 1 March, <hi>mālī</hi> leap years preceded their <hi>rūmī</hi>
+                        and Gregorian counterpart (the leap year 1315 M commenced on 13 March
+                        1899).</p>
+                    <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>,
+                            <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323,
+                        Thursday</date>.</p>
+                </calendar>
+            </calendarDesc>
+            <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+            <langUsage>
+                <language ident="ar">Arabic</language>
+                <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+                    English practices</language>
+                <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+                    French practices</language>
+                <language ident="en">English</language>
+                <language ident="fa">Farsi</language>
+                <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="fr">French</language>
+                <language ident="ota">Ottoman</language>
+                <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following
+                    the IJMES conventions</language>
+                <language ident="tr">Turkish</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus-30_19080803" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 30, Devey to Lowther 3 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                   <msDesc>
+                       <msIdentifier>
+                           <!--<msName>Damascus Draft 30</msName>-->
+                           <repository>National Archives, former Public Record Office</repository>
+                           <idno type="classMark">PRO FO 618/3</idno>
+                       </msIdentifier>
+                       <physDesc>
+                           <handDesc>
+                               <handNote xml:id="hand_1">black ink, hand written</handNote>
+                               <handNote xml:id="hand_2">pencil, hand written</handNote>
+                           </handDesc>
+                       </physDesc>
+                   </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <facsimile>
+            <surface xml:id="facs_1">
+                <graphic url="../images/pro-fo/618-3/DSCN9874_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_2">
+                <graphic url="../images/pro-fo/618-3/DSCN9875_150dpi.jpg"/>
+                <zone lrx="820" lry="1182" ulx="58" uly="46" xml:id="facs_2_z1"/>
+                <zone lrx="1535"
+                  lry="1158"
+                  ulx="1034"
+                  uly="65"
+                  xml:id="facs_2_z2"/>
+            </surface>
+        </facsimile>
+        <text>
+            <body>
+                <pb facs="#facs_1" n="1"/>
+                <div>
+                    <head>Ex-Mushir Fuad P. released</head>
+                    <dateline>August 3, 1908</dateline>
+                    <dateline>Dft<lb/>
+                        Sir Gerald A. Lowther<lb/> K.C.M.G.,C.B., <lb/>
+                        
+                                Cple
+                                Constantinople
+                            
+                        <lb/> No. <del>30</del>
+                        <del>29</del> 30</dateline>
+                    <dateline>42 Emb.</dateline>
+                    <p>Sir, <lb/>I have the honour to report to Y.E. that the General Amnesty
+                        granted by 
+                                H.I.M.
+                                His Imperial Majesty
+                             the Sultan to <del>all</del> Political
+                            <del>criminals was after some hesitation taken to</del>
+                        <add>exciles was after some hesitation taken to</add> include the Ex-Mushir
+                            Fuad Pasha who has been imprisoned under the
+                        strictest confinement for the last six and a half years; and <del>on the
+                            evening of</del>
+                  <del>
+                     <unclear/>
+                  </del>
+                        <add>about <unclear/> on</add> the 30th. ultimo the
+                            <del>Commander of the 5th A.C.</del>
+                  <add>Colonel of Gendarmerie</add>
+                        went in person, dismissed the numerous guards around the prisoner’s house of
+                        confinement and communicated to him the news of his being at liberty to go
+                        wherever he likes. On the following day
+                        Fuad P
+                                .
+                                asha
+                            
+                        <del>w</del> while going for the prayer in the Great
+                            Mosque, was very enthusiastically applauded &amp; cheered by
+                            <pb facs="#facs_2_z1" n="2"/>
+                        <del>the thousands</del>
+                        <add>crowds</add> of people <del>who assembled &amp; walked before &amp;
+                            after his</del>
+                        <add>mobbing his</add> carriage &amp; showing <del>their</del> extreme
+                            <del>joy for</del>
+                        <add>happiness at</add> his release<del>, in every possible way</del>.
+                            <add>Even inside the Mosque after the usual <add>Friday</add> prayers he
+                            was surrounded &amp; his hand shaken or kissed by great numbers with
+                            much emotion. It is credible that had he not been set at liberty for the
+                                31st being Friday some noisy <del>demonstration</del>
+                            <add>manifestation</add> w<choice>
+                                <am>.</am>
+                                <ex>oul</ex>
+                            </choice>d have been called to protest against his detention.</add>
+               </p>
+                    <p>On the evening of the 31st ultimo he attended the demonstration
+                        held in the Defterdar Garden in honour of the
+                        Constitution and his presence there <del>added very greatly
+                            to</del>
+                  <add>accentuated</add> the zeal and joy <del>manifested
+                            by</del>
+                  <add>of</add> the <del>public crowded in the garden</del>
+                        <add>crowd</add>. Most of the notables and chief officials have already
+                        called <del>at</del> on Fuad Pasha in his house &amp;
+                        expressed sympathy. He will probably leave Damascus
+                        for Cple.
+                        <del>by the end of this week</del> the 6th or 7th
+                            inst.
+                        <del>&amp; meet his</del>
+                  <add>&amp; reunite his numerous</add> family
+                            <add>of 12 sons &amp; 8 daughters</add>:<del>for the last <del>a</del> 3
+                            years his son aged <add>13</add>aged 11 years old son has been boarding
+                            for the last 3 years in the local Idadie <add>high</add> school &amp;
+                            permitted to visit his father a month, but <unclear/> on each occasion
+                            with a company here.</del>
+                  <add>During his stay here he had the society
+                            of one wife, two daughters and one son now 14 yrs. old.</add>
+               </p>
+                    <p>Some of the foreign Consuls had called in the Friday afternoon, &amp; I
+                        arranged to visit him on the morning of the 1st inst. when I
+                        had the privilege of an affecting <pb facs="#facs_2_z2" n="3"/>interview, as
+                        he was still deeply moved by long suffering. Many visitors were present
+                        &amp; <add>constantly</add> coming &amp; going, as also the Acting
+                            Russian Consul &amp; Russian Dragoman &amp;
+                            <del>Ferik</del>
+                  <add>Liva</add>
+                        Husini Pasha of <del>of</del>
+                        <del>the Technical</del>
+                        <add>fortification <del>works</del>
+                  </add>Department &amp; various officers
+                        &amp; Ulema, many being known to H. Exy. of you. In the afternoon he
+                        returned my visit at the Consulate &amp; I understand is punctiliously
+                        returning as many visits of great &amp; small as possible. When I took
+                        leave, he courteously accompanied on a little way &amp; made profession to
+                        my private care of continued Anglophile sentiments.</p>
+                    <p>On Sat. afternoon I felt that I <choice>
+                            <abbr>cd.</abbr>
+                            <expan>could</expan>
+                        </choice> not but let H<del>im</del>
+                  <add>.</add> Exy. know that Hr. M.y has
+                        offered congratulations in the matter of the inestimable boon of the
+                        reestablished Constitution, &amp; trusted that <del>recent <unclear/> wd.
+                            lead with a</del>
+                  <add>the</add> new departure may tend to better Gov.t
+                        &amp; true reforms in Turkey. <del>
+                     <lb/>I have etc.
+                                <signatures>G.P.D.</signatures>
+                  </del>
+                  <add>The Marshal’s very
+                            outspoken opinions show that he abides by the well known liberal
+                            opinions professed throughout his career.</add>
+               </p>
+                    <byline>I have etc. <signatures>
+                     <choice>
+                                <abbr>G.P.D.</abbr>
+                                <expan>George Pollard Devey</expan>
+                            </choice>
+                  </signatures>
+               </byline>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus-33_19080912" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 33, Devey to Lowther 12 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                    <p/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <facsimile>
+            <surface xml:id="facs_3">
+                <graphic url="../images/pro-fo/618-3/DSCN9862_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_4">
+                <graphic url="../images/pro-fo/618-3/DSCN9863_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_5">
+                <graphic url="../images/pro-fo/618-3/DSCN9864_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_6">
+                <graphic url="../images/pro-fo/618-3/DSCN9865_150dpi.jpg"/>
+            </surface>
+        </facsimile>
+        <text>
+            <body>
+                <pb facs="#facs_3" n="1"/>
+                <div>
+                    <head>State of affairs in Damascus relating to the new Regime</head>
+                    <dateline>Damascus.<lb/>August 12. 1908.</dateline>
+                    <dateline>Dft<lb/>Sir G.A. Lowther<lb/>Cple<lb/>No. 33</dateline>
+                    <p>Sir,<lb/>with ref.ce to my <ref>des.ch No. 29 of the 3.rd ins.</ref> I have the honour
+                        to report <del>some of the</del>
+                  <add>upon the more</add> interesting
+                        proceedings that took place here since that date
+                            <del>respecting</del>
+                  <add>connected with</add> the new Constitutional
+                        movement.</p>
+                    <p>
+                  <del>The Many</del>
+                  <del>
+                     <add>Loud</add>
+                  </del> Popular demonstrations and
+                            <del>happy</del>
+                  <add>great</add> manifestations <add>of joy</add> with
+                        illuminations and street decorations <del>have been going on in all the
+                            quarters of the city showing the utmost zeal and enthusiasm on the part
+                            of the public who hardly understand the situation or appreciate the
+                            foundation of their joy; but fortunately no</del>
+                        <add>throughout the city <del>from</del> were continuous from the 31st ult.imo
+                            until yesterday, some of them attended also by <del>numerous
+                                masses</del>
+                            <add>throngs</add> from neighbouring villages; though indeed few
+                                <add>present</add> could have really appreciated at their true value
+                            the great privileges accorded. Happily scarcely a</add>
+                        <add>slight</add> accident<del>s</del> occurred, though
+                            <del>with</del>
+                  <del>fearing</del> the excessive use of rifles +
+                        revolvers <del>bullets was continuous</del>
+                        <add>was at first rather dangerous</add>; except that a bullet broke the
+                        tramway electric wire which fell on the mob &amp; the current killed three
+                        people &amp; <sic>injoured</sic>
+                        <del>three</del>
+                        <add>two</add> others.</p>
+               <pb/>
+                    <p>Five general meetings were held in honour of the Constitution four of which
+                        in two public gardens attended by several thousands of spectators including
+                        the Vali and the three Mushirs now in Damascus, and one in a large theatre;
+                        these meetings were given by provisional societies, military and civil, and
+                        on each occasion more than a dozen speeches were delivered by various
+                        speakers of liberal views, which were almost without exception temperate and
+                        conducive to allay excitement.</p>
+                    <p>Army officers started a club under the name of ‘Liberty’
+                        and inaugurated it on the 10th instant; one of the conditions
+                        for joining the club being supporting the Constitution; and the membership
+                        may be granted to worthy civilians also. The members amount now to more than
+                        a hundred officers who joined in the last two days.</p>
+                    <p>The liberal civilians are now forming another club with nearly similar
+                        conditions as those of the <pb/> of the “Liberty Club”
+                        and undoubtedly most of the chief notables will join it.</p>
+                    <p>No serious steps have been taken as yet on any side towards the elections for
+                        the Parliament but the clubs above mentioned intend to give their influence
+                        for the choice of competent persons who are not yet indicated.</p>
+                    <p>The Union &amp; Progress Society, whose individual members
+                        can only be conjectend [?] vaguely here, is practically directed[?], the
+                        Government gestation, military and administration in a prudent and energetic
+                        way. The Vali at the Society’s demand began on the 10th instant
+                        to dismiss or compel resignation of corrupt and mischievous officials such
+                        as the the Chief of Police Oman Jamal, Said
+                            Effendi Banna, the Muhassebji, the Caim.ms of
+                            Douma, Zibadan &amp;
+                            Dera’a Cazas, the last being a cousin of
+                            Izzet Pasha. The Alai Bey of Gendarmerie is also
+                        likely to be dismissed with a particularly corrupt Major Ahmed
+                            Bey of the Zaptiehs and several other functionaries of ill
+                        repute will be in similar case [?], for the <pb/> the society intend to
+                        improve the government departments gradually so as to replace the old
+                        corrupt system by a new hones set of officials who are not to be found at
+                        once.</p>
+                    <p>There is some discontent on the part of the ulema and certain leaders in town
+                        for the Union &amp; Progress Society, is going forward in
+                        its own way and removing officials without consulting them, but there seem
+                        no reason to fear that such discontent might provoke any substantial
+                        resistance, at present.</p>
+                    <p>Izzet Pasha’s partisans and creatures here are not few,
+                        but, having the public sentiments against them, they are rather afraid for
+                        their own safety and trying to gain as many liberal friends as possible.</p>
+                    <p>It is a good <sic>things</sic> that the demonstrations &amp; calling together
+                        of crowds are now at an end for it is evident that the loss of the <pb/>
+                        prestige o the government and the palpable decrease of its influence might
+                        easily afford an opportunity for malcontents to provoke disturbance and
+                        cause trouble in order to show the bad results of the liberal views.</p>
+                    <p>It is true that there are no symptoms of animosity here between Moslems and
+                        Christians but, as is always the case when the government power relaxes and
+                        the public order endangered the weaker element would be the actual sufferer.
+                        For this reason the Christians and Jews here rather felt a certain amount of
+                        anxiety during the last fortnight, but the liberal chiefs among Moslems have
+                        been all the time preaching equality and emphasising the necessity of order
+                        and good behaviour.</p>
+                    <p>As to the effect of promulgating the constitution in the other towns of this
+                        Vilayet, very little can be said, for the people of the <pb/>
+                        Hauran and Kerak Sanjak are
+                        too ignorant to appreciate the difference between autocratic and
+                        constitutional government” […]</p>
+                    <p>
+                  <del> In conclusion, I might add here that a pessimistic observer does not
+                            fail to see some faint reasons for anxiety in Damascus and would, but
+                            not without hesitation, foretell the rise of antagonistic parties who
+                            might deal with each other corporally and endanger the public security.
+                            The garrison of the town, I am sorry to say, is rather too small to cope
+                            with such emergencies if they would ever come to action </del>
+                        <add>Trouble so easily arises out of small incidents, e.g. the Bab Tuma
+                            tumult (v. No. 30 of Aug 2/07[?]) or again the death of a policeman in
+                            1902 that one cannot but feel some slight uneasiness without being
+                            unduly pessimistic. Then again the conditions of the city are very
+                            dissimilar from those of most others, in having here great notables of
+                            various classes, races, &amp; ideas, accustomed to influence and power;
+                            and there is a <pb/>
+                        </add> new element in the presence of the Hamidiyye
+                            troops still in temporary camp here the wide +rambling extent
+                        of the town with the relative fewness of troops in garrison, so many being
+                        employed in the Hejaz railway construction, do not concur
+                        to allay such apprehension, at a moment when local police are likely to be
+                        called to a reckoning as in general more or less corrupt + inefficient.</p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus 51 draft, General Report for September Quarter,
+                        Devey to Lowther 1 Oct. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                    <p/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <facsimile>
+            <surface xml:id="facs_7">
+                <graphic url="../images/pro-fo/618-3/DSCN9840_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_8">
+                <graphic url="../images/pro-fo/618-3/DSCN9841_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_9">
+                <graphic url="../images/pro-fo/618-3/DSCN9842_150dpi.jpg"/>
+            </surface>
+            <surface xml:id="facs_10">
+                <graphic url="../images/pro-fo/618-3/DSCN9843_150dpi.jpg"/>
+            </surface>
+        </facsimile>
+        <text>
+            <body>
+                <div>
+                    <pb n="1"/>
+                    <head>General Report for September Quarter</head>
+                    <dateline>Damascus<lb/>October 1. 1908.</dateline>
+                    <dateline>Dft<lb/>Sir G.A. Lowther<lb/>Cple<lb/>No. 51</dateline>
+                    <p>Sir,<lb/>I have the honour to submit herwith <del>my</del>
+                  <add>a</add>
+                        general report <del>for</del>
+                        <add>on events during</add> the last quarter.</p>
+                    <p> The great ‘coup d’Etat’ which took place in Turkey on
+                        the 24th July occupied all minds and <del>engaged</del>
+                        <add>aroused</add> every emotion with the proclamation of the Constitution,
+                        in Damascus as in all other important centres in the
+                            Empire. <del>The chief <unclear/> interests</del>
+                        <add>Among its results worthy of remark</add> here <del>during this
+                            time</del> were <list>
+                            <item>(a) celebrations and festivities</item>
+                            <item>(b) dismissal or <del>withdrawal</del>
+                        <add>resignation</add> of
+                                notoriously corrupt officials</item>
+                            <item>(c) formation of clubs and associations</item>
+                            <item>(d) parliamentary elections</item>
+                            <item>(e) reforms in various governmental departments.</item>
+                            <item>(f) release or <del>
+                           <unclear/>
+                        </del>
+                        <add>rehabilitation</add>
+                                <add>
+                           <del>made to</del> of political exiles or persons</add>
+                     </item>
+                        </list>
+               </p>
+                    <p>Rejoicings and joyful manifestation <del>came now</del>
+                        <add>are only coming now</add> to an end, after lasting more than two
+                        months: more than <add>25 well organized</add> great meetings were held int
+                        he different quarters of the<pb n="2"/> city, mostly attended by several
+                        thousands demonstrators and spectators, and hundreds of speeches were
+                        delivered, all condemning autocracy as despotic &amp; tyrannical and
+                        eulogizing liberty and constitutional government. About £2000 were spent on
+                        the festivities and had not notables of Damascus with
+                        the young Turks lately recommended their cessation they
+                        might have continued for another month or more. It is to be remarked with
+                        pleasure that all these gathering &amp; demonstrations were conducted most
+                        orderly without any dispute or ill feeling among those who assembled.</p>
+                    <p>Many corrupt officials were either dismissed or withdrew themselves.</p>
+                    <p>The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six
+                        Caimacams of Cazas, Moh.d P. Adm of Idara
+                            Mejliss with about 30 other minor officials vacated their
+                        posts, mostly to the general satisfaction of the public and it is debated
+                        now among ‘Young Turkey’ adherents whether it would be
+                        right to punish the officials who were led to bribery by the littleness of
+                        their pay &amp; its frequent irregularity. Doubtless the proper course will
+                        be followed in leaving this matter to the jurisdiction <pb/> of Parliament
+                        when it assembles, and the ignorious[?] dismissal of the more corrupt,
+                        rapacious &amp; outrageous among officials suffices for the moment.
+                        Moreover, the vacancies are not being easily filled up by really good
+                        substitutes, for such persons are at present rare, and often unwilling to
+                        serve. </p>
+                    <p>Damascus Clubs &amp; associations, besides the Union &amp;
+                            Progress number now five viz Hurriyet,
+                            Ulema, Medical,
+                            Commercial, Free Ottoman besides a
+                            Shoemaker guild. the first two are showing much
+                        activity wh.[ich] is likely to excite mutation . The misapprehension &amp;
+                        with uncalled solicitude Ulema are anxious to
+                            <sic>comcure</sic> &amp; uphold Islam against the liberal views of the
+                            Young Turks, while the latter have no intention at
+                        present to interfere with religious precepts. The first point of dispute was
+                        about women’s wear which the Ulema wanted to be cut on a very simple mode,
+                        one piece enveloping the whole body, and the liberals denied them the right
+                        of interfering with this matter which should be regarded as pertaining to
+                        individual free choice. In this campaign the Ulema were defeated but not
+                        without their rivals using threats of applying force.</p>
+                    <p>There is little record as to practical work effected [?] by other clubs
+                        though their moral influence cannot be other than good.</p>
+                    <pb/>
+                    <p>The Parliamentary elections are under preparation the last two months and in
+                        some cazas the voters have already voted for the electors, but in
+                            Damascus city this process will begin in a week’s
+                        time. It is not even announced yet how many deputies will represent this
+                        Vilayet in the Parliament but it is supposed that they will be seven or
+                        eight. The Hauran people still reject their privilege
+                        to elect a deputy and the efforts of the government in dissuading them from
+                        this self-inflicted loss seem to be futile. The Mutessarif of
+                            Kerak lately resigned on grounds of health, but
+                        before doing so had been able to set going a local society or club for
+                        instruction of the people of his district who indeed are little less
+                        backward &amp;ignorant than this of Hauran.</p>
+                    <p>The reforms in the various departments of the government proceed slowly. The
+                            Municipality suppressed most improperly awarded
+                        pensions paid to persons doing nothing for it and succeeded in amassing
+                        about £3000 through various economies. The Public Instruction
+                            Department formed a new chamber to consider the reorganization
+                        of the educational system in this Vilayet. In the departments no special
+                        reforms worth mentioning have been introduced but many are being talked of
+                        &amp; discussed. </p>
+                    <p>The political exiles who had been releases or rehabilitated included many
+                        persons of rank, both military and civil. Mushir Fuad
+                            Pasha’s release was the occasion of great demonstrations in
+                            Damascus, but the rehabilitation of others, with
+                        a few exceptions, was not publicly noticed, for this disgraces persons were
+                        always enjoying personal freedom <pb/> and a very few persons knew that they
+                        were ‘Ikamet Mamours’ [iqāma maʾmūr]. The chief names among these were,
+                            Nouri P. Ferik of Cavalry, another Ferik called
+                            Nouri Pasha sent to live here without duties,
+                            Ferik Ibrahim Pasha (those three Feriks kept for
+                            Constantinople), Ferik Lt. Osman
+                            P., Liva Behjet Pasha (those two died
+                        recently), Colonel Bedri Bey (now of Liva
+                            Bedri P. in Constantinople). The
+                        Maàriz Mushiri [?] &amp; his assistant, and many minor officials or private
+                        persons; such as members of the Bedr Khan family,
+                        numbering more than a hundred. Further as reported in <ref>desp. No.
+                            32</ref>, the Ismailians subjected to religious persecution were
+                        pardoned. Happily no sort of disorder or riotous intention was displayed
+                        here for the purpose of releasing prisoners and ordinary criminals
+                        generally, as took place in some other places.”</p>
+                    <p>Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908.
+                        four of the five battalions employed for earthworks on the line were allowed
+                        to return to their garrisons. </p>
+                    <p>“about 1400 of these battalions on expiry of service were disbanded.
+                        Moreover, the four battalions of the 40th Reg, sent to
+                            Medina from this Army Corps in June
+                            last, to guard the line, are also ordered back to their
+                        headquarters. At present only two battalions are to be kept there to take
+                        care of the line as regards repairs &amp; protection.” No aspirations to
+                        commence construction beyond Medina due to increasing Bedouin raids
+                        <pb/>
+               </p>
+                    <p>“Public security in the Vilayet has been during the quarter satisfactory and
+                        order was properly kept. The Bedouins have been quiet &amp; peaceful during
+                        the summer, and only on two or three occasions made petty rais &amp; drove
+                        or carried away animals or goods but the spoils were restored to their
+                        owners without great difficulties.” Druze and Bedouins seem under the spell
+                        of the government and calmly wait for the implementation of the promised
+                        reforms</p>
+                    <p>“the crops this year were in general very good and the grain harvest in most
+                        of the districts of the Province was exceptionally abundant. The apricot
+                        produce was above the average while walnuts were much below. All prices of
+                        fruit and cereals are still high and the peasants this year will do well. An
+                        exception might be mentioned as <pb/> as regards locusts which made a
+                        perceptible damage in the Kalamoun
+                            district but had a very slight effect in some other Cazas.
+                        But the loss to the Vilayet in general has been small.</p>
+                    <p>As respects trade, no special remarks need be made; strikes at
+                            Beirut at the Customs and on local railways have
+                        produced only exiguous loss here. With reference to the latter we may note
+                        that public opinion judges that the smaller employés were underpaid, while
+                        the profits of the Company &amp; of its directors were considerable and the
+                        public at the same time ill served.</p>
+                    <p>Public health has been satisfactory on the whole this summer, but the
+                            Ain Fijeh water has not been received the general
+                        approbation anticipated which is to be regretted, as theres is absolute
+                        proof the it is the best &amp; purest spring water of al this neighbourhood.
+                        Its distribution to all quarters of the city proceeds slowly.”</p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+</teiCorpus>

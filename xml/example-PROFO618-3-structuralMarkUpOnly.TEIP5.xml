@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway,
+                    reports on local politics etc., 1908</title>
+                <respStmt>
+                    <resp>Transcription and encoding in TEI</resp>
+                    <persName xml:id="pers_TG">Till Grallert</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>The digital text is freely available for re-use.</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This text is a partical transcription of British consular reports from the
+                    consulate in Damascus to the Embassy in Constantinople as found in the National
+                    Archives, Kew Gardens, Great Britain (formerly known as Public Record Office)
+                    kept in the file PRO FO 618/3, Despatches to Constantinople etc., 1908</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <samplingDecl>
+                <p>Some of the letters in this file have been transcribed as detailed as possible to demonstrate the application of TEI P5 to an introductory course</p>
+            </samplingDecl>
+            <editorialDecl>
+                <hyphenation eol="none">
+                    <p>Hyphenation that might occur at the end of a line has been silently removed</p>
+                </hyphenation>
+                <normalization method="silent">
+                    <p>In case spelling or punctuation have been corrected in the transcription, it has been done without further comment.</p>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <!-- as we deal with sources from an area and period which also used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+            <calendarDesc>
+                <calendar xml:id="cal_gregorian">
+                    <p>Following the hegemonial approach of standards rooted in the English
+                        language, the Gregorian calendar is presumed as the norm and must not be
+                        specified.</p>
+                    <p>The @when attribute always provides W3C dates, while the @when-custom
+                        attribute follows the inherent logic of the chosen calendar.</p>
+                    <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5 Mar 1908, Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_islamic">
+                    <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                        Muḥarram. Dates differ between locations as the beginning of the month is
+                        based on sightings of the new moon.</p>
+                    <p>E.g. <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1841-05-23"
+                        when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
+                            <date calendar="#cal_islamic"
+                        datingMethod="#cal_islamic"
+                        when="1908-03-05"
+                        when-custom="1326-02-01">1 Ṣaf 1326,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_julian">
+                    <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman
+                        context usually referred to as <hi>rūmī</hi>. Arabic newspapers usually
+                        labelled this calendar as <hi>sharqī</hi>.</p>
+                    <p>All solar calendars add an intercalated 366th day every fourth (and, in the
+                        case of Gregorian and rūmī calendars, even-numbered) year at the end of
+                        February (the last day of the old Julian calendar). The Gregorian calendar
+                        suppresses this rule in centesimal years that cannot be divided by 400. This
+                        difference creates a growing offset between Gregorian and Julian calendars:
+                        while 1900 R was a leap year, 1900 was not, which in turn caused the
+                        difference between the Gregorian calendar, on the one hand, and the
+                            <hi>mālī</hi> and <hi>rūmī</hi> calendars, on the other, to grow from 12
+                        to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900)
+                        onwards.</p>
+                    <p>E.g. <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1841-05-23"
+                        when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>,
+                            <date calendar="#cal_julian"
+                        datingMethod="#cal_julian"
+                        when="1908-03-05"
+                        when-custom="1908-02-21">21 Shub 1908,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_ottomanfiscal">
+                    <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                        calendar beginning the Year with 1 March. Introduced as fiscal calendar in
+                        1676 and in the Ottoman context usually referred to as <hi>mālī</hi> and
+                        sometimes, confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a
+                            <hi>hijrī</hi> year would complete within a single solar <hi>mālī</hi>
+                        year. In this case the counting of the <hi>mālī</hi> years skipped a year to
+                        catch up with the faster <hi>hijrī</hi> calendar. Due to a printing error in
+                        the coupon booklets for the consolidated debt repayment program for 1872
+                        (1288 M instead of 1289 M), synchronisation of <hi>mālī</hi> and
+                            <hi>hijrī</hi> years was henceforth abolished. As <hi>mālī</hi> years
+                        began with 1 March, <hi>mālī</hi> leap years preceded their <hi>rūmī</hi>
+                        and Gregorian counterpart (the leap year 1315 M commenced on 13 March
+                        1899).</p>
+                    <p>E.g. <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1841-05-23"
+                        when-custom="1257-03-11">11 Māyis 1257, Sunday</date>,
+                            <date calendar="#cal_ottomanfiscal"
+                        datingMethod="#cal_ottomanfiscal"
+                        when="1908-03-05"
+                        when-custom="1323-12-21">21 Shub 1323,
+                        Thursday</date>.</p>
+                </calendar>
+            </calendarDesc>
+            <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+            <langUsage>
+                <language ident="ar">Arabic</language>
+                <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+                    English practices</language>
+                <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+                    French practices</language>
+                <language ident="en">English</language>
+                <language ident="fa">Farsi</language>
+                <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="fr">French</language>
+                <language ident="ota">Ottoman</language>
+                <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following
+                    the IJMES conventions</language>
+                <language ident="tr">Turkish</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus-30_19080803" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 30, Devey to Lowther 3 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                   <msDesc>
+                       <msIdentifier>
+                           <!--<msName>Damascus Draft 30</msName>-->
+                           <repository>National Archives, former Public Record Office</repository>
+                           <idno type="classMark">PRO FO 618/3</idno>
+                       </msIdentifier>
+                       <physDesc>
+                           <handDesc>
+                               <handNote xml:id="hand_1">black ink, hand written</handNote>
+                               <handNote xml:id="hand_2">pencil, hand written</handNote>
+                           </handDesc>
+                       </physDesc>
+                   </msDesc>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <pb n="1"/>
+            <div>
+               <head/>
+               <dateline/>
+               <dateline>
+                  <lb/>
+                  <lb/>
+                  <lb/>
+                  <choice>
+                     <abbr/>
+                     <expan/>
+                  </choice>
+                  <lb/>
+                  <del/>
+                  <del/>
+               </dateline>
+               <dateline/>
+               <p>
+                  <lb/>
+                  <choice>
+                     <abbr/>
+                     <expan/>
+                  </choice>
+                  <del/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <del>
+                     <unclear/>
+                  </del>
+                  <add>
+                     <unclear/>
+                  </add>
+                  <del/>
+                  <add/>
+                  <choice>
+                     <am/>
+                     <ex/>
+                  </choice>
+                  <del/>
+                  <pb n="2"/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add>
+                     <add/>
+                     <del/>
+                     <add/>
+                     <choice>
+                        <am/>
+                        <ex/>
+                     </choice>
+                  </add>
+               </p>
+               <p>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <del/>
+                  <del/>
+                  <add/>
+                  <add/>
+                  <del>
+                     <del/>
+                     <add/>
+                     <add/>
+                     <unclear/>
+                  </del>
+                  <add/>
+               </p>
+               <p>
+                  <pb n="3"/>
+                  <add/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <del/>
+                  <add>
+                     <del/>
+                  </add>
+               </p>
+               <p>
+                  <choice>
+                     <abbr/>
+                     <expan/>
+                  </choice>
+                  <del/>
+                  <add/>
+                  <del>
+                     <unclear/>
+                  </del>
+                  <add/>
+                  <del>
+                     <lb/>
+                     <signatures/>
+                  </del>
+                  <add/>
+               </p>
+               <byline>
+                  <signatures>
+                     <choice>
+                        <abbr/>
+                        <expan/>
+                     </choice>
+                  </signatures>
+               </byline>
+            </div>
+         </body>
+      </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus-33_19080912" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus Draft 33, Devey to Lowther 12 Aug. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                    <p/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <pb n="1"/>
+            <div>
+               <head/>
+               <dateline>
+                  <lb/>
+               </dateline>
+               <dateline>
+                  <lb/>
+                  <lb/>
+                  <lb/>
+               </dateline>
+               <p>
+                  <lb/>
+                  <ref/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add/>
+               </p>
+               <p>
+                  <del/>
+                  <del>
+                     <add/>
+                  </del>
+                  <del/>
+                  <add/>
+                  <add/>
+                  <del/>
+                  <add>
+                     <del/>
+                     <choice>
+                        <am/>
+                        <ex/>
+                     </choice>
+                     <del/>
+                     <add/>
+                     <add/>
+                  </add>
+                  <add/>
+                  <del/>
+                  <del/>
+                  <del/>
+                  <del/>
+                  <add/>
+                  <sic/>
+                  <del/>
+                  <add/>
+               </p>
+               <pb/>
+               <p/>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p/>
+               <p/>
+               <p>
+                  <sic/>
+                  <pb/>
+               </p>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p>
+                  <del/>
+                  <add>
+                     <pb/>
+                  </add>
+               </p>
+            </div>
+         </body>
+      </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3 Damascus 51 draft, General Report for September Quarter,
+                        Devey to Lowther 1 Oct. 1908</title>
+                    <author>George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt>
+                    <p/>
+                </publicationStmt>
+                <sourceDesc>
+                    <p/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        
+        <text>
+         <body>
+            <div>
+               <pb n="1"/>
+               <head/>
+               <dateline>
+                  <lb/>
+               </dateline>
+               <dateline>
+                  <lb/>
+                  <lb/>
+                  <lb/>
+               </dateline>
+               <p>
+                  <lb/>
+                  <del/>
+                  <add/>
+                  <del/>
+                  <add/>
+               </p>
+               <p>
+                  <del/>
+                  <add/>
+                  <del>
+                     <unclear/>
+                  </del>
+                  <add/>
+                  <del/>
+                  <list>
+                     <item/>
+                     <item>
+                        <del/>
+                        <add/>
+                     </item>
+                     <item/>
+                     <item/>
+                     <item/>
+                     <item>
+                        <del>
+                           <unclear/>
+                        </del>
+                        <add/>
+                        <add>
+                           <del/>
+                        </add>
+                     </item>
+                  </list>
+               </p>
+               <p>
+                  <del/>
+                  <add/>
+                  <add/>
+                  <pb n="2"/>
+               </p>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p>
+                  <sic/>
+               </p>
+               <p/>
+               <pb/>
+               <p/>
+               <p/>
+               <p>
+                  <pb/>
+                  <ref/>
+               </p>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p/>
+               <p>
+                  <pb/>
+               </p>
+               <p/>
+               <p/>
+            </div>
+         </body>
+      </text>
+    </TEI>
+</teiCorpus>
