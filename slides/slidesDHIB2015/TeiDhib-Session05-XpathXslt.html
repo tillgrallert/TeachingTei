@@ -1,0 +1,1487 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>TEItalk5-XpathXslt</title></head><body><article class="markdown-body"><h1 id="topic-putting-the-files-to-use-xpath-and-xslt"><a name="user-content-topic-putting-the-files-to-use-xpath-and-xslt" href="#topic-putting-the-files-to-use-xpath-and-xslt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Topic: Putting the files to use: XPath and XSLT</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and the <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS code</a> of the W3C.</p>
+<h1 id="what-is-the-xsl-family"><a name="user-content-what-is-the-xsl-family" href="#what-is-the-xsl-family" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is the XSL family?</h1>
+<ul>
+<li><em>XPath</em>: a language for expressing paths through XML trees </li>
+<li><em>XSLT</em>: a programming language for transforming XML</li>
+<li><em>XSL FO</em>: an XML vocabulary for describing formatted pages (we won&rsquo;t cover this)</li>
+</ul>
+<h1 id="xslt"><a name="user-content-xslt" href="#xslt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSLT</h1>
+<p>The XSLT language is</p>
+<ul>
+<li>expressed in XML</li>
+<li>uses namespaces to distinguish output from instructions </li>
+<li>purely functional</li>
+<li>reads and writes XML trees</li>
+</ul>
+<p>It was designed to generate XSL FO, but now widely used to generate HTML.</p>
+<h1 id="what-is-a-transformation"><a name="user-content-what-is-a-transformation" href="#what-is-a-transformation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is a transformation?</h1>
+<p>Take this:</p>
+<pre><code>&lt;persName&gt;
+    &lt;forename&gt;Milo&lt;/forename&gt;
+    &lt;surname&gt;Casagrande&lt;/surname&gt;
+&lt;/persName&gt;
+&lt;persName&gt;
+    &lt;forename&gt;Corey&lt;/forename&gt;
+    &lt;surname&gt;Burger&lt;/surname&gt;
+&lt;/persName&gt;
+&lt;persName&gt;
+    &lt;forename&gt;Naaman&lt;/forename&gt;
+    &lt;surname&gt;Campbell&lt;/surname&gt;
+&lt;/persName&gt;
+</code></pre>
+<p>and make this:</p>
+<pre><code>&lt;item n=&rdquo;1&rdquo;&gt;
+    &lt;name&gt;Burger&lt;/name&gt;
+&lt;/item&gt;
+&lt;item n=&rdquo;2&rdquo;&gt;
+    &lt;name&gt;Campbell&lt;/name&gt;
+&lt;/item&gt;
+&lt;item n=&rdquo;3&rdquo;&gt;
+    &lt;name&gt;Casagrande&lt;/name&gt;
+&lt;/item&gt;</code></pre>
+<h1 id="a-text-example"><a name="user-content-a-text-example" href="#a-text-example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>A text example</h1>
+<p>Take this:</p>
+<pre><code>&lt;div n=&rdquo;34&rdquo; type=&rdquo;recipe&rdquo;&gt;
+    &lt;head&gt;Pasta for beginners&lt;/head&gt;
+    &lt;list&gt;
+        &lt;item&gt;Pasta&lt;/item&gt;
+        &lt;item&gt;Grated cheese&lt;/item&gt;
+    &lt;/list&gt;
+    &lt;p&gt;Cook the pasta and mix with the cheese&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>and make this: </p>
+<pre><code>&lt;html&gt;
+    &lt;h1&gt;34: Pasta for beginners&lt;/h1&gt;
+    &lt;p&gt;Ingredients: Pasta Grated cheese&lt;/p&gt;
+    &lt;p&gt;Cook the pasta and mix with the cheese&lt;/p&gt;
+&lt;/html&gt;
+</code></pre>
+<h1 id="how-do-you-express-that-in-xsl"><a name="user-content-how-do-you-express-that-in-xsl" href="#how-do-you-express-that-in-xsl" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How do you express that in XSL?</h1>
+<pre><code>&lt;xsl:stylesheet version=&rdquo;2.0&rdquo; xmlns:xsl=&rdquo;http://www.w3.org/1999/XSL/Transform&rdquo; xpath-default-namespace=&rdquo;http://www.tei-c.org/ns/1.0&rdquo;&gt;
+    &lt;xsl:template match=&rdquo;div&rdquo;&gt;
+        &lt;html&gt;
+            &lt;h1&gt;
+                &lt;xsl:value-of select=&rdquo;@n&rdquo;/&gt;:
+                &lt;xsl:value-of select=&rdquo;head&rdquo;/&gt;&lt;/h1&gt;
+            &lt;p&gt;Ingredients:
+                &lt;xsl:apply-templates select=&rdquo;list/item&rdquo;/&gt;&lt;/p&gt;
+            &lt;p&gt;
+                &lt;xsl:value-of select=&rdquo;p&rdquo;/&gt;
+            &lt;/p&gt;
+        &lt;/html&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+<p>Note: the namespace declaration linking xsl: to <a href="http://www.w3.org/1999/XSL/Transform">http://www.w3.org/1999/XSL/Transform</a></p>
+<h1 id="structure-of-an-xsl-file"><a name="user-content-structure-of-an-xsl-file" href="#structure-of-an-xsl-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Structure of an XSL file</h1>
+<pre><code>&lt;xsl:stylesheet version=&rdquo;2.0&rdquo; xmlns:xsl=&rdquo;http://www.w3.org/1999/XSL/Transform&rdquo; xpath-default-namespace=&rdquo;http://www.tei-c.org/ns/1.0&rdquo;&gt;
+    &lt;xsl:template match=&rdquo;div&rdquo;&gt;
+        &lt;!&ndash; .... do something with div elements....&ndash;&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&rdquo;p&rdquo;&gt;
+        &lt;!&ndash; .... do something with p elements....&ndash;&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+<ul>
+<li>The <code>div</code> and <code>p</code> are <em>XPath expressions</em>, which specify which bit of the document is matched by the template.</li>
+<li>Any element not starting with <strong>xsl:</strong> in a template body is put into the output.</li>
+</ul>
+<h1 id="the-golden-rules-of-xslt"><a name="user-content-the-golden-rules-of-xslt" href="#the-golden-rules-of-xslt" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The golden rules of XSLT</h1>
+<ol>
+<li>If there is no template matching an element, we go on and process the elements inside it</li>
+<li>If there are no elements to process by Rule 1, any text inside the element is output</li>
+<li>Children elements are not processed by a template unless you explicitly say so</li>
+<li><code>&lt;xsl:apply-templates select="XX"/&gt;</code> looks for templates which match element &ldquo;XX&rdquo;; <code>&lt;xsl:value-of select="XX"/&gt;</code> simply gets any text from that element</li>
+<li>The order of templates in your program file is immaterial</li>
+<li>You can process any part of the document from any template</li>
+<li>Everything is well-formed XML. Everything!</li>
+</ol>
+<h1 id="important-magic"><a name="user-content-important-magic" href="#important-magic" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important &ldquo;magic&rdquo;</h1>
+<p>Our examples and exercises all start with two important attributes on <code>&lt;stylesheet&gt;</code>:</p>
+<pre><code>&lt;xsl:stylesheet 
+    xmlns:xsl=&rdquo;http://www.w3.org/1999/XSL/Transform&rdquo; 
+    xpath-default-namespace=&rdquo;http://www.tei-c.org/ns/1.0&rdquo; 
+    version=&rdquo;2.0&rdquo;&gt;</code></pre>
+<p>This indicates that</p>
+<ol>
+<li>In our XPath expressions, any element name without a namespace is assumed to be in the TEI namespace</li>
+<li>We want to use version 2.0 of the XSLT specification. This means that we must use the Saxon processor for our work.</li>
+</ol>
+<h1 id="a-simple-test-file"><a name="user-content-a-simple-test-file" href="#a-simple-test-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>A simple test file</h1>
+<pre><code>&lt;text&gt;
+    &lt;front&gt;
+        &lt;div&gt;
+            &lt;p&gt;Material up front&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;head&gt;Introduction&lt;/head&gt;
+            &lt;p rend=&rdquo;it&rdquo;&gt;Some sane words&lt;/p&gt;
+            &lt;p&gt;Rather more surprising words&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;back&gt;
+        &lt;div&gt;
+            &lt;p&gt;Material in the back&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/back&gt;
+&lt;/text&gt;</code></pre>
+<h1 id="xsl-feature-apply-templates"><a name="user-content-xsl-feature-apply-templates" href="#xsl-feature-apply-templates" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL feature: apply-templates</h1>
+<pre><code>&lt;xsl:stylesheet version=&rdquo;2.0&rdquo; xmlns:xsl=&rdquo;http://www.w3.org/1999/XSL/Transform&rdquo; xpath-default-namespace=&rdquo;http://www.tei-c.org/ns/1.0&rdquo;&gt;
+    &lt;xsl:template match=&rdquo;/&rdquo;&gt;
+        &lt;html&gt;
+            &lt;xsl:apply-templates/&gt;
+        &lt;/html&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&rdquo;TEI&rdquo;&gt;
+        &lt;xsl:apply-templates select=&rdquo;text&rdquo;/&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&rdquo;text&rdquo;&gt;
+        &lt;h1&gt;FRONT MATTER&lt;/h1&gt;
+        &lt;xsl:apply-templates select=&rdquo;front&rdquo;/&gt;
+        &lt;h1&gt;BODY MATTER&lt;/h1&gt;
+        &lt;xsl:apply-templates select=&rdquo;body&rdquo;/&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code></pre>
+<h1 id="xsl-feature-value-of"><a name="user-content-xsl-feature-value-of" href="#xsl-feature-value-of" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL feature: value-of</h1>
+<p>Templates for paragraphs and headings</p>
+<pre><code>&lt;xsl:template match=&rdquo;p&rdquo;&gt;
+        &lt;p&gt;
+            &lt;xsl:apply-templates/&gt;
+        &lt;/p&gt;
+    &lt;/xsl:template&gt;
+    &lt;xsl:template match=&rdquo;div&rdquo;&gt;
+        &lt;h2&gt;
+            &lt;xsl:value-of select=&rdquo;head&rdquo;/&gt;
+        &lt;/h2&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;div/head&rdquo;/&gt;</code></pre>
+<p>Notice how we avoid getting the heading text twice.<br />
+Why did we need to qualify it to deal with just <code>&lt;head&gt;</code> inside <code>&lt;div&gt;</code>?</p>
+<h1 id="more-complex-patterns"><a name="user-content-more-complex-patterns" href="#more-complex-patterns" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>More complex patterns</h1>
+<p>The @select attribute can point to any part of the document. Using XPath expressions, we can find:</p>
+<table>
+<thead>
+<tr>
+<th>expression</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td>the root of document (outside the root element)</td>
+</tr>
+<tr>
+<td>*</td>
+<td>any element</td>
+</tr>
+<tr>
+<td>text()</td>
+<td>only the text content of a node</td>
+</tr>
+<tr>
+<td>name</td>
+<td>an element called <code>name</code></td>
+</tr>
+<tr>
+<td>@name</td>
+<td>an attribute called <code>name</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example of a complete path in <code>&lt;value-of&gt;</code>: <br />
+<code>&lt;xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title"/&gt;</code></p>
+<h1 id="xpath"><a name="user-content-xpath" href="#xpath" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath</h1>
+<p>XPath is the basis of most other XML querying and transformation languages.</p>
+<ul>
+<li>It is a syntax for accessing parts of an XML document</li>
+<li>It uses a path structure to define XML elements</li>
+<li>It has a library of standard functions</li>
+<li>It is a W3C Standard and one of the main components of XQuery and XSLT</li>
+</ul>
+<h1 id="example-text"><a name="user-content-example-text" href="#example-text" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example text</h1>
+<pre><code>&lt;body n=&rdquo;anthology&rdquo;&gt;
+    &lt;div type=&rdquo;poem&rdquo;&gt;
+        &lt;head&gt;The SICK ROSE &lt;/head&gt;
+        &lt;lg type=&rdquo;stanza&rdquo;&gt;
+            &lt;l n=&rdquo;1&rdquo;&gt;O Rose thou art sick.&lt;/l&gt;
+            &lt;l n=&rdquo;2&rdquo;&gt;The invisible worm,&lt;/l&gt;
+            &lt;l n=&rdquo;3&rdquo;&gt;That flies in the night &lt;/l&gt;
+            &lt;l n=&rdquo;4&rdquo;&gt;In the howling storm:&lt;/l&gt;
+        &lt;/lg&gt;
+        &lt;lg type=&rdquo;stanza&rdquo;&gt;
+            &lt;l n=&rdquo;5&rdquo;&gt;Has found out thy bed &lt;/l&gt;
+            &lt;l n=&rdquo;6&rdquo;&gt;Of crimson joy:&lt;/l&gt;
+            &lt;l n=&rdquo;7&rdquo;&gt;And his dark secret love &lt;/l&gt;
+            &lt;l n=&rdquo;8&rdquo;&gt;Does thy life destroy.&lt;/l&gt;
+        &lt;/lg&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+<h1 id="example-xpath-expressions"><a name="user-content-example-xpath-expressions" href="#example-xpath-expressions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example XPath expressions</h1>
+<p><img alt="XPathExercise 01" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise01.png" /></p>
+<hr />
+<p><img alt="XPathExercise 02" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise02.png" /></p>
+<hr />
+<p><img alt="XPathExercise 03" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise03.png" /></p>
+<hr />
+<p><img alt="XPathExercise 04" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise04.png" /></p>
+<hr />
+<p><img alt="XPathExercise 05" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise05.png" /></p>
+<hr />
+<p><img alt="XPathExercise 06" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise06.png" /></p>
+<hr />
+<p><img alt="XPathExercise 07" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise07.png" /></p>
+<hr />
+<p><img alt="XPathExercise 08" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise08.png" /></p>
+<hr />
+<p><img alt="XPathExercise 09" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise09.png" /></p>
+<hr />
+<p><img alt="XPathExercise 10" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise10.png" /></p>
+<hr />
+<p><img alt="XPathExercise 11" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise11.png" /></p>
+<hr />
+<p><img alt="XPathExercise 12" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise12.png" /></p>
+<hr />
+<p><img alt="XPathExercise 13" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise13.png" /></p>
+<hr />
+<p><img alt="XPathExercise 14" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise14.png" /></p>
+<hr />
+<p><img alt="XPathExercise 15" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise15.png" /></p>
+<hr />
+<p><img alt="XPathExercise 16" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise16.png" /></p>
+<hr />
+<p><img alt="XPathExercise 17" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise17.png" /></p>
+<hr />
+<p><img alt="XPathExercise 18" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise18.png" /></p>
+<hr />
+<p><img alt="XPathExercise 19" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise19.png" /></p>
+<hr />
+<p><img alt="XPathExercise 20" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise20.png" /></p>
+<hr />
+<p><img alt="XPathExercise 21" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise21.png" /></p>
+<hr />
+<p><img alt="XPathExercise 22" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise22.png" /></p>
+<hr />
+<p><img alt="XPathExercise 23" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise23.png" /></p>
+<hr />
+<p><img alt="XPathExercise 24" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise24.png" /></p>
+<hr />
+<p><img alt="XPathExercise 25" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise25.png" /></p>
+<hr />
+<p><img alt="XPathExercise 26" src="/BachCloud/BTSync/FormerDropbox/2015%20TEI%20Introduction/slides/images/XPathExercise26.png" /></p>
+<h1 id="xpath-more-about-paths"><a name="user-content-xpath-more-about-paths" href="#xpath-more-about-paths" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath: More about paths</h1>
+<ul>
+<li>A location path results in a node-set</li>
+<li>Paths can be absolute: <code>/div/lg[1]/l</code></li>
+<li>Paths can be relative: <code>l/../../head</code></li>
+<li>Formal Syntax: <code>axisname::nodetest[predicate]</code></li>
+<li>For example: <code>child::div[contains(head, 'ROSE')]</code></li>
+</ul>
+<h1 id="xpath-axes-1"><a name="user-content-xpath-axes-1" href="#xpath-axes-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath: axes (1)</h1>
+<ul>
+<li><code>self::</code> Contains the current node</li>
+<li><code>attribute::</code> Contains all attributes of the current node </li>
+<li><code>parent::</code> Contains the parent of the current node</li>
+<li><code>ancestor::</code> Contains all ancestors (parent, grandparent, etc.) of the current node</li>
+<li><code>ancestor-or-self::</code> Contains the current node plus all its ancestors (parent, grandparent, etc.)</li>
+<li><code>child::</code> Contains all children of the current node</li>
+<li><code>descendant::</code> Contains all descendants (children, grandchildren, etc.) of the current node</li>
+<li><code>descendant-or-self::</code> Contains the current node plus all its descendants (children, grandchildren, etc.)</li>
+</ul>
+<h1 id="xpath-axes-2"><a name="user-content-xpath-axes-2" href="#xpath-axes-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath: axes (2)</h1>
+<ul>
+<li><code>following::</code> Contains everything in the document after the closing tag of the current node</li>
+<li><code>following-sibling::</code> Contains all siblings after the current node </li>
+<li><code>preceding::</code> Contains everything in the document that is before the starting tag of the current node</li>
+<li><code>preceding-sibling::</code> Contains all siblings before the current node </li>
+</ul>
+<h1 id="example-xpath-axes"><a name="user-content-example-xpath-axes" href="#example-xpath-axes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example: XPath axes</h1>
+<ul>
+<li><code>ancestor::lg</code> = all <code>&lt;lg&gt;</code> ancestors</li>
+<li><code>ancestor-or-self::div</code> = all <code>&lt;div&gt;</code> ancestors or current </li>
+<li><code>attribute::n</code> = <code>n</code> attribute of current node</li>
+<li><code>child::l</code> = <code>&lt;l&gt;</code> elements directly under current node </li>
+<li><code>descendant::l</code> = <code>&lt;l&gt;</code> elements anywhere under current node </li>
+<li><code>descendant-or-self::div</code> = all <code>&lt;div&gt;</code> children or current </li>
+<li><code>following-sibling::l[1]</code> = next <code>&lt;l&gt;</code> element at this level </li>
+<li><code>preceding-sibling::l[1]</code> = previous <code>&lt;l&gt;</code> element at this level </li>
+<li><code>self::head</code> = current <code>&lt;head&gt;</code> element</li>
+</ul>
+<h1 id="xpath-predicates-conditions"><a name="user-content-xpath-predicates-conditions" href="#xpath-predicates-conditions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath: predicates (conditions)</h1>
+<ul>
+<li><code>child::lg[attribute::type='stanza']</code></li>
+<li><code>child::l[@n='4']</code></li>
+<li><code>child::div[position()=3]</code></li>
+<li><code>child::div[4]</code></li>
+<li><code>child::l[last()]</code></li>
+<li><code>child::lg[last()-1]</code></li>
+</ul>
+<h1 id="xpath-abbreviated-syntax"><a name="user-content-xpath-abbreviated-syntax" href="#xpath-abbreviated-syntax" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XPath: abbreviated syntax</h1>
+<ul>
+<li>nothing is the same as <code>child::</code>, so <code>lg</code> is short for <code>child::lg</code> </li>
+<li><code>@</code> is the same as <code>attribute::</code>, so <code>@type</code> is short for <code>attribute::type</code></li>
+<li><code>.</code> is the same as <code>self::</code>, so <code>./head</code> is short for <code>self::node()/child::head</code></li>
+<li><code>..</code> is the same as <code>parent::</code>, so <code>../lg</code> is short for <code>parent::node()/child::lg</code></li>
+<li><code>//</code> is the same as <code>descendant-or-self::</code>, so <code>div//l</code> is short for <code>child::div/descendant-or-self::node()/child::l</code></li>
+</ul>
+<h1 id="xsl-example-context-dependent-matches"><a name="user-content-xsl-example-context-dependent-matches" href="#xsl-example-context-dependent-matches" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL example: context-dependent matches</h1>
+<p>Compare </p>
+<pre><code>&lt;xsl:template match=&rdquo;head&rdquo;&gt; .... &lt;/xsl:template&gt;</code></pre>
+<p>with</p>
+<pre><code>&lt;xsl:template match=&rdquo;div/head&rdquo;&gt; &hellip; &lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;figure/head&rdquo;&gt; ....&lt;/xsl:template&gt;</code></pre>
+<h1 id="xsl-processor-priorities-when-templates-conflict"><a name="user-content-xsl-processor-priorities-when-templates-conflict" href="#xsl-processor-priorities-when-templates-conflict" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL processor: priorities when templates conflict</h1>
+<p>It is possible for it to be ambiguous which template is to be used:</p>
+<pre><code>&lt;xsl:template match=&rdquo;person/name&rdquo;&gt;&hellip; &lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;name&rdquo;&gt;&hellip; &lt;/xsl:template&gt;</code></pre>
+<p>Which template is used when the processor meets a <code>&lt;name&gt;</code> element?</p>
+<h1 id="xsl-processor-solving-priorities"><a name="user-content-xsl-processor-solving-priorities" href="#xsl-processor-solving-priorities" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL processor: solving priorities</h1>
+<p>There is a @priority attribute on <code>&lt;template&gt;</code>; the <strong>higher</strong> the value, the more inclined the XSLT engine is to use it:</p>
+<pre><code>&lt;xsl:template match=&rdquo;name&rdquo; priority=&rdquo;1&rdquo;&gt;
+    &lt;xsl:apply-templates/&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;person/name&rdquo; priority=&rdquo;2&rdquo;&gt; 
+    A name
+&lt;/xsl:template&gt;</code></pre>
+<h1 id="xsl-processor-general-template-priority"><a name="user-content-xsl-processor-general-template-priority" href="#xsl-processor-general-template-priority" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL processor: general template priority</h1>
+<p>The normal rule is that <strong>the most specific template is applied</strong>.</p>
+<pre><code>&lt;xsl:template match=&rdquo;*&rdquo;&gt;
+    &lt;!&ndash; &hellip; &ndash;&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;tei:*&rdquo;&gt;
+    &lt;!&ndash; &hellip; &ndash;&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;p&rdquo;&gt;
+    &lt;!&ndash; &hellip; &ndash;&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;div/p&rdquo;&gt;
+    &lt;!&ndash; &hellip; &ndash;&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;div/p/@n&rdquo;&gt;
+    &lt;!&ndash; &hellip; &ndash;&gt;
+&lt;/xsl:template&gt;</code></pre>
+<h1 id="xsl-pushing-and-pulling"><a name="user-content-xsl-pushing-and-pulling" href="#xsl-pushing-and-pulling" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL: pushing and pulling</h1>
+<p>XSLT stylesheets can be characterized as being of two types:</p>
+<ol>
+<li><em>push</em>: In this type of stylesheet, there is a different template for every element, communication via <code>&lt;xsl:apply-templates&gt;</code> and the overall result is assembled from bits in each template. It is sometimes hard to visualize the final design. <strong>Common for data-oriented processing where the structure is fixed</strong>.</li>
+<li><em>pull</em>: In this type, there is a master template (usually matching <code>/</code>) with the main structure of the output, and specific <code>&lt;xsl:for-each&gt;</code> or <code>&lt;xsl:value-of&gt;</code> commands to grab what is needed for each part. The templates tend to get large and unwieldy. <strong>Common for document-oriented processing where the input document structure varies</strong>.</li>
+</ol>
+<h1 id="xsl-attribute-value-template-1"><a name="user-content-xsl-attribute-value-template-1" href="#xsl-attribute-value-template-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL: attribute value template (1)</h1>
+<p>How can we turn this: </p>
+<pre><code>&lt;ref target=&rdquo;http://www.oucs.ox.ac.uk/&rdquo;&gt;OUCS&lt;/ref&gt;</code></pre>
+<p>into that:</p>
+<pre><code>&lt;a href=&rdquo;http://www.oucs.ox.ac.uk/&rdquo;/&gt;</code></pre>
+<p>if the following <strong>does not</strong> work:</p>
+<pre><code>&lt;xsl:template match=&rdquo;ref&rdquo;&gt;
+    &lt;a href=&rdquo;@target&rdquo;&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>as it will produce:</p>
+<pre><code>&lt;a href=&rdquo;@target&rdquo;&gt;OUCS&lt;/ref&gt;</code></pre>
+<h1 id="xsl-attribute-value-template-1_1"><a name="user-content-xsl-attribute-value-template-1_1" href="#xsl-attribute-value-template-1_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL: attribute value template (1)</h1>
+<p>Instead we have two options to give the @href attribute whatever value the @target attribute has</p>
+<p>Use <code>{}</code> to indicate that the expression must be <strong>evaluated</strong>:</p>
+<pre><code>&lt;xsl:template match=&rdquo;ref&rdquo;&gt;
+    &lt;a href=&rdquo;{@target}&rdquo;&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>Use <code>&lt;xsl:attribute&gt;</code> </p>
+<pre><code>&lt;xsl:template match=&rdquo;ref&rdquo;&gt;
+    &lt;a&gt;
+        &lt;xsl:attribute name=&rdquo;href&rdquo; select=&rdquo;@target&rdquo;/&gt;
+        &lt;xsl:apply-templates/&gt;
+    &lt;/a&gt;
+&lt;/xsl:template&gt;</code></pre>
+<h1 id="xsl-feature-for-each"><a name="user-content-xsl-feature-for-each" href="#xsl-feature-for-each" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL feature: for-each</h1>
+<p>If we want to avoid lots of templates, we can do in-line looping over<br />
+a set of elements. For example:</p>
+<pre><code>&lt;xsl:template match=&rdquo;listPerson&rdquo;&gt;
+    &lt;ul&gt;
+        &lt;xsl:for-each select=&rdquo;person&rdquo;&gt;
+            &lt;li&gt;
+                &lt;xsl:value-of select=&rdquo;persName&rdquo;/&gt;
+            &lt;/li&gt;
+        &lt;/xsl:for-each&gt;
+    &lt;/ul&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>compare to:</p>
+<pre><code>&lt;xsl:template match=&rdquo;listPerson&rdquo;&gt;
+    &lt;ul&gt;
+        &lt;xsl:apply-templates select=&rdquo;person&rdquo;/&gt;
+    &lt;/ul&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;person&rdquo;&gt;
+    &lt;li&gt;
+        &lt;xsl:value-of select=&rdquo;persName&rdquo;/&gt;
+    &lt;/li&gt;
+&lt;/xsl:template&gt;</code></pre>
+<h1 id="xsl-feature-if"><a name="user-content-xsl-feature-if" href="#xsl-feature-if" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL feature: if</h1>
+<p>We can make code conditional on a test being passed. The @test can use <strong>any</strong> XPath facilities:</p>
+<pre><code>&lt;xsl:template match=&rdquo;person&rdquo;&gt;
+    &lt;xsl:if test=&rdquo;@sex=&lsquo;2&rsquo;&ldquo;&gt;
+        &lt;li&gt;
+            &lt;xsl:value-of select=&rdquo;persName&rdquo;/&gt;
+        &lt;/li&gt;
+    &lt;/xsl:if&gt;
+&lt;/xsl:template&gt;</code></pre>
+<p>compare to:</p>
+<pre><code>&lt;xsl:template match=&rdquo;person[@sex=&lsquo;1&rsquo;]&rdquo;&gt;
+    &lt;li&gt;
+        &lt;xsl:value-of select=&rdquo;persName&rdquo;/&gt;
+    &lt;/li&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match=&rdquo;person&rdquo;/&gt;</code></pre>
+<h1 id="xsl-feature-choose"><a name="user-content-xsl-feature-choose" href="#xsl-feature-choose" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>XSL feature: choose</h1>
+<p>We can make a multi-value choice conditional on what we find in<br />
+the text:</p>
+<pre><code>&lt;xsl:template match=&rdquo;person&rdquo;&gt;
+    &lt;xsl:apply-templates/&gt;
+    &lt;xsl:choose&gt;
+        &lt;xsl:when test=&rdquo;@sex=&lsquo;1&rsquo;&ldquo;&gt;(male) &lt;/xsl:when&gt;
+        &lt;xsl:when test=&rdquo;@sex=&lsquo;2&rsquo;&ldquo;&gt;(female) &lt;/xsl:when&gt;
+        &lt;xsl:when test=&rdquo;not(@sex)&rdquo;&gt;(no sex specified) &lt;/xsl:when&gt;
+        &lt;xsl:otherwise&gt;(unknown sex)&lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+&lt;/xsl:template&gt;</code></pre>
+<h1 id="summary-next"><a name="user-content-summary-next" href="#summary-next" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Summary / next</h1>
+<p>Now you can</p>
+<ol>
+<li>Write templates which match any element or attribute</li>
+<li>Pick out text from anywhere</li>
+<li>Write code conditional on something in the text</li>
+</ol>
+<p>And we are going to put this knowledge to use on our XML files</p>
+<h1 id="useful-links"><a name="user-content-useful-links" href="#useful-links" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Useful links</h1>
+<ul>
+<li><a href="http://dcl.slis.indiana.edu/teibp/">TEI boilerplate</a> at <a href="http://dcl.slis.indiana.edu/teibp/"><a href="http://dcl.slis.indiana.edu/teibp/"><a href="http://dcl.slis.indiana.edu/teibp/">http://dcl.slis.indiana.edu/teibp/</a></a></a>: Displaying TEI P5 XML files in a web browser without prior conversion to HTML (the implementation uses XSL which is processed by the browser)</li>
+<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient">OxGarage</a> at <a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient"><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient"><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient"><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient">http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient</a></a></a></a>: a web interface to the XSL stylesheets and its profiles<ul>
+<li>generate schemas using the same tools as Roma </li>
+<li>convert documentation to HTML, ePub, and DOCX </li>
+<li>convert between TEI XML and Word DOCX </li>
+<li>perform all the ODD tasks using web services </li>
+<li>chain sets of transformations together</li>
+</ul>
+</li>
+</ul></article></body></html>
