@@ -1,6 +1,12 @@
+---
+title: Tei@DHSI 3 --- Schema and customisation
+date: 2 Jun 2015
+author: Till Grallert
+---
+
 # Schema and customisation: producing valid TEI
 
-The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
+The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
 Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
@@ -70,23 +76,23 @@ verse | verse
 - The TEI provides a small set of predefined combinations (TEI Lite, TEI Bare...)
 - Or you could roll your own (but then you need to know what you're choosing)
 
-Here comes <hi style="color:red">Roma</hi> acommand line script,with a web frontend, designed to make this process much easier [http://www.tei-c.org/Roma/](http://www.tei-c.org/Roma/)
+Here comes <hi style="color:red">Roma</hi> a command line script, with a web frontend, designed to make this process much easier [http://www.tei-c.org/Roma/](http://www.tei-c.org/Roma/)
 
 # Roma: design a new schema
 
-![Screen shot of Roma](images/ScreenShot-Roma1.png)
+![Screen shot: select a starting point](images/ScreenShot-Roma1.png)
 
 # Roma: customise
 
-![Screen shot of Roma](images/ScreenShot-Roma2.png)
+![Screen shot: customise metadata](images/ScreenShot-Roma2.png)
 
 # Roma: schema
 
-![Screen shot of Roma](images/ScreenShot-Roma3.png)
+![Screen shot: select a schema language for download](images/ScreenShot-Roma3.png)
 
 # Roma: documentation
 
-![Screen shot of Roma](images/ScreenShot-Roma4.png)
+![Screen shot: generate documentation](images/ScreenShot-Roma4.png)
 
 # What did we just do?
 
@@ -121,21 +127,21 @@ We selected four modules, deleted loads of elements, and also deleted an attribu
 
 # Roma: select modules
 
-![Screen shot of Roma](images/ScreenShot-Roma5.png)
+![Screen shot: select modules](images/ScreenShot-Roma5.png)
 
 # Roma: edit modules
 
-![Screen shot of Roma](images/ScreenShot-Roma6.png)
+![Screen shot: edit selected modules](images/ScreenShot-Roma6.png)
 
-# What do we need for our newspapers?
+# What do we need for our newspaper?
 
 A simple selection of elements, but also
 
-- we want only only certain values of @type on `<div>`, for instance, "section", "article", "masthead", "verse", "bill"
-- we may want to provide a list of suggested values for @xml:lang, such as, "ar", "ar-Latn-x-ijmes", "ota", "ota-Latn-x-ijmes", "en", "fr"
+- we want only only certain values of `@type` on `<div>`, for instance, "section", "article", "masthead", "verse", "bill"
+- we may want to provide a list of suggested values for `@xml:lang`, such as, "ar", "ar-Latn-x-ijmes", "ota", "ota-Latn-x-ijmes", "en", "fr" etc.
 - we may want to create a new element (do we? what would that be?)
 
-Other constrains are possible--we might want to insist that a `<div @type="bill">` contains only `<div type="section">` and `<div type="article">` and that the latter should be numbered through a @n attribute
+Other constrains are possible--we might want to insist that a `<div @type="bill">` contains only `<div type="section">` and `<div type="article">` and that the latter should be numbered through a `@n` attribute
 
 # The ODD advantage
 
@@ -152,11 +158,11 @@ We can express these constraints in our ODD meta-schema, and then generate a for
 
 # Roma: select attributes
 
-![Screen shot of Roma](images/ScreenShot-Roma7.png)
+![Screen shot: select and change attributes for selected elements](images/ScreenShot-Roma7.png)
 
 # Roma: constrain attribute values
 
-![Screen shot of Roma](images/ScreenShot-Roma8.png)
+![Screen shot: limit attributes to a list of values](images/ScreenShot-Roma8.png)
 
 # What did we just do?
 
@@ -207,17 +213,17 @@ The TEI class system helps us answer all these questions (except the first).
 # TEI attribute classes
 
 - Attribute classes are given (usually adjectival) names beginning with **att.**; e.g. att.naming, att.typed
-- all members of att.naming inherit from it attributes @key and @ref ; all members of att.typed inherit from it @type and @subtype
-- If we want an element to carry the @type attribute, therefore, we add the element to the att.typed class, rather than define those attributes explicitly.
+- all members of att.naming inherit from it attributes `@key` and `@ref` ; all members of att.typed inherit from it `@type` and `@subtype`
+- If we want an element to carry the `@type` attribute, therefore, we add the element to the att.typed class, rather than define those attributes explicitly.
 
 # att.global: a very important attribute class
 
 All elements are usually members of att.global; this class provides, among others:
 
-- @xml:id: a *unique* identifier
-- @xml:lang: thel anguage of the element content
-- @n: a number or name for an element
-- @rend: how the element in question was rendered or presented in the source text.
+- `@xml:id`: a *unique* identifier
+- `@xml:lang`: thel anguage of the element content
+- `@n`: a number or name for an element
+- `@rend`: how the element in question was rendered or presented in the source text.
 
 # Model Classes
 
@@ -259,7 +265,7 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 
 # Roma: Defining a new element
 
-![Screen shot of Roma](images/ScreenShot-Roma9.png)
+![Screen shot: defining a new element](images/ScreenShot-Roma9.png)
 
 # Defining a content model
 
@@ -273,6 +279,8 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
     + macro.specialPara the content model of elements which either contain a series of component-level elements or else contain a series of phrase-level elements
 
 # Roma: Defining a new element 2
+
+![Screen shot: defining a new element](images/ScreenShot-Roma10.png)
 
 # What did we just do?
 
@@ -296,7 +304,7 @@ Note that this new element is not in the TEI namespace. It belongs to this speci
 
 # Other kinds of constraints
 
-- You can also constrain the content of an element or the value of an attribute to be of a particular datatype (for example, to insist that the @when attribute of the element `<date>` contains only a date)
+- You can also constrain the content of an element or the value of an attribute to be of a particular datatype (for example, to insist that the `@when` attribute of the element `<date>` contains only a date)
 - This can be done by using one of a set of predefined macros to define the content. Examples include
     + `data.word` a single word or token 
     + `data.name` an XML Name
@@ -323,3 +331,9 @@ An element specification can also contain a `<constraintSpec>` element which con
 However...
 - You can only add such rules by editing your ODD file: Roma doesn't know about them.
 - Not all schema languages can implement these constraints.
+
+# Next:
+
+Let's try out Roma and define our own schema in order to *validate* our newly created TEI files
+
+[http://www.tei-c.org/Roma/](http://www.tei-c.org/Roma/)
