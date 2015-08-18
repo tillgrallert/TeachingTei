@@ -6,7 +6,7 @@ date: 6 June 2015
 
 # Topic: Facsimile linking
 
-The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers and British consular archives.
+The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI and the example of Arabic newspapers and British consular archives.
 
 Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
@@ -135,7 +135,7 @@ The actual dimensions of the object represented are not documented by the surfac
 
 # Drawing rectangular shapes
 
-![Kawkab America](images/Facsimile1.jpg)
+![Kawkab America #55, 28 Apr 1893, p1. (English)](images/Facsimile1.jpg)
 
 # Addressing the rectangular shapes as `<zone>` elements
 
@@ -230,6 +230,15 @@ And this facsimile linking to it:
          <!-- ... -->
      </surface>
 
+# Conclusion
+
+The "linking" and "transcr" modules provide a wide range of tools to describe relationships between parts of your text. If you use these techniques, remember:
+
+- You should work out a naming scheme to assign ID attributes. You will need a lot of them.
+- There are often several ways to do things; use the more specialized markup when you can to make it easier for others to read. Don't rely on `@type` attributes with undefined meanings everywhere.
+- Control your vocabulary for token attributes like `@type`
+- The TEI only takes you as far as markup. Implementing all this to make a fancy interactive text exploration web site may be a lot of work.
+
 # The Elephant in the room: software implementations
 
 Despite `<facsimile>` being part of TEI P5 from the very beginning, there are **almost no** software implementations available that provide an easy and convenient (graphic) interface for drawing shapes on image files, recording them as zones, and linking them to the transcription. In consequence, most large projects wrote their own software, while small projects use only the most basic function of linking one image per page to the `<pb/>` elements.
@@ -237,7 +246,6 @@ Despite `<facsimile>` being part of TEI P5 from the very beginning, there are **
 Equally, there are **no** out-of-the box software implementations to transform and display the encoded links between bits of transcriptions and zones on the images for presentation purposes.
 
 # Available options
-
 
 - The **Image Markup Tool**, Windows-only sofware developed by Martin Holmes at UVic
     + writes the `<zones>` and the link to the text to a new TEI P5 file, using its own schema 
@@ -253,6 +261,7 @@ Equally, there are **no** out-of-the box software implementations to transform a
 <!-- - **TILE** ([Text-Image Linking Environment](http://mith.umd.edu/tile/)) -->
 
 
-Literature:
+<!-- Literature:
 
 - Al-Hajj and Küster, 2011 [The Text-Image-Link-Editor: A tool for Linking Facsimiles & Transcriptions and Image Annotations](dh2011abstracts.stanford.edu/xtf/view?docId=tei/ab-197.xml)
+-->
