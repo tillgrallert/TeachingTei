@@ -21,21 +21,27 @@ Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdo
 # Postcards
 
 ![Postcard, Damascus to Istanbul, 27 Sep 1916](images/postcard-ottoman2.png)
+
 ![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
+
+---------------------
+
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-front.jpg)
 
 # Newspapers
 
 ![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg)
-![](../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg)
 
 ---------------------
 
-![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab/dds-54634_Page_11_Image_0001.tif)
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab/dds-54634_Page_11_Image_0001.jpg)
 
 # Looking at the material, what do we need to mark up?
 
 - Identification information, page numbers, sources
-- "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination
+- "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination thereof
 - within the chunks, we can identify formal units such as
     + a picture, 
     + a caption
@@ -141,7 +147,7 @@ Consular letters, such as the ones above are usually kept in files. If we consid
                 <!-- links to image files -->
             </facsimile>
             <text>
-                <!-- transcription of the document 
+                <!-- transcription of the document -->
             </text>
         </TEI>
         <!-- More <TEI>elements -->
@@ -323,17 +329,65 @@ The `<floatingText>` element can appear within any division level element in the
         <!-- more -->
     </p>
 
-# Document order vs. XML order
+# Document order vs. XML order 1
 
 The order of XML encoding does not necessarily reflect the order of the source document. Compare:
 
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
 
-![Postcard, Damascus to Istanbul, 27 Sep 1916](images/postcard-ottoman2.png)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+
+--------------
+
+... to that:
+
+    <div type="postcard">
+        <div type="address">
+          <p>Mr. &amp; Mrs. Robt. Graves
+          <lb/>Skiff St.
+          <lb/>Centreville
+          <lb/>Hamden
+          <lb/> Conn.
+          <lb/>United States, America</p>
+        </div>
+        <div type="prose">
+            <dateline><date when="1912-04-25">Apr. 25/12</date></dateline>
+            <p>Dear Friends,
+            <lb/>Heartiest greetings
+            <lb/>from the Holy Land.</p>
+            <byline>Your Pastor
+            <lb/><persName>Fredie Lent</persName></byline>
+        </div>
+        <div type="postmark">
+            <div type="dateStamp">
+                <dateline xml:lang="de">
+                    <placeName>BEIRUT</placeName>
+                    <lb/><date when="1912-04-26">26/4</date>
+                    <lb/><orgName>Deutsche Post</orgName>
+                </dateline>
+            </div>
+            <div type="postageStamp" xml:lang="de">
+                <graphic>
+                    <desc>a postage stamp</desc>
+                </graphic>
+                <add><measure commidity="currency" unit="frc" quanity="0.10">10 Centimes</measure></add>
+            </div>
+        </div>
+    </div>
+
+# Document order vs. XML order 2
+
+The order of XML encoding does not necessarily reflect the order of the source document. Compare:
+
+<!-- This is a good point and should be emphasized. The example should be changed -->
+<!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
+
 ![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
 
 --------------
+
+... to that:
 
     <div type="postcard">
         <div type="address">
@@ -343,23 +397,31 @@ The order of XML encoding does not necessarily reflect the order of the source d
             <!-- text here -->
         </div>
         <div type="postmark">
-            <div type="advert">
-                <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
-            </div>
             <div type="dateStamp">
-                <dateline>
-                    <placeName>SCARBOROUGH</placeName>
-                    <lb/><time>6.30 PM</time>
-                    <lb/>
+                <dateline xml:lang="ar">
+                    <placeName>شام</placeName>
+                    <lb/>١
+                    <lb/><date when="1917-06-15">٣٣٣-٦-١٥</date>
+                </dateline>
+                <dateline xml:lang="fr">
+                    <date when="1917-06-15">15-6-917</date>
+                    <lb/>1
+                    <lb/><placeName>Damas</placeName>
                 </dateline>
             </div>
-            <div type="advert">
-                <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
+            <div type="censorStamp" xml:lang="ota">
+                <gap/>
+                <note type="fn">the censor's stamp</note>
+            </div>
+            <div type="postageStamp" xml:lang="ota">
+                <graphic><!-- the image --></graphic>
+                <measure commidity="currency" unit="ops" quanity="0.25">10 Paras</measure>
             </div>
         </div>
     </div>
 
-#Core elements
+
+# Core elements
 
 The *core* module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:
 
@@ -383,19 +445,7 @@ The *core* module of the TEI groups together elements which may appear in any ki
 
 Example
 
-
-
-<!-- 
-    <p>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى
-    <lb/><quote>صدرت ارادة حضرة صاحب الخلافة العظمى
-        <lb/>بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
-        <lb/>تشكيله في القانون الاساسي الذي هو من تأسيس
-        <lb/>حضرة الخليفة الاعظم وبما انه ابلغ حكم هذه الارادة
-        <lb/>السنية الجليل الى جميع الولايات الشاهانية
-        <lb/>المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء
-        <lb/>حائزين الضفات المندرجة في <rs>القانون المذكور</rs></quote>
-        في<date>١٠ تموز سنة ١٣٢٤</date></p>
--->
+    <p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer <orgName>Cyntiana</orgName> which sailed from <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of March</date> arrived <date when="1893-04-24">Monday evening, April the 24th, at 7 P.M.</date> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <orgName>Hamidieh Hipodrome Company</orgName> to which we made reference in out last issue, promissing to write a special article on its arrival.</p>
 
 # Highlighting
 
@@ -420,8 +470,7 @@ Example
         <p>Islamic  <hi rend="italics">hijrī</hi>calendar: lunar calendar beginning the Year with 1 <hi rend="italics">Muḥarram</hi>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
         <p>E.g. 
             <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,   
-            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326,
-                            Thursday</date>.
+            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.
             </p>
     </calendar>
 
@@ -436,7 +485,7 @@ Quotation marks can be used to set off text for many reasons, so the TEI has the
 - `<bibl>` is used to give the source of a quote
 
 Example
-<!--
+
     <quote>
         <l>... How Earth herself empowered him with her trick,</l>
         <l>Gave him the grip and stringency of Winter,</l>
@@ -447,9 +496,9 @@ Example
             <date when="1917-07"/>
         </bibl>
     </quote>
--->
 
-     <quote>
+<!--      
+    <quote>
         <bibl>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى</bibl>
         <lb/>صدرت ارادة حضرة صاحب الخلافة العظمى
         <lb/>بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
@@ -460,6 +509,7 @@ Example
         <lb/>حائزين الضفات المندرجة في <rs>القانون المذكور</rs><
         bibl>في <date>١٠ تموز سنة ١٣٢٤</date></bibl>
     </quote>
+-->
 
 # Lists 
 
@@ -469,22 +519,17 @@ Example
 
 # Example: simple list
 
-    <p>
-        <hi>To which is added,</hi>A Collection of LETTERS of Friendship, and other Occasional LETTERS, written by
-        <list>
-            <item>
-                Mr. 
-                <hi>Dryden,</hi></item>
-            <item>Mr. 
-                <hi>Wycherly,</hi></item>
-            <item>Mr.—</item>
-            <item>Mr. 
-                <hi>Congreve,</hi></item>
-            <item>Mr. 
-                <hi>Dennis,</hi>
-                and other Hands.</item>
-        </list>
-    </p>
+    <p> The great <q>'coup d’Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were 
+    <list>
+        <item>(a) celebrations and festivities</item>
+        <item>(b) dismissal or <del>withdrawal</del><add>resignation</add> of
+            notoriously corrupt officials</item>
+        <item>(c) formation of clubs and associations</item>
+        <item>(d) parliamentary elections</item>
+        <item>(e) reforms in various governmental departments.</item>
+        <item>(f) release or <del><unclear/></del><add>rehabilitation</add>
+            <add><del>made to</del> of political exiles or persons</add></item>
+    </list></p>
 
 <!-- we can stop here and move to an exercise -->
 <!-- shift in topics -->
@@ -493,8 +538,8 @@ Example
 
 - `<note>`: contains a note or annotation
 - Notes can be those existing in the text, or provided by the editor of the electronic text
-- A @place attribute can be used to indicate the physical location of the note
-- Notes should usually be encoded where the identifier/mark first appears; notes can also be kept separately and point back to their location with a @target attribute
+- A `@place` attribute can be used to indicate the physical location of the note
+- Notes should usually be encoded where the identifier/mark first appears; notes can also be kept separately and point back to their location with a `@target` attribute
 
 Example:
 
@@ -509,12 +554,33 @@ Example:
 - Regularization:
     + `<orig>`: original form
     + `<reg>`: regularized form
-- Abbreviation:
+- Abbreviation 1:
     + `<abbr>`: abbreviated form
     + `<expan>`: expanded form
+- Abbreviation 2:
+    + `<am>`: abbreviation marker to be replaced by:
+    + `<ex>`: editorial expansion
 
 # Example: choice 1
 
+    <dateline>Dft
+        <lb/><persName>Sir Gerald A. Lowther</persName>
+        <lb/> K.C.M.G.,C.B., 
+        <lb/><placeName>
+            <choice>
+                <abbr>Cple</abbr>
+                <expan>Constantinople</expan>
+            </choice></placeName>
+        <lb/> No. <del>30</del><del>29</del> 30
+        <date when="1908-07-31">31st ult
+            <choice>
+                <am>.</am>
+                <ex>im</ex>
+            </choice>o
+        </date>
+    </dateline>
+
+<!--    
     <dateline xml:lang="ar">
         <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز 
             <choice>
@@ -528,6 +594,7 @@ Example:
                 <expan>غربي</expan>
             </choice>سنة ١٩٠٨</date>
     </dateline>
+-->
 
 # Example: choice 2
 
@@ -552,15 +619,9 @@ Example:
 
 # Example: additions, deletions, omissions
 
-    <p><add place="left">My </add>
-        <del rend="stroked">It's </del>
-        <add place="above">
-            <del rend="stroked">The </del>
-        </add>subject <del rend="stroked">of</del> is War, and the 
-        <unclear>pity </unclear>
-        of <del rend="stroked">it</del> War. 
-        <lb/>The Poetry is in the pity.</p>
+    <p><del>The Many</del><del><add>Loud</add></del> Popular demonstrations and <del>happy</del> <add>great</add> manifestations <add>of joy</add> with illuminations and street decorations <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del> <add>throughout the city <del>from</del> were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by <del>numerous masses</del><add>throngs</add> from neighbouring villages; though indeed few <add>present</add> could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add> <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
 
+![image of this page](../images/pro-fo/618-3/DSCN9862_150dpi.jpg)
 
 <!-- further shift in topics to named entities and linking -->
 
@@ -569,8 +630,8 @@ Example:
 - `<name>`: a name in the text, contains a proper noun or noun phrase
 - `<rs>`: a general-purpose name or referencing string 
 
-The @type attribute is useful for categorizing these, and they both
-also have @key, @ref, and @nymRef attributes.
+The `@type` attribute is useful for categorizing these, and they both
+also have `@key`, `@ref`, and `@nymRef` attributes.
 
 # Addresses
 
@@ -588,7 +649,7 @@ also have @key, @ref, and @nymRef attributes.
 - `<num>`: marks a number of any sort
 - `<measure>`: marks a quantity or commodity
 - `<measureGrp>`: groups specifications relating to a single object
-- While `<num>` has simple @type and @value attributes, `<measure>` has @type, @quantity, @unit and @commodity attributes
+- While `<num>` has simple `@type` and `@value` attributes, `<measure>` has `@type`, `@quantity`, `@unit` and `@commodity` attributes
 
 Example: numbers and measures
 
@@ -597,8 +658,8 @@ Example: numbers and measures
 
 # Dates
 
-- `<date>`: contains a date in any format and includes a @when attribute for a regularised form and a @calendar attribute to specify what calendar system
-- `<time>`: contains a time in any format and includes a @when attribute for a regularised form
+- `<date>`: contains a date in any format and includes a `@when` attribute for a regularised form and a `@calendar` attribute to specify what calendar system
+- `<time>`: contains a time in any format and includes a `@when` attribute for a regularised form
 
 Example
 
@@ -609,8 +670,8 @@ Example
 - `<ptr>`: defines a pointer to another location
 - `<ref>`: defines a reference to another location, with optional linking text
 - Both elements have:
-    + @target attribute taking a URI reference
-    + @cRef attribute for canonical referencing schemes
+    + `@target` attribute taking a URI reference
+    + `@cRef` attribute for canonical referencing schemes
 
 Example
 
@@ -622,7 +683,7 @@ Example
 
 - If converting an existing index, use nested lists. 
 - For auto-generated indexes:
-    + `<index>` (marks an index entry) with optional @indexName attribute
+    + `<index>` (marks an index entry) with optional `@indexName` attribute
     + The `<term>` element is used to mark a term inside an `<index>` element
     + The `<index>` element can self-nest for hierarchical index entries
 
@@ -677,9 +738,3 @@ Example
 And now we're going to move on to another exercise where you get to apply some of the more structural elements you have learned about.
 
 <!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
-
-
-
-
-
-
