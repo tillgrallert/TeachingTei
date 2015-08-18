@@ -1,6 +1,16 @@
+---
+title: Tei@DHSI 4 --- Metadata and the teiHeader
+date: 2 Jun 2015
+author: Till Grallert
+---
+
 # Topic: TEI Metadata
 
-The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
+<!-- to do:
+    - add <sourceDesc> for the ms
+    - example for <tagsDecl> -->
+
+The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
 Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
@@ -58,7 +68,7 @@ The TEI header has four main components:
 - `<profileDesc>` (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements 
 - `<revisionDesc>` (revision description) summarizes the revision history for a file.
 
-Only `<fileDesc>` is required; the others are optional.
+*Note*: Only `<fileDesc>` is required; the others are optional.
 
 # Example header: minimal required header
 
@@ -84,28 +94,28 @@ Only `<fileDesc>` is required; the others are optional.
 # Corpus header example
 
     <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
-        <!-- Add xmlns and version in <teiCorpus>-->
-        <teiHeader type="corpus">
-            <!-- corpus-level metadata here -->
-            <!-- Must contain one TEI header for the corpus. -->
+        <teiHeader>
+            <!-- some metadata relating to the file, the letters etc. are kept in -->
+            <fileDesc>
+                <titleStmt>
+                    <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway, reports on local politics etc., 1908</title>
+                </titleStmt>
+                <!-- ... -->
+            </fileDesc>
+            <!-- ... -->
         </teiHeader>
-        <TEI>
-            <teiHeader type="text">
-                <!-- metadata specific to this text here -->
-                <!-- Must contain a series of TEI elements, one for each text. -->
+        <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+            <teiHeader>
+                <!-- metadate relating to the individual letter etc. -->
             </teiHeader>
+            <facsimile>
+                <!-- links to image files -->
+            </facsimile>
             <text>
-                <!-- ... -->
+                <!-- transcription of the document -->
             </text>
         </TEI>
-        <TEI>
-            <teiHeader type="text">
-                <!-- metadata specific to this text here -->
-            </teiHeader>
-            <text>
-                <!-- ... -->
-            </text>
-        </TEI>
+        <!-- More <TEI>elements -->
     </teiCorpus>
 
 # Types of content in the TEI header
@@ -117,23 +127,27 @@ Only `<fileDesc>` is required; the others are optional.
 - declarations: Elements whose names end with the suffix Decl (e.g. `<subjectDecl>`, `<refsDecl>`) enclose information about specific encoding practices applied in the electronic text.
 - descriptions: Elements whose names end with the suffix Desc (e.g. `<settingDesc>`, `<projectDesc>`) contain a prose description, possibly, but not necessarily, organised under some specific headings by suggested sub-elements.
 
-# Example source: al-Iqbāl #257, 27 July 1908 
+# Example source: Kawkab America #55, 28 Apr 1908 
 
-![Front page of al-Iqbāl #257, 27 July 1908](../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
+
+---------------------
+
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
 
 # Example header: minimal required header
 
     <teiHeader xml:lang="en">
         <fileDesc>
             <titleStmt>
-                <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+                <title level="j">Kawkab America</title>
                 <title type="sub">Digital Edition</title>
             </titleStmt>
             <publicationStmt>
-                <p>Unpublished example edition for the DHI Beirut 2015</p>
+                <p>Unpublished example edition for the DHSI 2015</p>
             </publicationStmt>
             <sourceDesc>
-                <p>Transcribed from microfilm copies (classmark Mic-Na:164) located in the AUB library</p>
+                <p>Transcribed from digitised microfilm copies provided by the Center for Research Libraries</p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
@@ -163,18 +177,18 @@ Only `<fileDesc>` is required; the others are optional.
 Within `<titleStatement>`, you can repeat any of these elements as necessary, and document additional responsbilities with a generic `<respStmt>`
 
     <titleStmt xml:lang="en">
-        <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
+        <title level="j">Kawkab America</title>
         <title type="sub">Digital Edition</title>
-        <author xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</author>
-        <author xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</author>
+        <editor><persName>Dr. A. Arbeely</persName></editor>
+        <editor><persName>N.J. Arbeely</persName></editor>
         <respStmt>
             <resp>created the TEI files</resp>
             <name>Till Grallert</name>
         </respStmt>
     </titleStmt>
 
-<!-- - The title of the electronic work should be derived from the source text, but clearly distinguishable from it.
-- At a minimum, identify the author of the text and (where appropriate) the creator of the file or corpus -->
+- The title of the electronic work should be derived from the source text, but clearly distinguishable from it.
+- At a minimum, identify the author of the text and (where appropriate) the creator of the file or corpus
 
 # Edition and extent statements
 
@@ -195,15 +209,13 @@ Within `<titleStatement>`, you can repeat any of these elements as necessary, an
 # Example: publication statement
 
     <publicationStmt>
-        <publisher>AUB</publisher>
-        <distributor>Digital Humanities Institute Beirut</distributor>
+        <publisher>UVic</publisher>
+        <distributor>Digital Humanities Summer Institute</distributor>
         <authority>Till Grallert</authority>
-        <pubPlace>Beirut</pubPlace>
-        <date from="2015-03-02" to="2015-03-06">2-6 March 2015</date>
+        <pubPlace>Victoria, BC, Canada</pubPlace>
+        <date from="2015-06-01" to="2015-06-05">1-5 June 2015</date>
         <availability>
-            <licence>Licensed with a 
-                <ref target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</ref>
-                licence.</licence>
+            <licence>Licensed with a <ref target="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</ref> licence.</licence>
         </availability>
     </publicationStmt>
 
@@ -233,7 +245,7 @@ The optional `<notesStmt>` can contain notes on almost any aspect
 of the file or its contents:
 
     <notesStmt>
-        <note>Transcribed for DHI Beirut TEI Workshop</note>
+        <note>Transcribed for DHSI 2015 TEI Workshop</note>
     </notesStmt>
 
 These notes can be short statements, or many parargaphs long. Take care to encode such information with more precise elements elsewhere in the TEI header, when such elements are available. For example, text types, such as reportage or detective stories, should be described under `<profileDesc>`
@@ -250,38 +262,52 @@ All electronic works need to document their source, **even 'born digital' ones**
 - Specialised elements for spoken texts (`<recordingStmt>` etc.) and for manuscripts (`<msDesc>`) <!-- Discussed later! -->
 - Authority lists: `<listPerson>`, `<listPlace>`, `<listOrg>`
 
-# Example source: al-Iqbāl #257, 27 July 1908 
+# Example 1: Kawkab America #55, 28 Apr 1908 
 
-![Front page of al-Iqbāl #257, 27 July 1908](../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
 
-# Example: `<sourceDesc>`
+---------------------
 
-    <sourceDesc xml:lang="en">
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
+
+# Example 1: `<sourceDesc>`
+
+    <sourceDesc>
         <biblStruct>
-            <monogr>
-                <title level="j" xml:lang="ar-Latn-x-ijmes">al-Iqbāl</title>
-                <title level="j" xml:lang="ar">الاقبال </title>
-                <title level="j" type="sub" xml:lang="ar">جريدة اسبوعية تصدر كل يوم الاثنين في <placeName>بيروت</placeName></title>
-                <imprint>
-                    <publisher xml:lang="ar-Latn-x-ijmes">ʿAbd al-Bāsiṭ al-Unsī</publisher>
-                    <publisher xml:lang="ar-Latn-x-ijmes">Muḥammad al-Jisr</publisher>
-                    <date when="1908-07-27">Mon, 27 July 1908</date>
-                    <pubPlace>Beirut</pubPlace>
-                    <biblScope type="vol">7</biblScope>
-                    <biblScope type="issue">257</biblScope>
-                    <biblScope type="pp">1-8</biblScope>
-                </imprint>
-            </monogr>
-            <idno type="class-mark">Mic-Na:164</idno>
+           <monogr>
+              <title level="j" xml:lang="ar-Latn-x-ijmes">Kawkab Amīrkā</title>
+              <title level="j" xml:lang="en">The Star of America</title>
+              <title level="j" type="alternative" xml:lang="en">Kawkab America</title>
+              <title level="j" type="sub" xml:lang="ar-Latn-x-ijmes">Jarīda siyāsiyya ʿilmiyya tijāriyya adabiyya</title>
+              <editor xml:lang="ar-Latn-x-ijmes">
+                <persName><addName type="title">Dr.</addName> <forename>Ibrāhīm</forename> <surname>Arbīlī</surname></persName></editor>
+              <editor xml:lang="ar-Latn-x-ijmes">
+                <persName><forename>Najīb</forename> <forename>Yūsuf</forename> <surname>Arbīlī</surname></persName></editor>
+              <imprint>
+                 <publisher xml:lang="ar-Latn-x-ijmes">al-Maṭbaʿat al-Sharqiyya</publisher>
+                 <pubPlace xml:lang="ar-Latn-x-ijmes">Niyū Yūrk</pubPlace>
+                 <publisher xml:lang="en">The Oriental Publishing House</publisher>
+                 <pubPlace xml:lang="en">New York</pubPlace>
+                 <date notAfter="1894-04-14" notBefore="1893-04-15" xml:lang="en">1893-1894</date>
+                 <biblScope unit="volume">2</biblScope>
+              </imprint>
+           </monogr>
+           <idno type="callNumber"><!-- ideally this source should have a referenceable identifier --></idno>
         </biblStruct>
     </sourceDesc>
+
+<!-- # Example 2: PRO FO files
+
+![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+
+# Example 2: `<sourceDesc>` -->
 
 # Association between header and text
 
 By default everything asserted by a header is true of the text to which it is prefixed. This can be over-ridden:
 
 - as when a text header over-rides or amplifies a corpus-header setting
-- when model.declarable elements are selected by means of the @decls attribute (available on all model.declaring elements)
+- when model.declarable elements are selected by means of the `@decls` attribute (available on all model.declaring elements)
 - using special purpose selection/definition elements e.g. `<catRef>` and `<taxonomy>`
 
 Most components of the encoding description are declarable.
@@ -468,42 +494,53 @@ Example 1:
 -----------------------
 Example 2: 
 
-    <particDesc xml:lang="ar">
+    <particDesc xml:lang="en">
         <listPerson>
-            <head>People mentioned in the text</head>
-            <person xml:id="pers-1" xml:lang="ar">
-                <persName xml:lang="ar">عبد الحميد الثاني</persName>
-                <birth>
-                    <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1842" when-custom="1258-08-16">١٦ شعبان ١٢٥٨ </date>
-                </birth>
-                <death>
-                    <date when="1918">١٩١٨</date>
-                </death>
-                <idno type="GND">118646435</idno>
-                <idno type="VIAF">9880442</idno>
-                <state calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" notBefore-custom="1876-06-18" xml:lang="en">
-                    <p>Sultan of the Ottoman Empire, 1876-1909</p>
-                </state>
-                <note xml:lang="en">
-                    <ref target="https://en.wikipedia.org/wiki/Abdul_Hamid_II">Wikipedia article</ref>
-                </note>
-            </person>
-            <person xml:id="pers-2">
-                <persName xml:lang="ar">
-                    <forename xml:lang="ar">احمد</forename>
-                    <forename xml:lang="ar">حسن</forename>
-                    <surname xml:lang="ar">طباره</surname>
-                </persName>
-                <state xml:lang="en">
-                    <p>Editor of <orgName xml:lang="ar-Latn-x-ijmes">Thamarāt al-Funūn</orgName>.</p>
-                </state>
-            </person>
+           <head>People mentioned in the text</head>
+           <person xml:id="pers_1">
+              <persName xml:lang="ar">عبد الحميد الثاني</persName>
+              <persName xml:lang="en">Abdulhamid II</persName>
+              <birth>
+                 <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1842"
+                    when-custom="1258-08-16" xml:lang="ar">١٦ شعبان ١٢٥٨ </date>
+              </birth>
+              <death>
+                 <date when="1918" xml:lang="ar">١٩١٨</date>
+              </death>
+              <idno type="GND">118646435</idno>
+              <idno type="VIAF">9880442</idno>
+              <state calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal"
+                 notBefore-custom="1876-06-18" xml:lang="en">
+                 <p>Sultan of the Ottoman Empire, 1876-1909</p>
+              </state>
+              <note xml:lang="en">
+                 <ref target="https://en.wikipedia.org/wiki/Abdul_Hamid_II">Wikipedia
+                    article</ref>
+                 <ref target="http://d-nb.info/gnd/118646435">PND</ref> 
+              </note>
+           </person>
+           <person xml:id="pers_2">
+              <persName xml:lang="ar"><addName type="title">الدكتور</addName> <forename>ابراهيم</forename> <surname>عربيلي</surname></persName>
+              <persName xml:lang="en"><addName type="title">Dr.</addName> <forename>Abraham</forename> <surname>Arbeely</surname></persName>
+              <state from="1892-04-15" xml:lang="en">
+                 <p>Editor of <orgName>Kawkab America</orgName>.</p>
+              </state>
+           </person>
+           <person xml:id="pers_3">
+              <persName xml:lang="ar">
+                 <forename>نجيب</forename> <forename>يوسف</forename> <surname>عربيلي</surname></persName>
+              <persName xml:lang="en">
+                 <forename>Najeeb</forename> <forename>Joseph</forename> <surname>Arbeely</surname></persName>
+              <state from="1892-04-15" xml:lang="en">
+                 <p>Editor of <orgName>Kawkab America</orgName>.</p>
+              </state>
+           </person>
         </listPerson>
     </particDesc>
 
 # Revision Description: `<revisionDesc>`
 
-- A list of `<change>` elements, each with a @date and @who attributes, indicating significant stages in the evolution of a document. Most recent first.
+- A list of `<change>` elements, each with a `@date` and `@who` attributes, indicating significant stages in the evolution of a document. Most recent first.
 - Can be grouped into <listChange> elements. Used here it is about the electronic file, used in `<creation>` it is about the document.
 - Can be maintained manually, or done by means of a version control system (like SVN)
 
@@ -517,17 +554,15 @@ Example:
 
 # Some more metadata acronym soup
 
-- DCMI: Dublin Core Metadata Initiative: Very simple standard for describing web resources: 15 ‘lowest common
-denominator’ fields
-- RDF: Resource Description Framework: W3C standard for representing any kind of resource description using
-object oriented concepts: basis of the ‘semantic web’
-- EAD: Encoded Archival Description: International standard for describing archival collections
-- METS: Metadata Encoding and Transcription Standard: generalised method to integrate different metadata systems
+- [DCMI: Dublin Core Metadata Initiative](https://dublincore.org): Very simple standard for describing web resources: 15 'lowest common denominator' fields
+- RDF: Resource Description Framework: W3C standard for representing any kind of resource description using object oriented concepts: basis of the 'semantic web'
+- [EAD: Encoded Archival Description](http://www.loc.gov/ead/): International standard for describing archival collections
+- [METS: Metadata Encoding and Transcription Standard](http://www.loc.gov/standards/mets/mets-home.html): generalised method to integrate different metadata systems
 
 TEI provides a richer vocabulary than EAD or DCMI, and is less abstract than RDF or METS
 
 # Next
 
-That was a whirlwind tour of the kinds of things you can put in the `<teiHeader>`, however be aware that adding some of the other TEI modules can expand what is allowed in the header. (e.g. Manuscript Description)
-Now let's do an exercise where we make an existing `<teiHeader>` element better!
+That was a whirlwind tour of the kinds of things you can put in the `<teiHeader>`. However, be aware that adding some of the other TEI modules can expand what is allowed in the header. (e.g. Manuscript Description)
 
+Now let's do an exercise where we make an existing `<teiHeader>` element better!
