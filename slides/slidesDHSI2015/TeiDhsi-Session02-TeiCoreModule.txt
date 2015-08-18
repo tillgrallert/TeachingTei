@@ -702,7 +702,7 @@ Example
 - `<binaryObject>`: encoded binary data embedding a graphic or other object
 - The figures module provides `<figure>` and `<figDesc>` for more complex graphics
 
-Example
+# Example: Graphics
 
     <div type="article" xml:lang="ar">
         <head>تعريب الفرمان العالي السلطاني</head>
