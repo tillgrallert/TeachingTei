@@ -5,7 +5,7 @@ namespace s = "http://www.ascc.net/xml/schematron"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2015-04-17T00:38:33Z. .
+# Schema generated from ODD source 2015-08-18T19:59:22Z. .
 # TEI Edition: Version 2.8.0. Last updated on
 #	6th April 2015, revision 13197
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1121,15 +1121,16 @@ model.quoteLike_sequence = quote, cit
 model.quoteLike_sequenceOptional = quote?, cit?
 model.quoteLike_sequenceOptionalRepeatable = quote*, cit*
 model.quoteLike_sequenceRepeatable = quote+, cit+
-model.qLike = model.quoteLike | q | floatingText
-model.qLike_alternation = model.quoteLike_alternation | q | floatingText
-model.qLike_sequence = model.quoteLike_sequence, q, floatingText
+model.qLike = model.quoteLike | said | q | floatingText
+model.qLike_alternation =
+  model.quoteLike_alternation | said | q | floatingText
+model.qLike_sequence = model.quoteLike_sequence, said, q, floatingText
 model.qLike_sequenceOptional =
-  model.quoteLike_sequenceOptional?, q?, floatingText?
+  model.quoteLike_sequenceOptional?, said?, q?, floatingText?
 model.qLike_sequenceOptionalRepeatable =
-  model.quoteLike_sequenceOptionalRepeatable*, q*, floatingText*
+  model.quoteLike_sequenceOptionalRepeatable*, said*, q*, floatingText*
 model.qLike_sequenceRepeatable =
-  model.quoteLike_sequenceRepeatable+, q+, floatingText+
+  model.quoteLike_sequenceRepeatable+, said+, q+, floatingText+
 model.respLike = author | editor | respStmt
 model.divWrapper = byline | dateline | salute
 model.divTopPart = model.headLike | opener
@@ -1288,6 +1289,22 @@ hi =
   
   ## (highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]
   element hi { macro.paraContent, att.global.attributes, empty }
+said =
+  
+  ## (speech or thought) indicates passages thought or spoken aloud, whether explicitly indicated in the source or not, whether directly or indirectly reported, whether by real people or fictional characters. [3.3.3. Quotation]
+  element said {
+    macro.specialPara,
+    att.global.attributes,
+    att.ascribed.attributes,
+    
+    ## may be used to indicate whether the quoted matter is regarded as having been vocalized or signed.
+    [ a:defaultValue = "unknown" ]
+    attribute aloud { data.xTruthValue }?,
+    
+    ## may be used to indicate whether the quoted matter is regarded as direct or indirect speech.
+    [ a:defaultValue = "true" ] attribute direct { data.xTruthValue }?,
+    empty
+  }
 quote =
   
   ## (quotation) contains a phrase or passage attributed by the narrator or author to some agency external to the text. [3.3.3. Quotation 4.3.1. Grouped Texts]
