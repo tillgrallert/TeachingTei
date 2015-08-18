@@ -487,16 +487,15 @@ Quotation marks can be used to set off text for many reasons, so the TEI has the
 Example
 
     <quote>
-        <l>... How Earth herself empowered him with her trick,</l>
-        <l>Gave him the grip and stringency of Winter,</l>
-        <l>And all the ardour of th' invincible Spring;</l>
-        <bibl>
-            <author>Wilfred Owen</author>
-            <title>Letter to Leslie Gunston / The Wrestler</title>
-            <date when="1917-07"/>
-        </bibl>
+        The Sheikh <lb/>who from childhood hours had learned to <lb/>praise Allah for every blessing of life, <lb/>must have shouted a hearty "<said><foreign xml:lang="ar-Latn-EN">Alhamduli<lb/>la!</foreign></said> and <said><foreign xml:lang="ar-Latn-EN">Allah<gap/> Kariem!</foreign></said>" when after a <lb/>journey of some weeks and months by <lb/>land and by sea he saw in <placeName>New York</placeName> har<lb/>bor the majestic form of the Goddess of <lb/>Liberty with the beacon of light in her<lb/> outstretched hand bidding him welcome<lb/> to the "<q>home of the brave and the land of <lb/>the free.</q>"
+        <bibl>Kawkab America #55, 28 Apr 1893, p.1 (English)</bibl>
     </quote>
 
+<!-- <bibl>
+            <title level="j">Kawkab America</title>
+            <date when="1917-07"/>
+        </bibl>
+-->
 <!--      
     <quote>
         <bibl>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى</bibl>
@@ -621,9 +620,7 @@ Example:
 
     <p><del>The Many</del><del><add>Loud</add></del> Popular demonstrations and <del>happy</del> <add>great</add> manifestations <add>of joy</add> with illuminations and street decorations <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del> <add>throughout the city <del>from</del> were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by <del>numerous masses</del><add>throngs</add> from neighbouring villages; though indeed few <add>present</add> could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add> <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
 
-<!-- this is the wrong image -->
-
-![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+![PRO FO 618/3 Damascus Draft 33, "State of affairs in Damascus relating to the new Regime", Devey to Lowther 12 Aug. 1908](images/pro-fo/618-3/DSCN9862_150dpi.jpg)
 
 <!-- further shift in topics to named entities and linking -->
 
