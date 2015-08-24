@@ -6,13 +6,13 @@
       <fileDesc>
          <titleStmt>
             <title xml:lang="ar-Latn-x-ijmes">al-Qānūn al-Āsāsī al-ʿUthmānī</title>
-            <title type="sub">Digital Edition</title>
+            <title type="sub">TEI Edition</title>
             <respStmt>
                <resp>Translation from Ottoman to Arabic</resp>
                <persName>Aḥmad Fāris Shidyāq</persName>
             </respStmt>
             <respStmt>
-               <resp>TEI version</resp>
+               <resp>TEI edition</resp>
                <persName xml:id="pers_TG">Till Grallert</persName>
             </respStmt>
          </titleStmt>
