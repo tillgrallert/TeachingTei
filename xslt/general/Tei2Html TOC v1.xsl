@@ -85,7 +85,7 @@
     </xsl:template>
     
     <!-- create the anchor for each head in the text -->
-    <xsl:template match="head">
+    <xsl:template match="head" priority="2">
         <h1 id="{generate-id()}">
             <xsl:value-of select="."/>
         </h1>
