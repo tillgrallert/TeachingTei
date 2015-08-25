@@ -22,7 +22,8 @@
                 <head>
                     <title><xsl:apply-templates select="./teiHeader//titleStmt/title"/></title>
                     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-                    <link href="../css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"></link>
+                    <link href="https://cdn.rawgit.com/tillgrallert/TeachingTei/master/css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
+                    <link href="../css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
                 </head>
                 <body>
                     <xsl:apply-templates select="./text"/>
