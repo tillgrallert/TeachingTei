@@ -410,7 +410,7 @@
                     <elementSpec ident="lg" module="core" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
-                                <valList type="open" mode="replace">
+                                <valList type="semi" mode="replace">
                                     <valItem ident="bayt">
                                         <desc>Two-partite line of an Arabic Qasida</desc>
                                     </valItem>
@@ -421,7 +421,7 @@
                     <elementSpec ident="pb" module="core" mode="change">
                         <attList>
                             <attDef ident="ed" mode="change">
-                                <valList type="open" mode="replace">
+                                <valList type="semi" mode="replace">
                                     <valItem ident="print"/>
                                 </valList>
                             </attDef>
@@ -430,7 +430,7 @@
                     <elementSpec ident="note" module="core" mode="change">
                         <attList>
                             <attDef ident="type" mode="change">
-                                <valList type="open" mode="replace">
+                                <valList type="semi" mode="replace">
                                     <valItem ident="endnote"/>
                                     <valItem ident="footnote"/>
                                     <valItem ident="gloss"/>

@@ -6,7 +6,7 @@ namespace s = "http://www.ascc.net/xml/schematron"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2015-08-27T10:41:53Z. .
+# Schema generated from ODD source 2015-08-27T19:38:32Z. .
 # TEI Edition: Version 2.8.0. Last updated on
 #	6th April 2015, revision 13197
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1746,8 +1746,19 @@ note =
     att.typed.attribute.subtype,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
-    ## Sample values include: 1] endnote; 2] footnote; 3] gloss
-    attribute type { data.enumerated }?,
+    ## Suggested values include: 1] endnote; 2] footnote; 3] gloss
+    attribute type {
+      
+      ##
+      "endnote"
+      | 
+        ##
+        "footnote"
+      | 
+        ##
+        "gloss"
+      | xsd:Name
+    }?,
     
     ## indicates whether the copy text shows the exact place of reference for the note.
     [ a:defaultValue = "true" ] attribute anchored { data.truthValue }?,
@@ -1793,9 +1804,14 @@ pb =
     att.breaking.attributes,
     
     ## (edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.
-    ## Sample values include: 1] print
+    ## Suggested values include: 1] print
     attribute ed {
-      list { data.word+ }
+      list {
+        (
+         ##
+         "print"
+         | data.word)+
+      }
     }?,
     empty
   }
@@ -2028,8 +2044,13 @@ lg =
     att.typed.attribute.subtype,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
-    ## Sample values include: 1] bayt
-    attribute type { data.enumerated }?,
+    ## Suggested values include: 1] bayt
+    attribute type {
+      
+      ## Two-partite line of an Arabic Qasida
+      "bayt"
+      | xsd:Name
+    }?,
     empty
   }
 teiHeader =
