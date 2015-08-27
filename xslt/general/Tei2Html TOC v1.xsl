@@ -20,7 +20,7 @@
         <xsl:result-document href="{substring-before(base-uri(), '.TEIP5.xml')}-toc.html">
             <html> 
                 <head>
-                    <title><xsl:apply-templates select="./teiHeader//titleStmt/title"/></title>
+                    <title><xsl:apply-templates select="./teiHeader/fileDesc/titleStmt/title"/></title>
                     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
                     <link href="https://cdn.rawgit.com/tillgrallert/TeachingTei/master/css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
                     <link href="../css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
