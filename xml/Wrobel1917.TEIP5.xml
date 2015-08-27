@@ -882,7 +882,7 @@
                dann am 15. nachts und</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_17"/>
+                  <pb n="pb_16a" facs="#facs_17"/>
                   <div>
                      <head xml:id="head_7">Tafel 1</head>
                      <figure>
@@ -890,7 +890,7 @@
                            nach dem Orient auf dem Parkplatz
                            <placeName>Schöneberg</placeName></caption>
                      </figure>
-                     <pb facs="#facs_18"/>
+                     <pb n="pb_16b" facs="#facs_18"/>
                      <figure>
                         <caption>3800 Meter lange Kriegsbrücke bei
                            <placeName>Belgrad</placeName></caption>
@@ -1239,7 +1239,7 @@
                Autos ganz brauchbare Paßstraße geht</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_35"/>
+                  <pb n="pb_32a" facs="#facs_35"/>
                   <div>
                      <head>Tafel 2</head>
                      <figure>
@@ -1249,7 +1249,7 @@
                         <caption>Unsere Tankstelle <placeName>Bozanti</placeName> im
                               <placeName>Taurus</placeName></caption>
                      </figure>
-                     <pb facs="#facs_36"/>
+                      <pb n="pb_32b" facs="#facs_36"/>
                      <figure>
                         <caption>Ehrenkompagnie bei der Durchfahrt der Leiche des
                               <persName>Feldmarschalls Frhrn. v. der Goltz</persName> in
@@ -1588,7 +1588,7 @@
                Nordwest gegen Südost. Sie erreichen Höhen bis zu 50 m.</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_53"/>
+                   <pb n="pb_48a" facs="#facs_53"/>
                   <div>
                      <head xml:id="head_11">Tafel 3</head>
                      <figure>
@@ -1599,7 +1599,7 @@
                         <caption>Bei <placeName>Kut el Amara</placeName> gefangene
                            Engländer</caption>
                      </figure>
-                     <pb facs="#facs_54"/>
+                      <pb n="pb_48b" facs="#facs_54"/>
                      <figure>
                         <caption>Automobil-Unglück bei <placeName>Bozanti</placeName><lb/> Eine
                            Maschine der im Bau begriffenen <orgName>Taurus-Bahn</orgName> fuhr in
@@ -1947,7 +1947,7 @@
                Bevor ich die Ruinen besuchte, hatte ich die erforder-</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_71"/>
+                   <pb n="pb_64a" facs="#facs_71"/>
                   <div>
                      <head xml:id="head_17">Tafel 4</head>
                      <figure>
@@ -1958,7 +1958,7 @@
                         <caption>Mit <persName>Kapitänleutnant v. Mücke</persName> bei
                               <placeName>Tarsus</placeName> auf einer Erkundungsfahrt</caption>
                      </figure>
-                     <pb facs="#facs_72"/>
+                      <pb n="pb_64b" facs="#facs_72"/>
                      <figure>
                         <caption>Bei Gaswerk <placeName>Beirut</placeName></caption>
                      </figure>
