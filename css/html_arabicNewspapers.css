@@ -17,7 +17,7 @@
     font-size:100%;
 }
 html {
-    max-width:800px;
+    max-width:900px;
     height:100%;
     margin-left:auto;
     margin-right:auto;
@@ -51,10 +51,6 @@ span.cRef {
 
 div.cSec {
     border-bottom:black double;
-}
-
-div.cArt {
-    max-width:600px;
 }
 
 .cPN {
