@@ -4,8 +4,12 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xd="http://www.pnp-software.com/XSLTdoc"
+    xmlns:opf="http://www.idpf.org/2007/opf" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/" 
+    xmlns:xi="http://www.w3.org/2001/XInclude"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs"
+    exclude-result-prefixes="xs xd xi dc opf html"
     version="2.0">
     
     <!-- this stylesheet contains various templates used by other stylesheets -->
