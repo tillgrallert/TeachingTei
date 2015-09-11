@@ -46,6 +46,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2015-09-11" who="#pers_TG">Corrected the markup for the table of content</change>
          <change when="2015-09-11" who="#pers_TG"> added <att>mimeType</att> to all <gi>graphic</gi> elements in order to facilitate the use of my customisation of TEI Boilerplate.</change>
          <tei:change when="2015-08-17" who="#pers_TG">Generated <tei:gi>facsimile</tei:gi> by collecting all links
             from the <tei:att>facs</tei:att> attributes. All <tei:att>facs</tei:att> throughout the
@@ -488,26 +489,18 @@
          <div>
             <head xml:id="head_4">Inhalt. Seite</head>
             <list type="unordered">
-               <item>Vorwort Z</item>
-               <item>Von Berlin nach Konstantinopel in 25 Tagen<ref target="#pb_5">5</ref>
-               </item>
-               <item>Von Konstantinopel quer durch Kleinasien bis zum Taurus.<ref target="#pb_18"
-                     >18</ref>
-               </item>
-               <item>Meine Fahrt nach der Sinai-Halbinsel zl</item>
-               <item>Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. 4?</item>
-               <item>In Palästina<ref target="#pb_50">50</ref>
-               </item>
-               <item>Beirut, der Libanon und die Phönizische Küste 56</item>
-               <item>Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07">7.
-                     Mai 1916</tei:date> 5?</item>
-               <item>Eine vierzehnfache Hinrichtung in Beirut KI</item>
-               <item>Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Jedern des
-                  Libanon vZ</item>
-               <item>Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus 7ö</item>
-               <item>Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit
-                  und Rückkehr<ref target="#pb_85">85</ref>
-               </item>
+                <item>Vorwort <ref target="#pb_3">3</ref></item>
+               <item>Von Berlin nach Konstantinopel in 25 Tagen <ref target="#pb_5">5</ref></item>
+               <item>Von Konstantinopel quer durch Kleinasien bis zum Taurus. <ref target="#pb_18">18</ref></item>
+                <item>Meine Fahrt nach der Sinai-Halbinsel <ref target="#pb_31">31</ref></item>
+               <item>Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. <ref target="#pb_43">43</ref></item>
+               <item>In Palästina <ref target="#pb_50">50</ref></item>
+                <item>Beirut, der Libanon und die Phönizische Küste <ref target="#pb_56">56</ref></item>
+               <item>Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07">7. Mai 1916</tei:date> <ref target="#pb_57">57</ref></item>
+               <item>Eine vierzehnfache Hinrichtung in Beirut <ref target="#pb_61">61</ref></item>
+               <item>Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Zedern des Libanon <ref target="#pb_68">68</ref></item>
+               <item>Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus <ref target="#pb_76">76</ref></item>
+               <item>Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit und Rückkehr<ref target="#pb_85">85</ref></item>
                <item>Rückkehr nach Deutschland und allgemeines Schlußwort … 8?</item>
             </list>
          </div>
@@ -2214,7 +2207,7 @@
                balkonähnlichen Vorbau hinten in der Mitte, unmittelbar rückwärts von uns befand sich
                ein Holzverschlag, in dem mehrere dunkle <pb facs="#facs_89" n="81" xml:id="pb_81"/>
                Öffnungen das Arbeitsfeld des Darstellers vermuten ließen.</p>
-            <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½9 Uhr waren nur unten vorn zehn
+            <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½ 9 Uhr waren nur unten vorn zehn
                Personen anwesend; der Diener, der uns Kaffee brachte, versicherte uns stets, es
                begönne „sofort”. Endlich um 9 Uhr hob sich der Vorhang, eine kleine Bühne wurde
                sichtbar und auf ihr — eine arabische, europäisch zurechtgestutzte Musiktruppe von
@@ -2393,14 +2386,12 @@
                19. August im Lager zu Tscham Alan empfangen, doch durfte ich mich nicht lange des
                Beisammenseins mit den Kameraden und der inzwischen fertig gewordenen „Villa" freuen,
                denn unser Arzt stellte durch die Blutuntersuchung fest, daß ich weder
-               Nierenentzündung noch Rückfallfieber, fondern Ns- laria ti-opioa gehabt hatte und
+               Nierenentzündung noch Rückfallfieber, sondern Ns- laria ti-opioa gehabt hatte und
                noch hatte. 38 Pfund hatte ich abgenommen und fühlte mich daher recht elend. So wurde
-               ich denn mit dem nächsten nach Norden gehenden Transport am 21. August als krank nach
-               Konstantinopel geschickt, und von hier nach längerer Beobachtung am 5. September mit
+               ich denn mit dem nächsten nach Norden gehenden Transport am <date>21. August</date> als krank nach
+               Konstantinopel geschickt, und von hier nach längerer Beobachtung am <date>5. September</date> mit
                dem Balkanzug zu einer längeren Kur nach Deutschland beordert. Dort wurde ich nach
-               wieder- <pb facs="#facs_98" n="90" xml:id="pb_90"/>
-            </p>
-            <p xml:id="p_32">holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
+               wieder-<pb facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
                garnisondienstfähig meinem Ersatztruppen teil Berlin überwiesen. Schwer, recht schwer
                war mir der Abschied vom Tscham Alan geworden. Ich hatte eine teilweise schwere, doch
                aber so sehr ereignisreiche Zeit hinter mir, wie sie selten jemand geboten wird. Wer
