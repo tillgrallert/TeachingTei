@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>TEI Jaraid</title>
-                <author>Till Grallert</author>
+                <author xml:id="pers_TG">Till Grallert</author>
                 <editor xml:id="sbauman.emt">Syd Bauman</editor>
                 <editor xml:id="LB">Lou Burnard</editor>
                 <editor xml:id="SR">Sebastian Rahtz</editor>
@@ -27,6 +27,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2015-09-12" who="#pers_TG">Made changes to the list of values in <att>xml:id</att>.</change>
             <change when="2011-03-26" who="#SR">rewrite as new-style ODD </change>
             <change when="2007-08-12" who="#LB">Removed further elements added since this ODD was first created </change>
             <change when="2007-04-09" who="#LB">Added prose and reorganized structure to make it more document-like; changed deletion of
@@ -170,6 +171,12 @@
                                     </valItem>
                                     <valItem ident="ar-Latn-x-dmg">
                                         <desc>Arabic in Latin script following the DMG transcription</desc>
+                                    </valItem>
+                                    <valItem ident="en-Arab-AR">
+                                        <desc>English transcribed into Arabic script following common Levantine Arabic practices</desc>
+                                    </valItem>
+                                    <valItem ident="fr-Arab-AR">
+                                        <desc>French transcribed into Arabic script following common Levantine Arabic practices</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
