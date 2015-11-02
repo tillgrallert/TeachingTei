@@ -70,6 +70,8 @@ can point from the name instance to the `@xml:id` of metadata about the entity, 
 
 *Note*: `@nymRef` is particularly important for multi-lingual examples:
 
+
+~~~{.xml}
     <persName xml:lang="ar">
         <forename nymRef="#nym1">شكري</forename>
         <addName type="title" nymRef="#nym2">باشا</addName>
@@ -84,24 +86,31 @@ can point from the name instance to the `@xml:id` of metadata about the entity, 
         <addName type="title" nymRef="#nym2">Pasha</addName>
     </persName>
 
+~~~
 
 # Examples
 
+~~~{.xml}
     <p>... <name ref="#jsbach" type="person">Johann Sebastian Bach</name> the German composer was born in 1685... </p>
+~~~
 
 or
 
+~~~{.xml}
     <p>The <orgName ref="entities:otc">Oriental Theatre Company</orgName> numbering 54 people, and under the direction of <persName ref="#pers_3">Mr. Butros Tanfous</persName> arrived this week at the <orgName ref="#org_usib">U.S. Immigration Bureau</orgName>. Several Oriental specialists from various parts of Turkey have been secured in order to give the American public a correct idea of the customs and manners of the people in different parts of the Empire.</p>
-
+~~~
 
 # References take many forms
 
 Even within a single language, in a single document, there may be many ways of referencing the same person:
 
+~~~{.xml}
     <persName>Leslie Gunston</persName>.... <persName>Leslie</persName> .... <. rs>Wilfred's cousin</rs>
+~~~
 
 The `@ref` can be used simply to combine all references to a specified person:
 
+~~~{.xml}
     <persName ref="#LG">Leslie Gunston</persName>.... 
     <persName ref="#LG">Leslie</persName> ....
     <rs ref="#LG">Wilfred's cousin</rs> 
@@ -110,14 +119,18 @@ The `@ref` can be used simply to combine all references to a specified person:
         <persName>Leslie Gunston</persName>
         <!-- everything we want to say about Leslie -->
     </person>
+~~~
 
 # References are also ambiguous
 
+~~~{.xml}
     <s>Jean likes <name ref="#NN123">Nancy</name></s>
+~~~
 
 Using a more precise element (`<persName>` or `<placeName>`) is
 one way of resolving the ambiguity; another is to follow the pointer:
 
+~~~{.xml}
     <person xml:id="NN123"> 
         <persName>
             <forename>Nancy</forename>
@@ -125,15 +138,17 @@ one way of resolving the ambiguity; another is to follow the pointer:
         </persName>
         <!-- ... -->
     </person>
+~~~
 
 or:
 
+~~~{.xml}
     <place xml:id="N123">
         <placeName notBefore="1400">Nancy</placeName>
         <placeName notAfter="0056">Nantium</placeName>
         <!-- ... -->
     </place>
-
+~~~
 
 # Components of `<persName>` elements
 
@@ -149,6 +164,7 @@ or:
     </persName>
 -->
 
+~~~{.xml}
     <person xml:id="pers_2">
       <persName xml:lang="ar">
         <addName type="title" nymRef="#nym1">الدكتور</addName> 
@@ -169,6 +185,7 @@ or:
          <forename  nymRef="#nym5">Joseph</forename> 
          <surname nymRef="#nym3">Arbeely</surname></persName>
     </person>
+~~~
 
 Not to mention: `<roleName>` (e.g. 'Emperor'), `<genName>` (eg 'the Elder') `<addName>` (e.g. 'Hammer of the Scots'), `<nameLink>` a link between components (e.g. 'van') etc. all of which can carry `@type` attributes
 
@@ -203,10 +220,13 @@ I suggest to add the following values to the `@type` attribute of `<addName>`
 
 # Example
 
+~~~{.xml}
     <persName xml:lang="ar"> جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني</persName>
+~~~
 
 Could be marked up as:
 
+~~~{.xml}
     <persName xml:lang="ar">
         <addName type="nisbah">جزائري</addName>
         <addName type="honorific" xml:lang="ota">زاده</addName>
@@ -219,9 +239,7 @@ Could be marked up as:
         </addName>
         <surname type="laqab">الحسني</surname>
     </persName>
-
-
-
+~~~
 
 # Components of place names
 
@@ -231,10 +249,12 @@ Could be marked up as:
 
 For example:
 
+~~~{.xml}
     <placeName>
         <geogFeat>Mont</geogFeat> 
         <geogName>Blanc</geogName>
     </placeName>
+~~~
 
 # Geo-political place names
 
@@ -254,12 +274,14 @@ Temporal information can be encoded with:
 
 Example: 
 
+~~~{.xml}
     <div type="article" xml:lang="en">
         <head xml:lang="ar">المرمح الحميدي</head>
         <head xml:lang="en">The Hamidieh Hipodrome</head>
         <ab rend="center">---</ab>
         <p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer <orgName>Cyntiana</orgName> whitch sailed from <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of March</date> arrived <date when="1893-04-24">Monday evening, April the 24th, <time>at 7 P.M.</time></date> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <orgName>Hamidieh Hipodrome Company</orgName> to which we made reference in out last issue, promissing to write a special article on its arrival.</p>
     </div>
+~~~
 
 <!--
     <div type="article">
@@ -296,27 +318,33 @@ All other calendars--in our case this means *hijrī*, *mālī*, and *rūmī*--sh
 
 # The islamic calendar: *hijrī*
 
+~~~{.xml}
     <calendar xml:id="cal_islamic">
       <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
       <p>E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
     </calendar>
+~~~
 
 *Note*: The official **XPath** specifications have a bug that prevents the computation of Islamic *hijrī* dates. To remedy this and other issues, I wrote a number of *XSLT stylesheets* for converting dates between the four calendars in use in the Ottoman Empire, which can be found on [GitHub](https://github.com/tillgrallert/xslt-calendar-conversion) ([https://github.com/tillgrallert/xslt-calendar-conversion](https://github.com/tillgrallert/xslt-calendar-conversion)).
 
 # The (reformed) Julian calendar: *rūmī*, *sharqī*
 
+~~~{.xml}
     <calendar xml:id="cal_julian">
       <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as <hi>rūmī</hi>. Arabic newspapers usually labelled this calendar as <hi>sharqī</hi>.</p>
       <p>All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars, even-numbered) year at the end of February (the last day of the old Julian calendar). The Gregorian calendar suppresses this rule in centesimal years that cannot be divided by 400. This difference creates a growing offset between Gregorian and Julian calendars: while 1900 R was a leap year, 1900 was not, which in turn caused the difference between the Gregorian calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900) onwards.</p>
       <p>E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
     </calendar>
+~~~
 
 # The Ottoman fiscal calendar: *mālī*, *rūmī* (sic!)
 
+~~~{.xml}
     <calendar xml:id="cal_ottomanfiscal">
       <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as <hi>mālī</hi> and sometimes, confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year would complete within a single solar <hi>mālī</hi> year. In this case the counting of the <hi>mālī</hi> years skipped a year to catch up with the faster <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the consolidated debt repayment program for 1872 (1288 M instead of 1289 M), synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was henceforth abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years preceded their <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).</p>
       <p>E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
     </calendar>
+~~~
 
 # Next:
 
