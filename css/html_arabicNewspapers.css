@@ -8,13 +8,21 @@
     text-align:right;
     font-family:"Scheherazade", "Lateef", Sans-Serif, Serif;
     font-weight:normal;
+    font-size:110%;
 }
 
 [lang="en"], [lang="fr"], [lang="ar-Latn-x-ijmes"] {
     direction:ltr;
     text-align:left;
+    font-size:100%;
 }
-
+html {
+    max-width:900px;
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0.01em;
+}
 body {
          font-size:1em;
          padding-left:2em;
@@ -43,10 +51,6 @@ span.cRef {
 
 div.cSec {
     border-bottom:black double;
-}
-
-div.cArt {
-    max-width:600px;
 }
 
 .cPN {

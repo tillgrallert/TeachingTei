@@ -20,9 +20,10 @@
         <xsl:result-document href="{substring-before(base-uri(), '.TEIP5.xml')}-toc.html">
             <html> 
                 <head>
-                    <title><xsl:apply-templates select="./teiHeader//titleStmt/title"/></title>
+                    <title><xsl:apply-templates select="./teiHeader/fileDesc/titleStmt/title"/></title>
                     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-                    <link href="../css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"></link>
+                    <link href="https://cdn.rawgit.com/tillgrallert/TeachingTei/master/css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
+                    <link href="../css/html_arabicNewspapers.css" rel="stylesheet" type="text/css"/>
                 </head>
                 <body>
                     <xsl:apply-templates select="./text"/>
@@ -84,7 +85,7 @@
     </xsl:template>
     
     <!-- create the anchor for each head in the text -->
-    <xsl:template match="head">
+    <xsl:template match="head" priority="2">
         <h1 id="{generate-id()}">
             <xsl:value-of select="."/>
         </h1>

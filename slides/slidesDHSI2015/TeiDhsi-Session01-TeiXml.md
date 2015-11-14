@@ -1,5 +1,5 @@
 ---
-title: Tei@DHSI 1 --- Introduction to Markup, XML, and the TEI
+title: "Tei@DHSI 1 --- Introduction to Markup, XML, and the TEI"
 date: 1 June 2015
 author: Till Grallert
 ---

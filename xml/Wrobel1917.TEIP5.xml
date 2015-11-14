@@ -15,7 +15,7 @@
             </author>
             <respStmt>
                <resp>TEI edition</resp>
-               <persName xml:id="p_TG">
+               <persName xml:id="pers_TG">
                   <forename>Till</forename>
                   <surname>Grallert</surname>
                </persName>
@@ -29,7 +29,7 @@
                <monogr>
                   <title level="m">Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse
                      während des Feldzuges 1916 als Führer einer Kraftwagen-Abteilung</title>
-                  <author>
+                   <author ref="https://viaf.org/viaf/279081644">
                      <forename>Heinrich</forename>
                      <surname>Wrobel</surname>
                      <addName>Hauptmann</addName>
@@ -46,7 +46,9 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
-         <tei:change when="2015-08-17">Generated <tei:gi>facsimile</tei:gi> by collecting all links
+          <change when="2015-09-11" who="#pers_TG">Corrected the markup for the table of content</change>
+         <change when="2015-09-11" who="#pers_TG"> added <att>mimeType</att> to all <gi>graphic</gi> elements in order to facilitate the use of my customisation of TEI Boilerplate.</change>
+         <tei:change when="2015-08-17" who="#pers_TG">Generated <tei:gi>facsimile</tei:gi> by collecting all links
             from the <tei:att>facs</tei:att> attributes. All <tei:att>facs</tei:att> throughout the
             text link back to <tei:gi>surface</tei:gi> by means of
             <tei:att>xml:id</tei:att>s.</tei:change>
@@ -54,503 +56,403 @@
    </teiHeader>
    <tei:facsimile>
       <tei:surface xml:id="facs_1">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0003"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0003"
             xml:id="facs_1_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_2">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0004"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0004"
             xml:id="facs_2_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_3">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0005"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0005"
             xml:id="facs_3_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_4">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0006"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0006"
             xml:id="facs_4_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_5">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0007"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0007"
             xml:id="facs_5_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_6">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0008"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0008"
             xml:id="facs_6_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_7">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0009"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0009"
             xml:id="facs_7_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_8">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0010"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0010"
             xml:id="facs_8_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_9">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
             xml:id="facs_9_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_10">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0012"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0012"
             xml:id="facs_10_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_11">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0013"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0013"
             xml:id="facs_11_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_12">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0014"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0014"
             xml:id="facs_12_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_13">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0015"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0015"
             xml:id="facs_13_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_14">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0016"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0016"
             xml:id="facs_14_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_15">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0017"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0017"
             xml:id="facs_15_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_16">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
             xml:id="facs_16_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_17">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0019&amp;rotate=90"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0019&amp;rotate=90"
             xml:id="facs_17_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_18">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0020"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0020"
             xml:id="facs_18_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_19">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0021"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0021"
             xml:id="facs_19_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_20">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0022"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0022"
             xml:id="facs_20_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_21">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0023"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0023"
             xml:id="facs_21_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_22">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0024"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0024"
             xml:id="facs_22_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_23">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0025"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0025"
             xml:id="facs_23_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_24">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0026"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0026"
             xml:id="facs_24_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_25">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0027"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0027"
             xml:id="facs_25_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_26">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0028"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0028"
             xml:id="facs_26_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_27">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0029"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0029"
             xml:id="facs_27_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_28">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0030"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0030"
             xml:id="facs_28_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_29">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0031"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0031"
             xml:id="facs_29_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_30">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0032"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0032"
             xml:id="facs_30_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_31">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0033"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0033"
             xml:id="facs_31_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_32">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0034"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0034"
             xml:id="facs_32_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_33">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0035"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0035"
             xml:id="facs_33_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_34">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0036"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0036"
             xml:id="facs_34_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_35">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0037"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0037"
             xml:id="facs_35_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_36">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0038&amp;rotate=90"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0038&amp;rotate=90"
             xml:id="facs_36_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_37">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0039"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0039"
             xml:id="facs_37_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_38">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0040"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0040"
             xml:id="facs_38_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_39">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0041"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0041"
             xml:id="facs_39_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_40">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0042"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0042"
             xml:id="facs_40_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_41">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0043"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0043"
             xml:id="facs_41_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_42">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0044"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0044"
             xml:id="facs_42_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_43">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0045"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0045"
             xml:id="facs_43_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_44">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0046"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0046"
             xml:id="facs_44_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_45">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0047"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0047"
             xml:id="facs_45_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_46">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0048"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0048"
             xml:id="facs_46_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_47">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0049"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0049"
             xml:id="facs_47_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_48">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0050"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0050"
             xml:id="facs_48_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_49">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0051"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0051"
             xml:id="facs_49_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_50">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0052"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0052"
             xml:id="facs_50_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_51">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0053"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0053"
             xml:id="facs_51_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_52">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0054"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0054"
             xml:id="facs_52_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_53">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0055"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0055"
             xml:id="facs_53_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_54">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0056"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0056"
             xml:id="facs_54_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_55">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0057"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0057"
             xml:id="facs_55_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_56">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0058"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0058"
             xml:id="facs_56_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_57">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0059"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0059"
             xml:id="facs_57_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_58">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0060"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0060"
             xml:id="facs_58_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_59">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0061"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0061"
             xml:id="facs_59_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_60">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0062"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0062"
             xml:id="facs_60_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_61">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0063"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0063"
             xml:id="facs_61_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_62">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0064"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0064"
             xml:id="facs_62_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_63">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0065"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0065"
             xml:id="facs_63_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_64">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0066"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0066"
             xml:id="facs_64_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_65">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0067"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0067"
             xml:id="facs_65_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_66">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0068"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0068"
             xml:id="facs_66_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_67">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0069"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0069"
             xml:id="facs_67_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_68">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0070"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0070"
             xml:id="facs_68_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_69">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0071"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0071"
             xml:id="facs_69_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_70">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0072"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0072"
             xml:id="facs_70_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_71">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0073"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0073"
             xml:id="facs_71_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_72">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0074"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0074"
             xml:id="facs_72_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_73">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0075"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0075"
             xml:id="facs_73_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_74">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0076"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0076"
             xml:id="facs_74_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_75">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0077"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0077"
             xml:id="facs_75_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_76">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0078"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0078"
             xml:id="facs_76_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_77">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0079"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0079"
             xml:id="facs_77_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_78">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0080"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0080"
             xml:id="facs_78_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_79">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0081"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0081"
             xml:id="facs_79_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_80">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0082"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0082"
             xml:id="facs_80_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_81">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0083"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0083"
             xml:id="facs_81_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_82">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0084"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0084"
             xml:id="facs_82_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_83">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0085"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0085"
             xml:id="facs_83_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_84">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0086"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0086"
             xml:id="facs_84_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_85">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0087"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0087"
             xml:id="facs_85_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_86">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0088"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0088"
             xml:id="facs_86_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_87">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0089"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0089"
             xml:id="facs_87_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_88">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0090"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0090"
             xml:id="facs_88_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_89">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0091"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0091"
             xml:id="facs_89_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_90">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0092"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0092"
             xml:id="facs_90_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_91">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
             xml:id="facs_91_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_92">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0094"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0094"
             xml:id="facs_92_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_93">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0095"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0095"
             xml:id="facs_93_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_94">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0096"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0096"
             xml:id="facs_94_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_95">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0097"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0097"
             xml:id="facs_95_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_96">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0098"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0098"
             xml:id="facs_96_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_97">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0099"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0099"
             xml:id="facs_97_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_98">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0100"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0100"
             xml:id="facs_98_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_99">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0101"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0101"
             xml:id="facs_99_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_100">
-         <tei:graphic
-            url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
             xml:id="facs_100_1"/>
       </tei:surface>
    </tei:facsimile>
@@ -587,26 +489,18 @@
          <div>
             <head xml:id="head_4">Inhalt. Seite</head>
             <list type="unordered">
-               <item>Vorwort Z</item>
-               <item>Von Berlin nach Konstantinopel in 25 Tagen<ref target="#pb_5">5</ref>
-               </item>
-               <item>Von Konstantinopel quer durch Kleinasien bis zum Taurus.<ref target="#pb_18"
-                     >18</ref>
-               </item>
-               <item>Meine Fahrt nach der Sinai-Halbinsel zl</item>
-               <item>Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. 4?</item>
-               <item>In Palästina<ref target="#pb_50">50</ref>
-               </item>
-               <item>Beirut, der Libanon und die Phönizische Küste 56</item>
-               <item>Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07">7.
-                     Mai 1916</tei:date> 5?</item>
-               <item>Eine vierzehnfache Hinrichtung in Beirut KI</item>
-               <item>Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Jedern des
-                  Libanon vZ</item>
-               <item>Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus 7ö</item>
-               <item>Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit
-                  und Rückkehr<ref target="#pb_85">85</ref>
-               </item>
+                <item>Vorwort <ref target="#pb_3">3</ref></item>
+               <item>Von Berlin nach Konstantinopel in 25 Tagen <ref target="#pb_5">5</ref></item>
+               <item>Von Konstantinopel quer durch Kleinasien bis zum Taurus. <ref target="#pb_18">18</ref></item>
+                <item>Meine Fahrt nach der Sinai-Halbinsel <ref target="#pb_31">31</ref></item>
+               <item>Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. <ref target="#pb_43">43</ref></item>
+               <item>In Palästina <ref target="#pb_50">50</ref></item>
+                <item>Beirut, der Libanon und die Phönizische Küste <ref target="#pb_56">56</ref></item>
+               <item>Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07">7. Mai 1916</tei:date> <ref target="#pb_57">57</ref></item>
+               <item>Eine vierzehnfache Hinrichtung in Beirut <ref target="#pb_61">61</ref></item>
+               <item>Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Zedern des Libanon <ref target="#pb_68">68</ref></item>
+               <item>Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus <ref target="#pb_76">76</ref></item>
+               <item>Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit und Rückkehr<ref target="#pb_85">85</ref></item>
                <item>Rückkehr nach Deutschland und allgemeines Schlußwort … 8?</item>
             </list>
          </div>
@@ -882,7 +776,7 @@
                dann am 15. nachts und</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_17"/>
+                  <pb n="pb_16a" facs="#facs_17"/>
                   <div>
                      <head xml:id="head_7">Tafel 1</head>
                      <figure>
@@ -890,7 +784,7 @@
                            nach dem Orient auf dem Parkplatz
                            <placeName>Schöneberg</placeName></caption>
                      </figure>
-                     <pb facs="#facs_18"/>
+                     <pb n="pb_16b" facs="#facs_18"/>
                      <figure>
                         <caption>3800 Meter lange Kriegsbrücke bei
                            <placeName>Belgrad</placeName></caption>
@@ -1239,7 +1133,7 @@
                Autos ganz brauchbare Paßstraße geht</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_35"/>
+                  <pb n="pb_32a" facs="#facs_35"/>
                   <div>
                      <head>Tafel 2</head>
                      <figure>
@@ -1249,7 +1143,7 @@
                         <caption>Unsere Tankstelle <placeName>Bozanti</placeName> im
                               <placeName>Taurus</placeName></caption>
                      </figure>
-                     <pb facs="#facs_36"/>
+                      <pb n="pb_32b" facs="#facs_36"/>
                      <figure>
                         <caption>Ehrenkompagnie bei der Durchfahrt der Leiche des
                               <persName>Feldmarschalls Frhrn. v. der Goltz</persName> in
@@ -1588,7 +1482,7 @@
                Nordwest gegen Südost. Sie erreichen Höhen bis zu 50 m.</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_53"/>
+                   <pb n="pb_48a" facs="#facs_53"/>
                   <div>
                      <head xml:id="head_11">Tafel 3</head>
                      <figure>
@@ -1599,7 +1493,7 @@
                         <caption>Bei <placeName>Kut el Amara</placeName> gefangene
                            Engländer</caption>
                      </figure>
-                     <pb facs="#facs_54"/>
+                      <pb n="pb_48b" facs="#facs_54"/>
                      <figure>
                         <caption>Automobil-Unglück bei <placeName>Bozanti</placeName><lb/> Eine
                            Maschine der im Bau begriffenen <orgName>Taurus-Bahn</orgName> fuhr in
@@ -1947,7 +1841,7 @@
                Bevor ich die Ruinen besuchte, hatte ich die erforder-</p>
             <floatingText>
                <body>
-                  <pb facs="#facs_71"/>
+                   <pb n="pb_64a" facs="#facs_71"/>
                   <div>
                      <head xml:id="head_17">Tafel 4</head>
                      <figure>
@@ -1958,7 +1852,7 @@
                         <caption>Mit <persName>Kapitänleutnant v. Mücke</persName> bei
                               <placeName>Tarsus</placeName> auf einer Erkundungsfahrt</caption>
                      </figure>
-                     <pb facs="#facs_72"/>
+                      <pb n="pb_64b" facs="#facs_72"/>
                      <figure>
                         <caption>Bei Gaswerk <placeName>Beirut</placeName></caption>
                      </figure>
@@ -2313,7 +2207,7 @@
                balkonähnlichen Vorbau hinten in der Mitte, unmittelbar rückwärts von uns befand sich
                ein Holzverschlag, in dem mehrere dunkle <pb facs="#facs_89" n="81" xml:id="pb_81"/>
                Öffnungen das Arbeitsfeld des Darstellers vermuten ließen.</p>
-            <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½9 Uhr waren nur unten vorn zehn
+            <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½ 9 Uhr waren nur unten vorn zehn
                Personen anwesend; der Diener, der uns Kaffee brachte, versicherte uns stets, es
                begönne „sofort”. Endlich um 9 Uhr hob sich der Vorhang, eine kleine Bühne wurde
                sichtbar und auf ihr — eine arabische, europäisch zurechtgestutzte Musiktruppe von
@@ -2492,14 +2386,12 @@
                19. August im Lager zu Tscham Alan empfangen, doch durfte ich mich nicht lange des
                Beisammenseins mit den Kameraden und der inzwischen fertig gewordenen „Villa" freuen,
                denn unser Arzt stellte durch die Blutuntersuchung fest, daß ich weder
-               Nierenentzündung noch Rückfallfieber, fondern Ns- laria ti-opioa gehabt hatte und
+               Nierenentzündung noch Rückfallfieber, sondern Ns- laria ti-opioa gehabt hatte und
                noch hatte. 38 Pfund hatte ich abgenommen und fühlte mich daher recht elend. So wurde
-               ich denn mit dem nächsten nach Norden gehenden Transport am 21. August als krank nach
-               Konstantinopel geschickt, und von hier nach längerer Beobachtung am 5. September mit
+               ich denn mit dem nächsten nach Norden gehenden Transport am <date>21. August</date> als krank nach
+               Konstantinopel geschickt, und von hier nach längerer Beobachtung am <date>5. September</date> mit
                dem Balkanzug zu einer längeren Kur nach Deutschland beordert. Dort wurde ich nach
-               wieder- <pb facs="#facs_98" n="90" xml:id="pb_90"/>
-            </p>
-            <p xml:id="p_32">holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
+               wieder-<pb facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
                garnisondienstfähig meinem Ersatztruppen teil Berlin überwiesen. Schwer, recht schwer
                war mir der Abschied vom Tscham Alan geworden. Ich hatte eine teilweise schwere, doch
                aber so sehr ereignisreiche Zeit hinter mir, wie sie selten jemand geboten wird. Wer

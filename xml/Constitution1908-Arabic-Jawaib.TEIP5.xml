@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <!--<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>-->
 <?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
             <title xml:lang="ar-Latn-x-ijmes">al-Qānūn al-Āsāsī al-ʿUthmānī</title>
-            <title type="sub">Digital Edition</title>
+            <title type="sub">TEI Edition</title>
             <respStmt>
-               <resp>TEI version</resp>
-               <persName xml:id="pTG">Till Grallert</persName>
+               <resp>Translation from Ottoman to Arabic</resp>
+               <persName>Aḥmad Fāris Shidyāq</persName>
+            </respStmt>
+            <respStmt>
+               <resp>TEI edition</resp>
+               <persName xml:id="pers_TG">Till Grallert</persName>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -21,22 +25,136 @@
                      mā fī al-jawāʾib min al-fuṣūl al-laṭīfa wa-l-maqāmāt al-ẓarīfa wa-l-maqālāt
                      al-adabiyya allātī li-muḥarrir al-jawāʾib</hi>. 1st ed. Vol. 6. Edited by Salīm
                   Fāris. al-Astāna al-ʿāliyya: Maṭbaʿat al-jawāʾib, 1295 aH [1878]: 5-27</bibl></p>
-            <p>The text was also published by <bibl xml:lang="ar-Latn-x-ijmes">al-Bashīr (#1869)</bibl></p>
-            <p>The digital text was downloaded from
-               <ref target="http://www.ahewar.org/debat/show.art.asp?aid=394603">ahewar.org</ref> and
-               <ref target="http://iraqja.iq/view.93/">iraqja.iq</ref>. Image files are available from <ref target="http://hdl.handle.net/2027/uc1.c109017146">HathiTrust</ref>. </p>
+            <p>The text was also published by <bibl xml:lang="ar-Latn-x-ijmes">al-Bashīr
+                  (#1869)</bibl></p>
+            <p>The digital text was downloaded from <ref
+                  target="http://www.ahewar.org/debat/show.art.asp?aid=394603">ahewar.org</ref> and
+                  <ref target="http://iraqja.iq/view.93/">iraqja.iq</ref>. Image files are available
+               from <ref target="http://hdl.handle.net/2027/uc1.c109017146">HathiTrust</ref>. </p>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
-         <change when="2015-02-19" who="#pTG">Created the original TEI file.</change>
+         <change when="2015-08-19" who="#pers_TG">Added the automatically generated <gi>facsimile</gi>.</change>
+         <change when="2015-08-19" who="#pers_TG">Added <gi>pb</gi> and <gi>lb</gi> for page 20 as based
+            on the facisimile.</change>
+         <change when="2015-02-19" who="#pers_TG">Created the original TEI file.</change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <tei:facsimile>
+      <tei:surface xml:id="facs_1">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-1.tif" xml:id="facs_1_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-1.jpg" xml:id="facs_1_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_2">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-2.tif" xml:id="facs_2_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-2.jpg" xml:id="facs_2_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_3">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-3.tif" xml:id="facs_3_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-3.jpg" xml:id="facs_3_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_4">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-4.tif" xml:id="facs_4_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-4.jpg" xml:id="facs_4_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_5">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-5.tif" xml:id="facs_5_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-5.jpg" xml:id="facs_5_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_6">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-6.tif" xml:id="facs_6_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-6.jpg" xml:id="facs_6_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_7">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-7.tif" xml:id="facs_7_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-7.jpg" xml:id="facs_7_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_8">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-8.tif" xml:id="facs_8_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-8.jpg" xml:id="facs_8_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_9">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-9.tif" xml:id="facs_9_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-9.jpg" xml:id="facs_9_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_10">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-10.tif" xml:id="facs_10_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-10.jpg" xml:id="facs_10_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_11">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-11.tif" xml:id="facs_11_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-11.jpg" xml:id="facs_11_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_12">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-12.tif" xml:id="facs_12_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-12.jpg" xml:id="facs_12_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_13">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-13.tif" xml:id="facs_13_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-13.jpg" xml:id="facs_13_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_14">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-14.tif" xml:id="facs_14_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-14.jpg" xml:id="facs_14_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_15">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-15.tif" xml:id="facs_15_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-15.jpg" xml:id="facs_15_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_16">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-16.tif" xml:id="facs_16_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-16.jpg" xml:id="facs_16_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_17">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-17.tif" xml:id="facs_17_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-17.jpg" xml:id="facs_17_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_18">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-18.tif" xml:id="facs_18_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-18.jpg" xml:id="facs_18_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_19">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-19.tif" xml:id="facs_19_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-19.jpg" xml:id="facs_19_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_20">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-20.tif" xml:id="facs_20_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-20.jpg" xml:id="facs_20_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_21">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-21.tif" xml:id="facs_21_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-21.jpg" xml:id="facs_21_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_22">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-22.tif" xml:id="facs_22_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-22.jpg" xml:id="facs_22_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_23">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-23.tif" xml:id="facs_23_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-23.jpg" xml:id="facs_23_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_24">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-24.tif" xml:id="facs_24_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-24.jpg" xml:id="facs_24_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_25">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-25.tif" xml:id="facs_25_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-25.jpg" xml:id="facs_25_g_2"/>
+      </tei:surface>
+      <tei:surface xml:id="facs_26">
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-26.tif" xml:id="facs_26_g_1"/>
+         <tei:graphic url="../images/uc1-c109017146/uc1-c109017146_img-26.jpg" xml:id="facs_26_g_2"/>
+      </tei:surface>
+   </tei:facsimile>
+   <text xml:lang="ar">
+      <front xml:lang="ar">
+         <head>القانون الأساسي العثماني <note n="1" rend="bottom" type="footnote"><bibl> كنز
+            الرغائب في منتخبات الجوائب لسليم فارس الشدياق،: ج6، ص5 ـ 27</bibl>.
+         </note></head>
+      </front>
       <body>
-         <div type="bill" corresp="#law-ottoman-constitution-1876" xml:lang="ar">
-            <head>القانون الأساسي العثماني <note n="1" rend="bottom" type="footnote"><bibl> كنز
-                     الرغائب في منتخبات الجوائب لسليم فارس الشدياق،: ج6، ص5 ـ 27</bibl>.
-               </note></head>
+         <div corresp="#law-ottoman-constitution-1876" type="bill" xml:lang="ar">
+            <head>القانون الأساسي العثماني</head>
 
             <div n="1" type="section">
                <head>في ممالك الدولة العثمانية</head>
@@ -82,7 +200,7 @@
                      الأعضاء مجدداً، ذلك جميعه من جملة حقوق الحضرة السلطانية المقدسة.</p>
                </div>
             </div>
-            <div xml:lang="ar" n="2" type="section">
+            <div n="2" type="section" xml:lang="ar">
                <head> في حقوق تبعة الدولة العثمانية العمومية </head>
                <div n="8" type="article">
                   <head>المادة الثامنة:</head>
@@ -550,50 +668,53 @@
                   <head>المادة الحادية والثمانون:</head>
                   <p> لا يعزل القضاة المنتخبون توفيقاً للأصول المخصوصة المنصوبون من طرف الدولة بموجب
                      براءة شريفة بأيديهم، وإنما يقبل استعفاؤهم أما ترقيات هؤلاء الحكام ومسلكهم
-                     وتبديل مأمورياتهم وتقاعدهم أو عزلهم لجرم محكوم به عليهم ذلك جميعه تابع لحكم
-                     قانونه المخصوص. وهذا القانون يوضح الأوصاف المطلوبة من القضاة ومن مأموري
-                     المحاكم. </p>
+                     وتبديل مأمورياتهم وتقاعدهم أو عزلهم لجرم محكوم به عليهم ذلك جميعه تابع<pb
+                        n="20" facs="#facs_19"/> لحكم قانونه المخصوص. وهذا القانون يوضح الأوصاف المطلوبة من
+                     <lb/>القضاة ومن مأموري المحاكم. </p>
                </div>
                <div n="82" type="article">
                   <head>المادة الثانية والثمانون:</head>
-                  <p> كل أنواع المحاكمات تجري علانية في المحاكم، ويؤذن بنشر الإعلامات دائماً، وإنما
-                     تستطيع المحكمة أن تجري المحاكمة خفية بناءً على الأسباب المصرحة في قانونها. </p>
+                  <p> كل أنواع المحاكمات تجري علانية <lb/>في المحاكم، ويؤذن بنشر الإعلامات دائماً،
+                     وإنما تستطيع المحكمة أن تجري <lb/>المحاكمة خفية بناءً على الأسباب المصرحة في
+                     قانونها. </p>
                </div>
                <div n="83" type="article">
                   <head>المادة الثالثة والثمانون:</head>
-                  <p> يستطيع كل شخص أن يستعمل بحضور المحكمة كل ما يراه لازماً من الوسائط المشروعة
-                     لمحافظة حقوقه. </p>
+                  <p> يستطيع كل شخص أن يستعمل <lb/>بحضور المحكمة كل ما يراه لازماً من الوسائط
+                     المشروعة لمحافظة حقوقه. </p>
                </div>
                <div n="84" type="article">
                   <head>المادة الرابعة والثمانون:</head>
-                  <p> لا يمكن للمحكمة، بأيّ حجة كانت، أن تمتنع عن رؤية الدعوة الداخلة ضمن دائرة
-                     وظيفتها. وبعد البداءة بفحص الدعوى، أو بما لزم من التحقيقات الأولية، لا يجوز
-                     كذلك تعطيلها أو تعويقها، ما لم يكف المدعي يده. أما في الدعاوي الجزائية في مطلب
-                     الحقوق العائدة للحكومة فالدعوى تستمر في مجراها على وفق النظام. </p>
+                  <p> لا يمكن للمحكمة، بأيّ حجة كانت، <lb/>أن تمتنع عن رؤية الدعوة الداخلة ضمن دائرة
+                     وظيفتها. وبعد البداءة <lb/>بفحص الدعوى، أو بما لزم من التحقيقات الأولية، لا
+                     يجوز كذلك تعطيلها أو <lb/>تعويقها، ما لم يكف المدعي يده. أما في الدعاوي
+                     الجزائية في مطلب الحقوق <lb/>العائدة للحكومة فالدعوى تستمر في مجراها على وفق
+                     النظام. </p>
                </div>
                <div n="85" type="article">
                   <head>المادة الخامسة والثمانون:</head>
-                  <p> كل دعوى تنظر في المحكمة المتعلقة بها أما الدعاوي الواقعة بين الحكومة والأشخاص
-                     فترى في المحاكم العمومية. </p>
+                  <p> كل دعوى تنظر في المحكمة المتعلقة <lb/>بها أما الدعاوي الواقعة بين الحكومة
+                     والأشخاص فترى في المحاكم <lb/>العمومية. </p>
                </div>
                <div n="86" type="article">
                   <head>المادة السادسة والثمانون:</head>
-                  <p> المحاكم معتوقة من كل أنواع المداخلات. </p>
+                  <p> المحاكم معتوقة من كل أنواع <lb/>المداخلات. </p>
                </div>
                <div n="87" type="article">
                   <head>المادة السابعة والثمانون:</head>
-                  <p> الدعاوي الشرعية ترى في المحاكم الشرعية، والنظامية في المحاكم النظامية. </p>
+                  <p> الدعاوي الشرعية ترى في المحاكم <lb/>الشرعية، والنظامية في المحاكم النظامية.
+                  </p>
                </div>
                <div n="88" type="article">
                   <head>المادة الثامنة والثمانون:</head>
-                  <p> إنّ صنوف المحاكم ودرجات وظائفها وصلاحياتها وتقسيماتها وتوظيف الحكام جميعه
+                  <p> إنّ صنوف المحاكم ودرجات وظائفها <lb/>وصلاحياتها وتقسيماتها وتوظيف الحكام جميعه
                      مستند إلى القوانين. </p>
                </div>
                <div n="89" type="article">
                   <head>المادة التاسعة والثمانون:</head>
-                  <p> لا يجوز البتة أن يتشكل خارجاً عن المحاكم العمومية محكمة فوق العادة أو قومسيون
-                     يكون في وسعهما النظر في بعض مواد مخصوصة والحكم عليها، وإنما يجوز تعيين موليين
-                     والتحكيم فقط كما هو معين بالقانون. </p>
+                  <p> لا يجوز البتة أن يتشكل خارجاً <pb n="21" facs="#facs_20"/>عن المحاكم العمومية محكمة فوق العادة
+                     أو قومسيون يكون في وسعهما النظر في بعض مواد مخصوصة والحكم عليها، وإنما يجوز
+                     تعيين موليين والتحكيم فقط كما هو معين بالقانون. </p>
                </div>
                <div n="90" type="article">
                   <head>المادة التسعون:</head>
@@ -800,9 +921,9 @@
                <div n="119" type="article">
                   <head>المادة التاسعة عشرة بعد المائة:</head>
                   <p> إنّ أحكام التعليمات المؤقتة المتعلقة بالمجلس العمومي المؤرخة في <date>10 شوال
-                        سنة 1293</date> (<date when="1876-10-29">29 تشرين الأول سنة 1876</date>) تجرى فقط لختام مدة
-                     انعقاد المجلس العمومي الذي يجتمع في المرة الأولى ولا يكون حكمها جارياً بعد
-                     ذلك.</p>
+                        سنة 1293</date> (<date when="1876-10-29">29 تشرين الأول سنة 1876</date>)
+                     تجرى فقط لختام مدة انعقاد المجلس العمومي الذي يجتمع في المرة الأولى ولا يكون
+                     حكمها جارياً بعد ذلك.</p>
                </div>
             </div>
          </div>

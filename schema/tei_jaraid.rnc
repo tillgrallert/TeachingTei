@@ -1,11 +1,12 @@
-default namespace = "http://www.tei-c.org/ns/1.0"
+default namespace = "http://www.tei-c.org/ns/Examples"
 namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace ns1 = "http://www.tei-c.org/ns/1.0"
 namespace rng = "http://relaxng.org/ns/structure/1.0"
 namespace s = "http://www.ascc.net/xml/schematron"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2015-08-18T19:59:22Z. .
+# Schema generated from ODD source 2015-09-14T14:39:58Z. .
 # TEI Edition: Version 2.8.0. Last updated on
 #	6th April 2015, revision 13197
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -75,6 +76,11 @@ data.temporal.iso =
   | xsd:time
   | xsd:dateTime
   | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+macro.anyXML =
+  element * - (ns1:* | egXML) {
+    attribute * { text }*,
+    (text | macro.anyXML)*
+  }
 att.ascribed.attributes = att.ascribed.attribute.who
 att.ascribed.attribute.who =
   
@@ -361,7 +367,7 @@ att.global.attribute.n =
 att.global.attribute.xmllang =
   
   ## (language) indicates the language of the element content using a tag generated according to BCP 47.
-  ## Suggested values include: 1] ar; 2] ota; 3] tr; 4] en; 5] fr; 6] de; 7] he; 8] fa; 9] ar-Latn-x-ijmes; 10] ota-Latn-x-ijmes; 11] ota-Latn-TR; 12] fa-Latn-x-ijmes; 13] ar-Latn-EN; 14] ar-Latn-FR; 15] ar-Latn-x-dmg
+  ## Suggested values include: 1] ar; 2] ota; 3] tr; 4] en; 5] fr; 6] de; 7] he; 8] fa; 9] ar-Latn-x-ijmes; 10] ota-Latn-x-ijmes; 11] ota-Latn-TR; 12] fa-Latn-x-ijmes; 13] ar-Latn-EN; 14] ar-Latn-FR; 15] ar-Latn-x-dmg; 16] en-Arab-AR; 17] fr-Arab-AR
   attribute xml:lang {
     
     ## Arabic in Arabic script
@@ -408,6 +414,12 @@ att.global.attribute.xmllang =
     | 
       ## Arabic in Latin script following the DMG transcription
       "ar-Latn-x-dmg"
+    | 
+      ## English transcribed into Arabic script following common Levantine Arabic practices
+      "en-Arab-AR"
+    | 
+      ## French transcribed into Arabic script following common Levantine Arabic practices
+      "fr-Arab-AR"
     | data.language
   }?
 att.internetMedia.attributes = att.internetMedia.attribute.mimeType
@@ -939,7 +951,7 @@ model.oddDecl_sequence = empty
 model.oddDecl_sequenceOptional = empty
 model.oddDecl_sequenceOptionalRepeatable = empty
 model.oddDecl_sequenceRepeatable = notAllowed
-model.phrase.xml = notAllowed
+model.phrase.xml = att | gi | tag
 model.specDescLike = notAllowed
 model.biblLike = bibl | biblStruct | biblFull
 model.biblLike_alternation = bibl | biblStruct | biblFull
@@ -1109,7 +1121,7 @@ model.placeStateLike_sequenceRepeatable =
   trait+
 model.placeEventLike = event
 model.orgPart = listOrg | listPerson | listPlace
-model.publicationStmtPart.agency = publisher | distributor
+model.publicationStmtPart.agency = publisher | distributor | authority
 model.publicationStmtPart.detail =
   address | date | pubPlace | idno | availability
 model.availabilityPart = licence
@@ -1244,7 +1256,12 @@ model.teiHeaderPart = encodingDesc | profileDesc
 model.sourceDescPart = notAllowed
 model.encodingDescPart = projectDesc | samplingDecl | editorialDecl
 model.editorialDeclPart = notAllowed
-model.profileDescPart = langUsage | calendarDesc | particDesc
+model.profileDescPart =
+  langUsage | calendarDesc | correspDesc | particDesc
+model.correspActionPart =
+  model.dateLike | model.addressLike | model.nameLike | note
+model.correspContextPart = model.ptrLike | model.pLike | note
+model.correspDescPart = note | correspAction | correspContext
 att.source.attributes = att.source.attribute.source
 att.source.attribute.source =
   
@@ -1280,19 +1297,19 @@ model.placeLike = place
 p =
   
   ## (paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]
-  element p { macro.paraContent, att.global.attributes, empty }
+  element ns1:p { macro.paraContent, att.global.attributes, empty }
 foreign =
   
   ## identifies a word or phrase as belonging to some language other than that of the surrounding text. [3.3.2.1. Foreign Words or Expressions]
-  element foreign { macro.phraseSeq, att.global.attributes, empty }
+  element ns1:foreign { macro.phraseSeq, att.global.attributes, empty }
 hi =
   
   ## (highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]
-  element hi { macro.paraContent, att.global.attributes, empty }
+  element ns1:hi { macro.paraContent, att.global.attributes, empty }
 said =
   
   ## (speech or thought) indicates passages thought or spoken aloud, whether explicitly indicated in the source or not, whether directly or indirectly reported, whether by real people or fictional characters. [3.3.3. Quotation]
-  element said {
+  element ns1:said {
     macro.specialPara,
     att.global.attributes,
     att.ascribed.attributes,
@@ -1308,7 +1325,7 @@ said =
 quote =
   
   ## (quotation) contains a phrase or passage attributed by the narrator or author to some agency external to the text. [3.3.3. Quotation 4.3.1. Grouped Texts]
-  element quote {
+  element ns1:quote {
     macro.specialPara,
     att.global.attributes,
     att.typed.attributes,
@@ -1318,7 +1335,7 @@ quote =
 q =
   
   ## (quoted) contains material which is distinguished from the surrounding text using quotation marks or a similar method, for any one of a variety of reasons including, but not limited to: direct speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere, and passages that are mentioned but not used. [3.3.3. Quotation]
-  element q {
+  element ns1:q {
     macro.specialPara,
     att.global.attributes,
     att.ascribed.attributes,
@@ -1361,7 +1378,7 @@ q =
 cit =
   
   ## (cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example. [3.3.3. Quotation 4.3.1. Grouped Texts 9.3.5.1. Examples]
-  element cit {
+  element ns1:cit {
     (model.qLike
      | model.egLike
      | model.biblLike
@@ -1376,7 +1393,7 @@ sic =
   
   ## (Latin for thus or so
   ##    ) contains text reproduced although apparently incorrect or inaccurate. [3.4.1. Apparent Errors]
-  element sic {
+  element ns1:sic {
     macro.paraContent,
     att.global.attributes,
     att.source.attributes,
@@ -1385,7 +1402,7 @@ sic =
 corr =
   
   ## (correction) contains the correct form of a passage apparently erroneous in the copy text. [3.4.1. Apparent Errors]
-  element corr {
+  element ns1:corr {
     macro.paraContent,
     att.global.attributes,
     att.editLike.attributes,
@@ -1395,14 +1412,14 @@ corr =
 choice =
   
   ## groups a number of alternative encodings for the same point in a text. [3.4. Simple Editorial Changes]
-  element choice {
+  element ns1:choice {
     (model.choicePart | choice)*, att.global.attributes, empty
   }
 orig =
   
   ## (original form) contains a reading which is marked as following the original, rather than being normalized or corrected. [3.4.2. Regularization and
   ## Normalization 12. Critical Apparatus]
-  element orig {
+  element ns1:orig {
     macro.paraContent,
     att.global.attributes,
     att.source.attributes,
@@ -1411,7 +1428,7 @@ orig =
 gap =
   
   ## indicates a point where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible. [3.4.3. Additions, Deletions, and Omissions]
-  element gap {
+  element ns1:gap {
     (model.descLike | model.certLike)*,
     att.global.attributes,
     att.editLike.attributes,
@@ -1432,7 +1449,7 @@ gap =
 add =
   
   ## (addition) contains letters, words, or phrases inserted in the source text by an author, scribe, or a previous annotator or corrector. [3.4.3. Additions, Deletions, and Omissions]
-  element add {
+  element ns1:add {
     macro.paraContent,
     att.global.attributes,
     att.transcriptional.attributes,
@@ -1443,7 +1460,7 @@ add =
 del =
   
   ## (deletion) contains a letter, word, or passage deleted, marked as deleted, or otherwise indicated as superfluous or spurious in the copy text by an author, scribe, or a previous annotator or corrector. [3.4.3. Additions, Deletions, and Omissions]
-  element del {
+  element ns1:del {
     macro.paraContent,
     att.global.attributes,
     att.transcriptional.attributes,
@@ -1453,7 +1470,7 @@ del =
 unclear =
   
   ## contains a word, phrase, or passage which cannot be transcribed with certainty because it is illegible or inaudible in the source. [11.3.3.1. Damage, Illegibility, and Supplied Text 3.4.3. Additions, Deletions, and Omissions]
-  element unclear {
+  element ns1:unclear {
     macro.paraContent,
     att.global.attributes,
     att.editLike.attributes,
@@ -1474,7 +1491,7 @@ unclear =
 name =
   
   ## (name, proper noun) contains a proper noun or noun phrase. [3.5.1. Referring Strings]
-  element name {
+  element ns1:name {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -1486,7 +1503,7 @@ name =
 rs =
   
   ## (referencing string) contains a general purpose name or referring string. [13.2.1. Personal Names 3.5.1. Referring Strings]
-  element rs {
+  element ns1:rs {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -1498,7 +1515,7 @@ address =
   
   ## contains a postal address, for example of a publisher, an organization, or an individual. [3.5.2. Addresses 2.2.4. Publication, Distribution,
   ## Licensing, etc. 3.11.2.4. Imprint, Size of a Document, and Reprint Information]
-  element address {
+  element ns1:address {
     (model.global*, (model.addrPart, model.global*)+),
     att.global.attributes,
     empty
@@ -1507,7 +1524,7 @@ num =
   
   ## (number) contains a number, written in any form. [3.5.3. Numbers and
   ## Measures]
-  element num {
+  element ns1:num {
     macro.phraseSeq,
     att.global.attributes,
     att.ranging.attributes,
@@ -1538,7 +1555,7 @@ measure =
   
   ## contains a word or phrase referring to some quantity of an object or commodity, usually comprising a number, a unit, and a commodity name. [3.5.3. Numbers and
   ## Measures]
-  element measure {
+  element ns1:measure {
     macro.phraseSeq,
     att.global.attributes,
     att.measurement.attributes,
@@ -1550,7 +1567,7 @@ measure =
 measureGrp =
   
   ## (measure group) contains a group of dimensional specifications which relate to the same object, for example the height and width of a manuscript page. [10.3.4. Dimensions]
-  element measureGrp {
+  element ns1:measureGrp {
     (text | model.gLike | model.measureLike)*,
     att.global.attributes,
     att.measurement.attributes,
@@ -1561,7 +1578,7 @@ date =
   
   ## contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution,
   ## Licensing, etc. 2.5. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]
-  element date {
+  element ns1:date {
     (text | model.gLike | model.phrase | model.global)*,
     att.global.attributes,
     att.datable.attributes,
@@ -1572,7 +1589,7 @@ date =
 time =
   
   ## contains a phrase defining a time of day in any format. [3.5.4. Dates and Times]
-  element time {
+  element ns1:time {
     (text | model.gLike | model.phrase | model.global)*,
     att.global.attributes,
     att.datable.attributes,
@@ -1583,7 +1600,7 @@ time =
 abbr =
   
   ## (abbreviation) contains an abbreviation of any sort. [3.5.5. Abbreviations and Their Expansions]
-  element abbr {
+  element ns1:abbr {
     macro.phraseSeq,
     att.global.attributes,
     att.source.attributes,
@@ -1597,7 +1614,7 @@ abbr =
 expan =
   
   ## (expansion) contains the expansion of an abbreviation. [3.5.5. Abbreviations and Their Expansions]
-  element expan {
+  element ns1:expan {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -1606,7 +1623,7 @@ expan =
 ref =
   
   ## (reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]
-  element ref {
+  element ns1:ref {
     macro.paraContent
     >> sch:pattern [
          id = "tei_jaraid-ref-refAtts-constraint-1"
@@ -1640,7 +1657,7 @@ ref =
 \list =
   
   ## contains any sequence of items organized as a list. [3.7. Lists]
-  element list {
+  element ns1:list {
     ((model.divTop | model.global)*,
      ((item, model.global*)+
       | (label, model.global*, item, model.global*)+),
@@ -1692,7 +1709,7 @@ ref =
 item =
   
   ## contains one component of a list. [3.7. Lists 2.5. The Revision Description]
-  element item {
+  element ns1:item {
     macro.specialPara,
     att.global.attributes,
     att.sortable.attributes,
@@ -1701,7 +1718,7 @@ item =
 label =
   
   ## contains any label or heading used to identify part of a text, typically but not exclusively in a list or glossary. [3.7. Lists]
-  element label {
+  element ns1:label {
     macro.phraseSeq,
     att.global.attributes,
     att.typed.attributes,
@@ -1711,7 +1728,7 @@ label =
 head =
   
   ## (heading) contains any type of heading, for example the title of a section, or the heading of a list, glossary, manuscript description, etc. [4.2.1. Headings and Trailers]
-  element head {
+  element ns1:head {
     (text
      | lg
      | model.gLike
@@ -1726,13 +1743,28 @@ head =
 note =
   
   ## contains a note or annotation. [3.8.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.11.2.8. Notes and Statement of Language 9.3.5.4. Notes within Entries]
-  element note {
+  element ns1:note {
     macro.specialPara,
     att.global.attributes,
     att.placement.attributes,
     att.pointing.attributes,
     att.source.attributes,
-    att.typed.attributes,
+    att.typed.attribute.subtype,
+    
+    ## characterizes the element in some sense, using any convenient classification scheme or typology.
+    ## Suggested values include: 1] endnote; 2] footnote; 3] gloss
+    attribute type {
+      
+      ##
+      "endnote"
+      | 
+        ##
+        "footnote"
+      | 
+        ##
+        "gloss"
+      | xsd:Name
+    }?,
     
     ## indicates whether the copy text shows the exact place of reference for the note.
     [ a:defaultValue = "true" ] attribute anchored { data.truthValue }?,
@@ -1746,7 +1778,7 @@ note =
 index =
   
   ## (index entry) marks a location to be indexed for whatever purpose. [3.8.2. Index Entries]
-  element index {
+  element ns1:index {
     index?*,
     att.global.attributes,
     att.spanning.attributes,
@@ -1758,7 +1790,7 @@ index =
 graphic =
   
   ## indicates the location of an inline graphic, illustration, or figure. [3.9. Graphics and Other Non-textual Components]
-  element graphic {
+  element ns1:graphic {
     model.descLike*,
     att.global.attributes,
     att.media.attributes,
@@ -1769,20 +1801,31 @@ pb =
   
   ## (page break) marks the start of a new page in a paginated document. [3.10.3. Milestone
   ## Elements]
-  element pb {
+  element ns1:pb {
     empty,
     att.global.attributes,
     att.typed.attributes,
-    att.edition.attributes,
+    att.edition.attribute.edRef,
     att.spanning.attributes,
     att.breaking.attributes,
+    
+    ## (edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.
+    ## Suggested values include: 1] print
+    attribute ed {
+      list {
+        (
+         ##
+         "print"
+         | data.word)+
+      }
+    }?,
     empty
   }
 lb =
   
   ## (line break) marks the start of a new (typographic) line in some edition or version of a text. [3.10.3. Milestone
   ## Elements 7.2.5. Speech Contents]
-  element lb {
+  element ns1:lb {
     empty,
     att.global.attributes,
     att.typed.attributes,
@@ -1795,7 +1838,7 @@ cb =
   
   ## (column break) marks the beginning of a new column of a text on a multi-column page. [3.10.3. Milestone
   ## Elements]
-  element cb {
+  element ns1:cb {
     empty,
     att.global.attributes,
     att.typed.attributes,
@@ -1807,13 +1850,13 @@ cb =
 monogr =
   
   ## (monographic level) contains bibliographic elements describing an item (e.g. a book or journal) published as an independent item (i.e. as a separate physical object). [3.11.2.1. Analytic, Monographic, and Series Levels]
-  element monogr {
+  element ns1:monogr {
     ((((author | editor | respStmt),
        (author | editor | respStmt)*,
        title+,
        (model.ptrLike | idno | editor | respStmt)*)
       | ((title | model.ptrLike | idno)+, (author | editor | respStmt)*)
-      | idno)?,
+      | (authority, idno))?,
      availability*,
      model.noteLike*,
      (edition, (idno | model.ptrLike | editor | respStmt)*)*,
@@ -1825,19 +1868,19 @@ monogr =
 author =
   
   ## in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]
-  element author {
+  element ns1:author {
     macro.phraseSeq, att.global.attributes, att.naming.attributes, empty
   }
 editor =
   
   ## contains a secondary statement of responsibility for a bibliographic item, for example the name of an individual, institution or organization, (or of several such) acting as editor, compiler, translator, etc. [3.11.2.2. Titles, Authors, and Editors]
-  element editor {
+  element ns1:editor {
     macro.phraseSeq, att.global.attributes, att.naming.attributes, empty
   }
 respStmt =
   
   ## (statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]
-  element respStmt {
+  element ns1:respStmt {
     ((resp+, model.nameLike.agent+) | (model.nameLike.agent+, resp+)),
     att.global.attributes,
     att.canonical.attributes,
@@ -1846,7 +1889,7 @@ respStmt =
 resp =
   
   ## (responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]
-  element resp {
+  element ns1:resp {
     macro.phraseSeq.limited,
     att.global.attributes,
     att.canonical.attributes,
@@ -1856,7 +1899,7 @@ resp =
 title =
   
   ## contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]
-  element title {
+  element ns1:title {
     macro.paraContent,
     att.global.attributes,
     att.canonical.attributes,
@@ -1889,7 +1932,7 @@ title =
 imprint =
   
   ## groups information relating to the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]
-  element imprint {
+  element ns1:imprint {
     (empty*,
      ((model.imprintPart | model.dateLike), respStmt*, model.global*)+),
     att.global.attributes,
@@ -1899,23 +1942,25 @@ publisher =
   
   ## provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution,
   ## Licensing, etc.]
-  element publisher { macro.phraseSeq, att.global.attributes, empty }
+  element ns1:publisher {
+    macro.phraseSeq, att.global.attributes, empty
+  }
 biblScope =
   
   ## (scope of bibliographic reference) defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work. [3.11.2.5. Scopes and Ranges in Bibliographic Citations]
-  element biblScope {
+  element ns1:biblScope {
     macro.phraseSeq, att.global.attributes, att.citing.attributes, empty
   }
 pubPlace =
   
   ## (publication place) contains the name of the place where a bibliographic item was published. [3.11.2.4. Imprint, Size of a Document, and Reprint Information]
-  element pubPlace {
+  element ns1:pubPlace {
     macro.phraseSeq, att.global.attributes, att.naming.attributes, empty
   }
 bibl =
   
   ## (bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]
-  element bibl {
+  element ns1:bibl {
     (text
      | model.gLike
      | model.highlighted
@@ -1935,7 +1980,7 @@ bibl =
 biblStruct =
   
   ## (structured bibliographic citation) contains a structured bibliographic citation, in which only bibliographic sub-elements appear and in a specified order. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]
-  element biblStruct {
+  element ns1:biblStruct {
     (monogr+, (model.noteLike | idno | model.ptrLike)*)
     >> sch:pattern [
          id =
@@ -1967,11 +2012,11 @@ biblStruct =
 l =
   
   ## (verse line) contains a single, possibly incomplete, line of verse. [3.12.1. Core Tags for Verse 3.12. Passages of Verse or Drama 7.2.5. Speech Contents]
-  element l { macro.paraContent, att.global.attributes, empty }
+  element ns1:l { macro.paraContent, att.global.attributes, empty }
 lg =
   
   ## (line group) contains one or more verse lines functioning as a formal unit, e.g. a stanza, refrain, verse paragraph, etc. [3.12.1. Core Tags for Verse 3.12. Passages of Verse or Drama 7.2.5. Speech Contents]
-  element lg {
+  element ns1:lg {
     ((model.divTop | model.global)*,
      (model.lLike | model.stageLike | model.labelLike | lg),
      (model.lLike
@@ -2002,13 +2047,22 @@ lg =
        ],
     att.global.attributes,
     att.divLike.attributes,
-    att.typed.attributes,
+    att.typed.attribute.subtype,
+    
+    ## characterizes the element in some sense, using any convenient classification scheme or typology.
+    ## Suggested values include: 1] bayt
+    attribute type {
+      
+      ## Two-partite line of an Arabic Qasida
+      "bayt"
+      | xsd:Name
+    }?,
     empty
   }
 teiHeader =
   
   ## (TEI header) supplies the descriptive and declarative information making up an electronic title page for every TEI-conformant document. [2.1.1. The TEI Header and Its Components 15.1. Varieties of Composite Text]
-  element teiHeader {
+  element ns1:teiHeader {
     (fileDesc, model.teiHeaderPart*, revisionDesc?),
     att.global.attributes,
     
@@ -2020,7 +2074,7 @@ teiHeader =
 fileDesc =
   
   ## (file description) contains a full bibliographic description of an electronic file. [2.2. The File Description 2.1.1. The TEI Header and Its Components]
-  element fileDesc {
+  element ns1:fileDesc {
     ((titleStmt, editionStmt?, publicationStmt, notesStmt?),
      sourceDesc+),
     att.global.attributes,
@@ -2029,13 +2083,13 @@ fileDesc =
 titleStmt =
   
   ## (title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]
-  element titleStmt {
+  element ns1:titleStmt {
     (title+, model.respLike*), att.global.attributes, empty
   }
 editionStmt =
   
   ## (edition statement) groups information relating to one edition of a text. [2.2.2. The Edition Statement 2.2. The File Description]
-  element editionStmt {
+  element ns1:editionStmt {
     (model.pLike+ | (edition, model.respLike*)),
     att.global.attributes,
     empty
@@ -2043,12 +2097,12 @@ editionStmt =
 edition =
   
   ## describes the particularities of one edition of a text. [2.2.2. The Edition Statement]
-  element edition { macro.phraseSeq, att.global.attributes, empty }
+  element ns1:edition { macro.phraseSeq, att.global.attributes, empty }
 publicationStmt =
   
   ## (publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution,
   ## Licensing, etc. 2.2. The File Description]
-  element publicationStmt {
+  element ns1:publicationStmt {
     ((model.publicationStmtPart.agency,
       model.publicationStmtPart.detail*)+
      | model.pLike+),
@@ -2059,12 +2113,21 @@ distributor =
   
   ## supplies the name of a person or other agency responsible for the distribution of a text. [2.2.4. Publication, Distribution,
   ## Licensing, etc.]
-  element distributor { macro.phraseSeq, att.global.attributes, empty }
+  element ns1:distributor {
+    macro.phraseSeq, att.global.attributes, empty
+  }
+authority =
+  
+  ## (release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. Publication, Distribution,
+  ## Licensing, etc.]
+  element ns1:authority {
+    macro.phraseSeq.limited, att.global.attributes, empty
+  }
 idno =
   
   ## (identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution,
   ## Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]
-  element idno {
+  element ns1:idno {
     (text | model.gLike | idno)*,
     att.global.attributes,
     att.sortable.attributes,
@@ -2077,7 +2140,7 @@ availability =
   
   ## supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution,
   ## Licensing, etc.]
-  element availability {
+  element ns1:availability {
     (model.availabilityPart | model.pLike)+,
     att.global.attributes,
     att.declarable.attributes,
@@ -2101,7 +2164,7 @@ licence =
   
   ## contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution,
   ## Licensing, etc.]
-  element licence {
+  element ns1:licence {
     macro.specialPara,
     att.global.attributes,
     att.pointing.attributes,
@@ -2111,11 +2174,13 @@ licence =
 notesStmt =
   
   ## (notes statement) collects together any notes providing information about a text additional to that recorded in other parts of the bibliographic description. [2.2.6. The Notes Statement 2.2. The File Description]
-  element notesStmt { (model.noteLike)+, att.global.attributes, empty }
+  element ns1:notesStmt {
+    (model.noteLike)+, att.global.attributes, empty
+  }
 sourceDesc =
   
   ## (source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]
-  element sourceDesc {
+  element ns1:sourceDesc {
     (model.pLike+
      | (model.biblLike | model.sourceDescPart | model.listLike)+),
     att.global.attributes,
@@ -2124,7 +2189,7 @@ sourceDesc =
 biblFull =
   
   ## (fully-structured bibliographic citation) contains a fully-structured bibliographic citation, in which all components of the TEI file description are present. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2. The File Description 2.2.7. The Source Description 15.3.2. Declarable Elements]
-  element biblFull {
+  element ns1:biblFull {
     ((titleStmt, editionStmt?, publicationStmt, notesStmt?),
      sourceDesc*),
     att.global.attributes,
@@ -2136,7 +2201,7 @@ biblFull =
 encodingDesc =
   
   ## (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived. [2.3. The Encoding Description 2.1.1. The TEI Header and Its Components]
-  element encodingDesc {
+  element ns1:encodingDesc {
     (model.encodingDescPart | model.pLike)+,
     att.global.attributes,
     empty
@@ -2144,7 +2209,7 @@ encodingDesc =
 projectDesc =
   
   ## (project description) describes in detail the aim or purpose for which an electronic file was encoded, together with any other relevant information concerning the process by which it was assembled or collected. [2.3.1. The Project Description 2.3. The Encoding Description 15.3.2. Declarable Elements]
-  element projectDesc {
+  element ns1:projectDesc {
     model.pLike+,
     att.global.attributes,
     att.declarable.attributes,
@@ -2153,7 +2218,7 @@ projectDesc =
 samplingDecl =
   
   ## (sampling declaration) contains a prose description of the rationale and methods used in sampling texts in the creation of a corpus or collection. [2.3.2. The Sampling Declaration 2.3. The Encoding Description 15.3.2. Declarable Elements]
-  element samplingDecl {
+  element ns1:samplingDecl {
     model.pLike+,
     att.global.attributes,
     att.declarable.attributes,
@@ -2162,7 +2227,7 @@ samplingDecl =
 editorialDecl =
   
   ## (editorial practice declaration) provides details of editorial principles and practices applied during the encoding of a text. [2.3.3. The Editorial Practices Declaration 2.3. The Encoding Description 15.3.2. Declarable Elements]
-  element editorialDecl {
+  element ns1:editorialDecl {
     (model.pLike | model.editorialDeclPart)+,
     att.global.attributes,
     att.declarable.attributes,
@@ -2171,13 +2236,13 @@ editorialDecl =
 profileDesc =
   
   ## (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. [2.4. The Profile Description 2.1.1. The TEI Header and Its Components]
-  element profileDesc {
+  element ns1:profileDesc {
     model.profileDescPart*, att.global.attributes, empty
   }
 langUsage =
   
   ## (language usage) describes the languages, sublanguages, registers, dialects, etc. represented within a text. [2.4.2. Language Usage 2.4. The Profile Description 15.3.2. Declarable Elements]
-  element langUsage {
+  element ns1:langUsage {
     language+,
     att.global.attribute.xmlid,
     att.global.attribute.xmllang,
@@ -2186,7 +2251,7 @@ langUsage =
 language =
   
   ## characterizes a single language or sublanguage used within a text. [2.4.2. Language Usage]
-  element language {
+  element ns1:language {
     macro.phraseSeq.limited,
     att.global.attribute.xmlid,
     att.global.attribute.xmllang,
@@ -2198,7 +2263,7 @@ language =
 calendarDesc =
   
   ## (calendar description) contains a description of the calendar system used in any dating expression found in the text. [2.4. The Profile Description 2.4.5. Calendar Description]
-  element calendarDesc {
+  element ns1:calendarDesc {
     calendar+,
     att.global.attribute.xmlid,
     att.global.attribute.xmllang,
@@ -2207,16 +2272,65 @@ calendarDesc =
 calendar =
   
   ## describes a calendar or dating system used in a dating formula in the text. [2.4.5. Calendar Description]
-  element calendar {
+  element ns1:calendar {
     model.pLike+,
     att.global.attribute.xmlid,
     att.global.attribute.xmllang,
     empty
   }
+correspDesc =
+  
+  ## (correspondence
+  ##     description) contains a description of the actions related to one act of correspondence [2.4.6. Correspondence Description]
+  element ns1:correspDesc {
+    (model.correspDescPart+ | model.pLike+),
+    att.declarable.attributes,
+    att.canonical.attributes,
+    att.global.attributes,
+    att.typed.attributes,
+    empty
+  }
+correspAction =
+  
+  ## contains a structured description of the place, the name of a person/organization and the date related to the sending/receiving of a message or any other action related to the correspondence [2.4.6. Correspondence Description]
+  element ns1:correspAction {
+    (model.correspActionPart+ | model.pLike+),
+    att.global.attributes,
+    att.typed.attribute.subtype,
+    att.sortable.attributes,
+    
+    ## describes the nature of the action
+    ## Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5] forwarded
+    attribute type {
+      
+      ## information concerning the sending or dispatch of a message
+      "sent"
+      | 
+        ## information concerning the receipt of a message
+        "received"
+      | 
+        ## information concerning the transmission of a message, i.e. between the dispatch and the next receipt, redirect or forwarding
+        "transmitted"
+      | 
+        ## information concerning the redirection of an unread message 
+        "redirected"
+      | 
+        ## information concerning the forwarding of a message 
+        "forwarded"
+      | xsd:Name
+    }?,
+    empty
+  }
+correspContext =
+  
+  ## (correspondence context) provides references to preceding or following correspondence related to this piece of correspondence [2.4.6. Correspondence Description]
+  element ns1:correspContext {
+    model.correspContextPart+, att.global.attributes, empty
+  }
 revisionDesc =
   
   ## (revision description) summarizes the revision history for a file. [2.5. The Revision Description 2.1.1. The TEI Header and Its Components]
-  element revisionDesc {
+  element ns1:revisionDesc {
     (\list | change+),
     att.global.attributes,
     att.docStatus.attributes,
@@ -2225,7 +2339,7 @@ revisionDesc =
 change =
   
   ## documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.5. The Revision Description 2.4.1. Creation 11.7. Changes]
-  element change {
+  element ns1:change {
     macro.specialPara,
     att.ascribed.attributes,
     att.datable.attributes,
@@ -2242,7 +2356,7 @@ change =
 TEI =
   
   ## (TEI document) contains a single TEI-conformant document, containing a single TEI header, a single text, one or more members of the model.resourceLike class, or a combination of these. A series of TEI elements may be combined together to form a teiCorpus element. [4. Default Text Structure 15.1. Varieties of Composite Text]
-  element TEI {
+  element ns1:TEI {
     (teiHeader,
      ((model.resourceLike+, \text?) | \text))
     >> sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
@@ -2257,7 +2371,7 @@ TEI =
 \text =
   
   ## contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text]
-  element text {
+  element ns1:text {
     (model.global*,
      (front, model.global*)?,
      (body | group),
@@ -2270,7 +2384,7 @@ TEI =
 body =
   
   ## (text body) contains the whole body of a single unitary text, excluding any front or back matter. [4. Default Text Structure]
-  element body {
+  element ns1:body {
     (model.global*,
      (model.divTop, (model.global | model.divTop)*)?,
      (model.divGenLike, (model.global | model.divGenLike)*)?,
@@ -2286,7 +2400,7 @@ body =
 group =
   
   ## contains the body of a composite text, grouping together a sequence of distinct texts (or groups of such texts) which are regarded as a unit for some purpose, for example the collected works of an author, a sequence of prose essays, etc. [4. Default Text Structure 4.3.1. Grouped Texts 15.1. Varieties of Composite Text]
-  element group {
+  element ns1:group {
     ((model.divTop | model.global)*,
      ((\text | group), (\text | group | model.global)*),
      model.divBottom*),
@@ -2297,7 +2411,7 @@ group =
 floatingText =
   
   ## contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes. [4.3.2. Floating Texts]
-  element floatingText {
+  element ns1:floatingText {
     (model.global*,
      (front, model.global*)?,
      (body | group),
@@ -2310,7 +2424,7 @@ floatingText =
 \div =
   
   ## (text division) contains a subdivision of the front, body, or back of a text. [4.1. Divisions of the Body]
-  element div {
+  element ns1:div {
     ((model.divTop | model.global)*,
      ((((model.divLike | model.divGenLike), model.global*)+
        | ((model.common, model.global*)+,
@@ -2334,10 +2448,10 @@ floatingText =
     ## Suggested values include: 1] article; 2] section; 3] volume; 4] issue; 5] bill; 6] advert; 7] letter; 8] verse
     attribute type {
       
-      ## article in newspaper or of a bill
+      ## article in a periodical or of a bill
       "article"
       | 
-        ##
+        ## section of a newspaper issue or bill
         "section"
       | 
         ##
@@ -2364,7 +2478,7 @@ floatingText =
 byline =
   
   ## contains the primary statement of responsibility given for a work on its title page or at the head or end of the work. [4.2.2. Openers and Closers 4.5. Front Matter]
-  element byline {
+  element ns1:byline {
     (text | model.gLike | model.phrase | model.global)*,
     att.global.attributes,
     empty
@@ -2372,7 +2486,7 @@ byline =
 dateline =
   
   ## contains a brief description of the place, date, time, etc. of production of a letter, newspaper story, or other work, prefixed or suffixed to it as a kind of heading or trailer. [4.2.2. Openers and Closers]
-  element dateline {
+  element ns1:dateline {
     (text | model.gLike | model.phrase | model.global)*,
     att.global.attributes,
     empty
@@ -2380,7 +2494,7 @@ dateline =
 opener =
   
   ## groups together dateline, byline, salutation, and similar phrases appearing as a preliminary group at the start of a division, especially of a letter. [4.2. Elements Common to All Divisions]
-  element opener {
+  element ns1:opener {
     (text
      | model.gLike
      | model.phrase
@@ -2394,7 +2508,7 @@ opener =
 closer =
   
   ## groups together salutations, datelines, and similar phrases appearing as a final group at the end of a division, especially of a letter. [4.2.2. Openers and Closers 4.2. Elements Common to All Divisions]
-  element closer {
+  element ns1:closer {
     (text
      | model.gLike
      | dateline
@@ -2407,11 +2521,11 @@ closer =
 salute =
   
   ## (salutation) contains a salutation or greeting prefixed to a foreword, dedicatory epistle, or other division of a text, or the salutation in the closing of a letter, preface, etc. [4.2.2. Openers and Closers]
-  element salute { macro.paraContent, att.global.attributes, empty }
+  element ns1:salute { macro.paraContent, att.global.attributes, empty }
 front =
   
   ## (front matter) contains any prefatory matter (headers, title page, prefaces, dedications, etc.) found at the start of a document, before the main body. [4.6. Title Pages 4. Default Text Structure]
-  element front {
+  element ns1:front {
     ((model.frontPart
       | model.pLike
       | model.pLike.front
@@ -2427,7 +2541,7 @@ front =
 back =
   
   ## (back matter) contains any appendixes, etc. following the main part of a text. [4.7. Back Matter 4. Default Text Structure]
-  element back {
+  element ns1:back {
     ((model.frontPart
       | model.pLike.front
       | model.pLike
@@ -2444,7 +2558,7 @@ back =
 table =
   
   ## contains text displayed in tabular form, in rows and columns. [14.1.1. TEI Tables]
-  element table {
+  element ns1:table {
     ((model.headLike | model.global)*,
      ((row, model.global*)+ | (model.graphicLike, model.global*)+),
      (model.divBottom, model.global*)*),
@@ -2460,7 +2574,7 @@ table =
 row =
   
   ## contains one row of a table. [14.1.1. TEI Tables]
-  element row {
+  element ns1:row {
     cell+,
     att.global.attributes,
     att.tableDecoration.attribute.rows,
@@ -2481,7 +2595,7 @@ row =
 cell =
   
   ## contains one cell of a table. [14.1.1. TEI Tables]
-  element cell {
+  element ns1:cell {
     macro.specialPara,
     att.global.attributes,
     att.tableDecoration.attributes,
@@ -2491,7 +2605,7 @@ formula =
   
   ## contains a mathematical or other formula. [14.2. Formulæ and
   ## Mathematical Expressions]
-  element formula {
+  element ns1:formula {
     (text | model.graphicLike | model.hiLike)*,
     att.global.attributes,
     
@@ -2502,7 +2616,7 @@ formula =
 figure =
   
   ## groups elements representing or containing graphic information such as an illustration, formula, or figure. [14.4. Specific Elements for Graphic Images]
-  element figure {
+  element ns1:figure {
     (model.headLike
      | model.common
      | figDesc
@@ -2517,7 +2631,9 @@ figure =
 figDesc =
   
   ## (description of figure) contains a brief prose description of the appearance or content of a graphic figure, for use when documenting an image without displaying it. [14.4. Specific Elements for Graphic Images]
-  element figDesc { macro.limitedContent, att.global.attributes, empty }
+  element ns1:figDesc {
+    macro.limitedContent, att.global.attributes, empty
+  }
 att.datable.custom.attributes =
   att.datable.custom.attribute.when-custom,
   att.datable.custom.attribute.notBefore-custom,
@@ -2605,7 +2721,7 @@ att.datable.iso.attribute.to-iso =
 orgName =
   
   ## (organization name) contains an organizational name. [13.2.2. Organizational Names]
-  element orgName {
+  element ns1:orgName {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -2617,7 +2733,7 @@ orgName =
 persName =
   
   ## (personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]
-  element persName {
+  element ns1:persName {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -2629,7 +2745,7 @@ persName =
 surname =
   
   ## contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [13.2.1. Personal Names]
-  element surname {
+  element ns1:surname {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -2639,7 +2755,7 @@ surname =
 forename =
   
   ## contains a forename, given or baptismal name. [13.2.1. Personal Names]
-  element forename {
+  element ns1:forename {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -2649,7 +2765,7 @@ forename =
 genName =
   
   ## (generational name component) contains a name component used to distinguish otherwise similar names on the basis of the relative ages or generations of the persons named. [13.2.1. Personal Names]
-  element genName {
+  element ns1:genName {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -2659,13 +2775,13 @@ genName =
 nameLink =
   
   ## (name link) contains a connecting phrase or link used within a name but not regarded as part of it, such as van der or of. [13.2.1. Personal Names]
-  element nameLink {
+  element ns1:nameLink {
     macro.phraseSeq, att.global.attributes, att.typed.attributes, empty
   }
 addName =
   
   ## (additional name) contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name. [13.2.1. Personal Names]
-  element addName {
+  element ns1:addName {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -2675,7 +2791,7 @@ addName =
 roleName =
   
   ## contains a name component which indicates that the referent has a particular role or position in society, such as an official title or rank. [13.2.1. Personal Names]
-  element roleName {
+  element ns1:roleName {
     macro.phraseSeq,
     att.global.attributes,
     att.personal.attributes,
@@ -2685,7 +2801,7 @@ roleName =
 placeName =
   
   ## contains an absolute or relative place name. [13.2.3. Place Names]
-  element placeName {
+  element ns1:placeName {
     macro.phraseSeq,
     att.datable.attributes,
     att.editLike.attributes,
@@ -2697,7 +2813,7 @@ placeName =
 bloc =
   
   ## contains the name of a geo-political unit consisting of two or more nation states or countries. [13.2.3. Place Names]
-  element bloc {
+  element ns1:bloc {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -2708,7 +2824,7 @@ bloc =
 country =
   
   ## contains the name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc. [13.2.3. Place Names]
-  element country {
+  element ns1:country {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -2719,7 +2835,7 @@ country =
 region =
   
   ## contains the name of an administrative unit such as a state, province, or county, larger than a settlement, but smaller than a country. [13.2.3. Place Names]
-  element region {
+  element ns1:region {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -2730,7 +2846,7 @@ region =
 district =
   
   ## contains the name of any kind of subdivision of a settlement, such as a parish, ward, or other administrative or geographic unit. [13.2.3. Place Names]
-  element district {
+  element ns1:district {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -2741,7 +2857,7 @@ district =
 settlement =
   
   ## contains the name of a settlement such as a city, town, or village identified as a single geo-political or administrative unit. [13.2.3. Place Names]
-  element settlement {
+  element ns1:settlement {
     macro.phraseSeq,
     att.global.attributes,
     att.naming.attributes,
@@ -2752,7 +2868,7 @@ settlement =
 offset =
   
   ## marks that part of a relative temporal or spatial expression which indicates the direction of the offset between the two place names, dates, or times involved in the expression. [13.2.3. Place Names]
-  element offset {
+  element ns1:offset {
     macro.phraseSeq,
     att.datable.attributes,
     att.editLike.attributes,
@@ -2764,7 +2880,7 @@ offset =
 geogName =
   
   ## (geographical name) identifies a name associated with some geographical feature such as Windrush Valley or Mount Sinai. [13.2.3. Place Names]
-  element geogName {
+  element ns1:geogName {
     macro.phraseSeq,
     att.datable.attributes,
     att.editLike.attributes,
@@ -2776,7 +2892,7 @@ geogName =
 geogFeat =
   
   ## (geographical feature name) contains a common noun identifying some geographical feature contained within a geographic name, such as valley, mount, etc. [13.2.3. Place Names]
-  element geogFeat {
+  element ns1:geogFeat {
     macro.phraseSeq,
     att.datable.attributes,
     att.editLike.attributes,
@@ -2788,7 +2904,7 @@ geogFeat =
 affiliation =
   
   ## contains an informal description of a person's present or past affiliation with some organization, for example an employer or sponsor. [15.2.2. The Participant Description]
-  element affiliation {
+  element ns1:affiliation {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -2799,7 +2915,7 @@ affiliation =
 age =
   
   ## specifies the age of a person. [13.3.2.1. Personal Characteristics]
-  element age {
+  element ns1:age {
     macro.phraseSeq.limited,
     att.global.attributes,
     att.editLike.attributes,
@@ -2812,7 +2928,7 @@ age =
 birth =
   
   ## contains information about a person's birth, such as its date and place. [15.2.2. The Participant Description]
-  element birth {
+  element ns1:birth {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -2823,7 +2939,7 @@ birth =
 climate =
   
   ## contains information about the physical climate of a place. [13.3.4.3. States, Traits, and Events]
-  element climate {
+  element ns1:climate {
     (model.headLike*,
      (model.pLike+ | model.labelLike+),
      (model.noteLike | model.biblLike)*,
@@ -2838,7 +2954,7 @@ climate =
 death =
   
   ## contains information about a person's death, such as its date and place. [15.2.2. The Participant Description]
-  element death {
+  element ns1:death {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -2849,7 +2965,7 @@ death =
 education =
   
   ## contains a description of the educational experience of a person. [15.2.2. The Participant Description]
-  element education {
+  element ns1:education {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -2860,7 +2976,7 @@ education =
 event =
   
   ## contains data relating to any kind of significant event associated with a person, place, or organization. [13.3.1. Basic Principles]
-  element event {
+  element ns1:event {
     (model.headLike*,
      (model.pLike+ | model.labelLike+),
      (model.noteLike | model.biblLike | link)*,
@@ -2879,7 +2995,7 @@ event =
 faith =
   
   ## specifies the faith, religion, or belief set of a person. [13.3.2.1. Personal Characteristics]
-  element faith {
+  element ns1:faith {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -2890,7 +3006,7 @@ faith =
 floruit =
   
   ## contains information about a person's period of activity. [13.3.2.1. Personal Characteristics]
-  element floruit {
+  element ns1:floruit {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -2900,11 +3016,11 @@ floruit =
 geo =
   
   ## (geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]
-  element geo { text, att.global.attributes, empty }
+  element ns1:geo { text, att.global.attributes, empty }
 listOrg =
   
   ## (list of organizations) contains a list of elements, each of which provides information about an identifiable organization. [13.2.2. Organizational Names]
-  element listOrg {
+  element ns1:listOrg {
     (model.headLike*, (org | listOrg)+, (relation | listRelation)*),
     att.global.attributes,
     att.typed.attributes,
@@ -2915,7 +3031,7 @@ listOrg =
 listEvent =
   
   ## (list of events) contains a list of descriptions, each of which provides information about an identifiable event. [13.3.1. Basic Principles]
-  element listEvent {
+  element ns1:listEvent {
     (model.headLike*, (event | listEvent)+, (relation | listRelation)*),
     att.global.attributes,
     att.typed.attributes,
@@ -2926,7 +3042,7 @@ listEvent =
 listPerson =
   
   ## (list of persons) contains a list of descriptions, each of which provides information about an identifiable person or a group of people, for example the participants in a language interaction, or the people referred to in a historical source. [13.3.2. The Person Element 15.2. Contextual Information 2.4. The Profile Description 15.3.2. Declarable Elements]
-  element listPerson {
+  element ns1:listPerson {
     (model.headLike*,
      (model.personLike | listPerson)+,
      (relation | listRelation)*),
@@ -2939,7 +3055,7 @@ listPerson =
 listPlace =
   
   ## (list of places) contains a list of places, optionally followed by a list of relationships (other than containment) defined amongst them. [2.2.7. The Source Description 13.3.4. Places]
-  element listPlace {
+  element ns1:listPlace {
     (model.headLike*,
      (model.placeLike | listPlace)+,
      (relation | listRelation)*),
@@ -2952,7 +3068,7 @@ listPlace =
 location =
   
   ## defines the location of a place as a set of geographical coordinates, in terms of other named geo-political entities, or as an address. [13.3.4. Places]
-  element location {
+  element ns1:location {
     (model.labelLike
      | model.placeNamePart
      | model.offsetLike
@@ -2969,7 +3085,7 @@ location =
 nationality =
   
   ## contains an informal description of a person's present or past nationality or citizenship. [15.2.2. The Participant Description]
-  element nationality {
+  element ns1:nationality {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -2980,7 +3096,7 @@ nationality =
 occupation =
   
   ## contains an informal description of a person's trade, profession or occupation. [15.2.2. The Participant Description]
-  element occupation {
+  element ns1:occupation {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -2997,7 +3113,7 @@ occupation =
 org =
   
   ## (organization) provides information about an identifiable organization such as a business, a tribe, or any other grouping of people. [13.2.2. Organizational Names]
-  element org {
+  element ns1:org {
     (model.headLike*,
      (model.pLike*
       | (model.labelLike
@@ -3021,7 +3137,7 @@ org =
 listRelation =
   
   ## provides information about relationships identified amongst people, places, and organizations, either informally as prose or as formally expressed relation links. [13.3.2.3. Personal Relationships]
-  element listRelation {
+  element ns1:listRelation {
     (model.headLike*,
      (model.pLike | (relation | listRelation)+)),
     att.global.attributes,
@@ -3032,7 +3148,7 @@ listRelation =
 person =
   
   ## provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a historical source. [13.3.2. The Person Element 15.2.2. The Participant Description]
-  element person {
+  element ns1:person {
     (model.pLike+ | (model.personPart | model.global)*),
     att.global.attributes,
     att.editLike.attributes,
@@ -3055,7 +3171,7 @@ person =
 personGrp =
   
   ## (personal group) describes a group of individuals treated as a single person for analytic purposes. [15.2.2. The Participant Description]
-  element personGrp {
+  element ns1:personGrp {
     (model.pLike+ | (model.personPart | model.global)*),
     att.global.attributes,
     att.sortable.attributes,
@@ -3080,7 +3196,7 @@ personGrp =
 place =
   
   ## contains data about a geographic location [13.3.4. Places]
-  element place {
+  element ns1:place {
     (model.headLike*,
      (model.pLike*
       | (model.labelLike
@@ -3097,7 +3213,7 @@ place =
 population =
   
   ## contains information about the population of a place. [13.3.4.3. States, Traits, and Events]
-  element population {
+  element ns1:population {
     (model.headLike*,
      ((model.pLike+ | model.labelLike+),
       (model.noteLike | model.biblLike)*)?,
@@ -3171,7 +3287,7 @@ relation =
       "         "
     ]
   ]
-  element relation {
+  element ns1:relation {
     att.global.attributes,
     att.datable.attributes,
     att.editLike.attributes,
@@ -3201,7 +3317,7 @@ relation =
 residence =
   
   ## describes a person's present or past places of residence. [15.2.2. The Participant Description]
-  element residence {
+  element ns1:residence {
     macro.phraseSeq,
     att.global.attributes,
     att.datable.attributes,
@@ -3212,7 +3328,7 @@ residence =
 sex =
   
   ## specifies the sex of a person. [13.3.2.1. Personal Characteristics]
-  element sex {
+  element ns1:sex {
     macro.phraseSeq,
     att.global.attributes,
     att.editLike.attributes,
@@ -3227,7 +3343,7 @@ sex =
 state =
   
   ## contains a description of some status or quality attributed to a person, place, or organization often at some specific time or for a specific date range. [13.3.1. Basic Principles 13.3.2.1. Personal Characteristics]
-  element state {
+  element ns1:state {
     (state+
      | (model.headLike*,
         model.pLike+,
@@ -3243,7 +3359,7 @@ state =
 terrain =
   
   ## contains information about the physical terrain of a place. [13.3.4.3. States, Traits, and Events]
-  element terrain {
+  element ns1:terrain {
     (model.headLike*,
      (model.pLike+ | model.labelLike+),
      (model.noteLike | model.biblLike)*,
@@ -3258,7 +3374,7 @@ terrain =
 trait =
   
   ## contains a description of some status or quality attributed to a person, place, or organization typically, but not necessarily, independent of the volition or action of the holder and usually not at some specific time or for a specific date range. [13.3.1. Basic Principles 13.3.2.1. Personal Characteristics]
-  element trait {
+  element ns1:trait {
     (trait+
      | (model.headLike*,
         model.pLike+,
@@ -3274,7 +3390,7 @@ trait =
 nym =
   
   ## (canonical name) contains the definition for a canonical name or name component of any kind. [13.3.5. Names and Nyms]
-  element nym {
+  element ns1:nym {
     (model.entryPart*, model.pLike*, nym*),
     att.global.attributes,
     att.typed.attributes,
@@ -3289,7 +3405,7 @@ nym =
 listNym =
   
   ## (list of canonical names) contains a list of nyms, that is, standardized names for any thing. [13.3.5. Names and Nyms]
-  element listNym {
+  element ns1:listNym {
     (model.headLike*, (nym | listNym)+, (relation | listRelation)*),
     att.global.attributes,
     att.typed.attributes,
@@ -3341,7 +3457,7 @@ att.coordinated.attribute.points =
 facsimile =
   
   ## contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text. [11.1. Digital Facsimiles]
-  element facsimile {
+  element ns1:facsimile {
     (front?, (model.graphicLike | surface | surfaceGrp)+, back?),
     att.global.attributes,
     empty
@@ -3349,7 +3465,7 @@ facsimile =
 sourceDoc =
   
   ## contains a transcription or other representation of a single source document potentially forming part of a dossier génétique or collection of sources. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
-  element sourceDoc {
+  element ns1:sourceDoc {
     (model.global | model.graphicLike | surface | surfaceGrp)+,
     att.global.attributes,
     empty
@@ -3357,7 +3473,7 @@ sourceDoc =
 surface =
   
   ## defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
-  element surface {
+  element ns1:surface {
     ((model.global | model.labelLike | model.graphicLike)*,
      ((zone | line | surface | surfaceGrp), model.global*)*),
     att.global.attributes,
@@ -3375,7 +3491,7 @@ surface =
 surfaceGrp =
   
   ## defines any kind of useful grouping of written surfaces, for example the recto and verso of a single leaf, which the encoder wishes to treat as a single unit. [11.1. Digital Facsimiles]
-  element surfaceGrp {
+  element ns1:surfaceGrp {
     (model.global | surface | surfaceGrp)+,
     att.global.attributes,
     att.typed.attributes,
@@ -3384,7 +3500,7 @@ surfaceGrp =
 zone =
   
   ## defines any two-dimensional area within a surface element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
-  element zone {
+  element ns1:zone {
     (text
      | model.graphicLike
      | model.global
@@ -3401,7 +3517,7 @@ zone =
 addSpan =
   
   ## (added span of text) marks the beginning of a longer sequence of text added by an author, scribe, annotator or corrector (see also add). [11.3.1.4. Additions and Deletions]
-  element addSpan {
+  element ns1:addSpan {
     empty
     >> sch:pattern [
          id = "tei_jaraid-addSpan-spanTo-constraint-9"
@@ -3451,7 +3567,7 @@ addSpan =
 damage =
   
   ## contains an area of damage to the text witness. [11.3.3.1. Damage, Illegibility, and Supplied Text]
-  element damage {
+  element ns1:damage {
     macro.paraContent,
     att.global.attributes,
     att.typed.attributes,
@@ -3461,7 +3577,7 @@ damage =
 damageSpan =
   
   ## (damaged span of text) marks the beginning of a longer sequence of text which is damaged in some way but still legible. [11.3.3.1. Damage, Illegibility, and Supplied Text]
-  element damageSpan {
+  element ns1:damageSpan {
     empty
     >> sch:pattern [
          id = "tei_jaraid-damageSpan-spanTo-constraint-11"
@@ -3511,7 +3627,7 @@ damageSpan =
 delSpan =
   
   ## (deleted span of text) marks the beginning of a longer sequence of text deleted, marked as deleted, or otherwise signaled as superfluous or spurious by an author, scribe, annotator, or corrector. [11.3.1.4. Additions and Deletions]
-  element delSpan {
+  element ns1:delSpan {
     empty
     >> sch:pattern [
          id = "tei_jaraid-delSpan-spanTo-constraint-13"
@@ -3560,13 +3676,13 @@ delSpan =
 ex =
   
   ## (editorial expansion) contains a sequence of letters added by an editor or transcriber when expanding an abbreviation. [11.3.1.2. Abbreviation and Expansion]
-  element ex {
+  element ns1:ex {
     macro.xtext, att.global.attributes, att.editLike.attributes, empty
   }
 fw =
   
   ## (forme work) contains a running head (e.g. a header, footer), catchword, or similar material appearing on the current page. [11.6. Headers, Footers, and Similar Matter]
-  element fw {
+  element ns1:fw {
     macro.phraseSeq,
     att.global.attributes,
     att.placement.attributes,
@@ -3579,7 +3695,7 @@ fw =
 am =
   
   ## (abbreviation marker) contains a sequence of letters or signs present in an abbreviation which are omitted or replaced in the expanded form of the abbreviation. [11.3.1.2. Abbreviation and Expansion]
-  element am {
+  element ns1:am {
     (text | model.gLike | model.pPart.transcriptional)*,
     att.global.attributes,
     att.typed.attributes,
@@ -3589,7 +3705,7 @@ am =
 space =
   
   ## indicates the location of a significant space in the text. [11.5.1. Space]
-  element space {
+  element ns1:space {
     (model.descLike | model.certLike)*,
     att.global.attribute.xmlid,
     att.global.attribute.n,
@@ -3625,7 +3741,7 @@ space =
 supplied =
   
   ## signifies text supplied by the transcriber or editor for any reason; for example because the original cannot be read due to physical damage, or because of an obvious omission by the author or scribe. [11.3.3.1. Damage, Illegibility, and Supplied Text]
-  element supplied {
+  element ns1:supplied {
     macro.paraContent,
     att.global.attributes,
     att.editLike.attributes,
@@ -3639,7 +3755,7 @@ supplied =
 line =
   
   ## contains the transcription of a topographic line in the source document [11.2.2. Embedded Transcription]
-  element line {
+  element ns1:line {
     (text | model.global | model.gLike | model.linePart)*,
     att.typed.attributes,
     att.global.attributes,
@@ -3649,7 +3765,7 @@ line =
 mod =
   
   ## represents any kind of modification identified within a single document. [11.3.4.1. Generic Modification]
-  element mod {
+  element ns1:mod {
     macro.paraContent,
     att.global.attributes,
     att.transcriptional.attributes,
@@ -3660,7 +3776,7 @@ mod =
 redo =
   
   ## indicates one or more cancelled interventions in a document which have subsequently been marked as reaffirmed or repeated. [11.3.4.4. Confirmation, Cancellation, and Reinstatement of Modifications]
-  element redo {
+  element ns1:redo {
     empty,
     att.global.attributes,
     att.spanning.attributes,
@@ -3675,7 +3791,7 @@ redo =
 particDesc =
   
   ## (participation description) describes the identifiable speakers, voices, or other participants in any kind of text or other persons named or otherwise referred to in a text, edition, or metadata. [15.2. Contextual Information]
-  element particDesc {
+  element ns1:particDesc {
     (model.pLike+ | (model.personLike | listPerson | listOrg)+),
     att.global.attributes,
     att.declarable.attributes,
@@ -3702,7 +3818,7 @@ att.global.linking.attribute.copyOf =
 link =
   
   ## defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]
-  element link {
+  element ns1:link {
     empty
     >> sch:pattern [
          id = "tei_jaraid-link-linkTargets3-constraint-15"
@@ -3733,7 +3849,7 @@ link =
 ab =
   
   ## (anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]
-  element ab {
+  element ns1:ab {
     macro.paraContent,
     att.global.attributes,
     att.typed.attributes,
@@ -3742,7 +3858,65 @@ ab =
 anchor =
   
   ## (anchor point) attaches an identifier to a point within a text, whether or not it corresponds with a textual element. [8.4.2. Synchronization and Overlap 16.4. Correspondence and Alignment]
-  element anchor {
+  element ns1:anchor {
     empty, att.global.attributes, att.typed.attributes, empty
+  }
+att =
+  
+  ## (attribute) contains the name of an attribute appearing within running text. [22. Documentation Elements]
+  element ns1:att {
+    data.name,
+    att.global.attributes,
+    
+    ## supplies an identifier for the scheme in which this name is defined.
+    ## Sample values include: 1] TEI(text encoding initiative) ; 2] DBK(docbook) ; 3] XX(unknown) ; 4] imaginary; 5] XHTML; 6] XML; 7] XI
+    [ a:defaultValue = "TEI" ] attribute scheme { data.enumerated }?,
+    empty
+  }
+gi =
+  
+  ## (element name) contains the name (generic identifier) of an element. [22. Documentation Elements 22.4.4. Element Specifications]
+  element ns1:gi {
+    data.name,
+    att.global.attributes,
+    
+    ## supplies the name of the scheme in which this name is defined.
+    ## Sample values include: 1] TEI; 2] DBK(docbook) ; 3] XX(unknown) ; 4] Schematron; 5] HTML
+    [ a:defaultValue = "TEI" ] attribute scheme { data.enumerated }?,
+    empty
+  }
+tag =
+  
+  ## contains text of a complete start- or end-tag, possibly including attribute specifications, but excluding the opening and closing markup delimiter characters. [22. Documentation Elements]
+  element ns1:tag {
+    text,
+    att.global.attributes,
+    
+    ## indicates the type of XML tag intended
+    attribute type {
+      
+      ## a start-tag, with delimiters < and > is intended
+      "start"
+      | 
+        ## an end-tag, with delimiters </ and > is intended
+        "end"
+      | 
+        ## a empty tag, with delimiters < and /> is intended
+        "empty"
+      | 
+        ## a pi (processing instruction), with delimiters <? and ?> is intended
+        "pi"
+      | 
+        ## a comment, with delimiters <!-- and --> is intended
+        "comment"
+      | 
+        ## a marked-section, with delimiters <[CDATA[ and ]]> is intended
+        "ms"
+    }?,
+    
+    ## supplies the name of the schema in which this tag is defined.
+    ## Sample values include: 1] TEI(text encoding initiative) ; 2] DBK(docbook) ; 3] XX(unknown) ; 4] Schematron; 5] HTML
+    [ a:defaultValue = "TEI" ] attribute scheme { data.enumerated }?,
+    empty
   }
 start = TEI
