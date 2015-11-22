@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<!--<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>-->
 <?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:lang="en">
@@ -629,7 +629,7 @@
                                 </div>
                                 <div n="14" type="article">
                                     <head>(١٤)</head>
-                                    <p>يسوغ لكل فرد من افراد التبعة العثمانية او جملة<lb/>منهم تقديك
+                                    <p>يسوغ لكل فرد من افراد التبعة العثمانية او جملة<lb/>منهم تقديم
                                         عرضحال بحق وادة وجدت مخالفة للقوانين والنظامات<lb/>المتعلقة
                                         بالعموم الى مرجع تلك المادة كما انه يحق لهم تقديم
                                         عرضحالات<lb/>ممضاة الى المجلس العمومي بصفة مدعين او متشركين
