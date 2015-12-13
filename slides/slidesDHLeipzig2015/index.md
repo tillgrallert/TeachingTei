@@ -11,4 +11,4 @@ We have two hours for
 - a [discussion of the applicability of TEI and XML to rtl-languages, predominantly Arabic](TeiDHLeipzig2015-Arabic.html)
 
 
-Slides are available at 
+Slides are available at [http://tinyurl.com/2015DHLeipzigTEI](http://tinyurl.com/2015DHLeipzigTEI)
