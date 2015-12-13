@@ -1,5 +1,5 @@
 ---
-title: "Brief introduction to XML and TEI"
+title: "DH Leipzig 2015: A brief introduction to XML and TEI"
 author: Till Grallert
 date: 2015-12-13 18:41:35
 ---
@@ -59,7 +59,7 @@ which we can **encode**</hi>.
 # Encoding of texts
 
 - A text is more than a sequence of encoded glyphs or lexical tokens
-    + It has a *structure* and a *communicative function* 
+    + It has a *structure* and a *communicative function*
     + It also has multiple possible *readings*
 - Encoding, or mark-up, is a way of making these things explicit
 
@@ -76,6 +76,7 @@ Note: <hi class="cImportant">Only that which is explicit can be reliably found a
     
 Note: <hi class="cImportant">We don't have to be limited to the view of one editor or consumer</hi>
 
+<!-- 
 # Mark-up: styles
 
 - In the beginning there was *procedural* mark-up: `RED INK ON; print balance; RED INK OFF`
@@ -83,19 +84,22 @@ Note: <hi class="cImportant">We don't have to be limited to the view of one edit
 - also known as **encoding** or **annotation**
 
 Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi>
-
-# Mark-up: some more definitions
-
-- mark-up makes explicit the distinctions we want to make when processing a string of bytes
-- mark-up is a way of naming and characterizing the parts of a text in a formalized way
-- It's (usually) more useful to mark up what we think things *are* than what they *look* like
+ -->
 
 # Mark-up: separation of form and content
 
 - *Presentational* mark-up cares more about fonts and layout than meaning
-- *Descriptive* mark-up says what things are, and leaves the rendition of them for a separate step
+- *Descriptive* mark-up says what things are, and leaves the rendition of them for a separate step. This is also known as *encoding* or *annotation*
 - Separating the form of something from its content makes its re-use more flexible
 - It also allows easy changes of presentation across a large number of documents
+
+
+# Mark-up: some more definitions
+
+- mark-up makes explicit the distinctions we want to make when processing a string of bytes
+- mark-up is a way of naming and characterising the parts of a text in a formalized way
+- It's (usually) more useful to mark up what we think things *are* than what they *look* like
+
 
 # Mark-up is a scholarly activity!
 
@@ -105,6 +109,37 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 - mark-up can assist in answering research questions, and deciding what mark-up is needed to enable such questions to be answered can be a research activity in itself
 - Good textual encoding is never as easy or quick as people would believe
 - Detailed document analysis is needed before encoding for the resulting mark-up to be useful
+
+# The TEI 
+
+The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of [Guidelines](http://www.tei-c.org/Guidelines/) which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.
+
+Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.
+
+# Why the TEI?
+
+The TEI provides:
+
+- a language-independent framework for defining markup languages
+- a very simple consensus-based way of organizing and structuring textual (and other) resources...
+- ... which can be enriched and personalized in highly idiosyncratic or specialised ways
+- a very rich library of existing specialised components
+- an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats
+- a large and active open source style user community
+
+# Relevance
+
+Why would you want those things?
+
+- because we need to interchange resources
+    + between people
+    + (increasingly) between machines
+- because we need to integrate resources
+    + of different media types
+    + from different technical contexts
+- because we need to preserve resources
+    + cryogenics is not the answer!
+    + we need to preserve metadata as well as data
 
 # XML: what it is and why you should care
 
@@ -163,36 +198,6 @@ An XML document might contain:
 - Other elements and content: `<hello>hello world!</hello>`
 - Attribute and value: `@type="enthusiastic"`
 
-# The TEI 
-
-The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of [Guidelines](http://www.tei-c.org/Guidelines/) which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.
-
-Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.
-
-# Why the TEI?
-
-The TEI provides:
-
-- a language-independent framework for defining markup languages
-- a very simple consensus-based way of organizing and structuring textual (and other) resources...
-- ... which can be enriched and personalized in highly idiosyncratic or specialised ways
-- a very rich library of existing specialised components
-- an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats
-- a large and active open source style user community
-
-# Relevance
-
-Why would you want those things?
-
-- because we need to interchange resources
-    + between people
-    + (increasingly) between machines
-- because we need to integrate resources
-    + of different media types
-    + from different technical contexts
-- because we need to preserve resources
-    + cryogenics is not the answer!
-    + we need to preserve metadata as well as data
 
 # Characteristics of TEI XMl in one slide
 
@@ -219,6 +224,7 @@ or if it can be transformed automatically using some TEI-defined procedures into
 Standardisation should not mean "Do what I do", but rather <hi class="cImportant">"Explain what you do in terms I can understand".</hi>
 
 Instead of an abstract set of rules and norms, standardisation should be thought of as a <hi class="cImportant">community of practice.</hi>
+
 
 # Editing XML 1/2
 
