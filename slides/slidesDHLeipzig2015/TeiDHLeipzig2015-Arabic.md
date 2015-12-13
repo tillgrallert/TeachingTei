@@ -1,5 +1,5 @@
 ---
-title: "Leipzig: XML, TEI, and rtl-languages"
+title: "DH Leipzig 2015: XML, TEI, and rtl-languages"
 author: Till Grallert
 date: 2015-12-13 15:07:45
 ---

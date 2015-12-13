@@ -53,7 +53,7 @@ Every element which is a member of the `att.naming` class inherits two attribute
 - `@key`: provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.
 - `@ref`: provides an explicit means of locating a full definition for the entity being named by means of one or more URIs.
 
-Note: Arguably, @key is redundant, since @ref is defined as anyURI, this
+Note: Arguably, `@key` is redundant, since `@ref` is defined as anyURI, this
 can point from the name instance to the @xml:id of metadata about the entity, prefixing it with a '#' if in the same file.
 
 # Other linking attributes
@@ -166,7 +166,7 @@ or:
 </persName>
 ~~~
 
-Not to mention: `<roleName>` (e.g. ‘Emperor’), `<genName>` (eg ‘the Elder’) `<addName>` (e.g. ‘Hammer of the Scots’), `<nameLink>` a link between components (e.g. ‘van’) etc. all of which can carry @type attributes
+Not to mention: `<roleName>` (e.g. ‘Emperor’), `<genName>` (eg ‘the Elder’) `<addName>` (e.g. ‘Hammer of the Scots’), `<nameLink>` a link between components (e.g. ‘van’) etc. all of which can carry `@type` attributes
 
 # `<persName>` works well for Western names, but Arabic or Ottoman?
 
