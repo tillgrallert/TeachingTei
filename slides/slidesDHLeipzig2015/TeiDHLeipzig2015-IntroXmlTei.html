@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Till Grallert" />
-  <title>Brief introduction to XML and TEI</title>
+  <title>DH Leipzig 2015: A brief introduction to XML and TEI</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -64,25 +64,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   /* xml element names */
   .xml > code > span.kw {
-  	color: #0F0F9C;
-  	font-weight: bold;
+    color: #0F0F9C;
+    font-weight: bold;
   }
   /* xml attribute names */
   .xml > code > span.ot {
-  	color:#FF8041;
+    color:#FF8041;
   }
   /* xml attribute values */
   .xml > code > span.st {
-  	color:#993300;
+    color:#993300;
   }
   /* xml comments */
   .xml > code > span.co {
-  	color:#167116;
-  	font-style: italic;
+    color:#167116;
+    font-style: italic;
   }
   /* xml computing instructions: not implemented in Pandoc syntax highlighting */
   /* .xml > code > span {
-  	color:#9132CC;
+    color:#9132CC;
   } */
   </style>
   <style type="text/css">
@@ -102,7 +102,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <script type="text/javascript" src="../js/slidy.js"></script>
   <style type="text/css">
   .cImportant {
-  	color:red;
+    color:red;
   }
   </style>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
@@ -110,7 +110,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">Brief introduction to XML and TEI</h1>
+  <h1 class="title">DH Leipzig 2015: A brief introduction to XML and TEI</h1>
   <p class="author">
 Till Grallert
   </p>
@@ -206,31 +206,31 @@ Till Grallert
 </ul></li>
 </ul>
 <p>Note: <hi class="cImportant">We don’t have to be limited to the view of one editor or consumer</hi></p>
-</div>
-<div id="mark-up-styles" class="slide section level1">
-<h1>Mark-up: styles</h1>
-<ul>
-<li>In the beginning there was <em>procedural</em> mark-up: <code>RED INK ON; print balance; RED INK OFF</code></li>
-<li>which being generalised became <em>descriptive</em> or <em>semantic</em> mark-up: <code>&lt;balance type=&quot;overdrawn&quot;&gt;some numbers&lt;/balance&gt;</code></li>
-<li>also known as <strong>encoding</strong> or <strong>annotation</strong></li>
-</ul>
-<p>Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi></p>
-</div>
-<div id="mark-up-some-more-definitions" class="slide section level1">
-<h1>Mark-up: some more definitions</h1>
-<ul>
-<li>mark-up makes explicit the distinctions we want to make when processing a string of bytes</li>
-<li>mark-up is a way of naming and characterizing the parts of a text in a formalized way</li>
-<li>It’s (usually) more useful to mark up what we think things <em>are</em> than what they <em>look</em> like</li>
-</ul>
+<!-- 
+# Mark-up: styles
+
+- In the beginning there was *procedural* mark-up: `RED INK ON; print balance; RED INK OFF`
+- which being generalised became *descriptive* or *semantic* mark-up: `<balance type="overdrawn">some numbers</balance>`
+- also known as **encoding** or **annotation**
+
+Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi>
+ -->
 </div>
 <div id="mark-up-separation-of-form-and-content" class="slide section level1">
 <h1>Mark-up: separation of form and content</h1>
 <ul>
 <li><em>Presentational</em> mark-up cares more about fonts and layout than meaning</li>
-<li><em>Descriptive</em> mark-up says what things are, and leaves the rendition of them for a separate step</li>
+<li><em>Descriptive</em> mark-up says what things are, and leaves the rendition of them for a separate step. This is also known as <em>encoding</em> or <em>annotation</em></li>
 <li>Separating the form of something from its content makes its re-use more flexible</li>
 <li>It also allows easy changes of presentation across a large number of documents</li>
+</ul>
+</div>
+<div id="mark-up-some-more-definitions" class="slide section level1">
+<h1>Mark-up: some more definitions</h1>
+<ul>
+<li>mark-up makes explicit the distinctions we want to make when processing a string of bytes</li>
+<li>mark-up is a way of naming and characterising the parts of a text in a formalized way</li>
+<li>It’s (usually) more useful to mark up what we think things <em>are</em> than what they <em>look</em> like</li>
 </ul>
 </div>
 <div id="mark-up-is-a-scholarly-activity" class="slide section level1">
@@ -242,6 +242,44 @@ Till Grallert
 <li>mark-up can assist in answering research questions, and deciding what mark-up is needed to enable such questions to be answered can be a research activity in itself</li>
 <li>Good textual encoding is never as easy or quick as people would believe</li>
 <li>Detailed document analysis is needed before encoding for the resulting mark-up to be useful</li>
+</ul>
+</div>
+<div id="the-tei" class="slide section level1">
+<h1>The TEI</h1>
+<p>The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of <a href="http://www.tei-c.org/Guidelines/">Guidelines</a> which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.</p>
+<p>Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.</p>
+</div>
+<div id="why-the-tei" class="slide section level1">
+<h1>Why the TEI?</h1>
+<p>The TEI provides:</p>
+<ul>
+<li>a language-independent framework for defining markup languages</li>
+<li>a very simple consensus-based way of organizing and structuring textual (and other) resources…</li>
+<li>… which can be enriched and personalized in highly idiosyncratic or specialised ways</li>
+<li>a very rich library of existing specialised components</li>
+<li>an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats</li>
+<li>a large and active open source style user community</li>
+</ul>
+</div>
+<div id="relevance" class="slide section level1">
+<h1>Relevance</h1>
+<p>Why would you want those things?</p>
+<ul>
+<li>because we need to interchange resources
+<ul>
+<li>between people</li>
+<li>(increasingly) between machines</li>
+</ul></li>
+<li>because we need to integrate resources
+<ul>
+<li>of different media types</li>
+<li>from different technical contexts</li>
+</ul></li>
+<li>because we need to preserve resources
+<ul>
+<li>cryogenics is not the answer!</li>
+<li>we need to preserve metadata as well as data</li>
+</ul></li>
 </ul>
 </div>
 <div id="xml-what-it-is-and-why-you-should-care" class="slide section level1">
@@ -313,44 +351,6 @@ Till Grallert
 <li>Attribute and value: <code>@type=&quot;enthusiastic&quot;</code></li>
 </ul>
 </div>
-<div id="the-tei" class="slide section level1">
-<h1>The TEI</h1>
-<p>The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of <a href="http://www.tei-c.org/Guidelines/">Guidelines</a> which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.</p>
-<p>Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.</p>
-</div>
-<div id="why-the-tei" class="slide section level1">
-<h1>Why the TEI?</h1>
-<p>The TEI provides:</p>
-<ul>
-<li>a language-independent framework for defining markup languages</li>
-<li>a very simple consensus-based way of organizing and structuring textual (and other) resources…</li>
-<li>… which can be enriched and personalized in highly idiosyncratic or specialised ways</li>
-<li>a very rich library of existing specialised components</li>
-<li>an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats</li>
-<li>a large and active open source style user community</li>
-</ul>
-</div>
-<div id="relevance" class="slide section level1">
-<h1>Relevance</h1>
-<p>Why would you want those things?</p>
-<ul>
-<li>because we need to interchange resources
-<ul>
-<li>between people</li>
-<li>(increasingly) between machines</li>
-</ul></li>
-<li>because we need to integrate resources
-<ul>
-<li>of different media types</li>
-<li>from different technical contexts</li>
-</ul></li>
-<li>because we need to preserve resources
-<ul>
-<li>cryogenics is not the answer!</li>
-<li>we need to preserve metadata as well as data</li>
-</ul></li>
-</ul>
-</div>
 <div id="characteristics-of-tei-xml-in-one-slide" class="slide section level1">
 <h1>Characteristics of TEI XMl in one slide</h1>
 <ul>
@@ -389,12 +389,39 @@ Till Grallert
 <div id="editing-xml-22-software" class="slide section level1">
 <h1>Editing XML 2/2: software</h1>
 <ul>
-<li><strong>oXygen</strong> is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.</li>
+<li><strong>oXygen</strong> is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.
+<ul>
 <li>provides an “author” mode that does shows only the text inside notes, styled according to CSS associated to a specific schema</li>
 <li>has an XSLT processor built-in</li>
 <li>supports XQuery and XML databases</li>
-<li><strong>Sublime Text</strong> is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:</li>
+</ul></li>
+<li><strong>Sublime Text</strong> is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
+<ul>
 <li><a href="https://github.com/praveenvijayan/Sublime-Text-2-BIDI" class="uri">https://github.com/praveenvijayan/Sublime-Text-2-BIDI</a> <strong>CAUTION</strong>: the plug-in rearranges Arabic to make it look correct, but the actual order of characters in the file is changed and wrong.</li>
+</ul></li>
+</ul>
+</div>
+<div id="useful-links-resources" class="slide section level1">
+<h1>Useful links / resources</h1>
+<ul>
+<li>the TEI Consortium’s <a href="http://www.tei-c.org/index.xml">website</a> at http://www.tei-c.org/index.xml:
+<ul>
+<li>the <a href="http://www.tei-c.org/Guidelines/P5/">TEI guidelines</a> at http://www.tei-c.org/Guidelines/P5/</li>
+<li><a href="http://www.teibyexample.org/TBE.htm">TEI by Example</a> at http://www.teibyexample.org/TBE.htm</li>
+<li>the TEI mailing list, <script type="text/javascript">
+<!--
+h='&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#46;&#66;&#82;&#x4f;&#x57;&#78;&#46;&#x45;&#68;&#x55;';a='&#64;';n='&#84;&#x45;&#x49;&#x2d;&#76;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#84;&#x45;&#x49;&#x2d;&#76;&#32;&#x61;&#116;&#32;&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#32;&#100;&#x6f;&#116;&#32;&#66;&#82;&#x4f;&#x57;&#78;&#32;&#100;&#x6f;&#116;&#32;&#x45;&#68;&#x55;</noscript></li>
+<li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at http://wiki.tei-c.org/: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.</li>
+</ul></li>
+<li>Further resources provided by the TEI council and Oxford computing centre:
+<ul>
+<li><a href="http://www.tei-c.org/Roma/">ROMA</a> at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation</li>
+<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/">OxGarage</a> at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.</li>
+<li><a href="http://digital.humanities.ox.ac.uk/dhoxss/">DHOxSS</a> at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.</li>
+</ul></li>
 </ul>
 </div>
 </body>
