@@ -222,7 +222,7 @@ div.figure img {
     width:80%;
 }
 
-/*pre {
+pre {
  font-size: 80%;
  font-weight: normal;
  line-height: 100%;
@@ -231,14 +231,15 @@ div.figure img {
  padding-left: 1em;
  padding-right: 1em;
  border-style: solid;
- border-left-width: 1em;
+ border-left-width: thin;
  border-top-width: thin;
  border-right-width: thin;
  border-bottom-width: thin;
  border-color: #95ABD0;
+ border-radius: 3px;
  color: #00428C;
  background-color: #E4E5E7;
-}*/
+}
 
 /*code, kbd, pre, samp {
   font-family: monospace, monospace;
@@ -259,14 +260,14 @@ div.figure img {
   border: 0;
 }*/
 
-pre {
+/*pre {
   white-space: pre-wrap;
   padding:0;
   margin: 0;
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
 
-}
+}*/
 
 h1>code{
   background: transparent;

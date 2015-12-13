@@ -188,7 +188,7 @@ Extensible Markup Language (XML) is a simple, very flexible text format derived 
 
 # XML: what it is and why you should care
 
-- XML is *structured data* represented as strings of text
+- XML is *structured data* represented as strings of text encoded in Unicode
 - XML looks like HTML, except that:
     + XML is *extensible*
     + XML must be *well-formed*
@@ -292,44 +292,46 @@ The xml namespace is used by the TEI for global attributes @xml:id and @xml:lang
 
 # Example: *Thamarāt al-Funūn* #1683, 27 July 1908
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <div xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:lang="ar">
-        <head xml:lang="ar">الصدارة العظمى</head>
-        <p>بشرة الانباء البرقية بصدور الارادة 
-        <lb/> السنية السلطانية باسناد مسند الصدارة 
-        <lb/>العظمى الى عهدة الوزير الخطير <persName> حضرة 
-        <lb/> صاحب الفخامة الدولة سعيد باشا</persName>الصدر 
-        <lb/> الأعظم الأسبق، فسر الكل بهذا التوجيه 
-        <lb/> الوجيه لما عرف به الصدر المشار اليه من 
-        <lb/> التفاني في خدمة الجناب العالي السلطاني 
-        <lb/> بنبالة قصد وسعة علم مع اقتدار باهر 
-        <lb/> واخلاص عظيم فنرفع لفخامته فروض 
-        <lb/> التهاني والتبريك ونضرع الى المولى المتعال 
-        <lb/> ان يقرن اموره بالتوفيق وتنفيذ نيات حضرة 
-        <lb/> مولانا الخليفة الاعظم المنصرف في خير 
-        <lb/> العباد وعمران البلاد،</p>
-        <p>وهذا تعريب التلغراف السامي الوارد 
-        <lb/> من فخامته الى مقام الولاية الجليلة:</p>
-        <p>
-            <quote>سنحت عواطف الحضرة العلية 
-            <lb/> السلطانية بتوجيه خدمة الصدارة هذه 
-            <lb/> المرة ايضاً على عهدة هذا المثنى . ان 
-            <lb/> وظيفة مأموري المملكية الاساسية هي المحافظة
-            <lb/> على الامن والراحة وحسن رؤْية المصالح 
-            <lb/> ووظائف الادارة العدلية والحكام هي
-            <lb/> اجراء العدالة في الحقوق العمومية والشخصية 
-            <lb/> ضمن دائرة القوانين العدلية الموضوعة مع 
-            <lb/> قيام كل مأمور بوظيفة مأموريته بكمال 
-            <lb/> العفة والاستقامة لهذا نخطركم ان الذين 
-            <lb/> يقومون بالخدمات الصحيحة الصادقة تكون 
-            <lb/> مساعيهم مظهراً لشرف تقدير <rs ref="#pers-1"> حضرة 
-            <lb/> صاحب الخلافة العظمى</rs>كما ان من يخالف 
-            <lb/>ذلك يقع بالطبع تحت ظائلة المسؤلية 
-            <lb/> في <date calendar="#cal_ottomanfiscal"
-                    datingMethod="#cal_ottomanfiscal" when-custom="1324-05-09">٩ تموز سنة
-                ٣٢٤</date></quote>
-        </p>
-    </div>
+~~~{.xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:lang="ar">
+    <head xml:lang="ar">الصدارة العظمى</head>
+    <p>بشرة الانباء البرقية بصدور الارادة 
+    <lb/> السنية السلطانية باسناد مسند الصدارة 
+    <lb/>العظمى الى عهدة الوزير الخطير <persName> حضرة 
+    <lb/> صاحب الفخامة الدولة سعيد باشا</persName>الصدر 
+    <lb/> الأعظم الأسبق، فسر الكل بهذا التوجيه 
+    <lb/> الوجيه لما عرف به الصدر المشار اليه من 
+    <lb/> التفاني في خدمة الجناب العالي السلطاني 
+    <lb/> بنبالة قصد وسعة علم مع اقتدار باهر 
+    <lb/> واخلاص عظيم فنرفع لفخامته فروض 
+    <lb/> التهاني والتبريك ونضرع الى المولى المتعال 
+    <lb/> ان يقرن اموره بالتوفيق وتنفيذ نيات حضرة 
+    <lb/> مولانا الخليفة الاعظم المنصرف في خير 
+    <lb/> العباد وعمران البلاد،</p>
+    <p>وهذا تعريب التلغراف السامي الوارد 
+    <lb/> من فخامته الى مقام الولاية الجليلة:</p>
+    <p>
+        <quote>سنحت عواطف الحضرة العلية 
+        <lb/> السلطانية بتوجيه خدمة الصدارة هذه 
+        <lb/> المرة ايضاً على عهدة هذا المثنى . ان 
+        <lb/> وظيفة مأموري المملكية الاساسية هي المحافظة
+        <lb/> على الامن والراحة وحسن رؤْية المصالح 
+        <lb/> ووظائف الادارة العدلية والحكام هي
+        <lb/> اجراء العدالة في الحقوق العمومية والشخصية 
+        <lb/> ضمن دائرة القوانين العدلية الموضوعة مع 
+        <lb/> قيام كل مأمور بوظيفة مأموريته بكمال 
+        <lb/> العفة والاستقامة لهذا نخطركم ان الذين 
+        <lb/> يقومون بالخدمات الصحيحة الصادقة تكون 
+        <lb/> مساعيهم مظهراً لشرف تقدير <rs ref="#pers-1"> حضرة 
+        <lb/> صاحب الخلافة العظمى</rs>كما ان من يخالف 
+        <lb/>ذلك يقع بالطبع تحت ظائلة المسؤلية 
+        <lb/> في <date calendar="#cal_ottomanfiscal"
+                datingMethod="#cal_ottomanfiscal" when-custom="1324-05-09">٩ تموز سنة
+            ٣٢٤</date></quote>
+    </p>
+</div>
+~~~
 
 # Example deconstructed: root node
 
@@ -440,7 +442,7 @@ The Text Encoding Initiative was born into a very different world
 
 # Why the TEI
 
-The TEI provides
+The TEI provides:
 
 - a language-independent framework for defining markup languages
 - a very simple consensus-based way of organizing and structuring textual (and other) resources...
@@ -546,6 +548,7 @@ Instead of an abstract set of rules and norms, standardisation should be thought
     + [ROMA](http://www.tei-c.org/Roma/) at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation
     + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
     + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.
+
 
 
 
