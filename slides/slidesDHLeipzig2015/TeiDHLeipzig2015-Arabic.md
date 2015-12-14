@@ -228,7 +228,7 @@ Note: `@nymRef` is particularly important for our multi-lingual examples:
 # Examples
 
 ~~~{.xml}
-<p xml:lang="en">... <name ref="#jsbach" type="person">Johann Sebastian Bach</name> the German composer was born in 1685... </p>
+    <p>The <orgName ref="entities:otc">Oriental Theatre Company</orgName> numbering 54 people, and under the direction of <persName ref="#pers_3">Mr. Butros Tanfous</persName> arrived this week at the <orgName ref="#org_usib">U.S. Immigration Bureau</orgName>. Several Oriental specialists from various parts of Turkey have been secured in order to give the American public a correct idea of the customs and manners of the people in different parts of the Empire.</p>
 ~~~
 
 or:
