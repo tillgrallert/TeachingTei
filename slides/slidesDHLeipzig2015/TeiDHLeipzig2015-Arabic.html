@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Till Grallert" />
-  <title>Leipzig: TEI and rtl-languages; notes</title>
+  <title>DH Leipzig 2015: XML, TEI, and rtl-languages</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -49,7 +49,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
-   href="/BachUni/projekte/CSS/slidy_custom_sh.css" />
+   href="../css/slidy_custom_sh.css" />
   <style type="text/css">
   /* these styles mirror oXygen's highlight colours for XML */
   pre.sourceCode {
@@ -64,25 +64,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   /* xml element names */
   .xml > code > span.kw {
-  	color: #0F0F9C;
-  	font-weight: bold;
+    color: #0F0F9C;
+    font-weight: bold;
   }
   /* xml attribute names */
   .xml > code > span.ot {
-  	color:#FF8041;
+    color:#FF8041;
   }
   /* xml attribute values */
   .xml > code > span.st {
-  	color:#993300;
+    color:#993300;
   }
   /* xml comments */
   .xml > code > span.co {
-  	color:#167116;
-  	font-style: italic;
+    color:#167116;
+    font-style: italic;
   }
   /* xml computing instructions: not implemented in Pandoc syntax highlighting */
   /* .xml > code > span {
-  	color:#9132CC;
+    color:#9132CC;
   } */
   </style>
   <style type="text/css">
@@ -100,12 +100,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   </style>
   <script type="text/javascript" src="../js/slidy.js"></script>
+  <style type="text/css">
+  .cImportant {
+    color:red;
+  }
+  </style>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">Leipzig: TEI and rtl-languages; notes</h1>
+  <h1 class="title">DH Leipzig 2015: XML, TEI, and rtl-languages</h1>
   <p class="author">
 Till Grallert
   </p>
@@ -113,16 +118,18 @@ Till Grallert
 </div>
 <div class="slide section level1">
 
-<p>Grounds I want to cover:</p>
+<p>Many slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
+<p>The slides are available at <a href="https://www.github.com/tillgrallert/TeachingTei/slides" class="uri">https://www.github.com/tillgrallert/TeachingTei/slides</a>.</p>
 </div>
 <div id="xml-unicode-arabic" class="slide section level1">
 <h1>XML, Unicode, Arabic</h1>
 <ul>
-<li>The good: XML follows the unicode standard by design!</li>
-<li>The bad: Each unicode sign is an independent entity
+<li>The good: XML follows the Unicode standard by design!</li>
+<li>The bad: Each Unicode sign is an independent entity
 <ul>
-<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for “الى” will not return instances of “إلى” or “إِلى”, “ان” will neither return “إن” nor “أن” out of the box.</li>
-<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>): a search for “1326” will not return instances of “١٣٢٦” and vice versa.</li>
+<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for “الى” will not return instances of “إلى” or “إِلى”.</li>
+<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>).</li>
 <li>ة is not ت!<br />
 </li>
 </ul></li>
@@ -131,7 +138,7 @@ Till Grallert
 </div>
 <div id="the-good" class="slide section level1">
 <h1>1. The good</h1>
-<p>TEI and XML can represent any text written in any sign-system. If this system is part of the unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.</p>
+<p>TEI and XML can represent any text written in any sign-system. If this system is part of the Unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.</p>
 <p>BUT: mixing two writing systems, while unambiguous for the computer, will cause confusion for the human reader / editor:</p>
 </div>
 <div id="facsimile" class="slide section level1">
@@ -251,7 +258,7 @@ Till Grallert
 </div>
 <div id="solution-normalisation" class="slide section level1">
 <h1>Solution: normalisation</h1>
-<p>The solution is normalisation—silently or with explicit mark-up (sounds familiar, doesn’t it). If a text shall be machine-readible, it must be normalised!</p>
+<p>The solution is normalisation—silently or with explicit mark-up (sounds familiar, doesn’t it). If a text shall be machine-readable, it must be normalised!</p>
 <ol style="list-style-type: decimal">
 <li>Normalise spelling with <code>&lt;choice&gt;</code>, <code>&lt;orig&gt;</code>, and <code>&lt;reg&gt;</code>:</li>
 </ol>
@@ -270,7 +277,7 @@ Till Grallert
 </div>
 <div id="the-ugly" class="slide section level1">
 <h1>3. The ugly</h1>
-<p>XML, XPath, and the TEI adhere to hegemonial European/ Western models and concepts, which are not explicitly marked as such and thus silently accepted as the norm. Everything that is not written in English or, more general, in Latin scripts should be marked as such; every date that is not Gregorian, cannot be readily computed; and the TEI’s concept of personal names is absolutely inadequat to mark-up Arabic, Ottoman, etc. names.</p>
+<p>XML, XPath, and the TEI adhere to hegemonic European/ Western models and concepts, which are not explicitly marked as such and thus silently accepted as the norm. Everything that is not written in English or, more general, in Latin scripts should be marked as such; every date that is not Gregorian, cannot be readily computed; and the TEI’s concept of personal names is absolutely inadequate to mark up Arabic, Ottoman, etc. names.</p>
 </div>
 <div id="names-people-and-places" class="slide section level1">
 <h1>Names, people, and places</h1>

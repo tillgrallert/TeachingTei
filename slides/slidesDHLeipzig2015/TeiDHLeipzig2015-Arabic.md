@@ -14,15 +14,15 @@ The slides are available at [https://www.github.com/tillgrallert/TeachingTei/sli
 # XML, Unicode, Arabic
 
 - The good: XML follows the Unicode standard by design!
-- The bad: Each unicode sign is an independent entity
-    + Common but "defective" writing of Arabic without the initial *hamza* and without *ḥarakāt* is different from the correct spelling: a search for "الى" will not return instances of "إلى" or "إِلى", "ان" will neither return "إن" nor "أن" out of the box.
-    + Arabic numerals are not considered as numerals by the computer (i.e. data type is `xs:string` and not `xs:integer`): a search for "1326" will not return instances of "١٣٢٦" and vice versa.
+- The bad: Each Unicode sign is an independent entity
+    + Common but "defective" writing of Arabic without the initial *hamza* and without *ḥarakāt* is different from the correct spelling: a search for "الى" will not return instances of "إلى" or "إِلى".
+    + Arabic numerals are not considered as numerals by the computer (i.e. data type is `xs:string` and not `xs:integer`).
     + ة is not ت!  
 - The ugly: XML and TEI are based in the western tradition of modelling a text and named entities as well as in LTR writing systems 
 
 # 1. The good
 
-TEI and XML can represent any text written in any sign-system. If this system is part of the unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.
+TEI and XML can represent any text written in any sign-system. If this system is part of the Unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.
 
 BUT: mixing two writing systems, while unambiguous for the computer, will cause confusion for the human reader / editor:
 
