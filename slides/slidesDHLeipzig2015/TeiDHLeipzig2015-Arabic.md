@@ -213,12 +213,11 @@ Note: `@nymRef` is particularly important for our multi-lingual examples:
     <forename nymRef="#nym1">شكري</forename>
     <addName type="title" nymRef="#nym2">باشا</addName>
 </persName>
-    <persName xml:lang="ota-Latn-x-ijmes">
+<persName xml:lang="ota-Latn-x-ijmes">
     <forename nymRef="#nym1">Şükrü</forename>
     <addName type="title" nymRef="#nym2">Paşa</addName>
 </persName>
-</persName>
-    <persName xml:lang="ar-Latn-EN">
+<persName xml:lang="ar-Latn-EN">
     <forename nymRef="#nym1">Shukri</forename>
     <addName type="title" nymRef="#nym2">Pasha</addName>
 </persName>
@@ -251,7 +250,7 @@ or:
 Even within a single language, in a single document, there may be many ways of referencing the same person:
 
 ~~~{.xml}
-<persName>Leslie Gunston</persName>.... <persName>Leslie</persName> .... <. rs>Wilfred's cousin</rs>
+<persName>Leslie Gunston</persName>.... <persName>Leslie</persName> .... <rs>Wilfred's cousin</rs>
 ~~~
 
 The `@ref` can be used simply to combine all references to a specified person:
