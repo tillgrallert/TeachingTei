@@ -13,3 +13,5 @@ We have two hours for:
 
 
 Slides are available at [http://tinyurl.com/2015DHLeipzigTEI](http://tinyurl.com/2015DHLeipzigTEI)
+
+For example XML cloe [https://www.github.com/tillgrallert/TeachingTei](https://www.github.com/tillgrallert/TeachingTei) and [https://www.github.com/tillgrallert/digital-muqtabas](https://www.github.com/tillgrallert/digital-muqtabas).

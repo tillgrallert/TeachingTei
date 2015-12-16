@@ -69,32 +69,36 @@ The text may be in the form of:
 
 # TEI basic structure 
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-            <!-- required -->
-        </teiHeader>
-        <facsimile>
-            <!-- optional-->
-        </facsimile>
-        <sourceDoc>
-            <!-- optional -->
-        </sourceDoc>
-        <text>
-            <!-- required if no facsimile or sourceDoc-->
-        </text>
-    </TEI>
+~~~{.xml}
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- required -->
+    </teiHeader>
+    <facsimile>
+        <!-- optional-->
+    </facsimile>
+    <sourceDoc>
+        <!-- optional -->
+    </sourceDoc>
+    <text>
+        <!-- required if no facsimile or sourceDoc-->
+    </text>
+</TEI>
+~~~
 
 # TEI basic structure 2
 
-    <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-            <!-- required -->
-        </teiHeader>
-        <TEI>
-            <!-- required -->
-        </TEI>
-        <!-- More <TEI>elements -->
-    </teiCorpus>
+~~~{.xml}
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- required -->
+    </teiHeader>
+    <TEI>
+        <!-- required -->
+    </TEI>
+    <!-- More <TEI>elements -->
+</teiCorpus>
+~~~
 
 # The `<text>` element
 
@@ -192,36 +196,40 @@ Each identifiable division within `<text>` is a `<div>` element. It can optional
 
 For example, page 1 has two divisions:
 
-    <pb n="1"/>
-    <div type="article">
-        <p>....</p> 
-    </div>
-    <div type="poem"> 
-        <head>Strange Meeting</head> 
-        <lg>
-            <l>....</l> 
-        </lg>
-    </div>
+~~~{.xml}
+<pb n="1"/>
+<div type="article">
+    <p>....</p> 
+</div>
+<div type="poem"> 
+    <head>Strange Meeting</head> 
+    <lg>
+        <l>....</l> 
+    </lg>
+</div>
+~~~
 
 # Why divisions rather than pages?
 
 Because a division can start on one page and finish on another, or
 cross other physical boundaries, we use an **empty** element `<pb/>` (page break) to mark the boundary between pages, rather than enclosing each page in a `<div type="page">`.
 
-    <pb n="5"/>
-    <div type="article">
-        <p>...</p> 
-    </div>
-    <div type="poem">
-        <head>Strange Meeting</head>
-        <lg> ...
-        <pb n="6"/>
-        ...
-        </lg>
-    </div>
-    <div type="article">
-        <p>...</p>
-    </div>
+~~~{.xml}
+<pb n="5"/>
+<div type="article">
+    <p>...</p> 
+</div>
+<div type="poem">
+    <head>Strange Meeting</head>
+    <lg> ...
+    <pb n="6"/>
+    ...
+    </lg>
+</div>
+<div type="article">
+    <p>...</p>
+</div>
+~~~
 
 
 # Divisions can contain divisions ...
@@ -286,13 +294,15 @@ is not valid!
 
 # Divisions may have heads and trailer
 
-    <div>
-        <head>Preface</head>
-        <p>
-            <!-- content of the div -->
-        </p>
-        <trailer>...</trailer>
-    </div>
+~~~{.xml}
+<div>
+    <head>Preface</head>
+    <p>
+        <!-- content of the div -->
+    </p>
+    <trailer>...</trailer>
+</div>
+~~~
 
 # Numbered and unnumbered divisions
 
@@ -314,20 +324,22 @@ The `<group>` element should be used to represent a collection of independent te
 
 The `<floatingText>` element can appear within any division level element in the same way as a paragraph.
 
-    <p>She was thus ruminating, when a Gentleman enter'd the Room, the Door being a jar... calling for a Candle, she beg'd a thousandPardons, engaged him to sit down, and let her know, what had so long conceal'd him from her Correspondence. </p>
-    <pb n="5"/>
-    <floatingText>
-        <body>
-            <head>The Story of <hi>Captain Manly</hi></head>
-            <p>
-                <!-- Captain Manly's store here -->
-            </p>
-        </body>
-    </floatingText>
-    <pb n="37"/>
-    <p>The Gentleman having finish'd his Story ... 
-        <!-- more -->
-    </p>
+~~~{.xml}
+<p>She was thus ruminating, when a Gentleman enter'd the Room, the Door being a jar... calling for a Candle, she beg'd a thousandPardons, engaged him to sit down, and let her know, what had so long conceal'd him from her Correspondence. </p>
+<pb n="5"/>
+<floatingText>
+    <body>
+        <head>The Story of <hi>Captain Manly</hi></head>
+        <p>
+            <!-- Captain Manly's store here -->
+        </p>
+    </body>
+</floatingText>
+<pb n="37"/>
+<p>The Gentleman having finish'd his Story ... 
+    <!-- more -->
+</p>
+~~~
 
 # Document order vs. XML order 1
 
@@ -371,7 +383,7 @@ The order of XML encoding does not necessarily reflect the order of the source d
                 <graphic>
                     <desc>a postage stamp</desc>
                 </graphic>
-                <add><measure commidity="currency" unit="frc" quanity="0.10">10 Centimes</measure></add>
+                <add><measure commodity="currency" unit="frc" quantity="0.10">10 Centimes</measure></add>
             </div>
         </div>
     </div>
@@ -389,36 +401,38 @@ The order of XML encoding does not necessarily reflect the order of the source d
 
 ... to that:
 
-    <div type="postcard">
-        <div type="address">
-            <!-- <address>here -->
+~~~{.xml}
+<div type="postcard">
+    <div type="address">
+        <!-- <address>here -->
+    </div>
+    <div type="prose">
+        <!-- text here -->
+    </div>
+    <div type="postmark">
+        <div type="dateStamp">
+            <dateline xml:lang="ar">
+                <placeName>شام</placeName>
+                <lb/>١
+                <lb/><date when="1917-06-15">٣٣٣-٦-١٥</date>
+            </dateline>
+            <dateline xml:lang="fr">
+                <date when="1917-06-15">15-6-917</date>
+                <lb/>1
+                <lb/><placeName>Damas</placeName>
+            </dateline>
         </div>
-        <div type="prose">
-            <!-- text here -->
+        <div type="censorStamp" xml:lang="ota">
+            <gap/>
+            <note type="fn">the censor's stamp</note>
         </div>
-        <div type="postmark">
-            <div type="dateStamp">
-                <dateline xml:lang="ar">
-                    <placeName>شام</placeName>
-                    <lb/>١
-                    <lb/><date when="1917-06-15">٣٣٣-٦-١٥</date>
-                </dateline>
-                <dateline xml:lang="fr">
-                    <date when="1917-06-15">15-6-917</date>
-                    <lb/>1
-                    <lb/><placeName>Damas</placeName>
-                </dateline>
-            </div>
-            <div type="censorStamp" xml:lang="ota">
-                <gap/>
-                <note type="fn">the censor's stamp</note>
-            </div>
-            <div type="postageStamp" xml:lang="ota">
-                <graphic><!-- the image --></graphic>
-                <measure commidity="currency" unit="ops" quanity="0.25">10 Paras</measure>
-            </div>
+        <div type="postageStamp" xml:lang="ota">
+            <graphic><!-- the image --></graphic>
+            <measure commodity="currency" unit="ops" quantity="0.25">10 Paras</measure>
         </div>
     </div>
+</div>
+~~~
 
 
 # Core elements
@@ -445,7 +459,9 @@ The *core* module of the TEI groups together elements which may appear in any ki
 
 Example
 
-    <p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer <orgName>Cyntiana</orgName> which sailed from <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of March</date> arrived <date when="1893-04-24">Monday evening, April the 24th, at 7 P.M.</date> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <orgName>Hamidieh Hipodrome Company</orgName> to which we made reference in out last issue, promissing to write a special article on its arrival.</p>
+~~~{.xml}
+<p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer <orgName>Cyntiana</orgName> which sailed from <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of March</date> arrived <date when="1893-04-24">Monday evening, April the 24th, at 7 P.M.</date> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <orgName>Hamidieh Hipodrome Company</orgName> to which we made reference in out last issue, promissing to write a special article on its arrival.</p>
+~~~
 
 # Highlighting
 
@@ -486,10 +502,12 @@ Quotation marks can be used to set off text for many reasons, so the TEI has the
 
 Example
 
-    <quote>
-        The Sheikh <lb/>who from childhood hours had learned to <lb/>praise Allah for every blessing of life, <lb/>must have shouted a hearty "<said><foreign xml:lang="ar-Latn-EN">Alhamduli<lb/>la!</foreign></said> and <said><foreign xml:lang="ar-Latn-EN">Allah<gap/> Kariem!</foreign></said>" when after a <lb/>journey of some weeks and months by <lb/>land and by sea he saw in <placeName>New York</placeName> har<lb/>bor the majestic form of the Goddess of <lb/>Liberty with the beacon of light in her<lb/> outstretched hand bidding him welcome<lb/> to the "<q>home of the brave and the land of <lb/>the free.</q>"
-        <bibl>Kawkab America #55, 28 Apr 1893, p.1 (English)</bibl>
-    </quote>
+~~~{.xml}
+<quote>
+    The Sheikh <lb/>who from childhood hours had learned to <lb/>praise Allah for every blessing of life, <lb/>must have shouted a hearty "<said><foreign xml:lang="ar-Latn-EN">Alhamduli<lb/>la!</foreign></said> and <said><foreign xml:lang="ar-Latn-EN">Allah<gap/> Kariem!</foreign></said>" when after a <lb/>journey of some weeks and months by <lb/>land and by sea he saw in <placeName>New York</placeName> har<lb/>bor the majestic form of the Goddess of <lb/>Liberty with the beacon of light in her<lb/> outstretched hand bidding him welcome<lb/> to the "<q>home of the brave and the land of <lb/>the free.</q>"
+    <bibl>Kawkab America #55, 28 Apr 1893, p.1 (English)</bibl>
+</quote>
+~~~
 
 <!-- <bibl>
             <title level="j">Kawkab America</title>

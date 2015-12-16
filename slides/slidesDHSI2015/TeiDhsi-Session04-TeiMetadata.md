@@ -61,7 +61,7 @@ The result is that discussion of the header tends to be pulled in two directions
 
 # TEI header structure
 
-The TEI header has four main components:
+The `<teiHeader>` has four main components:
 
 - `<fileDesc>` (file description) contains a full bibliographic description of a computer file. ("computer file" may actually correspond with several files across different operating system.)
 - `<encodingDesc>` (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived.
@@ -72,19 +72,21 @@ The TEI header has four main components:
 
 # Example header: minimal required header
 
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>A title?</title>
-            </titleStmt>
-            <publicationStmt>
-                <p>Who published?</p>
-            </publicationStmt>
-            <sourceDesc>
-                <p>Where from?</p>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
+~~~{.xml}
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>A title?</title>
+        </titleStmt>
+        <publicationStmt>
+            <p>Who published?</p>
+        </publicationStmt>
+        <sourceDesc>
+            <p>Where from?</p>
+        </sourceDesc>
+    </fileDesc>
+</teiHeader>
+~~~
 
 # Two levels of TEI headers
 

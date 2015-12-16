@@ -64,25 +64,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   /* xml element names */
   .xml > code > span.kw {
-    color: #0F0F9C;
-    font-weight: bold;
+  	color: #0F0F9C;
+  	font-weight: bold;
   }
   /* xml attribute names */
   .xml > code > span.ot {
-    color:#FF8041;
+  	color:#FF8041;
   }
   /* xml attribute values */
   .xml > code > span.st {
-    color:#993300;
+  	color:#993300;
   }
   /* xml comments */
   .xml > code > span.co {
-    color:#167116;
-    font-style: italic;
+  	color:#167116;
+  	font-style: italic;
   }
   /* xml computing instructions: not implemented in Pandoc syntax highlighting */
   /* .xml > code > span {
-    color:#9132CC;
+  	color:#9132CC;
   } */
   </style>
   <style type="text/css">
@@ -102,7 +102,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <script type="text/javascript" src="../js/slidy.js"></script>
   <style type="text/css">
   .cImportant {
-    color:red;
+  	color:red;
   }
   </style>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
@@ -351,8 +351,8 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>Attribute and value: <code>@type=&quot;enthusiastic&quot;</code></li>
 </ul>
 </div>
-<div id="characteristics-of-tei-xml-in-one-slide" class="slide section level1">
-<h1>Characteristics of TEI XMl in one slide</h1>
+<div id="tei-characteristics-of-tei-xml-in-one-slide" class="slide section level1">
+<h1>TEI: Characteristics of TEI XMl in one slide</h1>
 <ul>
 <li>all of XML</li>
 <li><em>must</em> be valid against the schema TEI all</li>
@@ -361,8 +361,8 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>this provides <em>interchangability</em> and a certain degree of <em>interoperability</em> (the letter is often only theoretically applicable)</li>
 </ul>
 </div>
-<div id="conformance-issues" class="slide section level1">
-<h1>Conformance issues</h1>
+<div id="tei-conformance-issues" class="slide section level1">
+<h1>TEI: Conformance issues</h1>
 <p>A document is <em>TEI Conformant</em> if and only if it:</p>
 <ul>
 <li>is a well-formed XML document</li>
@@ -372,6 +372,184 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>is documented by means of a TEI Conformant ODD file which refers to the TEI Guidelines</li>
 </ul>
 <p>or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered <em>TEI-conformable</em>).</p>
+</div>
+<div id="tei-structure-of-a-tei-document" class="slide section level1">
+<h1>TEI: Structure of a TEI Document</h1>
+<p>There are two basic types of TEI document:</p>
+<ul>
+<li><code>&lt;TEI&gt;</code> contains a single TEI-conformant document, comprising a TEI header and a text, in various forms.</li>
+<li><code>&lt;teiCorpus&gt;</code> contains a TEI-encoded corpus, comprising a single corpus header and one or more <code>&lt;TEI&gt;</code> elements, each containing its own header and a text.</li>
+</ul>
+<p>The text may be in the form of:</p>
+<ul>
+<li>a <code>&lt;facsimile&gt;</code>: pictures of pages</li>
+<li>a <code>&lt;sourceDoc&gt;</code>: a pure transcription, or</li>
+<li>a <code>&lt;text&gt;</code>: an edited document</li>
+</ul>
+</div>
+<div id="tei-basic-structure" class="slide section level1">
+<h1>TEI: basic structure</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;teiHeader&gt;</span>
+        <span class="co">&lt;!-- required --&gt;</span>
+    <span class="kw">&lt;/teiHeader&gt;</span>
+    <span class="kw">&lt;facsimile&gt;</span>
+        <span class="co">&lt;!-- optional--&gt;</span>
+    <span class="kw">&lt;/facsimile&gt;</span>
+    <span class="kw">&lt;sourceDoc&gt;</span>
+        <span class="co">&lt;!-- optional --&gt;</span>
+    <span class="kw">&lt;/sourceDoc&gt;</span>
+    <span class="kw">&lt;text&gt;</span>
+        <span class="co">&lt;!-- required if no facsimile or sourceDoc--&gt;</span>
+    <span class="kw">&lt;/text&gt;</span>
+<span class="kw">&lt;/TEI&gt;</span></code></pre></div>
+</div>
+<div id="tei-structure-the-teiheader" class="slide section level1">
+<h1>TEI: structure the <code>&lt;teiHeader&gt;</code></h1>
+<p>The <code>&lt;teiHeader&gt;</code> has four main components:</p>
+<ul>
+<li><code>&lt;fileDesc&gt;</code> (file description) contains a full bibliographic description of a computer file. (“computer file” may actually correspond with several files across different operating system.)</li>
+<li><code>&lt;encodingDesc&gt;</code> (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived.</li>
+<li><code>&lt;profileDesc&gt;</code> (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements</li>
+<li><code>&lt;revisionDesc&gt;</code> (revision description) summarizes the revision history for a file.</li>
+</ul>
+<p><em>Note</em>: Only <code>&lt;fileDesc&gt;</code> is required; the others are optional.</p>
+</div>
+<div id="tei-minimal-required-header" class="slide section level1">
+<h1>TEI: minimal required header</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;teiHeader&gt;</span>
+    <span class="kw">&lt;fileDesc&gt;</span>
+        <span class="kw">&lt;titleStmt&gt;</span>
+            <span class="kw">&lt;title&gt;</span>A title?<span class="kw">&lt;/title&gt;</span>
+        <span class="kw">&lt;/titleStmt&gt;</span>
+        <span class="kw">&lt;publicationStmt&gt;</span>
+            <span class="kw">&lt;p&gt;</span>Who published?<span class="kw">&lt;/p&gt;</span>
+        <span class="kw">&lt;/publicationStmt&gt;</span>
+        <span class="kw">&lt;sourceDesc&gt;</span>
+            <span class="kw">&lt;p&gt;</span>Where from?<span class="kw">&lt;/p&gt;</span>
+        <span class="kw">&lt;/sourceDesc&gt;</span>
+    <span class="kw">&lt;/fileDesc&gt;</span>
+<span class="kw">&lt;/teiHeader&gt;</span></code></pre></div>
+</div>
+<div id="tei-the-text-element" class="slide section level1">
+<h1>TEI: The <code>&lt;text&gt;</code> element</h1>
+<p>What is a text? (remember that one?)</p>
+<ul>
+<li>A text may be unitary or composite
+<ul>
+<li>unitary: forming an organic whole</li>
+<li>composite: consisting of several components which are in some important sense independent of each other</li>
+</ul></li>
+<li>a unitary text contains
+<ul>
+<li><code>&lt;front&gt;</code>: optional front matter</li>
+<li><code>&lt;body&gt;</code>: (required)</li>
+<li><code>&lt;back&gt;</code>: optional back matter</li>
+</ul></li>
+</ul>
+</div>
+<div id="tei-the-high-level-structure" class="slide section level1">
+<h1>TEI: The high level structure</h1>
+<p>Each identifiable division within <code>&lt;text&gt;</code> is a <code>&lt;div&gt;</code> element. It can optionally be given a particular type (e.g. cartoon, verse, prose), using a free-text attribute.</p>
+<p>For example, page 1 has two divisions:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;1&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>....<span class="kw">&lt;/p&gt;</span> 
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;poem&quot;</span><span class="kw">&gt;</span> 
+    <span class="kw">&lt;head&gt;</span>Strange Meeting<span class="kw">&lt;/head&gt;</span> 
+    <span class="kw">&lt;lg&gt;</span>
+        <span class="kw">&lt;l&gt;</span>....<span class="kw">&lt;/l&gt;</span> 
+    <span class="kw">&lt;/lg&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="tei-why-divisions-rather-than-pages" class="slide section level1">
+<h1>TEI: Why divisions rather than pages?</h1>
+<p>Because a division can start on one page and finish on another, or cross other physical boundaries, we use an <strong>empty</strong> element <code>&lt;pb/&gt;</code> (page break) to mark the boundary between pages, rather than enclosing each page in a <code>&lt;div type=&quot;page&quot;&gt;</code>.</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;5&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span> 
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;poem&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head&gt;</span>Strange Meeting<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;lg&gt;</span> ...
+    <span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;6&quot;</span><span class="kw">/&gt;</span>
+    ...
+    <span class="kw">&lt;/lg&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="tei-document-order-vs.xml-order" class="slide section level1">
+<h1>TEI: Document order vs. XML order</h1>
+<p>The order of XML encoding does not necessarily reflect the order of the source document. If the aim is to mirror the layout and structure of the source document as close as possible, use the <code>&lt;sourceDoc&gt;</code> element instead of <code>&lt;text&gt;</code>. Compare:</p>
+<!-- This is a good point and should be emphasized. The example should be changed -->
+<div class="figure">
+<img src="../images/postcard-ottoman1.png" alt="Postcard, Damascus to Istanbul, 15 Jun 1917" />
+<p class="caption">Postcard, Damascus to Istanbul, 15 Jun 1917</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<p>… to that:</p>
+<sub>~</sub>{.xml}
+<div type="postcard">
+<pre><code>&lt;div type=&quot;address&quot;&gt;
+    &lt;!-- &lt;address&gt;here --&gt;
+&lt;/div&gt;
+&lt;div type=&quot;prose&quot;&gt;
+    &lt;!-- text here --&gt;
+&lt;/div&gt;
+&lt;div type=&quot;postmark&quot;&gt;
+    &lt;div type=&quot;dateStamp&quot;&gt;
+        &lt;dateline xml:lang=&quot;ar&quot;&gt;
+            &lt;placeName&gt;شام&lt;/placeName&gt;
+            &lt;lb/&gt;١
+            &lt;lb/&gt;&lt;date when=&quot;1917-06-15&quot;&gt;٣٣٣-٦-١٥&lt;/date&gt;
+        &lt;/dateline&gt;
+        &lt;dateline xml:lang=&quot;fr&quot;&gt;
+            &lt;date when=&quot;1917-06-15&quot;&gt;15-6-917&lt;/date&gt;
+            &lt;lb/&gt;1
+            &lt;lb/&gt;&lt;placeName&gt;Damas&lt;/placeName&gt;
+        &lt;/dateline&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;censorStamp&quot; xml:lang=&quot;ota&quot;&gt;
+        &lt;gap/&gt;
+        &lt;note type=&quot;fn&quot;&gt;the censor&#39;s stamp&lt;/note&gt;
+    &lt;/div&gt;
+    &lt;div type=&quot;postageStamp&quot; xml:lang=&quot;ota&quot;&gt;
+        &lt;graphic&gt;&lt;!-- the image --&gt;&lt;/graphic&gt;
+        &lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;0.25&quot;&gt;10 Paras&lt;/measure&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div id="tei-core-elements" class="slide section level1">
+<h1>TEI: Core elements</h1>
+<p>The <em>core</em> module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:</p>
+<ul>
+<li>paragraphs</li>
+<li>highlighting, emphasis and quotation</li>
+<li>simple editorial changes</li>
+<li>basic names numbers, dates, addresses</li>
+<li>simple links and cross-references</li>
+<li>lists, notes, annotation, indexing</li>
+<li>graphics</li>
+<li>reference systems, bibliographic</li>
+<li>citations simple verse and drama</li>
+</ul>
+</div>
+<div id="tei-paragraphs" class="slide section level1">
+<h1>TEI: Paragraphs</h1>
+<p><code>&lt;p&gt;</code>: paragraph; marks paragraphs in prose</p>
+<ul>
+<li>Fundamental unit for prose texts</li>
+<li><code>&lt;p&gt;</code> can contain all the phrase-level elements in the core</li>
+<li><code>&lt;p&gt;</code> can appear directly inside <code>&lt;body&gt;</code> or inside <code>&lt;div&gt;</code></li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>At the <span class="kw">&lt;orgName&gt;</span>U.S. Immigration Bureau<span class="kw">&lt;/orgName&gt;</span> the steamer <span class="kw">&lt;orgName&gt;</span>Cyntiana<span class="kw">&lt;/orgName&gt;</span> which sailed from <span class="kw">&lt;placeName&gt;</span>Beyrouth<span class="kw">&lt;/placeName&gt;</span> on the <span class="kw">&lt;date</span><span class="ot"> when=</span><span class="st">&quot;1893-03-29&quot;</span><span class="kw">&gt;</span>29th of March<span class="kw">&lt;/date&gt;</span> arrived <span class="kw">&lt;date</span><span class="ot"> when=</span><span class="st">&quot;1893-04-24&quot;</span><span class="kw">&gt;</span>Monday evening, April the 24th, at 7 P.M.<span class="kw">&lt;/date&gt;</span> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <span class="kw">&lt;orgName&gt;</span>Hamidieh Hipodrome Company<span class="kw">&lt;/orgName&gt;</span> to which we made reference in out last issue, promissing to write a special article on its arrival.<span class="kw">&lt;/p&gt;</span></code></pre></div>
 </div>
 <div id="a-final-note-on-standardisation" class="slide section level1">
 <h1>A final note on standardisation</h1>
@@ -395,7 +573,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>has an XSLT processor built-in</li>
 <li>supports XQuery and XML databases</li>
 </ul></li>
-<li><strong>Sublime Text</strong> is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
+<li><strong>Sublime Text</strong> is a superb text editor for coders that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
 <ul>
 <li><a href="https://github.com/praveenvijayan/Sublime-Text-2-BIDI" class="uri">https://github.com/praveenvijayan/Sublime-Text-2-BIDI</a> <strong>CAUTION</strong>: the plug-in rearranges Arabic to make it look correct, but the actual order of characters in the file is changed and wrong.</li>
 </ul></li>

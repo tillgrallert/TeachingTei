@@ -199,7 +199,7 @@ An XML document might contain:
 - Attribute and value: `@type="enthusiastic"`
 
 
-# Characteristics of TEI XMl in one slide
+# TEI: Characteristics of TEI XMl in one slide
 
 - all of XML
 - *must* be valid against the schema TEI all
@@ -207,7 +207,7 @@ An XML document might contain:
   + "valid": the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.
   + this provides *interchangability* and a certain degree of *interoperability* (the letter is often only theoretically applicable)
 
-# Conformance issues
+# TEI: Conformance issues
 
 A document is *TEI Conformant* if and only if it:
 
@@ -218,6 +218,193 @@ A document is *TEI Conformant* if and only if it:
 - is documented by means of a TEI Conformant ODD file which refers to the TEI Guidelines
 
 or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered *TEI-conformable*).
+
+# TEI: Structure of a TEI Document
+
+There are two basic types of TEI document:
+
+- `<TEI>` contains a single TEI-conformant document, comprising a TEI header and a text, in various forms.
+- `<teiCorpus>` contains a TEI-encoded corpus, comprising a single corpus header and one or more `<TEI>` elements, each containing its own header and a text.
+
+The text may be in the form of:
+
+- a `<facsimile>`: pictures of pages
+- a `<sourceDoc>`: a pure transcription, or
+- a `<text>`: an edited document
+
+# TEI: basic structure 
+
+~~~{.xml}
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- required -->
+    </teiHeader>
+    <facsimile>
+        <!-- optional-->
+    </facsimile>
+    <sourceDoc>
+        <!-- optional -->
+    </sourceDoc>
+    <text>
+        <!-- required if no facsimile or sourceDoc-->
+    </text>
+</TEI>
+~~~
+
+# TEI: structure the `<teiHeader>`
+
+The `<teiHeader>` has four main components:
+
+- `<fileDesc>` (file description) contains a full bibliographic description of a computer file. ("computer file" may actually correspond with several files across different operating system.)
+- `<encodingDesc>` (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived.
+- `<profileDesc>` (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements 
+- `<revisionDesc>` (revision description) summarizes the revision history for a file.
+
+*Note*: Only `<fileDesc>` is required; the others are optional.
+
+# TEI: minimal required header
+
+~~~{.xml}
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>A title?</title>
+        </titleStmt>
+        <publicationStmt>
+            <p>Who published?</p>
+        </publicationStmt>
+        <sourceDesc>
+            <p>Where from?</p>
+        </sourceDesc>
+    </fileDesc>
+</teiHeader>
+~~~
+
+# TEI: The `<text>` element
+
+What is a text? (remember that one?)
+
+- A text may be unitary or composite
+    + unitary: forming an organic whole
+    + composite: consisting of several components which are in some important sense independent of each other
+- a unitary text contains 
+    + `<front>`: optional front matter
+    + `<body>`: (required)
+    + `<back>`: optional back matter
+
+# TEI: The high level structure
+
+Each identifiable division within `<text>` is a `<div>` element. It can optionally be given a particular type (e.g. cartoon, verse, prose), using a free-text attribute.
+
+For example, page 1 has two divisions:
+
+~~~{.xml}
+<pb n="1"/>
+<div type="article">
+    <p>....</p> 
+</div>
+<div type="poem"> 
+    <head>Strange Meeting</head> 
+    <lg>
+        <l>....</l> 
+    </lg>
+</div>
+~~~
+
+# TEI: Why divisions rather than pages?
+
+Because a division can start on one page and finish on another, or
+cross other physical boundaries, we use an **empty** element `<pb/>` (page break) to mark the boundary between pages, rather than enclosing each page in a `<div type="page">`.
+
+~~~{.xml}
+<pb n="5"/>
+<div type="article">
+    <p>...</p> 
+</div>
+<div type="poem">
+    <head>Strange Meeting</head>
+    <lg> ...
+    <pb n="6"/>
+    ...
+    </lg>
+</div>
+<div type="article">
+    <p>...</p>
+</div>
+~~~
+
+# TEI: Document order vs. XML order
+
+The order of XML encoding does not necessarily reflect the order of the source document. If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element  instead of `<text>`. Compare:
+
+<!-- This is a good point and should be emphasized. The example should be changed -->
+
+
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
+
+--------------
+
+... to that:
+
+~~~{.xml}
+<div type="postcard">
+    <div type="address">
+        <!-- <address>here -->
+    </div>
+    <div type="prose">
+        <!-- text here -->
+    </div>
+    <div type="postmark">
+        <div type="dateStamp">
+            <dateline xml:lang="ar">
+                <placeName>شام</placeName>
+                <lb/>١
+                <lb/><date when="1917-06-15">٣٣٣-٦-١٥</date>
+            </dateline>
+            <dateline xml:lang="fr">
+                <date when="1917-06-15">15-6-917</date>
+                <lb/>1
+                <lb/><placeName>Damas</placeName>
+            </dateline>
+        </div>
+        <div type="censorStamp" xml:lang="ota">
+            <gap/>
+            <note type="fn">the censor's stamp</note>
+        </div>
+        <div type="postageStamp" xml:lang="ota">
+            <graphic><!-- the image --></graphic>
+            <measure commodity="currency" unit="ops" quantity="0.25">10 Paras</measure>
+        </div>
+    </div>
+</div>
+
+# TEI: Core elements
+
+The *core* module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:
+
+- paragraphs
+- highlighting, emphasis and quotation
+- simple editorial changes
+- basic names numbers, dates, addresses 
+- simple links and cross-references
+- lists, notes, annotation, indexing 
+- graphics
+- reference systems, bibliographic 
+- citations simple verse and drama
+
+# TEI: Paragraphs
+
+`<p>`: paragraph; marks paragraphs in prose
+ 
+- Fundamental unit for prose texts
+- `<p>` can contain all the phrase-level elements in the core
+- `<p>` can appear directly inside `<body>` or inside `<div>`
+
+Example
+
+~~~{.xml}
+<p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer <orgName>Cyntiana</orgName> which sailed from <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of March</date> arrived <date when="1893-04-24">Monday evening, April the 24th, at 7 P.M.</date> She brought over 12 first-class passengers and 262 steerage including the horsemen, performers and attendants of the <orgName>Hamidieh Hipodrome Company</orgName> to which we made reference in out last issue, promissing to write a special article on its arrival.</p>
+~~~
 
 # A final note on standardisation
 
@@ -238,7 +425,7 @@ Instead of an abstract set of rules and norms, standardisation should be thought
     + provides an "author" mode that does shows only the text inside notes, styled according to CSS associated to a specific schema
     + has an XSLT processor built-in
     + supports XQuery and XML databases
-- **Sublime Text** is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
+- **Sublime Text** is a superb text editor for coders that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
     + [https://github.com/praveenvijayan/Sublime-Text-2-BIDI](https://github.com/praveenvijayan/Sublime-Text-2-BIDI) **CAUTION**: the plug-in rearranges Arabic to make it look correct, but the actual order of characters in the file is changed and wrong.
 
 # Useful links / resources

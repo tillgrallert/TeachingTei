@@ -10,21 +10,64 @@
   <title>Tei@DHSI 2 — TEI core module</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
    href="../css/slidy_custom_sh.css" />
-  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
-  <script type="text/javascript">
-              $(document).ready(function(){
-      
-      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
-          // Finds <pre> element
-          // and snippet highlights the CSS code within
-          // using the "emacs" styling.
-      });
-      </script>
+  <style type="text/css">
+  /* these styles mirror oXygen's highlight colours for XML */
+  pre.sourceCode {
+      background-color:white;
+  }
+  code.sourceCode {
+      font-weight:normal;
+  }
+  /* provide a readible font-size */
+  .sourceCode * {
+      font-size: 16px;
+  }
+  /* xml element names */
+  .xml > code > span.kw {
+  	color: #0F0F9C;
+  	font-weight: bold;
+  }
+  /* xml attribute names */
+  .xml > code > span.ot {
+  	color:#FF8041;
+  }
+  /* xml attribute values */
+  .xml > code > span.st {
+  	color:#993300;
+  }
+  /* xml comments */
+  .xml > code > span.co {
+  	color:#167116;
+  	font-style: italic;
+  }
+  /* xml computing instructions: not implemented in Pandoc syntax highlighting */
+  /* .xml > code > span {
+  	color:#9132CC;
+  } */
+  </style>
+  <style type="text/css">
+  /* styles to split a slide into columns */
+  div.cWidth2 {
+      width:50%;
+      position: relative;
+      float: left;
+  }
+  
+  div.cWidth3 {
+      width:33%;
+      position: relative;
+      float: left;
+  }
+  </style>
+  <script type="text/javascript" src="../js/slidy.js"></script>
+  <style type="text/css">
+  .cImportant {
+  	color:red;
+  }
+  </style>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
@@ -44,43 +87,51 @@ Till Grallert
 <div id="manuscripts" class="slide section level1">
 <h1>Manuscripts:</h1>
 <div class="figure">
-<img src="images/quarterly-report-1908-draft.png" alt="PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908" /><p class="caption">PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-draft.png" alt="PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="images/quarterly-report-1908-typed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" /><p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-typed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div id="postcards" class="slide section level1">
 <h1>Postcards</h1>
 <div class="figure">
-<img src="images/postcard-ottoman2.png" alt="Postcard, Damascus to Istanbul, 27 Sep 1916" /><p class="caption">Postcard, Damascus to Istanbul, 27 Sep 1916</p>
+<img src="images/postcard-ottoman2.png" alt="Postcard, Damascus to Istanbul, 27 Sep 1916" />
+<p class="caption">Postcard, Damascus to Istanbul, 27 Sep 1916</p>
 </div>
 <div class="figure">
-<img src="images/postcard-ottoman1.png" alt="Postcard, Damascus to Istanbul, 15 Jun 1917" /><p class="caption">Postcard, Damascus to Istanbul, 15 Jun 1917</p>
+<img src="images/postcard-ottoman1.png" alt="Postcard, Damascus to Istanbul, 15 Jun 1917" />
+<p class="caption">Postcard, Damascus to Istanbul, 15 Jun 1917</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="images/postcard-1911-Damascus-back.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" /><p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
+<img src="images/postcard-1911-Damascus-back.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" />
+<p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
 </div>
 <div class="figure">
-<img src="images/postcard-1911-Damascus-front.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" /><p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
+<img src="images/postcard-1911-Damascus-front.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" />
+<p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
 </div>
 </div>
 <div id="newspapers" class="slide section level1">
 <h1>Newspapers</h1>
 <div class="figure">
-<img src="images/kawkab-img.jpg" alt="Kawkab America #55, 28 Apr 1893, p.1 (English)" /><p class="caption">Kawkab America #55, 28 Apr 1893, p.1 (English)</p>
+<img src="images/kawkab-img.jpg" alt="Kawkab America #55, 28 Apr 1893, p.1 (English)" />
+<p class="caption">Kawkab America #55, 28 Apr 1893, p.1 (English)</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="images/kawkab-img2.jpg" alt="Kawkab America #55, 28 Apr 1893, p.1 (Arabic)" /><p class="caption">Kawkab America #55, 28 Apr 1893, p.1 (Arabic)</p>
+<img src="images/kawkab-img2.jpg" alt="Kawkab America #55, 28 Apr 1893, p.1 (Arabic)" />
+<p class="caption">Kawkab America #55, 28 Apr 1893, p.1 (Arabic)</p>
 </div>
 </div>
 <div id="looking-at-the-material-what-do-we-need-to-mark-up" class="slide section level1">
@@ -375,9 +426,9 @@ Till Grallert
 <p>The order of XML encoding does not necessarily reflect the order of the source document. Compare:</p>
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
-
 <div class="figure">
-<img src="images/postcard-1911-Damascus-back.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" /><p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
+<img src="images/postcard-1911-Damascus-back.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" />
+<p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
 </div>
 </div>
 <div class="slide section level1">
@@ -412,7 +463,7 @@ Till Grallert
             &lt;graphic&gt;
                 &lt;desc&gt;a postage stamp&lt;/desc&gt;
             &lt;/graphic&gt;
-            &lt;add&gt;&lt;measure commidity=&quot;currency&quot; unit=&quot;frc&quot; quanity=&quot;0.10&quot;&gt;10 Centimes&lt;/measure&gt;&lt;/add&gt;
+            &lt;add&gt;&lt;measure commodity=&quot;currency&quot; unit=&quot;frc&quot; quantity=&quot;0.10&quot;&gt;10 Centimes&lt;/measure&gt;&lt;/add&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -422,9 +473,9 @@ Till Grallert
 <p>The order of XML encoding does not necessarily reflect the order of the source document. Compare:</p>
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
-
 <div class="figure">
-<img src="images/postcard-ottoman1.png" alt="Postcard, Damascus to Istanbul, 15 Jun 1917" /><p class="caption">Postcard, Damascus to Istanbul, 15 Jun 1917</p>
+<img src="images/postcard-ottoman1.png" alt="Postcard, Damascus to Istanbul, 15 Jun 1917" />
+<p class="caption">Postcard, Damascus to Istanbul, 15 Jun 1917</p>
 </div>
 </div>
 <div class="slide section level1">
@@ -456,7 +507,7 @@ Till Grallert
         &lt;/div&gt;
         &lt;div type=&quot;postageStamp&quot; xml:lang=&quot;ota&quot;&gt;
             &lt;graphic&gt;&lt;!-- the image --&gt;&lt;/graphic&gt;
-            &lt;measure commidity=&quot;currency&quot; unit=&quot;ops&quot; quanity=&quot;0.25&quot;&gt;10 Paras&lt;/measure&gt;
+            &lt;measure commodity=&quot;currency&quot; unit=&quot;ops&quot; quantity=&quot;0.25&quot;&gt;10 Paras&lt;/measure&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -548,7 +599,6 @@ Till Grallert
         bibl>في <date>١٠ تموز سنة ١٣٢٤</date></bibl>
     </quote>
 -->
-
 </div>
 <div id="lists" class="slide section level1">
 <h1>Lists</h1>
@@ -573,7 +623,6 @@ Till Grallert
 &lt;/list&gt;&lt;/p&gt;</code></pre>
 <!-- we can stop here and move to an exercise -->
 <!-- shift in topics -->
-
 </div>
 <div id="notes" class="slide section level1">
 <h1>Notes</h1>
@@ -645,7 +694,6 @@ Till Grallert
             </choice>سنة ١٩٠٨</date>
     </dateline>
 -->
-
 </div>
 <div id="example-choice-2" class="slide section level1">
 <h1>Example: choice 2</h1>
@@ -672,7 +720,8 @@ Till Grallert
 <h1>Example: additions, deletions, omissions</h1>
 <p>Consider this:</p>
 <div class="figure">
-<img src="images/pro-fo/618-3/DSCN9862_150dpi.jpg" alt="PRO FO 618/3 Damascus Draft 33, State of affairs in Damascus relating to the new Regime, Devey to Lowther 12 Aug. 1908" /><p class="caption">PRO FO 618/3 Damascus Draft 33, “State of affairs in Damascus relating to the new Regime”, Devey to Lowther 12 Aug. 1908</p>
+<img src="images/pro-fo/618-3/DSCN9862_150dpi.jpg" alt="PRO FO 618/3 Damascus Draft 33, State of affairs in Damascus relating to the new Regime, Devey to Lowther 12 Aug. 1908" />
+<p class="caption">PRO FO 618/3 Damascus Draft 33, “State of affairs in Damascus relating to the new Regime”, Devey to Lowther 12 Aug. 1908</p>
 </div>
 </div>
 <div id="example-additions-deletions-omissions-1" class="slide section level1">
@@ -680,7 +729,6 @@ Till Grallert
 <p>Which might be encoded like that:</p>
 <pre><code>&lt;p&gt;&lt;del&gt;The Many&lt;/del&gt;&lt;del&gt;&lt;add&gt;Loud&lt;/add&gt;&lt;/del&gt; Popular demonstrations and &lt;del&gt;happy&lt;/del&gt; &lt;add&gt;great&lt;/add&gt; manifestations &lt;add&gt;of joy&lt;/add&gt; with illuminations and street decorations &lt;del&gt;have been going on in all &lt;unclear/&gt; of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no&lt;/del&gt; &lt;add&gt;throughout the city &lt;del&gt;from&lt;/del&gt; were continuous &lt;date from=&quot;1908-07-31&quot; to=&quot;1908-08-11&quot;&gt;from the 31st ult.o until yesterday&lt;/date&gt;, some of them attended also by &lt;del&gt;numerous masses&lt;/del&gt;&lt;add&gt;throngs&lt;/add&gt; from neighbouring villages; though indeed few &lt;add&gt;present&lt;/add&gt; could have really appreciated at their true value the great privileges accorded. Happily scarcely a&lt;/add&gt; &lt;add&gt;slight&lt;/add&gt; accident&lt;del&gt;s&lt;/del&gt; occurred, though &lt;del&gt;with&lt;/del&gt;&lt;del&gt;fearing&lt;/del&gt; the excessive use of rifles + revolvers &lt;del&gt;bullets was continuous&lt;/del&gt; &lt;add&gt;was at first rather dangerous&lt;/add&gt;; except that a bullet broke the tramway electric wire which fell on the mob &amp;amp; the current killed three people &amp;amp; &lt;sic&gt;injoured&lt;/sic&gt; &lt;del&gt;three&lt;/del&gt; &lt;add&gt;two&lt;/add&gt; others.&lt;/p&gt;</code></pre>
 <!-- further shift in topics to named entities and linking -->
-
 </div>
 <div id="basic-names" class="slide section level1">
 <h1>Basic names</h1>
@@ -779,7 +827,8 @@ The &lt;ref target=&quot;http://www.bbc.co.uk/&quot;&gt;BBC web site&lt;/ref&gt;
     &lt;q&gt;افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي&lt;/q&gt;
 &lt;/div&gt;</code></pre>
 <div class="figure">
-<img src="images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" /><p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+<img src="images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" />
+<p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
 </div>
 <div id="simple-verse" class="slide section level1">
@@ -803,7 +852,6 @@ The &lt;ref target=&quot;http://www.bbc.co.uk/&quot;&gt;BBC web site&lt;/ref&gt;
 <h1>Next</h1>
 <p>And now we’re going to move on to another exercise where you get to apply some of the more structural elements you have learned about.</p>
 <!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
-
 </div>
 </body>
 </html>
