@@ -3,10 +3,10 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2015-09-14T14:40:11Z. .
-TEI Edition: Version 2.8.0. Last updated on
-	6th April 2015, revision 13197
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
+Schema generated from ODD source 2016-01-13T14:40:01Z. .
+TEI Edition: Version 2.9.1. Last updated on
+	15th October 2015, revision 46ac023
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.9.1/
   
 --><!--This template file is freely available and you are hereby authorised to copy, modify, and redistribute it in any way without further reference or permissions.When making such modifications, you are strongly recommended to change the present text to include an accurate statement of the licencing conditions applicable to your modified text.--><define name="macro.paraContent">
       <zeroOrMore>
@@ -17,7 +17,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
             <ref name="model.inter"/>
             <ref name="model.global"/>
             <ref name="lg"/>
-            <ref name="l"/>
+            <ref name="model.lLike"/>
          </choice>
       </zeroOrMore>
    </define>
@@ -68,6 +68,27 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
             <ref name="model.gLike"/>
          </choice>
       </zeroOrMore>
+   </define>
+   <define name="macro.anyXML">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.tei-c.org/ns/1.0"/>
+               <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="macro.anyXML"/>
+            </choice>
+         </zeroOrMore>
+      </element>
    </define>
    <define name="data.certainty">
       <choice>
@@ -173,27 +194,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
          </data>
       </choice>
    </define>
-   <define name="macro.anyXML">
-      <element>
-         <anyName>
-            <except>
-               <nsName ns="http://www.tei-c.org/ns/1.0"/>
-               <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
-            </except>
-         </anyName>
-         <zeroOrMore>
-            <attribute>
-               <anyName/>
-            </attribute>
-         </zeroOrMore>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="macro.anyXML"/>
-            </choice>
-         </zeroOrMore>
-      </element>
-   </define>
    <define name="att.ascribed.attributes">
       <ref name="att.ascribed.attribute.who"/>
    </define>
@@ -224,7 +224,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
    <define name="att.canonical.attribute.ref">
       <optional>
          <attribute name="ref">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition for the entity being named by means of one or more URIs.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
             <list>
                <oneOrMore>
                   <ref name="data.pointer"/>
@@ -485,6 +485,34 @@ belongs, but this <sch:name/> element has no textual content.</sch:assert>
          <attribute name="period">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to some location defining a named period of time within which the datable item is understood to have occurred.</a:documentation>
             <ref name="data.pointer"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.datcat.attributes">
+      <ref name="att.datcat.attribute.datcat"/>
+      <ref name="att.datcat.attribute.valueDatcat"/>
+   </define>
+   <define name="att.datcat.attribute.datcat">
+      <optional>
+         <attribute name="datcat" ns="http://www.isocat.org/ns/dcr">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a PID (persistent identifier) that aligns the given element with the appropriate Data Category (or categories) in ISOcat.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="data.pointer"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.datcat.attribute.valueDatcat">
+      <optional>
+         <attribute name="valueDatcat" ns="http://www.isocat.org/ns/dcr">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a PID (persistent identifier) that aligns the content of the given element or the value of the given attribute with the appropriate simple Data Category (or categories) in ISOcat.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <ref name="data.pointer"/>
+               </oneOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -855,7 +883,7 @@ Suggested values include: 1] m(metre) ; 2] kg(kilogram) ; 3] s(second) ; 4] Hz(h
    <define name="att.placement.attribute.place">
       <optional>
          <attribute name="place">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies where this item is placed
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies where this item is placed.
 Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6] overleaf; 7] above; 8] end; 9] inline; 10] inspace</a:documentation>
             <list>
                <oneOrMore>
@@ -936,7 +964,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns="http://www.tei-c.org/ns/1.0"
                 context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
-            <sch:assert test="count(@target)">@targetLang can only be used if @target is specified.</sch:assert>
+            <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
           </sch:rule>
    </pattern>
    <define name="att.pointing.attribute.target">
@@ -963,6 +991,18 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                <value>none</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">no further evaluation of targets is carried out beyond that needed to find the element specified in the pointer's target.</a:documentation>
             </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.segLike.attributes">
+      <ref name="att.datcat.attributes"/>
+      <ref name="att.segLike.attribute.function"/>
+   </define>
+   <define name="att.segLike.attribute.function">
+      <optional>
+         <attribute name="function">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the function of the segment.</a:documentation>
+            <ref name="data.enumerated"/>
          </attribute>
       </optional>
    </define>
@@ -1205,7 +1245,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
    </define>
    <define name="model.segLike">
-      <notAllowed/>
+      <choice>
+         <ref name="seg"/>
+      </choice>
    </define>
    <define name="model.hiLike">
       <choice>
@@ -1538,6 +1580,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="unclear"/>
          <ref name="damage"/>
          <ref name="supplied"/>
+         <ref name="secl"/>
          <ref name="mod"/>
          <ref name="redo"/>
       </choice>
@@ -1552,6 +1595,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="unclear"/>
          <ref name="damage"/>
          <ref name="supplied"/>
+         <ref name="secl"/>
          <ref name="mod"/>
          <ref name="redo"/>
       </choice>
@@ -1565,6 +1609,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="unclear"/>
       <ref name="damage"/>
       <ref name="supplied"/>
+      <ref name="secl"/>
       <ref name="mod"/>
       <ref name="redo"/>
    </define>
@@ -1592,6 +1637,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="supplied"/>
+      </optional>
+      <optional>
+         <ref name="secl"/>
       </optional>
       <optional>
          <ref name="mod"/>
@@ -1626,6 +1674,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="supplied"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="secl"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="mod"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1656,6 +1707,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="supplied"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="secl"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="mod"/>
@@ -2036,6 +2090,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.entryPart">
       <notAllowed/>
    </define>
+   <define name="model.eventLike">
+      <choice>
+         <ref name="event"/>
+         <ref name="listEvent"/>
+      </choice>
+   </define>
    <define name="model.global.edit">
       <choice>
          <ref name="gap"/>
@@ -2068,14 +2128,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="trait"/>
       </choice>
    </define>
-   <define name="model.persEventLike">
-      <choice>
-         <ref name="birth"/>
-         <ref name="death"/>
-         <ref name="event"/>
-         <ref name="listEvent"/>
-      </choice>
-   </define>
    <define name="model.personLike">
       <choice>
          <ref name="org"/>
@@ -2086,9 +2138,11 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.personPart">
       <choice>
          <ref name="model.biblLike"/>
+         <ref name="model.eventLike"/>
          <ref name="model.persStateLike"/>
-         <ref name="model.persEventLike"/>
          <ref name="idno"/>
+         <ref name="birth"/>
+         <ref name="death"/>
       </choice>
    </define>
    <define name="model.placeNamePart">
@@ -2291,13 +2345,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="trait"/>
       </oneOrMore>
    </define>
-   <define name="model.placeEventLike">
-      <choice>
-         <ref name="event"/>
-      </choice>
-   </define>
    <define name="model.orgPart">
       <choice>
+         <ref name="model.eventLike"/>
          <ref name="listOrg"/>
          <ref name="listPerson"/>
          <ref name="listPlace"/>
@@ -2472,6 +2522,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.divBottomPart">
       <choice>
          <ref name="closer"/>
+         <ref name="postscript"/>
       </choice>
    </define>
    <define name="model.divBottom">
@@ -2490,6 +2541,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="expan"/>
          <ref name="ex"/>
          <ref name="am"/>
+         <ref name="seg"/>
       </choice>
    </define>
    <define name="model.imprintPart">
@@ -2827,6 +2879,26 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <element name="p">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
          <ref name="macro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-p-abstractModel-p-constraint-1">
+            <rule context="tei:p">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="(ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure)">
+        Abstract model violation: Paragraphs may not contain other paragraphs or ab elements.
+      </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-p-abstractModel-structure-l-constraint-2">
+            <rule context="tei:p">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
+      </report>
+            </rule>
+         </pattern>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -3095,8 +3167,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
    </define>
    <define name="address">
       <element name="address">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a postal address, for example of a publisher, an organization, or an individual. [3.5.2. Addresses 2.2.4. Publication, Distribution,
-Licensing, etc. 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a postal address, for example of a publisher, an organization, or an individual. [3.5.2. Addresses 2.2.4. Publication, Distribution, Licensing, etc. 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
          <group>
             <zeroOrMore>
                <ref name="model.global"/>
@@ -3181,8 +3252,7 @@ Measures]</a:documentation>
    </define>
    <define name="date">
       <element name="date">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution,
-Licensing, etc. 2.5. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -3247,7 +3317,7 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei_jaraid-ref-refAtts-constraint-1">
+                  id="tei_jaraid-ref-refAtts-constraint-3">
             <rule context="tei:ref">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="@target and @cRef">Only one of the
 	attributes @target' and @cRef' may be supplied on <name/>
@@ -3343,7 +3413,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
    </define>
    <define name="item">
       <element name="item">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one component of a list. [3.7. Lists 2.5. The Revision Description]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one component of a list. [3.7. Lists 2.6. The Revision Description]</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <ref name="att.sortable.attributes"/>
@@ -3711,8 +3781,7 @@ Sample values include: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ; 4] sho
    </define>
    <define name="publisher">
       <element name="publisher">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution,
-Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3776,7 +3845,7 @@ Licensing, etc.]</a:documentation>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei_jaraid-biblStruct-deprecate-altIdentifier-child-constraint-2">
+                  id="tei_jaraid-biblStruct-deprecate-altIdentifier-child-constraint-4">
             <rule context="tei:biblStruct">
                <sch:report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3796,8 +3865,38 @@ Licensing, etc.]</a:documentation>
    <define name="l">
       <element name="l">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(verse line) contains a single, possibly incomplete, line of verse. [3.12.1. Core Tags for Verse 3.12. Passages of Verse or Drama 7.2.5. Speech Contents]</a:documentation>
-         <ref name="macro.paraContent"/>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="model.phrase"/>
+               <ref name="model.inter"/>
+               <ref name="model.global"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-l-abstractModel-structure-l-constraint-5">
+            <rule context="tei:l">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
+        Abstract model violation: Lines may not contain lines or lg elements.
+      </report>
+            </rule>
+         </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.
+Suggested values include: 1] bayt</a:documentation>
+               <choice>
+                  <value>bayt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Two-partite line of an Arabic Qasida. The parts are encoded as seg.</a:documentation>
+                  <data type="Name"/>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -3843,6 +3942,16 @@ Licensing, etc.]</a:documentation>
                            xmlns="http://www.tei-c.org/ns/1.0"
                            test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">An lg element
         must contain at least one child l, lg or gap element.</sch:assert>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-lg-abstractModel-structure-l-constraint-6">
+            <rule context="tei:lg">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
+        Abstract model violation: Lines may not contain line groups.
+      </report>
             </rule>
          </pattern>
          <ref name="att.global.attributes"/>
@@ -3952,8 +4061,7 @@ Sample values include: 1] text; 2] corpus</a:documentation>
    </define>
    <define name="publicationStmt">
       <element name="publicationStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution,
-Licensing, etc. 2.2. The File Description]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]</a:documentation>
          <choice>
             <oneOrMore>
                <group>
@@ -3975,8 +4083,7 @@ Licensing, etc. 2.2. The File Description]</a:documentation>
    </define>
    <define name="distributor">
       <element name="distributor">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the name of a person or other agency responsible for the distribution of a text. [2.2.4. Publication, Distribution,
-Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the name of a person or other agency responsible for the distribution of a text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3984,8 +4091,7 @@ Licensing, etc.]</a:documentation>
    </define>
    <define name="authority">
       <element name="authority">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. Publication, Distribution,
-Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq.limited"/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -3993,8 +4099,7 @@ Licensing, etc.]</a:documentation>
    </define>
    <define name="idno">
       <element name="idno">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution,
-Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -4015,8 +4120,7 @@ Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Documen
    </define>
    <define name="availability">
       <element name="availability">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution,
-Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="model.availabilityPart"/>
@@ -4045,8 +4149,7 @@ Licensing, etc.]</a:documentation>
    </define>
    <define name="licence">
       <element name="licence">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution,
-Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.global.attributes"/>
          <ref name="att.pointing.attributes"/>
@@ -4286,7 +4389,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
    </define>
    <define name="revisionDesc">
       <element name="revisionDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(revision description) summarizes the revision history for a file. [2.5. The Revision Description 2.1.1. The TEI Header and Its Components]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(revision description) summarizes the revision history for a file. [2.6. The Revision Description 2.1.1. The TEI Header and Its Components]</a:documentation>
          <choice>
             <ref name="list"/>
             <oneOrMore>
@@ -4300,7 +4403,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
    </define>
    <define name="change">
       <element name="change">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.5. The Revision Description 2.4.1. Creation 11.7. Changes]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Changes]</a:documentation>
          <ref name="macro.specialPara"/>
          <ref name="att.ascribed.attributes"/>
          <ref name="att.datable.attributes"/>
@@ -4617,6 +4720,26 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                </zeroOrMore>
             </optional>
          </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-div-abstractModel-structure-l-constraint-7">
+            <rule context="tei:div">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:l">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div.
+      </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-div-abstractModel-structure-p-constraint-8">
+            <rule context="tei:div">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
+        Abstract model violation: p and ab may not contain higher-level structural elements such as div.
+      </report>
+            </rule>
+         </pattern>
          <ref name="att.global.attribute.xmlid"/>
          <ref name="att.global.attribute.n"/>
          <ref name="att.global.attribute.xmllang"/>
@@ -4727,6 +4850,38 @@ Suggested values include: 1] article; 2] section; 3] volume; 4] issue; 5] bill; 
       <element name="salute">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(salutation) contains a salutation or greeting prefixed to a foreword, dedicatory epistle, or other division of a text, or the salutation in the closing of a letter, preface, etc. [4.2.2. Openers and Closers]</a:documentation>
          <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="postscript">
+      <element name="postscript">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a postscript, e.g. to a letter. [4.2. Elements Common to All Divisions]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.global"/>
+                  <ref name="model.divTopPart"/>
+               </choice>
+            </zeroOrMore>
+            <group>
+               <ref name="model.common"/>
+            </group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.global"/>
+                  <ref name="model.common"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <group>
+                  <ref name="model.divBottomPart"/>
+               </group>
+               <zeroOrMore>
+                  <ref name="model.global"/>
+               </zeroOrMore>
+            </zeroOrMore>
+         </group>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -5909,7 +6064,7 @@ Mathematical Expressions]</a:documentation>
                   <choice>
                      <ref name="model.labelLike"/>
                      <ref name="model.placeStateLike"/>
-                     <ref name="model.placeEventLike"/>
+                     <ref name="model.eventLike"/>
                   </choice>
                </zeroOrMore>
             </choice>
@@ -5985,14 +6140,14 @@ Mathematical Expressions]</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei_jaraid-relation-activemutual-constraint-3">
+                  id="tei_jaraid-relation-activemutual-constraint-9">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0" test="@active and @mutual">Only one of the attributes
 @active and @mutual may be supplied</report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei_jaraid-relation-activepassive-constraint-4">
+                  id="tei_jaraid-relation-activepassive-constraint-10">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="@passive and not(@active)">the attribute 'passive'
@@ -6081,34 +6236,36 @@ Mathematical Expressions]</a:documentation>
    <define name="state">
       <element name="state">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of some status or quality attributed to a person, place, or organization often at some specific time or for a specific date range. [13.3.1. Basic Principles 13.3.2.1. Personal Characteristics]</a:documentation>
-         <choice>
-            <oneOrMore>
-               <ref name="state"/>
-            </oneOrMore>
-            <group>
-               <zeroOrMore>
-                  <ref name="model.headLike"/>
-               </zeroOrMore>
+         <group>
+            <choice>
                <oneOrMore>
-                  <ref name="model.pLike"/>
+                  <ref name="state"/>
                </oneOrMore>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="model.noteLike"/>
-                     <ref name="model.biblLike"/>
-                  </choice>
-               </zeroOrMore>
-            </group>
-            <group>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="model.labelLike"/>
-                     <ref name="model.noteLike"/>
-                     <ref name="model.biblLike"/>
-                  </choice>
-               </zeroOrMore>
-            </group>
-         </choice>
+               <group>
+                  <zeroOrMore>
+                     <ref name="model.headLike"/>
+                  </zeroOrMore>
+                  <oneOrMore>
+                     <ref name="model.pLike"/>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="model.noteLike"/>
+                        <ref name="model.biblLike"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+               <group>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="model.labelLike"/>
+                        <ref name="model.noteLike"/>
+                        <ref name="model.biblLike"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+            </choice>
+         </group>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
          <ref name="att.editLike.attributes"/>
@@ -6157,34 +6314,36 @@ Mathematical Expressions]</a:documentation>
    <define name="trait">
       <element name="trait">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of some status or quality attributed to a person, place, or organization typically, but not necessarily, independent of the volition or action of the holder and usually not at some specific time or for a specific date range. [13.3.1. Basic Principles 13.3.2.1. Personal Characteristics]</a:documentation>
-         <choice>
-            <oneOrMore>
-               <ref name="trait"/>
-            </oneOrMore>
-            <group>
-               <zeroOrMore>
-                  <ref name="model.headLike"/>
-               </zeroOrMore>
+         <group>
+            <choice>
                <oneOrMore>
-                  <ref name="model.pLike"/>
+                  <ref name="trait"/>
                </oneOrMore>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="model.noteLike"/>
-                     <ref name="model.biblLike"/>
-                  </choice>
-               </zeroOrMore>
-            </group>
-            <group>
-               <zeroOrMore>
-                  <choice>
-                     <ref name="model.labelLike"/>
-                     <ref name="model.noteLike"/>
-                     <ref name="model.biblLike"/>
-                  </choice>
-               </zeroOrMore>
-            </group>
-         </choice>
+               <group>
+                  <zeroOrMore>
+                     <ref name="model.headLike"/>
+                  </zeroOrMore>
+                  <oneOrMore>
+                     <ref name="model.pLike"/>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="model.noteLike"/>
+                        <ref name="model.biblLike"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+               <group>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="model.labelLike"/>
+                        <ref name="model.noteLike"/>
+                        <ref name="model.biblLike"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+            </choice>
+         </group>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
          <ref name="att.editLike.attributes"/>
@@ -6657,6 +6816,25 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          <empty/>
       </element>
    </define>
+   <define name="secl">
+      <element name="secl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(secluded text) Secluded. Marks text present in the source which the editor believes to be genuine but out of its original place (which is unknown). [11.3.1.7. Text Omitted from or Supplied in the Transcription]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <optional>
+            <attribute name="reason">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">one or more words indicating why this text has been secluded, e.g. interpolated etc.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <ref name="data.word"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="line">
       <element name="line">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the transcription of a topographic line in the source document [11.2.2. Embedded Transcription]</a:documentation>
@@ -6782,6 +6960,26 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
       <element name="ab">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="macro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-ab-abstractModel-structure-p-constraint-11">
+            <rule context="tei:ab">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="(ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)">
+        Abstract model violation: ab may not contain paragraphs or other ab elements.
+      </report>
+            </rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei_jaraid-ab-abstractModel-structure-l-constraint-12">
+            <rule context="tei:ab">
+               <report xmlns:tei="http://www.tei-c.org/ns/1.0"
+                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       test="ancestor::tei:l or ancestor::tei:lg">
+        Abstract model violation: Lines may not contain higher-level divisions such as p or ab.
+      </report>
+            </rule>
+         </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
          <empty/>
@@ -6793,6 +6991,17 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          <empty/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="seg">
+      <element name="seg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.segLike.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <ref name="att.source.attributes"/>
          <empty/>
       </element>
    </define>
