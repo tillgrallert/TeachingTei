@@ -2,6 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online/xslt-boilerplate/teibp.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml"
    xmlns:tei="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -458,7 +459,7 @@
    </tei:facsimile>
    <text xml:lang="de">
       <front>
-         <pb facs="#facs_1" n="1" xml:id="pb_1"/>
+         <pb ed="print" facs="#facs_1" n="1" xml:id="pb_1"/>
          <div>
             <bibl>
                <title>Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse während des
@@ -468,8 +469,8 @@
                Hofbuchhandlung/ Kochstraße 68 — 71 Alle Rechte aus dem Gesetz vom I?. Juni I?0I
                sowie das Übersetzungsrecht sind vorbehalten. </bibl>
          </div>
-         <pb facs="#facs_2" n="2" xml:id="pb_2"/>
-         <pb facs="#facs_3" n="3" xml:id="pb_3"/>
+         <pb ed="print" facs="#facs_2" n="2" xml:id="pb_2"/>
+         <pb ed="print" facs="#facs_3" n="3" xml:id="pb_3"/>
          <div>
             <head xml:id="head_3">Vorwort.</head>
             <p xml:id="p_5">In dem beschränkten Raum des vorliegenden kleinen Buches konnte ich nur
@@ -485,7 +486,7 @@
                   1917</date>.</p>
             <p xml:id="p_6">Der Verfasser.</p>
          </div>
-         <pb facs="#facs_4" n="4" xml:id="pb_4"/>
+         <pb ed="print" facs="#facs_4" n="4" xml:id="pb_4"/>
          <div>
             <head xml:id="head_4">Inhalt. Seite</head>
             <list type="unordered">
@@ -524,7 +525,7 @@
          </div>
       </front>
       <body>
-         <pb facs="#facs_5" n="5" xml:id="pb_5"/>
+         <pb ed="print" facs="#facs_5" n="5" xml:id="pb_5"/>
          <div>
             <head xml:id="head_6">Von Berlin nach Konstantinopel in 25 Tagen.</head>
             <p xml:id="p_7">“<q>Oberleutnant möchten sofort zu Herrn Hauptmann Kr. nach oben
@@ -543,7 +544,7 @@
                den Betrieb über das Gebirge aufrechtzuerhalten hätte. Das eröffnete ja geradezu
                blendende Aussichten, und so gingen wir denn mit allen Kräften daran, die Kolonne
                auszurüsten. Aber das war nicht einfach. Da wir die Lebensbedingungen in Kleinasien
-               nicht kannten, vor allem <pb facs="#facs_6" n="6" xml:id="pb_6"/> alles sehr schnell
+               nicht kannten, vor allem <pb ed="print" facs="#facs_6" n="6" xml:id="pb_6"/> alles sehr schnell
                gehen sollte, mußten wir Lebensmittel für mehrere Monate mitnehmen und die
                Einkleidung vom Pelz bis zur Tropenuniform, die Ausrüstung von der Nähmaschine bis
                zur Schusterahle gründlich durchdenken, denn dort unten gab es keinen Ersatz, wir
@@ -564,7 +565,7 @@
                währte! Noch ein letzter Abschied, ein Händedruck! „Abfahrt!" und pünktlich um 1 Uhr
                Z Min. nachts setzte sich mein Transport in Bewegung. Manchen faßte die Rührung, als
                ich bei der Abfahrt die Lieder „Muß i denn zum Städtle hinaus" und „Deutschland,
-               Deutsch- <pb facs="#facs_7" n="7" xml:id="pb_7"/> land über alles" singen ließ. Dann
+               Deutsch- <pb ed="print" facs="#facs_7" n="7" xml:id="pb_7"/> land über alles" singen ließ. Dann
                wurde es allmählich still. In flottem Tempo rollten wir gen Oderberg. Einer
                ungewissen Zukunft ging es entgegen, nach einem fremden Erdteil. Wer weiß, welch
                Schicksal uns beschieden war! Doch stolz waren wir alle, diese Unternehmung mitmachen
@@ -584,7 +585,7 @@
                ließ ich durch den Verpflegungsunteroffizier unterwegs alles aufkaufen, was von
                frischen Nahrungsmitteln, Gemüse, Fleisch usw. zu haben war, um die mitgenommenen
                Konserven aufzusparen. Am 25. erreichten wir Budapest, dann durchquerten wir die
-               eintönige ungarische Steppe, an vielen kleinen Seen und Überschwemmungs- <pb
+               eintönige ungarische Steppe, an vielen kleinen Seen und Überschwemmungs- <pb ed="print"
                   facs="#facs_8" n="8" xml:id="pb_8"/> gebieten vorbei nach Szegedin. Die
                Beköstigung in Ungarn war ebenfalls gut, doch hatte ich ein merkwürdiges Mißgeschick:
                auf jeder Verpflegungsstation gab es Kalbsbrust, manchmal Kalbsbusen, schließlich nur
@@ -606,7 +607,7 @@
                für etwas „Besonderes" und für — heißen Punsch. Als das Kaiserhoch verhallt war,
                lagerten wir uns um das Feuer und unter Begleitung der Konservenmusik wurden Lieder
                gesungen; Vorträge und Couplets wechselten ab mit Tanzvorführungen der aus der Nähe
-               herbeigeeilten Zigeuner. Ein buntes Lagerleben! <pb facs="#facs_9" n="9"
+               herbeigeeilten Zigeuner. Ein buntes Lagerleben! <pb ed="print" facs="#facs_9" n="9"
                   xml:id="pb_9"/> Die Stadt Szegcdin macht einen sehr sauberen, netten Eindruck. Als
                ich eines Abends zusammen mit <persName>Oberleutnant B.</persName>, dein Führer von
                   <orgName>Kolonne 501</orgName>, und <persName>Oberleutnant v. R.</persName>,
@@ -628,7 +629,7 @@
                Anwesenden auf, unser Wohl zu trinken, und bat uns, für den Rest des Abends seine
                Gäste zu fein. Wir nahmen natürlich dankbar an und verlebten einen recht gemütlichen
                Abend. Ganz besonders anziehend wurde mir diese Bekanntschaft dadurch, daß ich in den
-               Redner einen <persName>Oberleutnant v. W.</persName> aus Parsch- <pb facs="#facs_10"
+               Redner einen <persName>Oberleutnant v. W.</persName> aus Parsch- <pb ed="print" facs="#facs_10"
                   n="10" xml:id="pb_10"/> witz — also aus der nächsten Nähe meiner Heimat
                   (<placeName>Hirschberg i. Schl.</placeName>) — nebst seiner Frau kennen lernte.
                Wir saßen dann später in Szegedin und auf meinem Bahnhof in Szöreg noch oft und recht
@@ -649,7 +650,7 @@
                machte. Den Konak selbst zu betreten war verboten, doch gelang es mir, einen Blick
                von außen in den zerschossenen Krönungssaal zu werfen. Die Festung Belgrad ist längst
                verfallen. Auf dem alten Festungsgelände bildeten Kasernen und militärische Wohnäuser
-               infolge der Beschießung zum <pb facs="#facs_11" n="11" xml:id="pb_11"/> großen Teil
+               infolge der Beschießung zum <pb ed="print" facs="#facs_11" n="11" xml:id="pb_11"/> großen Teil
                wüste Trümmerhaufen. Und doch boten sie einen eigenartigen Eindruck: bei trübem
                Himmel alles in wundervollen Rauhreif gekleidet, düster und feierlich. Nirgends war
                eine Menschenseele zu sehen. Unten in nebelgrauer Feme die Donau, drüben die weit
@@ -670,7 +671,7 @@
                Ich stand am Fenster meines dunklen Abteils, mein Bursche auf der anderen Seite. Da,
                plötzlich ein Schuß, gleich folgten mehrere. Ein Ruck von mir an der zur Lokomotive
                führenden Leine, der Zug steht fast augenblicklich, ein kurzes Hupensignal, und mit
-               Ausnahme der <pb facs="#facs_12" n="12" xml:id="pb_12"/> Posten waren wir alle im
+               Ausnahme der <pb ed="print" facs="#facs_12" n="12" xml:id="pb_12"/> Posten waren wir alle im
                Walde, die Hälfte rechts, die anderen links. Wohl eine Stunde suchten wir im Dunkeln,
                aber leider vergebens! Zwei alte Weiber wurden eingebracht, doch von mir als
                unverdächtig wieder entlassen; die feigen Mordbuben hatten in der Dunkelheit gute
@@ -691,7 +692,7 @@
                Trachten sah ich nichts — der Krieg hatte hier ja auch zu arg gewütet. Den Einwohnern
                fehlte es an den wichtigsten Lebensmitteln, mit Ausnahme von Eiern, die anscheinend
                reichlich vorhanden waren. Ich handelte verschiedenes ein, doch Geld mochten die
-               Leute nicht. Immer wieder <pb facs="#facs_13" n="13" xml:id="pb_13"/> nur verlangten
+               Leute nicht. Immer wieder <pb ed="print" facs="#facs_13" n="13" xml:id="pb_13"/> nur verlangten
                sie Salz und Zucker. Für ein Stück Zucker gaben sie gern ein Ei, für eine Apfelsine
                bekam mein Bursche fünf Eier, allerdings legte er eine kleine Tüte Salz zu. Für ein
                Huhn wollte ich 1 Krone zahlen/ doch als ich nebeneinander auf die Bank Salz, Zucker,
@@ -710,7 +711,7 @@
                ungepflasterte Straßen, die zu dieser Jahreszeit grundlos waren, fast nur einstöckige
                Gebäude, dazu ein undurchdringliches Dunkel, da Straßenbeleuchtung vollständig
                fehlte! War der Oberbau der Bahn in Serbien bisher schon so elend gewesen, daß ich
-               wegen der Schwankungen die Autos auf ihren Wagen doppelt vertäuen mußte, so wurde <pb
+               wegen der Schwankungen die Autos auf ihren Wagen doppelt vertäuen mußte, so wurde <pb ed="print"
                   facs="#facs_14" n="14" xml:id="pb_14"/> es jetzt hinter Nisch noch ganz besonders
                schlimm. Trotz dem wir mit kaum 20 Km-Geschwindigkeit fuhren, schaukelten die Wagen
                derart, daß ich jeden Augenblick eine Entgleisung fürchtete. Tatsächlich sah ich auf
@@ -731,7 +732,7 @@
                die Stadt etwas anzusehen. Hier fiel mir das Hervortreten orientalischen Lebens
                zuerst auf. Gleich am Bahnhof wärmten sich mehrere Urbilder von Türken an einem
                Torffeuer und sprangen sichtlich erfreut auf, als ich sie mit dem sadäck 1a
-               ksiroläsun anredete. Die Stadt selbst trägt den Charakter des Überganges zwischen <pb
+               ksiroläsun anredete. Die Stadt selbst trägt den Charakter des Überganges zwischen <pb ed="print"
                   facs="#facs_15" n="15" xml:id="pb_15"/> Abendland und Orient. Moderne europäische
                Geschäfte wechseln ab mit schmutzigen orientalischen Basaren. Der Maulesel ist
                bereits viel als Transportmittel vertreten. Das Straßenbild wird belebt durch die
@@ -751,7 +752,7 @@
                des Musalla, des höchsten Gipfels der Rhodope. Wir sind inmitten einer waldigen
                Gebirgslandschaft, die von zahlreichen Wasseradern durchschnitten ist. In den
                feuchtwarmen Niederungen wachsen üppig Reis, Getreide, Wein, Tabak; viele Kuh- und
-               Ziegenherden mit friedvollem Glockengeläut zeugen von dem Wohlstand der Bauern. <pb
+               Ziegenherden mit friedvollem Glockengeläut zeugen von dem Wohlstand der Bauern. <pb ed="print"
                   facs="#facs_16" n="16" xml:id="pb_16"/> Bis zum letzten Augenblick durch die Berge
                verdeckt, sehen wir plötzlich Philippopel vor uns, begrenzt von den überaus
                schroffen, kahlen Hügeln Dschendem TepZ und Buuardschik Tepe mit dem russischen
@@ -776,7 +777,7 @@
                dann am 15. nachts und</p>
             <floatingText>
                <body>
-                  <pb n="pb_16a" facs="#facs_17"/>
+                  <pb ed="print" n="pb_16a" facs="#facs_17"/>
                   <div>
                      <head xml:id="head_7">Tafel 1</head>
                      <figure>
@@ -784,7 +785,7 @@
                            nach dem Orient auf dem Parkplatz
                            <placeName>Schöneberg</placeName></caption>
                      </figure>
-                     <pb n="pb_16b" facs="#facs_18"/>
+                     <pb ed="print" n="pb_16b" facs="#facs_18"/>
                      <figure>
                         <caption>3800 Meter lange Kriegsbrücke bei
                            <placeName>Belgrad</placeName></caption>
@@ -800,7 +801,7 @@
                </body>
             </floatingText>
             <p xml:id="p_9">
-               <pb facs="#facs_19" n="17" xml:id="pb_17"/> sollten „bereits" am nächsten Tage
+               <pb ed="print" facs="#facs_19" n="17" xml:id="pb_17"/> sollten „bereits" am nächsten Tage
                nachmittags in Konstantinopel eintreffen. In Lüls Bourgas, der türkischen
                Grenzstation, hatte ich einen meiner Leute typhuskrank Zurücklassen müssen, im
                übrigen war ihr Gesundheitszustand gut. Als ich im ersten Morgengrauen des 16.
@@ -820,7 +821,7 @@
                Transportzug zusammengestellt. Ein tolles Hin und Her, bis ich endlich auf der
                Kommandantur des Bahnhofs erfuhr, daß ich mit dem Übersetzen nach Asien auf Trajekten
                sofort beginnen müsse. So endigte also der erste Teil der Reise von Berlin nach
-               Konstantinopel: eine Strecke, zu der der Balkanzug <pb facs="#facs_20" n="18"
+               Konstantinopel: eine Strecke, zu der der Balkanzug <pb ed="print" facs="#facs_20" n="18"
                   xml:id="pb_18"/> 23 Stunden braucht, hatten wir in 25 Tagen zurück gelegt ! Aber
                eines hatten wir vor der bequemen Fahrt im Balkanzug voraus: wir hatten die
                verschiedenen Länder sowie deren Sitten und Gebräuche kennen gelernt, und das war
@@ -841,7 +842,7 @@
                und von der deutschen Regierung für die Dauer des Krieges zur Unterkunft deutscher
                Offiziere und Mannschaften von der Hamburg—Amerika-Linie gemietet war. Der Preis von
                6 M. für eine dunkle Kammer von 2 X 3 in war ja reichlich hoch, doch das Essen für
-               teuren Preis gut. Die Kabinen erwiesen sich <pb facs="#facs_21" n="19" xml:id="pb_19"
+               teuren Preis gut. Die Kabinen erwiesen sich <pb ed="print" facs="#facs_21" n="19" xml:id="pb_19"
                /> auch ziemlich frei von Ungeziefer; das war zunächst die Hauptsache. Wohl jeden
                Fremden besticht die türkische Hauptstadt von weitem, besonders bei der Ankunft vom
                Wasser her, ganz ungemein, doch wird man durch ihr Inneres ganz gewaltig enttäuscht.
@@ -861,7 +862,7 @@
                und Pera ans. Stambul, die türkische Altstadt, ist winklig, schmutzig, teilweise bis
                zum Ekel. Man sieht wenig europäisch gekleidete Leute; die Türken und verschleierten
                Türkinnen überwiegen. Und doch liegen gerade hier die „Hohe Pforte" und das
-               „Kriegsministe- <pb facs="#facs_22" n="20" xml:id="pb_20"/> rium“. Das Anziehendste
+               „Kriegsministe- <pb ed="print" facs="#facs_22" n="20" xml:id="pb_20"/> rium“. Das Anziehendste
                war mir der „Große Basar”. Dieser nimmt ein abgegrenztes, nur durch bestimmte Tore
                zugängliches Stadtviertel neben der Osmaniö-Moschee ein. Eine Stunde vor
                Sonnenuntergang wird der ganze Bezirk verlassen und abgeschlossen. Beinahe wäre ich
@@ -881,7 +882,7 @@
                vom Sehen genug bekommt. Als ich zum zweiten Male den Basar besuchte, tat ich es
                unter Führung eines bekannten osmanischen Oberstleutnants K. und hatte meine Einkäufe
                daher auch nicht zu bereuen. Wir suchten nur bessere Stände auf. Eigentümlich ist die
-               Sitte beim Handeln selbst. In <pb facs="#facs_23" n="21" xml:id="pb_21"/> jedem
+               Sitte beim Handeln selbst. In <pb ed="print" facs="#facs_23" n="21" xml:id="pb_21"/> jedem
                besseren Stand wird man vor allem zum Sitzen genötigt. Der Händler fragt nie, was man
                sehen will, erst bringt ein Diener den üblichen Kaffee und Zigaretten, dann spielt
                der Verkäufer mit einzelnen Gegenständen, indem er sie gewissermaßen vor unseren
@@ -901,7 +902,7 @@
                heraus und fanden uns inmitten eines vollständig ruinenhaften Stadtteils. Teils durch
                Feuer, teils zur Verbreiterung der Straßen waren Hunderte von Häusern niedergelegt,
                die Straßen nicht wieder ausgebaut. Als ob hier vor fünfzig Jahren eine moderne
-               Feldschlacht getobt hätte, <pb facs="#facs_24" n="22" xml:id="pb_22"/> sah der
+               Feldschlacht getobt hätte, <pb ed="print" facs="#facs_24" n="22" xml:id="pb_22"/> sah der
                Stadtteil aus. Ich besichtigte nun noch einige der größeren, ungemein prunkvollen
                Moscheen und wandte mich dann mit der Straßenbahn auf die andere Seite des Goldenen
                Horns, nach Galata, fuhr mit der „Tunnelbahn" herauf nach Pera und konnte mich hier
@@ -922,7 +923,7 @@
                steigt er aber aus dem Wasser und schüttelt seine nassen Kleider: als ob er über und
                über glühte und brennte, sah er aus, ein Anblick, den ich nie vergessen werde.
                Natürlich erwartete er als Vorbeugung gegen einen Schnupfen das entsprechende
-               Trinkgeld, doch <pb facs="#facs_25" n="23" xml:id="pb_23"/> träumte ich noch lange
+               Trinkgeld, doch <pb ed="print" facs="#facs_25" n="23" xml:id="pb_23"/> träumte ich noch lange
                von dem feurigen Mann, von dem Grande-Kanal in Venedig, an den mich oft das Goldene
                Horn erinnerte, und von den Märchen aus Tausend und einer Nacht! Wie so anders waren
                doch diese Märchen im Vergleich mit der nackten, rauhen Wirklichkeit! — Am nächsten
@@ -942,7 +943,7 @@
                bietet, im Innern nur winklige Straßen und neben den schönen alten Moscheen geringe
                hölzerne Häuser. Besonders anziehend war mir das Kloster der „heulenden Derwische“,
                ein schlichtes, rechteckiges Gebäude neben einem Minarett. Die ekstatische
-               Religionsübung dieser Derwische, der ich kurz vor Sonnenuntergang bei- <pb
+               Religionsübung dieser Derwische, der ich kurz vor Sonnenuntergang bei- <pb ed="print"
                   facs="#facs_26" n="24" xml:id="pb_24"/> wohnte, bestand aus einer Predigt des
                Scheichs, der vor der Gebetsnische in dem einfachen Moscheeraum saß, und
                abgemessenen, sich andauernd steigernden Körperbewegungen der Derwische, die an ihrem
@@ -963,7 +964,7 @@
                einer kleinen Einbuchtung des Marmara-meeres und macht einen durchaus europäischen
                Eindruck. Kurz vor der Abfahrt aus Haidar-Pascha gesellte sich noch unser neuer Arzt
                zu mir, so daß ich für die auf drei bis fünf Tage geschätzte Fahrt durch Kleinasien
-               gute Gesellschaft hatte. — Am Abend des 2t. sagten wir den über <pb facs="#facs_27"
+               gute Gesellschaft hatte. — Am Abend des 2t. sagten wir den über <pb ed="print" facs="#facs_27"
                   n="25" xml:id="pb_25"/> das Marmarameer und über den Bosporus hervorragen den
                Bergen Europas Lebewohl; ein ganz neuer, uns allen bisher unbekannterWeltteil nahm
                uns auf, es ging hinein ins Innere von Asten. — Wir hatten uns schon vor der Abfahrt
@@ -985,7 +986,7 @@
                wo der Boden so fruchtbar, das Erdreich für Motorpflug bearbeitung so geeignet ist,
                und doch meilenweit nichts als öde Steppe bietet. — Der südliche Teil dieser Hoch
                ebene bildet eine endlos weite, baumlose „Salzwüste“. Ein großes
-               Bewässerungsunternehmen mittels Kanal- <pb facs="#facs_28" n="26" xml:id="pb_26"/>
+               Bewässerungsunternehmen mittels Kanal- <pb ed="print" facs="#facs_28" n="26" xml:id="pb_26"/>
                führung würde dem Lande die alte Fruchtbarkeit wieder geben, wie sie bis zur Zeit der
                römischen Kaiser bestanden haben soll. Von Konia aus konnten wir schon weit im Süden
                die schneebedeckte Kette des Taurusgebirges sehen, als wir über die große Salzsteppe
@@ -1006,7 +1007,7 @@
                von Berlin ab gebraucht, und hier schallte uns zum ersten Male das „zavasek”,
                „zk^Äsczk“-—„langsam”, „lang sam" — entgegen. Und so blieb mir nichts anderes übrig,
                als im kalten Abteil den Morgen abzuwarten. Rechts und links von schneebedeckten
-               Bergen überragt, <pb facs="#facs_29" n="27" xml:id="pb_27"/> liegt die Bahnstation
+               Bergen überragt, <pb ed="print" facs="#facs_29" n="27" xml:id="pb_27"/> liegt die Bahnstation
                Bozanti in einem reizvollen Tal, auf etwa 300 in Höhe. Noch in der Nacht besichtigte
                ich die Laderampen und vergewisserte mich über die Fahrt richtungen usw., denn im
                Abteil hatte ich doch keine Ruhe mehr. Und dann bei Morgengrauen begann die Arbeit.
@@ -1026,7 +1027,7 @@
                Fahrern wie den Maschinen also ganz außerordentliche Anstrengungen bevor, zumal die
                Straße keine Chaussee in europäischem Sinne sein sollte. Selbst unsere bescheidensten
                Erwartungen wurden aber zuschanden. Der Zustand der Straße war ganz un glaublich
-               schlecht, einzelne Kurven so, daß sie erst durch <pb facs="#facs_30" n="28"
+               schlecht, einzelne Kurven so, daß sie erst durch <pb ed="print" facs="#facs_30" n="28"
                   xml:id="pb_28"/> mehrfaches Hin- und Rückwärtsfahren genommen werden konnten. Oft
                glitten die Wagen trotz Schneeketten rück wärts in dem Schlamm, und bange Sorge faßte
                mich: Wie lange würden wir das aushalten? — Auf dieser ersten Fahrt hatten meine
@@ -1046,7 +1047,7 @@
                eineTalsohle von kaum 10m frei, die vom brausen den Fluß durchtost wird. Diesem hat
                man durch Mauern einen schmalen Weg abgerungen, auf dem sich Wagen nicht ausweichen
                können. Der ganze Engpaß ist kaum 100 in lang, doch schaurig und erhaben schön ist
-               der gewaltige Anblick der „Kilikischen Tore“! Wie oft haben diese in <pb
+               der gewaltige Anblick der „Kilikischen Tore“! Wie oft haben diese in <pb ed="print"
                   facs="#facs_31" n="29" xml:id="pb_29"/> der Weltgeschichte bedeutende Rollen
                gespielt! Semi- ramis, Xerxes, Darins, Cyrns der Jüngere, Alexander der Große, Harun
                al Raschid, Gottfried von Bouillon haben sie durchzogen. Von Ibrahim Paschas Befesti
@@ -1067,7 +1068,7 @@
                konnte daher sofort die Kolonnenfahrten aufnehmen. Die Strecke nach Tarsus ist im
                allgemeinen nicht so schroff, nicht so gefährlich. Über die kahlen Vor höhen geht es
                an zahlreichen Hans und mehreren kleinen armseligen Dörfern vorüber zu Tal. Jenseits
-               der Brücke Hökesche Köprü hat man eine prachtvolle Fernsicht über <pb facs="#facs_32"
+               der Brücke Hökesche Köprü hat man eine prachtvolle Fernsicht über <pb ed="print" facs="#facs_32"
                   n="30" xml:id="pb_30"/> die Kilikische Ebene, den Golf von AlexandreM und den
                Amanus, im Rücken die Tauruskette. Am schattig gelegenen Kawakli Han vorüber
                durchzieht die Straße dann die mehr und mehr angebaute Ebene. Die letzten tausend
@@ -1087,7 +1088,7 @@
                Winter 16/17 einrichten und versorgen mußten. Zu dieser Zeit erhielte« wir die
                Nachricht, daß noch mehr Autokolonnen herunterkommen würden, die sogar noch weiter
                nach Süden und Osten vorgeschoben werden sollten. Um für diese Formationen
-               gewissermaßen die Wege zu ebnen und Fühlung mit den türkischen Ver- <pb
+               gewissermaßen die Wege zu ebnen und Fühlung mit den türkischen Ver- <pb ed="print"
                   facs="#facs_33" n="31" xml:id="pb_31"/> bänden zu bekommen, beschloß unser
                Kommandeur, einen Streifzug nach dem Süden zu unternehmen und möglichst auch mit der
                Suez-Armee in Verbindung zu treten. Durch Syrien, Palästina und das Asiatische
@@ -1110,7 +1111,7 @@
                nach Tarsus, der Geburtsstadt des Apostel Paulus, Zeit, machte noch einige kleine
                Einkäufe, fuhr dann am Kydnos entlang, an der Stelle von Alexander des Großen
                gefährlichem Bad vor über wieder nach Gülek zurück, wo ich mit Hauptmann H.
-               zusammentraf. Schnell waren die Autos verlade«, und <pb facs="#facs_34" n="32"
+               zusammentraf. Schnell waren die Autos verlade«, und <pb ed="print" facs="#facs_34" n="32"
                   xml:id="pb_32"/> am frühen Nachmittag setzte sich unser Zug mit nur zwei Stunden
                Verspätung in Bewegung. An einem wunderschönen Frühlingstag ging es durch die überaus
                fruchtbare Kilikische Ebene, vorüber an den an die Anlagen in Werder bei Potsdam
@@ -1133,7 +1134,7 @@
                Autos ganz brauchbare Paßstraße geht</p>
             <floatingText>
                <body>
-                  <pb n="pb_32a" facs="#facs_35"/>
+                  <pb ed="print" n="pb_32a" facs="#facs_35"/>
                   <div>
                      <head>Tafel 2</head>
                      <figure>
@@ -1143,7 +1144,7 @@
                         <caption>Unsere Tankstelle <placeName>Bozanti</placeName> im
                               <placeName>Taurus</placeName></caption>
                      </figure>
-                      <pb n="pb_32b" facs="#facs_36"/>
+                      <pb ed="print" n="pb_32b" facs="#facs_36"/>
                      <figure>
                         <caption>Ehrenkompagnie bei der Durchfahrt der Leiche des
                               <persName>Feldmarschalls Frhrn. v. der Goltz</persName> in
@@ -1153,7 +1154,7 @@
                </body>
             </floatingText>
             <p xml:id="p_13">
-               <pb facs="#facs_37" n="33" xml:id="pb_33"/> in kühn angelegten Schlangenlinien zur
+               <pb ed="print" facs="#facs_37" n="33" xml:id="pb_33"/> in kühn angelegten Schlangenlinien zur
                Paßhöhe und in sehr gewagten Windungen in einem einzigen großen Kessel herunter bis
                zum Fuß des Hauptgebirgsstocks. Der Waldbestand ist bedeutend besser als im Taurus,
                die zwei Armenierdörfer, durch die wir kamen, machten einen verhältnismäßig guten
@@ -1173,7 +1174,7 @@
                Steigung empor, verschwindet in der schwarzen Tiefe, und rückwärts schlägt noch
                einmal eine goldene, glanzvolle Funkengarbe aus dem grauen Qualm, durch den die
                kupferfarbige matte Sonne vergebens durch zudringen sucht. Noch ein tiefer Atemzug,
-               und wir sind ebenfalls in dem Brodem untergetaucht. Man fühlt die <pb facs="#facs_38"
+               und wir sind ebenfalls in dem Brodem untergetaucht. Man fühlt die <pb ed="print" facs="#facs_38"
                   n="34" xml:id="pb_34"/> Hitze des Rauches, der sich schwer auf die Lunge legt. Die
                Minuten werden fast zu Stunden, die elektrischen Hand laternen versagen im Nebel, und
                es ist auch besser so, denn nun sieht man deutlicher die Funken, die unauf hörlich
@@ -1193,7 +1194,7 @@
                ihnen ist aber lange nicht so bunt wie in anderen Städten, die ich später sah. Bei
                Aleppo läuft ^ die Grenze zwischen der türkischen und der arabischen , Sprache, doch
                kommt man mit Französisch überall durch. Die innere Stadt ist von einer Mauer
-               umgeben. Außer halb dieser liegen die christlichen Viertel. Im Mittel- <pb
+               umgeben. Außer halb dieser liegen die christlichen Viertel. Im Mittel- <pb ed="print"
                   facs="#facs_39" n="35" xml:id="pb_35"/> Punkt befindet sich eine Befestigung,
                deren Minarett eine weithin sichtbare Landmarke bildet. Sie ist von einem jetzt
                trockenen, etwa 50 in breiten, tiefen Graben um geben, der an eine r Stelle auf einer
@@ -1214,7 +1215,7 @@
                Kuwek. — Teilweise ganz unglaublich verwildert sind die Kirchhöfe, so der südlich von
                unserem Quartier gelegene: ohne jede Abgrenzung, bildet er fast nur einen wüsten
                Steinhaufen. — Gesundheitliche Einrichtungen wie Wasserleitung und Kanalisation gibt
-               es nicht, nur in besseren Häusern „arabische Klosetts”. Jetzt während des <pb
+               es nicht, nur in besseren Häusern „arabische Klosetts”. Jetzt während des <pb ed="print"
                   facs="#facs_40" n="36" xml:id="pb_36"/> Krieges ist Aleppo besonders als
                Knotenpunkt der Bahnen nach Bagdad und Birseba (südlich Jerusalem) von Bedeutung
                geworden, und die vielen durchreisenden Offiziere finden sich stets bei einzelnen
@@ -1235,7 +1236,7 @@
                Sic gleichen von weitem einem Zeltlager. Die Häuser bestehen aus einem runden,
                fensterlosen Unterbau mit hohem, zuckerhutförmigem Dach. Wie Bienenkörbe sehen sie
                von weitem aus. Später traf ich die gleiche Bauart noch im nördlichen Mesopotamien
-               an. <pb facs="#facs_41" n="37" xml:id="pb_37"/> Die Form der Häuser ist deshalb so
+               an. <pb ed="print" facs="#facs_41" n="37" xml:id="pb_37"/> Die Form der Häuser ist deshalb so
                ausfällig, weil das für den ganzen Orient kennzeichnende flache Dach fehlt. Die
                Bewohner dieser Dörfer sind Kurden. An Hama und Homs, größeren Städten am Rande der
                Wüste, vorbei, mehrfach den Orontes kreuzend, stiegen wir allmählich höher und kamen
@@ -1255,7 +1256,7 @@
                während wir in den aus offenen Güterwagen verladenen Autos saßen. Ein Gebirgsbach
                durchfließt die engen Schluchten. Die Ufer sind mit Platanen, Eichen und Oleander
                bestanden. Die Felswände steigen an beiden Seiten steil um mehrere hundert Meter senk
-               recht an. Auf dem höchsten Punkt bietet eine fruchtbare <pb facs="#facs_42" n="38"
+               recht an. Auf dem höchsten Punkt bietet eine fruchtbare <pb ed="print" facs="#facs_42" n="38"
                   xml:id="pb_38"/> Ebene bei Zebedmn wunderbaren Fernblick nach dem „Hermon“. Die
                Bahn verläuft nun in sehr starkem Gefälle hinab ins Wadi Barada, vorüber an dem
                Elektrizitätswerk von Damaskus, dessen Kraft durch das Wasser der Barada. geliefert
@@ -1276,7 +1277,7 @@
                in das Hauran-Gebiet: Hunderte von Basalt- und Trachytkegeln ragen hier einzeln oder
                in Gruppen zum Teil zu beträchtlicher Höhe (über 1800 in) aus. Am Nordrand des Hauran
                selbst breitet sich das Sedschll aus, eine trostlose Einöde von einander sich kreu-
-                  <pb facs="#facs_43" n="39" xml:id="pb_39"/> zenden Lavaströmen, östlich davon eine
+                  <pb ed="print" facs="#facs_43" n="39" xml:id="pb_39"/> zenden Lavaströmen, östlich davon eine
                lange Reihe von Eruptivuskegelu, ein Lavagebiet von großartiger Wildnis. Erst bei
                Dera’at wird es wieder etwas fruchtbar. Hier verließen wir die Hedjas-Bahn und bogen
                westlich ab nach dem Westjordanland. Die Station Muzerib ist die Hanptsammelstelle
@@ -1295,7 +1296,7 @@
                Morgen in der Provinz Samaria jäh aufgeweckt wurde. Wir hatten wohl einen plötzlichen
                Maschinenunfall erlitten, denn der Zug stand fast augenblicklich still, so daß im
                Abteil alles durcheinanderfiel. Der Schaden war aber bald beseitigt. Hier in Samaria
-               war der Pflanzenwuchs schon bedeutend weiter entwickelt. <pb facs="#facs_44" n="40"
+               war der Pflanzenwuchs schon bedeutend weiter entwickelt. <pb ed="print" facs="#facs_44" n="40"
                   xml:id="pb_40"/> Auf einem kleinen Bahnhof in<placeName>Dschemmin</placeName>hatte
                ich Gelegenheit, ein eigenartiges Bild zu beobachten: Bei kaltem Regenwetter sollte
                von einem nahen Stapelplatz Holz an die Bahn gebracht werden; dazu war etwa ein
@@ -1316,7 +1317,7 @@
                Ende machte und den Bahnhof säuberte. Nachmittags kamen wir in die weite Hochebene
                   von<placeName>Judäa</placeName>. Die Landschaft erinnert — abgesehen von den
                fehlenden Bäumen — sehr an die Gegend der Ostbahn im Posenschen. Grünfutter wurde
-               schon eingefahren. <pb facs="#facs_45" n="41" xml:id="pb_41"/> Um 4 Uhr nachmittags
+               schon eingefahren. <pb ed="print" facs="#facs_45" n="41" xml:id="pb_41"/> Um 4 Uhr nachmittags
                erreichten wir<placeName>Ramle</placeName>, die Kreuzungsstation
                Jaffa—Jerusalem—Birseba. Hier gab es umfangreiche Kaktushecken, Obstanlagen, alles in
                gewaltiger Größe, vor allem die Pappeln — wie im Märchenland, doch alles war
@@ -1337,7 +1338,7 @@
                ganz brauchbaren Kunststraße über Hebron (4°°) nach Birseba, wo wir nach 5 Uhr
                nachmittags anlangten. Immer öder war allmählich die Landschaft geworden, auch immer
                flacher, bis uns in Birseba selbst lange Sanddünen daran erinnerten, daß wir uns
-               unmittelbar am Rande der be- <pb facs="#facs_46" n="42" xml:id="pb_42"/> wohnbaren
+               unmittelbar am Rande der be- <pb ed="print" facs="#facs_46" n="42" xml:id="pb_42"/> wohnbaren
                Wüste der Halbinsel Sinai befanden. In einem leerstehenden Zelt wurden wir
                untergebracht und blieben abends einige Stunden im „Kasüw“zelt mit den anderen
                Offizieren des Stabes der Suez-Expedition gemütlich zusammen. Die Nacht war
@@ -1356,7 +1357,7 @@
                ein großes Sandmeer — und zeigt nur an einzelnen Stellen noch festeren Boden, dem die
                Bewohner mühsam noch etwas Getreide abringen. Der Bahnhof ist großartig angelegt.
                Nachdem wir uns die Erfahrungen der Herren von der Expedition hatten mitteilen
-               lassen, traten wir am nächsten Tage früh den Vorstoß in die eigentliche Wüste an. <pb
+               lassen, traten wir am nächsten Tage früh den Vorstoß in die eigentliche Wüste an. <pb ed="print"
                   facs="#facs_47" n="43" xml:id="pb_43"/>
             </p>
          </div>
@@ -1379,7 +1380,7 @@
                bergiger, und scharfe Krümmungen hemmen die Fahrtgeschwindigkeit. Noch hatten die
                Maschinen nichts Besonderes zu leisten, da wir nur zwischen dem dritten und vierten
                Gang zu wechseln brauchten. Immer schroffer und abwechslungsreicher wird die Wüste,
-               jede Kurve bringt ein neues Bild, stets im Hintergrund vom Helal begrenzt. <pb
+               jede Kurve bringt ein neues Bild, stets im Hintergrund vom Helal begrenzt. <pb ed="print"
                   facs="#facs_48" n="44" xml:id="pb_44"/> Da plötzlich bremst der Führer so, daß wir
                beinahe durcheinanderfliegen. Hinter der Kurve ein tiefer, senk rechter Abgrund.
                Unmittelbar am Rande kam die Maschine zum Stehen. Es war eine jener Stellen, die wir
@@ -1400,7 +1401,7 @@
                liefern reichlich gutes Trinkwasser. Drei Lazarette mit 400 Lagerstellen und drei
                deutschen Schwestern dienen hier inmitten der Wüste, fernab von jeder Zivilisation,
                der Krankenpflege. Auch ein „Offizierkasino" mit sieben Betten ist eingerichtet.
-               Neben der Brunnenanlage befinden sich auf dem Berge die Reste <pb facs="#facs_49"
+               Neben der Brunnenanlage befinden sich auf dem Berge die Reste <pb ed="print" facs="#facs_49"
                   n="45" xml:id="pb_45"/> einer alten griechischen Basilika mit guterhaltenem
                Mosaikfußboden. Etwas nördlich, etwa 15 Minuten entfernt, wurde erst kürzlich eine
                sehr große Höhle entdeckt, in der viel Proviant und Munition untergebracht werden
@@ -1420,7 +1421,7 @@
                knatterten los, eine nach Nordosten zurück, die anderen nach Südwesten weiter vor.
                Unter Überwindung mancher Fährnisse, die vor allem im Durchqueren der „Wadis"
                bestanden, langten wir bei glühender Mittagshitze um 2 Uhr am Ende der Kunststraße in
-               Dir Hasana an (81 km in Ägypten, <pb facs="#facs_50" n="46" xml:id="pb_46"/> (164 Iin
+               Dir Hasana an (81 km in Ägypten, <pb ed="print" facs="#facs_50" n="46" xml:id="pb_46"/> (164 Iin
                in der Wüste). Diese letzte große Tränkstelle am Wadi Hasana beim Jlek-Gebirge, etwa
                100 in hoch gelegen, ist Telegraphenstation der Feld-Telegraphen- abteilung und
                besitzt Motorpnmpenanlagen größter Art. Etwa tausend Kamele können dort auf einmal
@@ -1440,7 +1441,7 @@
                Rücksicht auf unseren geringen Wasservorrat umkehren mußten. War doch auf keinen Fall
                daran zu denken, daß hier ein Lastkraftwagen-Pendelbetrieb eingerichtet werden
                könnte. So weit in die Wüste war noch kein Auto vor gedrungen; südlich der Höhe von
-               Suez und Kairo, an- <pb facs="#facs_51" n="47" xml:id="pb_47"/> gesichts des Djebel
+               Suez und Kairo, an- <pb ed="print" facs="#facs_51" n="47" xml:id="pb_47"/> gesichts des Djebel
                el Tich, des nördlichen Ausläufers des etwa 2300 in hohen Moüsa-Gebirges, des alten
                Sinai, am Rande zwischen Sand- und Steinwüste, mußten wir einsehen, daß hier der
                „große Bruder“, wie mein Wagenführer die Kamele nannte, allein am Platze sei.
@@ -1459,7 +1460,7 @@
                hatten, und lange — vielleicht zu lange stand ich im fahlen Schein des über die Wüste
                aufgegangenen Vollmondes und ließ die Ereignisse des Tages an mir vor übergehen.
                Trotzdem wir am Tage vorher im Sande Temperaturen von über -j- 80° gemessen hatten,
-               war es am 23. März früh doch wieder recht kühl. Ich fürchtete bei- <pb
+               war es am 23. März früh doch wieder recht kühl. Ich fürchtete bei- <pb ed="print"
                   facs="#facs_52" n="48" xml:id="pb_48"/> nahe, daß unser Kühler eingefroren sein
                könnte; doch dem war glücklicherweise nicht so. Wir versuchten nun in der anderen
                Richtung, über Magdaba, Katia — Richtung Port Said — vorzustoßen. Ohne Weg ging es
@@ -1482,7 +1483,7 @@
                Nordwest gegen Südost. Sie erreichen Höhen bis zu 50 m.</p>
             <floatingText>
                <body>
-                   <pb n="pb_48a" facs="#facs_53"/>
+                   <pb ed="print" n="pb_48a" facs="#facs_53"/>
                   <div>
                      <head xml:id="head_11">Tafel 3</head>
                      <figure>
@@ -1493,7 +1494,7 @@
                         <caption>Bei <placeName>Kut el Amara</placeName> gefangene
                            Engländer</caption>
                      </figure>
-                      <pb n="pb_48b" facs="#facs_54"/>
+                      <pb ed="print" n="pb_48b" facs="#facs_54"/>
                      <figure>
                         <caption>Automobil-Unglück bei <placeName>Bozanti</placeName><lb/> Eine
                            Maschine der im Bau begriffenen <orgName>Taurus-Bahn</orgName> fuhr in
@@ -1507,7 +1508,7 @@
                </body>
             </floatingText>
             <p xml:id="p_19">
-               <pb facs="#facs_55" n="49" xml:id="pb_49"/> Ich habe in der Hauptsache nur die
+               <pb ed="print" facs="#facs_55" n="49" xml:id="pb_49"/> Ich habe in der Hauptsache nur die
                „Sandwüste" kennen gelernt. In dem Teil bei Birseba noch ziemlich hügelig, wird diese
                je weiter nach Süden desto flacher, bei Decka nur schroff unterbrochen von dem bis
                200 m hohen Helal-Gebirge. Nur an einzelnen ganz abgeschlossenen Stellen finden sich
@@ -1527,7 +1528,7 @@
                militärischen Gründen jetzt nicht bekannt geben. Nun aber wieder zur Rückreise: Also
                am 23. März mittags trafen wir wohlbehalten in Birseba ein und fuhren gleich
                nachmittags im Auto weiter herauf, zurück nach Norden, nachdem wir über 400 km in der
-               Wüste zurückgelegt hatten. <pb facs="#facs_56" n="50" xml:id="pb_50"/>
+               Wüste zurückgelegt hatten. <pb ed="print" facs="#facs_56" n="50" xml:id="pb_50"/>
             </p>
          </div>
          <div>
@@ -1549,7 +1550,7 @@
                erblickten wir eine größere Stadt. — Bethlehem! Erst nach längerem Suchen in den
                engen, durch Auto nicht passierbaren Nebengassen fanden wir die „Geburtskirche“. Ein
                eigentümliches Ge fühl ergriff mich, als ich den von Juden umlagerten Vorhof
-               überschritt und mich nun dem Ort näherte, der zum <pb facs="#facs_57" n="51"
+               überschritt und mich nun dem Ort näherte, der zum <pb ed="print" facs="#facs_57" n="51"
                   xml:id="pb_51"/> Ausgangspunkt unserer Religion geworden war, dieser Stätte der
                ersten Weihnacht, des schönsten Festes für Jung und Alt. Aber dann, als ich alles
                gesehen, war ich leider sehr — sehr enttäuscht! Ich hatte gehofft, an dieser Stätte
@@ -1569,7 +1570,7 @@
                alle Träume der Kindheit wieder, und das erhabene überwältigende Gefühl löste sich in
                dem schlichten Lied „Stille Nacht, heilige Nacht“, das ich leise vor mich hinsummte.
                — Noch viele wichtige Stätten wurden in den Gewölben gezeigt, der Brunnen, der der
-                  <pb facs="#facs_58" n="52" xml:id="pb_52"/> heiligen Familie Wasser gab, die
+                  <pb ed="print" facs="#facs_58" n="52" xml:id="pb_52"/> heiligen Familie Wasser gab, die
                Kapelle der unschuldigen Kindlein usw. Blendender Sonnenschein empfing uns, als wir
                aus den Grotten wieder heraustraten, und wir wendeten uns — die Zeit war knapp —
                zurück nach Jerusalem, wo wir nach 15 Minuten ankamen und im deutschen Hotel „Fast”
@@ -1588,7 +1589,7 @@
                trinken oder Zigaretten rauchen usw. An sehr vielen Seitenschiffen vorbei, die alle
                Gebetsnischen für die vielen Sekten sind, an dem Salbungsstein vorüber, treten wir in
                einen großen Rundbau, dessen Kuppel überreichen Schmuck aufweist. In ihrer Mitte
-               steht eine im Barokstil erbaute, mit Verzierungen über- <pb facs="#facs_59" n="53"
+               steht eine im Barokstil erbaute, mit Verzierungen über- <pb ed="print" facs="#facs_59" n="53"
                   xml:id="pb_53"/> ladene Kapelle, deren Vorderwand einer großen verzierten Orgel
                nicht unähnlich ist, bei der die Pfeifen un sichtbar sind. Diese Kapelle umschließt
                das Heilige Grab selbst. Gleich rechts hinter dem engen Eingang liegt der
@@ -1608,7 +1609,7 @@
                Steinplatten belegten Tempelplatz, wohl dem größten dieser Art der Welt, erhebt sich
                die Omar-Moschee. Das Hauptgebäude, der Felsendom, liegt aus einer unregelmäßigen,
                schön gepflasterten Terrasse. In ihm be findet sich der 18 X in große uralte
-               Opferstein, auf dem nach jüdischen Überlieferungen die Opferung Isaaks <pb
+               Opferstein, auf dem nach jüdischen Überlieferungen die Opferung Isaaks <pb ed="print"
                   facs="#facs_60" n="54" xml:id="pb_54"/> hatte stattfinden sollen. Auch soll er die
                Bundeslade getragen haben. An den „Königsgräbern“, mit ausgedehnten unter irdischen
                Gewölben vorüber, fuhren wir dann auf den Ölberg. Von der Oberin des deutschen
@@ -1629,7 +1630,7 @@
                Gerste, Hirse, Mais, Sesam, Bohnen, Erbsen, Eierpflanzen, Tomaten usw. abgerungen.
                Bunt wechselten Pflaumen-, Nuß-, Maul- beer-, Feigen-, Süßholz-, Johannisbrotbäume
                mit Weinstöcken und dem wichtigen Olivenbaum. Aber hauptsächlich nur in dem Tal,
-               durch das die <pb facs="#facs_61" n="55" xml:id="pb_55"/> Straße zieht, war die
+               durch das die <pb ed="print" facs="#facs_61" n="55" xml:id="pb_55"/> Straße zieht, war die
                Pflanzenwelt üppig entwickelt, weiter ab vom Flußlauf ließ sie bedeutend nach, denn
                monatelang gibt es dort kein Wasser, und auch die Orangen- und anderen Anlagen müssen
                künstlich bewässert werden. In flotter Fahrt, in stetigen Kurven, herauf und herunter
@@ -1649,7 +1650,7 @@
                Nach mittag noch unser Lager Tscham Alan im Taurus. Auf dieser denkwürdigen
                Forschungsreise hatten wir in 18 Tagen bei 50 Stunden Auto- und 82 Stunden Bahnfahrt,
                teilweise ganz ohne Wege, teilweise (400 km) in der Wüste, gegen 3000 km zurückgelegt
-               und erforscht. <pb facs="#facs_62" n="56" xml:id="pb_56"/>
+               und erforscht. <pb ed="print" facs="#facs_62" n="56" xml:id="pb_56"/>
             </p>
          </div>
          <div>
@@ -1671,7 +1672,7 @@
                Krieges nicht sprechen darf. Da ich mehrere Wochen in Beirut und Umgebung zu tun
                hatte, konnte ich nebenbei Land und Leute gründlich kennen lernen. Wie oft habe ich
                in Reisebeschreibungen Lobsprüche über den Orient gefunden, doch ich muß sagen, daß
-               hierzu nur der sich berechtigt fühlen darf, der das Innere des <pb facs="#facs_63"
+               hierzu nur der sich berechtigt fühlen darf, der das Innere des <pb ed="print" facs="#facs_63"
                   n="57" xml:id="pb_57"/> Landes nicht besucht hat, also etwa von Trieft mit Dampfer
                über Alexandrien, Jaffa (Jerusalem), Haifa, Beirut und Tripolis gefahren ist und nur
                die Küstenstädte gesehen hat. In diesen überwiegt die europäische Kultur beinahe;
@@ -1693,7 +1694,7 @@
                eine Segeljacht zur Verfügung. Meine Bootsleute waren frische, kräftige Burschen, mit
                denen ich mich auf Französisch halbwegs verständigen konnte. Sobald ein feindliches
                Schiff in Sehweite kam, mußten wir natürlich unter Land fahren, und das wurde uns am
-               17. April beinahe zum Verhängnis. <pb facs="#facs_64" n="58" xml:id="pb_58"/> Es war
+               17. April beinahe zum Verhängnis. <pb ed="print" facs="#facs_64" n="58" xml:id="pb_58"/> Es war
                ein stürmischer, nicht ganz klarer Morgen, die See ging bei Südwestböen recht hoch,
                doch konnten wir uns auf unser Boot verlassen. Meine vier Ruderer legten sich fest in
                die Riemen, aber wir brauchten gut eine halbe Stunde, um aus dem Hafen
@@ -1713,7 +1714,7 @@
                scharf auf die Gasanstalt zu. Nun ging es um Kopf und Kragen. Wir vermochten in
                fünfzehn Mi nuten das jenseitige Ufer zu erreichen, der Dampfer aber konnte wegen der
                vielen dicht unter Wasser liegenden Klippen nicht nahe herankommen und auch nur
-               langsam fahren. Meinen Leuten lief das Wasser vom Gesicht, so <pb facs="#facs_65"
+               langsam fahren. Meinen Leuten lief das Wasser vom Gesicht, so <pb ed="print" facs="#facs_65"
                   n="59" xml:id="pb_59"/> arbeiteten sie; ich hielt das Steuerruder. Am Ufer war
                kein Mensch zu sehen, alles schien tot und versteckt, denn man konnte ja nicht
                wissen, was das Kriegsschiff beabsichtigte. Wenn es uns gelang, um die Landungs- und
@@ -1734,7 +1735,7 @@
                schüttet uns, halb sind wir gesunken, das Boot ist voll Wasser, und die Leute
                klammern sich an den Bänken fest. Da kommt schon die nächste Welle, noch nicht
                kämmend, aber noch viel höher; spitz stehen wir zur See, jäh wer den wir in die Höhe
-               gehoben und sehen einen Augen- <pb facs="#facs_66" n="60" xml:id="pb_60"/> blick das
+               gehoben und sehen einen Augen- <pb ed="print" facs="#facs_66" n="60" xml:id="pb_60"/> blick das
                Kriegsschiff ganz deutlich vor uns. Dann schießen wir rückwärts herunter; ich höre
                einen allgemeinen Aufschrei und fühle noch, daß ich das Gleichgewicht verliere und
                hintenüberstürze, doch schlage ich weich ins Wasser in einen zischenden, quirlenden
@@ -1754,7 +1755,7 @@
                entdecken, krochen daher einige Meter höher auf das Ufer und bemerkten, wie der
                feindliche Dampfer links abgeschwenkt hatte und nun nach Norden fuhr. Bald hatten wir
                noch eine andere Freude: eine besonders hohe See brachte unser Boot mit hoch, schob
-               es vor sich und setzte es so fest, daß es liegen blieb. <pb facs="#facs_67" n="61"
+               es vor sich und setzte es so fest, daß es liegen blieb. <pb ed="print" facs="#facs_67" n="61"
                   xml:id="pb_61"/> Erst am nächsten Tage beruhigte sich die See soweit, daß die
                Leute bei Ebbe an die Bergung gehen konnten. Leider war nicht viel Brauchbares
                übriggeblieben, denn wie Augenzeugen mir später erzählten, hätte die letzte große
@@ -1777,7 +1778,7 @@
                niederschreibe, so geschieht es nur, um eine von mehreren derartigen öffentlichen
                Handlungen als kulturgeschichtliches Bild darzustellen. Es handelt sich in diesem und
                in ähnlichen Fällen um politische Verbrecher, die wohl durch die üblichen
-               lügnerischen Ver- <pb facs="#facs_68" n="62" xml:id="pb_62"/> sprechungen der Entente
+               lügnerischen Ver- <pb ed="print" facs="#facs_68" n="62" xml:id="pb_62"/> sprechungen der Entente
                sich hatten beeinflussen lassen, ihr Vaterland zu schädigen. Sie mußten daher wegen
                Landesverrats bestraft werden und sollten gleichzeitig als abschreckende Beispiele
                dienen. Am 6. Mai nachmittags erfuhr ich zufällig, daß vierzehn politische Verbrecher
@@ -1797,7 +1798,7 @@
                warten; bald sammelte sich das Volk, gegen das der Platz nicht abgesperrt wurde, und
                dann gegen 3 Uhr früh kamen die Verurteilten in zwei Gliedern, mit übergezogenen
                weißen Schandjacken, an den Händen gefesselt und unter Begleitung von Kavallerie.
-               Unterdessen hatte etwa eine halbe Kompagnie Infanterie Aufstellung <pb
+               Unterdessen hatte etwa eine halbe Kompagnie Infanterie Aufstellung <pb ed="print"
                   facs="#facs_69" n="63" xml:id="pb_63"/> genommen und in einem Glied einen engen
                Kreis um die Galgen gebildet. Die Hinrichtung ging dann sehr schnell vor sich.
                Einzeln mußte einer nach dem andern der unter dem Galgen Aufgestellten auf einen
@@ -1818,7 +1819,7 @@
             <p xml:id="p_24">Mitte Mai tauchte ein neuer Plan auf, zu dessen Verwirklichung ich von
                der 4. türkischen Armee gebeten wurde, eine Erkundung in den Libanon selbst zu
                machen. Ich war natürlich hierzu sehr gern bereit, fuhr sofort nach Rayak und von da
-               nach Baalbek, von wo aus ich dann den eigentlichen Vorstoß in das Gebirge nehmen <pb
+               nach Baalbek, von wo aus ich dann den eigentlichen Vorstoß in das Gebirge nehmen <pb ed="print"
                   facs="#facs_70" n="64" xml:id="pb_64"/> wollte. Vorher aber gedachte ich mir die
                großartigen Ruinen von Baalbek anzusehen — sollen es doch die großartigsten der Welt
                sein. Baalbek liegt etwa 1200 in über dem Meeresspiegel am Fuße desAntilibanon, schon
@@ -1841,7 +1842,7 @@
                Bevor ich die Ruinen besuchte, hatte ich die erforder-</p>
             <floatingText>
                <body>
-                   <pb n="pb_64a" facs="#facs_71"/>
+                   <pb ed="print" n="pb_64a" facs="#facs_71"/>
                   <div>
                      <head xml:id="head_17">Tafel 4</head>
                      <figure>
@@ -1852,7 +1853,7 @@
                         <caption>Mit <persName>Kapitänleutnant v. Mücke</persName> bei
                               <placeName>Tarsus</placeName> auf einer Erkundungsfahrt</caption>
                      </figure>
-                      <pb n="pb_64b" facs="#facs_72"/>
+                      <pb ed="print" n="pb_64b" facs="#facs_72"/>
                      <figure>
                         <caption>Bei Gaswerk <placeName>Beirut</placeName></caption>
                      </figure>
@@ -1863,7 +1864,7 @@
 
                </body>
             </floatingText>
-            <pb facs="#facs_73" n="65" xml:id="pb_65"/>
+            <pb ed="print" facs="#facs_73" n="65" xml:id="pb_65"/>
             <p xml:id="p_28">lichen Vorbereitungen zur Fahrt in den Libanon angeordnet. Und das war
                immerhin mit einigen Schwierigkeiten verknüpft, da in jener Gegend sich allerhand
                licht scheues Gesindel gesammelt haben sollte, das von räuberischen Überfällen lebte.
@@ -1884,7 +1885,7 @@
                Libanon, zu über nachten, da dessen Scheich dem Kaimakam von Baalbek bekannt war. Am
                nächsten Morgen sollte es von dort aus dann weiter heraufgehen. In sengender
                Mittagshitze ritten wir ab, gegen die Sonnenstrahlen durch die bekannten dicken
-               Kopftücher ge- <pb facs="#facs_74" n="66" xml:id="pb_66"/> schützt. Mitten zwischen
+               Kopftücher ge- <pb ed="print" facs="#facs_74" n="66" xml:id="pb_66"/> schützt. Mitten zwischen
                den beiden Libanons führte unser Pfad durch die Steppe von Cölesyrien nach Norden.
                Allmählich hörte der Weg fast ganz auf und war kaum als Fußpfad noch zu erkennen. So
                ging es an den Dörfern Machra und Schad vorüber, Richtung auf Ärbata, einem kleinen
@@ -1904,7 +1905,7 @@
                denn ich wußte nicht, wieviel Leute uns gegenüberlagen und ob sie überhaupt etwas
                Feindliches gegen uns im Schilde führten. Nun allzu lange dauerte es mir, bis nach
                zehn Minuten endlich von drüben der Schrei des Aasgeiers erschallte, das verabredete
-               Zeichen für die geglückte Umgehung. Nun <pb facs="#facs_75" n="67" xml:id="pb_67"/>
+               Zeichen für die geglückte Umgehung. Nun <pb ed="print" facs="#facs_75" n="67" xml:id="pb_67"/>
                eilten wir vorsichtig von allen Seiten vor — jedes Schießen hatte ich verboten, da
                wir uns leicht selbst hätten treffen können. Das war ein Glück, denn kaum hatten wir
                die Gegner erreicht, als sie die Hände hochhoben, und gleich zeitig ertönte ringsum
@@ -1923,7 +1924,7 @@
                einige schienen Gewehre zu haben. Schnell nahm ich mein weißes Kopftuch ab, schwenkte
                es in der Luft und schickte zwei Gendarmen vor, während wir in Feuerstellung gingen.
                Die beiden kamen denn auch glücklich dort an, und bereits nach einigen Minuten
-               erhielten wir durch Tücherschwenken das Zeichen, daß wir herankommen möchten. <pb
+               erhielten wir durch Tücherschwenken das Zeichen, daß wir herankommen möchten. <pb ed="print"
                   facs="#facs_76" n="68" xml:id="pb_68"/>
             </p>
          </div>
@@ -1949,7 +1950,7 @@
                diese und schüttete sie auf eine Blechpfanne, die auf einem Mangal (Holzkohlenfeuer)
                lag. Hier wurde der Kaffee geröstet, dann brachte ein anderer Diener ein wunderbar
                ausgelegtes hölzernes Gefäß, ähnlich unseren früher in der Küche zum Stoßen von
-               Gewürz u. dgl. vielfach ver- <pb facs="#facs_77" n="69" xml:id="pb_69"/> wendeten
+               Gewürz u. dgl. vielfach ver- <pb ed="print" facs="#facs_77" n="69" xml:id="pb_69"/> wendeten
                Messingmörsern. In diesem wurde der Kaffee fein „gestoßen" in rhythmischem Takt, den
                alle anwesenden Araber leise mitsummten. Allmählich hatten sich auch meine Gendarmen
                mit Ausnahme der von mir aus gestellten Wachen eingefunden. Nun wurde der Kaffee
@@ -1969,7 +1970,7 @@
                hergerichtet. Eine Menge von Teppichen war dorthin gebracht, und nun forderte der
                Scheich mich auf, hereinzukommen. Der Raum war vollständig kahl, der Boden ganz mit
                Teppichen belegt. Dann brachte ein Diener einen flachen Stuhl ohne Lehne und fetzte
-               ihn mitten ins Zimmer, mit den Füßen nach oben, ein anderer Diener stellte <pb
+               ihn mitten ins Zimmer, mit den Füßen nach oben, ein anderer Diener stellte <pb ed="print"
                   facs="#facs_78" n="70" xml:id="pb_70"/> eine ungeheuer große, etwa zwei Meter im
                Durchschnitt messende Messingplatte darauf, und der Tisch war fertig. Nun lud mich
                der Scheich ein, Platz zu nehmen, d. h. mit gekreuzten Beinen mich an den „Tisch” zu
@@ -1990,7 +1991,7 @@
                Blechteller er halten und durfte auf meine besondere Bitte mein Taschenbesteck
                benutzen. Mit dem üblichen „Bismillah" gab unser Wirt dann das Zeichen zum Beginn des
                Essens. Er langte mit den Fingern in den „Reis" und legte mir einen Berg davon auf
-               meinen Teller, dann <pb facs="#facs_79" n="71" xml:id="pb_71"/> griffen alle zu,
+               meinen Teller, dann <pb ed="print" facs="#facs_79" n="71" xml:id="pb_71"/> griffen alle zu,
                teils mit den Händen, teils mit dem hohlen Brot, und bald war alles beim besten
                Schmausen, wobei die Araber durch besonders lautes Schmatzen zur Ehre des Wirtes zum
                Ausdruck brachten, daß sie überaus zufrieden seien. Man denke sich etwa
@@ -2011,7 +2012,7 @@
                der Dienerin einige Schmeicheleien — natürlich zu dem Scheich gewandt —, wie z. B.
                „Mersina" (mein Täubcheu), und vertiefte mich in das Rätsel, welchem Lebewesen dieses
                Kotelett wohl bisher angehört haben könnte. Der Scheich behauptete zwar, daß es von
-               einem <pb facs="#facs_80" n="72" xml:id="pb_72"/> Z6UQ6 dosuk wäre, ich glaube aber,
+               einem <pb ed="print" facs="#facs_80" n="72" xml:id="pb_72"/> Z6UQ6 dosuk wäre, ich glaube aber,
                daß es von einer Ziege oder einer Katze war. Auch das ging vorüber, und ich sann
                gerade auf einen Vorwand, wie ich am besten mich „drücken" könne, als draußen ein
                Gewehrschuß fiel. Während alle anderen ziemlich ruhig blieben und nur zu den
@@ -2031,7 +2032,7 @@
                besorgen. Unterdessen war das beste Zimmer für mich zur Nacht eingerichtet, sogar ein
                Bettgestell mit Matratze war vorhanden. Ich legte mich in den Kleidern hin, und der
                Scheich blieb so lange neben mir, bis er annahm, ich sei eingeschlafen; dann ging er
-               leise hinaus. Ich hatte mich <pb facs="#facs_81" n="73" xml:id="pb_73"/> aber nur
+               leise hinaus. Ich hatte mich <pb ed="print" facs="#facs_81" n="73" xml:id="pb_73"/> aber nur
                verstellt, schloß zuerst meine „Stube” ab, steckte mir eine Zigarre an, legte meine
                Waffen neben mich und blieb bis zum Morgen ziemlich wach. Im Mondschein träumte ich
                von den romantischen Vorgängen des verflossenen Tages und der fernen Heimat, während
@@ -2051,7 +2052,7 @@
                unerwartet ein scharfer Schuß fiel und etwa 5 ra über mir im Felsen gleichzeitig ein
                Geschoß scharf einschlug, dem drei bis vier andere und dann noch eine größere Zahl
                folgten; aber alle gingen viel zu hoch. Im Nu waren wir von den Pferden und hinter
-               Felsen gedeckt. Anscheinend war der Hang links oben <pb facs="#facs_82" n="74"
+               Felsen gedeckt. Anscheinend war der Hang links oben <pb ed="print" facs="#facs_82" n="74"
                   xml:id="pb_74"/> besetzt, wir mußten also zuerst rechts herauf. Die Pferde ließen
                wir in einer Geländefalte unten, ebenso zwei Gendarmen, die zur Täuschung des
                Angreifers unten bleiben und aufs Geratewohl nach links auf die Höhen feuern sollten,
@@ -2072,7 +2073,7 @@
                und unten die Pferde nachkommen lassen wollten, bis wir uns am Zusammenstoß der
                beiden Bergrücken träfen. Hier zeigte mir der Scheich einen wunderschönen Dolch, der
                einem der beiden erschossenen Räuber abgenommen war. Unter angeregtem Besprechen des
-               Ereignisses stiegen wir nun <pb facs="#facs_83" n="75" xml:id="pb_75"/> immer höher,
+               Ereignisses stiegen wir nun <pb ed="print" facs="#facs_83" n="75" xml:id="pb_75"/> immer höher,
                bis wir endlich bei unserem Ziel, einem Meiler, ankamen. Hier machten wir Rast,
                frühstückten, ich fertigte meine Skizen an, dann schössen wir nach der Scheibe, und
                da es noch früh war, beschloß ich zurück mit einem kleinen Umweg über die „Zedern des
@@ -2092,7 +2093,7 @@
                band ihn mir sofort um und gab meine Reit peitsche als Gegengeschenk. Dann saßen wir
                noch ein Weilchen plaudernd und rauchend beisammen, bis die Pferde gefüttert waren,
                und ritten darauf nach Baalbek zurück, wo wir spät nachts eintrafen und mit großer
-                  <pb facs="#facs_84" n="76" xml:id="pb_76"/> Freude begrüßt wurden, da der
+                  <pb ed="print" facs="#facs_84" n="76" xml:id="pb_76"/> Freude begrüßt wurden, da der
                Zusammenstoß mit den Räubern hier schon bekannt geworden war.</p>
             <p>In Baalbek fand ich ein Telegramm vor, das mich nach dem Taurus zurückrief, und so
                fuhr ich denn am nächsten Morgen die alte bekannte Straße über
@@ -2117,7 +2118,7 @@
                Erfahrungen zunutze machen konnte.</p>
             <p>Ich hielt mich natürlich in dem recht heißen Aleppo nur so lange auf, bis ich gute
                Fahrgelegenheit hatte, und fuhr dann eines Abends mit der Bagdad-Bahn über Muslimije
-               zunächst bis nach Dscherabis am Euphrat, wo <pb facs="#facs_85" n="77" xml:id="pb_77"
+               zunächst bis nach Dscherabis am Euphrat, wo <pb ed="print" facs="#facs_85" n="77" xml:id="pb_77"
                /> wir bald nach Mitternacht ankamen. Ich konnte im Wagen übernachten, da der Zug
                erst am nächsten Tage weitergehen sollte, besichtigte dann am nächsten Tage das Dorf,
                die große Eisenbahnbrücke über den Euphrat und traf durch Anmieten von Führern und
@@ -2142,7 +2143,7 @@
                genügt vollauf, um das Gebiet am Fuße der Berge für Wochen stark zu durchweichen und
                in Verbindung mit dem Anschwellen der Flüsse die schlechten Wege fast ganz ungangbar
                zu machen. Aber jetzt im Juni war schon überall Wassermangel, die Quellen waren
-               versiegt. <pb facs="#facs_86" n="78" xml:id="pb_78"/> und man sah sich seitwärts der
+               versiegt. <pb ed="print" facs="#facs_86" n="78" xml:id="pb_78"/> und man sah sich seitwärts der
                Flüsse auf Grundwasser angewiesen.</p>
             <p>Bei <placeName>Sinoerek</placeName> blieben wir zur Nacht in unserem mit genommenen
                Zelt; die Bewohner kamen uns außer ordentlich freundlich entgegen und stellten mir am
@@ -2163,7 +2164,7 @@
                das Glück, Automobilfahrgelegenheit nach dem etwa 150 km nördlich am Tigris gelegenen
                Diar-bekir zu finden. Die Landschaft ist hier wesentlich reiz voller und enthält
                recht erhebliche Bergzüge, teilweise mit weißen Kalkablagerungen durchsetzt,
-               teilweise in den <pb facs="#facs_87" n="79" xml:id="pb_79"/> Schluchten mit
+               teilweise in den <pb ed="print" facs="#facs_87" n="79" xml:id="pb_79"/> Schluchten mit
                Tamariskengestrüpp — am Euphrat Sor genannt — bewachsen, ist sonst aber ziemlich
                dürftig. Es macht sich eben auch hier die ungünstige Lage Mesopotamiens geltend, das
                im Klima eng mit dem Mittelmeer zusammenhängend, inmitten heißer, trockener Länder
@@ -2183,7 +2184,7 @@
                Baum- und Pflanzenwuchses, die Fülle des rauschenden Wassers lassen die Stadt aus der
                Ferne und von der Wüste umgeben fast wie ein Paradies erscheinen.</p>
             <p>Doch anders ist es im Innern dieses alten, echt orientalischen Nestes. Mit wenigen
-               Ausnahmen sind die Straßen krumm, eng und schmutzig. Hier wie in <pb facs="#facs_88"
+               Ausnahmen sind die Straßen krumm, eng und schmutzig. Hier wie in <pb ed="print" facs="#facs_88"
                   n="80" xml:id="pb_80"/> Beirut sorgt ja die Regierung sehr für Verbesserungen,
                ganze Stadtteile werden eingerissen, Häuser abgetragen, um gerade, breite Straßen zu
                schaffen, doch ist jetzt während des Krieges das „Ausräumen" unterblieben, so daß
@@ -2205,7 +2206,7 @@
                Dardanellengefechten Reklame machte. Der ganze innere Holzausbau des Kinos ähnelte
                einem europäischen großen Schmierentheater. Wir nahmen Plätze auf einem
                balkonähnlichen Vorbau hinten in der Mitte, unmittelbar rückwärts von uns befand sich
-               ein Holzverschlag, in dem mehrere dunkle <pb facs="#facs_89" n="81" xml:id="pb_81"/>
+               ein Holzverschlag, in dem mehrere dunkle <pb ed="print" facs="#facs_89" n="81" xml:id="pb_81"/>
                Öffnungen das Arbeitsfeld des Darstellers vermuten ließen.</p>
             <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½ 9 Uhr waren nur unten vorn zehn
                Personen anwesend; der Diener, der uns Kaffee brachte, versicherte uns stets, es
@@ -2226,7 +2227,7 @@
                Schminke, die sie von weitem um dreißig Jahre jünger machte, erschienen rechts und
                links auf den Nebenbalkonen und versuchten einen richtiggehenden europäischen
                Flirt.</p>
-            <p>Glücklicherweise wurde es bald dunkel, und die <pb facs="#facs_90" n="82"
+            <p>Glücklicherweise wurde es bald dunkel, und die <pb ed="print" facs="#facs_90" n="82"
                   xml:id="pb_82"/> Filmvorstellung begann. War es nun die Hitze oder ein unrichtiges
                Arbeiten des sonst vorzüglichen Apparates — kurz, die Bilder flimmerten so, daß wir
                nur schwer die Handlung des ersten Films erkennen konnten, in dem gezeigt werden
@@ -2247,7 +2248,7 @@
             <p>O Gott, denke ich nun, was ist da geschehen? halte mich am Geländer fest und bin
                einen Augenblick voll ständig wie gelähmt; doch gleich kehrt die Besinnung zurück,
                ich will hinaufstürzen und sehen, was noch zu retten ist. Da fängt oben die Treppe
-               bereits an zu brennen, so daß es unmöglich ist, hindurchzukommen; <pb facs="#facs_91"
+               bereits an zu brennen, so daß es unmöglich ist, hindurchzukommen; <pb ed="print" facs="#facs_91"
                   n="8" xml:id="pb_83"/> dazu erhebt sich ein ohrenbetäubender Lärm, ein furcht
                bares Geschrei aus dem Innern des Theaters. </p>
             <p>Sekunden waren erst vergangen und schon fangen die Vorhänge zum Haupteingang des
@@ -2269,7 +2270,7 @@
                beendet und verstummt sind die schrecklichen Leiden der Armen, die sich nicht mehr
                hatten retten können. </p>
             <p>Und nun mußte auch ich hinaus; zu retten war nichts mehr, und mir drohten die Sinne
-               zu schwinden. Ich taste mich nach dem Ausgang, ich stürze auf die <pb facs="#facs_92"
+               zu schwinden. Ich taste mich nach dem Ausgang, ich stürze auf die <pb ed="print" facs="#facs_92"
                   n="84" xml:id="pb_84"/> Straße und sehe, wie das ganze Dach eine einzige
                himmelhohe Flamme ist, die in magischem, rötlichem Licht die entsetzten Gesichter
                Hunderter von Leuten bescheint, die draußen schreiend und unter heftigen Gebärden
@@ -2290,7 +2291,7 @@
             <p>Da fällt mir etwas auf der Straße auf, ich gehe hin und sehe, wie sechs Araber eine
                uralte Feuerspritze mit Handdruckbetrieb, doch ohne Schläuche und auf Holz rädern
                mühsam vorwärtsziehen. Ich wünschte ihnen guten Erfolg für den Fall, daß sie vor
-               Beendigung des Brandes an die Brandstelle gelangen sollten, und un- <pb
+               Beendigung des Brandes an die Brandstelle gelangen sollten, und un- <pb ed="print"
                   facs="#facs_93" n="85" xml:id="pb_85"/> willkürlich sah ich im Geist einen
                Berliner Automobil- Feuerlöschzug schnell und sicher durch das Abendgetriebe des
                Potsdamer Platzes eilen. </p>
@@ -2313,7 +2314,7 @@
                wohlbekannt, die Fahrt verlief planmäßig. Ein schwüler, drückend heißer
                Schirokko-Abend war es, als ich auf dem Bahnhof „Makarin" ausstieg. Als der Zug in
                der Richtung Jerusalem weitergefahren, versuchte ich mich auf dieser Station, die den
-               Ausgangspunkt <pb facs="#facs_94" n="86" xml:id="pb_86"/> für die Arbeiten der
+               Ausgangspunkt <pb ed="print" facs="#facs_94" n="86" xml:id="pb_86"/> für die Arbeiten der
                nächsten Tage bilden sollte, etwas häuslicher einzurichten. Dem Vorsteher war ich
                besonders empfohlen worden, und er räumte mir sein „bestes" Zimmer ein. Da dieses
                aber bereits sehr viele mir nicht gerade sehr angenehme Mitbewohner, wie Mäuse —
@@ -2333,7 +2334,7 @@
                Gendarmen auf den Weg. Ein ziemlich schwieriges Kraxeln war es, doch war die Arbeit
                von schönem Erfolge belohnt, und ich fand die brennbaren Steine. Von 8 Uhr früh an
                war bis nachmittag jede Arbeit ausgeschlossen. Schnell nahm ich früh unter üppig
-               dicht am Ufer blühenden und <pb facs="#facs_95" n="87" xml:id="pb_87"/> wuchernden
+               dicht am Ufer blühenden und <pb ed="print" facs="#facs_95" n="87" xml:id="pb_87"/> wuchernden
                Oleandern bei 62° (ü ein Bad und bereitete mir im schattigen Flur der Station eine
                Art Hängematte. Auch der nächste Tag brachte keine Abkühlung, doch konnte ich meine
                Arbeiten schon beendend Der Millionenreichtum dieser Gegend lag so offensichtlich
@@ -2352,7 +2353,7 @@
                wurde, und dann war ich natürlich schon des Standes wegen immer vorn und wagte mich
                sogar des öfteren seitwärts auf kleine Nebenerkundungen heraus. Mein Tier war in
                gutem Zustand und legte im Trab oft ein Zeitmaß von etwa 30 Stundenkilometern zurück.
-               Nachts wurde geritten, tags unter Sonnenzelten geruht. <pb facs="#facs_96" n="88"
+               Nachts wurde geritten, tags unter Sonnenzelten geruht. <pb ed="print" facs="#facs_96" n="88"
                   xml:id="pb_88"/> Ohne wesentliche Störung verlief die ziemlich eintönige Reise. Am
                ersten Tage lagerten wir bei den sehr sehenswerten alten Ruinen von Arara, nachdem
                wir das mir aus den Reiseabenteuern von Karl May bekannte große, dicht nördlich davon
@@ -2372,7 +2373,7 @@
                unterwegs gesammelten Material fuhr ich nun im nächsten Postzug über Damaskus und die
                beiden Libanons nach Beirut, wohin ich auch die im Jarmuktal gefundenen brennbaren
                Steine geschickt hatte, um hier weitere Untersuchungen vorzunehmen. In acht Tagen war
-               ich fertig und froh, von hier <pb facs="#facs_97" n="89" xml:id="pb_89"/>
+               ich fertig und froh, von hier <pb ed="print" facs="#facs_97" n="89" xml:id="pb_89"/>
                fortzukommen, denn die feuchte Hitze ging auch nachts nie unter 42° 0 herunter — seit
                dreißig Jahren war es nie so heiß gewesen. Jetzt wollte ich nur noch die inzwischen
                bei Damaskus nach meinen Angaben gebaute Fabrik in Betrieb setzen und dann nach dem
@@ -2391,7 +2392,7 @@
                ich denn mit dem nächsten nach Norden gehenden Transport am <date>21. August</date> als krank nach
                Konstantinopel geschickt, und von hier nach längerer Beobachtung am <date>5. September</date> mit
                dem Balkanzug zu einer längeren Kur nach Deutschland beordert. Dort wurde ich nach
-               wieder-<pb facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
+               wieder-<pb ed="print" facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
                garnisondienstfähig meinem Ersatztruppen teil Berlin überwiesen. Schwer, recht schwer
                war mir der Abschied vom Tscham Alan geworden. Ich hatte eine teilweise schwere, doch
                aber so sehr ereignisreiche Zeit hinter mir, wie sie selten jemand geboten wird. Wer
@@ -2410,7 +2411,7 @@
                Pilgerfahrten nach dem Orient. Und gleichwohl wandelt niemand ungestraft unter
                Palmen. Eine Reife im Morgenland, vor allem im Inneren, ist eher alles andere als
                eine Vergnügungsreise, besonders — im Krieg. Rund 14 000 km habe ich im ganzen, teils
-               mit der Bahn, teils im Auto, teils zu <pb facs="#facs_99" n="91" xml:id="pb_91"/>
+               mit der Bahn, teils im Auto, teils zu <pb ed="print" facs="#facs_99" n="91" xml:id="pb_91"/>
                Pferde, auf Kamel oder zu Fuß, bei den in diesem Büchlein beschriebenen
                Erkundungsreisen in etwa acht Monaten zurückgelegt und wünsche jedem meiner Leser,
                daß ihm Ähnliches bald vergönnt sein möge — bald, wenn der Friede „ausgebrochen” sein
@@ -2452,7 +2453,7 @@
                <p xml:id="p_38">3Mgs!&lt;U^</p>
             </quote>
             <p xml:id="p_39">NZsiA</p>
-            <p xml:id="p_40">Übersichtskarte. naiai &gt; en <pb facs="#facs_100" n="1"
+            <p xml:id="p_40">Übersichtskarte. naiai &gt; en <pb ed="print" facs="#facs_100" n="1"
                   xml:id="pb_92"/> ’7SW000</p>
             <p xml:id="p_41">Dom Verfasser zurllckgel.’gte Strecke» Eisenbahnen.</p>
             <p xml:id="p_42">’</p>
