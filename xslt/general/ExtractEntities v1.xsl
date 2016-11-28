@@ -104,7 +104,8 @@
                 <xsl:call-template name="templXmlAttrLang">
                     <xsl:with-param name="pInput" select="."/>
                 </xsl:call-template>
-                <xsl:apply-templates select="@* | node()" mode="mExtract"/>
+               <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates select="node()" mode="mExtract"/>
             </xsl:copy>
         </xsl:element>
     </xsl:template>
@@ -124,42 +125,45 @@
             <xsl:if test="not(@ref)">
                 <xsl:attribute name="ref" select="concat('#pers_', generate-id())"/>
             </xsl:if>
-            <xsl:apply-templates select="@* | node()"/>
+            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates select="node()" mode="mExtract"/>
         </xsl:copy>
     </xsl:template>
 
     <!-- write toponyms to the teiHeader -->
-    <xsl:template match="tei:placeName" mode="mExtract">
+    <xsl:template match="tei:placeName[not(parent::tei:placeName)]" mode="mExtract">
         <xsl:element name="tei:place">
             <!-- generate xml:ids for all toponyms -->
-            <xsl:attribute name="xml:id" select="concat('pl_', generate-id())"/>
+            <xsl:attribute name="xml:id" select="concat('place_', generate-id())"/>
             <xsl:copy>
                 <xsl:call-template name="templXmlAttrLang">
                     <xsl:with-param name="pInput" select="."/>
                 </xsl:call-template>
-                <xsl:apply-templates select="@* | node()" mode="mExtract"/>
+                <xsl:apply-templates select="@*[not(name()='xml:id')]"/>
+            <xsl:apply-templates select="node()" mode="mExtract"/>
             </xsl:copy>
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="tei:geogName | tei:geogFeat | tei:country | tei:bloc | tei:region | tei:settlement | tei:district" mode="mExtract">
+    <xsl:template match="tei:geogName | tei:geogFeat | tei:country | tei:bloc | tei:region | tei:settlement | tei:district | tei:placeName[parent::tei:placeName]" mode="mExtract">
         <xsl:copy>
             <xsl:call-template name="templXmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
             </xsl:call-template>
-            <xsl:apply-templates select="@* | node()" mode="mExtract"/>
+            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates select="node()" mode="mExtract"/>
         </xsl:copy>
     </xsl:template>
 
-    <!-- link the toponyms names in the text to the header -->
-    <xsl:template match="tei:placeName[ancestor::tei:text]">
+    <!-- link the toponyms names in the text to the header: this won't work as names are only recorded once in the header -->
+    <!-- <xsl:template match="tei:placeName[ancestor::tei:text]">
         <xsl:copy>
             <xsl:if test="not(@ref)">
                 <xsl:attribute name="ref" select="concat('#pl_', generate-id())"/>
             </xsl:if>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template> -->
 
     <!-- this template matches all text nodes (i.e. the text content of any element) and normalize whitespace -->
     <xsl:template match="text()" mode="mExtract">
