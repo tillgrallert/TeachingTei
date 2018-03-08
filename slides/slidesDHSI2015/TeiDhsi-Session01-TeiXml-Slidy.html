@@ -9,22 +9,103 @@
   <meta name="author" content="Till Grallert" />
   <title>Tei@DHSI 1 — Introduction to Markup, XML, and the TEI</title>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
    href="../css/slidy_custom_sh.css" />
-  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
-  <script type="text/javascript">
-              $(document).ready(function(){
-      
-      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
-          // Finds <pre> element
-          // and snippet highlights the CSS code within
-          // using the "emacs" styling.
-      });
-      </script>
+  <meta name="copyright" content="CC BY-SA 4.0" />
+  <style type="text/css">
+  /* these styles mirror oXygen's highlight colours for XML */
+  pre.sourceCode {
+      background-color:white;
+  }
+  code.sourceCode {
+      font-weight:normal;
+  }
+  /* provide a readible font-size */
+  .sourceCode * {
+      font-size: 16px;
+  }
+  /* xml element names */
+  .xml > code > span.kw {
+  	color: #0F0F9C;
+  	font-weight: bold;
+  }
+  /* xml attribute names */
+  .xml > code > span.ot {
+  	color:#FF8041;
+  }
+  /* xml attribute values */
+  .xml > code > span.st {
+  	color:#993300;
+  }
+  /* xml comments */
+  .xml > code > span.co {
+  	color:#167116;
+  	font-style: italic;
+  }
+  /* xml computing instructions: not implemented in Pandoc syntax highlighting */
+  /* .xml > code > span {
+  	color:#9132CC;
+  } */
+  </style>
+  <style type="text/css">
+  /* styles to split a slide into columns */
+  div.cWidth2 {
+      width:50%;
+      position: relative;
+      float: left;
+  }
+  
+  div.cWidth3 {
+      width:33%;
+      position: relative;
+      float: left;
+  }
+  </style>
+  <style type="text/css">
+  .cImportant {
+  	color:red;
+  }
+  </style>
+  <script type="text/javascript" src="../js/slidy.js"></script>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
@@ -50,28 +131,32 @@ Till Grallert
 <h1>What is a text?</h1>
 <p>Is this text …</p>
 <div class="figure">
-<img src="images/quarterly-report-1908-draft.png" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" /><p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-draft.png" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <p>… the same as this text …</p>
 <div class="figure">
-<img src="images/quarterly-report-1908-typed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" /><p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-typed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <p>… the same as this text …</p>
 <div class="figure">
-<img src="images/quarterly-report-1908-printed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" /><p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-printed.jpg" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <p>… the same as this text?</p>
 <div class="figure">
-<img src="images/quarterly-report-1908-xml-author.png" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" /><p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
+<img src="images/quarterly-report-1908-xml-author.png" alt="Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908" />
+<p class="caption">Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908</p>
 </div>
 </div>
 <div id="a-text-is-not-a-document" class="slide section level1">
@@ -110,7 +195,8 @@ Till Grallert
 <ul>
 <li>in different formats</li>
 <li>in different contexts</li>
-<li>by different users<br /></li>
+<li>by different users<br />
+</li>
 </ul></li>
 <li><hi style="color:red">We don’t have to be limited to the view of one editor or consumer</hi></li>
 </ul>
@@ -154,22 +240,22 @@ Till Grallert
 <div id="compare-markup" class="slide section level1">
 <h1>Compare markup</h1>
 <p>Example 1:</p>
-<pre><code>&lt;hi rend=&quot;dropcap&quot;&gt;H&lt;/hi&gt;&amp;WYN;ÆT WE GARDE &lt;lb/&gt;na in gear-dagum þeod-cyninga &lt;lb/&gt;þrym gefrunon, hu ða æþelingas &lt;lb/&gt;ellen fremedon. oft scyld scefing sceaþe &lt;add&gt;na&lt;/add&gt;
-&lt;lb/&gt;þreatum, moneg&lt;expan&gt;um&lt;/expan&gt; mægþum meodo-setl &lt;add&gt;a&lt;/add&gt;
-&lt;lb/&gt;of&lt;damage&gt;
-&lt;desc&gt;blot&lt;/desc&gt; &lt;/damage&gt;teah ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;hi</span><span class="ot"> rend=</span><span class="st">&quot;dropcap&quot;</span><span class="kw">&gt;</span>H<span class="kw">&lt;/hi&gt;</span><span class="dv">&amp;WYN;</span>ÆT WE GARDE <span class="kw">&lt;lb/&gt;</span>na in gear-dagum þeod-cyninga <span class="kw">&lt;lb/&gt;</span>þrym gefrunon, hu ða æþelingas <span class="kw">&lt;lb/&gt;</span>ellen fremedon. oft scyld scefing sceaþe <span class="kw">&lt;add&gt;</span>na<span class="kw">&lt;/add&gt;</span>
+<span class="kw">&lt;lb/&gt;</span>þreatum, moneg<span class="kw">&lt;expan&gt;</span>um<span class="kw">&lt;/expan&gt;</span> mægþum meodo-setl <span class="kw">&lt;add&gt;</span>a<span class="kw">&lt;/add&gt;</span>
+<span class="kw">&lt;lb/&gt;</span>of<span class="kw">&lt;damage&gt;</span>
+<span class="kw">&lt;desc&gt;</span>blot<span class="kw">&lt;/desc&gt;</span> <span class="kw">&lt;/damage&gt;</span>teah ...</code></pre></div>
 <p>Example 2:</p>
-<pre><code>&lt;lg&gt;
-    &lt;l&gt;Hwæt! we Gar-dena in gear-dagum&lt;/l&gt;
-    &lt;l&gt;þeod-cyninga þrym gefrunon,&lt;/l&gt;
-    &lt;l&gt;hu ða æþelingas ellen fremedon,&lt;/l&gt;
-&lt;/lg&gt; 
-&lt;lg&gt;
-    &lt;l&gt;Oft Scyld Scefing sceaþena þreatum,&lt;/l&gt;
-    &lt;l&gt;monegum mægþum meodo-setla ofteah;&lt;/l&gt;
-    &lt;l&gt;egsode Eorle, syððan ærest wearþ&lt;/l&gt;
-    &lt;l&gt;feasceaft funden...&lt;/l&gt;
-&lt;/lg&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;lg&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Hwæt! we Gar-dena in gear-dagum<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>þeod-cyninga þrym gefrunon,<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>hu ða æþelingas ellen fremedon,<span class="kw">&lt;/l&gt;</span>
+<span class="kw">&lt;/lg&gt;</span> 
+<span class="kw">&lt;lg&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Oft Scyld Scefing sceaþena þreatum,<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>monegum mægþum meodo-setla ofteah;<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>egsode Eorle, syððan ærest wearþ&lt;/l&gt;
+    <span class="kw">&lt;l&gt;</span>feasceaft funden...<span class="kw">&lt;/l&gt;</span>
+<span class="kw">&lt;/lg&gt;</span></code></pre></div>
 </div>
 <div id="a-useful-mental-exercise" class="slide section level1">
 <h1>A useful mental exercise</h1>
@@ -186,54 +272,54 @@ Till Grallert
 <table>
 <thead>
 <tr class="header">
-<th align="left">abbr</th>
-<th align="left">expan</th>
+<th>abbr</th>
+<th>expan</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">SGML</td>
-<td align="left">Standard Generalized Markup Language</td>
+<td>SGML</td>
+<td>Standard Generalized Markup Language</td>
 </tr>
 <tr class="even">
-<td align="left">HTML</td>
-<td align="left">Hypertext Markup Language</td>
+<td>HTML</td>
+<td>Hypertext Markup Language</td>
 </tr>
 <tr class="odd">
-<td align="left">W3C</td>
-<td align="left">World Wide Web Consortium</td>
+<td>W3C</td>
+<td>World Wide Web Consortium</td>
 </tr>
 <tr class="even">
-<td align="left">XML</td>
-<td align="left">eXtensible Markup Language</td>
+<td>XML</td>
+<td>eXtensible Markup Language</td>
 </tr>
 <tr class="odd">
-<td align="left">DTD</td>
-<td align="left">Document Type Definition (or Declaration)</td>
+<td>DTD</td>
+<td>Document Type Definition (or Declaration)</td>
 </tr>
 <tr class="even">
-<td align="left">CSS</td>
-<td align="left">Cascading Style Sheet</td>
+<td>CSS</td>
+<td>Cascading Style Sheet</td>
 </tr>
 <tr class="odd">
-<td align="left">Xpath</td>
-<td align="left">XML Path Language</td>
+<td>Xpath</td>
+<td>XML Path Language</td>
 </tr>
 <tr class="even">
-<td align="left">XSLT</td>
-<td align="left">eXtensible Stylesheet Language - Transformations</td>
+<td>XSLT</td>
+<td>eXtensible Stylesheet Language - Transformations</td>
 </tr>
 <tr class="odd">
-<td align="left">XQuery</td>
-<td align="left">XML Querying</td>
+<td>XQuery</td>
+<td>XML Querying</td>
 </tr>
 <tr class="even">
-<td align="left">RELAXNG</td>
-<td align="left">Regular Expression Language for XML (New Generation)</td>
+<td>RELAXNG</td>
+<td>Regular Expression Language for XML (New Generation)</td>
 </tr>
 <tr class="odd">
-<td align="left">SVG</td>
-<td align="left">Scalable Vector Graphics (expressed in XML)</td>
+<td>SVG</td>
+<td>Scalable Vector Graphics (expressed in XML)</td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +388,6 @@ Till Grallert
 <div id="representing-an-xml-tree" class="slide section level1">
 <h1>Representing an XML tree</h1>
 <!-- somewhat redundant with the ealier slide "XMl terminology 1" -->
-
 <ul>
 <li>An XML document is encoded as a linear string of unicode characters</li>
 <li>It begins with a special <em>processing instruction</em></li>
@@ -315,10 +400,10 @@ Till Grallert
 </div>
 <div id="parts-of-a-real-xml-document" class="slide section level1">
 <h1>Parts of a real XML document</h1>
-<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;greetings xmlns=&quot;http://www.example.org/greetings&quot;&gt;
-    &lt;hello type=&quot;enthusiastic&quot;&gt;hello world!&lt;/hello&gt;
-&lt;/greetings&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;greetings</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.example.org/greetings&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;hello</span><span class="ot"> type=</span><span class="st">&quot;enthusiastic&quot;</span><span class="kw">&gt;</span>hello world!<span class="kw">&lt;/hello&gt;</span>
+<span class="kw">&lt;/greetings&gt;</span></code></pre></div>
 <ul>
 <li>The XML declaration</li>
 <li>Namespace declarations</li>
@@ -336,13 +421,13 @@ Till Grallert
 <li>specifies which character encoding the document uses; the default, and recommended, encoding is ‘UTF-8’ (Unicode)</li>
 </ul>
 <p>Example:</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; ?&gt;
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot; ?&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; <span class="kw">?&gt;</span>
+<span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot; <span class="kw">?&gt;</span></code></pre></div>
 </div>
 <div id="declaring-namespaces" class="slide section level1">
 <h1>Declaring namespaces</h1>
 <p>All TEI documents are declared within the TEI namespace — a way of distinguishing one set of elements from another with the same names (like <code>&lt;p&gt;</code>):</p>
-<pre><code>&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt; ... &lt;/TEI&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span> ... <span class="kw">&lt;/TEI&gt;</span></code></pre></div>
 <p>XML documents can include elements declared in different namespaces.</p>
 <ul>
 <li>a namespace declaration associates a namespace prefix with an external URI-like identifier</li>
@@ -350,81 +435,81 @@ Till Grallert
 <li>other name spaces must all use a specially declared prefix</li>
 </ul>
 <p>Example:</p>
-<pre><code>&lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot; xmlns:math=&quot;http://www.mathml.org&quot;&gt;
-&lt;p&gt;...
-    &lt;math:expr&gt;...&lt;/math:expr&gt;
-    ...&lt;/p&gt;
-&lt;/TEI&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="ot"> xmlns:math=</span><span class="st">&quot;http://www.mathml.org&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;p&gt;</span>...
+    <span class="kw">&lt;math:expr&gt;</span>...<span class="kw">&lt;/math:expr&gt;</span>
+    ...<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/TEI&gt;</span></code></pre></div>
 <p>The xml namespace is used by the TEI for global attributes <code>@xml:id</code> and <code>@xml:lang</code></p>
 </div>
 <div id="example-kawkab-america-55-28-april-1893" class="slide section level1">
 <h1>Example: <em>Kawkab America</em> #55, 28 April 1893</h1>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;div type=&quot;article&quot; xml:lang=&quot;en&quot;&gt;
-  &lt;head xml:lang=&quot;ar&quot;&gt;الشرق في معرض &lt;placeName&gt;شيكاغو&lt;/placeName&gt;&lt;/head&gt;
-  &lt;head xml:lang=&quot;en&quot;&gt;The orient at fair.&lt;/head&gt;
-  &lt;p&gt;Is there anybody left in &lt;placeName&gt;Syria&lt;/placeName&gt;, &lt;placeName&gt;Egypt&lt;/placeName&gt;,
-        &lt;lb/&gt;&lt;placeName&gt;Turkey&lt;/placeName&gt;, &lt;placeName&gt;Morocco&lt;/placeName&gt;, and the other countries
-        &lt;lb/&gt;of the Orient? Were the questions asked
-        &lt;lb/&gt;by officers at &lt;placeName&gt;Ellis Island&lt;/placeName&gt; and the Orient
-        &lt;lb/&gt;als of &lt;placeName&gt;New York&lt;/placeName&gt; within the last few
-        &lt;lb/&gt;weeks. The long expected concessioners, 
-        &lt;lb/&gt;exhibitors and participants in the &lt;orgName&gt;World&#39;s
-        &lt;lb/&gt;Fair&lt;/orgName&gt;, who for many days and weeks have
-        &lt;lb/&gt;been directing their footsteps from the
-        &lt;lb/&gt;various lands of the rising sun towards
-        &lt;lb/&gt;the &quot;&lt;q&gt;new land of promise&lt;/q&gt;&quot; have arrived
-        &lt;lb/&gt;in large numbers, and set foot upon the
-        &lt;lb/&gt;soil of the new world which they have 
-        &lt;lb/&gt;sought with feelings of high expectation,
-        &lt;lb/&gt;and an eagerness to which long distance
-        &lt;lb/&gt;had added many charms. The Sheikh
-        &lt;lb/&gt;who from childhood hours had learned to
-        &lt;lb/&gt;praise Allah for every blessing of life,
-        &lt;lb/&gt;must have shouted a hearty &quot;&lt;quote&gt;Alhamduli
-        &lt;lb/&gt;la! and Allah&lt;gap/&gt; Kariem!&lt;/quote&gt;&quot; when after a
-        &lt;lb/&gt;journey of some weeks and months by
-        &lt;lb/&gt;land and by sea he saw in &lt;placeName&gt;New York&lt;/placeName&gt; har
-        &lt;lb/&gt;bor the majestic form of the Goddess of
-        &lt;lb/&gt;Liberty with the beacon of light in her
-        &lt;lb/&gt;outstretched hand bidding him welcome
-        &lt;lb/&gt;to the &quot;&lt;q&gt;home of the brave and the land of
-        &lt;lb/&gt;the free.&lt;/q&gt;&quot;&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>الشرق في معرض <span class="kw">&lt;placeName&gt;</span>شيكاغو&lt;/placeName&gt;<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>The orient at fair.<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;p&gt;</span>Is there anybody left in <span class="kw">&lt;placeName&gt;</span>Syria<span class="kw">&lt;/placeName&gt;</span>, <span class="kw">&lt;placeName&gt;</span>Egypt<span class="kw">&lt;/placeName&gt;</span>,
+        <span class="kw">&lt;lb/&gt;&lt;placeName&gt;</span>Turkey<span class="kw">&lt;/placeName&gt;</span>, <span class="kw">&lt;placeName&gt;</span>Morocco<span class="kw">&lt;/placeName&gt;</span>, and the other countries
+        <span class="kw">&lt;lb/&gt;</span>of the Orient? Were the questions asked
+        <span class="kw">&lt;lb/&gt;</span>by officers at <span class="kw">&lt;placeName&gt;</span>Ellis Island<span class="kw">&lt;/placeName&gt;</span> and the Orient
+        <span class="kw">&lt;lb/&gt;</span>als of <span class="kw">&lt;placeName&gt;</span>New York<span class="kw">&lt;/placeName&gt;</span> within the last few
+        <span class="kw">&lt;lb/&gt;</span>weeks. The long expected concessioners, 
+        <span class="kw">&lt;lb/&gt;</span>exhibitors and participants in the <span class="kw">&lt;orgName&gt;</span>World&#39;s
+        <span class="kw">&lt;lb/&gt;</span>Fair<span class="kw">&lt;/orgName&gt;</span>, who for many days and weeks have
+        <span class="kw">&lt;lb/&gt;</span>been directing their footsteps from the
+        <span class="kw">&lt;lb/&gt;</span>various lands of the rising sun towards
+        <span class="kw">&lt;lb/&gt;</span>the &quot;<span class="kw">&lt;q&gt;</span>new land of promise<span class="kw">&lt;/q&gt;</span>&quot; have arrived
+        <span class="kw">&lt;lb/&gt;</span>in large numbers, and set foot upon the
+        <span class="kw">&lt;lb/&gt;</span>soil of the new world which they have 
+        <span class="kw">&lt;lb/&gt;</span>sought with feelings of high expectation,
+        <span class="kw">&lt;lb/&gt;</span>and an eagerness to which long distance
+        <span class="kw">&lt;lb/&gt;</span>had added many charms. The Sheikh
+        <span class="kw">&lt;lb/&gt;</span>who from childhood hours had learned to
+        <span class="kw">&lt;lb/&gt;</span>praise Allah for every blessing of life,
+        <span class="kw">&lt;lb/&gt;</span>must have shouted a hearty &quot;<span class="kw">&lt;quote&gt;</span>Alhamduli
+        <span class="kw">&lt;lb/&gt;</span>la! and Allah<span class="kw">&lt;gap/&gt;</span> Kariem!<span class="kw">&lt;/quote&gt;</span>&quot; when after a
+        <span class="kw">&lt;lb/&gt;</span>journey of some weeks and months by
+        <span class="kw">&lt;lb/&gt;</span>land and by sea he saw in <span class="kw">&lt;placeName&gt;</span>New York<span class="kw">&lt;/placeName&gt;</span> har
+        <span class="kw">&lt;lb/&gt;</span>bor the majestic form of the Goddess of
+        <span class="kw">&lt;lb/&gt;</span>Liberty with the beacon of light in her
+        <span class="kw">&lt;lb/&gt;</span>outstretched hand bidding him welcome
+        <span class="kw">&lt;lb/&gt;</span>to the &quot;<span class="kw">&lt;q&gt;</span>home of the brave and the land of
+        <span class="kw">&lt;lb/&gt;</span>the free.<span class="kw">&lt;/q&gt;</span>&quot;<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
 </div>
 <div id="example-deconstructed-root-node" class="slide section level1">
 <h1>Example deconstructed: root node</h1>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;div type=&quot;article&quot; xml:lang=&quot;en&quot;&gt;
-    &lt;!-- ... --&gt;
-&lt;/div&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>
+    <span class="co">&lt;!-- ... --&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
 </div>
 <div id="example-deconstructed-head" class="slide section level1">
 <h1>Example deconstructed: head</h1>
-<pre><code>&lt;head xml:lang=&quot;ar&quot;&gt;الشرق في معرض &lt;placeName&gt;شيكاغو&lt;/placeName&gt;&lt;/head&gt;
-&lt;head xml:lang=&quot;en&quot;&gt;The orient at fair.&lt;/head&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>الشرق في معرض <span class="kw">&lt;placeName&gt;</span>شيكاغو&lt;/placeName&gt;<span class="kw">&lt;/head&gt;</span>
+<span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>The orient at fair.<span class="kw">&lt;/head&gt;</span></code></pre></div>
 </div>
 <div id="example-deconstructed-paragraph-quotes-and-named-entities" class="slide section level1">
 <h1>Example deconstructed: paragraph, quotes, and named entities</h1>
-<pre><code>&lt;p&gt;Is there anybody left in &lt;placeName&gt;Syria&lt;/placeName&gt;, &lt;placeName&gt;Egypt&lt;/placeName&gt;,
-&lt;lb/&gt;&lt;placeName&gt;Turkey&lt;/placeName&gt;, &lt;placeName&gt;Morocco&lt;/placeName&gt;, and the other countries
-&lt;lb/&gt;of the Orient? Were the questions asked
-&lt;lb/&gt;by officers at &lt;placeName&gt;Ellis Island&lt;/placeName&gt; and the Orient
-&lt;lb/&gt;als of &lt;placeName&gt;New York&lt;/placeName&gt; within the last few
-&lt;lb/&gt;weeks. The long expected concessioners, 
-&lt;lb/&gt;exhibitors and participants in the &lt;orgName&gt;World&#39;s
-&lt;lb/&gt;Fair&lt;/orgName&gt;, who for many days and weeks have
-&lt;lb/&gt;been directing their footsteps from the
-    &lt;!-- ... --&gt;
-&lt;lb/&gt;had added many charms. The Sheikh
-&lt;lb/&gt;who from childhood hours had learned to
-&lt;lb/&gt;praise Allah for every blessing of life,
-&lt;lb/&gt;must have shouted a hearty &quot;&lt;quote&gt;Alhamduli
-&lt;lb/&gt;la! and Allah&lt;gap/&gt; Kariem!&lt;/quote&gt;&quot; when after a
-    &lt;!-- ... --&gt;
-&lt;lb/&gt;outstretched hand bidding him welcome
-&lt;lb/&gt;to the &quot;&lt;q&gt;home of the brave and the land of
-&lt;lb/&gt;the free.&lt;/q&gt;&quot;&lt;/p&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>Is there anybody left in <span class="kw">&lt;placeName&gt;</span>Syria<span class="kw">&lt;/placeName&gt;</span>, <span class="kw">&lt;placeName&gt;</span>Egypt<span class="kw">&lt;/placeName&gt;</span>,
+<span class="kw">&lt;lb/&gt;&lt;placeName&gt;</span>Turkey<span class="kw">&lt;/placeName&gt;</span>, <span class="kw">&lt;placeName&gt;</span>Morocco<span class="kw">&lt;/placeName&gt;</span>, and the other countries
+<span class="kw">&lt;lb/&gt;</span>of the Orient? Were the questions asked
+<span class="kw">&lt;lb/&gt;</span>by officers at <span class="kw">&lt;placeName&gt;</span>Ellis Island<span class="kw">&lt;/placeName&gt;</span> and the Orient
+<span class="kw">&lt;lb/&gt;</span>als of <span class="kw">&lt;placeName&gt;</span>New York<span class="kw">&lt;/placeName&gt;</span> within the last few
+<span class="kw">&lt;lb/&gt;</span>weeks. The long expected concessioners, 
+<span class="kw">&lt;lb/&gt;</span>exhibitors and participants in the <span class="kw">&lt;orgName&gt;</span>World&#39;s
+<span class="kw">&lt;lb/&gt;</span>Fair<span class="kw">&lt;/orgName&gt;</span>, who for many days and weeks have
+<span class="kw">&lt;lb/&gt;</span>been directing their footsteps from the
+    <span class="co">&lt;!-- ... --&gt;</span>
+<span class="kw">&lt;lb/&gt;</span>had added many charms. The Sheikh
+<span class="kw">&lt;lb/&gt;</span>who from childhood hours had learned to
+<span class="kw">&lt;lb/&gt;</span>praise Allah for every blessing of life,
+<span class="kw">&lt;lb/&gt;</span>must have shouted a hearty &quot;<span class="kw">&lt;quote&gt;</span>Alhamduli
+<span class="kw">&lt;lb/&gt;</span>la! and Allah<span class="kw">&lt;gap/&gt;</span> Kariem!<span class="kw">&lt;/quote&gt;</span>&quot; when after a
+    <span class="co">&lt;!-- ... --&gt;</span>
+<span class="kw">&lt;lb/&gt;</span>outstretched hand bidding him welcome
+<span class="kw">&lt;lb/&gt;</span>to the &quot;<span class="kw">&lt;q&gt;</span>home of the brave and the land of
+<span class="kw">&lt;lb/&gt;</span>the free.<span class="kw">&lt;/q&gt;</span>&quot;<span class="kw">&lt;/p&gt;</span></code></pre></div>
 </div>
 <div id="xml-syntax-the-small-print" class="slide section level1">
 <h1>XML syntax: the small print</h1>
@@ -441,15 +526,15 @@ Till Grallert
 <div id="test-your-xml-knowledge" class="slide section level1">
 <h1>Test your XML knowledge</h1>
 <p>Which are correct?</p>
-<pre><code> &lt;seg&gt;some text&lt;/seg&gt;
- &lt;seg&gt; &lt;foo&gt;some&lt;/foo&gt; &lt;bar&gt;text&lt;/bar&gt; &lt;/seg&gt;
- &lt;seg&gt; &lt;foo&gt;some &lt;bar&gt;&lt;/foo&gt; text&lt;/bar&gt; &lt;/seg&gt;
- &lt;seg type=&quot;text&quot;&gt;some text&lt;/seg&gt;
- &lt;seg type=&#39;text&#39;&gt;some text&lt;/seg&gt;
- &lt;seg type=text&gt;some text&lt;/seg&gt;
- &lt;seg type=&quot;text&quot;&gt; some text &lt;seg/&gt;
- &lt;seg type=&quot;text&quot;&gt; some text&lt;gap/&gt; &lt;/seg&gt;
- &lt;seg type=&quot;text&quot;&gt;some text&lt;/Seg&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;seg&gt;</span>some text<span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg&gt;</span> <span class="kw">&lt;foo&gt;</span>some<span class="kw">&lt;/foo&gt;</span> <span class="kw">&lt;bar&gt;</span>text<span class="kw">&lt;/bar&gt;</span> <span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg&gt;</span> <span class="kw">&lt;foo&gt;</span>some <span class="kw">&lt;bar&gt;&lt;/foo&gt;</span> text<span class="kw">&lt;/bar&gt;</span> <span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span>some text<span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg</span><span class="ot"> type=</span><span class="st">&#39;text&#39;</span><span class="kw">&gt;</span>some text<span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg</span><span class="ot"> type=</span><span class="er">text&gt;some</span> <span class="er">text&lt;/seg&gt;</span>
+<span class="er">&lt;seg</span> <span class="er">type=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span> some text <span class="kw">&lt;seg/&gt;</span>
+<span class="kw">&lt;seg</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span> some text<span class="kw">&lt;gap/&gt;</span> <span class="kw">&lt;/seg&gt;</span>
+<span class="kw">&lt;seg</span><span class="ot"> type=</span><span class="st">&quot;text&quot;</span><span class="kw">&gt;</span>some text<span class="kw">&lt;/Seg&gt;</span></code></pre></div>
 </div>
 <div id="xml-is-an-international-standard" class="slide section level1">
 <h1>XML is an international standard</h1>
@@ -567,13 +652,12 @@ Till Grallert
 - guidance for individual or local practice in text creation and data capture; 
 - support of data interchange; 
 - support of application-independent local processing. -->
-
 </div>
 <div id="tei-adopted-xml" class="slide section level1">
 <h1>TEI adopted XML</h1>
 <p>In 2002, the TEI consortium published the P4 Guidelines, which were essentially an adaptation of P3 to XML that had been finalised as W3C standard in 1998.</p>
 <p>P5, a complete overhaul of the guidelines, was published in 2008. Updates are regularly published every couple of months ever since. The current version 2.8.0 was released on 6 April 2015.</p>
-<p>The Guidelines are currently maintained as an open source project on the Sourceforge site <a href="http://tei.sf.net/">http://tei.sf.net/</a>, from which released and development versions may be freely downloaded.</p>
+<p>The Guidelines are currently maintained as an open source project on the Sourceforge site <a href="http://tei.sf.net/" class="uri">http://tei.sf.net/</a>, from which released and development versions may be freely downloaded.</p>
 </div>
 <div id="tei-xml" class="slide section level1">
 <h1>TEI XML</h1>
@@ -626,7 +710,7 @@ Till Grallert
 <li>the TEI mailing list, <script type="text/javascript">
 <!--
 h='&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#46;&#66;&#82;&#x4f;&#x57;&#78;&#46;&#x45;&#68;&#x55;';a='&#64;';n='&#84;&#x45;&#x49;&#x2d;&#76;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#84;&#x45;&#x49;&#x2d;&#76;&#32;&#x61;&#116;&#32;&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#32;&#100;&#x6f;&#116;&#32;&#66;&#82;&#x4f;&#x57;&#78;&#32;&#100;&#x6f;&#116;&#32;&#x45;&#68;&#x55;</noscript></li>
 <li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at http://wiki.tei-c.org/: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.</li>

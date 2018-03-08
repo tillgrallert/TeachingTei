@@ -106,24 +106,28 @@ which we can **encode**</hi>.
 
 Example 1:
 
-    <hi rend="dropcap">H</hi>&WYN;ÆT WE GARDE <lb/>na in gear-dagum þeod-cyninga <lb/>þrym gefrunon, hu ða æþelingas <lb/>ellen fremedon. oft scyld scefing sceaþe <add>na</add>
-    <lb/>þreatum, moneg<expan>um</expan> mægþum meodo-setl <add>a</add>
-    <lb/>of<damage>
-    <desc>blot</desc> </damage>teah ...
+~~~{.xml}
+<hi rend="dropcap">H</hi>&WYN;ÆT WE GARDE <lb/>na in gear-dagum þeod-cyninga <lb/>þrym gefrunon, hu ða æþelingas <lb/>ellen fremedon. oft scyld scefing sceaþe <add>na</add>
+<lb/>þreatum, moneg<expan>um</expan> mægþum meodo-setl <add>a</add>
+<lb/>of<damage>
+<desc>blot</desc> </damage>teah ...
+~~~
 
 Example 2:
 
-    <lg>
-        <l>Hwæt! we Gar-dena in gear-dagum</l>
-        <l>þeod-cyninga þrym gefrunon,</l>
-        <l>hu ða æþelingas ellen fremedon,</l>
-    </lg> 
-    <lg>
-        <l>Oft Scyld Scefing sceaþena þreatum,</l>
-        <l>monegum mægþum meodo-setla ofteah;</l>
-        <l>egsode Eorle, syððan ærest wearþ</l>
-        <l>feasceaft funden...</l>
-    </lg>
+~~~{.xml}
+<lg>
+    <l>Hwæt! we Gar-dena in gear-dagum</l>
+    <l>þeod-cyninga þrym gefrunon,</l>
+    <l>hu ða æþelingas ellen fremedon,</l>
+</lg> 
+<lg>
+    <l>Oft Scyld Scefing sceaþena þreatum,</l>
+    <l>monegum mægþum meodo-setla ofteah;</l>
+    <l>egsode Eorle, syððan ærest wearþ</l>
+    <l>feasceaft funden...</l>
+</lg>
+~~~
 
 # A useful mental exercise
 
@@ -215,10 +219,12 @@ CDATA sections are delimited by `<![CDATA[ and ]]>` (but we won't use these here
 
 # Parts of a real XML document
 
-    <?xml version="1.0"?>
-    <greetings xmlns="http://www.example.org/greetings">
-        <hello type="enthusiastic">hello world!</hello>
-    </greetings>
+~~~{.xml}
+<?xml version="1.0"?>
+<greetings xmlns="http://www.example.org/greetings">
+    <hello type="enthusiastic">hello world!</hello>
+</greetings>
+~~~
 
 - The XML declaration
 - Namespace declarations
@@ -236,14 +242,18 @@ An XML document must begin with an XML declaration which does three things:
 
 Example:
 
-    <?xml version="1.0" ?>
-    <?xml version="1.0" encoding="iso-8859-1" ?>
+~~~{.xml}
+<?xml version="1.0" ?>
+<?xml version="1.0" encoding="iso-8859-1" ?>
+~~~
 
 # Declaring namespaces
 
 All TEI documents are declared within the TEI namespace — a way of distinguishing one set of elements from another with the same names (like `<p>`):
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0"> ... </TEI>
+~~~{.xml}
+<TEI xmlns="http://www.tei-c.org/ns/1.0"> ... </TEI>
+~~~
 
 XML documents can include elements declared in different namespaces.
 
@@ -253,82 +263,93 @@ XML documents can include elements declared in different namespaces.
 
 Example: 
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:math="http://www.mathml.org">
-    <p>...
-        <math:expr>...</math:expr>
-        ...</p>
-    </TEI>
+~~~{.xml}
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:math="http://www.mathml.org">
+<p>...
+    <math:expr>...</math:expr>
+    ...</p>
+</TEI>
+~~~
+
 
 The xml namespace is used by the TEI for global attributes `@xml:id` and `@xml:lang`
 
 # Example: *Kawkab America* #55, 28 April 1893
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <div type="article" xml:lang="en">
-      <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
-      <head xml:lang="en">The orient at fair.</head>
-      <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
-            <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
-            <lb/>of the Orient? Were the questions asked
-            <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
-            <lb/>als of <placeName>New York</placeName> within the last few
-            <lb/>weeks. The long expected concessioners, 
-            <lb/>exhibitors and participants in the <orgName>World's
-            <lb/>Fair</orgName>, who for many days and weeks have
-            <lb/>been directing their footsteps from the
-            <lb/>various lands of the rising sun towards
-            <lb/>the "<q>new land of promise</q>" have arrived
-            <lb/>in large numbers, and set foot upon the
-            <lb/>soil of the new world which they have 
-            <lb/>sought with feelings of high expectation,
-            <lb/>and an eagerness to which long distance
-            <lb/>had added many charms. The Sheikh
-            <lb/>who from childhood hours had learned to
-            <lb/>praise Allah for every blessing of life,
-            <lb/>must have shouted a hearty "<quote>Alhamduli
-            <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
-            <lb/>journey of some weeks and months by
-            <lb/>land and by sea he saw in <placeName>New York</placeName> har
-            <lb/>bor the majestic form of the Goddess of
-            <lb/>Liberty with the beacon of light in her
-            <lb/>outstretched hand bidding him welcome
-            <lb/>to the "<q>home of the brave and the land of
-            <lb/>the free.</q>"</p>
-    </div>
+~~~{.xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="article" xml:lang="en">
+    <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
+    <head xml:lang="en">The orient at fair.</head>
+    <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
+        <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
+        <lb/>of the Orient? Were the questions asked
+        <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
+        <lb/>als of <placeName>New York</placeName> within the last few
+        <lb/>weeks. The long expected concessioners, 
+        <lb/>exhibitors and participants in the <orgName>World's
+        <lb/>Fair</orgName>, who for many days and weeks have
+        <lb/>been directing their footsteps from the
+        <lb/>various lands of the rising sun towards
+        <lb/>the "<q>new land of promise</q>" have arrived
+        <lb/>in large numbers, and set foot upon the
+        <lb/>soil of the new world which they have 
+        <lb/>sought with feelings of high expectation,
+        <lb/>and an eagerness to which long distance
+        <lb/>had added many charms. The Sheikh
+        <lb/>who from childhood hours had learned to
+        <lb/>praise Allah for every blessing of life,
+        <lb/>must have shouted a hearty "<quote>Alhamduli
+        <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
+        <lb/>journey of some weeks and months by
+        <lb/>land and by sea he saw in <placeName>New York</placeName> har
+        <lb/>bor the majestic form of the Goddess of
+        <lb/>Liberty with the beacon of light in her
+        <lb/>outstretched hand bidding him welcome
+        <lb/>to the "<q>home of the brave and the land of
+        <lb/>the free.</q>"</p>
+</div>
+~~~
 
 # Example deconstructed: root node
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <div type="article" xml:lang="en">
-        <!-- ... -->
-    </div>
+~~~{.xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="article" xml:lang="en">
+    <!-- ... -->
+</div>
+~~~
 
 # Example deconstructed: head
 
-    <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
-    <head xml:lang="en">The orient at fair.</head>
+~~~{.xml}
+<head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
+<head xml:lang="en">The orient at fair.</head>
+~~~
 
 # Example deconstructed: paragraph, quotes, and named entities
 
-    <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
-    <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
-    <lb/>of the Orient? Were the questions asked
-    <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
-    <lb/>als of <placeName>New York</placeName> within the last few
-    <lb/>weeks. The long expected concessioners, 
-    <lb/>exhibitors and participants in the <orgName>World's
-    <lb/>Fair</orgName>, who for many days and weeks have
-    <lb/>been directing their footsteps from the
-        <!-- ... -->
-    <lb/>had added many charms. The Sheikh
-    <lb/>who from childhood hours had learned to
-    <lb/>praise Allah for every blessing of life,
-    <lb/>must have shouted a hearty "<quote>Alhamduli
-    <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
-        <!-- ... -->
-    <lb/>outstretched hand bidding him welcome
-    <lb/>to the "<q>home of the brave and the land of
-    <lb/>the free.</q>"</p>
+~~~{.xml}
+<p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
+<lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
+<lb/>of the Orient? Were the questions asked
+<lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
+<lb/>als of <placeName>New York</placeName> within the last few
+<lb/>weeks. The long expected concessioners, 
+<lb/>exhibitors and participants in the <orgName>World's
+<lb/>Fair</orgName>, who for many days and weeks have
+<lb/>been directing their footsteps from the
+    <!-- ... -->
+<lb/>had added many charms. The Sheikh
+<lb/>who from childhood hours had learned to
+<lb/>praise Allah for every blessing of life,
+<lb/>must have shouted a hearty "<quote>Alhamduli
+<lb/>la! and Allah<gap/> Kariem!</quote>" when after a
+    <!-- ... -->
+<lb/>outstretched hand bidding him welcome
+<lb/>to the "<q>home of the brave and the land of
+<lb/>the free.</q>"</p>
+~~~
 
 # XML syntax: the small print
 
@@ -347,15 +368,17 @@ you obey the rules of a specified schema, such as the TEI.
 
 Which are correct?
 
-     <seg>some text</seg>
-     <seg> <foo>some</foo> <bar>text</bar> </seg>
-     <seg> <foo>some <bar></foo> text</bar> </seg>
-     <seg type="text">some text</seg>
-     <seg type='text'>some text</seg>
-     <seg type=text>some text</seg>
-     <seg type="text"> some text <seg/>
-     <seg type="text"> some text<gap/> </seg>
-     <seg type="text">some text</Seg>
+~~~{.xml}
+<seg>some text</seg>
+<seg> <foo>some</foo> <bar>text</bar> </seg>
+<seg> <foo>some <bar></foo> text</bar> </seg>
+<seg type="text">some text</seg>
+<seg type='text'>some text</seg>
+<seg type=text>some text</seg>
+<seg type="text"> some text <seg/>
+<seg type="text"> some text<gap/> </seg>
+<seg type="text">some text</Seg>
+~~~
 
 # XML is an international standard
 

@@ -9,7 +9,7 @@ Many slides are based on those supplied by the various [Digital Humanities Summe
 
 Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
-The slides are available at [https://www.github.com/tillgrallert/TeachingTei/slides](https://www.github.com/tillgrallert/TeachingTei/slides).
+The slides are available at [https://tillgrallert.github.io/TeachingTei/slides/slidesDHLeipzig2015](https://tillgrallert.github.io/TeachingTei/slides/slidesDHLeipzig2015).
 
 # XML, Unicode, Arabic
 
@@ -162,9 +162,9 @@ We are going to look at **names** of things first. Instances of names are distin
 
 TEI provides several ways of marking up names and nominal expressions:
 
-- `<rs>` ("referring string"): any phrase which refers to a person or place, e.g. ‘the girl you mentioned’, ‘my husband’...
-- `<name>`: any lexical item recognized as a proper name e.g. ‘Siegfried Sassoon’ , ‘Calais’, ‘John Doe’ ...
-- `<persName>`, `<placeName>`, `<orgName>`: ‘syntactic sugar’ for `<name type="person">` etc.
+- `<rs>` ("referring string"): any phrase which refers to a person or place, e.g. 'the girl you mentioned', 'my husband'...
+- `<name>`: any lexical item recognized as a proper name e.g. 'Siegfried Sassoon' , 'Calais', 'John Doe' ...
+- `<persName>`, `<placeName>`, `<orgName>`: 'syntactic sugar' for `<name type="person">` etc.
 - A rich set of elements for the components of such nominal expressions, e.g. `<surname>`, `<forename>`, `<geogName>`, `<geogFeat>` etc.
 
 # Entities
@@ -188,7 +188,7 @@ Recognising the need to distinguish clearly the encoding of references from the 
 
 - We can talk about the real world using natural languages because we know that some types of word are closely associated with real, specific, objects
 - Proper names and technical terms are canonical examples of this kind of word
-- ‘*ʿUṭūfetli Meḥmet ʿAlī Bey Efendi*’ refers to a single real world entity; ‘Lyon’ and ‘River Thames’ to others: a specific place, a specific river respectively
+- '*ʿUṭūfetli Meḥmet ʿAlī Bey Efendi*' refers to a single real world entity; 'Lyon' and 'River Thames' to others: a specific place, a specific river respectively
 - When we translate between natural languages, usually the proper names don't change, or are conventionally equivalent
 
 # How do we represent this association?
@@ -310,7 +310,7 @@ or:
 </persName>
 ~~~
 
-Not to mention: `<roleName>` (e.g. ‘Emperor’), `<genName>` (eg ‘the Elder’) `<addName>` (e.g. ‘Hammer of the Scots’), `<nameLink>` a link between components (e.g. ‘van’) etc. all of which can carry `@type` attributes
+Not to mention: `<roleName>` (e.g. 'Emperor'), `<genName>` (eg 'the Elder') `<addName>` (e.g. 'Hammer of the Scots'), `<nameLink>` a link between components (e.g. 'van') etc. all of which can carry `@type` attributes
 
 # `<persName>` works well for Western names, but Arabic or Ottoman?
 
@@ -336,10 +336,10 @@ The canonical scheme of `<surname>` and `<forename>` is insufficient to markup t
         
 # Extended proposal for late Ottoman contexts
 
-I suggest to add the following values to the `@type` attribute of `<addName>`
+I suggest to add the following mark-up for late-Ottoman names
 
-- "title": covering the wide range of Ottoman titles, e.g. Pasha, Bey, Efendi
-- "honorific": for the highly regularised honorific addresses and salutations, e.g. rif'etli, saadetli, utufetli, lizetli, devletli
+- `<roleName type="title">`: covering the wide range of Ottoman titles, e.g. Pasha, Bey, Efendi
+- `<addName type="honorific">`: for the highly regularised honorific addresses and salutations, e.g. rif'etli, saadetli, utufetli, lizetli, devletli
 
 # Example
 
@@ -371,7 +371,7 @@ Could be marked up as:
 
 - `<placeName>` (names can be made up of other names) 
 - `<geogName>` a name associated with some geographical feature such as a mountain or river
-- `<geogFeat>` a term for some particular kind of geographical feature e.g. ‘Mount’, ‘Lake’
+- `<geogFeat>` a term for some particular kind of geographical feature e.g. 'Mount', 'Lake'
 
 For example:
 
