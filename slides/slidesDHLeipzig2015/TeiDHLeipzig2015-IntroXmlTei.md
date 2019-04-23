@@ -47,7 +47,7 @@ Where is the text?
 
 - in the shape of letters and their layout?
 - in the original from which this copy derives?
-- in the stories we read into it? 
+- in the stories we read into it?
 - or in its author's intentions?
 
 **TEI's definition**:
@@ -67,16 +67,16 @@ Note: <hi class="cImportant">Only that which is explicit can be reliably found a
 
 # Mark-up: What is the point?
 
-- To make *explicit* (to a machine) what is *implicit* (to a person) 
+- To make *explicit* (to a machine) what is *implicit* (to a person)
 - To add value by supplying *multiple annotations*
 - To facilitate *re-use* of the same material
-    + in different formats 
-    + in different contexts 
+    + in different formats
+    + in different contexts
     + by different users
-    
+
 Note: <hi class="cImportant">We don't have to be limited to the view of one editor or consumer</hi>
 
-<!-- 
+<!--
 # Mark-up: styles
 
 - In the beginning there was *procedural* mark-up: `RED INK ON; print balance; RED INK OFF`
@@ -110,7 +110,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 - Good textual encoding is never as easy or quick as people would believe
 - Detailed document analysis is needed before encoding for the resulting mark-up to be useful
 
-# The TEI 
+# The TEI
 
 The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of [Guidelines](http://www.tei-c.org/Guidelines/) which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.
 
@@ -166,10 +166,10 @@ An XML document might contain:
 # Characteristics of XML: rules
 
 - All (sic!) data is encoded in Unicode (UTF-8 or UTF-16)
-- **must** be well-formed: 
-    + nodes can only nest, 
-    + all nodes/elements must be closed, 
-    + element / attribute names and values are case-sensitive, 
+- **must** be well-formed:
+    + nodes can only nest,
+    + all nodes/elements must be closed,
+    + element / attribute names and values are case-sensitive,
     + the document contains only a single *root* node
 - **can** be validated against schema(s)
    + can contain xml valid against different schemas if differentiated by *namespaces*
@@ -178,19 +178,19 @@ An XML document might contain:
 # Characteristics of XML: schemas and namespaces
 
 + Informally, a *namespace* is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.
-+ a *schema* allows you to 
-    * ensure that your documents use only predefined elements, attributes, and entities 
++ a *schema* allows you to
+    * ensure that your documents use only predefined elements, attributes, and entities
     * enforce structural rules such as "every chapter must begin with a heading" or "recipes must include an ingredient list"
 + a namespace is just a URI; a schema is a formal specification written in a formal language
 
 # Our first complete XML document:
 
-~~~{.xml}
+```xml
 <?xml version="1.0"?>
 <greetings xmlns="http://www.example.org/greetings">
     <hello type="enthusiastic">hello world!</hello>
 </greetings>
-~~~
+```
 
 - The XML declaration: `<?xml version="1.0"?>`
 - Namespace declarations: `@xmlns="http://www.example.org/greetings"`
@@ -248,7 +248,7 @@ Instead of an abstract set of rules and norms, standardisation should be thought
     + [TEI by Example](http://www.teibyexample.org/TBE.htm) at http://www.teibyexample.org/TBE.htm
     + the TEI mailing list, <TEI-L@LISTSERV.BROWN.EDU>
     + the [TEI wiki](http://wiki.tei-c.org/index.php) at http://wiki.tei-c.org/: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
-- Further resources provided by the TEI council and Oxford computing centre: 
+- Further resources provided by the TEI council and Oxford computing centre:
     + [ROMA](http://www.tei-c.org/Roma/) at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation
     + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
     + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.

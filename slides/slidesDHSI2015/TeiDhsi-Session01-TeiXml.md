@@ -12,7 +12,7 @@ Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdo
 
 # Textual Markup
 
-In order to talk about texts, markup and encoding of texts, we need to understand what we mean by these basic concepts. 
+In order to talk about texts, markup and encoding of texts, we need to understand what we mean by these basic concepts.
 
 When we talk about text encoding, what do we mean by a *text*? What is in a text and which assumptions do we make in reading them?
 
@@ -46,7 +46,7 @@ Where is the text?
 
 - in the shape of letters and their layout?
 - in the original from which this copy derives?
-- in the stories we read into it? 
+- in the stories we read into it?
 - or in its author's intentions?
 
 **TEI's definition**:
@@ -58,19 +58,19 @@ which we can **encode**</hi>.
 # Encoding of texts
 
 - A text is more than a sequence of encoded glyphs or lexical tokens
-    + It has a *structure* and a *communicative function* 
+    + It has a *structure* and a *communicative function*
     + It also has multiple possible *readings*
 - Encoding, or markup, is a way of making these things explicit
 - <hi style="color:red">Only that which is explicit can be reliably found again and displayed</hi>
 
 # What is the point of markup?
 
-- To make *explicit* (to a machine) what is *implicit* (to a person) 
+- To make *explicit* (to a machine) what is *implicit* (to a person)
 - To add value by supplying *multiple annotations*
 - To facilitate *re-use* of the same material
-    + in different formats 
-    + in different contexts 
-    + by different users  
+    + in different formats
+    + in different contexts
+    + by different users
 - <hi style="color:red">We don't have to be limited to the view of one editor or consumer</hi>
 
 # Styles of markup
@@ -106,24 +106,28 @@ which we can **encode**</hi>.
 
 Example 1:
 
-    <hi rend="dropcap">H</hi>&WYN;ÆT WE GARDE <lb/>na in gear-dagum þeod-cyninga <lb/>þrym gefrunon, hu ða æþelingas <lb/>ellen fremedon. oft scyld scefing sceaþe <add>na</add>
-    <lb/>þreatum, moneg<expan>um</expan> mægþum meodo-setl <add>a</add>
-    <lb/>of<damage>
-    <desc>blot</desc> </damage>teah ...
+```xml
+<hi rend="dropcap">H</hi>&WYN;ÆT WE GARDE <lb/>na in gear-dagum þeod-cyninga <lb/>þrym gefrunon, hu ða æþelingas <lb/>ellen fremedon. oft scyld scefing sceaþe <add>na</add>
+<lb/>þreatum, moneg<expan>um</expan> mægþum meodo-setl <add>a</add>
+<lb/>of<damage>
+<desc>blot</desc> </damage>teah ...
+```
 
 Example 2:
 
-    <lg>
-        <l>Hwæt! we Gar-dena in gear-dagum</l>
-        <l>þeod-cyninga þrym gefrunon,</l>
-        <l>hu ða æþelingas ellen fremedon,</l>
-    </lg> 
-    <lg>
-        <l>Oft Scyld Scefing sceaþena þreatum,</l>
-        <l>monegum mægþum meodo-setla ofteah;</l>
-        <l>egsode Eorle, syððan ærest wearþ</l>
-        <l>feasceaft funden...</l>
-    </lg>
+```xml
+<lg>
+    <l>Hwæt! we Gar-dena in gear-dagum</l>
+    <l>þeod-cyninga þrym gefrunon,</l>
+    <l>hu ða æþelingas ellen fremedon,</l>
+</lg>
+<lg>
+    <l>Oft Scyld Scefing sceaþena þreatum,</l>
+    <l>monegum mægþum meodo-setla ofteah;</l>
+    <l>egsode Eorle, syððan ærest wearþ</l>
+    <l>feasceaft funden...</l>
+</lg>
+```
 
 # A useful mental exercise
 
@@ -137,19 +141,18 @@ Now, imagine your budget has been halved. Repeat the exercise!
 
 # Some alphabet soup
 
-abbr | expan
--|-
-SGML | Standard Generalized Markup Language 
-HTML | Hypertext Markup Language
-W3C | World Wide Web Consortium
-XML | eXtensible Markup Language
-DTD | Document Type Definition (or Declaration)
-CSS | Cascading Style Sheet
-Xpath | XML Path Language
-XSLT | eXtensible Stylesheet Language - Transformations 
-XQuery | XML Querying
-RELAXNG | Regular Expression Language for XML (New Generation)
-SVG | Scalable Vector Graphics (expressed in XML)
+|   abbr  |                        expan                         |
+|---------|------------------------------------------------------|
+| SGML    | Standard Generalized Markup Language                 |
+| HTML    | Hypertext Markup Language                            |
+| W3C     | World Wide Web Consortium                            |
+| XML     | eXtensible Markup Language                           |
+| DTD     | Document Type Definition (or Declaration)            |
+| CSS     | Cascading Style Sheet                                |
+| Xpath   | XML Path Language                                    |
+| XSLT    | eXtensible Stylesheet Language - Transformations     |
+| XQuery  | XML Querying                                         |
+| RELAXNG | Regular Expression Language for XML (New Generation) |
 
 ... and then there's also <hi style="color:red">TEI, the Text Encoding Initiative</hi>
 
@@ -182,16 +185,16 @@ An XML document may contain:
 # XML terminology 2
 
 - The data is encoded in Unicode (UTF-8 or UTF-16)
-- *must* be well-formed: 
-    + nodes can only nest, 
-    + all nodes/elements must be closed, 
+- *must* be well-formed:
+    + nodes can only nest,
+    + all nodes/elements must be closed,
     + the document contains only a single *root* node
 - *can* be validated against schema(s)
    + can contain xml valid against different schemas if differentiated by *namespaces*
 
 # The rules of the XML Game
 
-- An XML document represents a (kind of) *tree* 
+- An XML document represents a (kind of) *tree*
 - It has a single *root* and many nodes
 - Each node can be
     + a subtree
@@ -215,14 +218,16 @@ CDATA sections are delimited by `<![CDATA[ and ]]>` (but we won't use these here
 
 # Parts of a real XML document
 
-    <?xml version="1.0"?>
-    <greetings xmlns="http://www.example.org/greetings">
-        <hello type="enthusiastic">hello world!</hello>
-    </greetings>
+```xml
+<?xml version="1.0"?>
+<greetings xmlns="http://www.example.org/greetings">
+    <hello type="enthusiastic">hello world!</hello>
+</greetings>
+```
 
 - The XML declaration
 - Namespace declarations
-- The root element of the document itself 
+- The root element of the document itself
 - Other elements and content
 - Attribute and value
 
@@ -236,99 +241,113 @@ An XML document must begin with an XML declaration which does three things:
 
 Example:
 
-    <?xml version="1.0" ?>
-    <?xml version="1.0" encoding="iso-8859-1" ?>
+```xml
+<?xml version="1.0" ?>
+<?xml version="1.0" encoding="iso-8859-1" ?>
+```
 
 # Declaring namespaces
 
 All TEI documents are declared within the TEI namespace — a way of distinguishing one set of elements from another with the same names (like `<p>`):
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0"> ... </TEI>
+```xml
+<TEI xmlns="http://www.tei-c.org/ns/1.0"> ... </TEI>
+```
 
 XML documents can include elements declared in different namespaces.
 
 - a namespace declaration associates a namespace prefix with an external URI-like identifier
-- the default namespace may be declared using an xmlns 
+- the default namespace may be declared using an xmlns
 - other name spaces must all use a specially declared prefix
 
-Example: 
+Example:
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:math="http://www.mathml.org">
-    <p>...
-        <math:expr>...</math:expr>
-        ...</p>
-    </TEI>
+```xml
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:math="http://www.mathml.org">
+<p>...
+    <math:expr>...</math:expr>
+    ...</p>
+</TEI>
+```
 
 The xml namespace is used by the TEI for global attributes `@xml:id` and `@xml:lang`
 
 # Example: *Kawkab America* #55, 28 April 1893
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <div type="article" xml:lang="en">
-      <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
-      <head xml:lang="en">The orient at fair.</head>
-      <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
-            <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
-            <lb/>of the Orient? Were the questions asked
-            <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
-            <lb/>als of <placeName>New York</placeName> within the last few
-            <lb/>weeks. The long expected concessioners, 
-            <lb/>exhibitors and participants in the <orgName>World's
-            <lb/>Fair</orgName>, who for many days and weeks have
-            <lb/>been directing their footsteps from the
-            <lb/>various lands of the rising sun towards
-            <lb/>the "<q>new land of promise</q>" have arrived
-            <lb/>in large numbers, and set foot upon the
-            <lb/>soil of the new world which they have 
-            <lb/>sought with feelings of high expectation,
-            <lb/>and an eagerness to which long distance
-            <lb/>had added many charms. The Sheikh
-            <lb/>who from childhood hours had learned to
-            <lb/>praise Allah for every blessing of life,
-            <lb/>must have shouted a hearty "<quote>Alhamduli
-            <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
-            <lb/>journey of some weeks and months by
-            <lb/>land and by sea he saw in <placeName>New York</placeName> har
-            <lb/>bor the majestic form of the Goddess of
-            <lb/>Liberty with the beacon of light in her
-            <lb/>outstretched hand bidding him welcome
-            <lb/>to the "<q>home of the brave and the land of
-            <lb/>the free.</q>"</p>
-    </div>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="article" xml:lang="en">
+  <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
+  <head xml:lang="en">The orient at fair.</head>
+  <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
+        <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
+        <lb/>of the Orient? Were the questions asked
+        <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
+        <lb/>als of <placeName>New York</placeName> within the last few
+        <lb/>weeks. The long expected concessioners,
+        <lb/>exhibitors and participants in the <orgName>World's
+        <lb/>Fair</orgName>, who for many days and weeks have
+        <lb/>been directing their footsteps from the
+        <lb/>various lands of the rising sun towards
+        <lb/>the "<q>new land of promise</q>" have arrived
+        <lb/>in large numbers, and set foot upon the
+        <lb/>soil of the new world which they have
+        <lb/>sought with feelings of high expectation,
+        <lb/>and an eagerness to which long distance
+        <lb/>had added many charms. The Sheikh
+        <lb/>who from childhood hours had learned to
+        <lb/>praise Allah for every blessing of life,
+        <lb/>must have shouted a hearty "<quote>Alhamduli
+        <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
+        <lb/>journey of some weeks and months by
+        <lb/>land and by sea he saw in <placeName>New York</placeName> har
+        <lb/>bor the majestic form of the Goddess of
+        <lb/>Liberty with the beacon of light in her
+        <lb/>outstretched hand bidding him welcome
+        <lb/>to the "<q>home of the brave and the land of
+        <lb/>the free.</q>"</p>
+</div>
+```
 
 # Example deconstructed: root node
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <div type="article" xml:lang="en">
-        <!-- ... -->
-    </div>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="article" xml:lang="en">
+    <!-- ... -->
+</div>
+```
 
 # Example deconstructed: head
 
-    <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
-    <head xml:lang="en">The orient at fair.</head>
+```xml
+<head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
+<head xml:lang="en">The orient at fair.</head>
+```
 
 # Example deconstructed: paragraph, quotes, and named entities
 
-    <p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
-    <lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
-    <lb/>of the Orient? Were the questions asked
-    <lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
-    <lb/>als of <placeName>New York</placeName> within the last few
-    <lb/>weeks. The long expected concessioners, 
-    <lb/>exhibitors and participants in the <orgName>World's
-    <lb/>Fair</orgName>, who for many days and weeks have
-    <lb/>been directing their footsteps from the
-        <!-- ... -->
-    <lb/>had added many charms. The Sheikh
-    <lb/>who from childhood hours had learned to
-    <lb/>praise Allah for every blessing of life,
-    <lb/>must have shouted a hearty "<quote>Alhamduli
-    <lb/>la! and Allah<gap/> Kariem!</quote>" when after a
-        <!-- ... -->
-    <lb/>outstretched hand bidding him welcome
-    <lb/>to the "<q>home of the brave and the land of
-    <lb/>the free.</q>"</p>
+```xml
+<p>Is there anybody left in <placeName>Syria</placeName>, <placeName>Egypt</placeName>,
+<lb/><placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other countries
+<lb/>of the Orient? Were the questions asked
+<lb/>by officers at <placeName>Ellis Island</placeName> and the Orient
+<lb/>als of <placeName>New York</placeName> within the last few
+<lb/>weeks. The long expected concessioners,
+<lb/>exhibitors and participants in the <orgName>World's
+<lb/>Fair</orgName>, who for many days and weeks have
+<lb/>been directing their footsteps from the
+    <!-- ... -->
+<lb/>had added many charms. The Sheikh
+<lb/>who from childhood hours had learned to
+<lb/>praise Allah for every blessing of life,
+<lb/>must have shouted a hearty "<quote>Alhamduli
+<lb/>la! and Allah<gap/> Kariem!</quote>" when after a
+    <!-- ... -->
+<lb/>outstretched hand bidding him welcome
+<lb/>to the "<q>home of the brave and the land of
+<lb/>the free.</q>"</p>
+```
 
 # XML syntax: the small print
 
@@ -347,15 +366,17 @@ you obey the rules of a specified schema, such as the TEI.
 
 Which are correct?
 
-     <seg>some text</seg>
-     <seg> <foo>some</foo> <bar>text</bar> </seg>
-     <seg> <foo>some <bar></foo> text</bar> </seg>
-     <seg type="text">some text</seg>
-     <seg type='text'>some text</seg>
-     <seg type=text>some text</seg>
-     <seg type="text"> some text <seg/>
-     <seg type="text"> some text<gap/> </seg>
-     <seg type="text">some text</Seg>
+```xml
+ <seg>some text</seg>
+ <seg> <foo>some</foo> <bar>text</bar> </seg>
+ <seg> <foo>some <bar></foo> text</bar> </seg>
+ <seg type="text">some text</seg>
+ <seg type='text'>some text</seg>
+ <seg type=text>some text</seg>
+ <seg type="text"> some text <seg/>
+ <seg type="text"> some text<gap/> </seg>
+ <seg type="text">some text</Seg>
+```
 
 # XML is an international standard
 
@@ -400,7 +421,7 @@ The Text Encoding Initiative was born into a very different world
 
 - So the TEI is *very old*!
 - It comes from a time before the Web, before the DVD, smart mobile phones, cable tv, the iPod, and *even XML* (which was finalised in 1998)!
-- Not much in computing survives 5 years, never mind 25 
+- Not much in computing survives 5 years, never mind 25
 - Why is it still here, and how has it survived?
 - What relevance can it possibly have today?
 
@@ -453,21 +474,21 @@ resource. The TEI is an evolving model of the concerns of Digital Humanities.
 
 <!-- # Purpose of the guidelines
 
-- guidance for individual or local practice in text creation and data capture; 
-- support of data interchange; 
+- guidance for individual or local practice in text creation and data capture;
+- support of data interchange;
 - support of application-independent local processing. -->
 
 # TEI adopted XML
 
 In 2002, the TEI consortium published the P4 Guidelines, which were essentially an adaptation of P3 to XML that had been finalised as W3C standard in 1998.
 
-P5, a complete overhaul of the guidelines, was published in 2008. Updates are regularly published every couple of months ever since. The current version 2.8.0 was released on 6 April 2015. 
+P5, a complete overhaul of the guidelines, was published in 2008. Updates are regularly published every couple of months ever since. The current version 2.8.0 was released on 6 April 2015.
 
 The Guidelines are currently maintained as an open source project on the Sourceforge site [http://tei.sf.net/](http://tei.sf.net/), from which released and development versions may be freely downloaded.
 
 # TEI XML
 
-- all of XML. 
+- all of XML.
 - In addition, TEI XML *must* be valid against the schema "TEI all"
     + TEI all: `<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>`
     + this *processing instruction* means that the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.
@@ -476,8 +497,8 @@ The Guidelines are currently maintained as an open source project on the Sourcef
 # Note: namespaces vs schemas
 
 + a *namespace* is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.
-+ a *schema* allows you to 
-    * ensure that your documents use only predefined elements, attributes, and entities 
++ a *schema* allows you to
+    * ensure that your documents use only predefined elements, attributes, and entities
     * enforce structural rules such as 'every chapter must begin with a heading' or 'recipes must include an ingredient list'
 + a namespace is just a URI; a schema is a formal specification written in a formal language
 
@@ -507,8 +528,8 @@ Instead of an abstract set of rules and norms, standardisation should be thought
     + the [TEI guidelines](http://www.tei-c.org/Guidelines/P5/) at http://www.tei-c.org/Guidelines/P5/
     + [TEI by Example](http://www.teibyexample.org/TBE.htm) at http://www.teibyexample.org/TBE.htm
     + the TEI mailing list, <TEI-L@LISTSERV.BROWN.EDU>
-    + the [TEI wiki](http://wiki.tei-c.org/index.php) at http://wiki.tei-c.org/: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
-- Further resources provided by the TEI council and Oxford computing centre: 
+    + the [TEI wiki](http://wiki.tei-c.org/index.php) at <http://wiki.tei-c.org/>: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
+- Further resources provided by the TEI council and Oxford computing centre:
     + [ROMA](http://www.tei-c.org/Roma/) at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation
     + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
     + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.

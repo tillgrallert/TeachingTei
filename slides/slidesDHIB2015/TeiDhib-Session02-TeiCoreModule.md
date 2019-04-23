@@ -36,10 +36,10 @@ Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdo
 - Identification information, page numbers, sources
 - "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination
 - within the chunks, we can identify formal units such as
-    + a picture, 
+    + a picture,
     + a caption
-    + stanzas, 
-    + lines 
+    + stanzas,
+    + lines
     + paragraphs
     + and more...
 
@@ -60,22 +60,24 @@ The text may be in the form of:
 - a `<sourceDoc>`: a pure transcription, or
 - a `<text>`: an edited document
 
-# TEI basic structure 
+# TEI basic structure
 
-    <TEI xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-            <!-- required -->
-        </teiHeader>
-        <facsimile>
-            <!-- optional-->
-        </facsimile>
-        <sourceDoc>
-            <!-- optional -->
-        </sourceDoc>
-        <text>
-            <!-- required if no facsimile or sourceDoc-->
-        </text>
-    </TEI>
+```xml
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- required -->
+    </teiHeader>
+    <facsimile>
+        <!-- optional-->
+    </facsimile>
+    <sourceDoc>
+        <!-- optional -->
+    </sourceDoc>
+    <text>
+        <!-- required if no facsimile or sourceDoc-->
+    </text>
+</TEI>
+```
 
 # TEI basic structure 2
 
@@ -96,7 +98,7 @@ What is a text? (remember that one?)
 - A text may be unitary or composite
     + unitary: forming an organic whole
     + composite: consisting of several components which are in some important sense independent of each other
-- a unitary text contains 
+- a unitary text contains
     + `<front>`: optional front matter
     + `<body>`: (required)
     + `<back>`: optional back matter
@@ -157,12 +159,12 @@ For example, page 1 has two divisions:
 
     <pb n="1"/>
     <div type="article">
-        <p>....</p> 
+        <p>....</p>
     </div>
-    <div type="poem"> 
-        <head>Strange Meeting</head> 
+    <div type="poem">
+        <head>Strange Meeting</head>
         <lg>
-            <l>....</l> 
+            <l>....</l>
         </lg>
     </div>
 
@@ -175,7 +177,7 @@ We use an empty element `<pb/>` to mark the boundary between pages, rather than 
 
     <pb n="5"/>
     <div type="article">
-        <p>...</p> 
+        <p>...</p>
     </div>
     <div type="poem">
         <head>Strange Meeting</head>
@@ -237,7 +239,7 @@ We use an empty element `<pb/>` to mark the boundary between pages, rather than 
         </div2>
     </div1>
 
-is valid, while 
+is valid, while
 
     <div1>
         <!-- content -->
@@ -290,7 +292,7 @@ The `<floatingText>` element can appear within any division level element in the
         </body>
     </floatingText>
     <pb n="37"/>
-    <p>The Gentleman having finish'd his Story ... 
+    <p>The Gentleman having finish'd his Story ...
         <!-- more -->
     </p>
 
@@ -331,17 +333,17 @@ The *core* module of the TEI groups together elements which may appear in any ki
 - paragraphs
 - highlighting, emphasis and quotation
 - simple editorial changes
-- basic names numbers, dates, addresses 
+- basic names numbers, dates, addresses
 - simple links and cross-references
-- lists, notes, annotation, indexing 
+- lists, notes, annotation, indexing
 - graphics
-- reference systems, bibliographic 
+- reference systems, bibliographic
 - citations simple verse and drama
 
 # Paragraphs
 
 `<p>`: paragraph; marks paragraphs in prose
- 
+
 - Fundamental unit for prose texts
 - `<p>` can contain all the phrase-level elements in the core
 - `<p>` can appear directly inside `<body>` or inside `<div>`
@@ -379,8 +381,8 @@ Example
 
     <calendar xml:id="cal_islamic">
         <p>Islamic  <hi rend="italics">hijrī</hi>calendar: lunar calendar beginning the Year with 1 <hi rend="italics">Muḥarram</hi>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
-        <p>E.g. 
-            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,   
+        <p>E.g.
+            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
             <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326,
                             Thursday</date>.
             </p>
@@ -422,7 +424,7 @@ Example
         bibl>في <date>١٠ تموز سنة ١٣٢٤</date></bibl>
     </quote>
 
-# Lists 
+# Lists
 
 - `<list>`: a sequence of items forming a list
 - `<item>`: one component of a list
@@ -434,14 +436,14 @@ Example
         <hi>To which is added,</hi>A Collection of LETTERS of Friendship, and other Occasional LETTERS, written by
         <list>
             <item>
-                Mr. 
+                Mr.
                 <hi>Dryden,</hi></item>
-            <item>Mr. 
+            <item>Mr.
                 <hi>Wycherly,</hi></item>
             <item>Mr.—</item>
-            <item>Mr. 
+            <item>Mr.
                 <hi>Congreve,</hi></item>
-            <item>Mr. 
+            <item>Mr.
                 <hi>Dennis,</hi>
                 and other Hands.</item>
         </list>
@@ -477,13 +479,13 @@ Example:
 # Example: choice 1
 
     <dateline xml:lang="ar">
-        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز 
+        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز
             <choice>
                 <abbr>ش</abbr>
                 <expan>شرقي</expan>
             </choice>
         </date>
-        <date>٢٧ 
+        <date>٢٧
             <choice>
                 <abbr>غ</abbr>
                 <expan>غربي</expan>
@@ -517,9 +519,9 @@ Example:
         <del rend="stroked">It's </del>
         <add place="above">
             <del rend="stroked">The </del>
-        </add>subject <del rend="stroked">of</del> is War, and the 
+        </add>subject <del rend="stroked">of</del> is War, and the
         <unclear>pity </unclear>
-        of <del rend="stroked">it</del> War. 
+        of <del rend="stroked">it</del> War.
         <lb/>The Poetry is in the pity.</p>
 
 
@@ -528,7 +530,7 @@ Example:
 # Basic names
 
 - `<name>`: a name in the text, contains a proper noun or noun phrase
-- `<rs>`: a general-purpose name or referencing string 
+- `<rs>`: a general-purpose name or referencing string
 
 The @type attribute is useful for categorizing these, and they both
 also have @key, @ref, and @nymRef attributes.
@@ -581,7 +583,7 @@ Example
 
 # Indexing
 
-- If converting an existing index, use nested lists. 
+- If converting an existing index, use nested lists.
 - For auto-generated indexes:
     + `<index>` (marks an index entry) with optional @indexName attribute
     + The `<term>` element is used to mark a term inside an `<index>` element
