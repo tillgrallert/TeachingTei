@@ -12,7 +12,7 @@ author: Till Grallert
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 
 # What is metadata?
@@ -43,7 +43,7 @@ The TEI header was designed with two goals in mind
 - needs of bibliographers and librarians trying to document ‘electronic books’
 - needs of text analysts trying to document ‘coding practices’ within digital resources
 
-The result is that discussion of the header tends to be pulled in two directions... 
+The result is that discussion of the header tends to be pulled in two directions...
 
 # The librarian's header
 
@@ -65,7 +65,7 @@ The TEI header has four main components:
 
 - `<fileDesc>` (file description) contains a full bibliographic description of a computer file. ("computer file" may actually correspond with several files across different operating system.)
 - `<encodingDesc>` (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived.
-- `<profileDesc>` (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements 
+- `<profileDesc>` (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. (just about everything not covered in the other header elements
 - `<revisionDesc>` (revision description) summarizes the revision history for a file.
 
 *Note*: Only `<fileDesc>` is required; the others are optional.
@@ -127,7 +127,7 @@ The TEI header has four main components:
 - declarations: Elements whose names end with the suffix Decl (e.g. `<subjectDecl>`, `<refsDecl>`) enclose information about specific encoding practices applied in the electronic text.
 - descriptions: Elements whose names end with the suffix Desc (e.g. `<settingDesc>`, `<projectDesc>`) contain a prose description, possibly, but not necessarily, organised under some specific headings by suggested sub-elements.
 
-# Example source: Kawkab America #55, 28 Apr 1908 
+# Example source: Kawkab America #55, 28 Apr 1908
 
 ![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
 
@@ -159,15 +159,15 @@ The TEI header has four main components:
     + `<sourceDesc>`: documents the sources from which the encoded text derives (if any)
     + `<publicationStmt>`: documents how the encoded text is published or distributed
 - and some **optional** ones:
-    + `<editionStmt>`: yes, digital texts have editions too 
-    + `<seriesStmt>`: and they also fit into "series". 
-    + `<extent>`: how many CDs, gigabytes, files? 
+    + `<editionStmt>`: yes, digital texts have editions too
+    + `<seriesStmt>`: and they also fit into "series".
+    + `<extent>`: how many CDs, gigabytes, files?
     + `<notesStmt>`: notes of various types
 
 # File description `<fileDesc>` 2
 
 - `<titleStmt>`: contains a mandatory `<title>` which identifies the electronic file (not its source!)
-- optionally followed by additional titles, and by ‘statements of responsibility’, as appropriate, using `<author>`, `<editor>`, `<sponsor>`, `<funder>`, `<principal>` or the generic `<respStmt>` 
+- optionally followed by additional titles, and by ‘statements of responsibility’, as appropriate, using `<author>`, `<editor>`, `<sponsor>`, `<funder>`, `<principal>` or the generic `<respStmt>`
 - `<publicationStmt>`: may contain
     + plain text (e.g. to say the text is unpublished)
     + one or more `<publisher>`, `<distributor>`, `<authority>`, each followed by `<pubPlace>`, `<address>`, `<availability>`, `<idno>`
@@ -262,7 +262,7 @@ All electronic works need to document their source, **even 'born digital' ones**
 - Specialised elements for spoken texts (`<recordingStmt>` etc.) and for manuscripts (`<msDesc>`) <!-- Discussed later! -->
 - Authority lists: `<listPerson>`, `<listPlace>`, `<listOrg>`
 
-# Example 1: Kawkab America #55, 28 Apr 1908 
+# Example 1: Kawkab America #55, 28 Apr 1908
 
 ![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
 
@@ -316,7 +316,7 @@ Most components of the encoding description are declarable.
 
 `<encodingDesc>` groups notes about the procedures used when the text was encoded, either summarised in prose or within specific elements such as
 
-- `<projectDesc>`: goals of the project 
+- `<projectDesc>`: goals of the project
 - `<samplingDecl>`: sampling principles
 - `<editorialDecl>`: editorial principals, e.g. `<correction>`, `<normalization>`, `<quotation>`, `<hyphenation>`, `<segmentation>`, `<interpretation>`
 - `<classDecl>`: classification system/s used
@@ -386,7 +386,7 @@ which you can easily point to from the text
 
     <hi rendition="#r-center #r-large">this bit of text was large and centred</hi>
 
-But compare: 
+But compare:
 
     <hi rend="large center">this bit of text was large and centred</hi>
 
@@ -440,7 +440,7 @@ The `<langUsage>` element is provided to document usage of languages and writing
 - The `<calendarDesc>` contains a description of the calendar system used in any dating expression found in the text. This element may contain one or more `<calendar>` elements, but it is generally presumed that the absence of any specific declaration signifies the Gregorian calendar
 - Each `<calendar>` element contains one or more paragraphs of description for the calendar system concerned, and also supplies an identifying code for it as the value of its @xml:id attribute.
 
-Example: 
+Example:
 
     <calendarDes>
         <calendar xml:id="cal_islamic">
@@ -492,7 +492,7 @@ Example 1:
     </particDesc>
 
 -----------------------
-Example 2: 
+Example 2:
 
     <particDesc xml:lang="en">
         <listPerson>
@@ -516,7 +516,7 @@ Example 2:
               <note xml:lang="en">
                  <ref target="https://en.wikipedia.org/wiki/Abdul_Hamid_II">Wikipedia
                     article</ref>
-                 <ref target="http://d-nb.info/gnd/118646435">PND</ref> 
+                 <ref target="http://d-nb.info/gnd/118646435">PND</ref>
               </note>
            </person>
            <person xml:id="pers_2">

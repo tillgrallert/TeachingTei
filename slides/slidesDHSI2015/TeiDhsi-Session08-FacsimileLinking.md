@@ -8,7 +8,7 @@ date: 6 June 2015
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI and the example of Arabic newspapers and British consular archives.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # A special case of linking: facsimiles
 
@@ -47,8 +47,8 @@ This image of the first page of a consular report is found at "../images/pro-fo/
             <lb/> No. <del>30</del>
             <del>29</del> 30</dateline>
         <dateline>42 Emb.</dateline>
-        <p>Sir, 
-        	<lb/>I have the honour to report to Y.E. that the General Amnesty granted by 
+        <p>Sir,
+        	<lb/>I have the honour to report to Y.E. that the General Amnesty granted by
         	<persName><choice>
                     <abbr>H.I.M.</abbr>
                     <expan>His Imperial Majesty</expan>
@@ -248,13 +248,13 @@ Equally, there are **no** out-of-the box software implementations to transform a
 # Available options
 
 - The **Image Markup Tool**, Windows-only sofware developed by Martin Holmes at UVic
-    + writes the `<zones>` and the link to the text to a new TEI P5 file, using its own schema 
+    + writes the `<zones>` and the link to the text to a new TEI P5 file, using its own schema
     + last update in 2012
-    + available at [http://www.tapor.uvic.ca/~mholmes/image_markup/](http://www.tapor.uvic.ca/~mholmes/image_markup/) 
+    + available at [http://www.tapor.uvic.ca/~mholmes/image_markup/](http://www.tapor.uvic.ca/~mholmes/image_markup/)
 - **TextGrid**'s TBLE
     + writes the `<zones>` and the link to the text to a new TEI P5 file, using SVG (Scalable Vector Graphics) and its own schema
     + TextGridLab is freely available at [https://www.textgrid.de/en/registrationdownload/download-and-installation](https://www.textgrid.de/en/registrationdownload/download-and-installation/), but requires a free *DAHRIA* account
-- The **TEI Facsimile Plugin** for oXygen: 
+- The **TEI Facsimile Plugin** for oXygen:
     + allows to draw `<zone>` elements
     + this functional proof of concept was developed by oXygen's Alex Jitianu for the DIXIT camp in Graz, 2014
     + source available at [https://github.com/oxygenxml/TEI-Facsimile-Plugin](https://github.com/oxygenxml/TEI-Facsimile-Plugin)

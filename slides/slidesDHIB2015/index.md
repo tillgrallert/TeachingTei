@@ -15,7 +15,7 @@ Instructor: Till Grallert, OIB, <grallert@orient-institut.org>
 
 Course material: [http://tinyurl.com/dhib2015tei](http://tinyurl.com/dhib2015tei); password "dhibeirut2015tei"
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS code](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS code](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
 # Goals:
 
@@ -32,7 +32,7 @@ and all that in multi-lingual (English and Arabic) environments
 
 # Goals:
 
-... or, in less giberish terms, of 
+... or, in less giberish terms, of
 
 - data capture / recording in XML
 - data modelling following the TEI
@@ -67,7 +67,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
 
 - Day 1: Introducing the game of XML and TEI
 - Day 2: Data capture and organisation
-- Day 3: Retrieving and displaying your data 
+- Day 3: Retrieving and displaying your data
 - Day 4: Enriching your data with names and named entities
 - Day 5: Facismile linking
 
@@ -92,7 +92,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
 
 <!-- do we first introduce customisation, schemas etc. or first XPath -->
 
-- Exercise 2: 
+- Exercise 2:
     + data entry / structural mark-up (90min)
     + produce *well-formed* XML
 
@@ -117,7 +117,7 @@ Participants are free to join other courses of the DHI Beirut from 11 to 11:30
 
 ## 6 Afternoon Session
 
-- Continue exercise from morning session: XSLT 
+- Continue exercise from morning session: XSLT
     + produce a toc
     + produce a HTML view of our XML files
 
@@ -161,7 +161,7 @@ Participants are free to join other courses of the DHI Beirut from 11 to 11:30
     + [TEI by Example](http://www.teibyexample.org/TBE.htm) at http://www.teibyexample.org/TBE.htm
     + the TEI mailing list, <TEI-L@LISTSERV.BROWN.EDU>
     + the [TEI wiki](http://wiki.tei-c.org/index.php) at http://wiki.tei-c.org/: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
-- Further resources provided by the TEI council and Oxford computing centre: 
+- Further resources provided by the TEI council and Oxford computing centre:
     + [ROMA](http://www.tei-c.org/Roma/) at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation
     + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
     + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.

@@ -8,7 +8,7 @@ author: Till Grallert
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # Manuscripts:
 
@@ -43,10 +43,10 @@ Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdo
 - Identification information, page numbers, sources
 - "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination thereof
 - within the chunks, we can identify formal units such as
-    + a picture, 
+    + a picture,
     + a caption
-    + stanzas, 
-    + lines 
+    + stanzas,
+    + lines
     + paragraphs
     + and more...
 
@@ -67,7 +67,7 @@ The text may be in the form of:
 - a `<sourceDoc>`: a pure transcription, or
 - a `<text>`: an edited document
 
-# TEI basic structure 
+# TEI basic structure
 
     <TEI xmlns="http://www.tei-c.org/ns/1.0">
         <teiHeader>
@@ -103,7 +103,7 @@ What is a text? (remember that one?)
 - A text may be unitary or composite
     + unitary: forming an organic whole
     + composite: consisting of several components which are in some important sense independent of each other
-- a unitary text contains 
+- a unitary text contains
     + `<front>`: optional front matter
     + `<body>`: (required)
     + `<back>`: optional back matter
@@ -126,7 +126,7 @@ A simple document:
 
 # Macrostructure: composite texts, `<teiCorpus>`
 
-Consular letters, such as the ones above are usually kept in files. If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<teiCorpus>` element: 
+Consular letters, such as the ones above are usually kept in files. If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<teiCorpus>` element:
 
     <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
         <teiHeader>
@@ -194,12 +194,12 @@ For example, page 1 has two divisions:
 
     <pb n="1"/>
     <div type="article">
-        <p>....</p> 
+        <p>....</p>
     </div>
-    <div type="poem"> 
-        <head>Strange Meeting</head> 
+    <div type="poem">
+        <head>Strange Meeting</head>
         <lg>
-            <l>....</l> 
+            <l>....</l>
         </lg>
     </div>
 
@@ -210,7 +210,7 @@ cross other physical boundaries, we use an **empty** element `<pb/>` (page break
 
     <pb n="5"/>
     <div type="article">
-        <p>...</p> 
+        <p>...</p>
     </div>
     <div type="poem">
         <head>Strange Meeting</head>
@@ -272,7 +272,7 @@ cross other physical boundaries, we use an **empty** element `<pb/>` (page break
         </div2>
     </div1>
 
-is valid, while 
+is valid, while
 
     <div1>
         <!-- content -->
@@ -325,7 +325,7 @@ The `<floatingText>` element can appear within any division level element in the
         </body>
     </floatingText>
     <pb n="37"/>
-    <p>The Gentleman having finish'd his Story ... 
+    <p>The Gentleman having finish'd his Story ...
         <!-- more -->
     </p>
 
@@ -428,17 +428,17 @@ The *core* module of the TEI groups together elements which may appear in any ki
 - paragraphs
 - highlighting, emphasis and quotation
 - simple editorial changes
-- basic names numbers, dates, addresses 
+- basic names numbers, dates, addresses
 - simple links and cross-references
-- lists, notes, annotation, indexing 
+- lists, notes, annotation, indexing
 - graphics
-- reference systems, bibliographic 
+- reference systems, bibliographic
 - citations simple verse and drama
 
 # Paragraphs
 
 `<p>`: paragraph; marks paragraphs in prose
- 
+
 - Fundamental unit for prose texts
 - `<p>` can contain all the phrase-level elements in the core
 - `<p>` can appear directly inside `<body>` or inside `<div>`
@@ -468,8 +468,8 @@ Example
 
     <calendar xml:id="cal_islamic">
         <p>Islamic  <hi rend="italics">hijrī</hi>calendar: lunar calendar beginning the Year with 1 <hi rend="italics">Muḥarram</hi>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
-        <p>E.g. 
-            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,   
+        <p>E.g.
+            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
             <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.
             </p>
     </calendar>
@@ -496,7 +496,7 @@ Example
             <date when="1917-07"/>
         </bibl>
 -->
-<!--      
+<!--
     <quote>
         <bibl>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى</bibl>
         <lb/>صدرت ارادة حضرة صاحب الخلافة العظمى
@@ -510,7 +510,7 @@ Example
     </quote>
 -->
 
-# Lists 
+# Lists
 
 - `<list>`: a sequence of items forming a list
 - `<item>`: one component of a list
@@ -518,7 +518,7 @@ Example
 
 # Example: simple list
 
-    <p> The great <q>'coup d’Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were 
+    <p> The great <q>'coup d’Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were
     <list>
         <item>(a) celebrations and festivities</item>
         <item>(b) dismissal or <del>withdrawal</del><add>resignation</add> of
@@ -564,7 +564,7 @@ Example:
 
     <dateline>Dft
         <lb/><persName>Sir Gerald A. Lowther</persName>
-        <lb/> K.C.M.G.,C.B., 
+        <lb/> K.C.M.G.,C.B.,
         <lb/><placeName>
             <choice>
                 <abbr>Cple</abbr>
@@ -579,15 +579,15 @@ Example:
         </date>
     </dateline>
 
-<!--    
+<!--
     <dateline xml:lang="ar">
-        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز 
+        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز
             <choice>
                 <abbr>ش</abbr>
                 <expan>شرقي</expan>
             </choice>
         </date>
-        <date>٢٧ 
+        <date>٢٧
             <choice>
                 <abbr>غ</abbr>
                 <expan>غربي</expan>
@@ -634,7 +634,7 @@ Which might be encoded like that:
 # Basic names
 
 - `<name>`: a name in the text, contains a proper noun or noun phrase
-- `<rs>`: a general-purpose name or referencing string 
+- `<rs>`: a general-purpose name or referencing string
 
 The `@type` attribute is useful for categorizing these, and they both
 also have `@key`, `@ref`, and `@nymRef` attributes.
@@ -687,7 +687,7 @@ Example
 
 # Indexing
 
-- If converting an existing index, use nested lists. 
+- If converting an existing index, use nested lists.
 - For auto-generated indexes:
     + `<index>` (marks an index entry) with optional `@indexName` attribute
     + The `<term>` element is used to mark a term inside an `<index>` element
