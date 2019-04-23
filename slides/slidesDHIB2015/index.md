@@ -43,19 +43,19 @@ and all that in multi-lingual (English and Arabic) environments
 
 ... or, since a picture is worth more than a thousand words, as the saying goes, how to get from the paper copies in front of you ...
 
-![Image of *al-Bashīr*](images/bashir-img.png)
+![Image of *al-Bashīr*](../images/bashir-img.png)
 
 # Goals:
 
 ... to this ...
 
-![*al-Bashīr* as TEI XML file](images/bashir-oxygen.png)
+![*al-Bashīr* as TEI XML file](../images/bashir-oxygen.png)
 
 # Goals:
 
 ... and finally to that:
 
-![*al-Bashīr* as website](images/bashir-html.png)
+![*al-Bashīr* as website](../images/bashir-html.png)
 
 # Goals:
 

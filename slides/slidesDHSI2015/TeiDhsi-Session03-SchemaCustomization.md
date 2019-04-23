@@ -80,19 +80,19 @@ Here comes <hi style="color:red">Roma</hi> a command line script, with a web fro
 
 # Roma: design a new schema
 
-![Screen shot: select a starting point](images/ScreenShot-Roma1.png)
+![Screen shot: select a starting point](../images/ScreenShot-Roma1.png)
 
 # Roma: customise
 
-![Screen shot: customise metadata](images/ScreenShot-Roma2.png)
+![Screen shot: customise metadata](../images/ScreenShot-Roma2.png)
 
 # Roma: schema
 
-![Screen shot: select a schema language for download](images/ScreenShot-Roma3.png)
+![Screen shot: select a schema language for download](../images/ScreenShot-Roma3.png)
 
 # Roma: documentation
 
-![Screen shot: generate documentation](images/ScreenShot-Roma4.png)
+![Screen shot: generate documentation](../images/ScreenShot-Roma4.png)
 
 # What did we just do?
 
@@ -127,11 +127,11 @@ We selected four modules, deleted loads of elements, and also deleted an attribu
 
 # Roma: select modules
 
-![Screen shot: select modules](images/ScreenShot-Roma5.png)
+![Screen shot: select modules](../images/ScreenShot-Roma5.png)
 
 # Roma: edit modules
 
-![Screen shot: edit selected modules](images/ScreenShot-Roma6.png)
+![Screen shot: edit selected modules](../images/ScreenShot-Roma6.png)
 
 # What do we need for our newspaper?
 
@@ -158,11 +158,11 @@ We can express these constraints in our ODD meta-schema, and then generate a for
 
 # Roma: select attributes
 
-![Screen shot: select and change attributes for selected elements](images/ScreenShot-Roma7.png)
+![Screen shot: select and change attributes for selected elements](../images/ScreenShot-Roma7.png)
 
 # Roma: constrain attribute values
 
-![Screen shot: limit attributes to a list of values](images/ScreenShot-Roma8.png)
+![Screen shot: limit attributes to a list of values](../images/ScreenShot-Roma8.png)
 
 # What did we just do?
 
@@ -265,7 +265,7 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 
 # Roma: Defining a new element
 
-![Screen shot: defining a new element](images/ScreenShot-Roma9.png)
+![Screen shot: defining a new element](../images/ScreenShot-Roma9.png)
 
 # Defining a content model
 
@@ -280,7 +280,7 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 
 # Roma: Defining a new element 2
 
-![Screen shot: defining a new element](images/ScreenShot-Roma10.png)
+![Screen shot: defining a new element](../images/ScreenShot-Roma10.png)
 
 # What did we just do?
 

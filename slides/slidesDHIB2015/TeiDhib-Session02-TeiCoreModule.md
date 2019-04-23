@@ -12,24 +12,24 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
 
 # *al-Iqbāl*
 
-![Front page of *al-Iqbāl* #257, 27 July 1908](images/mic164_alikbal_1908-1909_0118_150dpi.jpg)
+![Front page of *al-Iqbāl* #257, 27 July 1908](../images/mic164_alikbal_1908-1909_0118_150dpi.jpg)
 
 
 # *al-Bashīr*
 
-![Front page of *al-Bashīr* #1868, 27 July 1908](images/mic54_albashir_1907-19011_0171_150dpi.jpg)
+![Front page of *al-Bashīr* #1868, 27 July 1908](../images/mic54_albashir_1907-19011_0171_150dpi.jpg)
 
 ------------------
 
-![Front page of *al-Bashīr*, 3 August 1908](images/mic54_albashir_1907-19011_0175_150dpi.jpg)
+![Front page of *al-Bashīr*, 3 August 1908](../images/mic54_albashir_1907-19011_0175_150dpi.jpg)
 
 # *Lisān al-Ḥāl*
 
-![Front page of *Lisān al-Ḥāl* #5773, 27 July 1908](images/na111_lisanulhal_1907-08_0912_150dpi.jpg)
+![Front page of *Lisān al-Ḥāl* #5773, 27 July 1908](../images/na111_lisanulhal_1907-08_0912_150dpi.jpg)
 
 # *Thamarāt al-Funūn*
 
-![Front page of *Thamarāt al-Funūn* #1683, 27 July 1908](images/TF-1908-0215_150dpi.jpg)
+![Front page of *Thamarāt al-Funūn* #1683, 27 July 1908](../images/TF-1908-0215_150dpi.jpg)
 
 # Looking at the material, what do we need to mark up?
 
@@ -616,7 +616,7 @@ Example
         <q>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي</q>
     </div>
 
-![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](images/tughra-thamarat2.png)
+![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
 
 # Simple verse
 

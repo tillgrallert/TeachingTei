@@ -20,25 +20,25 @@ When we talk about text encoding, what do we mean by a *text*? What is in a text
 
 Is this text ...
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-draft.png)
 
 -------------------
 
 ... the same as this text ...
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-typed.jpg)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-typed.jpg)
 
 -------------------
 
 ... the same as this text ...
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-printed.jpg)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-printed.jpg)
 
 -------------------
 
 ... the same as this text?
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-xml-author.png)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-xml-author.png)
 
 # A text is not a document
 

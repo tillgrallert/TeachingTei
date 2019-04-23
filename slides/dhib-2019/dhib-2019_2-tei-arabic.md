@@ -28,7 +28,7 @@ BUT: mixing two writing systems, while unambiguous for the computer, will cause 
 
 # facsimile
 
-![Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](images/constitution-thamarat.png)
+![Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/constitution-thamarat.png)
 
 # "neat" XML
 
@@ -75,11 +75,11 @@ BUT: mixing two writing systems, while unambiguous for the computer, will cause 
 
 # "actual" XML in an XML editor
 
-![Text view in oXygen: XML for Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](images/constitution-thamarat-xml-text.png)
+![Text view in oXygen: XML for Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/constitution-thamarat-xml-text.png)
 
 # hiding the tags in an XML editor
 
-![Author view in oXygen: XML for Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](images/constitution-thamarat-xml-author.png)
+![Author view in oXygen: XML for Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/constitution-thamarat-xml-author.png)
 
 
 # Set up your work environment to correctly display Arabic etc.

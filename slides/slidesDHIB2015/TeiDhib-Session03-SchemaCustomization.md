@@ -74,19 +74,19 @@ Here comes <hi style="color:red">Roma</hi> acommand line script,with a web front
 
 # Roma: design a new schema
 
-![Screen shot of Roma](images/ScreenShot-Roma1.png)
+![Screen shot of Roma](../images/ScreenShot-Roma1.png)
 
 # Roma: customise
 
-![Screen shot of Roma](images/ScreenShot-Roma2.png)
+![Screen shot of Roma](../images/ScreenShot-Roma2.png)
 
 # Roma: schema
 
-![Screen shot of Roma](images/ScreenShot-Roma3.png)
+![Screen shot of Roma](../images/ScreenShot-Roma3.png)
 
 # Roma: documentation
 
-![Screen shot of Roma](images/ScreenShot-Roma4.png)
+![Screen shot of Roma](../images/ScreenShot-Roma4.png)
 
 # What did we just do?
 
@@ -121,11 +121,11 @@ We selected four modules, deleted loads of elements, and also deleted an attribu
 
 # Roma: select modules
 
-![Screen shot of Roma](images/ScreenShot-Roma5.png)
+![Screen shot of Roma](../images/ScreenShot-Roma5.png)
 
 # Roma: edit modules
 
-![Screen shot of Roma](images/ScreenShot-Roma6.png)
+![Screen shot of Roma](../images/ScreenShot-Roma6.png)
 
 # What do we need for our newspapers?
 
@@ -152,11 +152,11 @@ We can express these constraints in our ODD meta-schema, and then generate a for
 
 # Roma: select attributes
 
-![Screen shot of Roma](images/ScreenShot-Roma7.png)
+![Screen shot of Roma](../images/ScreenShot-Roma7.png)
 
 # Roma: constrain attribute values
 
-![Screen shot of Roma](images/ScreenShot-Roma8.png)
+![Screen shot of Roma](../images/ScreenShot-Roma8.png)
 
 # What did we just do?
 
@@ -259,7 +259,7 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 
 # Roma: Defining a new element
 
-![Screen shot of Roma](images/ScreenShot-Roma9.png)
+![Screen shot of Roma](../images/ScreenShot-Roma9.png)
 
 # Defining a content model
 

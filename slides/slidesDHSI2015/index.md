@@ -46,19 +46,19 @@ You will also have encountered multilingual source material and transcriptions, 
 
 ... or, since a picture is worth more than a thousand words, as the saying goes, how to get from the paper copies in front of you ...
 
-![Image of *Kawkab America*](images/kawkab-img.jpg)
+![Image of *Kawkab America*](../images/kawkab-img.jpg)
 
 # Goals:
 
 ... to this ...
 
-![*Kawkab America* as TEI XML file in oXygen](images/kawkab-oxygen.png)
+![*Kawkab America* as TEI XML file in oXygen](../images/kawkab-oxygen.png)
 
 # Goals:
 
 ... and finally to that:
 
-![*Kawkab America* as website](images/kawkab-html.png)
+![*Kawkab America* as website](../images/kawkab-html.png)
 
 <!--
 # Goals:

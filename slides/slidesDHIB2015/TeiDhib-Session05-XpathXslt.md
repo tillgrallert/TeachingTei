@@ -235,107 +235,107 @@ XPath is the basis of most other XML querying and transformation languages.
 
 # Example XPath expressions
 
-![XPathExercise 01](images/XPathExercise01.png)
+![XPathExercise 01](../images/XPathExercise01.png)
 
 ---------------------------
 
-![XPathExercise 02](images/XPathExercise02.png)
+![XPathExercise 02](../images/XPathExercise02.png)
 
 ---------------------------
 
-![XPathExercise 03](images/XPathExercise03.png)
+![XPathExercise 03](../images/XPathExercise03.png)
 
 ---------------------------
 
-![XPathExercise 04](images/XPathExercise04.png)
+![XPathExercise 04](../images/XPathExercise04.png)
 
 ---------------------------
 
-![XPathExercise 05](images/XPathExercise05.png)
+![XPathExercise 05](../images/XPathExercise05.png)
 
 ---------------------------
 
-![XPathExercise 06](images/XPathExercise06.png)
+![XPathExercise 06](../images/XPathExercise06.png)
 
 ---------------------------
 
-![XPathExercise 07](images/XPathExercise07.png)
+![XPathExercise 07](../images/XPathExercise07.png)
 
 ---------------------------
 
-![XPathExercise 08](images/XPathExercise08.png)
+![XPathExercise 08](../images/XPathExercise08.png)
 
 ---------------------------
 
-![XPathExercise 09](images/XPathExercise09.png)
+![XPathExercise 09](../images/XPathExercise09.png)
 
 ---------------------------
 
-![XPathExercise 10](images/XPathExercise10.png)
+![XPathExercise 10](../images/XPathExercise10.png)
 
 ---------------------------
 
-![XPathExercise 11](images/XPathExercise11.png)
+![XPathExercise 11](../images/XPathExercise11.png)
 
 ---------------------------
 
-![XPathExercise 12](images/XPathExercise12.png)
+![XPathExercise 12](../images/XPathExercise12.png)
 
 ---------------------------
 
-![XPathExercise 13](images/XPathExercise13.png)
+![XPathExercise 13](../images/XPathExercise13.png)
 
 ---------------------------
 
-![XPathExercise 14](images/XPathExercise14.png)
+![XPathExercise 14](../images/XPathExercise14.png)
 
 ---------------------------
 
-![XPathExercise 15](images/XPathExercise15.png)
+![XPathExercise 15](../images/XPathExercise15.png)
 
 ---------------------------
 
-![XPathExercise 16](images/XPathExercise16.png)
+![XPathExercise 16](../images/XPathExercise16.png)
 
 ---------------------------
 
-![XPathExercise 17](images/XPathExercise17.png)
+![XPathExercise 17](../images/XPathExercise17.png)
 
 ---------------------------
 
-![XPathExercise 18](images/XPathExercise18.png)
+![XPathExercise 18](../images/XPathExercise18.png)
 
 ---------------------------
 
-![XPathExercise 19](images/XPathExercise19.png)
+![XPathExercise 19](../images/XPathExercise19.png)
 
 ---------------------------
 
-![XPathExercise 20](images/XPathExercise20.png)
+![XPathExercise 20](../images/XPathExercise20.png)
 
 ---------------------------
 
-![XPathExercise 21](images/XPathExercise21.png)
+![XPathExercise 21](../images/XPathExercise21.png)
 
 ---------------------------
 
-![XPathExercise 22](images/XPathExercise22.png)
+![XPathExercise 22](../images/XPathExercise22.png)
 
 ---------------------------
 
-![XPathExercise 23](images/XPathExercise23.png)
+![XPathExercise 23](../images/XPathExercise23.png)
 
 ---------------------------
 
-![XPathExercise 24](images/XPathExercise24.png)
+![XPathExercise 24](../images/XPathExercise24.png)
 
 ---------------------------
 
-![XPathExercise 25](images/XPathExercise25.png)
+![XPathExercise 25](../images/XPathExercise25.png)
 
 ---------------------------
 
-![XPathExercise 26](images/XPathExercise26.png)
+![XPathExercise 26](../images/XPathExercise26.png)
 
 # XPath: More about paths
 

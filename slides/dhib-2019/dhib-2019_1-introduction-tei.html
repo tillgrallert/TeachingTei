@@ -130,13 +130,13 @@ Till Grallert
   </p>
   <p class="date">2019-04-23</p>
 </div>
-<div class="slide section level1">
+<div class="slide section level2">
 
 <p>Many slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of introductory classes to TEI and Arabic texts at DHIB 2019, 2015, DHSI 2015, and Leipzig 2015.</p>
 <p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
 <p>The slides are available at <a href="https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/index.html">https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/</a>.</p>
 </div>
-<div id="content-of-this-session" class="slide section level1">
+<div id="content-of-this-session" class="slide section level2">
 <h1>Content of this session</h1>
 <ul>
 <li>What is a text?</li>
@@ -145,42 +145,41 @@ Till Grallert
 <li>Introducing the TEI</li>
 </ul>
 </div>
-<div id="what-is-a-text" class="slide section level1">
+<div id="textual-markup" class="titleslide slide section level1"><h1>1. Textual markup</h1></div><div id="textual-markup-1" class="slide section level2">
+<h1>1. Textual markup</h1>
+<p>In order to talk about texts, markup and encoding of texts, we need to understand what we mean by these basic concepts.</p>
+<p>When we talk about text encoding, what do we mean by a <strong>text</strong>? What is in a text and what assumptions do we make in reading them?</p>
+</div><div id="what-is-a-text" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-bashir.png" alt="Ḳānūn-i Esāsī in al-Bashīr, 3 August 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>al-Bashīr</em>, 3 August 1908</p>
 </div>
-</div>
-<div class="slide section level1">
+</div><div class="slide section level2">
 
 <div class="figure">
 <img src="../images/constitution-thamarat.png" alt="Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
-</div>
-<div class="slide section level1">
+</div><div class="slide section level2">
 
 <div class="figure">
 <img src="../images/constitution-lisan.png" alt="Ḳānūn-i Esāsī in Lisān al-Ḥāl, 27 July 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>Lisān al-Ḥāl</em>, 27 July 1908</p>
 </div>
-</div>
-<div class="slide section level1">
+</div><div class="slide section level2">
 
 <div class="figure">
 <img src="../images/constitution-jinan.png" alt="Ḳānūn-i Esāsī in al-Jinān, 15 January 1877" />
 <p class="caption">Ḳānūn-i Esāsī in <em>al-Jinān</em>, 15 January 1877</p>
 </div>
-</div>
-<div class="slide section level1">
+</div><div class="slide section level2">
 
 <div class="figure">
 <img src="../images/constitution-parallel-arabic.png" alt="Three Arabic translations of the Ottoman constitution in a digital parallel edition" />
 <p class="caption">Three Arabic translations of the Ottoman constitution in a digital parallel edition</p>
 </div>
-</div>
-<div id="a-text-is-not-a-document" class="slide section level1">
+</div><div id="a-text-is-not-a-document" class="slide section level2">
 <h1>A text is not a document</h1>
 <p>Where is the text?</p>
 <ul>
@@ -194,8 +193,7 @@ Till Grallert
 <li>A <strong>&quot;document&quot;</strong> is something that exists in the world, which we can <strong>digitize</strong>.</li>
 <li>A <strong>&quot;text&quot;</strong> is an abstraction, created by or for a community of readers, which we can <strong>encode</strong>.</li>
 </ul>
-</div>
-<div id="encoding-of-texts" class="slide section level1">
+</div><div id="encoding-of-texts" class="slide section level2">
 <h1>Encoding of texts</h1>
 <ul>
 <li>A text is more than a sequence of encoded glyphs or lexical tokens
@@ -206,8 +204,7 @@ Till Grallert
 <li>Encoding, or mark-up, is a way of making these things explicit</li>
 </ul>
 <p>Note: <hi class="cImportant">Only that which is explicit can be reliably found again and displayed</hi></p>
-</div>
-<div id="mark-up-what-is-the-point" class="slide section level1">
+</div><div id="mark-up-what-is-the-point" class="slide section level2">
 <h1>Mark-up: What is the point?</h1>
 <ul>
 <li>To make <em>explicit</em> (to a machine) what is <em>implicit</em> (to a person)</li>
@@ -229,8 +226,7 @@ Till Grallert
 
 Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi>
  -->
-</div>
-<div id="mark-up-separation-of-form-and-content" class="slide section level1">
+</div><div id="mark-up-separation-of-form-and-content" class="slide section level2">
 <h1>Mark-up: separation of form and content</h1>
 <ul>
 <li><em>Presentational</em> mark-up cares more about fonts and layout than meaning</li>
@@ -238,16 +234,14 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>Separating the form of something from its content makes its re-use more flexible</li>
 <li>It also allows easy changes of presentation across a large number of documents</li>
 </ul>
-</div>
-<div id="mark-up-some-more-definitions" class="slide section level1">
+</div><div id="mark-up-some-more-definitions" class="slide section level2">
 <h1>Mark-up: some more definitions</h1>
 <ul>
 <li>mark-up makes explicit the distinctions we want to make when processing a string of bytes</li>
 <li>mark-up is a way of naming and characterising the parts of a text in a formalized way</li>
 <li>It's (usually) more useful to mark up what we think things <em>are</em> than what they <em>look</em> like</li>
 </ul>
-</div>
-<div id="mark-up-is-a-scholarly-activity" class="slide section level1">
+</div><div id="mark-up-is-a-scholarly-activity" class="slide section level2">
 <h1>Mark-up is a scholarly activity!</h1>
 <ul>
 <li>The application of mark-up to a document can be an intellectual activity</li>
@@ -258,12 +252,11 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>Detailed document analysis is needed before encoding for the resulting mark-up to be useful</li>
 </ul>
 </div>
-<div id="the-tei" class="slide section level1">
+<div id="the-tei" class="titleslide slide section level1"><h1>2. The TEI</h1></div><div id="the-tei-1" class="slide section level2">
 <h1>The TEI</h1>
 <p>The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of <a href="http://www.tei-c.org/Guidelines/">Guidelines</a> which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.</p>
 <p>Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.</p>
-</div>
-<div id="why-the-tei" class="slide section level1">
+</div><div id="why-the-tei" class="slide section level2">
 <h1>Why the TEI?</h1>
 <p>The TEI provides:</p>
 <ul>
@@ -274,8 +267,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats</li>
 <li>a large and active open source style user community</li>
 </ul>
-</div>
-<div id="relevance" class="slide section level1">
+</div><div id="relevance" class="slide section level2">
 <h1>Relevance</h1>
 <p>Why would you want those things?</p>
 <ul>
@@ -296,7 +288,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 </ul></li>
 </ul>
 </div>
-<div id="xml-what-it-is-and-why-you-should-care" class="slide section level1">
+<div id="xml" class="titleslide slide section level1"><h1>3. XML</h1></div><div id="xml-what-it-is-and-why-you-should-care" class="slide section level2">
 <h1>XML: what it is and why you should care</h1>
 <ul>
 <li>XML is <em>structured data</em> represented as strings of text encoded in Unicode</li>
@@ -309,8 +301,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>XML is application-, platform-, and vendor- independent</li>
 <li>XML empowers the <em>content provider</em> and facilitates data integration</li>
 </ul>
-</div>
-<div id="characteristics-of-xml-internal-structure" class="slide section level1">
+</div><div id="characteristics-of-xml-internal-structure" class="slide section level2">
 <h1>Characteristics of XML: internal structure</h1>
 <p>An XML document might contain:</p>
 <ul>
@@ -322,8 +313,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li><strong>CDATA</strong>: All text is parsed, but text in <code>&lt;![CDATA[</code> <code>]]&gt;</code></li>
 <li><strong>namespaces</strong>: differentiate XML schemas by means of an URI</li>
 </ul>
-</div>
-<div id="characteristics-of-xml-rules" class="slide section level1">
+</div><div id="characteristics-of-xml-rules" class="slide section level2">
 <h1>Characteristics of XML: rules</h1>
 <ul>
 <li>All (sic!) data is encoded in Unicode (UTF-8 or UTF-16)</li>
@@ -338,8 +328,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>can contain xml valid against different schemas if differentiated by <em>namespaces</em></li>
 <li>can be styled for display in a web-browser using CSS (Cascading Style Sheets). Most web-browsers can also transform XML on the fly with XSLT 1.</li>
 </ul>
-</div>
-<div id="characteristics-of-xml-schemas-and-namespaces" class="slide section level1">
+</div><div id="characteristics-of-xml-schemas-and-namespaces" class="slide section level2">
 <h1>Characteristics of XML: schemas and namespaces</h1>
 <ul>
 <li>Informally, a <em>namespace</em> is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.</li>
@@ -350,8 +339,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 </ul></li>
 <li>a namespace is just a URI; a schema is a formal specification written in a formal language</li>
 </ul>
-</div>
-<div id="our-first-complete-xml-document" class="slide section level1">
+</div><div id="our-first-complete-xml-document" class="slide section level2">
 <h1>Our first complete XML document:</h1>
 <div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot;<span class="kw">?&gt;</span>
 <span class="kw">&lt;greetings</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.example.org/greetings&quot;</span><span class="kw">&gt;</span>
@@ -365,8 +353,8 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>Attribute and value: <code>@type=&quot;enthusiastic&quot;</code></li>
 </ul>
 </div>
-<div id="characteristics-of-tei-xml-in-one-slide" class="slide section level1">
-<h1>Characteristics of TEI XMl in one slide</h1>
+<div id="tei-xml" class="titleslide slide section level1"><h1>4. TEI XML</h1></div><div id="characteristics-of-tei-xml-in-one-slide" class="slide section level2">
+<h1>Characteristics of TEI XML in one slide</h1>
 <ul>
 <li>all of XML</li>
 <li><em>must</em> be valid against the schema TEI all</li>
@@ -374,8 +362,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>&quot;valid&quot;: the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.</li>
 <li>this provides <em>interchangability</em> and a certain degree of <em>interoperability</em> (the letter is often only theoretically applicable)</li>
 </ul>
-</div>
-<div id="conformance-issues" class="slide section level1">
+</div><div id="conformance-issues" class="slide section level2">
 <h1>Conformance issues</h1>
 <p>A document is <em>TEI Conformant</em> if and only if it:</p>
 <ul>
@@ -386,21 +373,19 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <li>is documented by means of a TEI Conformant ODD file which refers to the TEI Guidelines</li>
 </ul>
 <p>or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered <em>TEI-conformable</em>).</p>
-</div>
-<div id="a-final-note-on-standardisation" class="slide section level1">
+</div><div id="a-final-note-on-standardisation" class="slide section level2">
 <h1>A final note on standardisation</h1>
 <p>Standardisation should not mean &quot;Do what I do&quot;, but rather <hi class="cImportant">&quot;Explain what you do in terms I can understand&quot;.</hi></p>
 <p>Instead of an abstract set of rules and norms, standardisation should be thought of as a <hi class="cImportant">community of practice.</hi></p>
 </div>
-<div id="editing-xml-12" class="slide section level1">
+<div id="editing-xml" class="titleslide slide section level1"><h1>5. Editing XML</h1></div><div id="editing-xml-12" class="slide section level2">
 <h1>Editing XML 1/2</h1>
 <ul>
 <li>as a hermeneutic tool, XML could be written with pen and paper</li>
 <li>on a computer it can be edited with the most simple text editing software</li>
 <li>in order to get the most out of it, the editor should be <em>syntax aware</em> (and thus support <em>code highlighting</em>) and <em>schema aware</em> (i.e. validate the XML against a schema and suggest available elements and attributes on the basis of that schema)</li>
 </ul>
-</div>
-<div id="editing-xml-22-software" class="slide section level1">
+</div><div id="editing-xml-22-software" class="slide section level2">
 <h1>Editing XML 2/2: software</h1>
 <ul>
 <li><strong>oXygen</strong> is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.
@@ -415,7 +400,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 </ul></li>
 </ul>
 </div>
-<div id="useful-links-resources" class="slide section level1">
+<div id="thank-you" class="titleslide slide section level1"><h1>Thank you!</h1></div><div id="useful-links-resources" class="slide section level2">
 <h1>Useful links / resources</h1>
 <ul>
 <li>the TEI Consortium's <a href="http://www.tei-c.org/index.xml">website</a> at http://www.tei-c.org/index.xml:

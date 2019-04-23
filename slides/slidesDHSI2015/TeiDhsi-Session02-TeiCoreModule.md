@@ -12,31 +12,31 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
 
 # Manuscripts:
 
-![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-draft.png)
 
 --------------------
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-typed.jpg)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-typed.jpg)
 
 # Postcards
 
-![Postcard, Damascus to Istanbul, 27 Sep 1916](images/postcard-ottoman2.png)
+![Postcard, Damascus to Istanbul, 27 Sep 1916](../images/postcard-ottoman2.png)
 
-![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
 
 ---------------------
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-front.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-front.jpg)
 
 # Newspapers
 
-![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab-img.jpg)
 
 ---------------------
 
-![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab-img2.jpg)
 
 # Looking at the material, what do we need to mark up?
 
@@ -336,7 +336,7 @@ The order of XML encoding does not necessarily reflect the order of the source d
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
 
 --------------
 
@@ -383,7 +383,7 @@ The order of XML encoding does not necessarily reflect the order of the source d
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
 
-![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
 
 --------------
 
@@ -620,7 +620,7 @@ Example:
 
 Consider this:
 
-![PRO FO 618/3 Damascus Draft 33, "State of affairs in Damascus relating to the new Regime", Devey to Lowther 12 Aug. 1908](images/pro-fo/618-3/DSCN9862_150dpi.jpg)
+![PRO FO 618/3 Damascus Draft 33, "State of affairs in Damascus relating to the new Regime", Devey to Lowther 12 Aug. 1908](../images/pro-fo/618-3/DSCN9862_150dpi.jpg)
 
 # Example: additions, deletions, omissions
 
@@ -720,7 +720,7 @@ Example
         <q>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي</q>
     </div>
 
-![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](images/tughra-thamarat2.png)
+![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
 
 # Simple verse
 

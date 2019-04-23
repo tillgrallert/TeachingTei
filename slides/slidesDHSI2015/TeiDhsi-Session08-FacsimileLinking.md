@@ -135,7 +135,7 @@ The actual dimensions of the object represented are not documented by the surfac
 
 # Drawing rectangular shapes
 
-![Kawkab America #55, 28 Apr 1893, p1. (English)](images/Facsimile1.jpg)
+![Kawkab America #55, 28 Apr 1893, p1. (English)](../images/Facsimile1.jpg)
 
 # Addressing the rectangular shapes as `<zone>` elements
 

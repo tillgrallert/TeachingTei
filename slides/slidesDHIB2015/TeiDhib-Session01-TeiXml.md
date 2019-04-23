@@ -20,7 +20,7 @@ When we talk about text encoding, what do we mean by a *text*? What is in a text
 
 <!-- The Ottoman constitution: Arabic translation in *al-Bashīr*, 3 August 1908 -->
 
-![Ḳānūn-i Esāsī in *al-Bashīr*, 3 August 1908](images/constitution-bashir.png)
+![Ḳānūn-i Esāsī in *al-Bashīr*, 3 August 1908](../images/constitution-bashir.png)
 
 
 <!-- # What is a text? -->
@@ -29,7 +29,7 @@ When we talk about text encoding, what do we mean by a *text*? What is in a text
 
 <!-- The Ottoman constitution: Arabic translation in *Thamarāt al-Funūn*, 27 July 1908 -->
 
-![Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](images/constitution-thamarat.png)
+![Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/constitution-thamarat.png)
 
 <!-- # What is a text? -->
 
@@ -37,35 +37,35 @@ When we talk about text encoding, what do we mean by a *text*? What is in a text
 
 <!-- The Ottoman constitution: Arabic translation in *Lisān al-Ḥāl*, 27 July 1908 -->
 
-![Ḳānūn-i Esāsī in *Lisān al-Ḥāl*, 27 July 1908](images/constitution-lisan.png)
+![Ḳānūn-i Esāsī in *Lisān al-Ḥāl*, 27 July 1908](../images/constitution-lisan.png)
 
 --------------------
 
-![Ḳānūn-i Esāsī in *al-Jinān*, 15 January 1877](images/constitution-jinan.png)
+![Ḳānūn-i Esāsī in *al-Jinān*, 15 January 1877](../images/constitution-jinan.png)
 
 <!-- # What is a text? -->
 
 -------------------
 
-![Ḳānūn-i Esāsī, 1876](images/constitution-ottoman.png)
+![Ḳānūn-i Esāsī, 1876](../images/constitution-ottoman.png)
 
 <!-- # What is a text? -->
 
 -------------------
 
-![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](images/constitution-salname1.png)
+![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](../images/constitution-salname1.png)
 
 <!-- # What is a text? -->
 
 -------------------
 
-![Three Arabic translations of the Ottoman constitution in a digital parallel edition](images/constitution-parallel-arabic.png)
+![Three Arabic translations of the Ottoman constitution in a digital parallel edition](../images/constitution-parallel-arabic.png)
 
 <!-- # What is a text? -->
 
 -------------------
 
-![Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation](images/constitution-parallel-ottoman.png)
+![Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation](../images/constitution-parallel-ottoman.png)
 
 
 # A text is not a document

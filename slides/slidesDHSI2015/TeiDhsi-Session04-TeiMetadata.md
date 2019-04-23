@@ -129,11 +129,11 @@ The TEI header has four main components:
 
 # Example source: Kawkab America #55, 28 Apr 1908
 
-![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab-img.jpg)
 
 ---------------------
 
-![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab-img2.jpg)
 
 # Example header: minimal required header
 
@@ -264,11 +264,11 @@ All electronic works need to document their source, **even 'born digital' ones**
 
 # Example 1: Kawkab America #55, 28 Apr 1908
 
-![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab-img.jpg)
 
 ---------------------
 
-![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab-img2.jpg)
 
 # Example 1: `<sourceDesc>`
 
@@ -298,7 +298,7 @@ All electronic works need to document their source, **even 'born digital' ones**
 
 <!-- # Example 2: PRO FO files
 
-![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-draft.png)
 
 # Example 2: `<sourceDesc>` -->
 

@@ -10,14 +10,21 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
 
 The slides are available at [https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/](https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/index.html).
 
-# Content of this session
+## Content of this session
 
 - What is a text?
 - Introducing the idea of mark-up
 - Introducing XML
 - Introducing the TEI
 
-# What is a text?
+# 1. Textual mark-up
+## 1. Textual mark-up
+
+In order to talk about texts, mark-up and encoding of texts, we need to understand what we mean by these basic concepts.
+
+When we talk about text encoding, what do we mean by a **text**? What is in a text and what assumptions do we make in reading them?
+
+## What is a text?
 
 ![Ḳānūn-i Esāsī in *al-Bashīr*, 3 August 1908](../images/constitution-bashir.png)
 
@@ -41,7 +48,7 @@ The slides are available at [https://www.github.com/tillgrallert/TeachingTei/sli
 ![Three Arabic translations of the Ottoman constitution in a digital parallel edition](../images/constitution-parallel-arabic.png)
 
 
-# A text is not a document
+## A text is not a document
 
 Where is the text?
 
@@ -56,7 +63,7 @@ Where is the text?
 - A **"text"** is an abstraction, created by or for a community of readers,
 which we can **encode**.
 
-# Encoding of texts
+## Encoding of texts
 
 - A text is more than a sequence of encoded glyphs or lexical tokens
     + It has a *structure* and a *communicative function*
@@ -65,7 +72,7 @@ which we can **encode**.
 
 Note: <hi class="cImportant">Only that which is explicit can be reliably found again and displayed</hi>
 
-# Mark-up: What is the point?
+## Mark-up: What is the point?
 
 - To make *explicit* (to a machine) what is *implicit* (to a person)
 - To add value by supplying *multiple annotations*
@@ -86,7 +93,7 @@ Note: <hi class="cImportant">We don't have to be limited to the view of one edit
 Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi>
  -->
 
-# Mark-up: separation of form and content
+## Mark-up: separation of form and content
 
 - *Presentational* mark-up cares more about fonts and layout than meaning
 - *Descriptive* mark-up says what things are, and leaves the rendition of them for a separate step. This is also known as *encoding* or *annotation*
@@ -94,14 +101,14 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 - It also allows easy changes of presentation across a large number of documents
 
 
-# Mark-up: some more definitions
+## Mark-up: some more definitions
 
 - mark-up makes explicit the distinctions we want to make when processing a string of bytes
 - mark-up is a way of naming and characterising the parts of a text in a formalized way
 - It's (usually) more useful to mark up what we think things *are* than what they *look* like
 
 
-# Mark-up is a scholarly activity!
+## Mark-up is a scholarly activity!
 
 - The application of mark-up to a document can be an intellectual activity
 - In deciding what mark-up to apply, and how this represents the original, one is undertaking the task of an editor
@@ -110,13 +117,14 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 - Good textual encoding is never as easy or quick as people would believe
 - Detailed document analysis is needed before encoding for the resulting mark-up to be useful
 
-# The TEI
+# 2. The TEI
+## The TEI
 
 The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form. Its chief deliverable is a set of [Guidelines](http://www.tei-c.org/Guidelines/) which specify encoding methods for machine-readable texts chiefly in the humanities, social sciences and linguistics.
 
 Established in 1987, the TEI adopted XML with P[roposal]4 in 2002.
 
-# Why the TEI?
+## Why the TEI?
 
 The TEI provides:
 
@@ -127,7 +135,7 @@ The TEI provides:
 - an integrated suite of standard stylesheets for delivering schemas and documentation in various languages and formats
 - a large and active open source style user community
 
-# Relevance
+## Relevance
 
 Why would you want those things?
 
@@ -141,7 +149,8 @@ Why would you want those things?
     + cryogenics is not the answer!
     + we need to preserve metadata as well as data
 
-# XML: what it is and why you should care
+# 3. XML
+## XML: what it is and why you should care
 
 - XML is *structured data* represented as strings of text encoded in Unicode
 - XML looks like HTML, except that:
@@ -151,7 +160,7 @@ Why would you want those things?
 - XML is application-, platform-, and vendor- independent
 - XML empowers the *content provider* and facilitates data integration
 
-# Characteristics of XML: internal structure
+## Characteristics of XML: internal structure
 
 An XML document might contain:
 
@@ -163,7 +172,7 @@ An XML document might contain:
 + **CDATA**: All text is parsed, but text in `<![CDATA[` `]]>`
 + **namespaces**: differentiate XML schemas by means of an URI
 
-# Characteristics of XML: rules
+## Characteristics of XML: rules
 
 - All (sic!) data is encoded in Unicode (UTF-8 or UTF-16)
 - **must** be well-formed:
@@ -175,7 +184,7 @@ An XML document might contain:
    + can contain xml valid against different schemas if differentiated by *namespaces*
 - can be styled for display in a web-browser using CSS (Cascading Style Sheets). Most web-browsers can also transform XML on the fly with XSLT 1.
 
-# Characteristics of XML: schemas and namespaces
+## Characteristics of XML: schemas and namespaces
 
 + Informally, a *namespace* is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.
 + a *schema* allows you to
@@ -183,7 +192,7 @@ An XML document might contain:
     * enforce structural rules such as "every chapter must begin with a heading" or "recipes must include an ingredient list"
 + a namespace is just a URI; a schema is a formal specification written in a formal language
 
-# Our first complete XML document:
+## Our first complete XML document:
 
 ```xml
 <?xml version="1.0"?>
@@ -198,8 +207,8 @@ An XML document might contain:
 - Other elements and content: `<hello>hello world!</hello>`
 - Attribute and value: `@type="enthusiastic"`
 
-
-# Characteristics of TEI XMl in one slide
+# 4. TEI XML
+## Characteristics of TEI XML in one slide
 
 - all of XML
 - *must* be valid against the schema TEI all
@@ -207,7 +216,7 @@ An XML document might contain:
   + "valid": the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.
   + this provides *interchangability* and a certain degree of *interoperability* (the letter is often only theoretically applicable)
 
-# Conformance issues
+## Conformance issues
 
 A document is *TEI Conformant* if and only if it:
 
@@ -219,20 +228,20 @@ A document is *TEI Conformant* if and only if it:
 
 or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered *TEI-conformable*).
 
-# A final note on standardisation
+## A final note on standardisation
 
 Standardisation should not mean "Do what I do", but rather <hi class="cImportant">"Explain what you do in terms I can understand".</hi>
 
 Instead of an abstract set of rules and norms, standardisation should be thought of as a <hi class="cImportant">community of practice.</hi>
 
-
-# Editing XML 1/2
+# 5. Editing XML
+## Editing XML 1/2
 
 - as a hermeneutic tool, XML could be written with pen and paper
 - on a computer it can be edited with the most simple text editing software
 - in order to get the most out of it, the editor should be *syntax aware* (and thus support *code highlighting*) and *schema aware* (i.e. validate the XML against a schema and suggest available elements and attributes on the basis of that schema)
 
-# Editing XML 2/2: software
+## Editing XML 2/2: software
 
 - **oXygen** is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.
     + provides an "author" mode that does shows only the text inside notes, styled according to CSS associated to a specific schema
@@ -241,7 +250,8 @@ Instead of an abstract set of rules and norms, standardisation should be thought
 - **Sublime Text** is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
     + [https://github.com/praveenvijayan/Sublime-Text-2-BIDI](https://github.com/praveenvijayan/Sublime-Text-2-BIDI) **CAUTION**: the plug-in rearranges Arabic to make it look correct, but the actual order of characters in the file is changed and wrong.
 
-# Useful links / resources
+# Thank you!
+## Useful links / resources
 
 - the TEI Consortium's [website](http://www.tei-c.org/index.xml) at http://www.tei-c.org/index.xml:
     + the [TEI guidelines](http://www.tei-c.org/Guidelines/P5/) at http://www.tei-c.org/Guidelines/P5/
