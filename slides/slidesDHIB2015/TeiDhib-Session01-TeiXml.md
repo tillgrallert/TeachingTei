@@ -267,7 +267,7 @@ An XML document must begin with an XML declaration which does three things:
 
 - specifies that this *is* an XML document
 - specifies which version of the XML standard it follows
-- specifies which character encoding the document uses; the default, and recommended, encoding is ‘UTF-8’ (Unicode)
+- specifies which character encoding the document uses; the default, and recommended, encoding is 'UTF-8' (Unicode)
 
 Example:
 
@@ -440,9 +440,9 @@ The Text Encoding Initiative was born into a very different world
 
 # ...but also a familiar problems
 
-- Corpus linguistics and ‘artificial intelligence’ had created a demand for large scale lexical resources in academia and beyond
+- Corpus linguistics and 'artificial intelligence' had created a demand for large scale lexical resources in academia and beyond
 - Advances in text processing were beginning to affect lexicography and document management systems (e.g. TeX, Scribe, tRoff..)
-- The Internet existed and theories about how to use it ‘hypertextually’ abounded
+- The Internet existed and theories about how to use it 'hypertextually' abounded
 - Books, articles, and even courses in something called "Computing in the Humanities" were becoming commonplace
 
 # The birth of the Text Encoding Initiative

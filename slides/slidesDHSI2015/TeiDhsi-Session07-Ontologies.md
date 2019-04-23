@@ -153,7 +153,7 @@ Example:
 
 Organizations have names as well. These are any named collection of people regarded as a single unit. An `<orgName>` can point back to an `<org>` in the header.
 
-    <p>it is debated <date notAfter="1908-10-01">now</date> among ‘<orgName ref="#CUP">Young Turkey</orgName>’ adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity.</p>
+    <p>it is debated <date notAfter="1908-10-01">now</date> among '<orgName ref="#CUP">Young Turkey</orgName>' adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity.</p>
 
     <org xml:id="CUP">
         <!-- Information about the organization -->
@@ -175,14 +175,14 @@ Organizations have names as well. These are any named collection of people regar
 # Personal relationships
 
 - The `<relation>` (relationship) element describes any kind of relationship or linkage amongst other entities. We distinguish
-    + ‘mutual’ relationships (e.g. sibling) from
+    + 'mutual' relationships (e.g. sibling) from
     + non-mutual or directed relationships (e.g. parent-of ).
 
 - The following attributes are available:
     + `@name`: supplies a name for the kind of relationship of which this is an instance
     + `@active`: identifies the 'active' participants in a non-mutual relationship, or all the participants in a mutual one
     + `@mutual`: supplies a list of participants amongst all of whom the relationship holds equally
-    + `@passive`: identifies the ‘passive’ participants in a non-mutual relationship
+    + `@passive`: identifies the 'passive' participants in a non-mutual relationship
 
 # Example
 

@@ -229,10 +229,10 @@ All elements are usually members of att.global; this class provides, among other
 
 - Model classes contain groups of elements which are allowed in the same place. e.g. if you are adding an element which is wanted wherever the `<bibl>` is allowed, add it to the `model.biblLike` class
 - Model classes are usually named with a *Like* or *Part* suffix:
-    + members of `model.pLike` are all things that ‘behave like’ paragraphs, and are permitted in the same places as paragraphs
+    + members of `model.pLike` are all things that 'behave like' paragraphs, and are permitted in the same places as paragraphs
     + members of `model.pPart` are all things which can appear within paragraphs. This class is subdivided into
         * `model.pPart.edit` elements for simple editorial intervention such as `<corr>`, `<del>` etc.
-        * `model.pPart.data` ‘data-like’ elements such as `<name>`, `<num>`, `<date>` etc.
+        * `model.pPart.data` 'data-like' elements such as `<name>`, `<num>`, `<date>` etc.
         * `model.pPart.msdesc` extra elements for manuscript description such as `<seal>` or `<origPlace>`
 
 
@@ -244,7 +244,7 @@ Simplifying wildly, one may say that the TEI recognises three kinds of element:
 - chunks: elements such as paragraphs appearing within texts or divisions, but not other chunks
 - phrase-level elements: elements such as highlighted phrases which can occur only within chunks
 
-There are ‘base model classes’ corresponding with each of these, and also with the following groupings:
+There are 'base model classes' corresponding with each of these, and also with the following groupings:
 
 - inter-level elements: elements such as lists which can appear either in or between chunks
 - components: elements which can appear directly within texts or text divisions

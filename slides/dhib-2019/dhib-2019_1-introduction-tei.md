@@ -18,7 +18,7 @@ The slides are available at [https://www.github.com/tillgrallert/TeachingTei/sli
 - Introducing the TEI
 
 # 1. Textual mark-up
-## 1. Textual mark-up
+## Textual mark-up
 
 In order to talk about texts, mark-up and encoding of texts, we need to understand what we mean by these basic concepts.
 
@@ -42,10 +42,23 @@ When we talk about text encoding, what do we mean by a **text**? What is in a te
 
 ![Ḳānūn-i Esāsī in *al-Jinān*, 15 January 1877](../images/constitution-jinan.png)
 
+-------------------
+
+![Ḳānūn-i Esāsī, 1876](../images/constitution-ottoman.png)
+
+<!-- # What is a text? -->
+
+-------------------
+
+![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](../images/constitution-salname1.png)
 
 -------------------
 
 ![Three Arabic translations of the Ottoman constitution in a digital parallel edition](../images/constitution-parallel-arabic.png)
+
+-------------------
+
+![Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation](../images/constitution-parallel-ottoman.png)
 
 
 ## A text is not a document

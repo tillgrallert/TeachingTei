@@ -30,8 +30,8 @@ TEI requires metadata to be stored inside the XML document, prefixed to the cont
 
 The TEI header was designed with two goals in mind
 
-- needs of bibliographers and librarians trying to document ‘electronic books’
-- needs of text analysts trying to document ‘coding practices’ within digital resources
+- needs of bibliographers and librarians trying to document 'electronic books'
+- needs of text analysts trying to document 'coding practices' within digital resources
 
 The result is that discussion of the header tends to be pulled in two directions...
 
@@ -153,7 +153,7 @@ Only `<fileDesc>` is required; the others are optional.
 # File description `<fileDesc>` 2
 
 - `<titleStmt>`: contains a mandatory `<title>` which identifies the electronic file (not its source!)
-- optionally followed by additional titles, and by ‘statements of responsibility’, as appropriate, using `<author>`, `<editor>`, `<sponsor>`, `<funder>`, `<principal>` or the generic `<respStmt>`
+- optionally followed by additional titles, and by 'statements of responsibility', as appropriate, using `<author>`, `<editor>`, `<sponsor>`, `<funder>`, `<principal>` or the generic `<respStmt>`
 - `<publicationStmt>`: may contain
     + plain text (e.g. to say the text is unpublished)
     + one or more `<publisher>`, `<distributor>`, `<authority>`, each followed by `<pubPlace>`, `<address>`, `<availability>`, `<idno>`
@@ -367,13 +367,13 @@ But compare:
 
 # The profile description: `<profileDesc>`
 
-A collection of descriptions, categorised only as ‘non-bibliographic’. Default members of the model.profileDescPart class include:
+A collection of descriptions, categorised only as 'non-bibliographic'. Default members of the model.profileDescPart class include:
 
 - `<creation>`: information about the origination of the intellectual content of the text, e.g. time and place
 - `<langUsage>`: information about languages, registers, writing systems etc. used in the text; **this is particularly important to our example**
 - `<calendarDesc>`: information about calendars and dating methods as used in the text; **this is particularly important to our example**
 - `<textDesc>` and `<textClass>`: classifications applied to the text by means of a list of specified criteria or by means of a collection of pointers, respectively
-- `<particDesc>` and `<settingDesc>`: information about the ‘participants’, either real or depicted, in the text
+- `<particDesc>` and `<settingDesc>`: information about the 'participants', either real or depicted, in the text
 - `<handNotes>`: information about the particular style or hand distinguished within a manuscript
 
 # Example `<creation>`
@@ -440,7 +440,7 @@ This categorization applies to the whole text. For more fine grained classificat
 
 # Detailed characterization of a text
 
-`<textDesc>` provides a description of a text in terms of its ‘Situational parameters’, a description of the situation whithin which the text was produced or experienced.
+`<textDesc>` provides a description of a text in terms of its 'Situational parameters', a description of the situation whithin which the text was produced or experienced.
 
     <textDesc n="novel">
         <channel mode="w">print; part issues</channel>
@@ -517,10 +517,10 @@ Example:
 
 # Some more metadata acronym soup
 
-- DCMI: Dublin Core Metadata Initiative: Very simple standard for describing web resources: 15 ‘lowest common
-denominator’ fields
+- DCMI: Dublin Core Metadata Initiative: Very simple standard for describing web resources: 15 'lowest common
+denominator' fields
 - RDF: Resource Description Framework: W3C standard for representing any kind of resource description using
-object oriented concepts: basis of the ‘semantic web’
+object oriented concepts: basis of the 'semantic web'
 - EAD: Encoded Archival Description: International standard for describing archival collections
 - METS: Metadata Encoding and Transcription Standard: generalised method to integrate different metadata systems
 
