@@ -1,7 +1,7 @@
 ---
-title: Tei@DHSI 2 --- TEI core module
-date: 2 March 2015
+title: "TEI@DHIB2019: The TEI core module"
 author: Till Grallert
+date: 2019-04-23
 ---
 
 # TEI core module: Introducing structural markup

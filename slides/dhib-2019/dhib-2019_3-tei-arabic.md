@@ -1,13 +1,13 @@
 ---
-title: "DH Leipzig 2015: XML, TEI, and rtl-languages"
+title: "TEI@DHIB2019: XML, TEI, and rtl-languages"
 author: Till Grallert
-date: 2015-12-13 15:07:45
+date: 2019-04-23
 ---
 
 
 Many slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015.
 
-Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)[Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
 The slides are available at [https://www.github.com/tillgrallert/TeachingTei/slides](https://www.github.com/tillgrallert/TeachingTei/slides).
 

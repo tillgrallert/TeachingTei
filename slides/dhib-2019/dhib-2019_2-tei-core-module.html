@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Till Grallert" />
+  <meta name="date" content="2019-04-23" />
+  <title>TEI@DHIB2019: The TEI core module</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../css/slidy_custom_sh.css" />
+  <meta name="copyright" content="CC BY-SA 4.0" />
+  <style type="text/css">
+  /* these styles mirror oXygen's highlight colours for XML */
+  pre.sourceCode {
+      background-color:white;
+  }
+  code.sourceCode {
+      font-weight:normal;
+  }
+  /* provide a readible font-size */
+  .sourceCode * {
+      font-size: 16px;
+  }
+  /* xml element names */
+  .xml > code > span.kw {
+  	color: #0F0F9C;
+  	font-weight: bold;
+  }
+  /* xml attribute names */
+  .xml > code > span.ot {
+  	color:#FF8041;
+  }
+  /* xml attribute values */
+  .xml > code > span.st {
+  	color:#993300;
+  }
+  /* xml comments */
+  .xml > code > span.co {
+  	color:#167116;
+  	font-style: italic;
+  }
+  /* xml computing instructions: not implemented in Pandoc syntax highlighting */
+  /* .xml > code > span {
+  	color:#9132CC;
+  } */
+  </style>
+  <style type="text/css">
+  /* styles to split a slide into columns */
+  div.c_width-60 {
+      width:66%;
+      position: relative;
+      float: left;
+  }
+  div.c_width-50 {
+      width:50%;
+      position: relative;
+      float: left;
+  }
+  div.c_width-30 {
+      width:33%;
+      position: relative;
+      float: left;
+  }
+  div.c_left {
+      display: block;
+      float:left;
+  }
+  div.c_right {
+      display: block;
+      float: right;
+  }
+  </style>
+  <style type="text/css">
+  .cImportant {
+  	color:red;
+  }
+  </style>
+  <script type="text/javascript" src="../js/slidy.js"></script>
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">TEI@DHIB2019: The TEI core module</h1>
+  <p class="author">
+Till Grallert
+  </p>
+  <p class="date">2019-04-23</p>
+</div>
+<div id="tei-core-module-introducing-structural-markup" class="slide section level1">
+<h1>TEI core module: Introducing structural markup</h1>
+<p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+</div>
+<div id="al-iqbāl" class="slide section level1">
+<h1><em>al-Iqbāl</em></h1>
+<div class="figure">
+<img src="../images/mic164_alikbal_1908-1909_0118_150dpi.jpg" alt="Front page of al-Iqbāl #257, 27 July 1908" />
+<p class="caption">Front page of <em>al-Iqbāl</em> #257, 27 July 1908</p>
+</div>
+</div>
+<div id="al-bashīr" class="slide section level1">
+<h1><em>al-Bashīr</em></h1>
+<div class="figure">
+<img src="../images/mic54_albashir_1907-19011_0171_150dpi.jpg" alt="Front page of al-Bashīr #1868, 27 July 1908" />
+<p class="caption">Front page of <em>al-Bashīr</em> #1868, 27 July 1908</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="../images/mic54_albashir_1907-19011_0175_150dpi.jpg" alt="Front page of al-Bashīr, 3 August 1908" />
+<p class="caption">Front page of <em>al-Bashīr</em>, 3 August 1908</p>
+</div>
+</div>
+<div id="lisān-al-ḥāl" class="slide section level1">
+<h1><em>Lisān al-Ḥāl</em></h1>
+<div class="figure">
+<img src="../images/na111_lisanulhal_1907-08_0912_150dpi.jpg" alt="Front page of Lisān al-Ḥāl #5773, 27 July 1908" />
+<p class="caption">Front page of <em>Lisān al-Ḥāl</em> #5773, 27 July 1908</p>
+</div>
+</div>
+<div id="thamarāt-al-funūn" class="slide section level1">
+<h1><em>Thamarāt al-Funūn</em></h1>
+<div class="figure">
+<img src="../images/TF-1908-0215_150dpi.jpg" alt="Front page of Thamarāt al-Funūn #1683, 27 July 1908" />
+<p class="caption">Front page of <em>Thamarāt al-Funūn</em> #1683, 27 July 1908</p>
+</div>
+</div>
+<div id="looking-at-the-material-what-do-we-need-to-mark-up" class="slide section level1">
+<h1>Looking at the material, what do we need to mark up?</h1>
+<ul>
+<li>Identification information, page numbers, sources</li>
+<li>&quot;chunks&quot; or divisions of text, which may contain a picture, a poem, some prose, or a combination</li>
+<li>within the chunks, we can identify formal units such as
+<ul>
+<li>a picture,</li>
+<li>a caption</li>
+<li>stanzas,</li>
+<li>lines</li>
+<li>paragraphs</li>
+<li>and more...</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-document-structure" class="slide section level1">
+<h1>The document structure</h1>
+<p>All TEI documents are structured in a particular manner. This section attempts to describe the different variations on this as briefly as possible.</p>
+</div>
+<div id="structure-of-a-tei-document" class="slide section level1">
+<h1>Structure of a TEI Document</h1>
+<p>There are two basic types of TEI document:</p>
+<ul>
+<li><code>&lt;TEI&gt;</code> contains a single TEI-conformant document, comprising a TEI header and a text, in various forms.</li>
+<li><code>&lt;teiCorpus&gt;</code> contains a TEI-encoded corpus, comprising a single corpus header and one or more <code>&lt;TEI&gt;</code> elements, each containing its own header and a text.</li>
+</ul>
+<p>The text may be in the form of:</p>
+<ul>
+<li>a <code>&lt;facsimile&gt;</code>: pictures of pages</li>
+<li>a <code>&lt;sourceDoc&gt;</code>: a pure transcription, or</li>
+<li>a <code>&lt;text&gt;</code>: an edited document</li>
+</ul>
+</div>
+<div id="tei-basic-structure" class="slide section level1">
+<h1>TEI basic structure</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;TEI</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;teiHeader&gt;</span>
+        <span class="co">&lt;!-- required --&gt;</span>
+    <span class="kw">&lt;/teiHeader&gt;</span>
+    <span class="kw">&lt;facsimile&gt;</span>
+        <span class="co">&lt;!-- optional--&gt;</span>
+    <span class="kw">&lt;/facsimile&gt;</span>
+    <span class="kw">&lt;sourceDoc&gt;</span>
+        <span class="co">&lt;!-- optional --&gt;</span>
+    <span class="kw">&lt;/sourceDoc&gt;</span>
+    <span class="kw">&lt;text&gt;</span>
+        <span class="co">&lt;!-- required if no facsimile or sourceDoc--&gt;</span>
+    <span class="kw">&lt;/text&gt;</span>
+<span class="kw">&lt;/TEI&gt;</span></code></pre></div>
+</div>
+<div id="tei-basic-structure-2" class="slide section level1">
+<h1>TEI basic structure 2</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;teiCorpus</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;teiHeader&gt;</span>
+        <span class="co">&lt;!-- required --&gt;</span>
+    <span class="kw">&lt;/teiHeader&gt;</span>
+    <span class="kw">&lt;TEI&gt;</span>
+        <span class="co">&lt;!-- required --&gt;</span>
+    <span class="kw">&lt;/TEI&gt;</span>
+    <span class="co">&lt;!-- More &lt;TEI&gt;elements --&gt;</span>
+<span class="kw">&lt;/teiCorpus&gt;</span></code></pre></div>
+</div>
+<div id="the-text-element" class="slide section level1">
+<h1>The <code>&lt;text&gt;</code> element</h1>
+<p>What is a text? (remember that one?)</p>
+<ul>
+<li>A text may be unitary or composite
+<ul>
+<li>unitary: forming an organic whole</li>
+<li>composite: consisting of several components which are in some important sense independent of each other</li>
+</ul></li>
+<li>a unitary text contains
+<ul>
+<li><code>&lt;front&gt;</code>: optional front matter</li>
+<li><code>&lt;body&gt;</code>: (required)</li>
+<li><code>&lt;back&gt;</code>: optional back matter</li>
+</ul></li>
+</ul>
+</div>
+<div id="tei-text-structure-1" class="slide section level1">
+<h1>TEI text structure 1</h1>
+<p>A simple document:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;text&gt;</span>
+    <span class="kw">&lt;front&gt;</span>
+        <span class="co">&lt;!-- optional --&gt;</span>
+    <span class="kw">&lt;/front&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+        <span class="co">&lt;!-- required --&gt;</span>
+    <span class="kw">&lt;/body&gt;</span>
+    <span class="kw">&lt;back&gt;</span>
+        <span class="co">&lt;!-- optional --&gt;</span>
+    <span class="kw">&lt;/back&gt;</span>
+<span class="kw">&lt;/text&gt;</span></code></pre></div>
+</div>
+<div id="macrostructure-composite-texts-teicorpus" class="slide section level1">
+<h1>Macrostructure: composite texts, <code>&lt;teiCorpus&gt;</code></h1>
+<p>Newspaper issues are usually grouped into volumes (or years). If we consider them as a single composite text, we could treat each issue as a <code>&lt;div&gt;</code> within it. Or (even better) we could use the <code>&lt;group&gt;</code> element:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;text</span><span class="ot"> n=</span><span class="st">&quot;35&quot;</span><span class="ot"> xml:id=</span><span class="st">&quot;v35&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;front&gt;</span>
+        <span class="co">&lt;!-- some introductory material for the current volume --&gt;</span>
+    <span class="kw">&lt;/front&gt;</span>
+    <span class="kw">&lt;group&gt;</span>
+        <span class="kw">&lt;text</span><span class="ot"> n=</span><span class="st">&quot;1869&quot;</span><span class="ot"> xml:id=</span><span class="st">&quot;v35-i1869&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;front&gt;</span>
+                <span class="co">&lt;!-- the masthead of issue 1869 --&gt;</span>
+            <span class="kw">&lt;/front&gt;</span>
+            <span class="kw">&lt;body&gt;</span>
+                <span class="co">&lt;!-- issue 1869 --&gt;</span>
+            <span class="kw">&lt;/body&gt;</span>
+        <span class="kw">&lt;/text&gt;</span>
+        <span class="kw">&lt;text</span><span class="ot"> n=</span><span class="st">&quot;1870&quot;</span><span class="ot"> xml:id=</span><span class="st">&quot;v35-i1870&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;front&gt;</span>
+                <span class="co">&lt;!-- the masthead of issue 1870 --&gt;</span>
+            <span class="kw">&lt;/front&gt;</span>
+            <span class="kw">&lt;body&gt;</span>
+                <span class="co">&lt;!-- issue 1870 --&gt;</span>
+            <span class="kw">&lt;/body&gt;</span>
+        <span class="kw">&lt;/text&gt;</span>
+    <span class="kw">&lt;/group&gt;</span>
+    <span class="kw">&lt;back&gt;</span>
+        <span class="co">&lt;!-- volume index, appendices etc. --&gt;</span>
+    <span class="kw">&lt;/back&gt;</span>
+<span class="kw">&lt;/text&gt;</span></code></pre></div>
+</div>
+<div id="the-high-level-structure" class="slide section level1">
+<h1>The high level structure</h1>
+<p>Each identifiable division within <code>&lt;text&gt;</code> is a <code>&lt;div&gt;</code> element. It can optionally be given a particular type (e.g. cartoon, verse, prose), using a free-text attribute.</p>
+<p>For example, page 1 has two divisions:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;1&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>....<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;poem&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head&gt;</span>Strange Meeting<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;lg&gt;</span>
+        <span class="kw">&lt;l&gt;</span>....<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;/lg&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="why-divisions-rather-than-pages" class="slide section level1">
+<h1>Why divisions rather than pages</h1>
+<p>Because a division can start on one page and finish on another, or cross other physical boundaries</p>
+<p>We use an empty element <code>&lt;pb/&gt;</code> to mark the boundary between pages, rather than enclosing each page in a <code>&lt;div type=&quot;page&quot;&gt;</code>.</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;5&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;poem&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head&gt;</span>Strange Meeting<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;lg&gt;</span>
+        <span class="kw">&lt;l&gt;</span>....<span class="kw">&lt;/l&gt;</span>
+        <span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;6&quot;</span><span class="kw">/&gt;</span>
+    ...
+    <span class="kw">&lt;/lg&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>...<span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="divisions-can-contain-divisions-..." class="slide section level1">
+<h1>Divisions can contain divisions ...</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;postcard&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;postmark&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;advert&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;ab&gt;</span>BUY NATIONAL <span class="kw">&lt;lb/&gt;</span>WAR BONDS<span class="kw">&lt;/ab&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;dateStamp&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;dateline&gt;</span>
+                <span class="kw">&lt;placeName&gt;</span>SCARBOROUGH<span class="kw">&lt;/placeName&gt;</span>
+                <span class="kw">&lt;lb/&gt;</span>
+                <span class="kw">&lt;time&gt;</span>6.30 PM<span class="kw">&lt;/time&gt;</span>
+                <span class="kw">&lt;lb/&gt;</span>
+            <span class="kw">&lt;/dateline&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;advert&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;ab&gt;</span>BUY NATIONAL <span class="kw">&lt;lb/&gt;</span>WAR BONDS<span class="kw">&lt;/ab&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;address&quot;</span><span class="kw">&gt;</span>
+        <span class="co">&lt;!-- &lt;address&gt; here --&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;prose&quot;</span><span class="kw">&gt;</span>
+        <span class="co">&lt;!-- text here --&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="more-about-divisions" class="slide section level1">
+<h1>More about divisions</h1>
+<ul>
+<li>generic, hierarchic subdivisions, each incomplete as a text as a whole</li>
+<li>the <code>@type</code> attribute is used to label a particular level e.g. as 'part' or 'chapter'</li>
+<li>the <span class="citation">@n</span> attribute gives a particular division a name or number (not necessarily unique)</li>
+<li>the <code>@xml:id</code> attribute gives a particular division a unique identifier</li>
+<li>Divisions must always tessellate: once &quot;down&quot; a level, you cannot pop &quot;up&quot; again within the same division (see next slide)</li>
+</ul>
+</div>
+<div id="tessellation" class="slide section level1">
+<h1>Tessellation</h1>
+<p><code>&lt;div&gt;</code>s must tesselate over the entire text</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div1&gt;</span>
+    <span class="kw">&lt;div2&gt;</span>
+        <span class="co">&lt;!-- content --&gt;</span>
+    <span class="kw">&lt;/div2&gt;</span>
+    <span class="kw">&lt;div2&gt;</span>
+        <span class="co">&lt;!-- content --&gt;</span>
+    <span class="kw">&lt;/div2&gt;</span>
+<span class="kw">&lt;/div1&gt;</span></code></pre></div>
+<p>is valid, while</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div1&gt;</span>
+    <span class="co">&lt;!-- content --&gt;</span>
+    <span class="kw">&lt;div2&gt;</span>
+        <span class="co">&lt;!-- content --&gt;</span>
+    <span class="kw">&lt;/div2&gt;</span>
+    <span class="co">&lt;!-- content --&gt;</span>
+<span class="kw">&lt;/div1&gt;</span></code></pre></div>
+<p>is <strong>invalid</strong>!</p>
+</div>
+<div id="divisions-may-have-heads-and-trailer" class="slide section level1">
+<h1>Divisions may have heads and trailer</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div&gt;</span>
+    <span class="kw">&lt;head&gt;</span>Preface<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;p&gt;</span>
+        <span class="co">&lt;!-- content of the div --&gt;</span>
+    <span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;trailer&gt;</span>...<span class="kw">&lt;/trailer&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="numbered-and-unnumbered-divisions" class="slide section level1">
+<h1>Numbered and unnumbered divisions</h1>
+<p>The level can be made explicit by using 'numbered' divs (div1, div2). Opinions vary:</p>
+<p><code>&lt;div1&gt;</code> vs. <code>&lt;div n=&quot;1&quot;&gt;</code></p>
+<ul>
+<li>numbered: the number indicates the depth of this particular division within the hierarchy, the largest such division being 'div1', any subdivision within it being 'div2', etc.</li>
+<li>unnumbered: nest recursively to indicate their hierarchic depth. (And computers can count very well!)</li>
+<li>The two styles must not be combined within a single <code>&lt;front&gt;</code>, <code>&lt;body&gt;</code>, or <code>&lt;back&gt;</code> element.</li>
+</ul>
+</div>
+<div id="groups-vs-floating-texts" class="slide section level1">
+<h1>Groups vs floating texts</h1>
+<p>The <code>&lt;group&gt;</code> element should be used to represent a collection of independent texts which is to be regarded as a single unit for processing or other purposes.</p>
+<p><code>&lt;floatingText&gt;</code> contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes.</p>
+</div>
+<div id="floating-text-example" class="slide section level1">
+<h1>Floating text example</h1>
+<p>The <code>&lt;floatingText&gt;</code> element can appear within any division level element in the same way as a paragraph.</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>She was thus ruminating, when a Gentleman enter&#39;d the Room, the Door being a jar... calling for a Candle, she beg&#39;d a thousandPardons, engaged him to sit down, and let her know, what had so long conceal&#39;d him from her Correspondence. <span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;5&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;floatingText&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+        <span class="kw">&lt;head&gt;</span>The Story of <span class="kw">&lt;hi&gt;</span>Captain Manly<span class="kw">&lt;/hi&gt;&lt;/head&gt;</span>
+        <span class="kw">&lt;p&gt;</span>
+            <span class="co">&lt;!-- Captain Manly&#39;s store here --&gt;</span>
+        <span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/floatingText&gt;</span>
+<span class="kw">&lt;pb</span><span class="ot"> n=</span><span class="st">&quot;37&quot;</span><span class="kw">/&gt;</span>
+<span class="kw">&lt;p&gt;</span>The Gentleman having finish&#39;d his Story ...
+    <span class="co">&lt;!-- more --&gt;</span>
+<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div id="document-order-vs.-xml-order" class="slide section level1">
+<h1>Document order vs. XML order</h1>
+<p>The order of XML encoding <strong>does not necessarily reflect</strong> the order of the source document. Compare:</p>
+<!-- This is a good point and should be emphasized. The example should be changed -->
+<!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
+<div class="figure">
+<img src="../images/postcard-1911-Damascus-back.jpg" alt="Postcard. Damas. La Grande Place. Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]" />
+<p class="caption">Postcard. <em>Damas. La Grande Place.</em> Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis &amp; Fils, 1911 [April 25, 1912]</p>
+</div>
+</div>
+<div class="slide section level1">
+
+<p>... to that:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;postcard&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;address&quot;</span><span class="kw">&gt;</span>
+      <span class="kw">&lt;p&gt;</span>Mr. <span class="dv">&amp;amp;</span> Mrs. Robt. Graves
+      <span class="kw">&lt;lb/&gt;</span>Skiff St.
+      <span class="kw">&lt;lb/&gt;</span>Centreville
+      <span class="kw">&lt;lb/&gt;</span>Hamden
+      <span class="kw">&lt;lb/&gt;</span> Conn.
+      <span class="kw">&lt;lb/&gt;</span>United States, America<span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;prose&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;dateline&gt;&lt;date</span><span class="ot"> when=</span><span class="st">&quot;1912-04-25&quot;</span><span class="kw">&gt;</span>Apr. 25/12<span class="kw">&lt;/date&gt;&lt;/dateline&gt;</span>
+        <span class="kw">&lt;p&gt;</span>Dear Friends,
+        <span class="kw">&lt;lb/&gt;</span>Heartiest greetings
+        <span class="kw">&lt;lb/&gt;</span>from the Holy Land.<span class="kw">&lt;/p&gt;</span>
+        <span class="kw">&lt;byline&gt;</span>Your Pastor
+        <span class="kw">&lt;lb/&gt;&lt;persName&gt;</span>Fredie Lent<span class="kw">&lt;/persName&gt;&lt;/byline&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;postmark&quot;</span><span class="kw">&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;dateStamp&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;dateline</span><span class="ot"> xml:lang=</span><span class="st">&quot;de&quot;</span><span class="kw">&gt;</span>
+                <span class="kw">&lt;placeName&gt;</span>BEIRUT<span class="kw">&lt;/placeName&gt;</span>
+                <span class="kw">&lt;lb/&gt;&lt;date</span><span class="ot"> when=</span><span class="st">&quot;1912-04-26&quot;</span><span class="kw">&gt;</span>26/4<span class="kw">&lt;/date&gt;</span>
+                <span class="kw">&lt;lb/&gt;&lt;orgName&gt;</span>Deutsche Post<span class="kw">&lt;/orgName&gt;</span>
+            <span class="kw">&lt;/dateline&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+        <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;postageStamp&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;de&quot;</span><span class="kw">&gt;</span>
+            <span class="kw">&lt;graphic&gt;</span>
+                <span class="kw">&lt;desc&gt;</span>a postage stamp<span class="kw">&lt;/desc&gt;</span>
+            <span class="kw">&lt;/graphic&gt;</span>
+            <span class="kw">&lt;add&gt;&lt;measure</span><span class="ot"> commidity=</span><span class="st">&quot;currency&quot;</span><span class="ot"> unit=</span><span class="st">&quot;frc&quot;</span><span class="ot"> quanity=</span><span class="st">&quot;0.10&quot;</span><span class="kw">&gt;</span>10 Centimes<span class="kw">&lt;/measure&gt;&lt;/add&gt;</span>
+        <span class="kw">&lt;/div&gt;</span>
+    <span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+</div>
+<div id="core-elements" class="slide section level1">
+<h1>Core elements</h1>
+<p>The <em>core</em> module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:</p>
+<ul>
+<li>paragraphs</li>
+<li>highlighting, emphasis and quotation</li>
+<li>simple editorial changes</li>
+<li>basic names numbers, dates, addresses</li>
+<li>simple links and cross-references</li>
+<li>lists, notes, annotation, indexing</li>
+<li>graphics</li>
+<li>reference systems, bibliographic</li>
+<li>citations simple verse and drama</li>
+</ul>
+</div>
+<div id="paragraphs" class="slide section level1">
+<h1>Paragraphs</h1>
+<p><code>&lt;p&gt;</code>: paragraph; marks paragraphs in prose</p>
+<ul>
+<li>Fundamental unit for prose texts</li>
+<li><code>&lt;p&gt;</code> can contain all the phrase-level elements in the core</li>
+<li><code>&lt;p&gt;</code> can appear directly inside <code>&lt;body&gt;</code> or inside <code>&lt;div&gt;</code></li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى
+<span class="kw">&lt;lb/&gt;&lt;quote&gt;</span>صدرت ارادة حضرة صاحب الخلافة العظمى
+    <span class="kw">&lt;lb/&gt;</span>بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
+    <span class="kw">&lt;lb/&gt;</span>تشكيله في القانون الاساسي الذي هو من تأسيس
+    <span class="kw">&lt;lb/&gt;</span>حضرة الخليفة الاعظم وبما انه ابلغ حكم هذه الارادة
+    <span class="kw">&lt;lb/&gt;</span>السنية الجليل الى جميع الولايات الشاهانية
+    <span class="kw">&lt;lb/&gt;</span>المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء
+    <span class="kw">&lt;lb/&gt;</span>حائزين الضفات المندرجة في <span class="kw">&lt;rs&gt;</span>القانون المذكور<span class="kw">&lt;/rs&gt;&lt;/quote&gt;</span>
+    في<span class="kw">&lt;date&gt;</span>١٠ تموز سنة ١٣٢٤<span class="kw">&lt;/date&gt;&lt;/p&gt;</span></code></pre></div>
+</div>
+<div id="highlighting" class="slide section level1">
+<h1>Highlighting</h1>
+<p>By <strong>highlighting</strong> we mean the use of any combination of typographic features (font, size, hue, etc.) in a printed or written text in order to distinguish some passage of a text from its surroundings. For words and phrases which are:</p>
+<ul>
+<li>distinct in some way (e.g. foreign, archaic, technical)</li>
+<li>emphatic or stressed when spoken</li>
+<li>not really part of the text (e.g. cross references, titles, headings)</li>
+<li>a distinct narrative stream (e.g. an internal monologue, commentary)</li>
+<li>attributed to some other agency inside or outside the text (e.g. direct speech, quotation)</li>
+<li>set apart in another way (e.g. proverbial phrases, words mentioned but not used)</li>
+</ul>
+</div>
+<div id="example-highlighting" class="slide section level1">
+<h1>Example: Highlighting</h1>
+<ul>
+<li><code>&lt;hi&gt;</code>: general purpose highlighting;</li>
+<li><code>&lt;distinct&gt;</code>: linguistically distinct</li>
+<li>Other similar elements include: <code>&lt;emph&gt;</code>, <code>&lt;mentioned&gt;</code>, <code>&lt;soCalled&gt;</code>, <code>&lt;term&gt;</code> and <code>&lt;gloss&gt;</code></li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_islamic&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>Islamic  <span class="kw">&lt;hi</span><span class="ot"> rend=</span><span class="st">&quot;italics&quot;</span><span class="kw">&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span>calendar: lunar calendar beginning the Year with 1 <span class="kw">&lt;hi</span><span class="ot"> rend=</span><span class="st">&quot;italics&quot;</span><span class="kw">&gt;</span>Muḥarram<span class="kw">&lt;/hi&gt;</span>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.<span class="kw">&lt;/p&gt;</span>
+    <span class="kw">&lt;p&gt;</span>E.g.
+        <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1257-04-01&quot;</span><span class="kw">&gt;</span>1 Rab II 1257, Sunday<span class="kw">&lt;/date&gt;</span>,
+        <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1326-02-01&quot;</span><span class="kw">&gt;</span>1 Ṣaf 1326,
+                        Thursday<span class="kw">&lt;/date&gt;</span>.
+        <span class="kw">&lt;/p&gt;</span>
+<span class="kw">&lt;/calendar&gt;</span></code></pre></div>
+</div>
+<div id="quotation" class="slide section level1">
+<h1>Quotation</h1>
+<p>Quotation marks can be used to set off text for many reasons, so the TEI has the following elements:</p>
+<ul>
+<li><code>&lt;q&gt;</code>: indicated by quotation marks</li>
+<li><code>&lt;said&gt;</code>: speech or thought</li>
+<li><code>&lt;quote&gt;</code>: passage attributed to an external source</li>
+<li><code>&lt;cit&gt;</code>: groups a quotation and citation</li>
+<li><code>&lt;bibl&gt;</code> is used to give the source of a quote</li>
+</ul>
+<p>Example <!--
+    <quote>
+        <l>... How Earth herself empowered him with her trick,</l>
+        <l>Gave him the grip and stringency of Winter,</l>
+        <l>And all the ardour of th' invincible Spring;</l>
+        <bibl>
+            <author>Wilfred Owen</author>
+            <title>Letter to Leslie Gunston / The Wrestler</title>
+            <date when="1917-07"/>
+        </bibl>
+    </quote>
+--></p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"> <span class="kw">&lt;quote&gt;</span>
+    <span class="kw">&lt;bibl&gt;</span>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى<span class="kw">&lt;/bibl&gt;</span>
+    <span class="kw">&lt;lb/&gt;</span>صدرت ارادة حضرة صاحب الخلافة العظمى
+    <span class="kw">&lt;lb/&gt;</span>بان يدعى الى الاجتماع مجلس المبعوثان المبينة كيفية
+    <span class="kw">&lt;lb/&gt;</span>تشكيله في القانون الاساسي الذي هو من تأسيس
+    <span class="kw">&lt;lb/&gt;</span>حضرة الخليفة الاعظم وبما انه ابلغ حكم هذه الارادة
+    <span class="kw">&lt;lb/&gt;</span>السنية الجليل الى جميع الولايات الشاهانية
+    <span class="kw">&lt;lb/&gt;</span>المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء
+    <span class="kw">&lt;lb/&gt;</span>حائزين الضفات المندرجة في <span class="kw">&lt;rs&gt;</span>القانون المذكور<span class="kw">&lt;/rs&gt;</span><span class="er">&lt;</span>
+    bibl&gt;في <span class="kw">&lt;date&gt;</span>١٠ تموز سنة ١٣٢٤<span class="kw">&lt;/date&gt;&lt;/bibl&gt;</span>
+<span class="er">&lt;</span>/quote&gt;</code></pre></div>
+</div>
+<div id="lists" class="slide section level1">
+<h1>Lists</h1>
+<ul>
+<li><code>&lt;list&gt;</code>: a sequence of items forming a list</li>
+<li><code>&lt;item&gt;</code>: one component of a list</li>
+<li><code>&lt;label&gt;</code>: label associated with an item</li>
+</ul>
+</div>
+<div id="example-simple-list" class="slide section level1">
+<h1>Example: simple list</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>The great <span class="kw">&lt;q&gt;</span>&#39;coup d&#39;Etat&#39;<span class="kw">&lt;/q&gt;</span> which took place in <span class="kw">&lt;placeName&gt;</span>Turkey<span class="kw">&lt;/placeName&gt;</span> on the <span class="kw">&lt;date&gt;</span>24th July<span class="kw">&lt;/date&gt;</span> occupied all minds and <span class="kw">&lt;del&gt;</span>engaged<span class="kw">&lt;/del&gt;&lt;add&gt;</span>aroused<span class="kw">&lt;/add&gt;</span> every emotion with the proclamation of the Constitution, in <span class="kw">&lt;placeName&gt;</span>Damascus<span class="kw">&lt;/placeName&gt;</span> as in all other important centres in the <span class="kw">&lt;placeName&gt;</span>Empire<span class="kw">&lt;/placeName&gt;</span>. <span class="kw">&lt;del&gt;</span>The chief <span class="kw">&lt;unclear/&gt;</span> interests<span class="kw">&lt;/del&gt;</span> <span class="kw">&lt;add&gt;</span>Among its results worthy of remark<span class="kw">&lt;/add&gt;</span> here <span class="kw">&lt;del&gt;</span>during this time<span class="kw">&lt;/del&gt;</span> were
+<span class="kw">&lt;list&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(a) celebrations and festivities<span class="kw">&lt;/item&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(b) dismissal or <span class="kw">&lt;del&gt;</span>withdrawal<span class="kw">&lt;/del&gt;&lt;add&gt;</span>resignation<span class="kw">&lt;/add&gt;</span> of
+        notoriously corrupt officials<span class="kw">&lt;/item&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(c) formation of clubs and associations<span class="kw">&lt;/item&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(d) parliamentary elections<span class="kw">&lt;/item&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(e) reforms in various governmental departments.<span class="kw">&lt;/item&gt;</span>
+    <span class="kw">&lt;item&gt;</span>(f) release or <span class="kw">&lt;del&gt;&lt;unclear/&gt;&lt;/del&gt;&lt;add&gt;</span>rehabilitation<span class="kw">&lt;/add&gt;</span>
+        <span class="kw">&lt;add&gt;&lt;del&gt;</span>made to<span class="kw">&lt;/del&gt;</span> of political exiles or persons<span class="kw">&lt;/add&gt;&lt;/item&gt;</span>
+<span class="kw">&lt;/list&gt;&lt;/p&gt;</span></code></pre></div>
+<!-- we can stop here and move to an exercise -->
+<!-- shift in topics -->
+</div>
+<div id="notes" class="slide section level1">
+<h1>Notes</h1>
+<ul>
+<li><code>&lt;note&gt;</code>: contains a note or annotation</li>
+<li>Notes can be those existing in the text, or provided by the editor of the electronic text</li>
+<li>A <span class="citation">@place</span> attribute can be used to indicate the physical location of the note</li>
+<li>Notes should usually be encoded where the identifier/mark first appears; notes can also be kept separately and point back to their location with a <span class="citation">@target</span> attribute</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;note</span><span class="ot"> place=</span><span class="st">&quot;bottom&quot;</span><span class="kw">&gt;</span>Painted by <span class="kw">&lt;persName&gt;</span>John Singer Sargent<span class="kw">&lt;/persName&gt;</span>, 1.918<span class="kw">&lt;/note&gt;</span></code></pre></div>
+</div>
+<div id="simple-editorial-changes-choice-and-friends" class="slide section level1">
+<h1>Simple editorial changes: <code>&lt;choice&gt;</code> and friends</h1>
+<ul>
+<li><code>&lt;choice&gt;</code>: groups alternative editorial encodings</li>
+<li>Errors:
+<ul>
+<li><code>&lt;sic&gt;</code>: apparent error</li>
+<li><code>&lt;corr&gt;</code>: corrected error</li>
+</ul></li>
+<li>Regularization:
+<ul>
+<li><code>&lt;orig&gt;</code>: original form</li>
+<li><code>&lt;reg&gt;</code>: regularized form</li>
+</ul></li>
+<li>Abbreviation:
+<ul>
+<li><code>&lt;abbr&gt;</code>: abbreviated form</li>
+<li><code>&lt;expan&gt;</code>: expanded form</li>
+</ul></li>
+</ul>
+</div>
+<div id="example-choice-1" class="slide section level1">
+<h1>Example: choice 1</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;dateline</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-07-27&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1908-07-14&quot;</span><span class="kw">&gt;</span>١٤ تموز
+        <span class="kw">&lt;choice&gt;</span>
+            <span class="kw">&lt;abbr&gt;</span>ش<span class="kw">&lt;/abbr&gt;</span>
+            <span class="kw">&lt;expan&gt;</span>شرقي<span class="kw">&lt;/expan&gt;</span>
+        <span class="kw">&lt;/choice&gt;</span>
+    <span class="kw">&lt;/date&gt;</span>
+    <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_gregorian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-07-27&quot;</span><span class="kw">&gt;</span>٢٧
+        <span class="kw">&lt;choice&gt;</span>
+            <span class="kw">&lt;abbr&gt;</span>غ<span class="kw">&lt;/abbr&gt;</span>
+            <span class="kw">&lt;expan&gt;</span>غربي<span class="kw">&lt;/expan&gt;</span>
+        <span class="kw">&lt;/choice&gt;</span>سنة ١٩٠٨<span class="kw">&lt;/date&gt;</span>
+<span class="kw">&lt;/dateline&gt;</span></code></pre></div>
+</div>
+<div id="example-choice-2" class="slide section level1">
+<h1>Example: choice 2</h1>
+<p>Consider: &quot;Excuse me sir, but would you like to buy a nice little dawg?&quot;</p>
+<p>We can:</p>
+<ul>
+<li>use <code>&lt;orig&gt;</code> to show that &quot;dawg&quot; is what it says, even though this is a nonstandard spelling</li>
+<li>use <code>&lt;reg&gt;</code> to show that &quot;dog&quot; is an editorially-supplied regularisation of what it says</li>
+<li>or provide both within a <code>&lt;choice&gt;</code> element to say either is a valid encoding</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml">...a nice little <span class="kw">&lt;choice&gt;&lt;orig&gt;</span>dawg<span class="kw">&lt;/orig&gt;&lt;reg&gt;</span>dog<span class="kw">&lt;/reg&gt;&lt;/choice&gt;</span>?</code></pre></div>
+</div>
+<div id="additions-deletions-and-omissions" class="slide section level1">
+<h1>Additions, Deletions, and Omissions</h1>
+<ul>
+<li><code>&lt;add&gt;</code>: addition to the text, e.g. marginal gloss</li>
+<li><code>&lt;del&gt;</code>: phrase marked as deleted in the text</li>
+<li><code>&lt;gap&gt;</code>: indicates point where material is omitted</li>
+<li><code>&lt;unclear&gt;</code>: contains text unable to be transcribed clearly</li>
+</ul>
+</div>
+<div id="example-additions-deletions-omissions" class="slide section level1">
+<h1>Example: additions, deletions, omissions</h1>
+<!-- ```xml
+<p><add place="left">My </add>
+    <del rend="stroked">It's </del>
+    <add place="above">
+        <del rend="stroked">The </del>
+    </add>subject <del rend="stroked">of</del> is War, and the
+    <unclear>pity </unclear>
+    of <del rend="stroked">it</del> War.
+    <lb/>The Poetry is in the pity.</p>
+``` -->
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;&lt;del</span><span class="ot"> rend=</span><span class="st">&quot;stroked&quot;</span><span class="kw">&gt;</span>The Many<span class="kw">&lt;/del&gt;&lt;del&gt;&lt;add</span><span class="ot"> place=</span><span class="st">&quot;above&quot;</span><span class="kw">&gt;</span>Loud<span class="kw">&lt;/add&gt;&lt;/del&gt;</span> Popular demonstrations and <span class="kw">&lt;del&gt;</span>happy<span class="kw">&lt;/del&gt;</span> <span class="kw">&lt;add&gt;</span>great<span class="kw">&lt;/add&gt;</span> manifestations <span class="kw">&lt;add&gt;</span>of joy<span class="kw">&lt;/add&gt;</span> with illuminations and street decorations <span class="kw">&lt;del&gt;</span>have been going on in all <span class="kw">&lt;unclear/&gt;</span> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no<span class="kw">&lt;/del&gt;</span> <span class="kw">&lt;add&gt;</span>throughout the city <span class="kw">&lt;del&gt;</span>from<span class="kw">&lt;/del&gt;</span> were continuous <span class="kw">&lt;date</span><span class="ot"> from=</span><span class="st">&quot;1908-07-31&quot;</span><span class="ot"> to=</span><span class="st">&quot;1908-08-11&quot;</span><span class="kw">&gt;</span>from the 31st ult.o until yesterday<span class="kw">&lt;/date&gt;</span>, some of them attended also by <span class="kw">&lt;del&gt;</span>numerous masses<span class="kw">&lt;/del&gt;&lt;add&gt;</span>throngs<span class="kw">&lt;/add&gt;</span> from neighbouring villages; though indeed few <span class="kw">&lt;add&gt;</span>present<span class="kw">&lt;/add&gt;</span> could have really appreciated at their true value the great privileges accorded. Happily scarcely a<span class="kw">&lt;/add&gt;</span> <span class="kw">&lt;add&gt;</span>slight<span class="kw">&lt;/add&gt;</span> accident<span class="kw">&lt;del&gt;</span>s<span class="kw">&lt;/del&gt;</span> occurred, though <span class="kw">&lt;del&gt;</span>with<span class="kw">&lt;/del&gt;&lt;del&gt;</span>fearing<span class="kw">&lt;/del&gt;</span> the excessive use of rifles + revolvers <span class="kw">&lt;del&gt;</span>bullets was continuous<span class="kw">&lt;/del&gt;</span> <span class="kw">&lt;add&gt;</span>was at first rather dangerous<span class="kw">&lt;/add&gt;</span>; except that a bullet broke the tramway electric wire which fell on the mob <span class="dv">&amp;amp;</span> the current killed three people <span class="dv">&amp;amp;</span> <span class="kw">&lt;sic&gt;</span>injoured<span class="kw">&lt;/sic&gt;</span> <span class="kw">&lt;del&gt;</span>three<span class="kw">&lt;/del&gt;</span> <span class="kw">&lt;add&gt;</span>two<span class="kw">&lt;/add&gt;</span> others.<span class="kw">&lt;/p&gt;</span></code></pre></div>
+<!-- further shift in topics to named entities and linking -->
+</div>
+<div id="basic-names" class="slide section level1">
+<h1>Basic names</h1>
+<ul>
+<li><code>&lt;name&gt;</code>: a name in the text, contains a proper noun or noun phrase</li>
+<li><code>&lt;rs&gt;</code>: a general-purpose name or referencing string</li>
+</ul>
+<p>The <span class="citation">@type</span> attribute is useful for categorizing these, and they both also have <span class="citation">@key</span>, <span class="citation">@ref</span>, and <span class="citation">@nymRef</span> attributes.</p>
+</div>
+<div id="addresses" class="slide section level1">
+<h1>Addresses</h1>
+<ul>
+<li><code>&lt;email&gt;</code>: an electronic mail address</li>
+<li><code>&lt;address&gt;</code>: a postal address</li>
+<li><code>&lt;addrLine&gt;</code>: a non-specific address line</li>
+<li><code>&lt;street&gt;</code>: a full street address</li>
+<li><code>&lt;postCode&gt;</code>: a postal (or zip) code</li>
+<li><code>&lt;postBox&gt;</code>: a postal box number</li>
+<li><code>&lt;name&gt;</code> can also be used</li>
+<li>and the 'namesdates' module extends this with more geographic names</li>
+</ul>
+</div>
+<div id="basic-numbers-and-measures" class="slide section level1">
+<h1>Basic numbers and measures</h1>
+<ul>
+<li><code>&lt;num&gt;</code>: marks a number of any sort</li>
+<li><code>&lt;measure&gt;</code>: marks a quantity or commodity</li>
+<li><code>&lt;measureGrp&gt;</code>: groups specifications relating to a single object</li>
+<li>While <code>&lt;num&gt;</code> has simple <span class="citation">@type</span> and <span class="citation">@value</span> attributes, <code>&lt;measure&gt;</code> has <span class="citation">@type</span>, <span class="citation">@quantity</span>, <span class="citation">@unit</span> and <span class="citation">@commodity</span> attributes</li>
+</ul>
+<p>Example: numbers and measures</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;l&gt;</span>With a <span class="kw">&lt;num</span><span class="ot"> value=</span><span class="st">&quot;1000&quot;</span><span class="kw">&gt;</span>thousand<span class="kw">&lt;/num&gt;</span> pains that vision&#39;s face was grained;<span class="kw">&lt;/l&gt;</span>
+... only <span class="kw">&lt;measure</span><span class="ot"> type=</span><span class="st">&quot;distance&quot;</span><span class="ot"> unit=</span><span class="st">&quot;m&quot;</span><span class="ot"> quantity=</span><span class="st">&quot;3218.69&quot;</span><span class="kw">&gt;</span>two miles<span class="kw">&lt;/measure&gt;</span> from the front....</code></pre></div>
+</div>
+<div id="dates" class="slide section level1">
+<h1>Dates</h1>
+<ul>
+<li><code>&lt;date&gt;</code>: contains a date in any format and includes a <span class="citation">@when</span> attribute for a regularised form and a <span class="citation">@calendar</span> attribute to specify what calendar system</li>
+<li><code>&lt;time&gt;</code>: contains a time in any format and includes a <span class="citation">@when</span> attribute for a regularised form</li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;date</span><span class="ot"> when=</span><span class="st">&quot;1917-07&quot;</span><span class="kw">&gt;</span>July 1917.<span class="kw">&lt;lb/&gt;</span> Wednesday<span class="kw">&lt;/date&gt;</span></code></pre></div>
+</div>
+<div id="simple-linking" class="slide section level1">
+<h1>Simple Linking</h1>
+<ul>
+<li><code>&lt;ptr&gt;</code>: defines a pointer to another location</li>
+<li><code>&lt;ref&gt;</code>: defines a reference to another location, with optional linking text</li>
+<li>Both elements have:
+<ul>
+<li><span class="citation">@target</span> attribute taking a URI reference</li>
+<li><span class="citation">@cRef</span> attribute for canonical referencing schemes</li>
+</ul></li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml">See <span class="kw">&lt;ref</span><span class="ot"> target=</span><span class="st">&quot;#Section12&quot;</span><span class="kw">&gt;</span>section 12 on page 34<span class="kw">&lt;/ref&gt;</span>.
+See <span class="kw">&lt;ptr</span><span class="ot"> target=</span><span class="st">&quot;#Section12&quot;</span><span class="kw">/&gt;</span>.
+The <span class="kw">&lt;ref</span><span class="ot"> target=</span><span class="st">&quot;http://www.bbc.co.uk/&quot;</span><span class="kw">&gt;</span>BBC web site<span class="kw">&lt;/ref&gt;</span> has a good sports section</code></pre></div>
+</div>
+<div id="indexing" class="slide section level1">
+<h1>Indexing</h1>
+<ul>
+<li>If converting an existing index, use nested lists.</li>
+<li>For auto-generated indexes:
+<ul>
+<li><code>&lt;index&gt;</code> (marks an index entry) with optional <span class="citation">@indexName</span> attribute</li>
+<li>The <code>&lt;term&gt;</code> element is used to mark a term inside an <code>&lt;index&gt;</code> element</li>
+<li>The <code>&lt;index&gt;</code> element can self-nest for hierarchical index entries</li>
+</ul></li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p&gt;</span>Last week I wrote (to order) a strong <span class="kw">&lt;lb/&gt;</span>bit of Blank<span class="kw">&lt;index&gt;</span>
+    <span class="kw">&lt;term&gt;</span>Verse<span class="kw">&lt;/term&gt;</span>
+    <span class="kw">&lt;index&gt;</span>
+        <span class="kw">&lt;term&gt;</span>Blank Verse<span class="kw">&lt;/term&gt;</span>
+    <span class="kw">&lt;/index&gt;</span>
+<span class="kw">&lt;/index&gt;</span>:<span class="kw">&lt;/p&gt;</span></code></pre></div>
+</div>
+<div id="graphics" class="slide section level1">
+<h1>Graphics</h1>
+<ul>
+<li><code>&lt;graphic&gt;</code>: indicates the location of an inline graphic, illustration, or figure</li>
+<li><code>&lt;binaryObject&gt;</code>: encoded binary data embedding a graphic or other object</li>
+<li>The figures module provides <code>&lt;figure&gt;</code> and <code>&lt;figDesc&gt;</code> for more complex graphics</li>
+</ul>
+<p>Example</p>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;head&gt;</span>تعريب الفرمان العالي السلطاني<span class="kw">&lt;/head&gt;</span>
+    <span class="kw">&lt;figure&gt;</span>
+        <span class="kw">&lt;graphic</span><span class="ot"> url=</span><span class="st">&quot;#facs-2-1-z-1&quot;</span><span class="kw">/&gt;</span>
+        <span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>The Ottoman Tughra<span class="kw">&lt;/head&gt;</span>
+        <span class="kw">&lt;figDesc&gt;</span>Reproduction of the Ottoman coat of arms / Sultanic seal<span class="kw">&lt;/figDesc&gt;</span>
+    <span class="kw">&lt;/figure&gt;</span>
+    <span class="kw">&lt;q&gt;</span>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي<span class="kw">&lt;/q&gt;</span>
+<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<div class="figure">
+<img src="../images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" />
+<p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+</div>
+</div>
+<div id="simple-verse" class="slide section level1">
+<h1>Simple verse</h1>
+<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;lg</span><span class="ot"> type=</span><span class="st">&quot;stanza&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;l&gt;</span>It seemed that out of battle I escaped<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Down some profound dull tunnel, long since scooped<span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Through granites which titanic wars had groined.<span class="kw">&lt;/l&gt;</span>
+<span class="kw">&lt;/lg&gt;</span>
+<span class="kw">&lt;lg</span><span class="ot"> type=</span><span class="st">&quot;stanza&quot;</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Yet also there encumbered sleepers groaned, <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Too fast in thought or death to be bestirred. <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Then, as I probed them, one sprang up, and stared <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>With piteous recognition in fixed eyes, <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>Lifting distressful hands, as if to bless. <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>And by his smile, I knew that sullen hall,--- <span class="kw">&lt;/l&gt;</span>
+    <span class="kw">&lt;l&gt;</span>By his dead smile I knew we stood in Hell.<span class="kw">&lt;/l&gt;</span>
+<span class="kw">&lt;/lg&gt;</span></code></pre></div>
+</div>
+<div id="next" class="slide section level1">
+<h1>Next</h1>
+<p>And now we're going to move on to another exercise where you get to apply some of the more structural elements you have learned about.</p>
+<!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
+</div>
+</body>
+</html>

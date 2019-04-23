@@ -1,5 +1,5 @@
 ---
-title: "TEI@DHIB2019: A brief introduction to XML and TEI"
+title: "TEI@DHIB2019: Brief introduction to XML and TEI"
 author: Till Grallert
 date: 2019-04-23
 ---
@@ -63,14 +63,14 @@ When we talk about text encoding, what do we mean by a **text**? What is in a te
 
 ## A text is not a document
 
-Where is the text?
+### Where is the text?
 
 - in the shape of letters and their layout?
 - in the original from which this copy derives?
 - in the stories we read into it?
 - or in its author's intentions?
 
-**TEI's definition**:
+### TEI's definition
 
 - A **"document"** is something that exists in the world, which we can **digitize**.
 - A **"text"** is an abstraction, created by or for a community of readers,
