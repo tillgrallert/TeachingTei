@@ -8,21 +8,95 @@
    http://www.w3.org/Consortium/Legal/copyright-software
 */
 
+html {
+  height: 100%;
+}
 
 body {
-  /*margin: 0 0 0 0;*/
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 0 0;
   padding: 0 0 0 0;
   width: 100%;
   height: 100%;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; 
-  font-size: 12px;
+  /*font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; 
+  font-size: 12px;*/
   /* line-height: 1.2; */
   word-wrap: break-word;
+}
+
+/* while on screen slides should be black on white, it should be the opposite on projectors */
+@media projector {
+  body {
+    background-color: black;
+    color:white;
+  }
+  pre {
+    background-color: white;
+    color: black;   
+  }
+}
+
+/******************
+set fonts
+*******************/
+body {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; 
+  /*font-family: "American Typewriter";*/
+  /*font-family: "Gentium Plus";*/
+  font-weight: 200;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5 {
+  /*font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;*/
+  font-family: "American Typewriter","Lucida Sans Typewriter","Lucida Console",monaco,"Bitstream Vera Sans Mono",monospace;
+  font-weight:lighter;
+}
+
+p,ol,ul,span {}
+
+/**
+highlights: <em> is for transcribed terms, <strong> for emphasis;
+**/
+
+em {
+  /*font-family: "Gentium Plus";
+  /*font-family: Georgia;*/
+  font-style: italic;
+  font-weight: lighter;
+}
+
+strong {
+  font-style: italic;
+  font-weight: lighter;
+  border-bottom: 2px dotted #F96827;
+}
+
+/******************
+set colours
+*******************/
+
+
+/******************
+header and footer to be displayed on all slides
+*******************/
+div.c_header, div.c_footer {
+  display: block;
+  position: fixed;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+div.c_header {
+  top: 0px;
+  height: 20px;
+}
+footer, div.c_footer {
+  top: auto;
+  bottom: 1.2em;
+  height: 1.2em;
+  font-size: 60%;
 }
 
 div.toolbar {
@@ -38,6 +112,8 @@ div.toolbar {
 }
 
 div.toolbar span.copyright {
+  /*display: inline-block;
+  text-align: center;*/
   color: black;
   margin-left: 0.5em;
 }
@@ -80,7 +156,7 @@ div.slidy_toc {
   font-size: 60%;
 }
 
-div.slidy_toc .toc_heading {
+div.slidy_toc .toc-heading {
   text-align: center;
   width: 100%;
   margin: 0;
@@ -90,9 +166,14 @@ div.slidy_toc .toc_heading {
   border-bottom-width: 1px;
 }
 
+/* basic styling for all slides */
 div.slide {
   z-index: 20;
-  margin: 0 0 0 0;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 20px;
@@ -105,8 +186,9 @@ div.slide {
   right: 0;
   /*line-height: 120%;*/
   background-color: transparent;
-  max-width: 80%;
-  margin: auto;
+  /* width should be in em dashes*/
+  max-width: 40em;
+  /*margin: auto;*/
 }
 
 div.background {
@@ -127,28 +209,38 @@ div.slide.titlepage h1 {
   margin-right: 0;
 }
 
-/*div.slide h1 {
+
+/* h1 needs to override the standard CSS */
+div.slide h1 {
   padding-left: 0;
-  padding-right: 20pt;
+  padding-right: 0;
   padding-top: 4pt;
   padding-bottom: 4pt;
   margin-top: 0;
   margin-left: 0;
-  margin-right: 60pt;
+  margin-right: 0;
   margin-bottom: 0.5em;
   display: block; 
   font-size: 160%;
   line-height: 1.2em;
   background: transparent;
-}*/
+}
 
-div.slide h1,h2,h3,h4 {
+
+
+/*****************
+heads
+******************/
+
+/* title and dividing slides */
+/* put h1 in the center of the slide */
+div.title-slide h1,
+div.level1 h1 {
+  font-size: 2em;
+}
+
+h1,h2,h3,h4 {
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  /* font-family:"Helvetica Neue"; */
-  font-family: "American Typewriter";
-  font-weight:lighter;
 }
 
  h1 {
@@ -174,6 +266,50 @@ div.slide h1,h2,h3,h4 {
   font-size: 1em;
 }
 
+/******************
+levels of slides
+******************/
+
+div.title-slide,
+div.level1 {
+  padding-top: 100px;
+  padding-bottom: 100px; 
+}
+
+/******************
+links
+******************/
+a {
+  text-decoration: none
+}
+a img { 
+  border-width: 0; 
+  border-style: none 
+}
+
+/*a:visited { color: navy }
+a:link { color: navy }
+a:hover { color: red; text-decoration: underline }
+a:active { color: red; text-decoration: underline }*/
+
+a, a:link {
+  color: #F46A00 /*!important*/;
+  /*text-decoration: none; */
+}
+a:visited {
+  color: #a84900;
+  /*text-decoration: none; */
+}
+a:hover, a:active {
+  color: #8DB300;
+  /*text-decoration: none; */
+}
+
+
+.toolbar a:link {color: blue}
+.toolbar a:visited {color: blue}
+.toolbar a:active {color: red}
+.toolbar a:hover {color: red}
 
 
 @media screen and (max-device-width: 1024px)
@@ -195,38 +331,104 @@ div.slide h1,h2,h3,h4 {
 
 div.toc-heading {
   width: 100%;
+  display: inline-block;
+  height: auto;
   border-bottom: solid 1px rgb(180,180,180);
   margin-bottom: 1em;
   text-align: center;
 }
 
-img {
+/****************
+images and figures
+*****************/
+img, iframe {
    /* image-rendering: optimize-quality; */
    /* width: 100%; */
     margin-top: 1em;
-    background-color: rgba(0,0,0,0.04);
-    border-radius: 15px;
+    background-color: white;/*rgba(0,0,0,0.04);*/
+    border-radius: 5px;
     box-shadow: 2px 2px 5px #000;
     border:gray solid 1px;
 }
 
 div.figure {
     width:100%;
+    padding:0;
 }
 div.figure p.caption {
     position:relative;
-      float:left;
+    float:right;
+    text-align: right;
     top:2em;
     width:15%;
-    font-size:0.5em;
+    min-width: 180px;
+    font-size:0.6em;
     font-weight:lighter;
 }
 div.figure img {
     float:right;
-    width:80%;
+    /*max-height: 80%;*/
+    max-height: 600px;
+    max-width:80%;
 }
 
-pre {
+img {
+  max-height: 600px;
+  max-width: 100%;
+}
+
+/* external content, including local html pages */
+iframe {
+  display: block;
+  width: 90%;
+  height: 80%;
+  /* center the iframe */
+  margin-left: auto;
+  margin-right: auto;
+  scrolling: auto;
+  scroll-behavior: auto;
+  /*border:none;*/
+}
+
+.size-80 {
+  display: block;
+  /*width: 80%;*/
+  height: 80%;
+}
+
+/*****************
+columns
+******************/
+
+div.c_width-60 {
+    width:66%;
+    position: relative;
+    float: left;
+}
+div.c_width-50 {
+    width:50%;
+    position: relative;
+    float: left;
+}
+div.c_width-30 {
+    width:33%;
+    position: relative;
+    float: left;
+}
+div.c_left {
+    display: block;
+    float:left;
+}
+div.c_right {
+    display: block;
+    float: right;
+}
+
+/*****************
+code
+******************/
+
+/*pre {
  font-size: 80%;
  font-weight: normal;
  line-height: 100%;
@@ -235,15 +437,14 @@ pre {
  padding-left: 1em;
  padding-right: 1em;
  border-style: solid;
- border-left-width: thin;
+ border-left-width: 1em;
  border-top-width: thin;
  border-right-width: thin;
  border-bottom-width: thin;
  border-color: #95ABD0;
- border-radius: 3px;
  color: #00428C;
  background-color: #E4E5E7;
-}
+}*/
 
 /*code, kbd, pre, samp {
   font-family: monospace, monospace;
@@ -264,14 +465,14 @@ pre {
   border: 0;
 }*/
 
-/*pre {
+pre {
   white-space: pre-wrap;
   padding:0;
   margin: 0;
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
 
-}*/
+}
 
 h1>code{
   background: transparent;
@@ -300,26 +501,90 @@ p.copyright { font-size: smaller }
 .center { text-align: center }
 .footnote { font-size: smaller; margin-left: 2em; }
 
-a img { border-width: 0; border-style: none }
 
-a:visited { color: navy }
-a:link { color: navy }
-a:hover { color: red; text-decoration: underline }
-a:active { color: red; text-decoration: underline }
+/**********
+lists
+***********/
 
-a {text-decoration: none}
-.toolbar a:link {color: blue}
-.toolbar a:visited {color: blue}
-.toolbar a:active {color: red}
-.toolbar a:hover {color: red}
+ul, ol {
+  font-style: normal;
+}
 
 ul { list-style-type: circle; }
 ul ul { list-style-type: disc; }
 ul ul ul { list-style-type: circle; }
 ul ul ul ul { list-style-type: disc; }
-li { margin-left: 0.5em; margin-top: 0.5em; }
-li li { font-size: 85%; font-style: normal }
-li li li { font-size: 85%; font-style: normal }
+
+
+ul li { 
+  list-style: circle;
+  /*margin: 0.1em 0em 0.6em 0;
+  padding: 0 0 0 0;
+  line-height: 140%;*/
+}
+
+li ul li { 
+  /*font-size: 85%; */
+  font-style: normal;
+  list-style-type: disc;
+ /* background: transparent;
+  padding: 0 0 0 0;*/
+}
+li li ul li { 
+  /*font-size: 85%; */
+  font-style: normal;
+  list-style-type: circle;
+  /*background: transparent;
+  padding: 0 0 0 0;*/
+}
+li li li ul li {
+  font-style: normal;
+  list-style-type: disc;
+  /*background: transparent;
+  padding: 0 0 0 0;*/
+}
+li { 
+  margin-left: 0.5em; 
+  margin-top: 0.5em; 
+  font-size: inherit; 
+  font-style: normal;
+}
+li li { 
+  font-size: inherit; 
+  font-style: normal;
+   }
+li li li { 
+  font-size: inherit; 
+  font-style: normal; }
+
+/*ul {
+  margin: 0.5em 1.5em 0.5em 1.5em;
+  padding: 0;
+}*/
+
+ol {
+  margin: 0.5em 1.5em 0.5em 1.5em;
+  padding: 0;
+}
+
+
+
+ol li { 
+  margin: 0.1em 0em 0.6em 1.5em;
+  padding: 0 0 0 0px;
+  line-height: 140%;
+  list-style-type: decimal;
+}
+
+
+li ol li {
+  list-style-type: decimal;
+}
+
+
+li li ol li {
+  list-style-type: decimal;
+}
 
 /*this is to accomodated the snipped highlight js*/
 pre ul li {
@@ -353,65 +618,35 @@ p.subhead { font-weight: bold; margin-top: 2em; }
 .smaller { font-size: smaller }
 .bigger { font-size: 130% }
 
+/*
+tables
+*/
+
+tr:hover td {
+  /*background-color: red; */
+  border-top-color: #F46A00;
+  border-bottom-color: #F46A00;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-top-style: solid;
+}
+
 td,th { padding: 0.2em }
 
-/*ul {
-  margin: 0.5em 1.5em 0.5em 1.5em;
-  padding: 0;
-}*/
+/*
+highlight mouse-over on tables
+*/
 
-ol {
-  margin: 0.5em 1.5em 0.5em 1.5em;
-  padding: 0;
-}
-
-ul { list-style-type: circle;}
-ul ul { list-style-type: disc; }
-ul ul ul { list-style-type: circle; }
-ul ul ul ul { list-style-type: disc; }
-
-/*ul li { 
-  list-style: circle;
-  margin: 0.1em 0em 0.6em 0;
-  padding: 0 0 0 0;
-  line-height: 140%;
-}*/
-
-ol li { 
-  margin: 0.1em 0em 0.6em 1.5em;
-  padding: 0 0 0 0px;
-  line-height: 140%;
-  list-style-type: decimal;
-}
-
-li ul li { 
-  font-size: 85%; 
-  font-style: normal;
-  list-style-type: disc;
-  background: transparent;
-  padding: 0 0 0 0;
-}
-/*li li ul li { 
-  font-size: 85%; 
-  font-style: normal;
-  list-style-type: circle;
-  background: transparent;
-  padding: 0 0 0 0;
-}
-li li li ul li {
-  list-style-type: disc;
-  background: transparent;
-  padding: 0 0 0 0;
-}*/
-
-li ol li {
-  list-style-type: decimal;
+.focus {
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
 }
 
 
-li li ol li {
-  list-style-type: decimal;
-}
+
+
 
 /*
  setting class="outline on ol or ul makes it behave as an
@@ -490,13 +725,6 @@ div.initial_prompt { display: none; visibility: hidden }
      border-top-width: thin;
      border-top-color: black;
   }
-
-@media projection  {
-  body {
-    color: white;
-    background-color: black;
-  }
-}
 
 @media screen {
   .hidden { display: none; visibility: visible }
