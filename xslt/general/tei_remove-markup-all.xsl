@@ -51,6 +51,10 @@
         <xsl:apply-templates select="child::node()[1]" mode="mClean"/>
     </xsl:template>
     
+    <xsl:template match="text()" mode="mClean">
+        <xsl:value-of select="normalize-space(.)"/>
+    </xsl:template>
+    
     <!-- strip all stand-off mark-up from the teiHeader -->
     <xsl:template match="profileDesc | particDesc"/>
     
@@ -72,6 +76,4 @@
     
     <!-- strip references to facsimiles from the entire file -->
     <xsl:template match="facsimile"/>
-  
-    
 </xsl:stylesheet>
