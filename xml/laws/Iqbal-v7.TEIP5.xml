@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" change="#d2e320" xml:lang="">
+   <teiHeader xml:lang="en" change="#d2e309" xml:id="teiHeader_1.d2e6">
+      <fileDesc change="#d2e309 #d2e320" xml:id="fileDesc_1.d2e8" xml:lang="en">
+         <titleStmt change="#d2e309 #d2e320" xml:id="titleStmt_1.d2e10" xml:lang="en">
+            <title xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_1.d2e12">al-Iqbāl, volume 7, 1908</title>
+            <title type="sub" change="#d2e309 #d2e320" xml:id="title_2.d2e15" xml:lang="en">Digital Edition</title>
+            <respStmt change="#d2e309 #d2e320" xml:id="respStmt_1.d2e18" xml:lang="en">
+               <resp change="#d2e309 #d2e320" xml:id="resp_1.d2e20" xml:lang="en">TEI version</resp>
+               <persName change="#d2e309 #d2e320" xml:id="persName_1.d2e23" xml:lang="en">Till Grallert</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt xml:id="publicationStmt_1.d1e61" xml:lang="en">
+                <authority xml:id="authority_1.d1e63" xml:lang="en">
+                    <persName xml:id="persName_4.d1e65" xml:lang="en">Till Grallert</persName>
+                </authority>
+                <pubPlace xml:id="pubPlace_1.d1e69" xml:lang="en">Beirut</pubPlace>
+                <date when="2015" xml:id="date_1.d1e72" xml:lang="en">2015</date>
+                <availability status="restricted" xml:id="availability_1.d1e75" xml:lang="en">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/" xml:id="licence_1.d1e77" xml:lang="en">Distributed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</licence>
+                </availability>
+             </publicationStmt>
+         <sourceDesc change="#d2e309 #d2e320" xml:id="sourceDesc_1.d2e49" xml:lang="en">
+            <bibl change="#d2e309 #d2e320" xml:id="bibl_1.d2e51" xml:lang="en">
+               <title level="j" xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_3.d2e53">al-Iqbāl</title>
+               <title level="j" xml:lang="ar" change="#d2e309" xml:id="title_4.d2e56">الاقبال </title>
+            </bibl>
+            <biblFull change="#d2e309 #d2e320" xml:id="biblFull_1.d2e60" xml:lang="en">
+               <titleStmt change="#d2e309 #d2e320" xml:id="titleStmt_2.d2e62" xml:lang="en">
+                  <title level="j" xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_5.d2e64">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar" change="#d2e309" xml:id="title_6.d2e67">الاقبال </title>
+               </titleStmt>
+               <publicationStmt xml:lang="en" change="#d2e309" xml:id="publicationStmt_2.d2e71">
+                  <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="publisher_1.d2e73">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                  <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="publisher_2.d2e76">Muḥammad al-Jisr</publisher>
+                  <date notAfter="1929-12-31" notBefore="1902-01-01" change="#d2e309 #d2e320" xml:id="date_2.d2e79" xml:lang="en">Published between 1902 and
+                     1929</date>
+                  <pubPlace change="#d2e309 #d2e320" xml:id="pubPlace_2.d2e82" xml:lang="en">Beirut</pubPlace>
+                  <availability change="#d2e309 #d2e320" xml:id="availability_2.d2e85" xml:lang="en">
+                     <p change="#d2e309 #d2e320" xml:id="p_1.d2e87" xml:lang="en">Microfilm copies of al-Iqbāl, held by the American University in Beirut</p>
+                  </availability>
+               </publicationStmt>
+            </biblFull>
+            <biblStruct change="#d2e309 #d2e320" xml:id="biblStruct_1.d2e93" xml:lang="en">
+               <monogr change="#d2e309 #d2e320" xml:id="monogr_1.d2e95" xml:lang="en">
+                  <title level="j" xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_7.d2e97">al-Iqbāl</title>
+                  <title level="j" xml:lang="ar" change="#d2e309" xml:id="title_8.d2e100">الاقبال </title>
+                  <imprint change="#d2e309 #d2e320" xml:id="imprint_1.d2e103" xml:lang="en">
+                     <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="publisher_3.d2e105">ʿAbd al-Bāsiṭ al-Unsī</publisher>
+                     <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="publisher_4.d2e108">Muḥammad al-Jisr</publisher>
+                     <date notAfter="1929-12-31" notBefore="1902-01-01" change="#d2e309 #d2e320" xml:id="date_3.d2e111" xml:lang="en">Published between 1902 and
+                        1929</date>
+                     <biblScope unit="vol" change="#d2e309 #d2e320" xml:id="biblScope_1.d2e114" xml:lang="en">7</biblScope>
+                     <pubPlace change="#d2e309 #d2e320" xml:id="pubPlace_3.d2e117" xml:lang="en">Beirut</pubPlace>
+                  </imprint>
+               </monogr>
+               <idno type="class-mark" change="#d2e309 #d2e320" xml:id="idno_1.d2e122" xml:lang="en">Mic-Na:164</idno>
+            </biblStruct>
+            
+
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc change="#d2e309 #d2e320" xml:id="encodingDesc_1.d2e128" xml:lang="en">
+         <projectDesc change="#d2e309 #d2e320" xml:id="projectDesc_1.d2e130" xml:lang="en">
+            <p change="#d2e309 #d2e320" xml:id="p_2.d2e132" xml:lang="en">The TEI file was produced for teaching a course on the basics of scholarly encoding using TEI P5 and XML.</p>
+         </projectDesc>
+         <editorialDecl change="#d2e309 #d2e320" xml:id="editorialDecl_1.d2e136" xml:lang="en">
+            <p change="#d2e309 #d2e320" xml:id="p_3.d2e138" xml:lang="en">providing information on our decisions concerning the actual transcription of a
+               newspaper structure into a TEI P5 XML file</p>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc change="#d2e309 #d2e320" xml:id="profileDesc_1.d2e143" xml:lang="en">
+         <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+         <calendarDesc change="#d2e309 #d2e320" xml:id="calendarDesc_1.d2e147" xml:lang="en">
+            <calendar change="#d2e309 #d2e320" xml:id="calendar_1.d2e149" xml:lang="en">
+               <p change="#d2e309 #d2e320" xml:id="p_4.d2e151" xml:lang="en">Following the hegemonial approach of standards rooted in the English language, the
+                  Gregorian calendar is presumed as the norm and must not be specified.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_5.d2e154" xml:lang="en">The @when attribute always provides W3C dates, while the @when-custom attribute
+                  follows the inherent logic of the chosen calendar.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_6.d2e157" xml:lang="en">E.g. <date when="1841-05-23" change="#d2e309 #d2e320" xml:id="date_4.d2e159" xml:lang="en">23 May 1841, Sunday</date>, <date when="1908-03-05" change="#d2e309 #d2e320" xml:id="date_5.d2e162" xml:lang="en">5
+                     Mar 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_islamic" change="#d2e320" xml:lang="en">
+               <p change="#d2e309 #d2e320" xml:id="p_7.d2e169" xml:lang="en">Islamic <hi change="#d2e309 #d2e320" xml:id="hi_1.d2e171" xml:lang="en">hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                  Muḥarram. Dates differ between locations as the beginning of the month is based on
+                  sightings of the new moon.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_8.d2e175" xml:lang="en">E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01" change="#d2e309 #d2e320" xml:id="date_6.d2e177" xml:lang="en">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01" change="#d2e309 #d2e320" xml:id="date_7.d2e180" xml:lang="en">1 Ṣaf 1326, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_julian" change="#d2e320" xml:lang="en">
+               <p change="#d2e309 #d2e320" xml:id="p_9.d2e187" xml:lang="en">Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi change="#d2e309 #d2e320" xml:id="hi_2.d2e189" xml:lang="en">rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi change="#d2e309 #d2e320" xml:id="hi_3.d2e192" xml:lang="en">sharqī</hi>.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_10.d2e196" xml:lang="en">All solar calendars add an intercalated 366th day every fourth (and, in the case
+                  of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
+                  last day of the old Julian calendar). The Gregorian calendar suppresses this rule
+                  in centesimal years that cannot be divided by 400. This difference creates a
+                  growing offset between Gregorian and Julian calendars: while 1900 R was a leap
+                  year, 1900 was not, which in turn caused the difference between the Gregorian
+                  calendar, on the one hand, and the <hi change="#d2e309 #d2e320" xml:id="hi_4.d2e198" xml:lang="en">mālī</hi> and <hi change="#d2e309 #d2e320" xml:id="hi_5.d2e201" xml:lang="en">rūmī</hi> calendars, on
+                  the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
+                  (13 March 1900) onwards.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_11.d2e205" xml:lang="en">E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11" change="#d2e309 #d2e320" xml:id="date_8.d2e207" xml:lang="en">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21" change="#d2e309 #d2e320" xml:id="date_9.d2e210" xml:lang="en">21 Shub 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_ottomanfiscal" change="#d2e320" xml:lang="en">
+               <p change="#d2e309 #d2e320" xml:id="p_12.d2e217" xml:lang="en">Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                  calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
+                  and in the Ottoman context usually referred to as <hi change="#d2e309 #d2e320" xml:id="hi_6.d2e219" xml:lang="en">mālī</hi> and sometimes,
+                  confusingly, also as <hi change="#d2e309 #d2e320" xml:id="hi_7.d2e222" xml:lang="en">rūmī</hi>. Every 33 lunar years, a <hi change="#d2e309 #d2e320" xml:id="hi_8.d2e225" xml:lang="en">hijrī</hi> year
+                  would complete within a single solar <hi change="#d2e309 #d2e320" xml:id="hi_9.d2e228" xml:lang="en">mālī</hi> year. In this case the counting
+                  of the <hi change="#d2e309 #d2e320" xml:id="hi_10.d2e231" xml:lang="en">mālī</hi> years skipped a year to catch up with the faster
+                     <hi change="#d2e309 #d2e320" xml:id="hi_11.d2e235" xml:lang="en">hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
+                  synchronisation of <hi change="#d2e309 #d2e320" xml:id="hi_12.d2e238" xml:lang="en">mālī</hi> and <hi change="#d2e309 #d2e320" xml:id="hi_13.d2e241" xml:lang="en">hijrī</hi> years was henceforth
+                  abolished. As <hi change="#d2e309 #d2e320" xml:id="hi_14.d2e244" xml:lang="en">mālī</hi> years began with 1 March, <hi change="#d2e309 #d2e320" xml:id="hi_15.d2e247" xml:lang="en">mālī</hi> leap years
+                  preceded their <hi change="#d2e309 #d2e320" xml:id="hi_16.d2e250" xml:lang="en">rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  commenced on 13 March 1899).</p>
+               <p change="#d2e309 #d2e320" xml:id="p_13.d2e254" xml:lang="en">E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11" change="#d2e309 #d2e320" xml:id="date_10.d2e256" xml:lang="en">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21" change="#d2e309 #d2e320" xml:id="date_11.d2e259" xml:lang="en">21 Shub 1323, Thursday</date>.</p>
+            </calendar>
+         </calendarDesc>
+         <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+         <langUsage change="#d2e309 #d2e320" xml:id="langUsage_1.d2e267" xml:lang="en">
+            <language ident="ar" change="#d2e309 #d2e320" xml:id="language_1.d2e269" xml:lang="en">Arabic</language>
+            <language ident="ar-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_2.d2e272" xml:lang="en">Arabic transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="ar-Latn-EN" change="#d2e309 #d2e320" xml:id="language_3.d2e275" xml:lang="en">Arabic transcribed into Latin script following common
+               English practices</language>
+            <language ident="ar-Latn-FR" change="#d2e309 #d2e320" xml:id="language_4.d2e278" xml:lang="en">Arabic transcribed into Latin script following common
+               French practices</language>
+            <language ident="en" change="#d2e309 #d2e320" xml:id="language_5.d2e281" xml:lang="en">English</language>
+            <language ident="fa" change="#d2e309 #d2e320" xml:id="language_6.d2e285" xml:lang="en">Farsi</language>
+            <language ident="fa-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_7.d2e288" xml:lang="en">Farsi transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="fr" change="#d2e309 #d2e320" xml:id="language_8.d2e291" xml:lang="en">French</language>
+            <language ident="ota" change="#d2e309 #d2e320" xml:id="language_9.d2e294" xml:lang="en">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_10.d2e297" xml:lang="en">Ottoman transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="tr" change="#d2e309 #d2e320" xml:id="language_11.d2e300" xml:lang="en">Turkish</language>
+         </langUsage>
+         <!--<particDesc>
+                <listPerson>
+                    <head>People mentioned in the text</head>
+                    <person xml:id="pers-1">
+                        
+                    </person>
+                </listPerson>
+            </particDesc>-->
+      </profileDesc>
+      <revisionDesc><tei:change xmlns:tei="http://www.tei-c.org/ns/1.0" when="2019-04-24" who="#pers_TG" change="d2e320" xml:lang="en">Added the <tei:att xml:lang="en">xml:lang</tei:att> attribute to all nodes that lacked this attribute. The value is based on the closest ancestor.</tei:change><change when="2019-04-24" who="#pers_TG" xml:id="d2e309" xml:lang="en">Added automated <tei:att xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
+         <change when="2015-02-16" change="#d2e309 #d2e320" xml:id="change_1.d2e309" xml:lang="en">Created file</change>
+      </revisionDesc>
+   </teiHeader>
+   <!-- providing links to the image files either remote or local -->
+   <facsimile change="#d2e309" xml:id="facsimile_1.d2e316">
+      <surface xml:id="facs-1-1">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-1_source"/>
+         <zone lrx="3596" lry="459" ulx="261" uly="258" xml:id="facs-1-1-z-1"/>
+         <zone lrx="3677" lry="1678" ulx="159" uly="431" xml:id="facs-1-1-z-2"/>
+         <zone lrx="3628" lry="2016" ulx="195" uly="1635" xml:id="facs-1-1-z-3"/>
+         <zone lrx="3640" lry="1631" ulx="2633" uly="458" xml:id="facs-1-1-z-4"/>
+         <zone lrx="2658" lry="1615" ulx="1231" uly="469" xml:id="facs-1-1-z-5"/>
+         <zone lrx="1093" lry="1670" ulx="167" uly="439" xml:id="facs-1-1-z-6"/>
+      </surface>
+      <surface xml:id="facs-1-2">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-2_source"/>
+      </surface>
+      <surface xml:id="facs-1-3">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-3_source"/>
+      </surface>
+      <surface xml:id="facs-1-4">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-4_source"/>
+      </surface>
+      <surface xml:id="facs-1-5">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-5_source"/>
+      </surface>
+      <surface xml:id="facs-1-6">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-6_source"/>
+      </surface>
+      <surface xml:id="facs-1-7">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-7_source"/>
+      </surface>
+      <surface xml:id="facs-1-8">
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-8_source"/>
+      </surface>
+
+   </facsimile>
+   <text xml:lang="ar" xml:id="v7" n="7" type="vol">
+      <front change="#d2e309 #d2e320" xml:id="front_1.d2e375" xml:lang="ar">
+         <!-- some introductory material for the current volume -->
+      </front>
+      <group change="#d2e309 #d2e320" xml:id="group_1.d2e380" xml:lang="ar">
+            <!-- individual issues -->
+            <text n="254" type="issue" xml:lang="ar" xml:id="v7-i254">
+               <pb ed="print" n="1" change="#d2e309" xml:id="pb_1.d2e386"/>
+               <front change="#d2e309 #d2e320" xml:id="front_2.d2e388" xml:lang="ar">
+                  <div style="border-top:double black; border-bottom:sing black" change="#d2e309 #d2e320" xml:id="div_1.d2e390" xml:lang="ar">
+                     <bibl xml:lang="ar" change="#d2e309" xml:id="bibl_2.d2e392"><biblScope n="254" unit="issue" change="#d2e309 #d2e320" xml:id="biblScope_2.d2e393" xml:lang="ar">العدد ٢٥٤</biblScope><title level="j" type="sub" change="#d2e309 #d2e320" xml:id="title_9.d2e395" xml:lang="ar">جريدة اسبوعية تصدر كل يوم الاثنين في
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_1.d2e397" xml:lang="ar">بيروت</placeName></title>
+                     <biblScope change="#d2e309 #d2e320" xml:id="biblScope_3.d2e400" xml:lang="ar">العدد ٢٢</biblScope> من <biblScope n="7" unit="vol" change="#d2e309 #d2e320" xml:id="biblScope_4.d2e403" xml:lang="ar">السنة
+                        السابعة</biblScope></bibl>
+                  </div>
+                  <!-- the main body, which usually does not change between issues -->
+                  <div facs="#facs-1-1-z-2" change="#d2e309 #d2e320" xml:id="div_2.d2e409" xml:lang="ar">
+                     <cb n="1" change="#d2e309" xml:id="cb_1.d2e411"/>
+                     <div facs="#facs-1-1-z-4" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_2.d2e413">
+                        <head change="#d2e309 #d2e320" xml:id="head_1.d2e415" xml:lang="ar">اشتراك الأقبال</head>
+                        <table cols="2" rows="3" change="#d2e309 #d2e320" xml:id="table_1.d2e418" xml:lang="ar">
+                           <row n="1" role="data" change="#d2e309 #d2e320" xml:id="row_1.d2e420" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_1.d2e422" xml:lang="ar">في <placeName change="#d2e309 #d2e320" xml:id="placeName_2.d2e424" xml:lang="ar">بيروت</placeName>
+                                 و<placeName change="#d2e309 #d2e320" xml:id="placeName_3.d2e427" xml:lang="ar">لبنان</placeName></cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_2.d2e430" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_1.d2e431" xml:lang="ar">٢ ريالان مجيديان</measure></cell>
+                           </row>
+                           <row n="2" role="data" change="#d2e309 #d2e320" xml:id="row_2.d2e435" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_3.d2e437" xml:lang="ar">في <placeName change="#d2e309 #d2e320" xml:id="placeName_4.d2e439" xml:lang="ar">جميع الولايات المحروسة</placeName></cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_4.d2e442" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_2.d2e443" xml:lang="ar">٢،٥ ريالان ونصف مجيدي</measure></cell>
+                           </row>
+                           <row n="3" role="data" change="#d2e309 #d2e320" xml:id="row_3.d2e447" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_5.d2e449" xml:lang="ar">في سائر الجهات</cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_6.d2e452" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_3.d2e453" xml:lang="ar">١٥ فرنكا</measure></cell>
+                           </row>
+                        </table>
+                        <p change="#d2e309 #d2e320" xml:id="p_14.d2e458" xml:lang="ar">ثمن النسخة <measure change="#d2e309 #d2e320" xml:id="measure_4.d2e460" xml:lang="ar">قرش ونصف</measure></p>
+                        <ab rend="double-line" change="#d2e309" xml:id="ab_1.d2e463"/>
+                        <p change="#d2e309 #d2e320" xml:id="p_15.d2e465" xml:lang="ar">القيمة تدفع سلفا</p>
+                        <p change="#d2e309 #d2e320" xml:id="p_16.d2e469" xml:lang="ar">ندرج الاعلانات باسعار موافقة<lb change="#d2e309" xml:id="lb_1.d2e471"/>الرسائل الخصوصية تفاوض الادارة
+                           بنشرها</p>
+                     </div>
+                     <cb n="2" change="#d2e309" xml:id="cb_2.d2e475"/>
+                     <div facs="#facs-1-1-z-5" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_3.d2e477">
+                        <bibl change="#d2e309 #d2e320" xml:id="bibl_3.d2e479" xml:lang="ar"><title level="j" change="#d2e309 #d2e320" xml:id="title_10.d2e480" xml:lang="ar">الاقبال</title><lb change="#d2e309" xml:id="lb_2.d2e482"/><date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1320" change="#d2e309 #d2e320" xml:id="date_12.d2e483" xml:lang="ar">١٣٢٠</date></bibl>
+                     </div>
+                     <cb n="3" change="#d2e309" xml:id="cb_3.d2e487"/>
+                     <div facs="#facs-1-1-z-6" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_4.d2e490">
+                        <head change="#d2e309 #d2e320" xml:id="head_2.d2e492" xml:lang="ar">مكاتبات الاقبال</head>
+                        <p change="#d2e309 #d2e320" xml:id="p_17.d2e495" xml:lang="ar">يجب ان تكون المكاتبات خالصة اجرة البريد<lb change="#d2e309" xml:id="lb_3.d2e497"/>باسم صاحب الاقبال ورئيس
+                              تحريرها<lb change="#d2e309" xml:id="lb_4.d2e499"/><persName change="#d2e309 #d2e320" xml:id="persName_3.d2e500" xml:lang="ar">عبد الباسط الانسي</persName><lb change="#d2e309" xml:id="lb_5.d2e502"/>لا ترد الاحصاب
+                           ادرجت ام لم تدرج</p>
+                        <ab rend="double-line" change="#d2e309" xml:id="ab_2.d2e505"/>
+                        <p change="#d2e309 #d2e320" xml:id="p_18.d2e507" xml:lang="ar">احد محرري الجريدة * <persName change="#d2e309 #d2e320" xml:id="persName_4.d2e509" xml:lang="ar">محيي الدين الخياط</persName><lb change="#d2e309" xml:id="lb_6.d2e511"/>ترجع
+                           الارادة (بمكتبتنا <orgName change="#d2e309 #d2e320" xml:id="orgName_1.d2e513" xml:lang="ar">الانسية</orgName>)<lb change="#d2e309" xml:id="lb_7.d2e516"/>او بمطبعتنا
+                              <orgName change="#d2e309 #d2e320" xml:id="orgName_2.d2e518" xml:lang="ar">المعارف</orgName> في بيروت</p>
+                     </div>
+                  </div>
+                  <!-- the bottom line, commonly containing dating information -->
+                  <div style="border-top:double black; border-bottom:double black" change="#d2e309 #d2e320" xml:id="div_6.d2e526" xml:lang="ar">
+                     <div change="#d2e309 #d2e320" xml:id="div_6.d2e528" xml:lang="ar">
+                        <ab change="#d2e309 #d2e320" xml:id="ab_3.d2e530" xml:lang="ar">تقبل الرسائل والمقالات</ab>
+                        <ab change="#d2e309" xml:id="ab_4.d2e533"/>
+                        <ab change="#d2e309 #d2e320" xml:id="ab_5.d2e535" xml:lang="ar">المستملة على الخدمة الملية</ab>
+                        <ab change="#d2e309" xml:id="ab_6.d2e538"/>
+                        <ab change="#d2e309 #d2e320" xml:id="ab_7.d2e540" xml:lang="ar">الجامعة العثمانية</ab>
+                     </div>
+                     <dateline change="#d2e309 #d2e320" xml:id="dateline_1.d2e544" xml:lang="ar">الاثنين في <date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1326-06-07" change="#d2e309 #d2e320" xml:id="date_13.d2e546" xml:lang="ar">٧ جمادی الثاني سنة ١٣٢٦</date> وفي <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when-custom="1324-04-23" change="#d2e309 #d2e320" xml:id="date_14.d2e549" xml:lang="ar">٢٣ حزيران سنة ١٣٢٤</date> وفي <date when="1908-07-06" change="#d2e309 #d2e320" xml:id="date_15.d2e552" xml:lang="ar">٦ تموز سنة ١٩٠٨</date></dateline>
+                  </div>
+               </front>
+               <body change="#d2e309 #d2e320" xml:id="body_1.d2e557" xml:lang="ar">
+                  <p change="#d2e309" xml:id="p_19.d2e559"/>
+               </body>
+            </text>
+            <!-- individual issue -->
+            <text n="257" type="issue" xml:lang="ar" xml:id="v7-i257">
+               <pb ed="print" facs="#facs-1-1" n="1" change="#d2e309" xml:id="pb_2.d2e567"/>
+               <!-- the masthead -->
+               <front change="#d2e309 #d2e320" xml:id="front_3.d2e571" xml:lang="ar">
+                  <!-- the top line -->
+                  <div facs="#facs-1-1-z-1" style="border-top:double black; border-bottom:sing black" change="#d2e309 #d2e320" xml:id="div_8.d2e575" xml:lang="ar">
+                     <bibl xml:lang="ar" change="#d2e309" xml:id="bibl_4.d2e577"><biblScope unit="issue" n="257" change="#d2e309 #d2e320" xml:id="biblScope_5.d2e578" xml:lang="ar">العدد ٢٥٧</biblScope><title level="j" type="sub" change="#d2e309 #d2e320" xml:id="title_11.d2e580" xml:lang="ar">جريدة اسبوعية تصدر كل يوم الاثنين في
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_5.d2e582" xml:lang="ar">بيروت</placeName></title> العدد ٢٥ من <biblScope unit="vol" n="7" change="#d2e309 #d2e320" xml:id="biblScope_6.d2e585" xml:lang="ar">السنة
+                           السابعة</biblScope></bibl>
+                  </div>
+                  <!-- the main body, which usually does not change between issues -->
+                  <div facs="#facs-1-1-z-2" change="#d2e309 #d2e320" xml:id="div_9.d2e591" xml:lang="ar">
+                     <cb n="1" change="#d2e309" xml:id="cb_4.d2e593"/>
+                     <div facs="#facs-1-1-z-4" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_9.d2e595">
+                        <head change="#d2e309 #d2e320" xml:id="head_3.d2e597" xml:lang="ar">اشتراك الأقبال</head>
+                        <table cols="2" rows="3" change="#d2e309 #d2e320" xml:id="table_2.d2e600" xml:lang="ar">
+                           <row n="1" role="data" change="#d2e309 #d2e320" xml:id="row_4.d2e602" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_7.d2e604" xml:lang="ar">في <placeName change="#d2e309 #d2e320" xml:id="placeName_6.d2e606" xml:lang="ar">بيروت</placeName>
+                                 و<placeName change="#d2e309 #d2e320" xml:id="placeName_7.d2e609" xml:lang="ar">لبنان</placeName></cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_8.d2e612" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_5.d2e613" xml:lang="ar">٢ ريالان مجيديان</measure></cell>
+                           </row>
+                           <row n="2" role="data" change="#d2e309 #d2e320" xml:id="row_5.d2e617" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_9.d2e619" xml:lang="ar">في <placeName change="#d2e309 #d2e320" xml:id="placeName_8.d2e621" xml:lang="ar">جميع الولايات المحروسة</placeName></cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_10.d2e624" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_6.d2e625" xml:lang="ar">٢،٥ ريالان ونصف مجيدي</measure></cell>
+                           </row>
+                           <row n="3" role="data" change="#d2e309 #d2e320" xml:id="row_6.d2e629" xml:lang="ar">
+                              <cell change="#d2e309 #d2e320" xml:id="cell_11.d2e631" xml:lang="ar">في سائر الجهات</cell>
+                              <cell change="#d2e309 #d2e320" xml:id="cell_12.d2e634" xml:lang="ar"><measure change="#d2e309 #d2e320" xml:id="measure_7.d2e635" xml:lang="ar">١٥ فرنكا</measure></cell>
+                           </row>
+                        </table>
+                        <p change="#d2e309 #d2e320" xml:id="p_20.d2e640" xml:lang="ar">ثمن النسخة <measure change="#d2e309 #d2e320" xml:id="measure_8.d2e642" xml:lang="ar">قرش ونصف</measure></p>
+                        <ab rend="double-line" change="#d2e309" xml:id="ab_8.d2e645"/>
+                        <p change="#d2e309 #d2e320" xml:id="p_21.d2e647" xml:lang="ar">القيمة تدفع سلفا</p>
+                        <p change="#d2e309 #d2e320" xml:id="p_22.d2e651" xml:lang="ar">ندرج الاعلانات باسعار موافقة<lb change="#d2e309" xml:id="lb_8.d2e653"/>الرسائل الخصوصية تفاوض الادارة
+                           بنشرها</p>
+                     </div>
+                     <cb n="2" change="#d2e309" xml:id="cb_5.d2e657"/>
+                     <div facs="#facs-1-1-z-5" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_10.d2e659">
+                        <bibl change="#d2e309 #d2e320" xml:id="bibl_5.d2e661" xml:lang="ar"><title level="j" change="#d2e309 #d2e320" xml:id="title_12.d2e662" xml:lang="ar">الاقبال</title><lb change="#d2e309" xml:id="lb_9.d2e664"/><date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1320" change="#d2e309 #d2e320" xml:id="date_16.d2e665" xml:lang="ar">١٣٢٠</date></bibl>
+                     </div>
+                     <cb n="3" change="#d2e309" xml:id="cb_6.d2e669"/>
+                     <div facs="#facs-1-1-z-6" style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_11.d2e672">
+                        <head change="#d2e309 #d2e320" xml:id="head_4.d2e674" xml:lang="ar">مكاتبات الاقبال</head>
+                        <p change="#d2e309 #d2e320" xml:id="p_23.d2e677" xml:lang="ar">يجب ان تكون المكاتبات خالصة اجرة البريد<lb change="#d2e309" xml:id="lb_10.d2e679"/>باسم صاحب الاقبال ورئيس
+                              تحريرها<lb change="#d2e309" xml:id="lb_11.d2e681"/><persName change="#d2e309 #d2e320" xml:id="persName_5.d2e682" xml:lang="ar">عبد الباسط الانسي</persName><lb change="#d2e309" xml:id="lb_12.d2e684"/>لا ترد الاحصاب
+                           ادرجت ام لم تدرج</p>
+                        <ab rend="double-line" change="#d2e309" xml:id="ab_9.d2e687"/>
+                        <p change="#d2e309 #d2e320" xml:id="p_24.d2e689" xml:lang="ar">احد محرري الجريدة * <persName change="#d2e309 #d2e320" xml:id="persName_6.d2e691" xml:lang="ar">محيي الدين الخياط</persName><lb change="#d2e309" xml:id="lb_13.d2e693"/>ترجع
+                           الارادة (بمكتبتنا <orgName change="#d2e309 #d2e320" xml:id="orgName_3.d2e695" xml:lang="ar">الانسية</orgName>)<lb change="#d2e309" xml:id="lb_14.d2e698"/>او بمطبعتنا
+                              <orgName change="#d2e309 #d2e320" xml:id="orgName_4.d2e700" xml:lang="ar">المعارف</orgName> في بيروت</p>
+                     </div>
+                  </div>
+                  <!-- the bottom line -->
+                  <div facs="#facs-1-1-z-3" style="border-top:double black; border-bottom:double black" change="#d2e309 #d2e320" xml:id="div_13.d2e709" xml:lang="ar">
+                     <div change="#d2e309 #d2e320" xml:id="div_13.d2e711" xml:lang="ar">
+                        <ab change="#d2e309 #d2e320" xml:id="ab_10.d2e713" xml:lang="ar">تقبل الرسائل والمقالات</ab>
+                        <ab change="#d2e309" xml:id="ab_11.d2e716"/>
+                        <ab change="#d2e309 #d2e320" xml:id="ab_12.d2e718" xml:lang="ar">المستملة على الخدمة الملية</ab>
+                        <ab change="#d2e309" xml:id="ab_13.d2e721"/>
+                        <ab change="#d2e309 #d2e320" xml:id="ab_14.d2e723" xml:lang="ar">الجامعة العثمانية</ab>
+                     </div>
+                     <dateline change="#d2e309 #d2e320" xml:id="dateline_2.d2e727" xml:lang="ar">الاثنين في <date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1326-06-28" change="#d2e309 #d2e320" xml:id="date_17.d2e729" xml:lang="ar">٢٨ جمادی الثاني سنة ١٣٢٦</date> وفي <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when-custom="1324-07-14" change="#d2e309 #d2e320" xml:id="date_18.d2e732" xml:lang="ar">١٤ تموز سنة ١٣٢٤</date> وفي <date when="1908-07-27" change="#d2e309 #d2e320" xml:id="date_19.d2e735" xml:lang="ar">٢٧ تموز سنة ١٩٠٨</date></dateline>
+                  </div>
+               </front>
+               <!-- body of the issue -->
+               <body change="#d2e309 #d2e320" xml:id="body_2.d2e742" xml:lang="ar">
+               <cb n="1" change="#d2e309" xml:id="cb_7.d2e744"/>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_15.d2e746">
+                  <head change="#d2e309 #d2e320" xml:id="head_5.d2e748" xml:lang="ar">الصادره العظمى</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_25.d2e751" xml:lang="ar">ورد تلغراف سام من <persName change="#d2e309 #d2e320" xml:id="persName_7.d2e753" xml:lang="ar"><addName type="honorific" change="#d2e309 #d2e320" xml:id="addName_1.d2e754" xml:lang="ar">حضرة</addName>
+                        <addName type="honorific" xml:lang="ota" change="#d2e309" xml:id="addName_2.d2e757">فخامتلو</addName>
+                        <addName type="honorific" xml:lang="ota" change="#d2e309" xml:id="addName_3.d2e760">دولتلو</addName>
+                        <forename change="#d2e309 #d2e320" xml:id="forename_1.d2e763" xml:lang="ar">سعيد</forename><lb change="#d2e309" xml:id="lb_15.d2e765"/><addName type="title" xml:lang="ota" change="#d2e309" xml:id="addName_4.d2e766">باشا</addName></persName> الى الولاية الجليلة مفاده ان مسند الصدارة
+                     الجليل<lb change="#d2e309" xml:id="lb_16.d2e769"/>قد وجه هذه المرة ايضاً عَلَى عهدة فخامته وهاك تعريبه</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_26.d2e772" xml:lang="ar">
+                     <quote change="#d2e309 #d2e320" xml:id="quote_1.d2e774" xml:lang="ar">سنحت عواطف الحضرة العلية السلطانية بتوجيه<lb change="#d2e309" xml:id="lb_17.d2e776"/>خدمة الصدارة هذه المرة
+                        ايضاً عَلَى عهد هذا المثني،<lb change="#d2e309" xml:id="lb_18.d2e778"/>ان وظيفة مأموري الملكية الاساسية هي المحافظة
+                        على<lb change="#d2e309" xml:id="lb_19.d2e780"/> الامن والراحة وحسن رؤْية المصالح ووظائف الادارة<lb change="#d2e309" xml:id="lb_20.d2e782"/> العدلية
+                        والحكام هي اجراء العدالة في الحقوق العمومية<lb change="#d2e309" xml:id="lb_21.d2e784"/> والشخصية ضمن دائرة القوانين
+                        العدلية الموضوعة مع<lb change="#d2e309" xml:id="lb_22.d2e787"/>قيام كل مأمور بوظيفة مأموريته بكمال العفة
+                        والاستقامة<lb change="#d2e309" xml:id="lb_23.d2e789"/> لهذا نخطركم ان الذين يقومون بالخدمات الصحيحة<lb change="#d2e309" xml:id="lb_24.d2e791"/> الصادقة
+                        تكون مساعيهم مظهراً لشرف تقدير <rs ref="#pers-1" change="#d2e309 #d2e320" xml:id="rs_1.d2e793" xml:lang="ar">حضرة<lb change="#d2e309" xml:id="lb_25.d2e795"/>صاحب الخلافة
+                           العظمى</rs> كما ان من يخالف ذلك يقع<lb change="#d2e309" xml:id="lb_26.d2e798"/> بالطبع تحت ظائلة المسؤلية في
+                           <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when-custom="1324-05-09" change="#d2e309 #d2e320" xml:id="date_20.d2e800" xml:lang="ar">٩ تموز سنة ٣٢٤</date></quote>
+                  </p>
+               </div>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_16.d2e805">
+                  <head change="#d2e309 #d2e320" xml:id="head_6.d2e807" xml:lang="ar">مجلس المبعوثان</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_27.d2e810" xml:lang="ar">ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى<lb change="#d2e309" xml:id="lb_27.d2e812"/><quote change="#d2e309 #d2e320" xml:id="quote_2.d2e813" xml:lang="ar">صدرت ارادة حضرة
+                        صاحب الخلافة العظمى<lb change="#d2e309" xml:id="lb_28.d2e815"/>بان يدعى الى الاجتماع مجلس المبعوثان المبينة
+                        كيفية<lb change="#d2e309" xml:id="lb_29.d2e817"/>تشكيله في القانون الاساسي الذي هو من تأسيس<lb change="#d2e309" xml:id="lb_30.d2e819"/>حضرة الخليفة الاعظم
+                        وبما انه ابلغ حكم هذه الارادة<lb change="#d2e309" xml:id="lb_31.d2e821"/>السنية الجليل الى جميع الولايات
+                        الشاهانية<lb change="#d2e309" xml:id="lb_32.d2e823"/>المتصرفيات غير الملحقة فعليكم باجراء انتخاب اعضاء<lb change="#d2e309" xml:id="lb_33.d2e826"/>حائزين
+                        الضفات المندرجة في <rs change="#d2e309 #d2e320" xml:id="rs_2.d2e828" xml:lang="ar">القانون المذكور</rs></quote>في <date change="#d2e309 #d2e320" xml:id="date_21.d2e831" xml:lang="ar">١٠ تموز سنة
+                        ١٣٢٤</date></p>
+                  <p change="#d2e309 #d2e320" xml:id="p_28.d2e834" xml:lang="ar">(الاقبال) لا ريب ان هذا النبأ او هذه النبأة<lb change="#d2e309" xml:id="lb_34.d2e836"/>التي طارت عَلَى لسان البرق من
+                     مركز الخلافة العظمى</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_29.d2e839" xml:lang="ar"><cb n="2" change="#d2e309" xml:id="cb_8.d2e840"/>ستطير لها القلوب جزلاً في جميع ارجأ البلاد العثمانية،<lb change="#d2e309" xml:id="lb_35.d2e842"/>بل سترقص
+                     لها الالباب طرباً في سائر البلاد التي<lb change="#d2e309" xml:id="lb_36.d2e844"/>يسكنها كل عثماني مخلص لدولته وبلاده،
+                     من اقصى<lb change="#d2e309" xml:id="lb_37.d2e846"/>الغرب الى اقصى الشرق، ومن اعلى ذروة الشمال،<lb change="#d2e309" xml:id="lb_38.d2e848"/>الى ادنى وهدة
+                     الجنوب، لانها امنية كل عثماني مخلص،<lb change="#d2e309" xml:id="lb_39.d2e850"/>وضالة كل صادق امين</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_30.d2e853" xml:lang="ar">ان هذه البشري ستجعل جميع القلوب المتفرقة في جميع<lb change="#d2e309" xml:id="lb_40.d2e855"/>ارجاء الارض حائمة حول نقطة
+                     واحدة، ومركز واحد،<lb change="#d2e309" xml:id="lb_41.d2e857"/>ومليك واحد، الا وهو المليك الوحيد الذي كانت
+                     فاتحة<lb change="#d2e309" xml:id="lb_42.d2e859"/>سلطنته العظمى انالة رعيته هذه النعمة الجزيلة التي<lb change="#d2e309" xml:id="lb_43.d2e861"/>انالهم اياها
+                     لهذا العهد بل ...</p>
+                  <p change="#d2e309" xml:id="p_31.d2e865"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_17.d2e868" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_7.d2e870" xml:lang="ar">نظارة الحربية</head>
+                  <p change="#d2e309" xml:id="p_32.d2e873"/>
+                  <p change="#d2e309" xml:id="p_33.d2e875"><cb change="#d2e309" xml:id="cb_9.d2e876"/></p>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_18.d2e879" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_8.d2e881" xml:lang="ar">الخط العالب الحجازي</head>
+                  <p change="#d2e309" xml:id="p_34.d2e884"/>
+                  <p change="#d2e309" xml:id="p_35.d2e886"/>
+                  <p change="#d2e309" xml:id="p_36.d2e888"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_19.d2e892" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_9.d2e894" xml:lang="ar">جزيرة سيسام</head>
+                  <p change="#d2e309" xml:id="p_37.d2e897"/>
+               </div>
+               <pb ed="print" facs="#facs-1-2" n="2" change="#d2e309" xml:id="pb_3.d2e900"/>
+               <cb n="1" change="#d2e309" xml:id="cb_10.d2e902"/>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_20.d2e904" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_10.d2e906" xml:lang="ar"><orgName change="#d2e309 #d2e320" xml:id="orgName_5.d2e907" xml:lang="ar">السكة الحميدية الحجازية</orgName></head>
+                  <div change="#d2e309 #d2e320" xml:id="div_20.d2e910" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_11.d2e912" xml:lang="ar">وما عَلَى الخط الحجازية</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_38.d2e915" xml:lang="ar">ذكرنا في <rs change="#d2e309 #d2e320" xml:id="rs_3.d2e917" xml:lang="ar">عدد ٢٥٥ من الاقبال</rs> مؤدى كتاب دبجه يراع<lb change="#d2e309" xml:id="lb_44.d2e920"/>باحث الماني
+                        نقاب الا وهو "<persName change="#d2e309 #d2e320" xml:id="persName_8.d2e922" xml:lang="ar"><addName change="#d2e309 #d2e320" xml:id="addName_5.d2e923" xml:lang="ar">سعادتلو</addName>
+                           <surname change="#d2e309 #d2e320" xml:id="surname_1.d2e926" xml:lang="ar">آولر</surname>
+                           <addName change="#d2e309 #d2e320" xml:id="addName_6.d2e929" xml:lang="ar">باشا</addName></persName>" احد حجاب <lb change="#d2e309" xml:id="lb_45.d2e932"/>الحضرة العلية السلطانية
+                        ذلك بعد ان شارف الخط وتفقد<lb change="#d2e309" xml:id="lb_46.d2e934"/>عمليته وصناعياته وسائر انشاآته واليك تتمة ما
+                        قاله المشار اليه</p>
+                     <ab change="#d2e309" xml:id="ab_15.d2e937"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_21.d2e940" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_12.d2e942" xml:lang="ar">تابع لما قبل</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_39.d2e945" xml:lang="ar">ركبنا القطار من <placeName change="#d2e309 #d2e320" xml:id="placeName_9.d2e947" xml:lang="ar">دمشق</placeName> قاصدين
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_10.d2e950" xml:lang="ar">العلاء</placeName> وهو<lb change="#d2e309" xml:id="lb_47.d2e953"/>مؤلف من سبع مركبات ثم التحقت به
+                        مركبتان<lb change="#d2e309" xml:id="lb_48.d2e955"/>من <placeName change="#d2e309 #d2e320" xml:id="placeName_11.d2e957" xml:lang="ar">محطة <placeName change="#d2e309 #d2e320" xml:id="placeName_11.d2e959" xml:lang="ar">درعا</placeName></placeName>
+                        والاخضر احداهما ...</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_40.d2e963" xml:lang="ar">تبع الحظ من <placeName change="#d2e309 #d2e320" xml:id="placeName_13.d2e965" xml:lang="ar">دمشق</placeName> حتى <placeName change="#d2e309 #d2e320" xml:id="placeName_14.d2e968" xml:lang="ar">معان</placeName> عن
+                        طريق الحج<lb change="#d2e309" xml:id="lb_49.d2e971"/>القديم تماماً وكذلك سار عليه بين <placeName change="#d2e309 #d2e320" xml:id="placeName_15.d2e973" xml:lang="ar">معان</placeName> و
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_16.d2e976" xml:lang="ar">العلاء</placeName>، غير<lb change="#d2e309" xml:id="lb_50.d2e980"/>انه انحرف عنه في عدة ...<cb n="2" change="#d2e309" xml:id="cb_11.d2e982"/></p>
+                     <p change="#d2e309 #d2e320" xml:id="p_41.d2e984" xml:lang="ar">ويرى الانسان قبل الوصول الى <placeName change="#d2e309 #d2e320" xml:id="placeName_17.d2e986" xml:lang="ar">تبوك</placeName> على بعد<lb change="#d2e309" xml:id="lb_51.d2e989"/>٢٢
+                        كيلومتراً من شرقيها جبل غريب الشكل قد امتد<lb change="#d2e309" xml:id="lb_52.d2e991"/>نحوة السماء شامحاً بانفه، اما
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_18.d2e993" xml:lang="ar">محطة <placeName change="#d2e309 #d2e320" xml:id="placeName_18.d2e995" xml:lang="ar">تبوك</placeName></placeName> فهي على
+                        بعد<lb change="#d2e309" xml:id="lb_53.d2e998"/>مائة متر من واحتها الشهيرة ...</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_42.d2e1001" xml:lang="ar">ولما خرج القطار من <placeName change="#d2e309 #d2e320" xml:id="placeName_20.d2e1003" xml:lang="ar">تبوك</placeName> دخل صحراء وسيعة<lb change="#d2e309" xml:id="lb_54.d2e1006"/>في
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_21.d2e1008" xml:lang="ar">وادي الاثيل</placeName> وفيها يسير الخط ال حديدي على
+                        خط<lb change="#d2e309" xml:id="lb_55.d2e1011"/>مستقيم ...<cb n="3" change="#d2e309" xml:id="cb_12.d2e1013"/></p>
+                     <p change="#d2e309 #d2e320" xml:id="p_43.d2e1016" xml:lang="ar">ومن اهم المسائل في الخط الحجازي امر الماء فانه<lb change="#d2e309" xml:id="lb_56.d2e1018"/>يصعب جداً تدارك الماء بين
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_22.d2e1020" xml:lang="ar">معان</placeName> و<placeName change="#d2e309 #d2e320" xml:id="placeName_23.d2e1023" xml:lang="ar">العلاء</placeName>، ...</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_44.d2e1027" xml:lang="ar"> اما في موقف ذات الحج ...</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_45.d2e1030" xml:lang="ar">وفي <placeName change="#d2e309 #d2e320" xml:id="placeName_24.d2e1032" xml:lang="ar">تبوك</placeName> ينابيع كثيرة واعظمها نبع القلعة، ...</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_46.d2e1036" xml:lang="ar">ولا يوجد اثر الماء بين <placeName change="#d2e309 #d2e320" xml:id="placeName_25.d2e1038" xml:lang="ar">الاخضر</placeName> و<placeName change="#d2e309 #d2e320" xml:id="placeName_26.d2e1041" xml:lang="ar">مدائن
+                           صالح</placeName><lb change="#d2e309" xml:id="lb_57.d2e1043"/>ويبلغ طول مسافته ١٩٥ كيلومتراً سوى ...<pb ed="print" n="3" facs="#facs-1-3" change="#d2e309" xml:id="pb_4.d2e1045"/></p>
+                  </div>
+               </div>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_23.d2e1049" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_13.d2e1051" xml:lang="ar">الاخبار العمومية</head>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_23.d2e1054" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_14.d2e1056" xml:lang="ar">الوزارة الخارجية</head>
+                     <p change="#d2e309" xml:id="p_47.d2e1059"/>
+                     <p change="#d2e309" xml:id="p_48.d2e1061"/>
+                     <p change="#d2e309" xml:id="p_49.d2e1063"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_24.d2e1066" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_15.d2e1068" xml:lang="ar">مراكش</head>
+                     <p change="#d2e309" xml:id="p_50.d2e1071"/>
+                     <p change="#d2e309" xml:id="p_51.d2e1073"/>
+                     <p change="#d2e309" xml:id="p_52.d2e1075"/>
+                     <p change="#d2e309" xml:id="p_53.d2e1077"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_25.d2e1080" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_16.d2e1082" xml:lang="ar">العجم</head>
+                     <p change="#d2e309" xml:id="p_54.d2e1085"><cb change="#d2e309" xml:id="cb_13.d2e1086"/></p>
+                     <p change="#d2e309" xml:id="p_55.d2e1088"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_26.d2e1091" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_17.d2e1093" xml:lang="ar">ايطاليا والحبش</head>
+                     <p change="#d2e309" xml:id="p_56.d2e1096"/>
+                     <p change="#d2e309" xml:id="p_57.d2e1098"/>
+                     <p change="#d2e309" xml:id="p_58.d2e1100"/>
+                  </div>
+
+                  
+               </div>
+                  <div type="section" change="#d2e309 #d2e320" xml:id="div_28.d2e1104" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_18.d2e1106" xml:lang="ar">زبدة اخبار</head>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_28.d2e1109" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_19.d2e1111" xml:lang="ar">فيشي</head>
+                        <p change="#d2e309" xml:id="p_59.d2e1114"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_29.d2e1117" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_20.d2e1119" xml:lang="ar">باريز</head>
+                        <p change="#d2e309" xml:id="p_60.d2e1122"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_30.d2e1125" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_21.d2e1127" xml:lang="ar">فالير</head>
+                        <p change="#d2e309" xml:id="p_61.d2e1130"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_31.d2e1133" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_22.d2e1135" xml:lang="ar">برلين</head>
+                        <p change="#d2e309" xml:id="p_62.d2e1138"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_32.d2e1142" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_23.d2e1144" xml:lang="ar">بطرسبرج</head>
+                        <p change="#d2e309" xml:id="p_63.d2e1147"/>
+                     </div>
+                  </div>
+                  <div type="section" change="#d2e309 #d2e320" xml:id="div_34.d2e1152" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_24.d2e1154" xml:lang="ar">دار السعادة</head>
+                     <div type="section" change="#d2e309 #d2e320" xml:id="div_34.d2e1157" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_25.d2e1159" xml:lang="ar">التوجيهات</head>
+                        <div type="article" change="#d2e309 #d2e320" xml:id="div_34.d2e1162" xml:lang="ar">
+                           <head change="#d2e309 #d2e320" xml:id="head_26.d2e1164" xml:lang="ar">مأمورية</head>
+                           <p change="#d2e309 #d2e320" xml:id="p_64.d2e1167" xml:lang="ar">فوضت مكتوبية <placeName change="#d2e309 #d2e320" xml:id="placeName_27.d2e1169" xml:lang="ar">ولاية
+                                 <placeName change="#d2e309 #d2e320" xml:id="placeName_27.d2e1171" xml:lang="ar">طربزون</placeName></placeName> الى
+                                 <persName change="#d2e309 #d2e320" xml:id="persName_9.d2e1174" xml:lang="ar">صادق<lb change="#d2e309" xml:id="lb_58.d2e1176"/>وجداني افندي</persName> مكتوبي
+                                 <placeName change="#d2e309 #d2e320" xml:id="placeName_29.d2e1179" xml:lang="ar">مناستر</placeName></p>
+                           <p change="#d2e309 #d2e320" xml:id="p_65.d2e1182" xml:lang="ar">ومكتوبية <placeName change="#d2e309 #d2e320" xml:id="placeName_30.d2e1184" xml:lang="ar">ولاية <placeName change="#d2e309 #d2e320" xml:id="placeName_30.d2e1186" xml:lang="ar">مناستر</placeName></placeName>
+                              الى <persName change="#d2e309 #d2e320" xml:id="persName_10.d2e1189" xml:lang="ar">سعادتلو احمد بك</persName><lb change="#d2e309" xml:id="lb_59.d2e1191"/><cb n="3" change="#d2e309" xml:id="cb_14.d2e1192"/>مكتوبي
+                                 <placeName change="#d2e309 #d2e320" xml:id="placeName_32.d2e1194" xml:lang="ar">طربزون</placeName></p>
+                           <p change="#d2e309 #d2e320" xml:id="p_66.d2e1197" xml:lang="ar">وقئمقامية <placeName change="#d2e309 #d2e320" xml:id="placeName_33.d2e1199" xml:lang="ar">انطاكيه</placeName> الى <persName change="#d2e309 #d2e320" xml:id="persName_11.d2e1202" xml:lang="ar">سعادتلو محرم
+                                 باشا</persName><lb change="#d2e309" xml:id="lb_60.d2e1204"/>قئمقام <placeName change="#d2e309 #d2e320" xml:id="placeName_34.d2e1206" xml:lang="ar">لريوز</placeName></p>
+                           <p change="#d2e309 #d2e320" xml:id="p_67.d2e1209" xml:lang="ar">ومكتوبية <placeName change="#d2e309 #d2e320" xml:id="placeName_35.d2e1211" xml:lang="ar">سويدة</placeName> (<placeName change="#d2e309 #d2e320" xml:id="placeName_36.d2e1214" xml:lang="ar">سورية</placeName>)
+                                 الى<persName change="#d2e309 #d2e320" xml:id="persName_12.d2e1217" xml:lang="ar"> اليوز باشي فتوتلو<lb change="#d2e309" xml:id="lb_61.d2e1219"/>عثمان افندي</persName> من
+                              المستخدمين في <orgName change="#d2e309 #d2e320" xml:id="orgName_6.d2e1222" xml:lang="ar">الفيلق الهمايوني الخامس</orgName></p>
+                        </div>
+                        <div type="article" change="#d2e309 #d2e320" xml:id="div_35.d2e1226" xml:lang="ar">
+                           <head change="#d2e309 #d2e320" xml:id="head_27.d2e1228" xml:lang="ar">رتبة</head>
+                           <p change="#d2e309" xml:id="p_68.d2e1231"/>
+                           <p change="#d2e309" xml:id="p_69.d2e1233"/>
+                           <p change="#d2e309" xml:id="p_70.d2e1235"/>
+                           <p change="#d2e309" xml:id="p_71.d2e1237"/>
+                           <p change="#d2e309" xml:id="p_72.d2e1240"/>
+                           <p change="#d2e309" xml:id="p_73.d2e1242"/>
+                        </div>
+                        <div type="article" change="#d2e309 #d2e320" xml:id="div_36.d2e1245" xml:lang="ar">
+                           <head change="#d2e309 #d2e320" xml:id="head_28.d2e1247" xml:lang="ar">نشان</head>
+                           <p change="#d2e309" xml:id="p_74.d2e1250"/>
+                           <p change="#d2e309" xml:id="p_75.d2e1252"/>
+                        </div>
+                        <div type="article" change="#d2e309 #d2e320" xml:id="div_37.d2e1255" xml:lang="ar">
+                           <head change="#d2e309 #d2e320" xml:id="head_29.d2e1257" xml:lang="ar">مدالية</head>
+                           <p change="#d2e309" xml:id="p_76.d2e1260"/>
+                        </div>
+                     </div>
+                  </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_40.d2e1265" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_30.d2e1267" xml:lang="ar"><placeName change="#d2e309 #d2e320" xml:id="placeName_37.d2e1268" xml:lang="ar">جامع سيدنا يونس</placeName></head>
+                  <p change="#d2e309 #d2e320" xml:id="p_77.d2e1271" xml:lang="ar">بناء على صدور الارادة السنية القاضية بتصليح<lb change="#d2e309" xml:id="lb_62.d2e1273"/>وترميم <placeName change="#d2e309 #d2e320" xml:id="placeName_38.d2e1275" xml:lang="ar">جامع سيدنا
+                     يونس</placeName> عليه ...</p>
+               </div>
+               <pb ed="print" n="4" facs="#facs-1-4" change="#d2e309" xml:id="pb_5.d2e1280"/>
+               <cb n="1" change="#d2e309" xml:id="cb_15.d2e1282"/>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_41.d2e1284" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_31.d2e1286" xml:lang="ar">جامع سلطان سليم</head>
+                  <p change="#d2e309" xml:id="p_78.d2e1289"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_42.d2e1292" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_32.d2e1294" xml:lang="ar">الدولة العلية ورومانية</head>
+                  <p change="#d2e309" xml:id="p_79.d2e1297"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_43.d2e1301" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_33.d2e1303" xml:lang="ar">سفير باريس</head>
+                  <p change="#d2e309" xml:id="p_80.d2e1306"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_44.d2e1309" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_34.d2e1311" xml:lang="ar">مفتش الزراعة في القدس</head>
+                  <p change="#d2e309" xml:id="p_81.d2e1314"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_45.d2e1317" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_35.d2e1319" xml:lang="ar">المركبات السيارة في بغداد</head>
+                  <p change="#d2e309" xml:id="p_82.d2e1322"/>
+               </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_46.d2e1325" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_36.d2e1327" xml:lang="ar">ولاية قونية</head>
+                  <p change="#d2e309" xml:id="p_83.d2e1330"/>
+                  <p change="#d2e309" xml:id="p_84.d2e1332"/>
+               </div>
+               <cb change="#d2e309" xml:id="cb_16.d2e1335"/>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_47.d2e1337" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_37.d2e1339" xml:lang="ar">العالم السلامس</head>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_47.d2e1342" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_38.d2e1344" xml:lang="ar">الاسلام في الصين</head>
+                     <p change="#d2e309" xml:id="p_85.d2e1347"/>
+                  </div>
+               </div>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_49.d2e1352" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_39.d2e1354" xml:lang="ar">اخبار محلية</head>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_49.d2e1357" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_40.d2e1359" xml:lang="ar">ترميم في الجامع العمري</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_86.d2e1362" xml:lang="ar">الجامع العمري الكبير هو اقدم جوامع البلدة لانه<lb change="#d2e309" xml:id="lb_63.d2e1364"/>من آثار الفتح الاسلامي
+                        السوري في اوائل القرن<lb change="#d2e309" xml:id="lb_64.d2e1366"/>الاول من الهجرة ايام استولى المسلمون على
+                        السواحل<lb change="#d2e309" xml:id="lb_65.d2e1368"/>(سنة ١٦ للهجرة)</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_87.d2e1371" xml:lang="ar">بيد ان الجامع طرأت عليه ادوار واحوال رمم<lb change="#d2e309" xml:id="lb_66.d2e1373"/>في اكثرها وايتحدث فيه ما استحدث
+                        يدل على ذلك<lb change="#d2e309" xml:id="lb_67.d2e1375"/>التواريخ المختلفة المنقوشة في بعض جدرانه
+                        كالتاريخ<lb change="#d2e309" xml:id="lb_68.d2e1377"/>الموجود عند الاثر الشريف، والتاريخ الموجود تحت<lb change="#d2e309" xml:id="lb_69.d2e1379"/>المنبر،
+                        والتاريخ الموجود فوق الباب الداخلي بالعربي،<lb change="#d2e309" xml:id="lb_70.d2e1381"/><cb change="#d2e309" xml:id="cb_17.d2e1382"/>والتاريخ الموجود
+                        ...</p>
+                     <p change="#d2e309" xml:id="p_88.d2e1385"/>
+                     <p change="#d2e309" xml:id="p_89.d2e1387"/>
+                  </div><div type="article" change="#d2e309 #d2e320" xml:id="div_50.d2e1389" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_41.d2e1391" xml:lang="ar">الترامواي الكهربائي<lb change="#d2e309" xml:id="lb_71.d2e1393"/>في الثغر</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_90.d2e1396" xml:lang="ar">لا ننكر ان الترامواي الكهربائي في الثغر فوائد<lb change="#d2e309" xml:id="lb_72.d2e1398"/>جليلة يقرب الاطراف
+                        المتنائية ويسهل المواصولات<lb change="#d2e309" xml:id="lb_73.d2e1400"/>وينفخ في التجارج روحاً جديدة يجعلها تنشط الى
+                        الحياة<lb change="#d2e309" xml:id="lb_74.d2e1402"/>باكثر مما هي عليه الآن ...<pb ed="print" n="5" facs="#facs-1-5" change="#d2e309" xml:id="pb_6.d2e1404"/><cb n="1" change="#d2e309" xml:id="cb_18.d2e1405"/></p>
+                     
+                     <p change="#d2e309" xml:id="p_91.d2e1407"/>
+                     <p change="#d2e309" xml:id="p_92.d2e1409"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_51.d2e1412" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_42.d2e1414" xml:lang="ar">الشارع الجديد<lb change="#d2e309" xml:id="lb_75.d2e1416"/>ورأي جديد</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_93.d2e1419" xml:lang="ar">هذا الشارع المعروف الآن باسم (الشارع الجديد)<lb change="#d2e309" xml:id="lb_76.d2e1421"/>قد فتح قسم منه منذ سنين ثم
+                        ظل الباقي بدون فتح<lb change="#d2e309" xml:id="lb_77.d2e1423"/>الى ان قضت الحال في السنة المنصرمة لاكمال
+                        فتحه<lb change="#d2e309" xml:id="lb_78.d2e1425"/>ليتسنى مرور الترامواي الكهربائي فيه</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_94.d2e1428" xml:lang="ar">وقد قلنا في الشذرة الآنفة ان هذا الشارع قد<lb change="#d2e309" xml:id="lb_79.d2e1430"/>مدَّ فيه خطان ذهبا برونقه
+                        وروائه وضيقا على المارة<lb change="#d2e309" xml:id="lb_80.d2e1432"/>والسابله، ...</p>
+                     <p change="#d2e309" xml:id="p_95.d2e1435"><cb n="2" change="#d2e309" xml:id="cb_19.d2e1436"/></p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_52.d2e1439" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_43.d2e1441" xml:lang="ar">الوفد الحجازي</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_96.d2e1444" xml:lang="ar">وافي <placeName change="#d2e309 #d2e320" xml:id="placeName_39.d2e1446" xml:lang="ar">دمشق الشام</placeName> بطريق <placeName change="#d2e309 #d2e320" xml:id="placeName_40.d2e1449" xml:lang="ar">حيفا</placeName>
+                        <persName change="#d2e309 #d2e320" xml:id="persName_13.d2e1452" xml:lang="ar">حضرة صاحب<lb change="#d2e309" xml:id="lb_81.d2e1454"/>الدولة المشير عبد الله باشا</persName> مع اركان
+                        الهيئة المحترمة اميري<lb change="#d2e309" xml:id="lb_82.d2e1457"/>اللواء <persName change="#d2e309 #d2e320" xml:id="persName_14.d2e1459" xml:lang="ar">صاحب السعادة سعيد باشا</persName>
+                           و<persName change="#d2e309 #d2e320" xml:id="persName_15.d2e1463" xml:lang="ar">مصطفى كريم باشا</persName><lb change="#d2e309" xml:id="lb_83.d2e1465"/>وباقي المأمورين لاجل حضور
+                        الاحتفال بالخط العالي<lb change="#d2e309" xml:id="lb_84.d2e1467"/>الحجازي الذي سيعقد في جلوس السلطاني
+                           السعيد<lb change="#d2e309" xml:id="lb_85.d2e1469"/>ب<placeName change="#d2e309 #d2e320" xml:id="placeName_41.d2e1471" xml:lang="ar">المدينة المنورة</placeName> فقوبل حتى
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_42.d2e1474" xml:lang="ar">محطة <placeName change="#d2e309 #d2e320" xml:id="placeName_42.d2e1476" xml:lang="ar">القدم</placeName></placeName> بكل احتفاء
+                        واكرام</p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_53.d2e1481" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_44.d2e1483" xml:lang="ar">وكالة والي <placeName change="#d2e309 #d2e320" xml:id="placeName_44.d2e1485" xml:lang="ar">بغداد</placeName></head>
+                     <p change="#d2e309" xml:id="p_97.d2e1488"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_54.d2e1492" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_45.d2e1494" xml:lang="ar">رئيس المحاسبة في رسومات <placeName change="#d2e309 #d2e320" xml:id="placeName_45.d2e1496" xml:lang="ar">بيروت</placeName></head>
+                     <p change="#d2e309" xml:id="p_98.d2e1499"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_55.d2e1502" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_46.d2e1504" xml:lang="ar">تهنئة بالوسام العثماني الثاني</head>
+                     <p change="#d2e309" xml:id="p_99.d2e1507"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_56.d2e1510" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_47.d2e1512" xml:lang="ar">مدير بوليس <placeName change="#d2e309 #d2e320" xml:id="placeName_46.d2e1514" xml:lang="ar">القدس الشريف</placeName></head>
+                     <p change="#d2e309" xml:id="p_100.d2e1517"/>
+                  </div>
+                  <cb n="3" change="#d2e309" xml:id="cb_20.d2e1520"/>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_57.d2e1522" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_48.d2e1524" xml:lang="ar">نائب جبله</head>
+                     <p change="#d2e309" xml:id="p_101.d2e1527"/>
+                  </div><div type="article" change="#d2e309 #d2e320" xml:id="div_58.d2e1529" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_49.d2e1531" xml:lang="ar">حريق على المرفأ</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_102.d2e1534" xml:lang="ar">عند الاربعاء المنصرم شبت النار في مستودع<lb change="#d2e309" xml:id="lb_86.d2e1536"/>الاخشاب خاصة الخواجات خليل
+                        وبتراكى خوري <lb change="#d2e309" xml:id="lb_87.d2e1538"/>فرح آخر المرفأ "في بناية الشركة السورية
+                        التجارية<lb change="#d2e309" xml:id="lb_88.d2e1540"/>الانكليزية" فالتهم اللهيب كل ...</p>
+                     <p change="#d2e309" xml:id="p_103.d2e1543"/>
+                     <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_16.d2e1545" xml:lang="ar">* * *</ab>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_59.d2e1550" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_50.d2e1552" xml:lang="ar">المدارس في الثغر</head>
+                     <p change="#d2e309" xml:id="p_104.d2e1555"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_60.d2e1558" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_51.d2e1560" xml:lang="ar">تهنئة بالرتبة الثالثة</head>
+                     <p change="#d2e309" xml:id="p_105.d2e1563"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_61.d2e1566" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_52.d2e1568" xml:lang="ar">تعيين</head>
+                     <p change="#d2e309" xml:id="p_106.d2e1571"/>
+                  </div>
+                  <pb ed="print" n="6" facs="#facs-1-6" change="#d2e309" xml:id="pb_7.d2e1574"/>
+                  <cb n="1" change="#d2e309" xml:id="cb_21.d2e1576"/>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_62.d2e1578" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_53.d2e1580" xml:lang="ar">والي بيروت الجديد</head>
+                     <p change="#d2e309" xml:id="p_107.d2e1583"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_63.d2e1587" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_54.d2e1589" xml:lang="ar">والي ولاية سوزية</head>
+                     <p change="#d2e309" xml:id="p_108.d2e1592"/>
+                     <p change="#d2e309" xml:id="p_109.d2e1594"/>
+                     <p change="#d2e309" xml:id="p_110.d2e1596"><cb n="2" change="#d2e309" xml:id="cb_22.d2e1597"/></p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_64.d2e1600" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_55.d2e1602" xml:lang="ar">القانون الاساسي</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_111.d2e1605" xml:lang="ar">رغب الينا البعض ان ننشر مواد القانون الاساسي<lb change="#d2e309" xml:id="lb_89.d2e1607"/>ولما كان هذا القانون
+                        موجوداً للبيع في مكتبات <placeName change="#d2e309 #d2e320" xml:id="placeName_47.d2e1609" xml:lang="ar">بيروت</placeName><lb change="#d2e309" xml:id="lb_90.d2e1611"/>ومدروجاً في مجموعة
+                        القوانين وفي جميع (سالنامات <choice change="#d2e309 #d2e320" xml:id="choice_1.d2e1613" xml:lang="ar">
+                           <corr change="#d2e309 #d2e320" xml:id="corr_1.d2e1615" xml:lang="ar">)</corr>
+                        </choice><lb change="#d2e309" xml:id="lb_91.d2e1618"/>المملكة العثمانية فننكتفى باحالة القراء اليه وربما
+                        ننشر<lb change="#d2e309" xml:id="lb_92.d2e1620"/>بعض مواده في ما سنكتبه في الاعداد الآتية</p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_65.d2e1624" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_56.d2e1626" xml:lang="ar">قدوم</head>
+                     <p change="#d2e309" xml:id="p_112.d2e1629"/>
+                     <p change="#d2e309" xml:id="p_113.d2e1631"/>
+                     <p change="#d2e309" xml:id="p_114.d2e1633"/>
+                     <p change="#d2e309" xml:id="p_115.d2e1635"/>
+                     <p change="#d2e309" xml:id="p_116.d2e1638"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_66.d2e1641" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_57.d2e1643" xml:lang="ar">الويركو المتراكم</head>
+                     <p change="#d2e309" xml:id="p_117.d2e1646"/>
+                     <p change="#d2e309" xml:id="p_118.d2e1648"><cb n="3" change="#d2e309" xml:id="cb_23.d2e1649"/></p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_67.d2e1652" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_58.d2e1654" xml:lang="ar">لجان التحصيلات</head>
+                     <p change="#d2e309" xml:id="p_119.d2e1657"/>
+                  </div><div type="article" change="#d2e309 #d2e320" xml:id="div_68.d2e1659" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_59.d2e1661" xml:lang="ar">تبادل مأمورين</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_120.d2e1664" xml:lang="ar">انبأت نظارة العدلية الجليلة انه صدرت ارادة<lb change="#d2e309" xml:id="lb_93.d2e1666"/><rs change="#d2e309 #d2e320" xml:id="rs_4.d2e1667" xml:lang="ar">حضرة صاحب الخلافة
+                           العظمى</rs> بتبادل المأمورية بين<lb change="#d2e309" xml:id="lb_94.d2e1670"/><persName change="#d2e309 #d2e320" xml:id="persName_16.d2e1671" xml:lang="ar">عبد الله مجدي
+                           افندي</persName> رئيس <orgName change="#d2e309 #d2e320" xml:id="orgName_7.d2e1674" xml:lang="ar">محكمة الجزاء</orgName> في
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_48.d2e1677" xml:lang="ar">نابلس</placeName><lb change="#d2e309" xml:id="lb_95.d2e1679"/>و<persName change="#d2e309 #d2e320" xml:id="persName_17.d2e1682" xml:lang="ar">توفيق افندي</persName> رئيس
+                           <orgName change="#d2e309 #d2e320" xml:id="orgName_8.d2e1685" xml:lang="ar">محكمة التجارة</orgName> في <placeName change="#d2e309 #d2e320" xml:id="placeName_49.d2e1688" xml:lang="ar">مركز <placeName change="#d2e309 #d2e320" xml:id="placeName_49.d2e1690" xml:lang="ar">ولاية
+                                 <placeName change="#d2e309 #d2e320" xml:id="placeName_49.d2e1692" xml:lang="ar">البصرة</placeName></placeName></placeName><lb change="#d2e309" xml:id="lb_96.d2e1694"/></p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_69.d2e1698" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_60.d2e1700" xml:lang="ar">الخبز في <placeName change="#d2e309 #d2e320" xml:id="placeName_52.d2e1702" xml:lang="ar">الاستانة</placeName></head>
+                     <p change="#d2e309 #d2e320" xml:id="p_121.d2e1705" xml:lang="ar">ظهر من منطوق البلاغ الرسمي ان الحكومة السنية<lb change="#d2e309" xml:id="lb_97.d2e1707"/>ضبطت من تاريخ <date change="#d2e309 #d2e320" xml:id="date_22.d2e1709" xml:lang="ar">٢٠
+                           اياز</date> الى <date change="#d2e309 #d2e320" xml:id="date_23.d2e1712" xml:lang="ar">٢٠ حزيران</date> زهاء <measure change="#d2e309 #d2e320" xml:id="measure_9.d2e1715" xml:lang="ar">٣٥<lb change="#d2e309" xml:id="lb_98.d2e1717"/>الف رغيف
+                           خبز</measure> وزنها ناقص وقد قالت <rs change="#d2e309 #d2e320" xml:id="rs_5.d2e1720" xml:lang="ar">احدى جرائد</rs><lb change="#d2e309" xml:id="lb_99.d2e1722"/><placeName change="#d2e309 #d2e320" xml:id="placeName_53.d2e1724" xml:lang="ar">دار
+                           السعادة العلية</placeName> ان الخبازين يسرقون الخبز من كل<lb change="#d2e309" xml:id="lb_100.d2e1727"/>الوجوه
+                        وحقهم ان يبيعوه باثمان خفيفة لان اثمان الحبوب<lb change="#d2e309" xml:id="lb_101.d2e1729"/>سقطت بالنظر الكثرتها وان
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_54.d2e1731" xml:lang="ar">الاستانة</placeName> و<placeName change="#d2e309 #d2e320" xml:id="placeName_55.d2e1734" xml:lang="ar">البلاد
+                        الثلاث</placeName><lb change="#d2e309" xml:id="lb_102.d2e1736"/>صرف كل يوم <measure change="#d2e309 #d2e320" xml:id="measure_10.d2e1739" xml:lang="ar">٤٠ الف اقة خبز</measure> ومن
+                        البلاغ الرسمي<lb change="#d2e309" xml:id="lb_103.d2e1742"/>يظهر انها ضبطت مقدار رغيف او اقل من كل
+                           <measure change="#d2e309 #d2e320" xml:id="measure_11.d2e1744" xml:lang="ar">اقة<lb change="#d2e309" xml:id="lb_104.d2e1746"/>خبز</measure> في تلك المدة</p>
+                     <p change="#d2e309 #d2e320" xml:id="p_122.d2e1750" xml:lang="ar">وتقول الجريدة المذكورة ان احسن دواء لهذا<lb change="#d2e309" xml:id="lb_105.d2e1752"/>الداء هو بيع الخبز بالميزان لا
+                        بالرغيف</p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_70.d2e1756" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_61.d2e1758" xml:lang="ar">تصحيح خطأ</head>
+                     <p change="#d2e309 #d2e320" xml:id="p_123.d2e1761" xml:lang="ar">ذكرنا في <rs change="#d2e309 #d2e320" xml:id="rs_6.d2e1763" xml:lang="ar">عدد ٢٥٣ من الاقبال</rs> اسماء بعض من<lb change="#d2e309" xml:id="lb_106.d2e1766"/>هضموا حقوق الصحافة
+                        وذكرنا بينهم خطأ <persName change="#d2e309 #d2e320" xml:id="persName_18.d2e1768" xml:lang="ar">جناب السرى<lb change="#d2e309" xml:id="lb_107.d2e1770"/>الاديب رفعتلو فريد افندي
+                           كركبي</persName> من اعيان <placeName change="#d2e309 #d2e320" xml:id="placeName_56.d2e1773" xml:lang="ar">حيفا</placeName><lb change="#d2e309" xml:id="lb_108.d2e1775"/>وقد تبين ان
+                        المذكور ليست عليه ذمة للجريدة <lb change="#d2e309" xml:id="lb_109.d2e1777"/>فاقتضى التصحيح</p>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_71.d2e1781" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_62.d2e1783" xml:lang="ar">الذهب في <placeName change="#d2e309 #d2e320" xml:id="placeName_57.d2e1785" xml:lang="ar">اسيا</placeName><lb change="#d2e309" xml:id="lb_110.d2e1787"/>والزمرد في
+                           <placeName change="#d2e309 #d2e320" xml:id="placeName_58.d2e1789" xml:lang="ar">مصر</placeName></head>
+                     <p change="#d2e309 #d2e320" xml:id="p_124.d2e1792" xml:lang="ar">درس <persName change="#d2e309 #d2e320" xml:id="persName_19.d2e1794" xml:lang="ar">محمد افندي رشدي</persName> الخبير بالمحاكم طبائع<lb change="#d2e309" xml:id="lb_111.d2e1797"/>الارض
+                        والبقاع وعرف مواقع ...</p>
+                  </div>
+                  <pb ed="print" n="7" facs="#facs-1-7" change="#d2e309" xml:id="pb_8.d2e1801"/>
+                  <cb n="1" change="#d2e309" xml:id="cb_24.d2e1803"/>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_72.d2e1805" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_63.d2e1807" xml:lang="ar">اخبار صحية</head>
+                     <p change="#d2e309" xml:id="p_125.d2e1810"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_73.d2e1814" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_64.d2e1816" xml:lang="ar">اذاعة تجارية</head>
+                     <p change="#d2e309" xml:id="p_126.d2e1819"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_74.d2e1822" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_65.d2e1824" xml:lang="ar">اسلحة في <placeName change="#d2e309 #d2e320" xml:id="placeName_59.d2e1826" xml:lang="ar">طرابلس</placeName></head>
+                     <p change="#d2e309 #d2e320" xml:id="p_127.d2e1829" xml:lang="ar">قبض في احد المركبات الشراعية على <measure change="#d2e309 #d2e320" xml:id="measure_12.d2e1831" xml:lang="ar">مئتي بارودة<lb change="#d2e309" xml:id="lb_112.d2e1833"/>مارتين</measure>
+                        من روع غرا و<measure change="#d2e309 #d2e320" xml:id="measure_13.d2e1836" xml:lang="ar">خمسة صناديق خرطوش</measure> واجزاء<lb change="#d2e309" xml:id="lb_113.d2e1839"/>منتهبة من المركب
+                        المسمي (<name change="#d2e309 #d2e320" xml:id="name_1.d2e1841" xml:lang="ar">ماريكه</name>) فسلمت الى المستودع<lb change="#d2e309" xml:id="lb_114.d2e1844"/>العسكري حسب الرظام
+                        واجريت التحقيقات<lb change="#d2e309" xml:id="lb_115.d2e1847"/>اللازمة بذلك</p>
+                  </div>
+               </div>
+                  <div type="section" change="#d2e309 #d2e320" xml:id="div_76.d2e1852" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_66.d2e1854" xml:lang="ar"><placeName change="#d2e309 #d2e320" xml:id="placeName_60.d2e1855" xml:lang="ar">لبنان</placeName></head>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_76.d2e1858" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_67.d2e1860" xml:lang="ar">القاء قبض</head>
+                     <p change="#d2e309" xml:id="p_128.d2e1863"/>
+                  </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_77.d2e1866" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_68.d2e1868" xml:lang="ar">لوكندة عين صوفر الكبرى</head>
+                     <p change="#d2e309" xml:id="p_129.d2e1871"/>
+                        <p change="#d2e309" xml:id="p_130.d2e1873"/>
+                     </div><div type="article" change="#d2e309 #d2e320" xml:id="div_78.d2e1875" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_69.d2e1877" xml:lang="ar">وفاة في <placeName change="#d2e309 #d2e320" xml:id="placeName_61.d2e1879" xml:lang="ar">صيدا</placeName></head>
+                        <p change="#d2e309" xml:id="p_131.d2e1882"/>
+                     </div>
+                     <cb n="2" change="#d2e309" xml:id="cb_25.d2e1885"/>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_79.d2e1887" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_70.d2e1889" xml:lang="ar">مقاصد الامام النووي</head>
+                        <p change="#d2e309" xml:id="p_132.d2e1892"/>
+                     </div><div type="article" change="#d2e309 #d2e320" xml:id="div_80.d2e1895" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_71.d2e1897" xml:lang="ar">صرعى البناء</head>
+                        <p change="#d2e309" xml:id="p_133.d2e1900"/>
+                     </div>
+                  </div>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_82.d2e1904" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_72.d2e1906" xml:lang="ar">مطبوعات جديدة</head>
+               <p change="#d2e309" xml:id="p_134.d2e1909"/>
+               </div>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_83.d2e1912" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_73.d2e1914" xml:lang="ar"><placeName change="#d2e309 #d2e320" xml:id="placeName_62.d2e1915" xml:lang="ar">قضاء <placeName change="#d2e309 #d2e320" xml:id="placeName_62.d2e1917" xml:lang="ar">عكار</placeName></placeName></head>
+                  <byline change="#d2e309 #d2e320" xml:id="byline_1.d2e1920" xml:lang="ar">لوكيلنا ومكاتبنا المتجول</byline>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_83.d2e1923" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_74.d2e1925" xml:lang="ar">القرعة العسكرية</head>
+                     <p change="#d2e309" xml:id="p_135.d2e1928"/>
+                  </div>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_84.d2e1931" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_75.d2e1933" xml:lang="ar">زفاف</head>
+                     <p change="#d2e309" xml:id="p_136.d2e1936"/>
+                  </div>
+                  
+                  
+               </div>
+               <cb n="3" change="#d2e309" xml:id="cb_26.d2e1940"/>
+               <div type="article" change="#d2e309 #d2e320" xml:id="div_86.d2e1942" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_76.d2e1944" xml:lang="ar"><placeName change="#d2e309 #d2e320" xml:id="placeName_64.d2e1945" xml:lang="ar">صافيتا</placeName></head>
+                  <byline change="#d2e309 #d2e320" xml:id="byline_2.d2e1948" xml:lang="ar">لوكيلنا ايضاً</byline>
+                  <p change="#d2e309" xml:id="p_137.d2e1951"/>
+                  <p change="#d2e309" xml:id="p_138.d2e1953"/>
+                  <p change="#d2e309" xml:id="p_139.d2e1955"/>
+                  <p change="#d2e309" xml:id="p_140.d2e1958"/>
+               </div>
+               <div type="ad" change="#d2e309 #d2e320" xml:id="div_87.d2e1962" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_77.d2e1964" xml:lang="ar">طبيب اسنان في <placeName change="#d2e309 #d2e320" xml:id="placeName_65.d2e1966" xml:lang="ar">دمشق</placeName></head>
+                  <figure change="#d2e309" xml:id="figure_1.d2e1969"/>
+                  <p change="#d2e309" xml:id="p_141.d2e1971"/>
+                  <p change="#d2e309" xml:id="p_142.d2e1973"/>
+                  <byline change="#d2e309 #d2e320" xml:id="byline_3.d2e1975" xml:lang="ar"><persName change="#d2e309 #d2e320" xml:id="persName_20.d2e1976" xml:lang="ar">محمد فارس الدرويش</persName></byline>
+               </div>
+                  
+                  <pb ed="print" n="8" facs="#facs-1-8" change="#d2e309" xml:id="pb_9.d2e1980"/>
+                  <cb n="1" change="#d2e309" xml:id="cb_27.d2e1982"/>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_88.d2e1984" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_78.d2e1986" xml:lang="ar">فوائد منزيلة</head>
+                  <div type="article" change="#d2e309 #d2e320" xml:id="div_88.d2e1989" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_79.d2e1991" xml:lang="ar">شذزات نافعة</head>
+                     <p change="#d2e309" xml:id="p_143.d2e1994"/>
+                     <p change="#d2e309" xml:id="p_144.d2e1996"/>
+                     <p change="#d2e309" xml:id="p_145.d2e1998"/>
+                     <p change="#d2e309" xml:id="p_146.d2e2000"/>
+                     <p change="#d2e309" xml:id="p_147.d2e2003"/>
+                     <p change="#d2e309" xml:id="p_148.d2e2005"/>
+                     <p change="#d2e309" xml:id="p_149.d2e2007"/>
+                     <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_17.d2e2009" xml:lang="ar">* * *</ab>
+                  </div>
+               </div>
+                  <cb n="2" change="#d2e309" xml:id="cb_28.d2e2014"/>
+                  <div type="section" change="#d2e309 #d2e320" xml:id="div_90.d2e2016" xml:lang="ar">
+                     <head change="#d2e309 #d2e320" xml:id="head_80.d2e2018" xml:lang="ar">شعرقات</head>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_90.d2e2021" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_81.d2e2023" xml:lang="ar">مكروب السكل (البلادة)</head>
+                        <p change="#d2e309" xml:id="p_150.d2e2026"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_91.d2e2029" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_82.d2e2031" xml:lang="ar">بنذقية بلا صوت</head>
+                     <p change="#d2e309" xml:id="p_151.d2e2034"/>
+                        <p change="#d2e309" xml:id="p_152.d2e2036"><cb change="#d2e309" xml:id="cb_29.d2e2037"/></p>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_92.d2e2040" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_83.d2e2042" xml:lang="ar">التلفون بلا سلك</head>
+                        <p change="#d2e309" xml:id="p_153.d2e2045"/>
+                        <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_18.d2e2047" xml:lang="ar">* * *</ab>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_93.d2e2051" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_84.d2e2053" xml:lang="ar">الاسلطيل الهوائية وا<unclear change="#d2e309" xml:id="unclear_1.d2e2055"/>ها</head>
+                        <p change="#d2e309" xml:id="p_154.d2e2058"/>
+                     </div>
+                     <div type="article" change="#d2e309 #d2e320" xml:id="div_94.d2e2062" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_85.d2e2064" xml:lang="ar">الاتومبيل في <placeName change="#d2e309 #d2e320" xml:id="placeName_66.d2e2066" xml:lang="ar">لندرا</placeName></head>
+                        <p change="#d2e309" xml:id="p_155.d2e2069"/>
+                     </div>
+                  </div>
+               <div type="section" change="#d2e309 #d2e320" xml:id="div_96.d2e2074" xml:lang="ar">
+                  <head change="#d2e309 #d2e320" xml:id="head_86.d2e2076" xml:lang="ar">تقويم الاقبال</head>
+                  <table change="#d2e309 #d2e320" xml:id="table_3.d2e2079" xml:lang="ar">
+                     <head change="#d2e309" xml:id="head_87.d2e2081"/>
+                     <row role="label" change="#d2e309 #d2e320" xml:id="row_7.d2e2083" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_13.d2e2085"/>
+                     </row>
+                     <row role="label" change="#d2e309 #d2e320" xml:id="row_8.d2e2088" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_14.d2e2090"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_9.d2e2093" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_15.d2e2095"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_10.d2e2098" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_16.d2e2100"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_11.d2e2104" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_17.d2e2106"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_12.d2e2109" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_18.d2e2111"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_13.d2e2114" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_19.d2e2116"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_14.d2e2119" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_20.d2e2121"/>
+                     </row>
+                     <row role="data" change="#d2e309 #d2e320" xml:id="row_15.d2e2124" xml:lang="ar">
+                        <cell change="#d2e309" xml:id="cell_21.d2e2126"/>
+                     </row>
+                     
+                  </table>
+               </div>
+                  <!-- the byline could also be encoded as the <back/> of the text -->
+               <byline change="#d2e309 #d2e320" xml:id="byline_4.d2e2133" xml:lang="ar">صاحب مطبعة المعارف * والمكتبة الانسية * في بيروت (عبذ الباسط الانسي)</byline>
+               </body>
+               </text>
+            
+      </group>
+   </text>
+</TEI>
