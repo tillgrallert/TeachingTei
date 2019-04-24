@@ -13,9 +13,16 @@
                <persName>Till Grallert</persName>
             </respStmt>
          </titleStmt>
-         <publicationStmt>
-            <p>Publication Information</p>
-         </publicationStmt>
+         <publicationStmt xml:id="publicationStmt_1.d1e61" xml:lang="en">
+                <authority xml:id="authority_1.d1e63" xml:lang="en">
+                    <persName xml:id="persName_4.d1e65" xml:lang="en">Till Grallert</persName>
+                </authority>
+                <pubPlace xml:id="pubPlace_1.d1e69" xml:lang="en">Beirut</pubPlace>
+                <date when="2015" xml:id="date_1.d1e72" xml:lang="en">2015</date>
+                <availability status="restricted" xml:id="availability_1.d1e75" xml:lang="en">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/" xml:id="licence_1.d1e77" xml:lang="en">Distributed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</licence>
+                </availability>
+             </publicationStmt>
          <sourceDesc>
             <p>Information about the source</p>
          </sourceDesc>

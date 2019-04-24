@@ -22,7 +22,25 @@
 					<date>2008-09-29T07:07:00</date>
 				</edition>
 			</editionStmt>
-			<publicationStmt>
+			<publicationStmt xml:id="publicationStmt_1.d1e61" xml:lang="en">
+                <authority xml:id="authority_1.d1e63" xml:lang="en">
+                    <persName xml:id="persName_4.d1e65" xml:lang="en">Till Grallert</persName>
+                </authority>
+                <pubPlace xml:id="pubPlace_1.d1e69" xml:lang="en">Beirut</pubPlace>
+                <date when="2015" xml:id="date_1.d1e72" xml:lang="en">2015</date>
+                <availability status="restricted" xml:id="availability_1.d1e75" xml:lang="en">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/" xml:id="licence_1.d1e77" xml:lang="en">Distributed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</licence>
+                </availability>
+             </publicationStmt>
+			<sourceDesc>
+				<biblStruct xml:lang="ar-Latn-x-ijmes">
+					<monogr>
+						<title>al-Qānūn al-Arāḍī</title>
+						<imprint>
+							<date when="1858-04-21">7 Ram 1274</date>
+						</imprint>
+					</monogr>
+				</biblStruct>
 				<p>Digital text available on 
 					<ref target="https://ar.wikisource.org/wiki/قانون_الاراضي_العثماني_رقم_200_عام_1900">Wikisource</ref>
 					and as wordfile from the 
@@ -35,16 +53,6 @@
 						لعام 
 						<date when="1900">1900</date></ref>
 				</p>
-			</publicationStmt>
-			<sourceDesc>
-				<biblStruct xml:lang="ar-Latn-x-ijmes">
-					<monogr>
-						<title>al-Qānūn al-Arāḍī</title>
-						<imprint>
-							<date when="1858-04-21">7 Ram 1274</date>
-						</imprint>
-					</monogr>
-				</biblStruct>
 			</sourceDesc>
 		</fileDesc>
 		<revisionDesc>

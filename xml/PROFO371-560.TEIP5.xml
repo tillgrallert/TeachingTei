@@ -14,9 +14,16 @@
                <persName xml:id="pers_TG">Till Grallert</persName>
             </respStmt>
          </titleStmt>
-         <publicationStmt>
-            <p>The digital text is freely available for re-use.</p>
-         </publicationStmt>
+         <publicationStmt xml:id="publicationStmt_1.d1e61" xml:lang="en">
+                <authority xml:id="authority_1.d1e63" xml:lang="en">
+                    <persName xml:id="persName_4.d1e65" xml:lang="en">Till Grallert</persName>
+                </authority>
+                <pubPlace xml:id="pubPlace_1.d1e69" xml:lang="en">Beirut</pubPlace>
+                <date when="2015" xml:id="date_1.d1e72" xml:lang="en">2015</date>
+                <availability status="restricted" xml:id="availability_1.d1e75" xml:lang="en">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/" xml:id="licence_1.d1e77" xml:lang="en">Distributed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</licence>
+                </availability>
+             </publicationStmt>
          <sourceDesc>
             <p>This text is a partical transcription of British consular reports from the
                consulate in Damascus to the Embassy in Constantinople as found in the National
@@ -42,8 +49,10 @@
                <date when="1908-11-02">November 2, 1908</date>
             </correspAction>
          </correspDesc>
-         
       </profileDesc>
+      <revisionDesc xml:lang="en">
+            <change who="#pers_TG" when="2015">Created this file for the TEI course at DHSI from my transcriptions of the archival material.</change>
+        </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface xml:id="facs_1">
