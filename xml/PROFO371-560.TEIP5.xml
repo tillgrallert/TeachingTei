@@ -1,109 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader change="#" xml:id="teiHeader_1.d2e7">
-      <fileDesc change="#" xml:id="fileDesc_1.d2e9">
-         <titleStmt change="#" xml:id="titleStmt_1.d2e11">
-            <title change="#" xml:id="title_1.d2e13">PRO FO 371/560, Turkey. Code 44 File 35258 - 39482, 1908</title>
-            <respStmt change="#" xml:id="respStmt_1.d2e16">
-               <resp change="#" xml:id="resp_1.d2e18">Transcription and encoding in TEI</resp>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>PRO FO 371/560, Turkey. Code 44 File 35258 - 39482, 1908</title>
+            <respStmt>
+               <resp>Transcription and encoding in TEI</resp>
                <persName xml:id="pers_TG">Till Grallert</persName>
             </respStmt>
          </titleStmt>
-         <publicationStmt change="#" xml:id="publicationStmt_1.d2e26">
-            <p change="#" xml:id="p_1.d2e28">The digital text is freely available for re-use.</p>
+         <publicationStmt>
+            <p>The digital text is freely available for re-use.</p>
          </publicationStmt>
-         <sourceDesc change="#" xml:id="sourceDesc_1.d2e32">
-            <p change="#" xml:id="p_2.d2e34">This text is a partical transcription of British consular reports from the
+         <sourceDesc>
+            <p>This text is a partical transcription of British consular reports from the
                consulate in Damascus to the Embassy in Constantinople as found in the National
                Archives, Kew Gardens, Great Britain (formerly known as Public Record Office)
                kept in the file PRO FO 371/560</p>
          </sourceDesc>
       </fileDesc>
-      <profileDesc change="#" xml:id="profileDesc_1.d2e39">
-         <correspDesc change="#" xml:id="correspDesc_1.d2e41">
-            <correspAction type="sent" change="#" xml:id="correspAction_1.d2e43">
-               <persName change="#" xml:id="persName_2.d2e45">George Pollard Devey</persName>
-               <placeName change="#" xml:id="placeName_1.d2e48">Damascus</placeName>
-               <date when="1908-10-01" change="#" xml:id="date_1.d2e51">October 1, 1908</date>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName>George Pollard Devey</persName>
+               <placeName>Damascus</placeName>
+               <date when="1908-10-01">October 1, 1908</date>
             </correspAction>
-            <correspAction type="forwarded" change="#" xml:id="correspAction_2.d2e55">
-               <persName change="#" xml:id="persName_3.d2e57">Sir Gerald A. Lowther</persName>
-               <placeName change="#" xml:id="placeName_2.d2e60">Constantinople</placeName>
-               <date when="1908-10-24" change="#" xml:id="date_2.d2e63">October 24, 1908</date>
+            <correspAction type="forwarded">
+               <persName>Sir Gerald A. Lowther</persName>
+               <placeName>Constantinople</placeName>
+               <date when="1908-10-24">October 24, 1908</date>
             </correspAction>
-            <correspAction type="received" change="#" xml:id="correspAction_3.d2e67">
-               <persName change="#" xml:id="persName_4.d2e69">Sir Edward Grey</persName>
-               <placeName change="#" xml:id="placeName_3.d2e72">London</placeName>
-               <date when="1908-11-02" change="#" xml:id="date_3.d2e75">November 2, 1908</date>
+            <correspAction type="received">
+               <persName>Sir Edward Grey</persName>
+               <placeName>London</placeName>
+               <date when="1908-11-02">November 2, 1908</date>
             </correspAction>
          </correspDesc>
          
       </profileDesc>
    </teiHeader>
-   <facsimile change="#" xml:id="facsimile_1.d2e82">
+   <facsimile>
       <surface xml:id="facs_1">
-         <graphic url="../images/pro-fo/371-560/DSCN7960_150dpi.jpg" mimeType="image/jpeg" change="#" xml:id="graphic_1.d2e86"/>
-         <zone xml:id="facs_1_z1" ulx="3" uly="129" lrx="349" lry="222"/>        <zone ulx="91" uly="232" lrx="587" lry="296" change="#" xml:id="zone_2.d2e90"/>      </surface>
+         <graphic url="../images/pro-fo/371-560/DSCN7960_150dpi.jpg" mimeType="image/jpeg"/>
+         <zone xml:id="facs_1_z1" ulx="3" uly="129" lrx="349" lry="222"/>        <zone ulx="91" uly="232" lrx="587" lry="296"/>      </surface>
       <surface xml:id="facs_2">
-         <graphic url="../images/pro-fo/371-560/DSCN7961_150dpi.jpg" mimeType="image/jpeg" change="#" xml:id="graphic_2.d2e95"/>
+         <graphic url="../images/pro-fo/371-560/DSCN7961_150dpi.jpg" mimeType="image/jpeg"/>
       </surface>
       <surface xml:id="facs_3">
-         <graphic url="../images/pro-fo/371-560/DSCN7962_150dpi.jpg" mimeType="image/jpeg" change="#" xml:id="graphic_3.d2e100"/>
+         <graphic url="../images/pro-fo/371-560/DSCN7962_150dpi.jpg" mimeType="image/jpeg"/>
       </surface>
    </facsimile>
-   <text change="#" xml:id="text_1.d2e104">
-      <group change="#" xml:id="group_1.d2e106">
-         <text change="#" xml:id="text_1.d2e108">
-            <body change="#" xml:id="body_1.d2e110">
-               <pb ed="print" n="1" facs="#facs_1" change="#" xml:id="pb_1.d2e112"/>
-               <div n="2" change="#" xml:id="div_1.d2e114">
-                  <head facs="#facs_1_z1" change="#" xml:id="head_1.d2e116">ASIATIC TURKEY AND ARABIA<lb change="#" xml:id="lb_1.d2e118"/>CONFIDENTIAL</head>
-                  <head change="#" xml:id="head_2.d2e121">[37930] No.1</head>
-                  <dateline change="#" xml:id="dateline_1.d2e124">Sir G. Lowther to Sir Edward Grey.— (Received November 2.)</dateline>
-                  <dateline change="#" xml:id="dateline_2.d2e127">No. 697.</dateline>
-                  <dateline change="#" xml:id="dateline_3.d2e130">Constantinople, October 24, 1908</dateline>
-                  <p change="#" xml:id="p_3.d2e134">Sir,<lb change="#" xml:id="lb_2.d2e136"/>I HAVE the honour to forward herewith a despatch from His Majesty's
+   <text>
+      <group>
+         <text>
+            <body>
+               <pb ed="print" n="1" facs="#facs_1"/>
+               <div n="2">
+                  <head facs="#facs_1_z1">ASIATIC TURKEY AND ARABIA<lb/>CONFIDENTIAL</head>
+                  <head>[37930] No.1</head>
+                  <dateline>Sir G. Lowther to Sir Edward Grey.— (Received November 2.)</dateline>
+                  <dateline>No. 697.</dateline>
+                  <dateline>Constantinople, October 24, 1908</dateline>
+                  <p>Sir,<lb/>I HAVE the honour to forward herewith a despatch from His Majesty's
                      Consul at Damascus reporting generally on events during the last quarter.</p>
-                  <byline change="#" xml:id="byline_1.d2e139">I have, &amp;c.<lb change="#" xml:id="lb_3.d2e141"/>(Signed) GERARD LOWTHER</byline>
+                  <byline>I have, &amp;c.<lb/>(Signed) GERARD LOWTHER</byline>
                </div>
-               <div n="2" type="print" change="#" xml:id="div_2.d2e145">
-                  <head change="#" xml:id="head_3.d2e147">Inclosure in No. 1.</head>
-                  <dateline change="#" xml:id="dateline_4.d2e150">Consul Devey to Sir G. Lowther</dateline>
-                  <dateline change="#" xml:id="dateline_5.d2e153">(No. 51.)</dateline>
-                  <dateline change="#" xml:id="dateline_6.d2e156">Damascus, October 1, 1908</dateline>
-                  <p change="#" xml:id="p_4.d2e159">Sir,<lb change="#" xml:id="lb_4.d2e161"/>I HAVE the honour to submit herewith a general report on events during
+               <div n="2" type="print">
+                  <head>Inclosure in No. 1.</head>
+                  <dateline>Consul Devey to Sir G. Lowther</dateline>
+                  <dateline>(No. 51.)</dateline>
+                  <dateline>Damascus, October 1, 1908</dateline>
+                  <p>Sir,<lb/>I HAVE the honour to submit herewith a general report on events during
                      the last quarter.</p>
-                  <p change="#" xml:id="p_5.d2e165">The great 'coup d'Etat' which took place in <placeName change="#" xml:id="placeName_4.d2e167">Turkey</placeName> on
-                     the <date change="#" xml:id="date_4.d2e170">24th July</date> occupied all minds and arouses every emotion with
-                     the proclamation of the Constitution, in <placeName change="#" xml:id="placeName_5.d2e173">Damascus</placeName> as in
-                     all other important centres in the <placeName change="#" xml:id="placeName_6.d2e176">Empire</placeName>. </p>
-                  <p change="#" xml:id="p_6.d2e180">Among its results worthy of remark here were—<list change="#" xml:id="list_1.d2e182">
-                        <item change="#" xml:id="item_1.d2e184">(a) Celebrations and festivities.</item>
-                        <item change="#" xml:id="item_2.d2e187">(b) Dismissal or resignation of notoriously corrupt officials.</item>
-                        <item change="#" xml:id="item_3.d2e190">(c) Formation of clubs and associations.</item>
-                        <item change="#" xml:id="item_4.d2e193">(d) Parliamentary elections.</item>
-                        <item change="#" xml:id="item_5.d2e196">(e) Reforms in various Governmental Departments.</item>
-                        <item change="#" xml:id="item_6.d2e200">(f) Release or rehabilitation of political exiles or persons
+                  <p>The great 'coup d'Etat' which took place in <placeName>Turkey</placeName> on
+                     the <date>24th July</date> occupied all minds and arouses every emotion with
+                     the proclamation of the Constitution, in <placeName>Damascus</placeName> as in
+                     all other important centres in the <placeName>Empire</placeName>. </p>
+                  <p>Among its results worthy of remark here were—<list>
+                        <item>(a) Celebrations and festivities.</item>
+                        <item>(b) Dismissal or resignation of notoriously corrupt officials.</item>
+                        <item>(c) Formation of clubs and associations.</item>
+                        <item>(d) Parliamentary elections.</item>
+                        <item>(e) Reforms in various Governmental Departments.</item>
+                        <item>(f) Release or rehabilitation of political exiles or persons
                            disgraced.</item>
                      </list></p>
-                  <p change="#" xml:id="p_7.d2e204">Rejoicings and joyful manifestation are only coming now to an end, after
+                  <p>Rejoicings and joyful manifestation are only coming now to an end, after
                      lasting more than two months. More than twenty-five well-organized great
                      meetings were held int he different quarters of the city, mostly attended by
                      several thousands demonstrators and spectators, and hundreds of speeches were
                      delivered, all condemning autocracy as despotic and tyrannical and eulogizing
-                     liberty and constitutional government. About 2,000<hi rend="italic" change="#" xml:id="hi_1.d2e206">l</hi> were
+                     liberty and constitutional government. About 2,000<hi rend="italic">l</hi> were
                      spent on the festivities and had not the Notables of
-                        <placeName change="#" xml:id="placeName_7.d2e209">Damascus</placeName>, with the <orgName change="#" xml:id="orgName_1.d2e212">Young Turks</orgName>,
+                        <placeName>Damascus</placeName>, with the <orgName>Young Turks</orgName>,
                      lately recommended their cessation they might have continued for another month
                      or more. It is to be remarked with pleasure that all these gathering and
                      demonstrations were conducted most orderly without any dispute or ill-feeling
                      among those who assembled.</p>
-                  <p change="#" xml:id="p_8.d2e216">Many corrupt officials were either dismissed or withdrew themselves. The
+                  <p>Many corrupt officials were either dismissed or withdrew themselves. The
                      Alaibey of Gendarmerie, the Chief of Police, the Muhassebeji, the Secretary of
-                     the Court of Sherá, six Kaimakams of Kazas, <persName change="#" xml:id="persName_5.d2e218">Mohammad Pasha
-                        Adm</persName>, of <orgName change="#" xml:id="orgName_2.d2e221">Idara Mejliss</orgName> with about thirty other
+                     the Court of Sherá, six Kaimakams of Kazas, <persName>Mohammad Pasha
+                        Adm</persName>, of <orgName>Idara Mejliss</orgName> with about thirty other
                      minor officials vacated their posts mostly to the general satisfaction of the
-                     public, and it is debated now among <orgName change="#" xml:id="orgName_3.d2e224">Young Turkey</orgName> adherents
+                     public, and it is debated now among <orgName>Young Turkey</orgName> adherents
                      whether it would be right to punish the officials who were led to bribery by
                      the littleness of their pay and its frequent irregularity. Doubtless the proper
                      course will be followed in leaving this matter to the jurisdiction   of
@@ -111,15 +116,16 @@
                      rapacious and outrageous among officials suffices for the moment. Moreover, the
                      vacancies are not being easily filled up by really good substitutes, for such
                      persons are at present rare, and often unwilling to serve. </p>
-                  <p change="#" xml:id="p_9.d2e228">Damascus clubs and associations, besides the <orgName change="#" xml:id="orgName_4.d2e230">Union and
-                        Progress</orgName> number now five, viz., <orgName change="#" xml:id="orgName_5.d2e233">Hurriyet</orgName>,
-                        <orgName change="#" xml:id="orgName_6.d2e236">Ulema</orgName>, <orgName change="#" xml:id="orgName_7.d2e239">Medical</orgName>,
-                        <orgName change="#" xml:id="orgName_8.d2e242">Commercial</orgName>, <orgName change="#" xml:id="orgName_9.d2e246">Free Ottoman</orgName>, besides a
-                        <orgName change="#" xml:id="orgName_10.d2e249">Shoemaker Guild</orgName>. The first two are showing much activity
+                  <p>Damascus clubs and associations, besides the <orgName>Union and
+                        Progress</orgName> number now five, viz., <orgName>Hurriyet</orgName>,
+                        <orgName>Ulema</orgName>, <orgName>Medical</orgName>,
+                        <orgName>Commercial</orgName>, <orgName>Free Ottoman</orgName>, besides a
+                        <orgName>Shoemaker Guild</orgName>. The first two are showing much activity
                      which is likely to excite emulation . The Ulema, through misapprehension, and
                      with uncalled-for solicitude, are anxious to conserve and uphold Islam against
-                     the liberal views of the <orgName change="#" xml:id="orgName_11.d2e252">Young Turks</orgName>, while the latter have
-                     no intention at present to interfere with religious precepts. The first<pb n="2" facs="#facs_2" change="#" xml:id="pb_2.d2e255"/> point of dispute was about women's wear, which the Ulema wanted to
+                     the liberal views of the <orgName>Young Turks</orgName>, while the latter have
+                     no intention at present to interfere with religious precepts. The first<pb
+                        n="2" facs="#facs_2"/> point of dispute was about women's wear, which the Ulema wanted to
                      be cut on a very simple mode, one piece enveloping the whole body; and the
                      Liberals denied them the right of interfering with this matter, which should be
                      regarded as pertaining to individual free choice. In this campaign the Ulema
@@ -127,152 +133,152 @@
                      There is no record as to practical work effected by other clubs, though their
                      moral influence cannot be other than good.</p>
                    
-                  <p change="#" xml:id="p_10.d2e258">The Parliamentary elections are under preparation the last two months, and in
+                  <p>The Parliamentary elections are under preparation the last two months, and in
                      some kazas the voters have already voted for the electors; but in
-                        <placeName change="#" xml:id="placeName_8.d2e260">Damascus</placeName> city this process will begin in a week's
+                        <placeName>Damascus</placeName> city this process will begin in a week's
                      time. It is not even announced yet how many Deputies will represent this
                      vilayet in the Parliament but it is supposed that they will be seven or eight.
-                     The <placeName change="#" xml:id="placeName_9.d2e263">Hauran</placeName> people still reject their privilege to elect
+                     The <placeName>Hauran</placeName> people still reject their privilege to elect
                      a Deputy and the efforts of the Government in dissuading them from this
                      self-inflicted loss seem to be futile. The Mutessarif of
-                        <placeName change="#" xml:id="placeName_10.d2e266">Kerak</placeName> lately resigned on grounds of health; but
+                        <placeName>Kerak</placeName> lately resigned on grounds of health; but
                      before doing so had been able to set going a local society or club for
                      instruction of the people of his district, who, indeed, are little less
-                     backward and ignorant than those of <placeName change="#" xml:id="placeName_11.d2e269">Hauran</placeName>.</p>
-                  <p change="#" xml:id="p_11.d2e274">The reforms in the various Departments of the Government proceed slowly. The
-                        <orgName change="#" xml:id="orgName_12.d2e276">municipality</orgName> suppressed the less properly awarded
-                     pensions, and succeeded in amassing about 3,000<hi rend="italic" change="#" xml:id="hi_2.d2e279">l.</hi>
-                     through various economies. The <orgName change="#" xml:id="orgName_13.d2e282">Public Instruction Department</orgName>
+                     backward and ignorant than those of <placeName>Hauran</placeName>.</p>
+                  <p>The reforms in the various Departments of the Government proceed slowly. The
+                        <orgName>municipality</orgName> suppressed the less properly awarded
+                     pensions, and succeeded in amassing about 3,000<hi rend="italic">l.</hi>
+                     through various economies. The <orgName>Public Instruction Department</orgName>
                      formed a new Chamber to consider the reorganization of the educational system
                      in this vilayet. In other Departments no special reforms worth mentioning have
                      been introduced but many are being talked of and discussed. </p>
-                  <p change="#" xml:id="p_12.d2e286">The political exiles who had been released or rehabilitated included many
-                     persons of rank, both military and civil. <persName change="#" xml:id="persName_6.d2e288">Mushir Fuad
+                  <p>The political exiles who had been released or rehabilitated included many
+                     persons of rank, both military and civil. <persName>Mushir Fuad
                         Pasha</persName>'s release was the occasion of great demonstrations in
-                        <placeName change="#" xml:id="placeName_12.d2e291">Damascus</placeName>, but the rehabilitation of others, with a
+                        <placeName>Damascus</placeName>, but the rehabilitation of others, with a
                      few exceptions, was not publicly noticed, for this disgraced persons were
                      always enjoying personal freedom and a very few persons knew that they were
-                           <q change="#" xml:id="q_1.d2e294"><foreign change="#" xml:id="foreign_1.d2e295">Ikamet Mamours</foreign></q>. The chief names among these
-                     were, <persName change="#" xml:id="persName_7.d2e298"><sic change="#" xml:id="sic_1.d2e299">Mouri</sic> Pasha</persName> Ferik of Cavalry, another
-                     Ferik called <persName change="#" xml:id="persName_8.d2e303">Nouri Pasha</persName> sent to live here without duties,
-                        <persName change="#" xml:id="persName_9.d2e307">Ferik Ibrahim Pasha</persName> (these three Feriks left for
-                        <placeName change="#" xml:id="placeName_13.d2e310">Constantinople</placeName>), <persName change="#" xml:id="persName_10.d2e313">Ferik Dr. Osman
-                        Pasha</persName>, <persName change="#" xml:id="persName_11.d2e316">Liva Behjet Pasha</persName> (these last two
-                     died recently), <persName change="#" xml:id="persName_12.d2e319">Colonel Bedri Bey</persName> (now of <persName change="#" xml:id="persName_13.d2e322">Liva
-                        Bedri Pasha</persName> in <placeName change="#" xml:id="placeName_14.d2e326">Constantinople</placeName>). The
-                        <foreign change="#" xml:id="foreign_2.d2e329">Maarif Mushiri</foreign> and his assistant, and many minor
+                           <q><foreign>Ikamet Mamours</foreign></q>. The chief names among these
+                     were, <persName><sic>Mouri</sic> Pasha</persName> Ferik of Cavalry, another
+                     Ferik called <persName>Nouri Pasha</persName> sent to live here without duties,
+                        <persName>Ferik Ibrahim Pasha</persName> (these three Feriks left for
+                        <placeName>Constantinople</placeName>), <persName>Ferik Dr. Osman
+                        Pasha</persName>, <persName>Liva Behjet Pasha</persName> (these last two
+                     died recently), <persName>Colonel Bedri Bey</persName> (now of <persName>Liva
+                        Bedri Pasha</persName> in <placeName>Constantinople</placeName>). The
+                        <foreign>Maarif Mushiri</foreign> and his assistant, and many minor
                      officials or private persons (such as members of the
-                        <persName change="#" xml:id="persName_14.d2e332">Bedrkhan</persName> family) numbering more than a hundred.
-                     Further, as reported in <ref change="#" xml:id="ref_1.d2e335">despatch No. 32</ref>, the Ismailians subjected to
+                        <persName>Bedrkhan</persName> family) numbering more than a hundred.
+                     Further, as reported in <ref>despatch No. 32</ref>, the Ismailians subjected to
                      religious persecution were pardoned. Happily, no sort of disorder or riotous
                      intention was displayed here for the purpose of releasing prisoners and
                      ordinary criminals generally, as took place in some other places.</p>
-                  <p change="#" xml:id="p_13.d2e339">The Hedjaz Railway was completed before the end of August, as far as Medina,
+                  <p>The Hedjaz Railway was completed before the end of August, as far as Medina,
                      1,300 kilom. distance from Damascus, together with Haifa branch of 160 kilom.,
                      making up a total of 1,460 kilom. laid in seven years, and inaugurated in the
                      1st September, the anniversary of the Sultan's Accession Day. After this
-                     occasion the <orgName change="#" xml:id="orgName_14.d2e341">2nd Battalion</orgName> of the <orgName change="#" xml:id="orgName_15.d2e344">33rd
-                        Regiment</orgName> and <orgName change="#" xml:id="orgName_16.d2e347">3rd</orgName> and <orgName change="#" xml:id="orgName_17.d2e350">4th
-                        Battalions</orgName> of the <orgName change="#" xml:id="orgName_18.d2e353">39th Regiment</orgName>, out of the
+                     occasion the <orgName>2nd Battalion</orgName> of the <orgName>33rd
+                        Regiment</orgName> and <orgName>3rd</orgName> and <orgName>4th
+                        Battalions</orgName> of the <orgName>39th Regiment</orgName>, out of the
                      five battalions employed in earthworks, were allowed to go back to their
                      respective head-quarters, and about 1,400 of these battalions, on expiry of
-                     service, were disbanded. Moreover, the four battalions of the <orgName change="#" xml:id="orgName_19.d2e357">40th
-                        Regiment</orgName>, sent to <placeName change="#" xml:id="placeName_15.d2e360">Medina</placeName> from this Army
-                     Corps in <date change="#" xml:id="date_5.d2e363">June last</date> to guard the line are also ordered back to
+                     service, were disbanded. Moreover, the four battalions of the <orgName>40th
+                        Regiment</orgName>, sent to <placeName>Medina</placeName> from this Army
+                     Corps in <date>June last</date> to guard the line are also ordered back to
                      their stations. At present only two battalions are to be kept there to take
                      care of the line as regards repairs and protection. it would appear that there
                      is no intention of immediately beginning to build the line beyond
-                        <placeName change="#" xml:id="placeName_16.d2e366">Medina</placeName>, seing that the Bedouin tribes manifest
+                        <placeName>Medina</placeName>, seing that the Bedouin tribes manifest
                      increasing activity against the projet : and it has been heard here that the
-                     Bedouins to this side of <placeName change="#" xml:id="placeName_17.d2e369">Medina</placeName>, in case the other
-                     tribes between <placeName change="#" xml:id="placeName_18.d2e372">Medina</placeName> and <placeName change="#" xml:id="placeName_19.d2e376">Mecca</placeName>
+                     Bedouins to this side of <placeName>Medina</placeName>, in case the other
+                     tribes between <placeName>Medina</placeName> and <placeName>Mecca</placeName>
                      succeed in preventing such continuation, take of an intention to destroy the
-                     line as far back as <placeName change="#" xml:id="placeName_20.d2e379">Medain Salih</placeName>, but certainly the
+                     line as far back as <placeName>Medain Salih</placeName>, but certainly the
                      present Government will take measures to prevent such outrages. Probably the
                      coming year will be spent in constructing the bridges and other technical works
                      not yet made on the line. The thirty engineers with their chief,
-                        <persName change="#" xml:id="persName_15.d2e382">Meissner Pasha</persName>, will await fresh orders as to what to
+                        <persName>Meissner Pasha</persName>, will await fresh orders as to what to
                      do in the future, and perhaps many of them will retire. </p>
-                  <p change="#" xml:id="p_14.d2e386">Public security in the vilayet has been during the quarter satisfactory, and
+                  <p>Public security in the vilayet has been during the quarter satisfactory, and
                      order was properly kept. The Bedouins have been quiet and peaceful during the
                      summer, and only on two or three occasions made petty rais and drove or carried
                      away animals or goods, but the spoils were restored to their owners without
                      great difficulties. It seems that the Druzes and Bedouins are to some extent
                      under the spell of the system of Government promising the application of strict
-                     justice and <pb ed="print" n="3" facs="#facs_3" change="#" xml:id="pb_3.d2e388"/>the execution of law, and are calmly waiting to see the
+                     justice and <pb ed="print" n="3" facs="#facs_3"/>the execution of law, and are calmly waiting to see the
                      results of this movement whilst there is no evident cause just now for arousing
                      dormant animosity.</p>
-                  <p change="#" xml:id="p_15.d2e391">The crops this year were in general very good, and the grain harvest in most of
+                  <p>The crops this year were in general very good, and the grain harvest in most of
                      the districts of the province was exceptionally abundant. The apricot produce
                      was above the average, while walnuts were much below. All prices of fruit and
                      cereals are still high and the peasants this year will do well. An exception
                      might be mentioned as regards locusts, which made a perceptible damage in
-                     the <placeName change="#" xml:id="placeName_21.d2e393"><placeName change="#" xml:id="placeName_21.d2e394">Kalamoun</placeName> district</placeName>, but had a
+                     the <placeName><placeName>Kalamoun</placeName> district</placeName>, but had a
                      very slight effect in some other kazas. But the loss to the vilayet in general
                      has been small.</p>
-                  <p change="#" xml:id="p_16.d2e399">As regards trade, no special remarks need be made: strikes at
-                        <placeName change="#" xml:id="placeName_23.d2e401">Beirout</placeName> at the Customs and on local railways have
+                  <p>As regards trade, no special remarks need be made: strikes at
+                        <placeName>Beirout</placeName> at the Customs and on local railways have
                      produced only exiguous loss here. With reference to the latter we may note that
                      public opinion judges that the smaller employés were underpaid, while the
                      profits of the Company and of its Directors were considerable and the public at
                      the same time ill-served.</p>
-                  <p change="#" xml:id="p_17.d2e406">Public health has been satisfactory on the whole this summer, but the
-                        <placeName change="#" xml:id="placeName_24.d2e408">Ain Fijeh</placeName> water has not been received the general
+                  <p>Public health has been satisfactory on the whole this summer, but the
+                        <placeName>Ain Fijeh</placeName> water has not been received the general
                      approbation anticipated which is to be regretted, as theres is absolute proof
                      the it is the best and purest spring water of al this neighbourhood. Its
                      distribution to all quarters of the city proceeds slowly.</p>
-                  <byline change="#" xml:id="byline_2.d2e412">I have, &amp;c.<lb change="#" xml:id="lb_5.d2e414"/>(Signed) <signatures change="#" xml:id="signatures_1.d2e416">G. P. Devey</signatures></byline>
+                  <byline>I have, &amp;c.<lb/>(Signed) <signatures>G. P. Devey</signatures></byline>
                </div>
-               <div type="type-written" change="#" xml:id="div_3.d2e420"><p change="#" xml:id="p_18.d2e421">(44/F37930/08)</p>
-               <p change="#" xml:id="p_19.d2e424">Therapia 697, 24 Oct 1908, Lowther to</p>
-               <p change="#" xml:id="p_20.d2e427">"Quarterly report on Damascus" Printed for consideration</p>
-               <p change="#" xml:id="p_21.d2e430">Inclosure: Damascus 51, 1 Oct 1908, Devey to Lowther. Printed version &amp;
+               <div type="type-written"><p>(44/F37930/08)</p>
+               <p>Therapia 697, 24 Oct 1908, Lowther to</p>
+               <p>"Quarterly report on Damascus" Printed for consideration</p>
+               <p>Inclosure: Damascus 51, 1 Oct 1908, Devey to Lowther. Printed version &amp;
                   type written version</p>
-               <p change="#" xml:id="p_22.d2e433">[…]</p>
-               <p change="#" xml:id="p_23.d2e436">"the great 'coup d'Etat' which took place in <placeName change="#" xml:id="placeName_25.d2e438">Turkey</placeName> on
-                  the <date change="#" xml:id="date_6.d2e441">24th July</date> occupied all minds and arouses every emotion with
-                  the proclamation of the Constitution, in <placeName change="#" xml:id="placeName_26.d2e444">Damascus</placeName> as in
-                  all other important centres in the <placeName change="#" xml:id="placeName_27.d2e447">Empire</placeName>. Among its
-                  results worthy of remark here were <list change="#" xml:id="list_2.d2e450">
-                     <item change="#" xml:id="item_7.d2e452">(a) celebrations and festivities</item>
-                     <item change="#" xml:id="item_8.d2e455">(b) dismissal or resignation of notoriously corrupt officials</item>
-                     <item change="#" xml:id="item_9.d2e458">(c) formation of clubs and associations</item>
-                     <item change="#" xml:id="item_10.d2e461">(d) parliamentary elections</item>
-                     <item change="#" xml:id="item_11.d2e464">(e) reforms in various governmental departments.</item>
-                     <item change="#" xml:id="item_12.d2e468">(f) release or rehabilitation of political exiles or persons</item>
+               <p>[…]</p>
+               <p>"the great 'coup d'Etat' which took place in <placeName>Turkey</placeName> on
+                  the <date>24th July</date> occupied all minds and arouses every emotion with
+                  the proclamation of the Constitution, in <placeName>Damascus</placeName> as in
+                  all other important centres in the <placeName>Empire</placeName>. Among its
+                  results worthy of remark here were <list>
+                     <item>(a) celebrations and festivities</item>
+                     <item>(b) dismissal or resignation of notoriously corrupt officials</item>
+                     <item>(c) formation of clubs and associations</item>
+                     <item>(d) parliamentary elections</item>
+                     <item>(e) reforms in various governmental departments.</item>
+                     <item>(f) release or rehabilitation of political exiles or persons</item>
                   </list> [xxx].</p>
-               <p change="#" xml:id="p_24.d2e474">Rejoicings and joyful manifestation are only coming now to an end, after
+               <p>Rejoicings and joyful manifestation are only coming now to an end, after
                   lasting more than two months: more than 25 well organized great meetings were
                   held int he different quarters of the city, mostly attended by several
                   thousands demonstrators and spectators, and hundreds of speeches were
                   delivered, all condemning autocracy as despotic &amp; tyrannical and eulogizing
                   liberty and constitutional government. About £2000 were spent on the
-                  festivities and had not notables of <placeName change="#" xml:id="placeName_28.d2e476">Damascus</placeName> with the
-                  <orgName change="#" xml:id="orgName_20.d2e479">young Turks</orgName> lately recommended their cessation they might
+                  festivities and had not notables of <placeName>Damascus</placeName> with the
+                  <orgName>young Turks</orgName> lately recommended their cessation they might
                   have continued for another month or more. It is to be remarked with pleasure
                   that all these gathering &amp; demonstrations were conducted most orderly
                   without any dispute or ill feeling among those who assembled.</p>
-               <p change="#" xml:id="p_25.d2e483">Many corrupt officials were either dismissed or withdrew themselves.</p>
-               <p change="#" xml:id="p_26.d2e486">The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams
-                  of Cazas, <persName change="#" xml:id="persName_16.d2e488">Moh.d P. Adm</persName> of <orgName change="#" xml:id="orgName_21.d2e491">Idara Mejliss</orgName>
+               <p>Many corrupt officials were either dismissed or withdrew themselves.</p>
+               <p>The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams
+                  of Cazas, <persName>Moh.d P. Adm</persName> of <orgName>Idara Mejliss</orgName>
                   with about 30 other minor officials vacated their posts, mostly to the general
-                  satisfaction of the public and it is debated now among '<orgName change="#" xml:id="orgName_22.d2e494">Young
+                  satisfaction of the public and it is debated now among '<orgName>Young
                      Turkey</orgName>' adherents whether it would be right to punish the
                   officials who were led to bribery by the littleness of their pay &amp; its
                   frequent irregularity. Doubtless the proper course will be followed in leaving
-                  this matter to the jurisdiction <pb change="#" xml:id="pb_4.d2e497"/> of Parliament when it assembles, and the
+                  this matter to the jurisdiction <pb/> of Parliament when it assembles, and the
                   ignorious[?] dismissal of the more corrupt, rapacious &amp; outrageous among
                   officials suffices for the moment. Moreover, the vacancies are not being easily
                   filled up by really good substitutes, for such persons are at present rare, and
                   often unwilling to serve. </p>
-               <p change="#" xml:id="p_27.d2e500">Damascus Clubs &amp; associations, besides the <orgName change="#" xml:id="orgName_23.d2e502">Union &amp;
-                  Progress</orgName> number now five viz <orgName change="#" xml:id="orgName_24.d2e505">Hurriyet</orgName>,
-                  <orgName change="#" xml:id="orgName_25.d2e508">Ulema</orgName>, <orgName change="#" xml:id="orgName_26.d2e511">Medical</orgName>,
-                  <orgName change="#" xml:id="orgName_27.d2e514">Commercial</orgName>, <orgName change="#" xml:id="orgName_28.d2e518">Free Ottoman</orgName> besides a
-                  <orgName change="#" xml:id="orgName_29.d2e521">Shoemaker</orgName> guild. the first two are showing much activity
+               <p>Damascus Clubs &amp; associations, besides the <orgName>Union &amp;
+                  Progress</orgName> number now five viz <orgName>Hurriyet</orgName>,
+                  <orgName>Ulema</orgName>, <orgName>Medical</orgName>,
+                  <orgName>Commercial</orgName>, <orgName>Free Ottoman</orgName> besides a
+                  <orgName>Shoemaker</orgName> guild. the first two are showing much activity
                   wh.[ich] is likely to excite mutation . The misapprehension &amp; with uncalled
-                  solicitude <orgName change="#" xml:id="orgName_30.d2e524">Ulema</orgName> are anxious to <sic change="#" xml:id="sic_2.d2e527">comcure</sic> &amp;
-                  uphold Islam against the liberal views of the <orgName change="#" xml:id="orgName_31.d2e530">Young Turks</orgName>,
+                  solicitude <orgName>Ulema</orgName> are anxious to <sic>comcure</sic> &amp;
+                  uphold Islam against the liberal views of the <orgName>Young Turks</orgName>,
                   while the latter have no intention at present to interfere with religious
                   precepts. The first point of dispute was about women's wear which the Ulema
                   wanted to be cut on a very simple mode, one piece enveloping the whole body,
@@ -280,130 +286,130 @@
                   should be regarded as pertaining to individual free choice. In this campaign
                   the Ulema were defeated but not without their rivals using threats of applying
                   force.</p>
-               <p change="#" xml:id="p_28.d2e534">There is little record as to practical work effected [?] by other clubs though
+               <p>There is little record as to practical work effected [?] by other clubs though
                   their moral influence cannot be other than good.</p>
-               <pb change="#" xml:id="pb_5.d2e537"/>
-               <p change="#" xml:id="p_29.d2e540">The Parliamentary elections are under preparation the last two months and in
+               <pb/>
+               <p>The Parliamentary elections are under preparation the last two months and in
                   some cazas the voters have already voted for the electors, but in
-                  <placeName change="#" xml:id="placeName_29.d2e542">Damascus</placeName> city this process will begin in a week's
+                  <placeName>Damascus</placeName> city this process will begin in a week's
                   time. It is not even announced yet how many deputies will represent this
                   Vilayet in the Parliament but it is supposed that they will be seven or eight.
-                  The <placeName change="#" xml:id="placeName_30.d2e545">Hauran</placeName> people still reject their privilege to elect
+                  The <placeName>Hauran</placeName> people still reject their privilege to elect
                   a deputy and the efforts of the government in dissuading them from this
                   self-inflicted loss seem to be futile. The Mutessarif of
-                  <placeName change="#" xml:id="placeName_31.d2e548">Kerak</placeName> lately resigned on grounds of health, but
+                  <placeName>Kerak</placeName> lately resigned on grounds of health, but
                   before doing so had been able to set going a local society or club for
                   instruction of the people of his district who indeed are little less backward
-                  &amp;ignorant than this of <placeName change="#" xml:id="placeName_32.d2e551">Hauran</placeName>.</p>
-               <p change="#" xml:id="p_30.d2e555">The reforms in the various departments of the government proceed slowly. The
-                  <orgName change="#" xml:id="orgName_32.d2e557">Municipality</orgName> suppressed most improperly awarded pensions
+                  &amp;ignorant than this of <placeName>Hauran</placeName>.</p>
+               <p>The reforms in the various departments of the government proceed slowly. The
+                  <orgName>Municipality</orgName> suppressed most improperly awarded pensions
                   paid to persons doing nothing for it and succeeded in amassing about £3000
-                  through various economies. The <orgName change="#" xml:id="orgName_33.d2e560">Public Instruction Department</orgName>
+                  through various economies. The <orgName>Public Instruction Department</orgName>
                   formed a new chamber to consider the reorganization of the educational system
                   in this Vilayet. In the departments no special reforms worth mentioning have
                   been introduced but many are being talked of &amp; discussed. </p>
-               <p change="#" xml:id="p_31.d2e564">The political exiles who had been releases or rehabilitated included many
-                  persons of rank, both military and civil. <persName change="#" xml:id="persName_17.d2e566">Mushir Fuad
+               <p>The political exiles who had been releases or rehabilitated included many
+                  persons of rank, both military and civil. <persName>Mushir Fuad
                      Pasha</persName>'s release was the occasion of great demonstrations in
-                  <placeName change="#" xml:id="placeName_33.d2e569">Damascus</placeName>, but the rehabilitation of others, with a
+                  <placeName>Damascus</placeName>, but the rehabilitation of others, with a
                   few exceptions, was not publicly noticed, for this disgraces persons were
-                  always enjoying personal freedom <pb change="#" xml:id="pb_6.d2e572"/> and a very few persons knew that they
+                  always enjoying personal freedom <pb/> and a very few persons knew that they
                   were 'Ikamet Mamours' [iqāma maʾmūr]. The chief names among these were,
-                  <persName change="#" xml:id="persName_18.d2e574">Nouri P.</persName> Ferik of Cavalry, another Ferik called
-                  <persName change="#" xml:id="persName_19.d2e577">Nouri Pasha</persName> sent to live here without duties,
-                  <persName change="#" xml:id="persName_20.d2e581">Ferik Ibrahim Pasha</persName> (those three Feriks kept for
-                  <placeName change="#" xml:id="placeName_34.d2e584">Constantinople</placeName>), <persName change="#" xml:id="persName_21.d2e587">Ferik Lt. Osman
-                     P.</persName>, <persName change="#" xml:id="persName_22.d2e590">Liva Behjet Pasha</persName> (those two died
-                  recently), <persName change="#" xml:id="persName_23.d2e593">Colonel Bedri Bey</persName> (now of <persName change="#" xml:id="persName_24.d2e596">Liva Bedri
-                     P.</persName> in <placeName change="#" xml:id="placeName_35.d2e600">Constantinople</placeName>). The Maàriz Mushiri
+                  <persName>Nouri P.</persName> Ferik of Cavalry, another Ferik called
+                  <persName>Nouri Pasha</persName> sent to live here without duties,
+                  <persName>Ferik Ibrahim Pasha</persName> (those three Feriks kept for
+                  <placeName>Constantinople</placeName>), <persName>Ferik Lt. Osman
+                     P.</persName>, <persName>Liva Behjet Pasha</persName> (those two died
+                  recently), <persName>Colonel Bedri Bey</persName> (now of <persName>Liva Bedri
+                     P.</persName> in <placeName>Constantinople</placeName>). The Maàriz Mushiri
                   [?] &amp; his assistant, and many minor officials or private persons; such as
-                  members of the <persName change="#" xml:id="persName_25.d2e603">Bedr Khan</persName> family, numbering more than a
-                  hundred. Further as reported in <ref change="#" xml:id="ref_2.d2e606">desp. No. 32</ref>, the Ismailians
+                  members of the <persName>Bedr Khan</persName> family, numbering more than a
+                  hundred. Further as reported in <ref>desp. No. 32</ref>, the Ismailians
                   subjected to religious persecution were pardoned. Happily no sort of disorder
                   or riotous intention was displayed here for the purpose of releasing prisoners
                   and ordinary criminals generally, as took place in some other places."</p>
-               <p change="#" xml:id="p_32.d2e610">Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four
+               <p>Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four
                   of the five battalions employed for earthworks on the line were allowed to
                   return to their garrisons. </p>
-               <p change="#" xml:id="p_33.d2e613">"about 1400 of these battalions on expiry of service were disbanded. Moreover,
-                  the four battalions of the <orgName change="#" xml:id="orgName_34.d2e615">40th Reg</orgName>, sent to
-                  <placeName change="#" xml:id="placeName_36.d2e618">Medina</placeName> from this Army Corps in <date change="#" xml:id="date_7.d2e621">June
+               <p>"about 1400 of these battalions on expiry of service were disbanded. Moreover,
+                  the four battalions of the <orgName>40th Reg</orgName>, sent to
+                  <placeName>Medina</placeName> from this Army Corps in <date>June
                      last</date>, to guard the line, are also ordered back to their headquarters. At
                   present only two battalions are to be kept there to take care of the line as
                   regards repairs &amp; protection." No aspirations to commence construction
-                  beyond Medina due to increasing Bedouin raids <pb change="#" xml:id="pb_7.d2e624"/></p>
-               <p change="#" xml:id="p_34.d2e626">"Public security in the Vilayet has been during the quarter satisfactory and
+                  beyond Medina due to increasing Bedouin raids <pb/></p>
+               <p>"Public security in the Vilayet has been during the quarter satisfactory and
                   order was properly kept. The Bedouins have been quiet &amp; peaceful during the
                   summer, and only on two or three occasions made petty rais &amp; drove or
                   carried away animals or goods but the spoils were restored to their owners
                   without great difficulties." Druze and Bedouins seem under the spell of the
                   government and calmly wait for the implementation of the promised reforms</p>
-               <p change="#" xml:id="p_35.d2e630">"the crops this year were in general very good and the grain harvest in most of
+               <p>"the crops this year were in general very good and the grain harvest in most of
                   the districts of the Province was exceptionally abundant. The apricot produce
                   was above the average while walnuts were much below. All prices of fruit and
                   cereals are still high and the peasants this year will do well. An exception
-                  might be mentioned as <pb change="#" xml:id="pb_8.d2e632"/> as regards locusts which made a perceptible damage
-                  in the <placeName change="#" xml:id="placeName_37.d2e634"><placeName change="#" xml:id="placeName_37.d2e635">Kalamoun</placeName> district</placeName> but had
+                  might be mentioned as <pb/> as regards locusts which made a perceptible damage
+                  in the <placeName><placeName>Kalamoun</placeName> district</placeName> but had
                   a very slight effect in some other Cazas. But the loss to the Vilayet in
                   general has been small.</p>
-               <p change="#" xml:id="p_36.d2e640">As respects trade, no special remarks need be made; strikes at
-                  <placeName change="#" xml:id="placeName_39.d2e642">Beirut</placeName> at the Customs and on local railways have
+               <p>As respects trade, no special remarks need be made; strikes at
+                  <placeName>Beirut</placeName> at the Customs and on local railways have
                   produced only exiguous loss here. With reference to the latter we may note that
                   public opinion judges that the smaller employés were underpaid, while the
                   profits of the Company &amp; of its directors were considerable and the public
                   at the same time ill served.</p>
-               <p change="#" xml:id="p_37.d2e646">Public health has been satisfactory on the whole this summer, but the
-                  <placeName change="#" xml:id="placeName_40.d2e648">Ain Fijeh</placeName> water has not been received the general
+               <p>Public health has been satisfactory on the whole this summer, but the
+                  <placeName>Ain Fijeh</placeName> water has not been received the general
                   approbation anticipated which is to be regretted, as theres is absolute proof
                   the it is the best &amp; purest spring water of al this neighbourhood. Its
                   distribution to all quarters of the city proceeds slowly."</p>
                   </div>
-               <div type="draft" change="#" xml:id="div_4.d2e653">
-               <gap change="#" xml:id="gap_1.d2e655">[…]</gap>
-               <p change="#" xml:id="p_38.d2e658">"the great '<q change="#" xml:id="q_2.d2e660">coup d'Etat</q>' which took place in <placeName change="#" xml:id="placeName_41.d2e663">Turkey</placeName> on
-                  the <date change="#" xml:id="date_8.d2e666">24th July</date> occupied all minds and arouses every emotion with
-                  the proclamation of the Constitution, in <placeName change="#" xml:id="placeName_42.d2e669">Damascus</placeName> as in
-                  all other important centres in the <placeName change="#" xml:id="placeName_43.d2e672">Empire</placeName>. Among its
-                  results worthy of remark here were <list change="#" xml:id="list_3.d2e676">
-                     <item change="#" xml:id="item_13.d2e678">(a) celebrations and festivities</item>
-                     <item change="#" xml:id="item_14.d2e681">(b) dismissal or resignation of notoriously corrupt officials</item>
-                     <item change="#" xml:id="item_15.d2e684">(c) formation of clubs and associations</item>
-                     <item change="#" xml:id="item_16.d2e687">(d) parliamentary elections</item>
-                     <item change="#" xml:id="item_17.d2e690">(e) reforms in various governmental departments.</item>
-                     <item change="#" xml:id="item_18.d2e694">(f) release or rehabilitation of political exiles or persons</item>
+               <div type="draft">
+               <gap>[…]</gap>
+               <p>"the great '<q>coup d'Etat</q>' which took place in <placeName>Turkey</placeName> on
+                  the <date>24th July</date> occupied all minds and arouses every emotion with
+                  the proclamation of the Constitution, in <placeName>Damascus</placeName> as in
+                  all other important centres in the <placeName>Empire</placeName>. Among its
+                  results worthy of remark here were <list>
+                     <item>(a) celebrations and festivities</item>
+                     <item>(b) dismissal or resignation of notoriously corrupt officials</item>
+                     <item>(c) formation of clubs and associations</item>
+                     <item>(d) parliamentary elections</item>
+                     <item>(e) reforms in various governmental departments.</item>
+                     <item>(f) release or rehabilitation of political exiles or persons</item>
                   </list> [xxx].</p>
-               <p change="#" xml:id="p_39.d2e699">Rejoicings and joyful manifestation are only coming now to an end, after
+               <p>Rejoicings and joyful manifestation are only coming now to an end, after
                   lasting more than two months: more than 25 well organized great meetings were
                   held int he different quarters of the city, mostly attended by several
                   thousands demonstrators and spectators, and hundreds of speeches were
                   delivered, all condemning autocracy as despotic &amp; tyrannical and eulogizing
                   liberty and constitutional government. About £2000 were spent on the
-                  festivities and had not notables of <placeName change="#" xml:id="placeName_44.d2e701">Damascus</placeName> with the
-                  <orgName change="#" xml:id="orgName_35.d2e704">young Turks</orgName> lately recommended their cessation they might
+                  festivities and had not notables of <placeName>Damascus</placeName> with the
+                  <orgName>young Turks</orgName> lately recommended their cessation they might
                   have continued for another month or more. It is to be remarked with pleasure
                   that all these gathering &amp; demonstrations were conducted most orderly
                   without any dispute or ill feeling among those who assembled.</p>
-               <p change="#" xml:id="p_40.d2e708">Many corrupt officials were either dismissed or withdrew themselves.</p>
-               <p change="#" xml:id="p_41.d2e711">The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams
-                  of Cazas, <persName change="#" xml:id="persName_26.d2e713">Moh.d P. Adm</persName> of <orgName change="#" xml:id="orgName_36.d2e716">Idara Mejliss</orgName>
+               <p>Many corrupt officials were either dismissed or withdrew themselves.</p>
+               <p>The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six Caimacams
+                  of Cazas, <persName>Moh.d P. Adm</persName> of <orgName>Idara Mejliss</orgName>
                   with about 30 other minor officials vacated their posts, mostly to the general
-                  satisfaction of the public and it is debated now among '<orgName change="#" xml:id="orgName_37.d2e719">Young
+                  satisfaction of the public and it is debated now among '<orgName>Young
                      Turkey</orgName>' adherents whether it would be right to punish the
                   officials who were led to bribery by the littleness of their pay &amp; its
                   frequent irregularity. Doubtless the proper course will be followed in leaving
-                  this matter to the jurisdiction <pb change="#" xml:id="pb_9.d2e722"/> of Parliament when it assembles, and the
+                  this matter to the jurisdiction <pb/> of Parliament when it assembles, and the
                   ignorious[?] dismissal of the more corrupt, rapacious &amp; outrageous among
                   officials suffices for the moment. Moreover, the vacancies are not being easily
                   filled up by really good substitutes, for such persons are at present rare, and
                   often unwilling to serve. </p>
-               <p change="#" xml:id="p_42.d2e726">Damascus Clubs &amp; associations, besides the <orgName change="#" xml:id="orgName_38.d2e728">Union &amp;
-                  Progress</orgName> number now five viz <orgName change="#" xml:id="orgName_39.d2e731">Hurriyet</orgName>,
-                  <orgName change="#" xml:id="orgName_40.d2e734">Ulema</orgName>, <orgName change="#" xml:id="orgName_41.d2e737">Medical</orgName>,
-                  <orgName change="#" xml:id="orgName_42.d2e740">Commercial</orgName>, <orgName change="#" xml:id="orgName_43.d2e744">Free Ottoman</orgName> besides a
-                  <orgName change="#" xml:id="orgName_44.d2e747">Shoemaker</orgName> guild. the first two are showing much activity
+               <p>Damascus Clubs &amp; associations, besides the <orgName>Union &amp;
+                  Progress</orgName> number now five viz <orgName>Hurriyet</orgName>,
+                  <orgName>Ulema</orgName>, <orgName>Medical</orgName>,
+                  <orgName>Commercial</orgName>, <orgName>Free Ottoman</orgName> besides a
+                  <orgName>Shoemaker</orgName> guild. the first two are showing much activity
                   wh.[ich] is likely to excite mutation . The misapprehension &amp; with uncalled
-                  solicitude <orgName change="#" xml:id="orgName_45.d2e750">Ulema</orgName> are anxious to <sic change="#" xml:id="sic_3.d2e753">comcure</sic> &amp;
-                  uphold Islam against the liberal views of the <orgName change="#" xml:id="orgName_46.d2e756">Young Turks</orgName>,
+                  solicitude <orgName>Ulema</orgName> are anxious to <sic>comcure</sic> &amp;
+                  uphold Islam against the liberal views of the <orgName>Young Turks</orgName>,
                   while the latter have no intention at present to interfere with religious
                   precepts. The first point of dispute was about women's wear which the Ulema
                   wanted to be cut on a very simple mode, one piece enveloping the whole body,
@@ -411,80 +417,80 @@
                   should be regarded as pertaining to individual free choice. In this campaign
                   the Ulema were defeated but not without their rivals using threats of applying
                   force.</p>
-               <p change="#" xml:id="p_43.d2e760">There is little record as to practical work effected [?] by other clubs though
+               <p>There is little record as to practical work effected [?] by other clubs though
                   their moral influence cannot be other than good.</p>
-               <pb change="#" xml:id="pb_10.d2e763"/>
-               <p change="#" xml:id="p_44.d2e765">The Parliamentary elections are under preparation the last two months and in
+               <pb/>
+               <p>The Parliamentary elections are under preparation the last two months and in
                   some cazas the voters have already voted for the electors, but in
-                  <placeName change="#" xml:id="placeName_45.d2e767">Damascus</placeName> city this process will begin in a week's
+                  <placeName>Damascus</placeName> city this process will begin in a week's
                   time. It is not even announced yet how many deputies will represent this
                   Vilayet in the Parliament but it is supposed that they will be seven or eight.
-                  The <placeName change="#" xml:id="placeName_46.d2e770">Hauran</placeName> people still reject their privilege to elect
+                  The <placeName>Hauran</placeName> people still reject their privilege to elect
                   a deputy and the efforts of the government in dissuading them from this
                   self-inflicted loss seem to be futile. The Mutessarif of
-                  <placeName change="#" xml:id="placeName_47.d2e773">Kerak</placeName> lately resigned on grounds of health, but
+                  <placeName>Kerak</placeName> lately resigned on grounds of health, but
                   before doing so had been able to set going a local society or club for
                   instruction of the people of his district who indeed are little less backward
-                  &amp;ignorant than this of <placeName change="#" xml:id="placeName_48.d2e776">Hauran</placeName>.</p>
-               <p change="#" xml:id="p_45.d2e780">The reforms in the various departments of the government proceed slowly. The
-                  <orgName change="#" xml:id="orgName_47.d2e782">Municipality</orgName> suppressed most improperly awarded pensions
+                  &amp;ignorant than this of <placeName>Hauran</placeName>.</p>
+               <p>The reforms in the various departments of the government proceed slowly. The
+                  <orgName>Municipality</orgName> suppressed most improperly awarded pensions
                   paid to persons doing nothing for it and succeeded in amassing about £3000
-                  through various economies. The <orgName change="#" xml:id="orgName_48.d2e785">Public Instruction Department</orgName>
+                  through various economies. The <orgName>Public Instruction Department</orgName>
                   formed a new chamber to consider the reorganization of the educational system
                   in this Vilayet. In the departments no special reforms worth mentioning have
                   been introduced but many are being talked of &amp; discussed. </p>
-               <p change="#" xml:id="p_46.d2e789">The political exiles who had been releases or rehabilitated included many
-                  persons of rank, both military and civil. <persName change="#" xml:id="persName_27.d2e791">Mushir Fuad
+               <p>The political exiles who had been releases or rehabilitated included many
+                  persons of rank, both military and civil. <persName>Mushir Fuad
                      Pasha</persName>'s release was the occasion of great demonstrations in
-                  <placeName change="#" xml:id="placeName_49.d2e794">Damascus</placeName>, but the rehabilitation of others, with a
+                  <placeName>Damascus</placeName>, but the rehabilitation of others, with a
                   few exceptions, was not publicly noticed, for this disgraces persons were
-                  always enjoying personal freedom <pb change="#" xml:id="pb_11.d2e797"/> and a very few persons knew that they
+                  always enjoying personal freedom <pb/> and a very few persons knew that they
                   were 'Ikamet Mamours' [iqāma maʾmūr]. The chief names among these were,
-                  <persName change="#" xml:id="persName_28.d2e799">Nouri P.</persName> Ferik of Cavalry, another Ferik called
-                  <persName change="#" xml:id="persName_29.d2e802">Nouri Pasha</persName> sent to live here without duties,
-                  <persName change="#" xml:id="persName_30.d2e806">Ferik Ibrahim Pasha</persName> (those three Feriks kept for
-                  <placeName change="#" xml:id="placeName_50.d2e809">Constantinople</placeName>), <persName change="#" xml:id="persName_31.d2e812">Ferik Lt. Osman
-                     P.</persName>, <persName change="#" xml:id="persName_32.d2e815">Liva Behjet Pasha</persName> (those two died
-                  recently), <persName change="#" xml:id="persName_33.d2e818">Colonel Bedri Bey</persName> (now of <persName change="#" xml:id="persName_34.d2e821">Liva Bedri
-                     P.</persName> in <placeName change="#" xml:id="placeName_51.d2e825">Constantinople</placeName>). The Maàriz Mushiri
+                  <persName>Nouri P.</persName> Ferik of Cavalry, another Ferik called
+                  <persName>Nouri Pasha</persName> sent to live here without duties,
+                  <persName>Ferik Ibrahim Pasha</persName> (those three Feriks kept for
+                  <placeName>Constantinople</placeName>), <persName>Ferik Lt. Osman
+                     P.</persName>, <persName>Liva Behjet Pasha</persName> (those two died
+                  recently), <persName>Colonel Bedri Bey</persName> (now of <persName>Liva Bedri
+                     P.</persName> in <placeName>Constantinople</placeName>). The Maàriz Mushiri
                   [?] &amp; his assistant, and many minor officials or private persons; such as
-                  members of the <persName change="#" xml:id="persName_35.d2e828">Bedr Khan</persName> family, numbering more than a
-                  hundred. Further as reported in <ref change="#" xml:id="ref_3.d2e831">desp. No. 32</ref>, the Ismailians
+                  members of the <persName>Bedr Khan</persName> family, numbering more than a
+                  hundred. Further as reported in <ref>desp. No. 32</ref>, the Ismailians
                   subjected to religious persecution were pardoned. Happily no sort of disorder
                   or riotous intention was displayed here for the purpose of releasing prisoners
                   and ordinary criminals generally, as took place in some other places."</p>
-               <p change="#" xml:id="p_47.d2e836">Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four
+               <p>Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908. four
                   of the five battalions employed for earthworks on the line were allowed to
                   return to their garrisons. </p>
-               <p change="#" xml:id="p_48.d2e839">"about 1400 of these battalions on expiry of service were disbanded. Moreover,
-                  the four battalions of the <orgName change="#" xml:id="orgName_49.d2e841">40th Reg</orgName>, sent to
-                  <placeName change="#" xml:id="placeName_52.d2e844">Medina</placeName> from this Army Corps in <date change="#" xml:id="date_9.d2e847">June
+               <p>"about 1400 of these battalions on expiry of service were disbanded. Moreover,
+                  the four battalions of the <orgName>40th Reg</orgName>, sent to
+                  <placeName>Medina</placeName> from this Army Corps in <date>June
                      last</date>, to guard the line, are also ordered back to their headquarters. At
                   present only two battalions are to be kept there to take care of the line as
                   regards repairs &amp; protection." No aspirations to commence construction
-                  beyond Medina due to increasing Bedouin raids <pb change="#" xml:id="pb_12.d2e850"/></p>
-               <p change="#" xml:id="p_49.d2e852">"Public security in the Vilayet has been during the quarter satisfactory and
+                  beyond Medina due to increasing Bedouin raids <pb/></p>
+               <p>"Public security in the Vilayet has been during the quarter satisfactory and
                   order was properly kept. The Bedouins have been quiet &amp; peaceful during the
                   summer, and only on two or three occasions made petty rais &amp; drove or
                   carried away animals or goods but the spoils were restored to their owners
                   without great difficulties." Druze and Bedouins seem under the spell of the
                   government and calmly wait for the implementation of the promised reforms</p>
-               <p change="#" xml:id="p_50.d2e855">"the crops this year were in general very good and the grain harvest in most of
+               <p>"the crops this year were in general very good and the grain harvest in most of
                   the districts of the Province was exceptionally abundant. The apricot produce
                   was above the average while walnuts were much below. All prices of fruit and
                   cereals are still high and the peasants this year will do well. An exception
-                  might be mentioned as <pb change="#" xml:id="pb_13.d2e857"/> as regards locusts which made a perceptible damage
-                  in the <placeName change="#" xml:id="placeName_53.d2e859"><placeName change="#" xml:id="placeName_53.d2e860">Kalamoun</placeName> district</placeName> but had
+                  might be mentioned as <pb/> as regards locusts which made a perceptible damage
+                  in the <placeName><placeName>Kalamoun</placeName> district</placeName> but had
                   a very slight effect in some other Cazas. But the loss to the Vilayet in
                   general has been small.</p>
-               <p change="#" xml:id="p_51.d2e865">As respects trade, no special remarks need be made; strikes at
-                  <placeName change="#" xml:id="placeName_55.d2e867">Beirut</placeName> at the Customs and on local railways have
+               <p>As respects trade, no special remarks need be made; strikes at
+                  <placeName>Beirut</placeName> at the Customs and on local railways have
                   produced only exiguous loss here. With reference to the latter we may note that
                   public opinion judges that the smaller employés were underpaid, while the
                   profits of the Company &amp; of its directors were considerable and the public
                   at the same time ill served.</p>
-               <p change="#" xml:id="p_52.d2e871">Public health has been satisfactory on the whole this summer, but the
-                  <placeName change="#" xml:id="placeName_56.d2e873">Ain Fijeh</placeName> water has not been received the general
+               <p>Public health has been satisfactory on the whole this summer, but the
+                  <placeName>Ain Fijeh</placeName> water has not been received the general
                   approbation anticipated which is to be regretted, as theres is absolute proof
                   the it is the best &amp; purest spring water of al this neighbourhood. Its
                   distribution to all quarters of the city proceeds slowly."</p>

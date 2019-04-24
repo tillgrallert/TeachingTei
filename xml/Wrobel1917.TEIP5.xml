@@ -1,372 +1,477 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online/xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <teiHeader change="#d2e99" xml:id="teiHeader_1.d2e6">
-      <fileDesc change="#d2e99" xml:id="fileDesc_1.d2e8">
-         <titleStmt change="#d2e99" xml:id="titleStmt_1.d2e10">
-            <title change="#d2e99" xml:id="title_1.d2e12">Acht Kriegsmonate in der asiatischen Türkei. Meine Erlebnisse während des
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online/xslt-boilerplate/teibp_parameters.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml"
+   xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Acht Kriegsmonate in der asiatischen Türkei. Meine Erlebnisse während des
                Feldzuges 1916 als Führer einer Kraftwagen-Abteilung</title>
-            <author change="#d2e99" xml:id="author_1.d2e15">
-               <forename change="#d2e99" xml:id="forename_1.d2e17">Heinrich</forename>
-               <surname change="#d2e99" xml:id="surname_1.d2e20">Wrobel</surname>
+            <author>
+               <forename>Heinrich</forename>
+               <surname>Wrobel</surname>
             </author>
-            <respStmt change="#d2e99" xml:id="respStmt_1.d2e24">
-               <resp change="#d2e99" xml:id="resp_1.d2e26">TEI edition</resp>
+            <respStmt>
+               <resp>TEI edition</resp>
                <persName xml:id="pers_TG">
-                  <forename change="#d2e99" xml:id="forename_2.d2e31">Till</forename>
-                  <surname change="#d2e99" xml:id="surname_2.d2e34">Grallert</surname>
+                  <forename>Till</forename>
+                  <surname>Grallert</surname>
                </persName>
             </respStmt>
          </titleStmt>
-         <publicationStmt change="#d2e99" xml:id="publicationStmt_1.d2e40">
-            <p change="#d2e99" xml:id="p_1.d2e42"/>
+         <publicationStmt>
+            <p/>
          </publicationStmt>
-         <sourceDesc change="#d2e99" xml:id="sourceDesc_1.d2e45">
-            <biblStruct change="#d2e99" xml:id="biblStruct_1.d2e47">
-               <monogr change="#d2e99" xml:id="monogr_1.d2e49">
-                  <title level="m" change="#d2e99" xml:id="title_2.d2e51">Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title level="m">Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse
                      während des Feldzuges 1916 als Führer einer Kraftwagen-Abteilung</title>
-                   <author ref="https://viaf.org/viaf/279081644" change="#d2e99" xml:id="author_2.d2e54">
-                     <forename change="#d2e99" xml:id="forename_3.d2e56">Heinrich</forename>
-                     <surname change="#d2e99" xml:id="surname_3.d2e59">Wrobel</surname>
-                     <addName change="#d2e99" xml:id="addName_1.d2e62">Hauptmann</addName>
+                   <author ref="https://viaf.org/viaf/279081644">
+                     <forename>Heinrich</forename>
+                     <surname>Wrobel</surname>
+                     <addName>Hauptmann</addName>
                   </author>
-                  <imprint change="#d2e99" xml:id="imprint_1.d2e66">
-                     <pubPlace change="#d2e99" xml:id="pubPlace_1.d2e68">Berlin</pubPlace>
-                     <publisher change="#d2e99" xml:id="publisher_1.d2e71">Ernst Siegfried Mittler und Sohn Königliche
+                  <imprint>
+                     <pubPlace>Berlin</pubPlace>
+                     <publisher>Ernst Siegfried Mittler und Sohn Königliche
                         Hofbuchhandlung</publisher>
-                     <date change="#d2e99" xml:id="date_1.d2e74">1917</date>
+                     <date>1917</date>
                   </imprint>
                </monogr>
-               <idno type="PPN" change="#d2e99" xml:id="idno_1.d2e79">729542483</idno>
+               <idno type="PPN">729542483</idno>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc><change when="2019-04-24" who="#pers_TG" xml:id="d2e99" xml:lang="en">Added automated <tei:att xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
-          <change when="2015-09-11" who="#pers_TG" change="#d2e99" xml:id="change_1.d2e87">Corrected the markup for the table of content</change>
-         <change when="2015-09-11" who="#pers_TG" change="#d2e99" xml:id="change_2.d2e90"> added <att change="#d2e99" xml:id="att_1.d2e92">mimeType</att> to all <gi change="#d2e99" xml:id="gi_1.d2e95">graphic</gi> elements in order to facilitate the use of my customisation of TEI Boilerplate.</change>
-         <tei:change when="2015-08-17" who="#pers_TG" change="#d2e99" xml:id="change_3.d2e99">Generated <tei:gi change="#d2e99" xml:id="gi_2.d2e101">facsimile</tei:gi> by collecting all links
-            from the <tei:att change="#d2e99" xml:id="att_2.d2e104">facs</tei:att> attributes. All <tei:att change="#d2e99" xml:id="att_2.d2e107">facs</tei:att> throughout the
-            text link back to <tei:gi change="#d2e99" xml:id="gi_2.d2e110">surface</tei:gi> by means of
-            <tei:att change="#d2e99" xml:id="att_2.d2e113">xml:id</tei:att>s.</tei:change>
+      <revisionDesc>
+          <change when="2015-09-11" who="#pers_TG">Corrected the markup for the table of content</change>
+         <change when="2015-09-11" who="#pers_TG"> added <att>mimeType</att> to all <gi>graphic</gi> elements in order to facilitate the use of my customisation of TEI Boilerplate.</change>
+         <tei:change when="2015-08-17" who="#pers_TG">Generated <tei:gi>facsimile</tei:gi> by collecting all links
+            from the <tei:att>facs</tei:att> attributes. All <tei:att>facs</tei:att> throughout the
+            text link back to <tei:gi>surface</tei:gi> by means of
+            <tei:att>xml:id</tei:att>s.</tei:change>
       </revisionDesc>
    </teiHeader>
-   <tei:facsimile change="#d2e99" xml:id="facsimile_1.d2e119">
+   <tei:facsimile>
       <tei:surface xml:id="facs_1">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0003" xml:id="facs_1_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0003"
+            xml:id="facs_1_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_2">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0004" xml:id="facs_2_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0004"
+            xml:id="facs_2_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_3">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0005" xml:id="facs_3_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0005"
+            xml:id="facs_3_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_4">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0006" xml:id="facs_4_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0006"
+            xml:id="facs_4_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_5">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0007" xml:id="facs_5_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0007"
+            xml:id="facs_5_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_6">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0008" xml:id="facs_6_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0008"
+            xml:id="facs_6_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_7">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0009" xml:id="facs_7_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0009"
+            xml:id="facs_7_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_8">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0010" xml:id="facs_8_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0010"
+            xml:id="facs_8_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_9">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011" xml:id="facs_9_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
+            xml:id="facs_9_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_10">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0012" xml:id="facs_10_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0012"
+            xml:id="facs_10_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_11">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0013" xml:id="facs_11_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0013"
+            xml:id="facs_11_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_12">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0014" xml:id="facs_12_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0014"
+            xml:id="facs_12_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_13">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0015" xml:id="facs_13_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0015"
+            xml:id="facs_13_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_14">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0016" xml:id="facs_14_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0016"
+            xml:id="facs_14_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_15">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0017" xml:id="facs_15_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0017"
+            xml:id="facs_15_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_16">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018" xml:id="facs_16_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
+            xml:id="facs_16_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_17">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0019&amp;rotate=90" xml:id="facs_17_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0019&amp;rotate=90"
+            xml:id="facs_17_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_18">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0020" xml:id="facs_18_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0020"
+            xml:id="facs_18_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_19">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0021" xml:id="facs_19_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0021"
+            xml:id="facs_19_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_20">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0022" xml:id="facs_20_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0022"
+            xml:id="facs_20_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_21">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0023" xml:id="facs_21_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0023"
+            xml:id="facs_21_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_22">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0024" xml:id="facs_22_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0024"
+            xml:id="facs_22_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_23">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0025" xml:id="facs_23_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0025"
+            xml:id="facs_23_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_24">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0026" xml:id="facs_24_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0026"
+            xml:id="facs_24_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_25">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0027" xml:id="facs_25_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0027"
+            xml:id="facs_25_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_26">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0028" xml:id="facs_26_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0028"
+            xml:id="facs_26_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_27">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0029" xml:id="facs_27_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0029"
+            xml:id="facs_27_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_28">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0030" xml:id="facs_28_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0030"
+            xml:id="facs_28_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_29">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0031" xml:id="facs_29_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0031"
+            xml:id="facs_29_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_30">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0032" xml:id="facs_30_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0032"
+            xml:id="facs_30_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_31">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0033" xml:id="facs_31_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0033"
+            xml:id="facs_31_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_32">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0034" xml:id="facs_32_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0034"
+            xml:id="facs_32_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_33">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0035" xml:id="facs_33_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0035"
+            xml:id="facs_33_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_34">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0036" xml:id="facs_34_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0036"
+            xml:id="facs_34_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_35">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0037" xml:id="facs_35_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0037"
+            xml:id="facs_35_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_36">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0038&amp;rotate=90" xml:id="facs_36_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0038&amp;rotate=90"
+            xml:id="facs_36_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_37">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0039" xml:id="facs_37_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0039"
+            xml:id="facs_37_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_38">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0040" xml:id="facs_38_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0040"
+            xml:id="facs_38_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_39">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0041" xml:id="facs_39_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0041"
+            xml:id="facs_39_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_40">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0042" xml:id="facs_40_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0042"
+            xml:id="facs_40_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_41">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0043" xml:id="facs_41_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0043"
+            xml:id="facs_41_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_42">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0044" xml:id="facs_42_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0044"
+            xml:id="facs_42_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_43">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0045" xml:id="facs_43_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0045"
+            xml:id="facs_43_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_44">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0046" xml:id="facs_44_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0046"
+            xml:id="facs_44_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_45">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0047" xml:id="facs_45_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0047"
+            xml:id="facs_45_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_46">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0048" xml:id="facs_46_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0048"
+            xml:id="facs_46_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_47">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0049" xml:id="facs_47_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0049"
+            xml:id="facs_47_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_48">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0050" xml:id="facs_48_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0050"
+            xml:id="facs_48_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_49">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0051" xml:id="facs_49_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0051"
+            xml:id="facs_49_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_50">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0052" xml:id="facs_50_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0052"
+            xml:id="facs_50_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_51">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0053" xml:id="facs_51_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0053"
+            xml:id="facs_51_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_52">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0054" xml:id="facs_52_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0054"
+            xml:id="facs_52_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_53">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0055" xml:id="facs_53_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0055"
+            xml:id="facs_53_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_54">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0056" xml:id="facs_54_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0056"
+            xml:id="facs_54_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_55">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0057" xml:id="facs_55_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0057"
+            xml:id="facs_55_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_56">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0058" xml:id="facs_56_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0058"
+            xml:id="facs_56_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_57">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0059" xml:id="facs_57_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0059"
+            xml:id="facs_57_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_58">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0060" xml:id="facs_58_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0060"
+            xml:id="facs_58_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_59">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0061" xml:id="facs_59_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0061"
+            xml:id="facs_59_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_60">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0062" xml:id="facs_60_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0062"
+            xml:id="facs_60_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_61">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0063" xml:id="facs_61_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0063"
+            xml:id="facs_61_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_62">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0064" xml:id="facs_62_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0064"
+            xml:id="facs_62_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_63">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0065" xml:id="facs_63_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0065"
+            xml:id="facs_63_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_64">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0066" xml:id="facs_64_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0066"
+            xml:id="facs_64_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_65">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0067" xml:id="facs_65_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0067"
+            xml:id="facs_65_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_66">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0068" xml:id="facs_66_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0068"
+            xml:id="facs_66_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_67">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0069" xml:id="facs_67_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0069"
+            xml:id="facs_67_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_68">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0070" xml:id="facs_68_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0070"
+            xml:id="facs_68_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_69">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0071" xml:id="facs_69_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0071"
+            xml:id="facs_69_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_70">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0072" xml:id="facs_70_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0072"
+            xml:id="facs_70_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_71">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0073" xml:id="facs_71_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0073"
+            xml:id="facs_71_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_72">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0074" xml:id="facs_72_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0074"
+            xml:id="facs_72_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_73">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0075" xml:id="facs_73_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0075"
+            xml:id="facs_73_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_74">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0076" xml:id="facs_74_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0076"
+            xml:id="facs_74_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_75">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0077" xml:id="facs_75_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0077"
+            xml:id="facs_75_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_76">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0078" xml:id="facs_76_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0078"
+            xml:id="facs_76_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_77">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0079" xml:id="facs_77_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0079"
+            xml:id="facs_77_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_78">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0080" xml:id="facs_78_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0080"
+            xml:id="facs_78_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_79">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0081" xml:id="facs_79_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0081"
+            xml:id="facs_79_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_80">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0082" xml:id="facs_80_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0082"
+            xml:id="facs_80_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_81">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0083" xml:id="facs_81_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0083"
+            xml:id="facs_81_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_82">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0084" xml:id="facs_82_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0084"
+            xml:id="facs_82_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_83">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0085" xml:id="facs_83_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0085"
+            xml:id="facs_83_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_84">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0086" xml:id="facs_84_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0086"
+            xml:id="facs_84_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_85">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0087" xml:id="facs_85_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0087"
+            xml:id="facs_85_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_86">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0088" xml:id="facs_86_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0088"
+            xml:id="facs_86_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_87">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0089" xml:id="facs_87_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0089"
+            xml:id="facs_87_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_88">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0090" xml:id="facs_88_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0090"
+            xml:id="facs_88_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_89">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0091" xml:id="facs_89_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0091"
+            xml:id="facs_89_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_90">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0092" xml:id="facs_90_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0092"
+            xml:id="facs_90_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_91">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018" xml:id="facs_91_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0018"
+            xml:id="facs_91_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_92">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0094" xml:id="facs_92_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0094"
+            xml:id="facs_92_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_93">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0095" xml:id="facs_93_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0095"
+            xml:id="facs_93_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_94">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0096" xml:id="facs_94_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0096"
+            xml:id="facs_94_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_95">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0097" xml:id="facs_95_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0097"
+            xml:id="facs_95_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_96">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0098" xml:id="facs_96_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0098"
+            xml:id="facs_96_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_97">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0099" xml:id="facs_97_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0099"
+            xml:id="facs_97_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_98">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0100" xml:id="facs_98_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0100"
+            xml:id="facs_98_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_99">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0101" xml:id="facs_99_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0101"
+            xml:id="facs_99_1"/>
       </tei:surface>
       <tei:surface xml:id="facs_100">
-         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011" xml:id="facs_100_1"/>
+         <tei:graphic mimeType="image/jpeg" url="http://ngcs.staatsbibliothek-berlin.de/?action=metsImage&amp;format=jpg&amp;metsFile=PPN729542483&amp;divID=PHYS_0011"
+            xml:id="facs_100_1"/>
       </tei:surface>
    </tei:facsimile>
-   <text xml:lang="de" change="#d2e99" xml:id="text_1.d2e638">
-      <front change="#d2e99" xml:id="front_1.d2e640">
-         <pb ed="print" facs="#facs_1" n="1" xml:id="pb_1"/>
-         <div change="#d2e99" xml:id="div_1.d2e644">
-            <bibl change="#d2e99" xml:id="bibl_1.d2e646">
-               <title change="#d2e99" xml:id="title_3.d2e648">Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse während des
+   <text xml:lang="de">
+      <front>
+         <pb ed="print" ed="print" facs="#facs_1" n="1" xml:id="pb_1"/>
+         <div>
+            <bibl>
+               <title>Acht Kriegsmonate in der asiatischen Türkei Meine Erlebnisse während des
                   Feldzuges 1916 als Führer einer Kraftwagen-Abteilung</title> Von Heinrich Wrobel
-               Hauptmann <title type="sub" change="#d2e99" xml:id="title_4.d2e651">Mit zahlreichen Abbildungen und einer
+               Hauptmann <title type="sub">Mit zahlreichen Abbildungen und einer
                   Übersichtskarte</title> Berlin 1917/ Ernst Siegfried Mittler und Sohn Königliche
                Hofbuchhandlung/ Kochstraße 68 — 71 Alle Rechte aus dem Gesetz vom I?. Juni I?0I
                sowie das Übersetzungsrecht sind vorbehalten. </bibl>
          </div>
-         <pb ed="print" facs="#facs_2" n="2" xml:id="pb_2"/>
-         <pb ed="print" facs="#facs_3" n="3" xml:id="pb_3"/>
-         <div change="#d2e99" xml:id="div_2.d2e660">
+         <pb ed="print" ed="print" facs="#facs_2" n="2" xml:id="pb_2"/>
+         <pb ed="print" ed="print" facs="#facs_3" n="3" xml:id="pb_3"/>
+         <div>
             <head xml:id="head_3">Vorwort.</head>
             <p xml:id="p_5">In dem beschränkten Raum des vorliegenden kleinen Buches konnte ich nur
                eine Auswahl aus der Fülle meiner Erlebnisse darbieten; sie wird, hoffe ich, in
@@ -376,55 +481,55 @@
                und politischen Rücksichten einstweilen verzichtet werden; dafür ließ ich den Leser
                kurze Einblicke in das türkische Volksleben und die geographischen und
                wirtschaftlichen Verhältnisse des Landes tun, die dem besseren Verständnis der
-               Schilderungen förderlich sein werden.<placeName change="#d2e99" xml:id="placeName_1.d2e667">Hirschberg in
-                  Schlesien</placeName>,<date notAfter="1917-02-28" notBefore="1917-02-01" change="#d2e99" xml:id="date_2.d2e670">Februar
+               Schilderungen förderlich sein werden.<placeName>Hirschberg in
+                  Schlesien</placeName>,<date notAfter="1917-02-28" notBefore="1917-02-01">Februar
                   1917</date>.</p>
             <p xml:id="p_6">Der Verfasser.</p>
          </div>
-         <pb ed="print" facs="#facs_4" n="4" xml:id="pb_4"/>
-         <div change="#d2e99" xml:id="div_3.d2e681">
+         <pb ed="print" ed="print" facs="#facs_4" n="4" xml:id="pb_4"/>
+         <div>
             <head xml:id="head_4">Inhalt. Seite</head>
-            <list type="unordered" change="#d2e99" xml:id="list_1.d2e686">
-                <item change="#d2e99" xml:id="item_1.d2e688">Vorwort <ref target="#pb_3" change="#d2e99" xml:id="ref_1.d2e690">3</ref></item>
-               <item change="#d2e99" xml:id="item_2.d2e693">Von Berlin nach Konstantinopel in 25 Tagen <ref target="#pb_5" change="#d2e99" xml:id="ref_2.d2e695">5</ref></item>
-               <item change="#d2e99" xml:id="item_3.d2e698">Von Konstantinopel quer durch Kleinasien bis zum Taurus. <ref target="#pb_18" change="#d2e99" xml:id="ref_3.d2e700">18</ref></item>
-                <item change="#d2e99" xml:id="item_4.d2e703">Meine Fahrt nach der Sinai-Halbinsel <ref target="#pb_31" change="#d2e99" xml:id="ref_4.d2e705">31</ref></item>
-               <item change="#d2e99" xml:id="item_5.d2e708">Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. <ref target="#pb_43" change="#d2e99" xml:id="ref_5.d2e710">43</ref></item>
-               <item change="#d2e99" xml:id="item_6.d2e714">In Palästina <ref target="#pb_50" change="#d2e99" xml:id="ref_6.d2e716">50</ref></item>
-                <item change="#d2e99" xml:id="item_7.d2e719">Beirut, der Libanon und die Phönizische Küste <ref target="#pb_56" change="#d2e99" xml:id="ref_7.d2e721">56</ref></item>
-               <item change="#d2e99" xml:id="item_8.d2e724">Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07" change="#d2e99" xml:id="date_3.d2e726">7. Mai 1916</tei:date> <ref target="#pb_57" change="#d2e99" xml:id="ref_8.d2e729">57</ref></item>
-               <item change="#d2e99" xml:id="item_9.d2e732">Eine vierzehnfache Hinrichtung in Beirut <ref target="#pb_61" change="#d2e99" xml:id="ref_9.d2e734">61</ref></item>
-               <item change="#d2e99" xml:id="item_10.d2e737">Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Zedern des Libanon <ref target="#pb_68" change="#d2e99" xml:id="ref_10.d2e739">68</ref></item>
-               <item change="#d2e99" xml:id="item_11.d2e742">Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus <ref target="#pb_76" change="#d2e99" xml:id="ref_11.d2e744">76</ref></item>
-               <item change="#d2e99" xml:id="item_12.d2e748">Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit und Rückkehr<ref target="#pb_85" change="#d2e99" xml:id="ref_12.d2e750">85</ref></item>
-               <item change="#d2e99" xml:id="item_13.d2e753">Rückkehr nach Deutschland und allgemeines Schlußwort … 8?</item>
+            <list type="unordered">
+                <item>Vorwort <ref target="#pb_3">3</ref></item>
+               <item>Von Berlin nach Konstantinopel in 25 Tagen <ref target="#pb_5">5</ref></item>
+               <item>Von Konstantinopel quer durch Kleinasien bis zum Taurus. <ref target="#pb_18">18</ref></item>
+                <item>Meine Fahrt nach der Sinai-Halbinsel <ref target="#pb_31">31</ref></item>
+               <item>Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal. <ref target="#pb_43">43</ref></item>
+               <item>In Palästina <ref target="#pb_50">50</ref></item>
+                <item>Beirut, der Libanon und die Phönizische Küste <ref target="#pb_56">56</ref></item>
+               <item>Das Bootsunglück bei der Gasanstalt Beirut, am <tei:date when="1916-05-07">7. Mai 1916</tei:date> <ref target="#pb_57">57</ref></item>
+               <item>Eine vierzehnfache Hinrichtung in Beirut <ref target="#pb_61">61</ref></item>
+               <item>Ein Zusammenstoß mit den Räubern im Libanon. — Baalbek und die Zedern des Libanon <ref target="#pb_68">68</ref></item>
+               <item>Mesopotamien. — Damaskus. — Der Kinobrand in Damaskus <ref target="#pb_76">76</ref></item>
+               <item>Die Fahrt in das Tal des Jarmuk und quer durch die Arabische Wüste. Krankheit und Rückkehr<ref target="#pb_85">85</ref></item>
+               <item>Rückkehr nach Deutschland und allgemeines Schlußwort … 8?</item>
             </list>
          </div>
-         <div change="#d2e99" xml:id="div_4.d2e758">
+         <div>
             <head xml:id="head_5">Bildertafeln. Neben Seite</head>
-            <list type="unordered" change="#d2e99" xml:id="list_2.d2e763">
-               <item change="#d2e99" xml:id="item_14.d2e765">Tafel l: Kraftwagen-Sonderkolonne 502 vor der Abfahrt nach dem Orient.- 3800
+            <list type="unordered">
+               <item>Tafel l: Kraftwagen-Sonderkolonne 502 vor der Abfahrt nach dem Orient.- 3800
                   Meter lange Kriegsbrücke bei Belgrad.— „U 19 im Goldenen Horn. — Blick aus dem
                   Torpedoloch eines torpedierten Dampfers</item>
-               <item change="#d2e99" xml:id="item_15.d2e768">Tafel 2: Kolonnenfahrt nach Gülek.— Unsere Tankstelle Bozanii im Taurus. —
-                  Chrenkompagnie bei der Durchfahrt der Leiche des Feldmarschalls <persName change="#d2e99" xml:id="persName_2.d2e770">Frhrn.
+               <item>Tafel 2: Kolonnenfahrt nach Gülek.— Unsere Tankstelle Bozanii im Taurus. —
+                  Chrenkompagnie bei der Durchfahrt der Leiche des Feldmarschalls <persName>Frhrn.
                      v. der Goltz</persName> in Tscham Alan , ?2</item>
-               <item change="#d2e99" xml:id="item_16.d2e774">Tafel Z: Der in Kut el Amara gefangene englische General Towsend. — Bei Kut el
+               <item>Tafel Z: Der in Kut el Amara gefangene englische General Towsend. — Bei Kut el
                   Amara gefangene Engländer. — AutomobilunglückbeiBozanti.-AbgcstürzicrWagenimTaurus
                   48</item>
-               <item change="#d2e99" xml:id="item_17.d2e777">Tafel 4: Mit Kapitänleutnant v. Mücke bei Tarsus auf einer Erkundungsfahrt. —
+               <item>Tafel 4: Mit Kapitänleutnant v. Mücke bei Tarsus auf einer Erkundungsfahrt. —
                   Wanderdüne auf dem Wege nach Suez. — Bei Gaswerk Beirut. — Petroleumbohrturm im
                   Jarmuktal ö4</item>
-               <item change="#d2e99" xml:id="item_18.d2e780">Übersichtskarte am Schluß des Buches.</item>
+               <item>Übersichtskarte am Schluß des Buches.</item>
             </list>
          </div>
       </front>
-      <body change="#d2e99" xml:id="body_1.d2e786">
-         <pb ed="print" facs="#facs_5" n="5" xml:id="pb_5"/>
-         <div change="#d2e99" xml:id="div_5.d2e790">
+      <body>
+         <pb ed="print" ed="print" facs="#facs_5" n="5" xml:id="pb_5"/>
+         <div>
             <head xml:id="head_6">Von Berlin nach Konstantinopel in 25 Tagen.</head>
-            <p xml:id="p_7">“<q change="#d2e99" xml:id="q_1.d2e797">Oberleutnant möchten sofort zu Herrn Hauptmann Kr. nach oben
-                  kommen.</q>” Mit diesen Worten trat am <date when="1915-12-29" change="#d2e99" xml:id="date_3.d2e800">29. Dezember
+            <p xml:id="p_7">“<q>Oberleutnant möchten sofort zu Herrn Hauptmann Kr. nach oben
+                  kommen.</q>” Mit diesen Worten trat am <date when="1915-12-29">29. Dezember
                   1915</date> die Ordonnanz des Verkehrs-Offiziers zu mir in das Bureau des
                Festungskraftwagenparks in P …. Was mag zu dieser ungewöhnlichen Mittagsstunde los
                sein? Sicher etwas ganz Besonderes! Also ich hinauf, und der gestrenge Vorgesetzte
@@ -439,7 +544,7 @@
                den Betrieb über das Gebirge aufrechtzuerhalten hätte. Das eröffnete ja geradezu
                blendende Aussichten, und so gingen wir denn mit allen Kräften daran, die Kolonne
                auszurüsten. Aber das war nicht einfach. Da wir die Lebensbedingungen in Kleinasien
-               nicht kannten, vor allem <pb ed="print" facs="#facs_6" n="6" xml:id="pb_6"/> alles sehr schnell
+               nicht kannten, vor allem <pb ed="print" ed="print" facs="#facs_6" n="6" xml:id="pb_6"/> alles sehr schnell
                gehen sollte, mußten wir Lebensmittel für mehrere Monate mitnehmen und die
                Einkleidung vom Pelz bis zur Tropenuniform, die Ausrüstung von der Nähmaschine bis
                zur Schusterahle gründlich durchdenken, denn dort unten gab es keinen Ersatz, wir
@@ -447,7 +552,7 @@
                was wir bei uns hatten. Selbst die Konservenmusik durfte natürlich nicht fehlen. Eine
                kleine Eismaschine, eine Selterfabrik und andere Einrichtungen gesundheitlicher Art
                dursten gleichfalls nicht vergessen werden. Alles ging dank der Hilfe meines
-               Leutnants Sch. glatt, und am <tei:date when="1916-01-10" change="#d2e99" xml:id="date_4.d2e805">10. Januar 1916</tei:date>
+               Leutnants Sch. glatt, und am <tei:date when="1916-01-10">10. Januar 1916</tei:date>
                konnte ich melden, daß meine Kolonne marschbereit wäre. Die Abreise verzögerte sich
                jedoch aus anderen Gründen noch einige Tage; dann war für mich als Abfahrtszeit vom
                Görlitzer Bahnhof die Nacht vom 21. zum 22. Januar vorgesehen. Da gab es am 21. noch
@@ -460,7 +565,7 @@
                währte! Noch ein letzter Abschied, ein Händedruck! „Abfahrt!" und pünktlich um 1 Uhr
                Z Min. nachts setzte sich mein Transport in Bewegung. Manchen faßte die Rührung, als
                ich bei der Abfahrt die Lieder „Muß i denn zum Städtle hinaus" und „Deutschland,
-               Deutsch- <pb ed="print" facs="#facs_7" n="7" xml:id="pb_7"/> land über alles" singen ließ. Dann
+               Deutsch- <pb ed="print" ed="print" facs="#facs_7" n="7" xml:id="pb_7"/> land über alles" singen ließ. Dann
                wurde es allmählich still. In flottem Tempo rollten wir gen Oderberg. Einer
                ungewissen Zukunft ging es entgegen, nach einem fremden Erdteil. Wer weiß, welch
                Schicksal uns beschieden war! Doch stolz waren wir alle, diese Unternehmung mitmachen
@@ -480,16 +585,17 @@
                ließ ich durch den Verpflegungsunteroffizier unterwegs alles aufkaufen, was von
                frischen Nahrungsmitteln, Gemüse, Fleisch usw. zu haben war, um die mitgenommenen
                Konserven aufzusparen. Am 25. erreichten wir Budapest, dann durchquerten wir die
-               eintönige ungarische Steppe, an vielen kleinen Seen und Überschwemmungs- <pb ed="print" facs="#facs_8" n="8" xml:id="pb_8"/> gebieten vorbei nach Szegedin. Die
+               eintönige ungarische Steppe, an vielen kleinen Seen und Überschwemmungs- <pb ed="print" ed="print"
+                  facs="#facs_8" n="8" xml:id="pb_8"/> gebieten vorbei nach Szegedin. Die
                Beköstigung in Ungarn war ebenfalls gut, doch hatte ich ein merkwürdiges Mißgeschick:
                auf jeder Verpflegungsstation gab es Kalbsbrust, manchmal Kalbsbusen, schließlich nur
                Kalbsbüsen, wie ein humoristischer Gefreiter sich ausdrückte. Am 26. Januar trafen
                wir mit Kolonne 501 in Szegedin zusammen. Sie war zwei Tage vor mir abgefahren; auch
-                  <orgName change="#d2e99" xml:id="orgName_1.d2e813">Kolonne 502</orgName> lag dicht bei <placeName change="#d2e99" xml:id="placeName_2.d2e816">Szegedin</placeName>. Mir
+                  <orgName>Kolonne 502</orgName> lag dicht bei <placeName>Szegedin</placeName>. Mir
                wurde nun mitgeteilt, daß ich bei Szegedin mehrere Tage liegen bleiben müßte, und
                bald wurden wir auf einer Nebenstrecke nach der kleinen Station Szoreg „ab
-               geschoben“. Hier traf ich wieder die <orgName change="#d2e99" xml:id="orgName_2.d2e819">Kolonne 501</orgName> und erfuhr, daß
-                  <orgName change="#d2e99" xml:id="orgName_3.d2e822">Kolonne 502</orgName> auf der anderen Seite von Szegedin festläge. Da der
+               geschoben“. Hier traf ich wieder die <orgName>Kolonne 501</orgName> und erfuhr, daß
+                  <orgName>Kolonne 502</orgName> auf der anderen Seite von Szegedin festläge. Da der
                unfreiwillige Aufenthalt mehrere Tage dauern sollte, konnten wir uns gleich
                entsprechend einrichten. Vor allem mußte „exerziert” wer den, doch die Autos blieben
                verladen. Da aber die Personenwagen nicht geheizt wurden, brachte ich meine Leute am
@@ -501,10 +607,11 @@
                für etwas „Besonderes" und für — heißen Punsch. Als das Kaiserhoch verhallt war,
                lagerten wir uns um das Feuer und unter Begleitung der Konservenmusik wurden Lieder
                gesungen; Vorträge und Couplets wechselten ab mit Tanzvorführungen der aus der Nähe
-               herbeigeeilten Zigeuner. Ein buntes Lagerleben! <pb ed="print" facs="#facs_9" n="9" xml:id="pb_9"/> Die Stadt Szegcdin macht einen sehr sauberen, netten Eindruck. Als
-               ich eines Abends zusammen mit <persName change="#d2e99" xml:id="persName_3.d2e828">Oberleutnant B.</persName>, dein Führer von
-                  <orgName change="#d2e99" xml:id="orgName_4.d2e831">Kolonne 501</orgName>, und <persName change="#d2e99" xml:id="persName_4.d2e834">Oberleutnant v. R.</persName>,
-               Führer der <orgName change="#d2e99" xml:id="orgName_5.d2e837">Formation 502</orgName>, das ungarische Leben näher kennen lernen
+               herbeigeeilten Zigeuner. Ein buntes Lagerleben! <pb ed="print" ed="print" facs="#facs_9" n="9"
+                  xml:id="pb_9"/> Die Stadt Szegcdin macht einen sehr sauberen, netten Eindruck. Als
+               ich eines Abends zusammen mit <persName>Oberleutnant B.</persName>, dein Führer von
+                  <orgName>Kolonne 501</orgName>, und <persName>Oberleutnant v. R.</persName>,
+               Führer der <orgName>Formation 502</orgName>, das ungarische Leben näher kennen lernen
                wollte, ließen wir uns die Adresse einer geeigneten Fischerkneipe geben und machten
                uns auf den Weg. Nur mit Mühe fanden wir in dem dunklen Strandteil das einstöckige
                Gebäude, aus dem ein rauher Gesang und ein eigentümlicher Geruch kamen. Zögernd
@@ -522,8 +629,9 @@
                Anwesenden auf, unser Wohl zu trinken, und bat uns, für den Rest des Abends seine
                Gäste zu fein. Wir nahmen natürlich dankbar an und verlebten einen recht gemütlichen
                Abend. Ganz besonders anziehend wurde mir diese Bekanntschaft dadurch, daß ich in den
-               Redner einen <persName change="#d2e99" xml:id="persName_5.d2e840">Oberleutnant v. W.</persName> aus Parsch- <pb ed="print" facs="#facs_10" n="10" xml:id="pb_10"/> witz — also aus der nächsten Nähe meiner Heimat
-                  (<placeName change="#d2e99" xml:id="placeName_3.d2e846">Hirschberg i. Schl.</placeName>) — nebst seiner Frau kennen lernte.
+               Redner einen <persName>Oberleutnant v. W.</persName> aus Parsch- <pb ed="print" ed="print" facs="#facs_10"
+                  n="10" xml:id="pb_10"/> witz — also aus der nächsten Nähe meiner Heimat
+                  (<placeName>Hirschberg i. Schl.</placeName>) — nebst seiner Frau kennen lernte.
                Wir saßen dann später in Szegedin und auf meinem Bahnhof in Szöreg noch oft und recht
                gemütlich beisammen. Endlich am 6. Februar ging es von Szöreg weiter durch die
                unabsehbare „Pußta“. — Bald fuhren wir bei Peterwardein über die Donau und genossen
@@ -542,7 +650,7 @@
                machte. Den Konak selbst zu betreten war verboten, doch gelang es mir, einen Blick
                von außen in den zerschossenen Krönungssaal zu werfen. Die Festung Belgrad ist längst
                verfallen. Auf dem alten Festungsgelände bildeten Kasernen und militärische Wohnäuser
-               infolge der Beschießung zum <pb ed="print" facs="#facs_11" n="11" xml:id="pb_11"/> großen Teil
+               infolge der Beschießung zum <pb ed="print" ed="print" facs="#facs_11" n="11" xml:id="pb_11"/> großen Teil
                wüste Trümmerhaufen. Und doch boten sie einen eigenartigen Eindruck: bei trübem
                Himmel alles in wundervollen Rauhreif gekleidet, düster und feierlich. Nirgends war
                eine Menschenseele zu sehen. Unten in nebelgrauer Feme die Donau, drüben die weit
@@ -563,13 +671,13 @@
                Ich stand am Fenster meines dunklen Abteils, mein Bursche auf der anderen Seite. Da,
                plötzlich ein Schuß, gleich folgten mehrere. Ein Ruck von mir an der zur Lokomotive
                führenden Leine, der Zug steht fast augenblicklich, ein kurzes Hupensignal, und mit
-               Ausnahme der <pb ed="print" facs="#facs_12" n="12" xml:id="pb_12"/> Posten waren wir alle im
+               Ausnahme der <pb ed="print" ed="print" facs="#facs_12" n="12" xml:id="pb_12"/> Posten waren wir alle im
                Walde, die Hälfte rechts, die anderen links. Wohl eine Stunde suchten wir im Dunkeln,
                aber leider vergebens! Zwei alte Weiber wurden eingebracht, doch von mir als
                unverdächtig wieder entlassen; die feigen Mordbuben hatten in der Dunkelheit gute
                Verstecke gefunden, und wir durften nicht säumen. Am nächsten Morgen hatten wir
                längeren Aufenthalt in einem kleinen serbischen Dorf
-                  bei<placeName change="#d2e99" xml:id="placeName_4.d2e853">Kragujevac</placeName>. Ich benutzte die Zeit, um mit meinem
+                  bei<placeName>Kragujevac</placeName>. Ich benutzte die Zeit, um mit meinem
                Burschen und einigen Leuten auf Entdeckungsreisen zu gehen. Die Wege waren grundlos,
                und unsere langen „Schweins ledernen" kamen uns recht gut zu statten. Der Eindruck,
                den ich vom Innern Serbiens bekommen habe, war geteilt. Landschaftlich reizvoll, mit
@@ -584,7 +692,7 @@
                Trachten sah ich nichts — der Krieg hatte hier ja auch zu arg gewütet. Den Einwohnern
                fehlte es an den wichtigsten Lebensmitteln, mit Ausnahme von Eiern, die anscheinend
                reichlich vorhanden waren. Ich handelte verschiedenes ein, doch Geld mochten die
-               Leute nicht. Immer wieder <pb ed="print" facs="#facs_13" n="13" xml:id="pb_13"/> nur verlangten
+               Leute nicht. Immer wieder <pb ed="print" ed="print" facs="#facs_13" n="13" xml:id="pb_13"/> nur verlangten
                sie Salz und Zucker. Für ein Stück Zucker gaben sie gern ein Ei, für eine Apfelsine
                bekam mein Bursche fünf Eier, allerdings legte er eine kleine Tüte Salz zu. Für ein
                Huhn wollte ich 1 Krone zahlen/ doch als ich nebeneinander auf die Bank Salz, Zucker,
@@ -603,7 +711,8 @@
                ungepflasterte Straßen, die zu dieser Jahreszeit grundlos waren, fast nur einstöckige
                Gebäude, dazu ein undurchdringliches Dunkel, da Straßenbeleuchtung vollständig
                fehlte! War der Oberbau der Bahn in Serbien bisher schon so elend gewesen, daß ich
-               wegen der Schwankungen die Autos auf ihren Wagen doppelt vertäuen mußte, so wurde <pb ed="print" facs="#facs_14" n="14" xml:id="pb_14"/> es jetzt hinter Nisch noch ganz besonders
+               wegen der Schwankungen die Autos auf ihren Wagen doppelt vertäuen mußte, so wurde <pb ed="print" ed="print"
+                  facs="#facs_14" n="14" xml:id="pb_14"/> es jetzt hinter Nisch noch ganz besonders
                schlimm. Trotz dem wir mit kaum 20 Km-Geschwindigkeit fuhren, schaukelten die Wagen
                derart, daß ich jeden Augenblick eine Entgleisung fürchtete. Tatsächlich sah ich auf
                dieser Strecke von etwa 50 kin auch mehrere verunglückte und vollständig verbrannte
@@ -623,7 +732,8 @@
                die Stadt etwas anzusehen. Hier fiel mir das Hervortreten orientalischen Lebens
                zuerst auf. Gleich am Bahnhof wärmten sich mehrere Urbilder von Türken an einem
                Torffeuer und sprangen sichtlich erfreut auf, als ich sie mit dem sadäck 1a
-               ksiroläsun anredete. Die Stadt selbst trägt den Charakter des Überganges zwischen <pb ed="print" facs="#facs_15" n="15" xml:id="pb_15"/> Abendland und Orient. Moderne europäische
+               ksiroläsun anredete. Die Stadt selbst trägt den Charakter des Überganges zwischen <pb ed="print" ed="print"
+                  facs="#facs_15" n="15" xml:id="pb_15"/> Abendland und Orient. Moderne europäische
                Geschäfte wechseln ab mit schmutzigen orientalischen Basaren. Der Maulesel ist
                bereits viel als Transportmittel vertreten. Das Straßenbild wird belebt durch die
                bunten Trachten der Landleute mit Lammfellmütze, weißbenähter Jacke, engen
@@ -642,7 +752,8 @@
                des Musalla, des höchsten Gipfels der Rhodope. Wir sind inmitten einer waldigen
                Gebirgslandschaft, die von zahlreichen Wasseradern durchschnitten ist. In den
                feuchtwarmen Niederungen wachsen üppig Reis, Getreide, Wein, Tabak; viele Kuh- und
-               Ziegenherden mit friedvollem Glockengeläut zeugen von dem Wohlstand der Bauern. <pb ed="print" facs="#facs_16" n="16" xml:id="pb_16"/> Bis zum letzten Augenblick durch die Berge
+               Ziegenherden mit friedvollem Glockengeläut zeugen von dem Wohlstand der Bauern. <pb ed="print" ed="print"
+                  facs="#facs_16" n="16" xml:id="pb_16"/> Bis zum letzten Augenblick durch die Berge
                verdeckt, sehen wir plötzlich Philippopel vor uns, begrenzt von den überaus
                schroffen, kahlen Hügeln Dschendem TepZ und Buuardschik Tepe mit dem russischen
                Siegesdenkmal von 1878. In der Stadt, zu deren Besichtigung wir wieder mehrere
@@ -664,33 +775,33 @@
                wollte ihn „wie einen Hund aufhängen“! Erst allmählich klärte sich die Sache zur
                allgemeinen Heiterkeit auf, und ich bekam mein Halsband. Adrianopel passierten wir
                dann am 15. nachts und</p>
-            <floatingText change="#d2e99" xml:id="floatingText_1.d2e866">
-               <body change="#d2e99" xml:id="body_1.d2e868">
-                  <pb ed="print" n="pb_16a" facs="#facs_17" change="#d2e99" xml:id="pb_17.d2e870"/>
-                  <div change="#d2e99" xml:id="div_5.d2e872">
+            <floatingText>
+               <body>
+                  <pb ed="print" ed="print" n="pb_16a" facs="#facs_17"/>
+                  <div>
                      <head xml:id="head_7">Tafel 1</head>
-                     <figure change="#d2e99" xml:id="figure_1.d2e877">
-                        <caption change="#d2e99" xml:id="caption_1.d2e879"><orgName change="#d2e99" xml:id="orgName_6.d2e880">Kraftwagen-Sonderkolonne 503</orgName> vor der Abfahrt
+                     <figure>
+                        <caption><orgName>Kraftwagen-Sonderkolonne 503</orgName> vor der Abfahrt
                            nach dem Orient auf dem Parkplatz
-                           <placeName change="#d2e99" xml:id="placeName_5.d2e883">Schöneberg</placeName></caption>
+                           <placeName>Schöneberg</placeName></caption>
                      </figure>
-                     <pb ed="print" n="pb_16b" facs="#facs_18" change="#d2e99" xml:id="pb_18.d2e887"/>
-                     <figure change="#d2e99" xml:id="figure_2.d2e889">
-                        <caption change="#d2e99" xml:id="caption_2.d2e891">3800 Meter lange Kriegsbrücke bei
-                           <placeName change="#d2e99" xml:id="placeName_6.d2e893">Belgrad</placeName></caption>
+                     <pb ed="print" ed="print" n="pb_16b" facs="#facs_18"/>
+                     <figure>
+                        <caption>3800 Meter lange Kriegsbrücke bei
+                           <placeName>Belgrad</placeName></caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_3.d2e897">
-                        <caption change="#d2e99" xml:id="caption_3.d2e899"><orgName change="#d2e99" xml:id="orgName_7.d2e900">U 19</orgName> im <placeName change="#d2e99" xml:id="placeName_7.d2e903">Goldenen
+                     <figure>
+                        <caption><orgName>U 19</orgName> im <placeName>Goldenen
                            Horn</placeName></caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_4.d2e908">
-                        <caption change="#d2e99" xml:id="caption_4.d2e910">Blick aus dem Torpedoloch eines torpedierten Dampfers</caption>
+                     <figure>
+                        <caption>Blick aus dem Torpedoloch eines torpedierten Dampfers</caption>
                      </figure>
                   </div>
                </body>
             </floatingText>
             <p xml:id="p_9">
-               <pb ed="print" facs="#facs_19" n="17" xml:id="pb_17"/> sollten „bereits" am nächsten Tage
+               <pb ed="print" ed="print" facs="#facs_19" n="17" xml:id="pb_17"/> sollten „bereits" am nächsten Tage
                nachmittags in Konstantinopel eintreffen. In Lüls Bourgas, der türkischen
                Grenzstation, hatte ich einen meiner Leute typhuskrank Zurücklassen müssen, im
                übrigen war ihr Gesundheitszustand gut. Als ich im ersten Morgengrauen des 16.
@@ -710,12 +821,13 @@
                Transportzug zusammengestellt. Ein tolles Hin und Her, bis ich endlich auf der
                Kommandantur des Bahnhofs erfuhr, daß ich mit dem Übersetzen nach Asien auf Trajekten
                sofort beginnen müsse. So endigte also der erste Teil der Reise von Berlin nach
-               Konstantinopel: eine Strecke, zu der der Balkanzug <pb ed="print" facs="#facs_20" n="18" xml:id="pb_18"/> 23 Stunden braucht, hatten wir in 25 Tagen zurück gelegt ! Aber
+               Konstantinopel: eine Strecke, zu der der Balkanzug <pb ed="print" ed="print" facs="#facs_20" n="18"
+                  xml:id="pb_18"/> 23 Stunden braucht, hatten wir in 25 Tagen zurück gelegt ! Aber
                eines hatten wir vor der bequemen Fahrt im Balkanzug voraus: wir hatten die
                verschiedenen Länder sowie deren Sitten und Gebräuche kennen gelernt, und das war
                auch schon sehr viel wert.</p>
          </div>
-         <div change="#d2e99" xml:id="div_7.d2e925">
+         <div>
             <head xml:id="head_8">Von Konstantinopel quer durch Kleinasien bis zum Taurus.</head>
             <p xml:id="p_10">Das Übersetzen von Stambul nach Haidar-Pascha war recht schwierig. Bei
                heftigem Südostwind herrschte im westlichen Teil des Marmarameeres und dem Ausfluß
@@ -730,7 +842,8 @@
                und von der deutschen Regierung für die Dauer des Krieges zur Unterkunft deutscher
                Offiziere und Mannschaften von der Hamburg—Amerika-Linie gemietet war. Der Preis von
                6 M. für eine dunkle Kammer von 2 X 3 in war ja reichlich hoch, doch das Essen für
-               teuren Preis gut. Die Kabinen erwiesen sich <pb ed="print" facs="#facs_21" n="19" xml:id="pb_19"/> auch ziemlich frei von Ungeziefer; das war zunächst die Hauptsache. Wohl jeden
+               teuren Preis gut. Die Kabinen erwiesen sich <pb ed="print" ed="print" facs="#facs_21" n="19" xml:id="pb_19"
+               /> auch ziemlich frei von Ungeziefer; das war zunächst die Hauptsache. Wohl jeden
                Fremden besticht die türkische Hauptstadt von weitem, besonders bei der Ankunft vom
                Wasser her, ganz ungemein, doch wird man durch ihr Inneres ganz gewaltig enttäuscht.
                Die Lage Konstantinopels erscheint wunderbar und einzig. Durch sie ist es auch nur zu
@@ -749,7 +862,7 @@
                und Pera ans. Stambul, die türkische Altstadt, ist winklig, schmutzig, teilweise bis
                zum Ekel. Man sieht wenig europäisch gekleidete Leute; die Türken und verschleierten
                Türkinnen überwiegen. Und doch liegen gerade hier die „Hohe Pforte" und das
-               „Kriegsministe- <pb ed="print" facs="#facs_22" n="20" xml:id="pb_20"/> rium“. Das Anziehendste
+               „Kriegsministe- <pb ed="print" ed="print" facs="#facs_22" n="20" xml:id="pb_20"/> rium“. Das Anziehendste
                war mir der „Große Basar”. Dieser nimmt ein abgegrenztes, nur durch bestimmte Tore
                zugängliches Stadtviertel neben der Osmaniö-Moschee ein. Eine Stunde vor
                Sonnenuntergang wird der ganze Bezirk verlassen und abgeschlossen. Beinahe wäre ich
@@ -769,7 +882,7 @@
                vom Sehen genug bekommt. Als ich zum zweiten Male den Basar besuchte, tat ich es
                unter Führung eines bekannten osmanischen Oberstleutnants K. und hatte meine Einkäufe
                daher auch nicht zu bereuen. Wir suchten nur bessere Stände auf. Eigentümlich ist die
-               Sitte beim Handeln selbst. In <pb ed="print" facs="#facs_23" n="21" xml:id="pb_21"/> jedem
+               Sitte beim Handeln selbst. In <pb ed="print" ed="print" facs="#facs_23" n="21" xml:id="pb_21"/> jedem
                besseren Stand wird man vor allem zum Sitzen genötigt. Der Händler fragt nie, was man
                sehen will, erst bringt ein Diener den üblichen Kaffee und Zigaretten, dann spielt
                der Verkäufer mit einzelnen Gegenständen, indem er sie gewissermaßen vor unseren
@@ -789,7 +902,7 @@
                heraus und fanden uns inmitten eines vollständig ruinenhaften Stadtteils. Teils durch
                Feuer, teils zur Verbreiterung der Straßen waren Hunderte von Häusern niedergelegt,
                die Straßen nicht wieder ausgebaut. Als ob hier vor fünfzig Jahren eine moderne
-               Feldschlacht getobt hätte, <pb ed="print" facs="#facs_24" n="22" xml:id="pb_22"/> sah der
+               Feldschlacht getobt hätte, <pb ed="print" ed="print" facs="#facs_24" n="22" xml:id="pb_22"/> sah der
                Stadtteil aus. Ich besichtigte nun noch einige der größeren, ungemein prunkvollen
                Moscheen und wandte mich dann mit der Straßenbahn auf die andere Seite des Goldenen
                Horns, nach Galata, fuhr mit der „Tunnelbahn" herauf nach Pera und konnte mich hier
@@ -810,7 +923,7 @@
                steigt er aber aus dem Wasser und schüttelt seine nassen Kleider: als ob er über und
                über glühte und brennte, sah er aus, ein Anblick, den ich nie vergessen werde.
                Natürlich erwartete er als Vorbeugung gegen einen Schnupfen das entsprechende
-               Trinkgeld, doch <pb ed="print" facs="#facs_25" n="23" xml:id="pb_23"/> träumte ich noch lange
+               Trinkgeld, doch <pb ed="print" ed="print" facs="#facs_25" n="23" xml:id="pb_23"/> träumte ich noch lange
                von dem feurigen Mann, von dem Grande-Kanal in Venedig, an den mich oft das Goldene
                Horn erinnerte, und von den Märchen aus Tausend und einer Nacht! Wie so anders waren
                doch diese Märchen im Vergleich mit der nackten, rauhen Wirklichkeit! — Am nächsten
@@ -830,7 +943,8 @@
                bietet, im Innern nur winklige Straßen und neben den schönen alten Moscheen geringe
                hölzerne Häuser. Besonders anziehend war mir das Kloster der „heulenden Derwische“,
                ein schlichtes, rechteckiges Gebäude neben einem Minarett. Die ekstatische
-               Religionsübung dieser Derwische, der ich kurz vor Sonnenuntergang bei- <pb ed="print" facs="#facs_26" n="24" xml:id="pb_24"/> wohnte, bestand aus einer Predigt des
+               Religionsübung dieser Derwische, der ich kurz vor Sonnenuntergang bei- <pb ed="print" ed="print"
+                  facs="#facs_26" n="24" xml:id="pb_24"/> wohnte, bestand aus einer Predigt des
                Scheichs, der vor der Gebetsnische in dem einfachen Moscheeraum saß, und
                abgemessenen, sich andauernd steigernden Körperbewegungen der Derwische, die an ihrem
                Platz erst sitzend, dann stehend und abwechselnd aus den rechten und linken Fuß
@@ -850,7 +964,8 @@
                einer kleinen Einbuchtung des Marmara-meeres und macht einen durchaus europäischen
                Eindruck. Kurz vor der Abfahrt aus Haidar-Pascha gesellte sich noch unser neuer Arzt
                zu mir, so daß ich für die auf drei bis fünf Tage geschätzte Fahrt durch Kleinasien
-               gute Gesellschaft hatte. — Am Abend des 2t. sagten wir den über <pb ed="print" facs="#facs_27" n="25" xml:id="pb_25"/> das Marmarameer und über den Bosporus hervorragen den
+               gute Gesellschaft hatte. — Am Abend des 2t. sagten wir den über <pb ed="print" ed="print" facs="#facs_27"
+                  n="25" xml:id="pb_25"/> das Marmarameer und über den Bosporus hervorragen den
                Bergen Europas Lebewohl; ein ganz neuer, uns allen bisher unbekannterWeltteil nahm
                uns auf, es ging hinein ins Innere von Asten. — Wir hatten uns schon vor der Abfahrt
                in unserem Abteil „eingerichtet" und konnten bis Eintritt der Dunkelheit die
@@ -871,7 +986,7 @@
                wo der Boden so fruchtbar, das Erdreich für Motorpflug bearbeitung so geeignet ist,
                und doch meilenweit nichts als öde Steppe bietet. — Der südliche Teil dieser Hoch
                ebene bildet eine endlos weite, baumlose „Salzwüste“. Ein großes
-               Bewässerungsunternehmen mittels Kanal- <pb ed="print" facs="#facs_28" n="26" xml:id="pb_26"/>
+               Bewässerungsunternehmen mittels Kanal- <pb ed="print" ed="print" facs="#facs_28" n="26" xml:id="pb_26"/>
                führung würde dem Lande die alte Fruchtbarkeit wieder geben, wie sie bis zur Zeit der
                römischen Kaiser bestanden haben soll. Von Konia aus konnten wir schon weit im Süden
                die schneebedeckte Kette des Taurusgebirges sehen, als wir über die große Salzsteppe
@@ -892,7 +1007,7 @@
                von Berlin ab gebraucht, und hier schallte uns zum ersten Male das „zavasek”,
                „zk^Äsczk“-—„langsam”, „lang sam" — entgegen. Und so blieb mir nichts anderes übrig,
                als im kalten Abteil den Morgen abzuwarten. Rechts und links von schneebedeckten
-               Bergen überragt, <pb ed="print" facs="#facs_29" n="27" xml:id="pb_27"/> liegt die Bahnstation
+               Bergen überragt, <pb ed="print" ed="print" facs="#facs_29" n="27" xml:id="pb_27"/> liegt die Bahnstation
                Bozanti in einem reizvollen Tal, auf etwa 300 in Höhe. Noch in der Nacht besichtigte
                ich die Laderampen und vergewisserte mich über die Fahrt richtungen usw., denn im
                Abteil hatte ich doch keine Ruhe mehr. Und dann bei Morgengrauen begann die Arbeit.
@@ -912,7 +1027,8 @@
                Fahrern wie den Maschinen also ganz außerordentliche Anstrengungen bevor, zumal die
                Straße keine Chaussee in europäischem Sinne sein sollte. Selbst unsere bescheidensten
                Erwartungen wurden aber zuschanden. Der Zustand der Straße war ganz un glaublich
-               schlecht, einzelne Kurven so, daß sie erst durch <pb ed="print" facs="#facs_30" n="28" xml:id="pb_28"/> mehrfaches Hin- und Rückwärtsfahren genommen werden konnten. Oft
+               schlecht, einzelne Kurven so, daß sie erst durch <pb ed="print" ed="print" facs="#facs_30" n="28"
+                  xml:id="pb_28"/> mehrfaches Hin- und Rückwärtsfahren genommen werden konnten. Oft
                glitten die Wagen trotz Schneeketten rück wärts in dem Schlamm, und bange Sorge faßte
                mich: Wie lange würden wir das aushalten? — Auf dieser ersten Fahrt hatten meine
                Opel-Wagen denn auch bereits zwei Differentialbrüche und einen Kardanbruch zu ver
@@ -931,7 +1047,8 @@
                eineTalsohle von kaum 10m frei, die vom brausen den Fluß durchtost wird. Diesem hat
                man durch Mauern einen schmalen Weg abgerungen, auf dem sich Wagen nicht ausweichen
                können. Der ganze Engpaß ist kaum 100 in lang, doch schaurig und erhaben schön ist
-               der gewaltige Anblick der „Kilikischen Tore“! Wie oft haben diese in <pb ed="print" facs="#facs_31" n="29" xml:id="pb_29"/> der Weltgeschichte bedeutende Rollen
+               der gewaltige Anblick der „Kilikischen Tore“! Wie oft haben diese in <pb ed="print" ed="print"
+                  facs="#facs_31" n="29" xml:id="pb_29"/> der Weltgeschichte bedeutende Rollen
                gespielt! Semi- ramis, Xerxes, Darins, Cyrns der Jüngere, Alexander der Große, Harun
                al Raschid, Gottfried von Bouillon haben sie durchzogen. Von Ibrahim Paschas Befesti
                gungen sieht man nur noch Reste. Gleich rechts hinter dem Tor ragt ein burgähnlicher
@@ -951,7 +1068,8 @@
                konnte daher sofort die Kolonnenfahrten aufnehmen. Die Strecke nach Tarsus ist im
                allgemeinen nicht so schroff, nicht so gefährlich. Über die kahlen Vor höhen geht es
                an zahlreichen Hans und mehreren kleinen armseligen Dörfern vorüber zu Tal. Jenseits
-               der Brücke Hökesche Köprü hat man eine prachtvolle Fernsicht über <pb ed="print" facs="#facs_32" n="30" xml:id="pb_30"/> die Kilikische Ebene, den Golf von AlexandreM und den
+               der Brücke Hökesche Köprü hat man eine prachtvolle Fernsicht über <pb ed="print" ed="print" facs="#facs_32"
+                  n="30" xml:id="pb_30"/> die Kilikische Ebene, den Golf von AlexandreM und den
                Amanus, im Rücken die Tauruskette. Am schattig gelegenen Kawakli Han vorüber
                durchzieht die Straße dann die mehr und mehr angebaute Ebene. Die letzten tausend
                Meter vor der Station Gülek Bogas sind ganz eben und von fruchtbaren Getreidefeldern
@@ -970,7 +1088,8 @@
                Winter 16/17 einrichten und versorgen mußten. Zu dieser Zeit erhielte« wir die
                Nachricht, daß noch mehr Autokolonnen herunterkommen würden, die sogar noch weiter
                nach Süden und Osten vorgeschoben werden sollten. Um für diese Formationen
-               gewissermaßen die Wege zu ebnen und Fühlung mit den türkischen Ver- <pb ed="print" facs="#facs_33" n="31" xml:id="pb_31"/> bänden zu bekommen, beschloß unser
+               gewissermaßen die Wege zu ebnen und Fühlung mit den türkischen Ver- <pb ed="print" ed="print"
+                  facs="#facs_33" n="31" xml:id="pb_31"/> bänden zu bekommen, beschloß unser
                Kommandeur, einen Streifzug nach dem Süden zu unternehmen und möglichst auch mit der
                Suez-Armee in Verbindung zu treten. Durch Syrien, Palästina und das Asiatische
                Ägypten sollte die Fahrt gehen, und wer war froher als ich, als der Kom mandeur mich
@@ -978,7 +1097,7 @@
                nähmen wir mit, das zweite für Gepäck und Betriebsstoff. Eine hochinteressante
                Unternehmung lag vor uns.</p>
          </div>
-         <div change="#d2e99" xml:id="div_8.d2e962">
+         <div>
             <head xml:id="head_9">Meine Fahrt nach der Sinai-Halbinsel.</head>
             <p xml:id="p_11">Am 11. März war alles soweit vorbereitet, daß die Abfahrt auf den
                nächsten Vormittag festgesetzt werden konnte. Wir hatten beschlossen, nach
@@ -992,7 +1111,8 @@
                nach Tarsus, der Geburtsstadt des Apostel Paulus, Zeit, machte noch einige kleine
                Einkäufe, fuhr dann am Kydnos entlang, an der Stelle von Alexander des Großen
                gefährlichem Bad vor über wieder nach Gülek zurück, wo ich mit Hauptmann H.
-               zusammentraf. Schnell waren die Autos verlade«, und <pb ed="print" facs="#facs_34" n="32" xml:id="pb_32"/> am frühen Nachmittag setzte sich unser Zug mit nur zwei Stunden
+               zusammentraf. Schnell waren die Autos verlade«, und <pb ed="print" ed="print" facs="#facs_34" n="32"
+                  xml:id="pb_32"/> am frühen Nachmittag setzte sich unser Zug mit nur zwei Stunden
                Verspätung in Bewegung. An einem wunderschönen Frühlingstag ging es durch die überaus
                fruchtbare Kilikische Ebene, vorüber an den an die Anlagen in Werder bei Potsdam
                erinnernden, in voller Blüte stehenden Obstpflanzungen von Adana. Vor uns der Amanus,
@@ -1012,29 +1132,29 @@
                zunächst noch nicht anvertraut (Fahrzeit über den Amanus zwei bis vier Tage!). Der
                Amanus macht einen etwas freundlicheren Eindruck als der Taurus. Die neu gebaute, für
                Autos ganz brauchbare Paßstraße geht</p>
-            <floatingText change="#d2e99" xml:id="floatingText_2.d2e972">
-               <body change="#d2e99" xml:id="body_2.d2e974">
-                  <pb ed="print" n="pb_32a" facs="#facs_35" change="#d2e99" xml:id="pb_35.d2e976"/>
-                  <div change="#d2e99" xml:id="div_8.d2e978">
-                     <head change="#d2e99" xml:id="head_8.d2e980">Tafel 2</head>
-                     <figure change="#d2e99" xml:id="figure_5.d2e983">
-                        <caption change="#d2e99" xml:id="caption_5.d2e985">Kolonnenfahrt nach <placeName change="#d2e99" xml:id="placeName_8.d2e987">Gülek</placeName></caption>
+            <floatingText>
+               <body>
+                  <pb ed="print" ed="print" n="pb_32a" facs="#facs_35"/>
+                  <div>
+                     <head>Tafel 2</head>
+                     <figure>
+                        <caption>Kolonnenfahrt nach <placeName>Gülek</placeName></caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_6.d2e991">
-                        <caption change="#d2e99" xml:id="caption_6.d2e993">Unsere Tankstelle <placeName change="#d2e99" xml:id="placeName_9.d2e995">Bozanti</placeName> im
-                              <placeName change="#d2e99" xml:id="placeName_10.d2e998">Taurus</placeName></caption>
+                     <figure>
+                        <caption>Unsere Tankstelle <placeName>Bozanti</placeName> im
+                              <placeName>Taurus</placeName></caption>
                      </figure>
-                      <pb ed="print" n="pb_32b" facs="#facs_36" change="#d2e99" xml:id="pb_36.d2e1002"/>
-                     <figure change="#d2e99" xml:id="figure_7.d2e1004">
-                        <caption change="#d2e99" xml:id="caption_7.d2e1006">Ehrenkompagnie bei der Durchfahrt der Leiche des
-                              <persName change="#d2e99" xml:id="persName_6.d2e1008">Feldmarschalls Frhrn. v. der Goltz</persName> in
-                              <placeName change="#d2e99" xml:id="placeName_11.d2e1011">Tschan Alan</placeName></caption>
+                      <pb ed="print" ed="print" n="pb_32b" facs="#facs_36"/>
+                     <figure>
+                        <caption>Ehrenkompagnie bei der Durchfahrt der Leiche des
+                              <persName>Feldmarschalls Frhrn. v. der Goltz</persName> in
+                              <placeName>Tschan Alan</placeName></caption>
                      </figure>
                   </div>
                </body>
             </floatingText>
             <p xml:id="p_13">
-               <pb ed="print" facs="#facs_37" n="33" xml:id="pb_33"/> in kühn angelegten Schlangenlinien zur
+               <pb ed="print" ed="print" facs="#facs_37" n="33" xml:id="pb_33"/> in kühn angelegten Schlangenlinien zur
                Paßhöhe und in sehr gewagten Windungen in einem einzigen großen Kessel herunter bis
                zum Fuß des Hauptgebirgsstocks. Der Waldbestand ist bedeutend besser als im Taurus,
                die zwei Armenierdörfer, durch die wir kamen, machten einen verhältnismäßig guten
@@ -1054,7 +1174,8 @@
                Steigung empor, verschwindet in der schwarzen Tiefe, und rückwärts schlägt noch
                einmal eine goldene, glanzvolle Funkengarbe aus dem grauen Qualm, durch den die
                kupferfarbige matte Sonne vergebens durch zudringen sucht. Noch ein tiefer Atemzug,
-               und wir sind ebenfalls in dem Brodem untergetaucht. Man fühlt die <pb ed="print" facs="#facs_38" n="34" xml:id="pb_34"/> Hitze des Rauches, der sich schwer auf die Lunge legt. Die
+               und wir sind ebenfalls in dem Brodem untergetaucht. Man fühlt die <pb ed="print" ed="print" facs="#facs_38"
+                  n="34" xml:id="pb_34"/> Hitze des Rauches, der sich schwer auf die Lunge legt. Die
                Minuten werden fast zu Stunden, die elektrischen Hand laternen versagen im Nebel, und
                es ist auch besser so, denn nun sieht man deutlicher die Funken, die unauf hörlich
                wie ein Regen auf uns niederfallen. Ein unaus gesetztes Schütteln und Klopfen begann,
@@ -1073,7 +1194,8 @@
                ihnen ist aber lange nicht so bunt wie in anderen Städten, die ich später sah. Bei
                Aleppo läuft ^ die Grenze zwischen der türkischen und der arabischen , Sprache, doch
                kommt man mit Französisch überall durch. Die innere Stadt ist von einer Mauer
-               umgeben. Außer halb dieser liegen die christlichen Viertel. Im Mittel- <pb ed="print" facs="#facs_39" n="35" xml:id="pb_35"/> Punkt befindet sich eine Befestigung,
+               umgeben. Außer halb dieser liegen die christlichen Viertel. Im Mittel- <pb ed="print" ed="print"
+                  facs="#facs_39" n="35" xml:id="pb_35"/> Punkt befindet sich eine Befestigung,
                deren Minarett eine weithin sichtbare Landmarke bildet. Sie ist von einem jetzt
                trockenen, etwa 50 in breiten, tiefen Graben um geben, der an eine r Stelle auf einer
                steinernen Brücke von acht Bogen überschritten wird. Dieser Burgeingang ist ein
@@ -1093,7 +1215,8 @@
                Kuwek. — Teilweise ganz unglaublich verwildert sind die Kirchhöfe, so der südlich von
                unserem Quartier gelegene: ohne jede Abgrenzung, bildet er fast nur einen wüsten
                Steinhaufen. — Gesundheitliche Einrichtungen wie Wasserleitung und Kanalisation gibt
-               es nicht, nur in besseren Häusern „arabische Klosetts”. Jetzt während des <pb ed="print" facs="#facs_40" n="36" xml:id="pb_36"/> Krieges ist Aleppo besonders als
+               es nicht, nur in besseren Häusern „arabische Klosetts”. Jetzt während des <pb ed="print" ed="print"
+                  facs="#facs_40" n="36" xml:id="pb_36"/> Krieges ist Aleppo besonders als
                Knotenpunkt der Bahnen nach Bagdad und Birseba (südlich Jerusalem) von Bedeutung
                geworden, und die vielen durchreisenden Offiziere finden sich stets bei einzelnen
                besonders gastfreien Familien (z. B. Familie Koch) bei „Mastix" zusammen. Hier werden
@@ -1113,7 +1236,7 @@
                Sic gleichen von weitem einem Zeltlager. Die Häuser bestehen aus einem runden,
                fensterlosen Unterbau mit hohem, zuckerhutförmigem Dach. Wie Bienenkörbe sehen sie
                von weitem aus. Später traf ich die gleiche Bauart noch im nördlichen Mesopotamien
-               an. <pb ed="print" facs="#facs_41" n="37" xml:id="pb_37"/> Die Form der Häuser ist deshalb so
+               an. <pb ed="print" ed="print" facs="#facs_41" n="37" xml:id="pb_37"/> Die Form der Häuser ist deshalb so
                ausfällig, weil das für den ganzen Orient kennzeichnende flache Dach fehlt. Die
                Bewohner dieser Dörfer sind Kurden. An Hama und Homs, größeren Städten am Rande der
                Wüste, vorbei, mehrfach den Orontes kreuzend, stiegen wir allmählich höher und kamen
@@ -1133,7 +1256,8 @@
                während wir in den aus offenen Güterwagen verladenen Autos saßen. Ein Gebirgsbach
                durchfließt die engen Schluchten. Die Ufer sind mit Platanen, Eichen und Oleander
                bestanden. Die Felswände steigen an beiden Seiten steil um mehrere hundert Meter senk
-               recht an. Auf dem höchsten Punkt bietet eine fruchtbare <pb ed="print" facs="#facs_42" n="38" xml:id="pb_38"/> Ebene bei Zebedmn wunderbaren Fernblick nach dem „Hermon“. Die
+               recht an. Auf dem höchsten Punkt bietet eine fruchtbare <pb ed="print" ed="print" facs="#facs_42" n="38"
+                  xml:id="pb_38"/> Ebene bei Zebedmn wunderbaren Fernblick nach dem „Hermon“. Die
                Bahn verläuft nun in sehr starkem Gefälle hinab ins Wadi Barada, vorüber an dem
                Elektrizitätswerk von Damaskus, dessen Kraft durch das Wasser der Barada. geliefert
                wird. Immer hart am Fluß entlang geht es talwärts. Die Ufer sind in einer Breite von
@@ -1153,7 +1277,7 @@
                in das Hauran-Gebiet: Hunderte von Basalt- und Trachytkegeln ragen hier einzeln oder
                in Gruppen zum Teil zu beträchtlicher Höhe (über 1800 in) aus. Am Nordrand des Hauran
                selbst breitet sich das Sedschll aus, eine trostlose Einöde von einander sich kreu-
-                  <pb ed="print" facs="#facs_43" n="39" xml:id="pb_39"/> zenden Lavaströmen, östlich davon eine
+                  <pb ed="print" ed="print" facs="#facs_43" n="39" xml:id="pb_39"/> zenden Lavaströmen, östlich davon eine
                lange Reihe von Eruptivuskegelu, ein Lavagebiet von großartiger Wildnis. Erst bei
                Dera’at wird es wieder etwas fruchtbar. Hier verließen wir die Hedjas-Bahn und bogen
                westlich ab nach dem Westjordanland. Die Station Muzerib ist die Hanptsammelstelle
@@ -1172,7 +1296,8 @@
                Morgen in der Provinz Samaria jäh aufgeweckt wurde. Wir hatten wohl einen plötzlichen
                Maschinenunfall erlitten, denn der Zug stand fast augenblicklich still, so daß im
                Abteil alles durcheinanderfiel. Der Schaden war aber bald beseitigt. Hier in Samaria
-               war der Pflanzenwuchs schon bedeutend weiter entwickelt. <pb ed="print" facs="#facs_44" n="40" xml:id="pb_40"/> Auf einem kleinen Bahnhof in<placeName change="#d2e99" xml:id="placeName_12.d2e1037">Dschemmin</placeName>hatte
+               war der Pflanzenwuchs schon bedeutend weiter entwickelt. <pb ed="print" ed="print" facs="#facs_44" n="40"
+                  xml:id="pb_40"/> Auf einem kleinen Bahnhof in<placeName>Dschemmin</placeName>hatte
                ich Gelegenheit, ein eigenartiges Bild zu beobachten: Bei kaltem Regenwetter sollte
                von einem nahen Stapelplatz Holz an die Bahn gebracht werden; dazu war etwa ein
                Dutzend in Lumpen gehüllter Frauen angestellt, die von drei Männern beaufsichtigt
@@ -1190,10 +1315,10 @@
                und zitternd, halb bettelnd, Apfelsinen und Nüsse, bis — ein türkischer Landwehrmann
                (als Posten) mit kolossalem Mut und noch größerer Wichtigtuerei ihrem Treiben ein
                Ende machte und den Bahnhof säuberte. Nachmittags kamen wir in die weite Hochebene
-                  von<placeName change="#d2e99" xml:id="placeName_13.d2e1040">Judäa</placeName>. Die Landschaft erinnert — abgesehen von den
+                  von<placeName>Judäa</placeName>. Die Landschaft erinnert — abgesehen von den
                fehlenden Bäumen — sehr an die Gegend der Ostbahn im Posenschen. Grünfutter wurde
-               schon eingefahren. <pb ed="print" facs="#facs_45" n="41" xml:id="pb_41"/> Um 4 Uhr nachmittags
-               erreichten wir<placeName change="#d2e99" xml:id="placeName_14.d2e1046">Ramle</placeName>, die Kreuzungsstation
+               schon eingefahren. <pb ed="print" ed="print" facs="#facs_45" n="41" xml:id="pb_41"/> Um 4 Uhr nachmittags
+               erreichten wir<placeName>Ramle</placeName>, die Kreuzungsstation
                Jaffa—Jerusalem—Birseba. Hier gab es umfangreiche Kaktushecken, Obstanlagen, alles in
                gewaltiger Größe, vor allem die Pappeln — wie im Märchenland, doch alles war
                furchtbar schmutzig! Langsam und schwer keuchte die Maschine weiter hinauf nach
@@ -1213,7 +1338,7 @@
                ganz brauchbaren Kunststraße über Hebron (4°°) nach Birseba, wo wir nach 5 Uhr
                nachmittags anlangten. Immer öder war allmählich die Landschaft geworden, auch immer
                flacher, bis uns in Birseba selbst lange Sanddünen daran erinnerten, daß wir uns
-               unmittelbar am Rande der be- <pb ed="print" facs="#facs_46" n="42" xml:id="pb_42"/> wohnbaren
+               unmittelbar am Rande der be- <pb ed="print" ed="print" facs="#facs_46" n="42" xml:id="pb_42"/> wohnbaren
                Wüste der Halbinsel Sinai befanden. In einem leerstehenden Zelt wurden wir
                untergebracht und blieben abends einige Stunden im „Kasüw“zelt mit den anderen
                Offizieren des Stabes der Suez-Expedition gemütlich zusammen. Die Nacht war
@@ -1232,10 +1357,11 @@
                ein großes Sandmeer — und zeigt nur an einzelnen Stellen noch festeren Boden, dem die
                Bewohner mühsam noch etwas Getreide abringen. Der Bahnhof ist großartig angelegt.
                Nachdem wir uns die Erfahrungen der Herren von der Expedition hatten mitteilen
-               lassen, traten wir am nächsten Tage früh den Vorstoß in die eigentliche Wüste an. <pb ed="print" facs="#facs_47" n="43" xml:id="pb_43"/>
+               lassen, traten wir am nächsten Tage früh den Vorstoß in die eigentliche Wüste an. <pb ed="print" ed="print"
+                  facs="#facs_47" n="43" xml:id="pb_43"/>
             </p>
          </div>
-         <div change="#d2e99" xml:id="div_10.d2e1055">
+         <div>
             <head xml:id="head_10">Auto-Erkundung in der Wüste Sinai, Richtung Suez-Kanal.</head>
             <p xml:id="p_14">Es war ein kalter Morgen. Nur -j- 3° 0 zeigte das Thermometer, als die
                Sonne um 6 Uhr früh nach langer Regenzeit am tiefblauen Himmel aufging. Es war der
@@ -1254,7 +1380,8 @@
                bergiger, und scharfe Krümmungen hemmen die Fahrtgeschwindigkeit. Noch hatten die
                Maschinen nichts Besonderes zu leisten, da wir nur zwischen dem dritten und vierten
                Gang zu wechseln brauchten. Immer schroffer und abwechslungsreicher wird die Wüste,
-               jede Kurve bringt ein neues Bild, stets im Hintergrund vom Helal begrenzt. <pb ed="print" facs="#facs_48" n="44" xml:id="pb_44"/> Da plötzlich bremst der Führer so, daß wir
+               jede Kurve bringt ein neues Bild, stets im Hintergrund vom Helal begrenzt. <pb ed="print" ed="print"
+                  facs="#facs_48" n="44" xml:id="pb_44"/> Da plötzlich bremst der Führer so, daß wir
                beinahe durcheinanderfliegen. Hinter der Kurve ein tiefer, senk rechter Abgrund.
                Unmittelbar am Rande kam die Maschine zum Stehen. Es war eine jener Stellen, die wir
                später noch öfter trafen und die uns veranlaßten, auch auf diesem, ersten, Teil der
@@ -1274,7 +1401,8 @@
                liefern reichlich gutes Trinkwasser. Drei Lazarette mit 400 Lagerstellen und drei
                deutschen Schwestern dienen hier inmitten der Wüste, fernab von jeder Zivilisation,
                der Krankenpflege. Auch ein „Offizierkasino" mit sieben Betten ist eingerichtet.
-               Neben der Brunnenanlage befinden sich auf dem Berge die Reste <pb ed="print" facs="#facs_49" n="45" xml:id="pb_45"/> einer alten griechischen Basilika mit guterhaltenem
+               Neben der Brunnenanlage befinden sich auf dem Berge die Reste <pb ed="print" ed="print" facs="#facs_49"
+                  n="45" xml:id="pb_45"/> einer alten griechischen Basilika mit guterhaltenem
                Mosaikfußboden. Etwas nördlich, etwa 15 Minuten entfernt, wurde erst kürzlich eine
                sehr große Höhle entdeckt, in der viel Proviant und Munition untergebracht werden
                kann. Gleichzeitig finden bis 5000 Mann Unterkunst darin. Nun schlugen wir die
@@ -1293,7 +1421,7 @@
                knatterten los, eine nach Nordosten zurück, die anderen nach Südwesten weiter vor.
                Unter Überwindung mancher Fährnisse, die vor allem im Durchqueren der „Wadis"
                bestanden, langten wir bei glühender Mittagshitze um 2 Uhr am Ende der Kunststraße in
-               Dir Hasana an (81 km in Ägypten, <pb ed="print" facs="#facs_50" n="46" xml:id="pb_46"/> (164 Iin
+               Dir Hasana an (81 km in Ägypten, <pb ed="print" ed="print" facs="#facs_50" n="46" xml:id="pb_46"/> (164 Iin
                in der Wüste). Diese letzte große Tränkstelle am Wadi Hasana beim Jlek-Gebirge, etwa
                100 in hoch gelegen, ist Telegraphenstation der Feld-Telegraphen- abteilung und
                besitzt Motorpnmpenanlagen größter Art. Etwa tausend Kamele können dort auf einmal
@@ -1313,7 +1441,7 @@
                Rücksicht auf unseren geringen Wasservorrat umkehren mußten. War doch auf keinen Fall
                daran zu denken, daß hier ein Lastkraftwagen-Pendelbetrieb eingerichtet werden
                könnte. So weit in die Wüste war noch kein Auto vor gedrungen; südlich der Höhe von
-               Suez und Kairo, an- <pb ed="print" facs="#facs_51" n="47" xml:id="pb_47"/> gesichts des Djebel
+               Suez und Kairo, an- <pb ed="print" ed="print" facs="#facs_51" n="47" xml:id="pb_47"/> gesichts des Djebel
                el Tich, des nördlichen Ausläufers des etwa 2300 in hohen Moüsa-Gebirges, des alten
                Sinai, am Rande zwischen Sand- und Steinwüste, mußten wir einsehen, daß hier der
                „große Bruder“, wie mein Wagenführer die Kamele nannte, allein am Platze sei.
@@ -1332,7 +1460,8 @@
                hatten, und lange — vielleicht zu lange stand ich im fahlen Schein des über die Wüste
                aufgegangenen Vollmondes und ließ die Ereignisse des Tages an mir vor übergehen.
                Trotzdem wir am Tage vorher im Sande Temperaturen von über -j- 80° gemessen hatten,
-               war es am 23. März früh doch wieder recht kühl. Ich fürchtete bei- <pb ed="print" facs="#facs_52" n="48" xml:id="pb_48"/> nahe, daß unser Kühler eingefroren sein
+               war es am 23. März früh doch wieder recht kühl. Ich fürchtete bei- <pb ed="print" ed="print"
+                  facs="#facs_52" n="48" xml:id="pb_48"/> nahe, daß unser Kühler eingefroren sein
                könnte; doch dem war glücklicherweise nicht so. Wir versuchten nun in der anderen
                Richtung, über Magdaba, Katia — Richtung Port Said — vorzustoßen. Ohne Weg ging es
                quer durch die Wüste. Zu Anfang bezeichneten noch einige Steine die Richtung, doch
@@ -1352,34 +1481,34 @@
                „Sandwüste" charakterisieren, der südliche durch die Bezeichnung „Steinwüste“. In der
                ersten herrscht die Bildung von Dünen vor. Diese streichen im allgemeinen von
                Nordwest gegen Südost. Sie erreichen Höhen bis zu 50 m.</p>
-            <floatingText change="#d2e99" xml:id="floatingText_3.d2e1073">
-               <body change="#d2e99" xml:id="body_3.d2e1075">
-                   <pb ed="print" n="pb_48a" facs="#facs_53" change="#d2e99" xml:id="pb_53.d2e1077"/>
-                  <div change="#d2e99" xml:id="div_10.d2e1079">
+            <floatingText>
+               <body>
+                   <pb ed="print" ed="print" n="pb_48a" facs="#facs_53"/>
+                  <div>
                      <head xml:id="head_11">Tafel 3</head>
-                     <figure change="#d2e99" xml:id="figure_8.d2e1084">
-                        <caption change="#d2e99" xml:id="caption_8.d2e1086">Der in <placeName change="#d2e99" xml:id="placeName_15.d2e1088">Kut el Amara</placeName> gefangene englische
-                              <persName change="#d2e99" xml:id="persName_7.d2e1091">General Towsend</persName></caption>
+                     <figure>
+                        <caption>Der in <placeName>Kut el Amara</placeName> gefangene englische
+                              <persName>General Towsend</persName></caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_9.d2e1095">
-                        <caption change="#d2e99" xml:id="caption_9.d2e1097">Bei <placeName change="#d2e99" xml:id="placeName_16.d2e1099">Kut el Amara</placeName> gefangene
+                     <figure>
+                        <caption>Bei <placeName>Kut el Amara</placeName> gefangene
                            Engländer</caption>
                      </figure>
-                      <pb ed="print" n="pb_48b" facs="#facs_54" change="#d2e99" xml:id="pb_54.d2e1104"/>
-                     <figure change="#d2e99" xml:id="figure_10.d2e1106">
-                        <caption change="#d2e99" xml:id="caption_10.d2e1108">Automobil-Unglück bei <placeName change="#d2e99" xml:id="placeName_17.d2e1110">Bozanti</placeName><lb change="#d2e99" xml:id="lb_1.d2e1112"/> Eine
-                           Maschine der im Bau begriffenen <orgName change="#d2e99" xml:id="orgName_8.d2e1114">Taurus-Bahn</orgName> fuhr in
+                      <pb ed="print" ed="print" n="pb_48b" facs="#facs_54"/>
+                     <figure>
+                        <caption>Automobil-Unglück bei <placeName>Bozanti</placeName><lb/> Eine
+                           Maschine der im Bau begriffenen <orgName>Taurus-Bahn</orgName> fuhr in
                            die Kolonne und zertrümmerte einen Wagen</caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_11.d2e1120">
-                        <caption change="#d2e99" xml:id="caption_11.d2e1122">Von einer schadhaften Brücke im <placeName change="#d2e99" xml:id="placeName_18.d2e1124">Taurus</placeName>
+                     <figure>
+                        <caption>Von einer schadhaften Brücke im <placeName>Taurus</placeName>
                            gestürzter Wagen</caption>
                      </figure>
                   </div>
                </body>
             </floatingText>
             <p xml:id="p_19">
-               <pb ed="print" facs="#facs_55" n="49" xml:id="pb_49"/> Ich habe in der Hauptsache nur die
+               <pb ed="print" ed="print" facs="#facs_55" n="49" xml:id="pb_49"/> Ich habe in der Hauptsache nur die
                „Sandwüste" kennen gelernt. In dem Teil bei Birseba noch ziemlich hügelig, wird diese
                je weiter nach Süden desto flacher, bei Decka nur schroff unterbrochen von dem bis
                200 m hohen Helal-Gebirge. Nur an einzelnen ganz abgeschlossenen Stellen finden sich
@@ -1399,10 +1528,10 @@
                militärischen Gründen jetzt nicht bekannt geben. Nun aber wieder zur Rückreise: Also
                am 23. März mittags trafen wir wohlbehalten in Birseba ein und fuhren gleich
                nachmittags im Auto weiter herauf, zurück nach Norden, nachdem wir über 400 km in der
-               Wüste zurückgelegt hatten. <pb ed="print" facs="#facs_56" n="50" xml:id="pb_50"/>
+               Wüste zurückgelegt hatten. <pb ed="print" ed="print" facs="#facs_56" n="50" xml:id="pb_50"/>
             </p>
          </div>
-         <div change="#d2e99" xml:id="div_12.d2e1141">
+         <div>
             <head xml:id="head_12">In Palästina.</head>
             <p xml:id="p_20">Die Autofahrt quer durch Palästina wird wohl mit die denkwürdigste
                meines Lebens bleiben. Fast alle Stätten der biblischen Geschichte — wenigstens die
@@ -1421,7 +1550,8 @@
                erblickten wir eine größere Stadt. — Bethlehem! Erst nach längerem Suchen in den
                engen, durch Auto nicht passierbaren Nebengassen fanden wir die „Geburtskirche“. Ein
                eigentümliches Ge fühl ergriff mich, als ich den von Juden umlagerten Vorhof
-               überschritt und mich nun dem Ort näherte, der zum <pb ed="print" facs="#facs_57" n="51" xml:id="pb_51"/> Ausgangspunkt unserer Religion geworden war, dieser Stätte der
+               überschritt und mich nun dem Ort näherte, der zum <pb ed="print" ed="print" facs="#facs_57" n="51"
+                  xml:id="pb_51"/> Ausgangspunkt unserer Religion geworden war, dieser Stätte der
                ersten Weihnacht, des schönsten Festes für Jung und Alt. Aber dann, als ich alles
                gesehen, war ich leider sehr — sehr enttäuscht! Ich hatte gehofft, an dieser Stätte
                den Glauben der Kindheit neu beleben zu können — es war mir unmöglich. Der
@@ -1440,7 +1570,7 @@
                alle Träume der Kindheit wieder, und das erhabene überwältigende Gefühl löste sich in
                dem schlichten Lied „Stille Nacht, heilige Nacht“, das ich leise vor mich hinsummte.
                — Noch viele wichtige Stätten wurden in den Gewölben gezeigt, der Brunnen, der der
-                  <pb ed="print" facs="#facs_58" n="52" xml:id="pb_52"/> heiligen Familie Wasser gab, die
+                  <pb ed="print" ed="print" facs="#facs_58" n="52" xml:id="pb_52"/> heiligen Familie Wasser gab, die
                Kapelle der unschuldigen Kindlein usw. Blendender Sonnenschein empfing uns, als wir
                aus den Grotten wieder heraustraten, und wir wendeten uns — die Zeit war knapp —
                zurück nach Jerusalem, wo wir nach 15 Minuten ankamen und im deutschen Hotel „Fast”
@@ -1459,7 +1589,8 @@
                trinken oder Zigaretten rauchen usw. An sehr vielen Seitenschiffen vorbei, die alle
                Gebetsnischen für die vielen Sekten sind, an dem Salbungsstein vorüber, treten wir in
                einen großen Rundbau, dessen Kuppel überreichen Schmuck aufweist. In ihrer Mitte
-               steht eine im Barokstil erbaute, mit Verzierungen über- <pb ed="print" facs="#facs_59" n="53" xml:id="pb_53"/> ladene Kapelle, deren Vorderwand einer großen verzierten Orgel
+               steht eine im Barokstil erbaute, mit Verzierungen über- <pb ed="print" ed="print" facs="#facs_59" n="53"
+                  xml:id="pb_53"/> ladene Kapelle, deren Vorderwand einer großen verzierten Orgel
                nicht unähnlich ist, bei der die Pfeifen un sichtbar sind. Diese Kapelle umschließt
                das Heilige Grab selbst. Gleich rechts hinter dem engen Eingang liegt der
                Grabesstein, jetzt ein großer polierter Marmorblock. Trotz des darüber befindlichen
@@ -1478,7 +1609,8 @@
                Steinplatten belegten Tempelplatz, wohl dem größten dieser Art der Welt, erhebt sich
                die Omar-Moschee. Das Hauptgebäude, der Felsendom, liegt aus einer unregelmäßigen,
                schön gepflasterten Terrasse. In ihm be findet sich der 18 X in große uralte
-               Opferstein, auf dem nach jüdischen Überlieferungen die Opferung Isaaks <pb ed="print" facs="#facs_60" n="54" xml:id="pb_54"/> hatte stattfinden sollen. Auch soll er die
+               Opferstein, auf dem nach jüdischen Überlieferungen die Opferung Isaaks <pb ed="print" ed="print"
+                  facs="#facs_60" n="54" xml:id="pb_54"/> hatte stattfinden sollen. Auch soll er die
                Bundeslade getragen haben. An den „Königsgräbern“, mit ausgedehnten unter irdischen
                Gewölben vorüber, fuhren wir dann auf den Ölberg. Von der Oberin des deutschen
                Augusta-Stiftes herzlich empfangen, besichtigten wir dieses und genossen dann noch
@@ -1498,7 +1630,7 @@
                Gerste, Hirse, Mais, Sesam, Bohnen, Erbsen, Eierpflanzen, Tomaten usw. abgerungen.
                Bunt wechselten Pflaumen-, Nuß-, Maul- beer-, Feigen-, Süßholz-, Johannisbrotbäume
                mit Weinstöcken und dem wichtigen Olivenbaum. Aber hauptsächlich nur in dem Tal,
-               durch das die <pb ed="print" facs="#facs_61" n="55" xml:id="pb_55"/> Straße zieht, war die
+               durch das die <pb ed="print" ed="print" facs="#facs_61" n="55" xml:id="pb_55"/> Straße zieht, war die
                Pflanzenwelt üppig entwickelt, weiter ab vom Flußlauf ließ sie bedeutend nach, denn
                monatelang gibt es dort kein Wasser, und auch die Orangen- und anderen Anlagen müssen
                künstlich bewässert werden. In flotter Fahrt, in stetigen Kurven, herauf und herunter
@@ -1518,10 +1650,10 @@
                Nach mittag noch unser Lager Tscham Alan im Taurus. Auf dieser denkwürdigen
                Forschungsreise hatten wir in 18 Tagen bei 50 Stunden Auto- und 82 Stunden Bahnfahrt,
                teilweise ganz ohne Wege, teilweise (400 km) in der Wüste, gegen 3000 km zurückgelegt
-               und erforscht. <pb ed="print" facs="#facs_62" n="56" xml:id="pb_56"/>
+               und erforscht. <pb ed="print" ed="print" facs="#facs_62" n="56" xml:id="pb_56"/>
             </p>
          </div>
-         <div change="#d2e99" xml:id="div_13.d2e1163">
+         <div>
             <head xml:id="head_13">Beirut, der Libanon und die Phönizische Küste.</head>
             <p xml:id="p_21">Im März bei meiner ersten Fahrt nach der Sinai- Halbinsel wurde in
                Damaskus der Grund zu meiner zweiten Reise nach Beirut gelegt, die ich, diesmal
@@ -1540,7 +1672,8 @@
                Krieges nicht sprechen darf. Da ich mehrere Wochen in Beirut und Umgebung zu tun
                hatte, konnte ich nebenbei Land und Leute gründlich kennen lernen. Wie oft habe ich
                in Reisebeschreibungen Lobsprüche über den Orient gefunden, doch ich muß sagen, daß
-               hierzu nur der sich berechtigt fühlen darf, der das Innere des <pb ed="print" facs="#facs_63" n="57" xml:id="pb_57"/> Landes nicht besucht hat, also etwa von Trieft mit Dampfer
+               hierzu nur der sich berechtigt fühlen darf, der das Innere des <pb ed="print" ed="print" facs="#facs_63"
+                  n="57" xml:id="pb_57"/> Landes nicht besucht hat, also etwa von Trieft mit Dampfer
                über Alexandrien, Jaffa (Jerusalem), Haifa, Beirut und Tripolis gefahren ist und nur
                die Küstenstädte gesehen hat. In diesen überwiegt die europäische Kultur beinahe;
                auch landschaftlich ist die Phönizische Küste wunderbar schön und überaus üppig und
@@ -1550,8 +1683,9 @@
                Reisebeschreibungen aber ziemlich richtig geschildert sind, will ich nur einige
                merkwürdigere Erlebnisse dieser Wochen erzählen.</p>
          </div>
-         <div change="#d2e99" xml:id="div_14.d2e1174">
-            <head xml:id="head_14">Das Bootsunglück bei der Gasanstalt Beirut am <tei:date when="1916-05-07" change="#d2e99" xml:id="date_4.d2e1178">7. Mai 1916</tei:date>.</head>
+         <div>
+            <head xml:id="head_14">Das Bootsunglück bei der Gasanstalt Beirut am <tei:date
+                  when="1916-05-07">7. Mai 1916</tei:date>.</head>
             <p xml:id="p_22">Mit Rücksicht auf die Blockade der Küste durch die Entente und die
                Spionageumtriebe war es verboten, bei Beirut wie überhaupt an der ganzen Küste auf
                das Meer zu fahren. Im Hinblick auf meine Tätigkeit erhielt ich jedoch vom
@@ -1560,7 +1694,7 @@
                eine Segeljacht zur Verfügung. Meine Bootsleute waren frische, kräftige Burschen, mit
                denen ich mich auf Französisch halbwegs verständigen konnte. Sobald ein feindliches
                Schiff in Sehweite kam, mußten wir natürlich unter Land fahren, und das wurde uns am
-               17. April beinahe zum Verhängnis. <pb ed="print" facs="#facs_64" n="58" xml:id="pb_58"/> Es war
+               17. April beinahe zum Verhängnis. <pb ed="print" ed="print" facs="#facs_64" n="58" xml:id="pb_58"/> Es war
                ein stürmischer, nicht ganz klarer Morgen, die See ging bei Südwestböen recht hoch,
                doch konnten wir uns auf unser Boot verlassen. Meine vier Ruderer legten sich fest in
                die Riemen, aber wir brauchten gut eine halbe Stunde, um aus dem Hafen
@@ -1580,7 +1714,8 @@
                scharf auf die Gasanstalt zu. Nun ging es um Kopf und Kragen. Wir vermochten in
                fünfzehn Mi nuten das jenseitige Ufer zu erreichen, der Dampfer aber konnte wegen der
                vielen dicht unter Wasser liegenden Klippen nicht nahe herankommen und auch nur
-               langsam fahren. Meinen Leuten lief das Wasser vom Gesicht, so <pb ed="print" facs="#facs_65" n="59" xml:id="pb_59"/> arbeiteten sie; ich hielt das Steuerruder. Am Ufer war
+               langsam fahren. Meinen Leuten lief das Wasser vom Gesicht, so <pb ed="print" ed="print" facs="#facs_65"
+                  n="59" xml:id="pb_59"/> arbeiteten sie; ich hielt das Steuerruder. Am Ufer war
                kein Mensch zu sehen, alles schien tot und versteckt, denn man konnte ja nicht
                wissen, was das Kriegsschiff beabsichtigte. Wenn es uns gelang, um die Landungs- und
                Sicherungsmauer der Gasanstalt herumzukommen, so durften wir hoffen, trotz der immer
@@ -1600,7 +1735,7 @@
                schüttet uns, halb sind wir gesunken, das Boot ist voll Wasser, und die Leute
                klammern sich an den Bänken fest. Da kommt schon die nächste Welle, noch nicht
                kämmend, aber noch viel höher; spitz stehen wir zur See, jäh wer den wir in die Höhe
-               gehoben und sehen einen Augen- <pb ed="print" facs="#facs_66" n="60" xml:id="pb_60"/> blick das
+               gehoben und sehen einen Augen- <pb ed="print" ed="print" facs="#facs_66" n="60" xml:id="pb_60"/> blick das
                Kriegsschiff ganz deutlich vor uns. Dann schießen wir rückwärts herunter; ich höre
                einen allgemeinen Aufschrei und fühle noch, daß ich das Gleichgewicht verliere und
                hintenüberstürze, doch schlage ich weich ins Wasser in einen zischenden, quirlenden
@@ -1620,7 +1755,8 @@
                entdecken, krochen daher einige Meter höher auf das Ufer und bemerkten, wie der
                feindliche Dampfer links abgeschwenkt hatte und nun nach Norden fuhr. Bald hatten wir
                noch eine andere Freude: eine besonders hohe See brachte unser Boot mit hoch, schob
-               es vor sich und setzte es so fest, daß es liegen blieb. <pb ed="print" facs="#facs_67" n="61" xml:id="pb_61"/> Erst am nächsten Tage beruhigte sich die See soweit, daß die
+               es vor sich und setzte es so fest, daß es liegen blieb. <pb ed="print" ed="print" facs="#facs_67" n="61"
+                  xml:id="pb_61"/> Erst am nächsten Tage beruhigte sich die See soweit, daß die
                Leute bei Ebbe an die Bergung gehen konnten. Leider war nicht viel Brauchbares
                übriggeblieben, denn wie Augenzeugen mir später erzählten, hätte die letzte große
                Welle das Boot senkrecht gestellt, und es rutschte dann einfach hinten ab. Es soll
@@ -1634,7 +1770,7 @@
                hereintosende Brandung bot im durch strahlenden Sonnenlicht ein wirklich schönes Bild
                für einige photographische Ausnahmen.</p>
          </div>
-         <div change="#d2e99" xml:id="div_15.d2e1194">
+         <div>
             <head xml:id="head_15">Eine vierzehnfache Hinrichtung in Beirut.</head>
             <p xml:id="p_23">In jedem Lande, und vor allem in Kriegszeiten, hat man „schmutzige
                Wäsche“. Verbrecher gibt es überall, und diese müssen zum Wohle des Staates
@@ -1642,7 +1778,7 @@
                niederschreibe, so geschieht es nur, um eine von mehreren derartigen öffentlichen
                Handlungen als kulturgeschichtliches Bild darzustellen. Es handelt sich in diesem und
                in ähnlichen Fällen um politische Verbrecher, die wohl durch die üblichen
-               lügnerischen Ver- <pb ed="print" facs="#facs_68" n="62" xml:id="pb_62"/> sprechungen der Entente
+               lügnerischen Ver- <pb ed="print" ed="print" facs="#facs_68" n="62" xml:id="pb_62"/> sprechungen der Entente
                sich hatten beeinflussen lassen, ihr Vaterland zu schädigen. Sie mußten daher wegen
                Landesverrats bestraft werden und sollten gleichzeitig als abschreckende Beispiele
                dienen. Am 6. Mai nachmittags erfuhr ich zufällig, daß vierzehn politische Verbrecher
@@ -1662,7 +1798,8 @@
                warten; bald sammelte sich das Volk, gegen das der Platz nicht abgesperrt wurde, und
                dann gegen 3 Uhr früh kamen die Verurteilten in zwei Gliedern, mit übergezogenen
                weißen Schandjacken, an den Händen gefesselt und unter Begleitung von Kavallerie.
-               Unterdessen hatte etwa eine halbe Kompagnie Infanterie Aufstellung <pb ed="print" facs="#facs_69" n="63" xml:id="pb_63"/> genommen und in einem Glied einen engen
+               Unterdessen hatte etwa eine halbe Kompagnie Infanterie Aufstellung <pb ed="print" ed="print"
+                  facs="#facs_69" n="63" xml:id="pb_63"/> genommen und in einem Glied einen engen
                Kreis um die Galgen gebildet. Die Hinrichtung ging dann sehr schnell vor sich.
                Einzeln mußte einer nach dem andern der unter dem Galgen Aufgestellten auf einen
                Stuhl steigen, dann wurde ihm sofort die Schlinge um den Hals gelegt und der Stuhl
@@ -1676,13 +1813,14 @@
                Droschken weggefahren. Nach einer halben Stunde verriet nichts mehr am Kanonenplatz,
                daß soeben an vierzehn Landesverrätern die verdiente Strafe vollzogen war.</p>
          </div>
-         <div change="#d2e99" xml:id="div_16.d2e1207">
+         <div>
             <head xml:id="head_16">Ein Zusammenstoß mit den Räubern im Libanon — Baalbek und die
                Zedern des Libanon.</head>
             <p xml:id="p_24">Mitte Mai tauchte ein neuer Plan auf, zu dessen Verwirklichung ich von
                der 4. türkischen Armee gebeten wurde, eine Erkundung in den Libanon selbst zu
                machen. Ich war natürlich hierzu sehr gern bereit, fuhr sofort nach Rayak und von da
-               nach Baalbek, von wo aus ich dann den eigentlichen Vorstoß in das Gebirge nehmen <pb ed="print" facs="#facs_70" n="64" xml:id="pb_64"/> wollte. Vorher aber gedachte ich mir die
+               nach Baalbek, von wo aus ich dann den eigentlichen Vorstoß in das Gebirge nehmen <pb ed="print" ed="print"
+                  facs="#facs_70" n="64" xml:id="pb_64"/> wollte. Vorher aber gedachte ich mir die
                großartigen Ruinen von Baalbek anzusehen — sollen es doch die großartigsten der Welt
                sein. Baalbek liegt etwa 1200 in über dem Meeresspiegel am Fuße desAntilibanon, schon
                von weitem sichtbar durch die weit aufragenden Säulen der Akropolis von Heliopolis.
@@ -1702,31 +1840,31 @@
                nicht etwa die Grundlage der Mauer, sondern sind in einer Höhe von 7 in regelrecht in
                diese eingefügt, eine Leistung, die die Bewunderung unserer Zeit heraus fordert.
                Bevor ich die Ruinen besuchte, hatte ich die erforder-</p>
-            <floatingText change="#d2e99" xml:id="floatingText_4.d2e1217">
-               <body change="#d2e99" xml:id="body_4.d2e1219">
-                   <pb ed="print" n="pb_64a" facs="#facs_71" change="#d2e99" xml:id="pb_71.d2e1221"/>
-                  <div change="#d2e99" xml:id="div_16.d2e1223">
+            <floatingText>
+               <body>
+                   <pb ed="print" ed="print" n="pb_64a" facs="#facs_71"/>
+                  <div>
                      <head xml:id="head_17">Tafel 4</head>
-                     <figure change="#d2e99" xml:id="figure_12.d2e1228">
-                        <caption change="#d2e99" xml:id="caption_12.d2e1230">Wanderdüne auf dem Wege nach <placeName change="#d2e99" xml:id="placeName_19.d2e1232">Suez</placeName>, die uns
+                     <figure>
+                        <caption>Wanderdüne auf dem Wege nach <placeName>Suez</placeName>, die uns
                            zur Umkehr zwang</caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_13.d2e1237">
-                        <caption change="#d2e99" xml:id="caption_13.d2e1239">Mit <persName change="#d2e99" xml:id="persName_8.d2e1241">Kapitänleutnant v. Mücke</persName> bei
-                              <placeName change="#d2e99" xml:id="placeName_20.d2e1244">Tarsus</placeName> auf einer Erkundungsfahrt</caption>
+                     <figure>
+                        <caption>Mit <persName>Kapitänleutnant v. Mücke</persName> bei
+                              <placeName>Tarsus</placeName> auf einer Erkundungsfahrt</caption>
                      </figure>
-                      <pb ed="print" n="pb_64b" facs="#facs_72" change="#d2e99" xml:id="pb_72.d2e1249"/>
-                     <figure change="#d2e99" xml:id="figure_14.d2e1251">
-                        <caption change="#d2e99" xml:id="caption_14.d2e1253">Bei Gaswerk <placeName change="#d2e99" xml:id="placeName_21.d2e1255">Beirut</placeName></caption>
+                      <pb ed="print" ed="print" n="pb_64b" facs="#facs_72"/>
+                     <figure>
+                        <caption>Bei Gaswerk <placeName>Beirut</placeName></caption>
                      </figure>
-                     <figure change="#d2e99" xml:id="figure_15.d2e1260">
-                        <caption change="#d2e99" xml:id="caption_15.d2e1262">Petroleumbohrturm im <placeName change="#d2e99" xml:id="placeName_22.d2e1264">Jarmuktal</placeName></caption>
+                     <figure>
+                        <caption>Petroleumbohrturm im <placeName>Jarmuktal</placeName></caption>
                      </figure>
                   </div>
 
                </body>
             </floatingText>
-            <pb ed="print" facs="#facs_73" n="65" xml:id="pb_65"/>
+            <pb ed="print" ed="print" facs="#facs_73" n="65" xml:id="pb_65"/>
             <p xml:id="p_28">lichen Vorbereitungen zur Fahrt in den Libanon angeordnet. Und das war
                immerhin mit einigen Schwierigkeiten verknüpft, da in jener Gegend sich allerhand
                licht scheues Gesindel gesammelt haben sollte, das von räuberischen Überfällen lebte.
@@ -1747,7 +1885,7 @@
                Libanon, zu über nachten, da dessen Scheich dem Kaimakam von Baalbek bekannt war. Am
                nächsten Morgen sollte es von dort aus dann weiter heraufgehen. In sengender
                Mittagshitze ritten wir ab, gegen die Sonnenstrahlen durch die bekannten dicken
-               Kopftücher ge- <pb ed="print" facs="#facs_74" n="66" xml:id="pb_66"/> schützt. Mitten zwischen
+               Kopftücher ge- <pb ed="print" ed="print" facs="#facs_74" n="66" xml:id="pb_66"/> schützt. Mitten zwischen
                den beiden Libanons führte unser Pfad durch die Steppe von Cölesyrien nach Norden.
                Allmählich hörte der Weg fast ganz auf und war kaum als Fußpfad noch zu erkennen. So
                ging es an den Dörfern Machra und Schad vorüber, Richtung auf Ärbata, einem kleinen
@@ -1767,7 +1905,7 @@
                denn ich wußte nicht, wieviel Leute uns gegenüberlagen und ob sie überhaupt etwas
                Feindliches gegen uns im Schilde führten. Nun allzu lange dauerte es mir, bis nach
                zehn Minuten endlich von drüben der Schrei des Aasgeiers erschallte, das verabredete
-               Zeichen für die geglückte Umgehung. Nun <pb ed="print" facs="#facs_75" n="67" xml:id="pb_67"/>
+               Zeichen für die geglückte Umgehung. Nun <pb ed="print" ed="print" facs="#facs_75" n="67" xml:id="pb_67"/>
                eilten wir vorsichtig von allen Seiten vor — jedes Schießen hatte ich verboten, da
                wir uns leicht selbst hätten treffen können. Das war ein Glück, denn kaum hatten wir
                die Gegner erreicht, als sie die Hände hochhoben, und gleich zeitig ertönte ringsum
@@ -1786,10 +1924,11 @@
                einige schienen Gewehre zu haben. Schnell nahm ich mein weißes Kopftuch ab, schwenkte
                es in der Luft und schickte zwei Gendarmen vor, während wir in Feuerstellung gingen.
                Die beiden kamen denn auch glücklich dort an, und bereits nach einigen Minuten
-               erhielten wir durch Tücherschwenken das Zeichen, daß wir herankommen möchten. <pb ed="print" facs="#facs_76" n="68" xml:id="pb_68"/>
+               erhielten wir durch Tücherschwenken das Zeichen, daß wir herankommen möchten. <pb ed="print" ed="print"
+                  facs="#facs_76" n="68" xml:id="pb_68"/>
             </p>
          </div>
-         <div change="#d2e99" xml:id="div_18.d2e1283">
+         <div>
             <head xml:id="head_18">Baalbek und die Zedern des Libanon.</head>
             <p xml:id="p_29">Der Empfang war nun überaus herzlich. Schnell hatte sich der Scheich
                sein Sonntagsgewand übergeworfen, kam mir entgegen und hielt die Steigbügel. Wir
@@ -1811,7 +1950,7 @@
                diese und schüttete sie auf eine Blechpfanne, die auf einem Mangal (Holzkohlenfeuer)
                lag. Hier wurde der Kaffee geröstet, dann brachte ein anderer Diener ein wunderbar
                ausgelegtes hölzernes Gefäß, ähnlich unseren früher in der Küche zum Stoßen von
-               Gewürz u. dgl. vielfach ver- <pb ed="print" facs="#facs_77" n="69" xml:id="pb_69"/> wendeten
+               Gewürz u. dgl. vielfach ver- <pb ed="print" ed="print" facs="#facs_77" n="69" xml:id="pb_69"/> wendeten
                Messingmörsern. In diesem wurde der Kaffee fein „gestoßen" in rhythmischem Takt, den
                alle anwesenden Araber leise mitsummten. Allmählich hatten sich auch meine Gendarmen
                mit Ausnahme der von mir aus gestellten Wachen eingefunden. Nun wurde der Kaffee
@@ -1831,7 +1970,8 @@
                hergerichtet. Eine Menge von Teppichen war dorthin gebracht, und nun forderte der
                Scheich mich auf, hereinzukommen. Der Raum war vollständig kahl, der Boden ganz mit
                Teppichen belegt. Dann brachte ein Diener einen flachen Stuhl ohne Lehne und fetzte
-               ihn mitten ins Zimmer, mit den Füßen nach oben, ein anderer Diener stellte <pb ed="print" facs="#facs_78" n="70" xml:id="pb_70"/> eine ungeheuer große, etwa zwei Meter im
+               ihn mitten ins Zimmer, mit den Füßen nach oben, ein anderer Diener stellte <pb ed="print" ed="print"
+                  facs="#facs_78" n="70" xml:id="pb_70"/> eine ungeheuer große, etwa zwei Meter im
                Durchschnitt messende Messingplatte darauf, und der Tisch war fertig. Nun lud mich
                der Scheich ein, Platz zu nehmen, d. h. mit gekreuzten Beinen mich an den „Tisch” zu
                setzen. Das war aber leichter gesagt als getan. Nachdem ich es zwei mal vergeblich
@@ -1851,7 +1991,7 @@
                Blechteller er halten und durfte auf meine besondere Bitte mein Taschenbesteck
                benutzen. Mit dem üblichen „Bismillah" gab unser Wirt dann das Zeichen zum Beginn des
                Essens. Er langte mit den Fingern in den „Reis" und legte mir einen Berg davon auf
-               meinen Teller, dann <pb ed="print" facs="#facs_79" n="71" xml:id="pb_71"/> griffen alle zu,
+               meinen Teller, dann <pb ed="print" ed="print" facs="#facs_79" n="71" xml:id="pb_71"/> griffen alle zu,
                teils mit den Händen, teils mit dem hohlen Brot, und bald war alles beim besten
                Schmausen, wobei die Araber durch besonders lautes Schmatzen zur Ehre des Wirtes zum
                Ausdruck brachten, daß sie überaus zufrieden seien. Man denke sich etwa
@@ -1872,7 +2012,7 @@
                der Dienerin einige Schmeicheleien — natürlich zu dem Scheich gewandt —, wie z. B.
                „Mersina" (mein Täubcheu), und vertiefte mich in das Rätsel, welchem Lebewesen dieses
                Kotelett wohl bisher angehört haben könnte. Der Scheich behauptete zwar, daß es von
-               einem <pb ed="print" facs="#facs_80" n="72" xml:id="pb_72"/> Z6UQ6 dosuk wäre, ich glaube aber,
+               einem <pb ed="print" ed="print" facs="#facs_80" n="72" xml:id="pb_72"/> Z6UQ6 dosuk wäre, ich glaube aber,
                daß es von einer Ziege oder einer Katze war. Auch das ging vorüber, und ich sann
                gerade auf einen Vorwand, wie ich am besten mich „drücken" könne, als draußen ein
                Gewehrschuß fiel. Während alle anderen ziemlich ruhig blieben und nur zu den
@@ -1892,7 +2032,7 @@
                besorgen. Unterdessen war das beste Zimmer für mich zur Nacht eingerichtet, sogar ein
                Bettgestell mit Matratze war vorhanden. Ich legte mich in den Kleidern hin, und der
                Scheich blieb so lange neben mir, bis er annahm, ich sei eingeschlafen; dann ging er
-               leise hinaus. Ich hatte mich <pb ed="print" facs="#facs_81" n="73" xml:id="pb_73"/> aber nur
+               leise hinaus. Ich hatte mich <pb ed="print" ed="print" facs="#facs_81" n="73" xml:id="pb_73"/> aber nur
                verstellt, schloß zuerst meine „Stube” ab, steckte mir eine Zigarre an, legte meine
                Waffen neben mich und blieb bis zum Morgen ziemlich wach. Im Mondschein träumte ich
                von den romantischen Vorgängen des verflossenen Tages und der fernen Heimat, während
@@ -1912,7 +2052,8 @@
                unerwartet ein scharfer Schuß fiel und etwa 5 ra über mir im Felsen gleichzeitig ein
                Geschoß scharf einschlug, dem drei bis vier andere und dann noch eine größere Zahl
                folgten; aber alle gingen viel zu hoch. Im Nu waren wir von den Pferden und hinter
-               Felsen gedeckt. Anscheinend war der Hang links oben <pb ed="print" facs="#facs_82" n="74" xml:id="pb_74"/> besetzt, wir mußten also zuerst rechts herauf. Die Pferde ließen
+               Felsen gedeckt. Anscheinend war der Hang links oben <pb ed="print" ed="print" facs="#facs_82" n="74"
+                  xml:id="pb_74"/> besetzt, wir mußten also zuerst rechts herauf. Die Pferde ließen
                wir in einer Geländefalte unten, ebenso zwei Gendarmen, die zur Täuschung des
                Angreifers unten bleiben und aufs Geratewohl nach links auf die Höhen feuern sollten,
                während ich gedeckt rechts herauskroch und lief, wobei ich leider meine Browning
@@ -1932,7 +2073,7 @@
                und unten die Pferde nachkommen lassen wollten, bis wir uns am Zusammenstoß der
                beiden Bergrücken träfen. Hier zeigte mir der Scheich einen wunderschönen Dolch, der
                einem der beiden erschossenen Räuber abgenommen war. Unter angeregtem Besprechen des
-               Ereignisses stiegen wir nun <pb ed="print" facs="#facs_83" n="75" xml:id="pb_75"/> immer höher,
+               Ereignisses stiegen wir nun <pb ed="print" ed="print" facs="#facs_83" n="75" xml:id="pb_75"/> immer höher,
                bis wir endlich bei unserem Ziel, einem Meiler, ankamen. Hier machten wir Rast,
                frühstückten, ich fertigte meine Skizen an, dann schössen wir nach der Scheibe, und
                da es noch früh war, beschloß ich zurück mit einem kleinen Umweg über die „Zedern des
@@ -1952,65 +2093,66 @@
                band ihn mir sofort um und gab meine Reit peitsche als Gegengeschenk. Dann saßen wir
                noch ein Weilchen plaudernd und rauchend beisammen, bis die Pferde gefüttert waren,
                und ritten darauf nach Baalbek zurück, wo wir spät nachts eintrafen und mit großer
-                  <pb ed="print" facs="#facs_84" n="76" xml:id="pb_76"/> Freude begrüßt wurden, da der
+                  <pb ed="print" ed="print" facs="#facs_84" n="76" xml:id="pb_76"/> Freude begrüßt wurden, da der
                Zusammenstoß mit den Räubern hier schon bekannt geworden war.</p>
-            <p change="#d2e99" xml:id="p_18.d2e1308">In Baalbek fand ich ein Telegramm vor, das mich nach dem Taurus zurückrief, und so
+            <p>In Baalbek fand ich ein Telegramm vor, das mich nach dem Taurus zurückrief, und so
                fuhr ich denn am nächsten Morgen die alte bekannte Straße über
-                  <placeName change="#d2e99" xml:id="placeName_23.d2e1310">Aleppo</placeName> und den <placeName change="#d2e99" xml:id="placeName_24.d2e1313">Amanus</placeName> und traf
-               wohlbehalten am <date when="1916-05-18" change="#d2e99" xml:id="date_4.d2e1316">18. Mai</date> im Lager <placeName change="#d2e99" xml:id="placeName_25.d2e1319">Tscham
+                  <placeName>Aleppo</placeName> und den <placeName>Amanus</placeName> und traf
+               wohlbehalten am <date when="1916-05-18">18. Mai</date> im Lager <placeName>Tscham
                   Alan</placeName> ein.</p>
          </div>
-         <div change="#d2e99" xml:id="div_19.d2e1325">
+         <div>
             <head xml:id="head_19">Mesopotamien. — Damaskus. — Der große Kinobrand in
                Damaskus.</head>
             <p xml:id="p_30">Nicht lange blieb ich im Taurus, denn bald rief mich ein Kommando auf
-               zwei Monate wieder hinunter nach dem entfernteren Süden zur <orgName change="#d2e99" xml:id="orgName_9.d2e1332">4. türkischen
+               zwei Monate wieder hinunter nach dem entfernteren Süden zur <orgName>4. türkischen
                   Armee</orgName>. Diesmal sollte ich in der Hauptsache in und bei Damaskus zu tun
                haben.</p>
-            <p change="#d2e99" xml:id="p_20.d2e1336">Am <date when="1916-06-06" change="#d2e99" xml:id="date_5.d2e1338">6. Juni</date> trat ich meine zunächst aus zwei Monate
+            <p>Am <date when="1916-06-06">6. Juni</date> trat ich meine zunächst aus zwei Monate
                bemessene Sendung an. Auf der bekannten Straße über den Amanus fuhr ich zunächst nach
                Aleppo, um von hier einen Abstecher nach dem Euphrat und dem erdölhaltigen Teil von
                Mesopotamien zu unternehmen.</p>
-            <p change="#d2e99" xml:id="p_21.d2e1342">Wie ich schon im Kapitel III erwähnte, ist Aleppo der Hauptausgangspunkt für die
+            <p>Wie ich schon im Kapitel III erwähnte, ist Aleppo der Hauptausgangspunkt für die
                Streifzüge nach Mesopotamien. Ich hatte diesmal besonderes Glück, da ich hier mit
                Kapitänleutnant v. Mücke und Professor Sven Hedin zusammentraf und mir ihre
                Erfahrungen zunutze machen konnte.</p>
-            <p change="#d2e99" xml:id="p_22.d2e1345">Ich hielt mich natürlich in dem recht heißen Aleppo nur so lange auf, bis ich gute
+            <p>Ich hielt mich natürlich in dem recht heißen Aleppo nur so lange auf, bis ich gute
                Fahrgelegenheit hatte, und fuhr dann eines Abends mit der Bagdad-Bahn über Muslimije
-               zunächst bis nach Dscherabis am Euphrat, wo <pb ed="print" facs="#facs_85" n="77" xml:id="pb_77"/> wir bald nach Mitternacht ankamen. Ich konnte im Wagen übernachten, da der Zug
+               zunächst bis nach Dscherabis am Euphrat, wo <pb ed="print" ed="print" facs="#facs_85" n="77" xml:id="pb_77"
+               /> wir bald nach Mitternacht ankamen. Ich konnte im Wagen übernachten, da der Zug
                erst am nächsten Tage weitergehen sollte, besichtigte dann am nächsten Tage das Dorf,
                die große Eisenbahnbrücke über den Euphrat und traf durch Anmieten von Führern und
                Pferden die Vorbereitungen zum Ritt in das Innere von Mesopotamien.</p>
-            <p change="#d2e99" xml:id="p_23.d2e1351">Der südliche Teil dieser Provinz soll überaus fruchtbar sein; das Paradies hatte ich
+            <p>Der südliche Teil dieser Provinz soll überaus fruchtbar sein; das Paradies hatte ich
                mir in diesem Teil von Nordmesopotamien aber doch ganz wesentlich anders vor
                gestellt. </p>
-            <p change="#d2e99" xml:id="p_24.d2e1354">Das Land besteht aus einzelnen Bergkuppen, zwischen denen sich fruchtbare Becken
+            <p>Das Land besteht aus einzelnen Bergkuppen, zwischen denen sich fruchtbare Becken
                ausbreiten. Der Weg, eine alte Karawanenstraße, führte uns zunächst in der Richtung
-               nach dem <placeName change="#d2e99" xml:id="placeName_26.d2e1356">Káradscha Dagh</placeName>, einem vulkanischen Gebirge von über
+               nach dem <placeName>Káradscha Dagh</placeName>, einem vulkanischen Gebirge von über
                1800 m Höhe, das einen unwirtlichen Eindruck macht, vor allem wohl durch die vielen
                schwärzlichen Lavaströme, die sich weithin über das Schichtgestein ausgebreitet
                haben. Südwestlich von ihm erhebt sich der Psktek, eine wasserarme weiße Kalkscholle
                von etwa 1000 in Höhe. Die hauptsächlichsten Erdöl- gebiete Mesopotamiens liegen viel
-               weiter südöstlich, bei <placeName change="#d2e99" xml:id="placeName_27.d2e1359">Hit</placeName> am <placeName change="#d2e99" xml:id="placeName_28.d2e1362">Euphrat</placeName>
-               und etwa 50 km südlich <placeName change="#d2e99" xml:id="placeName_29.d2e1365">Mossul</placeName> am
-               <placeName change="#d2e99" xml:id="placeName_30.d2e1368">Tigris</placeName>; mein Auftrag ging aber nach dem<placeName change="#d2e99" xml:id="placeName_31.d2e1372">Ain el
-                  Arus</placeName>, aus dem der <placeName change="#d2e99" xml:id="placeName_32.d2e1375">Chabur</placeName> dem
-                  <placeName change="#d2e99" xml:id="placeName_33.d2e1378">Euphrat</placeName> zufließt. </p>
-            <p change="#d2e99" xml:id="p_25.d2e1382">Das Land ist hier sehr wenig besiedelt und nur unmittelbar an den Flußläufen
+               weiter südöstlich, bei <placeName>Hit</placeName> am <placeName>Euphrat</placeName>
+               und etwa 50 km südlich <placeName>Mossul</placeName> am
+               <placeName>Tigris</placeName>; mein Auftrag ging aber nach dem<placeName>Ain el
+                  Arus</placeName>, aus dem der <placeName>Chabur</placeName> dem
+                  <placeName>Euphrat</placeName> zufließt. </p>
+            <p>Das Land ist hier sehr wenig besiedelt und nur unmittelbar an den Flußläufen
                fruchtbar. Was in der Regenzeit von November bis April an Wasser herunter kommt,
                genügt vollauf, um das Gebiet am Fuße der Berge für Wochen stark zu durchweichen und
                in Verbindung mit dem Anschwellen der Flüsse die schlechten Wege fast ganz ungangbar
                zu machen. Aber jetzt im Juni war schon überall Wassermangel, die Quellen waren
-               versiegt. <pb ed="print" facs="#facs_86" n="78" xml:id="pb_78"/> und man sah sich seitwärts der
+               versiegt. <pb ed="print" ed="print" facs="#facs_86" n="78" xml:id="pb_78"/> und man sah sich seitwärts der
                Flüsse auf Grundwasser angewiesen.</p>
-            <p change="#d2e99" xml:id="p_26.d2e1387">Bei <placeName change="#d2e99" xml:id="placeName_34.d2e1389">Sinoerek</placeName> blieben wir zur Nacht in unserem mit genommenen
+            <p>Bei <placeName>Sinoerek</placeName> blieben wir zur Nacht in unserem mit genommenen
                Zelt; die Bewohner kamen uns außer ordentlich freundlich entgegen und stellten mir am
                nächsten Tage auch ein kleines Kelek, ein keineswegs ein wandfreies Fahrzeug aus
                aufgeblasenen Ziegenhäuten mit Holzgestell, zur Verfügung, auf dem ich dann den
                Euphrat herunterfuhr, während die Pferde den Land marsch machen mußten. Der Kelek war
                nur vier Quadratmeter groß und daher wegen der Stromschnellen äußerste Vorsicht
                geboten, denn wir saßen zu vier Mann darin.</p>
-            <p change="#d2e99" xml:id="p_27.d2e1393">Die oft sehr steilen und tief eingeschnittenen Ufer wechseln mit weiten welligen
+            <p>Die oft sehr steilen und tief eingeschnittenen Ufer wechseln mit weiten welligen
                Niederungen, doch bietet die ganze Gegend wenig Anziehendes. Bei Knm Aale blieben wir
                die Nacht verankert, und am nächsten Tag langten wir abends wieder bei Dscherabis an.
                Die Wassersahrt betrug etwa 200 km, der Ritt an den vorhergehenden drei Tagen
@@ -2018,22 +2160,22 @@
                nächsten Morgen zur Fahrt in das Innere von Mesopotamien bereit stehenden Zug bequem
                einrichten konnte. Die 200 km bis Raselein wurden in einem Tage zurückgelegt und
                führten durch welliges, fast gänzlich unbebautes Steppenland.</p>
-            <p change="#d2e99" xml:id="p_28.d2e1396">In <placeName change="#d2e99" xml:id="placeName_35.d2e1398">Raselein</placeName>, dem jetzigen Endpunkt der Bagdad-Bahn, hatte ich
+            <p>In <placeName>Raselein</placeName>, dem jetzigen Endpunkt der Bagdad-Bahn, hatte ich
                das Glück, Automobilfahrgelegenheit nach dem etwa 150 km nördlich am Tigris gelegenen
                Diar-bekir zu finden. Die Landschaft ist hier wesentlich reiz voller und enthält
                recht erhebliche Bergzüge, teilweise mit weißen Kalkablagerungen durchsetzt,
-               teilweise in den <pb ed="print" facs="#facs_87" n="79" xml:id="pb_79"/> Schluchten mit
+               teilweise in den <pb ed="print" ed="print" facs="#facs_87" n="79" xml:id="pb_79"/> Schluchten mit
                Tamariskengestrüpp — am Euphrat Sor genannt — bewachsen, ist sonst aber ziemlich
                dürftig. Es macht sich eben auch hier die ungünstige Lage Mesopotamiens geltend, das
                im Klima eng mit dem Mittelmeer zusammenhängend, inmitten heißer, trockener Länder
                gelegen, als Quelle für Niederschläge nur den Persischen Golf hat, denn die hohen
                Gebirge Syriens schneiden es vollständig vom Mittelmeer ab.</p>
-            <p change="#d2e99" xml:id="p_29.d2e1405">Von Diarbekir aus machte ich noch einen Ritt nach dem Nordabhang des Käradscha Dagh,
+            <p>Von Diarbekir aus machte ich noch einen Ritt nach dem Nordabhang des Käradscha Dagh,
                wo es „brennende Steine" geben sollte, und dann hieß es zurück nach Aleppo und
                Damaskus. — In Damaskus hatte ich bei meiner Arbeit durch große Hitze sehr zu leiden,
                und auch nachts kühlte es sich nur wenig ab; ich traf es dieser Tage schlecht, da der
                „Schirokko" wehte, und dagegen gab es keinen Schutz.</p>
-            <p change="#d2e99" xml:id="p_30.d2e1408">Damaskus selbst konnte ich mir in diesen Tagen ausgiebig ansehen. Es macht von den
+            <p>Damaskus selbst konnte ich mir in diesen Tagen ausgiebig ansehen. Es macht von den
                umliegenden Bergen aus den Eindruck einer einzigen großen Villenstadt, fast eines
                Parks. Der Barada, durchzieht die Stadt und die Ebene mit zahlreichen Armen und ruft
                eine sehr üppige Pflanzenwelt hervor, große Rosen- und Myrten gärten, dichte
@@ -2041,15 +2183,16 @@
                und Aprikosenbäumen. Auf den Feldern wachsen alle möglichen Früchte. Diese Pracht des
                Baum- und Pflanzenwuchses, die Fülle des rauschenden Wassers lassen die Stadt aus der
                Ferne und von der Wüste umgeben fast wie ein Paradies erscheinen.</p>
-            <p change="#d2e99" xml:id="p_31.d2e1411">Doch anders ist es im Innern dieses alten, echt orientalischen Nestes. Mit wenigen
-               Ausnahmen sind die Straßen krumm, eng und schmutzig. Hier wie in <pb ed="print" facs="#facs_88" n="80" xml:id="pb_80"/> Beirut sorgt ja die Regierung sehr für Verbesserungen,
+            <p>Doch anders ist es im Innern dieses alten, echt orientalischen Nestes. Mit wenigen
+               Ausnahmen sind die Straßen krumm, eng und schmutzig. Hier wie in <pb ed="print" ed="print" facs="#facs_88"
+                  n="80" xml:id="pb_80"/> Beirut sorgt ja die Regierung sehr für Verbesserungen,
                ganze Stadtteile werden eingerissen, Häuser abgetragen, um gerade, breite Straßen zu
                schaffen, doch ist jetzt während des Krieges das „Ausräumen" unterblieben, so daß
                einzelne Bezirke, vor allem in Beirut, den Eindruck er wecken, als ob hier eine
                Beschießung durch Artillerie allerschwersten Kalibers wochenlang stattgefunden hätte.
                — Besonders sehenswert sind in Damaskus die Große Moschee, das Grab Saladins, die
                Metallfabriken, die Zitadelle und der recht große, gut beschickte Basar.</p>
-            <p change="#d2e99" xml:id="p_32.d2e1416">Als ich meine Arbeiten in Damaskus eingerichtet hatte, bekam ich den Auftrag (ebenso
+            <p>Als ich meine Arbeiten in Damaskus eingerichtet hatte, bekam ich den Auftrag (ebenso
                wie in Mesopotamien), mir die brennbaren Steine im Jarmuk-Tal auf Erdölgewinnung
                anzusehen. Den letzten Abend vor der Abreise wollte ich mir noch etwas Besonderes
                leisten und ging mit einem Bekannten in das — „Kino“. Bisher hatte ich auf meinen
@@ -2057,15 +2200,15 @@
                gehabt, besonderen Gefahren noch im letzten Augenblick und meist nur durch
                Zufälligkeiten zu entgehen. Auch diesen Abend werde ich nie vergessen, entkam ich
                doch nur um Haaresbreite dem Tod durch Verbrennen.</p>
-            <p change="#d2e99" xml:id="p_33.d2e1419">Das Kino liegt in einem alleinstehenden Gebäude mit massiven Grundmauern und
+            <p>Das Kino liegt in einem alleinstehenden Gebäude mit massiven Grundmauern und
                Holzdach, recht hübscher Vorderseite und rund herum angelegten Gärten. Von außen
                konnte man den Vorhang der Bühne sehen, der mit halsbrecherischen Abbildungen aus den
                Dardanellengefechten Reklame machte. Der ganze innere Holzausbau des Kinos ähnelte
                einem europäischen großen Schmierentheater. Wir nahmen Plätze auf einem
                balkonähnlichen Vorbau hinten in der Mitte, unmittelbar rückwärts von uns befand sich
-               ein Holzverschlag, in dem mehrere dunkle <pb ed="print" facs="#facs_89" n="81" xml:id="pb_81"/>
+               ein Holzverschlag, in dem mehrere dunkle <pb ed="print" ed="print" facs="#facs_89" n="81" xml:id="pb_81"/>
                Öffnungen das Arbeitsfeld des Darstellers vermuten ließen.</p>
-            <p change="#d2e99" xml:id="p_34.d2e1424">Um 8 Uhr sollte die Vorstellung beginnen, gegen ½ 9 Uhr waren nur unten vorn zehn
+            <p>Um 8 Uhr sollte die Vorstellung beginnen, gegen ½ 9 Uhr waren nur unten vorn zehn
                Personen anwesend; der Diener, der uns Kaffee brachte, versicherte uns stets, es
                begönne „sofort”. Endlich um 9 Uhr hob sich der Vorhang, eine kleine Bühne wurde
                sichtbar und auf ihr — eine arabische, europäisch zurechtgestutzte Musiktruppe von
@@ -2077,14 +2220,15 @@
                wollte ja alles kennen lernen. Durch diese Kunstleistung aber war ich so nervös
                geworden, daß nur die ganze Überredungskunst meines Begleiters mich bestimmen konnte,
                wenigstens noch den ersten Film anzusehen.</p>
-            <p change="#d2e99" xml:id="p_35.d2e1428">Endlich gegen 10 Uhr verstummte die „Musik“, der Vorhang fiel, die Schwalben, die
+            <p>Endlich gegen 10 Uhr verstummte die „Musik“, der Vorhang fiel, die Schwalben, die
                neben und vor uns ans den Armen der Hängelampen ihre Nester hatten, beruhigten sich
                allmählich, saßen still und warteten der „Kino”Vorführung. Die „Damen" der
                Künstlertruppe, gewaltig auf- oder richtiger abgeputzt mit fingerdick aufgelegter
                Schminke, die sie von weitem um dreißig Jahre jünger machte, erschienen rechts und
                links auf den Nebenbalkonen und versuchten einen richtiggehenden europäischen
                Flirt.</p>
-            <p change="#d2e99" xml:id="p_36.d2e1431">Glücklicherweise wurde es bald dunkel, und die <pb ed="print" facs="#facs_90" n="82" xml:id="pb_82"/> Filmvorstellung begann. War es nun die Hitze oder ein unrichtiges
+            <p>Glücklicherweise wurde es bald dunkel, und die <pb ed="print" ed="print" facs="#facs_90" n="82"
+                  xml:id="pb_82"/> Filmvorstellung begann. War es nun die Hitze oder ein unrichtiges
                Arbeiten des sonst vorzüglichen Apparates — kurz, die Bilder flimmerten so, daß wir
                nur schwer die Handlung des ersten Films erkennen konnten, in dem gezeigt werden
                sollte, daß ein arabisches Pferd klüger ist als ein arabischer Hund, daß beide aber
@@ -2093,20 +2237,21 @@
                mit einem kleinen (ostpreußischen) Arbeitspferd, einem schottischen Schäferhund,
                einem anscheinend französischen Mädchen im — Wattenmeer von Holland. Aber geklatscht
                wurde unglaublich.</p>
-            <p change="#d2e99" xml:id="p_37.d2e1436">Doch ich mußte meiner Nerven wegen auf eine längere Anwesenheit in dieser
+            <p>Doch ich mußte meiner Nerven wegen auf eine längere Anwesenheit in dieser
                Volkserziehungsanstalt verzichten. Wir beschlossen, im Hotel noch eine Flasche guten
                Libanonwein zu trinken und drückten uns, gingen um den Operateurkasten herum die
                Holztreppe hinunter. Noch befanden wir uns auf den letzten, kaum 5 in vom Ausgang
                entfernten Stufen, als ein eigentümliches Licht plötzlich hinter uns aufflammte.</p>
-            <p change="#d2e99" xml:id="p_38.d2e1439">Was ist das? — Unwillkürlich bleiben wir stehen, dann aber bricht es los mit
+            <p>Was ist das? — Unwillkürlich bleiben wir stehen, dann aber bricht es los mit
                furchtbarer Gewalt. Zischend und sengend fegt über uns an der Decke entlang eine
                gewaltige Stichflamme, und im Nu ist der ganze Vorraum mit Qualm erfüllt. </p>
-            <p change="#d2e99" xml:id="p_39.d2e1442">O Gott, denke ich nun, was ist da geschehen? halte mich am Geländer fest und bin
+            <p>O Gott, denke ich nun, was ist da geschehen? halte mich am Geländer fest und bin
                einen Augenblick voll ständig wie gelähmt; doch gleich kehrt die Besinnung zurück,
                ich will hinaufstürzen und sehen, was noch zu retten ist. Da fängt oben die Treppe
-               bereits an zu brennen, so daß es unmöglich ist, hindurchzukommen; <pb ed="print" facs="#facs_91" n="8" xml:id="pb_83"/> dazu erhebt sich ein ohrenbetäubender Lärm, ein furcht
+               bereits an zu brennen, so daß es unmöglich ist, hindurchzukommen; <pb ed="print" ed="print" facs="#facs_91"
+                  n="8" xml:id="pb_83"/> dazu erhebt sich ein ohrenbetäubender Lärm, ein furcht
                bares Geschrei aus dem Innern des Theaters. </p>
-            <p change="#d2e99" xml:id="p_40.d2e1447">Sekunden waren erst vergangen und schon fangen die Vorhänge zum Haupteingang des
+            <p>Sekunden waren erst vergangen und schon fangen die Vorhänge zum Haupteingang des
                Parterre von oben an zu brennen — da endlich stürzten die Zuschauer aus dem Parterre
                heraus, entgeistert, verzweifelt, schreiend und wie verrückt sich gebärdend. Einen
                Moment bleibe ich auf der untersten Stufe stehen, um Übersicht zu behalten und um in
@@ -2115,49 +2260,51 @@
                wird so dick, daß ich kaum mehr atmen kann, und gerade, als ich nun hineindringen
                will, saust vor mir im Innern der Rest des bereits verkohlten Balkons nebst unserem
                klirrenden Kaffeegeschirr herunter. Nie werde ich den Ton vergessen. </p>
-            <p change="#d2e99" xml:id="p_41.d2e1451">Ein Blick ins Innere zeigt ein ungeheures Flammenmeer, das in dem vollständig
+            <p>Ein Blick ins Innere zeigt ein ungeheures Flammenmeer, das in dem vollständig
                ausgetrockneten Gebälk nur zu gute Nahrung fand und aus dem nichts mehr zu retten
                war. Wer sich jetzt noch im Innern befand, war in dieser Hölle verloren. </p>
-            <p change="#d2e99" xml:id="p_42.d2e1454">Da hört man von rechts oben durchdringendes Geschrei; aber die riesigen Flammen
+            <p>Da hört man von rechts oben durchdringendes Geschrei; aber die riesigen Flammen
                ließen nichts unter scheiden, und in großem Bogen zischt eine Kiste mit unterwegs
                explodierenden Filmen herunter; noch einmal versuche ich mit dem Blick nach oben
                durchzudringen, da stürzt mit gewaltigem Getöse die ganze Seitenbrüstung herab:
                beendet und verstummt sind die schrecklichen Leiden der Armen, die sich nicht mehr
                hatten retten können. </p>
-            <p change="#d2e99" xml:id="p_43.d2e1457">Und nun mußte auch ich hinaus; zu retten war nichts mehr, und mir drohten die Sinne
-               zu schwinden. Ich taste mich nach dem Ausgang, ich stürze auf die <pb ed="print" facs="#facs_92" n="84" xml:id="pb_84"/> Straße und sehe, wie das ganze Dach eine einzige
+            <p>Und nun mußte auch ich hinaus; zu retten war nichts mehr, und mir drohten die Sinne
+               zu schwinden. Ich taste mich nach dem Ausgang, ich stürze auf die <pb ed="print" ed="print" facs="#facs_92"
+                  n="84" xml:id="pb_84"/> Straße und sehe, wie das ganze Dach eine einzige
                himmelhohe Flamme ist, die in magischem, rötlichem Licht die entsetzten Gesichter
                Hunderter von Leuten bescheint, die draußen schreiend und unter heftigen Gebärden
                herum rennen. Durch den Garten lief ich nun von hinten nach der Bühne, wo mit lautem
                Knall jetzt die Fensterscheiben springen. Die Tür ist offen, noch brennt sie nicht.
                Ein Blick ins Innere zeigt, daß dort erst die Decke brennt und niemand mehr anwesend
                ist, nur einige Instrumente liegen an der Wand. </p>
-            <p change="#d2e99" xml:id="p_44.d2e1462">Jetzt aber verließ mich die Nervenkraft; ich lehnte, kaum 10 in entfernt, mich an die
+            <p>Jetzt aber verließ mich die Nervenkraft; ich lehnte, kaum 10 in entfernt, mich an die
                Gartenmauer, und mit halbgeschlossenen Augen betrachtete ich diese Riesenfackel.
                Während Schlag auf Schlag die brennenden Balken, dann ganze Teile des Daches
                einstürzten und jedesmal haushohe Funkengarben auslösten, wurde mir allmählich klar,
                daß ich doch nur durch einen Zufall selbst dem Feuertode entronnen war. Wie wäre es
                geworden, wenn mich die „Musik" nicht so nervös gemacht hätte?! und schaudernd wandte
                ich mich der Richtung zum Hotel zu. </p>
-            <p change="#d2e99" xml:id="p_45.d2e1465">Am Ausgang des Gärtchens nach der Straße war ein furchtbares Gedränge von gaffendem,
+            <p>Am Ausgang des Gärtchens nach der Straße war ein furchtbares Gedränge von gaffendem,
                entgeistertem Volk. Meine Uniform schaffte mir Durchgang. Kurz vor dem Hotel traf ich
                meinen Begleiter. Stumm drückten wir uns die Hände. — </p>
-            <p change="#d2e99" xml:id="p_46.d2e1468">Da fällt mir etwas auf der Straße auf, ich gehe hin und sehe, wie sechs Araber eine
+            <p>Da fällt mir etwas auf der Straße auf, ich gehe hin und sehe, wie sechs Araber eine
                uralte Feuerspritze mit Handdruckbetrieb, doch ohne Schläuche und auf Holz rädern
                mühsam vorwärtsziehen. Ich wünschte ihnen guten Erfolg für den Fall, daß sie vor
-               Beendigung des Brandes an die Brandstelle gelangen sollten, und un- <pb ed="print" facs="#facs_93" n="85" xml:id="pb_85"/> willkürlich sah ich im Geist einen
+               Beendigung des Brandes an die Brandstelle gelangen sollten, und un- <pb ed="print" ed="print"
+                  facs="#facs_93" n="85" xml:id="pb_85"/> willkürlich sah ich im Geist einen
                Berliner Automobil- Feuerlöschzug schnell und sicher durch das Abendgetriebe des
                Potsdamer Platzes eilen. </p>
-            <p change="#d2e99" xml:id="p_47.d2e1474">Am nächsten Morgen ging ich vor Abfahrt meines Zuges bei Sonnenaufgang nochmals an
+            <p>Am nächsten Morgen ging ich vor Abfahrt meines Zuges bei Sonnenaufgang nochmals an
                die Brandstelle. Nur wenige Menschen waren da, zum Teil mit Auf räumen beschäftigt,
                einige weinten heftig, anscheinend um Angehörige. Ich erfuhr, daß im ganzen vier
                Personen verbrannt wären, darunter der Darsteller selbst. Das Kino war vollständig
                bis auf die stehengebliebenen Grundmauern ausgebrannt. Der Anblick erinnerte mich an
-               eine große leergebrannte Scheune aus dem Polenfeld zug im <date change="#d2e99" xml:id="date_6.d2e1476">April 1915</date>,
-               als wir mit dem Generalkommando in <placeName change="#d2e99" xml:id="placeName_36.d2e1479">Rybno</placeName> einzogen, das die
+               eine große leergebrannte Scheune aus dem Polenfeld zug im <date>April 1915</date>,
+               als wir mit dem Generalkommando in <placeName>Rybno</placeName> einzogen, das die
                Russen zur Begrüßung wenige Stunden vorher in Brand geschossen hatten.</p>
          </div>
-         <div change="#d2e99" xml:id="div_20.d2e1484">
+         <div>
             <head xml:id="head_20">Die Fahrt in das Tal des Jarmuk und quer durch die Arabische
                Wüste, Krankheit und Rückkehr.</head>
             <p xml:id="p_31">Noch stand ich ganz unter dem Einfluß des letzten Abends, als sich am
@@ -2167,7 +2314,7 @@
                wohlbekannt, die Fahrt verlief planmäßig. Ein schwüler, drückend heißer
                Schirokko-Abend war es, als ich auf dem Bahnhof „Makarin" ausstieg. Als der Zug in
                der Richtung Jerusalem weitergefahren, versuchte ich mich auf dieser Station, die den
-               Ausgangspunkt <pb ed="print" facs="#facs_94" n="86" xml:id="pb_86"/> für die Arbeiten der
+               Ausgangspunkt <pb ed="print" ed="print" facs="#facs_94" n="86" xml:id="pb_86"/> für die Arbeiten der
                nächsten Tage bilden sollte, etwas häuslicher einzurichten. Dem Vorsteher war ich
                besonders empfohlen worden, und er räumte mir sein „bestes" Zimmer ein. Da dieses
                aber bereits sehr viele mir nicht gerade sehr angenehme Mitbewohner, wie Mäuse —
@@ -2187,7 +2334,7 @@
                Gendarmen auf den Weg. Ein ziemlich schwieriges Kraxeln war es, doch war die Arbeit
                von schönem Erfolge belohnt, und ich fand die brennbaren Steine. Von 8 Uhr früh an
                war bis nachmittag jede Arbeit ausgeschlossen. Schnell nahm ich früh unter üppig
-               dicht am Ufer blühenden und <pb ed="print" facs="#facs_95" n="87" xml:id="pb_87"/> wuchernden
+               dicht am Ufer blühenden und <pb ed="print" ed="print" facs="#facs_95" n="87" xml:id="pb_87"/> wuchernden
                Oleandern bei 62° (ü ein Bad und bereitete mir im schattigen Flur der Station eine
                Art Hängematte. Auch der nächste Tag brachte keine Abkühlung, doch konnte ich meine
                Arbeiten schon beendend Der Millionenreichtum dieser Gegend lag so offensichtlich
@@ -2206,7 +2353,8 @@
                wurde, und dann war ich natürlich schon des Standes wegen immer vorn und wagte mich
                sogar des öfteren seitwärts auf kleine Nebenerkundungen heraus. Mein Tier war in
                gutem Zustand und legte im Trab oft ein Zeitmaß von etwa 30 Stundenkilometern zurück.
-               Nachts wurde geritten, tags unter Sonnenzelten geruht. <pb ed="print" facs="#facs_96" n="88" xml:id="pb_88"/> Ohne wesentliche Störung verlief die ziemlich eintönige Reise. Am
+               Nachts wurde geritten, tags unter Sonnenzelten geruht. <pb ed="print" ed="print" facs="#facs_96" n="88"
+                  xml:id="pb_88"/> Ohne wesentliche Störung verlief die ziemlich eintönige Reise. Am
                ersten Tage lagerten wir bei den sehr sehenswerten alten Ruinen von Arara, nachdem
                wir das mir aus den Reiseabenteuern von Karl May bekannte große, dicht nördlich davon
                gelegene Salzgebiet bei Chel- Mük (Salzstadt) ohne Unfall überwunden hatten. Die
@@ -2225,7 +2373,7 @@
                unterwegs gesammelten Material fuhr ich nun im nächsten Postzug über Damaskus und die
                beiden Libanons nach Beirut, wohin ich auch die im Jarmuktal gefundenen brennbaren
                Steine geschickt hatte, um hier weitere Untersuchungen vorzunehmen. In acht Tagen war
-               ich fertig und froh, von hier <pb ed="print" facs="#facs_97" n="89" xml:id="pb_89"/>
+               ich fertig und froh, von hier <pb ed="print" ed="print" facs="#facs_97" n="89" xml:id="pb_89"/>
                fortzukommen, denn die feuchte Hitze ging auch nachts nie unter 42° 0 herunter — seit
                dreißig Jahren war es nie so heiß gewesen. Jetzt wollte ich nur noch die inzwischen
                bei Damaskus nach meinen Angaben gebaute Fabrik in Betrieb setzen und dann nach dem
@@ -2241,10 +2389,10 @@
                denn unser Arzt stellte durch die Blutuntersuchung fest, daß ich weder
                Nierenentzündung noch Rückfallfieber, sondern Ns- laria ti-opioa gehabt hatte und
                noch hatte. 38 Pfund hatte ich abgenommen und fühlte mich daher recht elend. So wurde
-               ich denn mit dem nächsten nach Norden gehenden Transport am <date change="#d2e99" xml:id="date_7.d2e1499">21. August</date> als krank nach
-               Konstantinopel geschickt, und von hier nach längerer Beobachtung am <date change="#d2e99" xml:id="date_8.d2e1503">5. September</date> mit
+               ich denn mit dem nächsten nach Norden gehenden Transport am <date>21. August</date> als krank nach
+               Konstantinopel geschickt, und von hier nach längerer Beobachtung am <date>5. September</date> mit
                dem Balkanzug zu einer längeren Kur nach Deutschland beordert. Dort wurde ich nach
-               wieder-<pb ed="print" facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
+               wieder-<pb ed="print" ed="print" facs="#facs_98" n="90" xml:id="pb_90"/>holten Rückfällen als nicht mehr tropendienstfähig und zunächst nur
                garnisondienstfähig meinem Ersatztruppen teil Berlin überwiesen. Schwer, recht schwer
                war mir der Abschied vom Tscham Alan geworden. Ich hatte eine teilweise schwere, doch
                aber so sehr ereignisreiche Zeit hinter mir, wie sie selten jemand geboten wird. Wer
@@ -2263,7 +2411,7 @@
                Pilgerfahrten nach dem Orient. Und gleichwohl wandelt niemand ungestraft unter
                Palmen. Eine Reife im Morgenland, vor allem im Inneren, ist eher alles andere als
                eine Vergnügungsreise, besonders — im Krieg. Rund 14 000 km habe ich im ganzen, teils
-               mit der Bahn, teils im Auto, teils zu <pb ed="print" facs="#facs_99" n="91" xml:id="pb_91"/>
+               mit der Bahn, teils im Auto, teils zu <pb ed="print" ed="print" facs="#facs_99" n="91" xml:id="pb_91"/>
                Pferde, auf Kamel oder zu Fuß, bei den in diesem Büchlein beschriebenen
                Erkundungsreisen in etwa acht Monaten zurückgelegt und wünsche jedem meiner Leser,
                daß ihm Ähnliches bald vergönnt sein möge — bald, wenn der Friede „ausgebrochen” sein
@@ -2271,8 +2419,8 @@
                europäischen Kultur ähnliche Zustände geschaffen sein werden.</p>
          </div>
       </body>
-      <back change="#d2e99" xml:id="back_1.d2e1513">
-         <div change="#d2e99" xml:id="div_21.d2e1515">
+      <back>
+         <div>
             <p xml:id="p_33">Gedruckt in der Königlichen Hofbuchdruckerei von E. S. Mittler 6c Sohn,
                ’ Berlin 8V5K8, Kochslraße L8-71.</p>
             <p xml:id="p_34">Verlag von E. S. Mittler 6c Sohn, Königl. Hofbuchhandlung &gt; &gt;
@@ -2301,11 +2449,12 @@
                geschrieben. Bilder ei gi eifendstcr Tragit wechseln mit de. Schilderung von
                Ereignissen voll Hoher soldatischer Schönheit ab. Hamburg. Corrispondtnt,</p>
             <p xml:id="p_37">Zu: Wrobel, Acht Kriegsmonate in d. asiat. Türkei</p>
-            <quote change="#d2e99" xml:id="quote_1.d2e1533">
+            <quote>
                <p xml:id="p_38">3Mgs!&lt;U^</p>
             </quote>
             <p xml:id="p_39">NZsiA</p>
-            <p xml:id="p_40">Übersichtskarte. naiai &gt; en <pb ed="print" facs="#facs_100" n="1" xml:id="pb_92"/> ’7SW000</p>
+            <p xml:id="p_40">Übersichtskarte. naiai &gt; en <pb ed="print" ed="print" facs="#facs_100" n="1"
+                  xml:id="pb_92"/> ’7SW000</p>
             <p xml:id="p_41">Dom Verfasser zurllckgel.’gte Strecke» Eisenbahnen.</p>
             <p xml:id="p_42">’</p>
             <p xml:id="p_43">«riegztasebiicher voll MitkSWsern ^ verlsg von k. 5. Mittler 5 Sohn,
