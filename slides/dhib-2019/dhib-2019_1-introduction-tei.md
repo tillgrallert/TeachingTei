@@ -26,6 +26,14 @@ When we talk about text encoding, what do we mean by a **text**? What is in a te
 
 ## What is a text?
 
+![Ḳānūn-i Esāsī, 1876](../images/constitution-ottoman.png)
+
+## What is a text?
+
+![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](../images/constitution-salname2.png)
+
+## What is a text?
+
 ![Ḳānūn-i Esāsī in *al-Bashīr*, 3 August 1908](../images/constitution-bashir.png)
 
 ## What is a text?
@@ -42,13 +50,11 @@ When we talk about text encoding, what do we mean by a **text**? What is in a te
 
 ## What is a text?
 
-![Ḳānūn-i Esāsī, 1876](../images/constitution-ottoman.png)
-
-<!-- # What is a text? -->
+![Ḳānūn-i Esāsī in oXygen (text view)](../images/constitution_beirut-1-xml.png)
 
 ## What is a text?
 
-![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](../images/constitution-salname1.png)
+![Ḳānūn-i Esāsī in oXygen (author view)](../images/constitution_beirut-1-xml-author.png)
 
 ## What is a text?
 
