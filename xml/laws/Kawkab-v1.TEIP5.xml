@@ -144,17 +144,17 @@
    </teiHeader>
    <facsimile change="#d2e309" xml:id="facsimile_1.d2e314">
       <surface xml:id="facs_i1_1">
-         <graphic url="../images/kawkab/dds-54628_Page_08_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_1_source"/>
+         <graphic url="../../images/kawkab/dds-54628_Page_08_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_1_source"/>
          <zone ulx="2835" uly="295" lrx="3178" lry="614" xml:id="facs_i1_1_z1"/>
       </surface>
       <surface xml:id="facs_i1_2">
-         <graphic url="../images/kawkab/dds-54628_Page_07_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_2_source"/>
+         <graphic url="../../images/kawkab/dds-54628_Page_07_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_2_source"/>
       </surface>
       <surface xml:id="facs_i1_3">
-         <graphic url="../images/kawkab/dds-54628_Page_06_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_3_source"/>
+         <graphic url="../../images/kawkab/dds-54628_Page_06_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_3_source"/>
       </surface>
       <surface xml:id="facs_i1_4">
-         <graphic url="../images/kawkab/dds-54628_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_4_source"/>
+         <graphic url="../../images/kawkab/dds-54628_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_4_source"/>
       </surface>
    </facsimile>
    <text n="1" type="volume" change="#d2e309 #d2e320" xml:id="text_1.d2e339" xml:lang="">

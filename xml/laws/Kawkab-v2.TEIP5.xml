@@ -202,29 +202,29 @@
    </teiHeader>
    <facsimile change="#d2e501" xml:id="facsimile_1.d2e506">
       <surface xml:id="facs_v2-i53_1">
-         <graphic url="../images/kawkab/dds-54634_Page_07_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_1_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_07_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_1_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_2">
-         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i53_2_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_06_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i53_2_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_3">
-         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_3_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_06_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_3_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_4">
-         <graphic url="../images/kawkab/dds-54634_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i53_4_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i53_4_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_1">
-         <graphic url="../images/kawkab/dds-54634_Page_11_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i55_1_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_11_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i55_1_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_2">
-         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_2_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_10_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_2_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_3">
-         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i55_3_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_10_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i55_3_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_4">
-         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_4_source"/>
-         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg" mimeType="image/jpeg" xml:id="facs_v2-i55_4_web"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_4_source"/>
+         <graphic url="../../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg" mimeType="image/jpeg" xml:id="facs_v2-i55_4_web"/>
          <zone ulx="71" uly="33" lrx="1344" lry="270" xml:id="facs_v2-i55_4_z1" facs="#facs_v2-i55_4_web">
          </zone>
          <zone ulx="59" uly="253" lrx="326" lry="964" xml:id="facs_v2-i55_4_z2" facs="#facs_v2-i55_4_web"/>

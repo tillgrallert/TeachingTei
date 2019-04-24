@@ -121,7 +121,7 @@
     </teiHeader>
     <facsimile change="#d2e288" xml:id="facsimile_1.d2e293">
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_source"/>
+            <graphic url="../../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_source"/>
             <zone lrx="2348" lry="1520" ulx="2045" uly="1159" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-1"/>
             <zone xml:id="zone.sck_ntg_15" ulx="1810" uly="278" lrx="2354" lry="926"/>
             <zone xml:id="zone.kxs_ltg_15" ulx="784" uly="289" lrx="1718" lry="928"/>
@@ -133,7 +133,7 @@
             <zone ulx="65" uly="97" lrx="2400" lry="976" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2"/>
         </surface>
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2_source"/>
+            <graphic url="../../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2_source"/>
         </surface>
     </facsimile>
     <text xml:lang="ar" n="35" type="vol" change="#d2e288" xml:id="text_1.d2e325">

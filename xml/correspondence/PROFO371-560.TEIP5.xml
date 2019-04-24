@@ -51,13 +51,13 @@
    </teiHeader>
    <facsimile change="#d2e98" xml:id="facsimile_1.d2e103">
       <surface xml:id="facs_1">
-         <graphic url="../images/pro-fo/371-560/DSCN7960_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_1.d2e107"/>
+         <graphic url="../../images/pro-fo/371-560/DSCN7960_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_1.d2e107"/>
          <zone xml:id="facs_1_z1" ulx="3" uly="129" lrx="349" lry="222"/>        <zone ulx="91" uly="232" lrx="587" lry="296" change="#d2e98" xml:id="zone_2.d2e111"/>      </surface>
       <surface xml:id="facs_2">
-         <graphic url="../images/pro-fo/371-560/DSCN7961_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_2.d2e116"/>
+         <graphic url="../../images/pro-fo/371-560/DSCN7961_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_2.d2e116"/>
       </surface>
       <surface xml:id="facs_3">
-         <graphic url="../images/pro-fo/371-560/DSCN7962_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_3.d2e121"/>
+         <graphic url="../../images/pro-fo/371-560/DSCN7962_150dpi.jpg" mimeType="image/jpeg" change="#d2e98" xml:id="graphic_3.d2e121"/>
       </surface>
    </facsimile>
    <text change="#d2e98 #d2e109" xml:id="text_1.d2e125" xml:lang="">

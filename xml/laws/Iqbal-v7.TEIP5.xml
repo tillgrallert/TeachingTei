@@ -152,7 +152,7 @@
    <!-- providing links to the image files either remote or local -->
    <facsimile change="#d2e309" xml:id="facsimile_1.d2e316">
       <surface xml:id="facs-1-1">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-1_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-1_source"/>
          <zone lrx="3596" lry="459" ulx="261" uly="258" xml:id="facs-1-1-z-1"/>
          <zone lrx="3677" lry="1678" ulx="159" uly="431" xml:id="facs-1-1-z-2"/>
          <zone lrx="3628" lry="2016" ulx="195" uly="1635" xml:id="facs-1-1-z-3"/>
@@ -161,25 +161,25 @@
          <zone lrx="1093" lry="1670" ulx="167" uly="439" xml:id="facs-1-1-z-6"/>
       </surface>
       <surface xml:id="facs-1-2">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-2_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-2_source"/>
       </surface>
       <surface xml:id="facs-1-3">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-3_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-3_source"/>
       </surface>
       <surface xml:id="facs-1-4">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-4_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-4_source"/>
       </surface>
       <surface xml:id="facs-1-5">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-5_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-5_source"/>
       </surface>
       <surface xml:id="facs-1-6">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-6_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-6_source"/>
       </surface>
       <surface xml:id="facs-1-7">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-7_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-7_source"/>
       </surface>
       <surface xml:id="facs-1-8">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-8_source"/>
+         <graphic url="../../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-8_source"/>
       </surface>
 
    </facsimile>

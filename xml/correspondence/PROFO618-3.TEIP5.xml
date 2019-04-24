@@ -165,10 +165,10 @@
         </teiHeader>
         <facsimile change="#d2e248" xml:id="facsimile_1.d2e333">
             <surface xml:id="facs_1">
-                <graphic url="../images/pro-fo/618-3/DSCN9874_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_1.d2e337"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9874_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_1.d2e337"/>
             </surface>
             <surface xml:id="facs_2">
-                <graphic url="../images/pro-fo/618-3/DSCN9875_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_2.d2e342"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9875_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_2.d2e342"/>
                 <zone lrx="820" lry="1182" ulx="58" uly="46" xml:id="facs_2_z1"/>
                 <zone lrx="1535" lry="1158" ulx="1034" uly="65" xml:id="facs_2_z2"/>
             </surface>
@@ -293,16 +293,16 @@
         </teiHeader>
         <facsimile change="#d2e248" xml:id="facsimile_2.d2e705">
             <surface xml:id="facs_3">
-                <graphic url="../images/pro-fo/618-3/DSCN9862_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_3.d2e709"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9862_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_3.d2e709"/>
             </surface>
             <surface xml:id="facs_4">
-                <graphic url="../images/pro-fo/618-3/DSCN9863_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_4.d2e714"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9863_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_4.d2e714"/>
             </surface>
             <surface xml:id="facs_5">
-                <graphic url="../images/pro-fo/618-3/DSCN9864_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_5.d2e719"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9864_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_5.d2e719"/>
             </surface>
             <surface xml:id="facs_6">
-                <graphic url="../images/pro-fo/618-3/DSCN9865_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_6.d2e724"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9865_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_6.d2e724"/>
             </surface>
         </facsimile>
         <text change="#d2e248 #d2e259" xml:id="text_2.d2e728" xml:lang="en">
@@ -437,16 +437,16 @@
         </teiHeader>
         <facsimile change="#d2e248" xml:id="facsimile_3.d2e983">
             <surface xml:id="facs_7">
-                <graphic url="../images/pro-fo/618-3/DSCN9840_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_7.d2e987"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9840_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_7.d2e987"/>
             </surface>
             <surface xml:id="facs_8">
-                <graphic url="../images/pro-fo/618-3/DSCN9841_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_8.d2e992"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9841_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_8.d2e992"/>
             </surface>
             <surface xml:id="facs_9">
-                <graphic url="../images/pro-fo/618-3/DSCN9842_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_9.d2e997"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9842_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_9.d2e997"/>
             </surface>
             <surface xml:id="facs_10">
-                <graphic url="../images/pro-fo/618-3/DSCN9843_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_10.d2e1002"/>
+                <graphic url="../../images/pro-fo/618-3/DSCN9843_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_10.d2e1002"/>
             </surface>
         </facsimile>
         <text change="#d2e248 #d2e259" xml:id="text_3.d2e1006" xml:lang="en">
