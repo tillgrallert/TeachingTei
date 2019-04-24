@@ -8,11 +8,11 @@ author: Till Grallert
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # What is the XSL family?
 
-- *XPath*: a language for expressing paths through XML trees 
+- *XPath*: a language for expressing paths through XML trees
 - *XSLT*: a programming language for transforming XML
 - *XSL FO*: an XML vocabulary for describing formatted pages (we won't cover this)
 
@@ -21,7 +21,7 @@ Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdo
 The XSLT language is
 
 - expressed in XML
-- uses namespaces to distinguish output from instructions 
+- uses namespaces to distinguish output from instructions
 - purely functional
 - reads and writes XML trees
 
@@ -69,7 +69,7 @@ Take this:
         <p>Cook the pasta and mix with the cheese</p>
     </div>
 
-and make this: 
+and make this:
 
     <html>
         <h1>34: Pasta for beginners</h1>
@@ -124,9 +124,9 @@ and make this:
 
 Our examples and exercises all start with two important attributes on `<stylesheet>`:
 
-    <xsl:stylesheet 
-        xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-        xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
+    <xsl:stylesheet
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        xpath-default-namespace="http://www.tei-c.org/ns/1.0"
         version="2.0">
 
 This indicates that
@@ -240,109 +240,109 @@ XPath is the basis of most other XML querying and transformation languages.
         </div>
     </body>
 
-# Example XPath expressions 
+# Example XPath expressions
 
-![XPathExercise 01](images/XPathExercise01.png)
+![XPathExercise 01](../images/XPathExercise01.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 02](images/XPathExercise02.png)
+![XPathExercise 02](../images/XPathExercise02.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 03](images/XPathExercise03.png)
+![XPathExercise 03](../images/XPathExercise03.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 04](images/XPathExercise04.png)
+![XPathExercise 04](../images/XPathExercise04.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 05](images/XPathExercise05.png)
+![XPathExercise 05](../images/XPathExercise05.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 06](images/XPathExercise06.png)
+![XPathExercise 06](../images/XPathExercise06.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 07](images/XPathExercise07.png)
+![XPathExercise 07](../images/XPathExercise07.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 08](images/XPathExercise08.png)
+![XPathExercise 08](../images/XPathExercise08.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 09](images/XPathExercise09.png)
+![XPathExercise 09](../images/XPathExercise09.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 10](images/XPathExercise10.png)
+![XPathExercise 10](../images/XPathExercise10.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 11](images/XPathExercise11.png)
+![XPathExercise 11](../images/XPathExercise11.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 12](images/XPathExercise12.png)
+![XPathExercise 12](../images/XPathExercise12.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 13](images/XPathExercise13.png)
+![XPathExercise 13](../images/XPathExercise13.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 14](images/XPathExercise14.png)
+![XPathExercise 14](../images/XPathExercise14.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 15](images/XPathExercise15.png)
+![XPathExercise 15](../images/XPathExercise15.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 16](images/XPathExercise16.png)
+![XPathExercise 16](../images/XPathExercise16.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 17](images/XPathExercise17.png)
+![XPathExercise 17](../images/XPathExercise17.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 18](images/XPathExercise18.png)
+![XPathExercise 18](../images/XPathExercise18.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 19](images/XPathExercise19.png)
+![XPathExercise 19](../images/XPathExercise19.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 20](images/XPathExercise20.png)
+![XPathExercise 20](../images/XPathExercise20.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 21](images/XPathExercise21.png)
+![XPathExercise 21](../images/XPathExercise21.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 22](images/XPathExercise22.png)
+![XPathExercise 22](../images/XPathExercise22.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 23](images/XPathExercise23.png)
+![XPathExercise 23](../images/XPathExercise23.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 24](images/XPathExercise24.png)
+![XPathExercise 24](../images/XPathExercise24.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 25](images/XPathExercise25.png)
+![XPathExercise 25](../images/XPathExercise25.png)
 
---------------------------- 
+---------------------------
 
-![XPathExercise 26](images/XPathExercise26.png)
+![XPathExercise 26](../images/XPathExercise26.png)
 
 # XPath: More about paths
 
@@ -355,7 +355,7 @@ XPath is the basis of most other XML querying and transformation languages.
 # XPath: axes (1)
 
 - `self::` Contains the current node
-- `attribute::` Contains all attributes of the current node 
+- `attribute::` Contains all attributes of the current node
 - `parent::` Contains the parent of the current node
 - `ancestor::` Contains all ancestors (parent, grandparent, etc.) of the current node
 - `ancestor-or-self::` Contains the current node plus all its ancestors (parent, grandparent, etc.)
@@ -366,20 +366,20 @@ XPath is the basis of most other XML querying and transformation languages.
 # XPath: axes (2)
 
 - `following::` Contains everything in the document after the closing tag of the current node
-- `following-sibling::` Contains all siblings after the current node 
+- `following-sibling::` Contains all siblings after the current node
 - `preceding::` Contains everything in the document that is before the starting tag of the current node
-- `preceding-sibling::` Contains all siblings before the current node 
+- `preceding-sibling::` Contains all siblings before the current node
 
 # Example: XPath axes
 
 - `ancestor::lg` = all `<lg>` ancestors
-- `ancestor-or-self::div` = all `<div>` ancestors or current 
+- `ancestor-or-self::div` = all `<div>` ancestors or current
 - `attribute::n` = `n` attribute of current node
-- `child::l` = `<l>` elements directly under current node 
-- `descendant::l` = `<l>` elements anywhere under current node 
-- `descendant-or-self::div` = all `<div>` children or current 
-- `following-sibling::l[1]` = next `<l>` element at this level 
-- `preceding-sibling::l[1]` = previous `<l>` element at this level 
+- `child::l` = `<l>` elements directly under current node
+- `descendant::l` = `<l>` elements anywhere under current node
+- `descendant-or-self::div` = all `<div>` children or current
+- `following-sibling::l[1]` = next `<l>` element at this level
+- `preceding-sibling::l[1]` = previous `<l>` element at this level
 - `self::head` = current `<head>` element
 
 # XPath: predicates (conditions)
@@ -393,7 +393,7 @@ XPath is the basis of most other XML querying and transformation languages.
 
 # XPath: abbreviated syntax
 
-- nothing is the same as `child::`, so `lg` is short for `child::lg` 
+- nothing is the same as `child::`, so `lg` is short for `child::lg`
 - `@` is the same as `attribute::`, so `@type` is short for `attribute::type`
 - `.` is the same as `self::`, so `./head` is short for `self::node()/child::head`
 - `..` is the same as `parent::`, so `../lg` is short for `parent::node()/child::lg`
@@ -401,7 +401,7 @@ XPath is the basis of most other XML querying and transformation languages.
 
 # XSL example: context-dependent matches
 
-Compare 
+Compare
 
     <xsl:template match="head"> .... </xsl:template>
 
@@ -426,7 +426,7 @@ There is a `@priority` attribute on `<template>`; the **higher** the value, the 
     <xsl:template match="name" priority="1">
         <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template match="person/name" priority="2"> 
+    <xsl:template match="person/name" priority="2">
         A name
     </xsl:template>
 
@@ -459,7 +459,7 @@ XSLT stylesheets can be characterized as being of two types:
 
 # XSL: attribute value template (1)
 
-How can we turn this: 
+How can we turn this:
 
     <ref target="http://www.oucs.ox.ac.uk/">OUCS</ref>
 
@@ -491,7 +491,7 @@ Use `{}` to indicate that the expression must be **evaluated**:
         </a>
     </xsl:template>
 
-Use `<xsl:attribute>` 
+Use `<xsl:attribute>`
 
     <xsl:template match="ref">
         <a>
@@ -579,9 +579,9 @@ And we are going to put this knowledge to use on our XML files (exited gasps as 
 
 - [TEI boilerplate](http://dcl.slis.indiana.edu/teibp/) at [http://teiboilerplate.org/](http://teiboilerplate.org/): a leight-weight solution for publishing styled TEI P5 content directly in modern web browsers (the implementation uses XSL which is processed by the browser).
 - [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient) at [http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient): a web interface to the XSL stylesheets and its profiles
-    + generate schemas using the same tools as Roma 
-    + convert documentation to HTML, ePub, and DOCX 
-    + convert between TEI XML and Word DOCX 
-    + perform all the ODD tasks using web services 
+    + generate schemas using the same tools as Roma
+    + convert documentation to HTML, ePub, and DOCX
+    + convert between TEI XML and Word DOCX
+    + perform all the ODD tasks using web services
     + chain sets of transformations together
 

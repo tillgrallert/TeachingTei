@@ -10,7 +10,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs xd xi dc opf html"
-    version="2.0">
+    version="3.0">
     
     <!-- this stylesheet contains various templates used by other stylesheets -->
     
@@ -32,5 +32,20 @@
     
     <!-- strip out the particDesc when generating flat files -->
     <xsl:template match="particDesc"/>
+    
+    <!-- identify the author of the change by means of a @xml:id -->
+    <xsl:param name="p_editor">
+        <tei:respStmt xml:lang="en">
+            <tei:resp>TEI edition</tei:resp>
+            <tei:persName xml:id="pers_TG"><tei:forename>Till</tei:forename> <tei:surname>Grallert</tei:surname></tei:persName>
+        </tei:respStmt>
+    </xsl:param>
+    <xsl:param name="p_id-editor" select="$p_editor/descendant::tei:persName/@xml:id"/>
+    
+    <!-- toggle debugging (not available in all stylesheets) -->
+    <xsl:param name="p_verbose" select="false()"/>
+    
+    <!-- generate an id for the most recent change -->
+    <xsl:param name="p_id-change" select="generate-id(//tei:change[last()])"/>
     
 </xsl:stylesheet>

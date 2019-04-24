@@ -5,7 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     
-    <!-- this stylesheet extracts all <persName> elements from a TEI XML file and groups them into a <tagsDecl> element  -->
+    <!-- this stylesheet extracts all elements from a TEI XML file and groups them into a <tagsDecl> element  -->
     <xsl:output indent="yes" method="xml" omit-xml-declaration="no" encoding="UTF-8"/>
     
     <!-- copy everything -->
@@ -22,7 +22,7 @@
            <xsl:choose>
                <xsl:when test="not(child::tei:encodingDesc)">
                    <xsl:element name="encodingDesc">
-                       <xsl:call-template name="templTagsDecl"/>
+                       <xsl:call-template name="t_tagsDecl"/>
                    </xsl:element>
                </xsl:when>
                <xsl:otherwise>
@@ -37,17 +37,18 @@
         <xsl:copy>
                 <xsl:apply-templates select="@* | node()"/>
             <xsl:if test="not(child::tei:tagsDecl)">
-                <xsl:call-template name="templTagsDecl"/>
+                <xsl:call-template name="t_tagsDecl"/>
             </xsl:if>
         </xsl:copy>
     </xsl:template>
     
     <!-- generating the documentation of all used tags in a <tagsDecl> -->
-    <xsl:template name="templTagsDecl">
+    <xsl:template name="t_tagsDecl">
         <xsl:element name="tagsDecl">
             <xsl:element name="namespace">
                 <xsl:attribute name="name" select="'http://www.tei-c.org/ns/1.0'"/>
-                <xsl:for-each-group select="/descendant::tei:*" group-by="name()">
+                <!-- note that namespace prefixes are part of name() -->
+                <xsl:for-each-group select="/descendant::tei:*" group-by="if(matches(name(),'.+:.+$')) then(substring-after(name(),':')) else(name())">
                     <xsl:sort order="ascending" select="name()"/>
                     <xsl:element name="tagUsage">
                         <xsl:attribute name="gi" select="current-grouping-key()"/>
@@ -64,6 +65,7 @@
             <xsl:apply-templates select="@*"/>
             <xsl:element name="change">
                 <xsl:attribute name="when" select="format-date(current-date(),'[Y0001]-[M01]-[D01]')"/>
+                <xsl:attribute name="xml:lang" select="'en'"/>
                 <xsl:text>Added an automatically generated </xsl:text>
                 <xsl:element name="gi"><xsl:value-of select="'tagsDecl'"/></xsl:element>
                 <xsl:text>listing all TEI tags used in this file. The frequency of each tag is recoreded by means of an </xsl:text>

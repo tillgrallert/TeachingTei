@@ -14,11 +14,11 @@ Dates and location: 1-5 June 2015, 9-12 and 1:30 to 4:30 at MacLaurin D016
 
 Instructor: Till Grallert, OIB, <grallert@orient-institut.org>
 
-General information on the schedule: [http://dhsi.org/schedule.php](http://dhsi.org/schedule.php) 
+General information on the schedule: [http://dhsi.org/schedule.php](http://dhsi.org/schedule.php)
 
 Course material: [http://tinyurl.com/dhsi2015tei](http://tinyurl.com/dhsi2015tei); password "dhsiUvic2015tei" (due to some of the images being copyrighted). The PDF course pack is available at [http://goo.gl/6rSeFd](http://goo.gl/6rSeFd).
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS code](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS code](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
 # Goals:
 
@@ -35,7 +35,7 @@ You will also have encountered multilingual source material and transcriptions, 
 
 # Goals:
 
-... or, in less giberish terms, of 
+... or, in less giberish terms, of
 
 - data capture / recording in XML
 - data modelling following the TEI
@@ -46,21 +46,21 @@ You will also have encountered multilingual source material and transcriptions, 
 
 ... or, since a picture is worth more than a thousand words, as the saying goes, how to get from the paper copies in front of you ...
 
-![Image of *Kawkab America*](images/kawkab-img.jpg)
+![Image of *Kawkab America*](../images/kawkab-img.jpg)
 
 # Goals:
 
 ... to this ...
 
-![*Kawkab America* as TEI XML file in oXygen](images/kawkab-oxygen.png)
+![*Kawkab America* as TEI XML file in oXygen](../images/kawkab-oxygen.png)
 
 # Goals:
 
 ... and finally to that:
 
-![*Kawkab America* as website](images/kawkab-html.png)
+![*Kawkab America* as website](../images/kawkab-html.png)
 
-<!-- 
+<!--
 # Goals:
 
 You will also have seen four different early-twentieth century newspapers from Beirut--*al-Bashīr*, *al-Iqbāl*, *Lisān al-Ḥāl*, and *Thamarāt al-Funūn*--and their reaction to the Young Turk Revolution and the restoration of the Ottoman constitution in July 1908. In addition, you will have encountered three different Arabic translations of that very constitution.
@@ -72,7 +72,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
 
 - Day 1: Introducing the game of XML and TEI
 - Day 2: Data capture and organisation
-- Day 3: Retrieving and displaying your data 
+- Day 3: Retrieving and displaying your data
 - Day 4: Enriching your data with names and named entities
 - Day 5: Facsimile linking
 
@@ -94,7 +94,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
 
 ## 3 Morning Session, 9-12
 
-- Exercise 2b: 
+- Exercise 2b:
     + data entry / structural mark-up
     + produce *well-formed* XML
 - [Lecture 3: customisation / schemas](TeiDhsi-Session03-SchemaCustomization-Slidy.html)
@@ -117,7 +117,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
 
 ## 6 Afternoon Session, 1:30-4:30
 
-- Continue exercise from morning session: XSLT 
+- Continue exercise from morning session: XSLT
     + produce a toc
     + produce a HTML view of our XML files
 - Having a look at TEI Boilerplate
@@ -160,7 +160,7 @@ The schedule is preliminary and tentative and we'll adopt it to the needs and th
     + [TEI by Example](http://www.teibyexample.org/TBE.htm) at http://www.teibyexample.org/TBE.htm
     + the TEI mailing list, <TEI-L@LISTSERV.BROWN.EDU>
     + the [TEI wiki](http://wiki.tei-c.org/index.php) at http://wiki.tei-c.org/: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
-- Further resources provided by the TEI council and Oxford computing centre: 
+- Further resources provided by the TEI council and Oxford computing centre:
     + [ROMA](http://www.tei-c.org/Roma/) at [tei-c.org/Roma/](http://www.tei-c.org/Roma/): customising TEI schemas for XML validation
     + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
     + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.

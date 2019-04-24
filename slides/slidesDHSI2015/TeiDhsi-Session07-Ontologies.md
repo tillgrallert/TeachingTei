@@ -8,7 +8,7 @@ author: Till Grallert
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # General notes
 
@@ -26,7 +26,7 @@ Potentially, quite a lot...
     <person xml:id="VM1893">
         <persName xml:lang="ru">Владимир Владимирович Маяковский</persName>
         <persName xml:lang="fr">Wladimir Maïakowski</persName>
-        <birth when="1893-07-19">7 July (OS) 1893, 
+        <birth when="1893-07-19">7 July (OS) 1893,
             <placeName ref="#BGDT" xml:lang="en">
                 <settlement>Baghdati<settlement>, <country>Georgia<country>
             </placeName>
@@ -62,17 +62,17 @@ Some typical states for a person
 
 Some typical traits of a person
 
-- `<faith>`: faith, belief system, religion etc. of a person 
-- `<langKnowledge>`: linguistic knowledge of a person 
-- `<nationality>`: nationality (socio-politico status) 
+- `<faith>`: faith, belief system, religion etc. of a person
+- `<langKnowledge>`: linguistic knowledge of a person
+- `<nationality>`: nationality (socio-politico status)
 - `<sex>`: sex
 - `<socecStatus>`: socio-economic status
 
 Some typical traits of a place:
-    
+
 - `<climate>`: describes the climate
-- `<location>`: describes where a place is (see later) 
-- `<population>`: describes its population 
+- `<location>`: describes where a place is (see later)
+- `<population>`: describes its population
 - `<terrain>`: describes its terrain
 
 Some of these (e.g. sex) have normalised attributes, but mostly they contain free text descriptions.
@@ -153,7 +153,7 @@ Example:
 
 Organizations have names as well. These are any named collection of people regarded as a single unit. An `<orgName>` can point back to an `<org>` in the header.
 
-    <p>it is debated <date notAfter="1908-10-01">now</date> among ‘<orgName ref="#CUP">Young Turkey</orgName>’ adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity.</p>
+    <p>it is debated <date notAfter="1908-10-01">now</date> among '<orgName ref="#CUP">Young Turkey</orgName>' adherents whether it would be right to punish the officials who were led to bribery by the littleness of their pay &amp; its frequent irregularity.</p>
 
     <org xml:id="CUP">
         <!-- Information about the organization -->
@@ -167,22 +167,22 @@ Organizations have names as well. These are any named collection of people regar
         <placeName>Atlantis</placeName>
         <location>
             <offset>fifty leagues beyond</offset>
-            <placeName>Pillars of 
+            <placeName>Pillars of
                 <persName>Hercules</persName></placeName>
         </location>
     </place>
 
 # Personal relationships
 
-- The `<relation>` (relationship) element describes any kind of relationship or linkage amongst other entities. We distinguish 
-    + ‘mutual’ relationships (e.g. sibling) from 
+- The `<relation>` (relationship) element describes any kind of relationship or linkage amongst other entities. We distinguish
+    + 'mutual' relationships (e.g. sibling) from
     + non-mutual or directed relationships (e.g. parent-of ).
 
 - The following attributes are available:
     + `@name`: supplies a name for the kind of relationship of which this is an instance
     + `@active`: identifies the 'active' participants in a non-mutual relationship, or all the participants in a mutual one
     + `@mutual`: supplies a list of participants amongst all of whom the relationship holds equally
-    + `@passive`: identifies the ‘passive’ participants in a non-mutual relationship
+    + `@passive`: identifies the 'passive' participants in a non-mutual relationship
 
 # Example
 

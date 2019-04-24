@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" change="#d2e320" xml:lang="">
+   <teiHeader change="#d2e309 #d2e320" xml:id="teiHeader_1.d2e6" xml:lang="">
+      <fileDesc change="#d2e309 #d2e320" xml:id="fileDesc_1.d2e8" xml:lang="">
+         <titleStmt xml:lang="en" change="#d2e309" xml:id="titleStmt_1.d2e10">
+            <title change="#d2e309 #d2e320" xml:id="title_1.d2e12" xml:lang="en">Kawkab Amīrkā</title>
+            <title type="sub" change="#d2e309 #d2e320" xml:id="title_2.d2e15" xml:lang="en">Digital Edition</title>
+            <respStmt change="#d2e309 #d2e320" xml:id="respStmt_1.d2e18" xml:lang="en">
+               <resp change="#d2e309 #d2e320" xml:id="resp_1.d2e20" xml:lang="en">TEI version</resp>
+               <persName change="#d2e309 #d2e320" xml:id="persName_1.d2e23" xml:lang="en">Till Grallert</persName>
+            </respStmt>
+         </titleStmt>
+         <editionStmt change="#d2e309 #d2e320" xml:id="editionStmt_1.d2e28" xml:lang="">
+            <edition change="#d2e309 #d2e320" xml:id="edition_1.d2e30" xml:lang="">
+               <date when="2015-05-01" change="#d2e309 #d2e320" xml:id="date_1.d2e32" xml:lang="">1 May 2015</date>
+            </edition>
+            <respStmt change="#d2e309 #d2e320" xml:id="respStmt_2.d2e36" xml:lang="">
+               <resp change="#d2e309 #d2e320" xml:id="resp_2.d2e38" xml:lang="">Created the original TEI P5 XML file</resp>
+               <persName xml:id="pTG" change="#d2e320" xml:lang="">Till Grallert</persName>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt change="#d2e309 #d2e320" xml:id="publicationStmt_1.d2e46" xml:lang="">
+            <p change="#d2e309 #d2e320" xml:id="p_1.d2e48" xml:lang="">The digital text is freely available for re-use.</p>
+            <p change="#d2e309 #d2e320" xml:id="p_2.d2e51" xml:lang="">The image files are subject to the following copyright and provided by the Center for Research Libraries:</p>
+            <p change="#d2e309 #d2e320" xml:id="p_3.d2e54" xml:lang="">Materials digitized by the Center for Research Libraries are intended for the personal educational and research use of students, scholars, and other researchers of the CRL member community. Copyrighted images and texts are not to be reproduced, displayed, distributed, broadcast, or downloaded for other purposes without the expressed, written permission of the copyright owner.</p>
+         </publicationStmt>
+         <sourceDesc change="#d2e309 #d2e320" xml:id="sourceDesc_1.d2e58" xml:lang="">
+            <biblStruct change="#d2e309 #d2e320" xml:id="biblStruct_1.d2e60" xml:lang="">
+               <monogr change="#d2e309 #d2e320" xml:id="monogr_1.d2e62" xml:lang="">
+                  <title level="j" xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_3.d2e64">Kawkab Amīrkā</title>
+                  <title level="j" xml:lang="en" change="#d2e309" xml:id="title_4.d2e67">The Star of America</title>
+                  <title level="j" type="alternative" xml:lang="en" change="#d2e309" xml:id="title_5.d2e70">Kawkab America</title>
+                  <title level="j" type="sub" xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="title_6.d2e73">Jarīda siyāsiyya ʿilmiyya
+                     tijāriyya adabiyya</title>
+                  <editor xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="editor_1.d2e76"><persName change="#d2e309 #d2e320" xml:id="persName_3.d2e77" xml:lang="ar-Latn-x-ijmes"><addName type="title" change="#d2e309 #d2e320" xml:id="addName_1.d2e78" xml:lang="ar-Latn-x-ijmes">Dr.</addName>
+                        <forename change="#d2e309 #d2e320" xml:id="forename_1.d2e81" xml:lang="ar-Latn-x-ijmes">Ibrāhīm</forename>
+                        <surname change="#d2e309 #d2e320" xml:id="surname_1.d2e84" xml:lang="ar-Latn-x-ijmes">Arbīlī</surname></persName></editor>
+                  <editor xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="editor_2.d2e88"><persName change="#d2e309 #d2e320" xml:id="persName_4.d2e89" xml:lang="ar-Latn-x-ijmes"><forename change="#d2e309 #d2e320" xml:id="forename_2.d2e90" xml:lang="ar-Latn-x-ijmes">Najīb</forename>
+                        <forename change="#d2e309 #d2e320" xml:id="forename_3.d2e93" xml:lang="ar-Latn-x-ijmes">Yūsuf</forename>
+                        <surname change="#d2e309 #d2e320" xml:id="surname_2.d2e96" xml:lang="ar-Latn-x-ijmes">Arbīlī</surname></persName></editor>
+                  <imprint change="#d2e309 #d2e320" xml:id="imprint_1.d2e99" xml:lang="">
+                     <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="publisher_1.d2e101">al-Maṭbaʿat al-Sharqiyya</publisher>
+                     <pubPlace xml:lang="ar-Latn-x-ijmes" change="#d2e309" xml:id="pubPlace_1.d2e104">Niyū Yūrk</pubPlace>
+                     <publisher xml:lang="en" change="#d2e309" xml:id="publisher_2.d2e107">The Oriental Publishing House</publisher>
+                     <pubPlace xml:lang="en" change="#d2e309" xml:id="pubPlace_2.d2e110">New York</pubPlace>
+                     <date notBefore="1892-04-15" notAfter="1893-04-14" xml:lang="en" change="#d2e309" xml:id="date_2.d2e113">1892-1893</date>
+                     <biblScope unit="volume" change="#d2e309 #d2e320" xml:id="biblScope_1.d2e117" xml:lang="">1</biblScope>
+                  </imprint>
+               </monogr>
+               <idno type="callNumber" change="#d2e309 #d2e320" xml:id="idno_1.d2e122" xml:lang="">ne-ny-000007-n1</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc change="#d2e309 #d2e320" xml:id="encodingDesc_1.d2e128" xml:lang="">
+         <projectDesc change="#d2e309 #d2e320" xml:id="projectDesc_1.d2e130" xml:lang="">
+            <p change="#d2e309 #d2e320" xml:id="p_4.d2e132" xml:lang="">The TEI file was produced for teaching a course on the basics of scholarly encoding
+               using TEI P5 and XML.</p>
+         </projectDesc>
+         <editorialDecl change="#d2e309 #d2e320" xml:id="editorialDecl_1.d2e136" xml:lang="">
+            <p change="#d2e309 #d2e320" xml:id="p_5.d2e138" xml:lang="">providing information on our decisions concerning the actual transcription of a
+               newspaper structure into a TEI P5 XML file</p>
+         </editorialDecl>
+      </encodingDesc>
+      <profileDesc change="#d2e309 #d2e320" xml:id="profileDesc_1.d2e143" xml:lang="">
+         <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+         <calendarDesc change="#d2e309 #d2e320" xml:id="calendarDesc_1.d2e147" xml:lang="">
+            <calendar change="#d2e309 #d2e320" xml:id="calendar_1.d2e149" xml:lang="">
+               <p change="#d2e309 #d2e320" xml:id="p_6.d2e151" xml:lang="">Following the hegemonial approach of standards rooted in the English language, the
+                  Gregorian calendar is presumed as the norm and must not be specified.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_7.d2e154" xml:lang="">The @when attribute always provides W3C dates, while the @when-custom attribute
+                  follows the inherent logic of the chosen calendar.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_8.d2e157" xml:lang="">E.g. <date when="1841-05-23" change="#d2e309 #d2e320" xml:id="date_3.d2e159" xml:lang="">23 May 1841, Sunday</date>, <date when="1908-03-05" change="#d2e309 #d2e320" xml:id="date_4.d2e162" xml:lang="">5
+                     Mar 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_islamic" change="#d2e320" xml:lang="">
+               <p change="#d2e309 #d2e320" xml:id="p_9.d2e169" xml:lang="">Islamic <hi change="#d2e309 #d2e320" xml:id="hi_1.d2e171" xml:lang="">hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                  Muḥarram. Dates differ between locations as the beginning of the month is based on
+                  sightings of the new moon.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_10.d2e175" xml:lang="">E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01" change="#d2e309 #d2e320" xml:id="date_5.d2e177" xml:lang="">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01" change="#d2e309 #d2e320" xml:id="date_6.d2e180" xml:lang="">1 Ṣaf 1326, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_julian" change="#d2e320" xml:lang="">
+               <p change="#d2e309 #d2e320" xml:id="p_11.d2e187" xml:lang="">Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi change="#d2e309 #d2e320" xml:id="hi_2.d2e189" xml:lang="">rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi change="#d2e309 #d2e320" xml:id="hi_3.d2e192" xml:lang="">sharqī</hi>.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_12.d2e196" xml:lang="">All solar calendars add an intercalated 366th day every fourth (and, in the case
+                  of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
+                  last day of the old Julian calendar). The Gregorian calendar suppresses this rule
+                  in centesimal years that cannot be divided by 400. This difference creates a
+                  growing offset between Gregorian and Julian calendars: while 1900 R was a leap
+                  year, 1900 was not, which in turn caused the difference between the Gregorian
+                  calendar, on the one hand, and the <hi change="#d2e309 #d2e320" xml:id="hi_4.d2e198" xml:lang="">mālī</hi> and <hi change="#d2e309 #d2e320" xml:id="hi_5.d2e201" xml:lang="">rūmī</hi> calendars, on
+                  the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
+                  (13 March 1900) onwards.</p>
+               <p change="#d2e309 #d2e320" xml:id="p_13.d2e205" xml:lang="">E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11" change="#d2e309 #d2e320" xml:id="date_7.d2e207" xml:lang="">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21" change="#d2e309 #d2e320" xml:id="date_8.d2e210" xml:lang="">21 Shub 1908, Thursday</date>.</p>
+            </calendar>
+            <calendar xml:id="cal_ottomanfiscal" change="#d2e320" xml:lang="">
+               <p change="#d2e309 #d2e320" xml:id="p_14.d2e217" xml:lang="">Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                  calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
+                  and in the Ottoman context usually referred to as <hi change="#d2e309 #d2e320" xml:id="hi_6.d2e219" xml:lang="">mālī</hi> and sometimes,
+                  confusingly, also as <hi change="#d2e309 #d2e320" xml:id="hi_7.d2e222" xml:lang="">rūmī</hi>. Every 33 lunar years, a <hi change="#d2e309 #d2e320" xml:id="hi_8.d2e225" xml:lang="">hijrī</hi> year
+                  would complete within a single solar <hi change="#d2e309 #d2e320" xml:id="hi_9.d2e228" xml:lang="">mālī</hi> year. In this case the counting
+                  of the <hi change="#d2e309 #d2e320" xml:id="hi_10.d2e231" xml:lang="">mālī</hi> years skipped a year to catch up with the faster
+                     <hi change="#d2e309 #d2e320" xml:id="hi_11.d2e235" xml:lang="">hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
+                  synchronisation of <hi change="#d2e309 #d2e320" xml:id="hi_12.d2e238" xml:lang="">mālī</hi> and <hi change="#d2e309 #d2e320" xml:id="hi_13.d2e241" xml:lang="">hijrī</hi> years was henceforth
+                  abolished. As <hi change="#d2e309 #d2e320" xml:id="hi_14.d2e244" xml:lang="">mālī</hi> years began with 1 March, <hi change="#d2e309 #d2e320" xml:id="hi_15.d2e247" xml:lang="">mālī</hi> leap years
+                  preceded their <hi change="#d2e309 #d2e320" xml:id="hi_16.d2e250" xml:lang="">rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  commenced on 13 March 1899).</p>
+               <p change="#d2e309 #d2e320" xml:id="p_15.d2e254" xml:lang="">E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11" change="#d2e309 #d2e320" xml:id="date_9.d2e256" xml:lang="">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21" change="#d2e309 #d2e320" xml:id="date_10.d2e259" xml:lang="">21 Shub 1323, Thursday</date>.</p>
+            </calendar>
+         </calendarDesc>
+         <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+         <langUsage change="#d2e309 #d2e320" xml:id="langUsage_1.d2e267" xml:lang="">
+            <language ident="ar" change="#d2e309 #d2e320" xml:id="language_1.d2e269" xml:lang="">Arabic</language>
+            <language ident="ar-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_2.d2e272" xml:lang="">Arabic transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="ar-Latn-EN" change="#d2e309 #d2e320" xml:id="language_3.d2e275" xml:lang="">Arabic transcribed into Latin script following common
+               English practices</language>
+            <language ident="ar-Latn-FR" change="#d2e309 #d2e320" xml:id="language_4.d2e278" xml:lang="">Arabic transcribed into Latin script following common
+               French practices</language>
+            <language ident="en" change="#d2e309 #d2e320" xml:id="language_5.d2e281" xml:lang="">English</language>
+            <language ident="fa" change="#d2e309 #d2e320" xml:id="language_6.d2e285" xml:lang="">Farsi</language>
+            <language ident="fa-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_7.d2e288" xml:lang="">Farsi transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="fr" change="#d2e309 #d2e320" xml:id="language_8.d2e291" xml:lang="">French</language>
+            <language ident="ota" change="#d2e309 #d2e320" xml:id="language_9.d2e294" xml:lang="">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes" change="#d2e309 #d2e320" xml:id="language_10.d2e297" xml:lang="">Ottoman transcribed into Latin script following the
+               IJMES conventions</language>
+            <language ident="tr" change="#d2e309 #d2e320" xml:id="language_11.d2e300" xml:lang="">Turkish</language>
+         </langUsage>
+         <!--<particDesc>
+                <listPerson>
+                    <head>People mentioned in the text</head>
+                    <person xml:id="pers-1">
+                        
+                    </person>
+                </listPerson>
+            </particDesc>-->
+      </profileDesc>
+      <revisionDesc><tei:change when="2019-04-24" who="#pers_TG" change="d2e320" xml:lang="en">Added the <tei:att xml:lang="en">xml:lang</tei:att> attribute to all nodes that lacked this attribute. The value is based on the closest ancestor.</tei:change><change when="2019-04-24" who="#pers_TG" xml:id="d2e309" xml:lang="en">Added automated <tei:att xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
+         <change when="2015-02-19" who="#pTG" change="#d2e309 #d2e320" xml:id="change_1.d2e309" xml:lang="">File created by automatic conversion from Sente
+            XML.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile change="#d2e309" xml:id="facsimile_1.d2e314">
+      <surface xml:id="facs_i1_1">
+         <graphic url="../../images/kawkab/dds-54628_Page_08_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_1_source"/>
+         <zone ulx="2835" uly="295" lrx="3178" lry="614" xml:id="facs_i1_1_z1"/>
+      </surface>
+      <surface xml:id="facs_i1_2">
+         <graphic url="../../images/kawkab/dds-54628_Page_07_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_2_source"/>
+      </surface>
+      <surface xml:id="facs_i1_3">
+         <graphic url="../../images/kawkab/dds-54628_Page_06_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_3_source"/>
+      </surface>
+      <surface xml:id="facs_i1_4">
+         <graphic url="../../images/kawkab/dds-54628_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_i1_4_source"/>
+      </surface>
+   </facsimile>
+   <text n="1" type="volume" change="#d2e309 #d2e320" xml:id="text_1.d2e339" xml:lang="">
+      <front change="#d2e309 #d2e320" xml:id="front_1.d2e341" xml:lang="">
+         <!-- some introductory material for the current volume -->
+      </front>
+      <group change="#d2e309 #d2e320" xml:id="group_1.d2e346" xml:lang="">
+         <text n="1" type="issue" xml:lang="ar" xml:id="i1_ar" corresp="#i1_en">
+            <front change="#d2e309 #d2e320" xml:id="front_2.d2e350" xml:lang="ar">
+               <!-- top line, commonly containing the information on issue numbers and sometimes dates -->
+               <div style="border-bottom:solid black" change="#d2e309 #d2e320" xml:id="div_1.d2e354" xml:lang="ar">
+                  <cb n="1" change="#d2e309" xml:id="cb_1.d2e356"/>
+                  <bibl xml:lang="ar" change="#d2e309" xml:id="bibl_1.d2e358">
+                     <biblScope n="1" unit="issue" change="#d2e309 #d2e320" xml:id="biblScope_2.d2e360" xml:lang="ar">العدد ١</biblScope></bibl>
+                  <cb n="2" change="#d2e309" xml:id="cb_2.d2e363"/>
+                  <figure rend="center" change="#d2e309 #d2e320" xml:id="figure_1.d2e365" xml:lang="ar">
+                     <graphic url="#facs_i1_1_z1" change="#d2e309" xml:id="graphic_5.d2e367"/>
+                     <figDesc xml:lang="en" change="#d2e309" xml:id="figDesc_1.d2e369">Ottoman crescent and star</figDesc>
+                  </figure>
+                  <cb n="3" change="#d2e309" xml:id="cb_3.d2e373"/>
+                  <bibl xml:lang="ar" change="#d2e309" xml:id="bibl_2.d2e376"><biblScope n="1" unit="volume" change="#d2e309 #d2e320" xml:id="biblScope_3.d2e377" xml:lang="ar">السنة الاولى</biblScope></bibl>
+               </div>
+               <!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:solid black;" change="#d2e309 #d2e320" xml:id="div_2.d2e383" xml:lang="ar">
+                  <cb n="1" change="#d2e309" xml:id="cb_4.d2e385"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_2.d2e387">
+                     <div change="#d2e309 #d2e320" xml:id="div_2.d2e389" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_1.d2e391" xml:lang="ar">قيمة الاشتراك</head>
+                        <p change="#d2e309 #d2e320" xml:id="p_16.d2e394" xml:lang="ar">في <placeName change="#d2e309 #d2e320" xml:id="placeName_1.d2e396" xml:lang="ar">نيو يورك</placeName> ريالات اميركية يضاف اليها
+                           اجرة<lb change="#d2e309" xml:id="lb_1.d2e399"/>البريد لسائر مدن الولايات تلمتحدة<lb change="#d2e309" xml:id="lb_2.d2e401"/> وفي الممالك الخارجية
+                           ثمانية عشر فرنكًا<lb change="#d2e309" xml:id="lb_3.d2e403"/> خالصة اجرة البريد </p>
+                        <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_1.d2e406" xml:lang="ar">---</ab>
+                     </div>
+                     <div change="#d2e309 #d2e320" xml:id="div_3.d2e410" xml:lang="ar">
+                        <p change="#d2e309 #d2e320" xml:id="p_17.d2e412" xml:lang="ar">جميع الرسائل التي ترد الينا ينبغي ان تكون خالصة<lb change="#d2e309" xml:id="lb_4.d2e414"/>اجرة البريد باسم
+                              <persName change="#d2e309 #d2e320" xml:id="persName_5.d2e416" xml:lang="ar">الدكتور ابراهيم</persName> و<persName change="#d2e309 #d2e320" xml:id="persName_6.d2e419" xml:lang="ar">نجيب<lb change="#d2e309" xml:id="lb_5.d2e421"/>يوسف
+                              عربيلي</persName> منشئي الجريدة<lb change="#d2e309" xml:id="lb_6.d2e424"/>ولا ترد لاصحابها نشرت ام لم
+                           تنشر</p>
+                        <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_2.d2e427" xml:lang="ar">---</ab>
+                     </div>
+                     <div change="#d2e309 #d2e320" xml:id="div_4.d2e431" xml:lang="ar">
+                        <head change="#d2e309 #d2e320" xml:id="head_2.d2e433" xml:lang="ar">اجرة الاعلانات</head>
+                        <p change="#d2e309 #d2e320" xml:id="p_18.d2e436" xml:lang="ar">في الصفحة الاخيرة عن كل سطر ١٥ سنتاً وللمشتركين ١٠<lb change="#d2e309" xml:id="lb_7.d2e438"/>وفي غير الصفحة
+                           الاخيرة ٢٠ سنتاً وللمشتركين ١٥<lb change="#d2e309" xml:id="lb_8.d2e440"/>واما الرسائل الخصوصية فحكمها حكم
+                           الاعلانات</p>
+                        <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_3.d2e443" xml:lang="ar">---</ab>
+                     </div>
+                     <div change="#d2e309 #d2e320" xml:id="div_5.d2e447" xml:lang="ar">
+                        <p change="#d2e309 #d2e320" xml:id="p_19.d2e449" xml:lang="ar">ومتعلقات المطبعة الشرقية مع مديرها ارتين افندي بتركيان<lb change="#d2e309" xml:id="lb_9.d2e451"/>الدفع
+                           سلفًا</p>
+                     </div>
+                  </div>
+                  <cb n="2" change="#d2e309" xml:id="cb_5.d2e456"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e309" xml:id="div_7.d2e458">
+                     <bibl change="#d2e309 #d2e320" xml:id="bibl_3.d2e460" xml:lang="ar"><title level="j" change="#d2e309 #d2e320" xml:id="title_7.d2e461" xml:lang="ar">كوكب اميركا</title></bibl>
+                     <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_4.d2e464" xml:lang="ar">---</ab>
+                     <bibl change="#d2e309 #d2e320" xml:id="bibl_4.d2e467" xml:lang="ar"><title level="j" type="sub" change="#d2e309 #d2e320" xml:id="title_8.d2e468" xml:lang="ar">جريدة سياسية علمية تجارية
+                        ادبية</title></bibl>
+                     <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_5.d2e471" xml:lang="ar">---</ab>
+                     <bibl change="#d2e309 #d2e320" xml:id="bibl_5.d2e474" xml:lang="ar">تصدر كل يوم الجمعة من كل اسبوع</bibl>
+                  </div>
+                  <cb n="3" change="#d2e309" xml:id="cb_6.d2e478"/>
+                  <div style="width:33%;float:right" xml:lang="en" change="#d2e309" xml:id="div_8.d2e481">
+                     <head change="#d2e309 #d2e320" xml:id="head_3.d2e483" xml:lang="en">Subscription Rates.</head>
+                     <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_6.d2e486" xml:lang="en">---</ab>
+                     <p change="#d2e309 #d2e320" xml:id="p_20.d2e489" xml:lang="en">For New York, per annum, - $ 3.00,<lb change="#d2e309" xml:id="lb_10.d2e491"/>To which will be added tho postage to
+                        all<lb change="#d2e309" xml:id="lb_11.d2e493"/>cities in the United States.<lb change="#d2e309" xml:id="lb_12.d2e495"/>In all Foreign Countries, - 18
+                        Frcs.<lb change="#d2e309" xml:id="lb_13.d2e497"/>including Postage.<lb change="#d2e309" xml:id="lb_14.d2e499"/>All communications relating to busines
+                        with<lb change="#d2e309" xml:id="lb_15.d2e502"/>The Oriental Publishing House, must be ad-<lb change="#d2e309" xml:id="lb_16.d2e504"/>dressed to its
+                        Manager,<lb change="#d2e309" xml:id="lb_17.d2e506"/>ARTEEN EFFENDI PETRAKIAN,<lb change="#d2e309" xml:id="lb_18.d2e508"/>and those relating to "Kawkab
+                        America," to<lb change="#d2e309" xml:id="lb_19.d2e510"/>Dr. A. &amp; N.J. Arbeely,<lb change="#d2e309" xml:id="lb_20.d2e512"/>Editors and
+                        Proprietors<lb change="#d2e309" xml:id="lb_21.d2e515"/>45 Pearl Street,<lb change="#d2e309" xml:id="lb_22.d2e517"/>New York, U.S.A.</p>
+                  </div>
+               </div>
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:double black" xml:lang="ar" change="#d2e309" xml:id="div_10.d2e525">
+                  <dateline xml:lang="ar" change="#d2e309" xml:id="dateline_1.d2e527"><cb n="1" change="#d2e309" xml:id="cb_7.d2e528"/><placeName type="city" change="#d2e309 #d2e320" xml:id="placeName_2.d2e529" xml:lang="ar">نيو يورك</placeName>
+                     الجمعة في <date when="1892-04-15" change="#d2e309 #d2e320" xml:id="date_11.d2e532" xml:lang="ar"> ١٥ نيسان غ</date> و<date calendar="#cal_julian" datingMethod="#cal_julian" when="1892-04-15" when-custom="1892-04-03" change="#d2e309 #d2e320" xml:id="date_12.d2e535" xml:lang="ar">٣ ش سنة ١٨٩٢</date>
+                     <cb n="2" change="#d2e309" xml:id="cb_8.d2e538"/>موافق <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1892-04-15" when-custom="1309-09-19" change="#d2e309 #d2e320" xml:id="date_13.d2e540" xml:lang="ar">١٩ رمضان ١٣٠٩</date></dateline>
+               </div>
+            </front>
+            <body change="#d2e309 #d2e320" xml:id="body_1.d2e545" xml:lang="ar">
+               <cb n="1" change="#d2e309" xml:id="cb_9.d2e547"/>
+               <figure change="#d2e309 #d2e320" xml:id="figure_2.d2e549" xml:lang="ar">
+                  <!--<graphic></graphic>-->
+                  <figDesc change="#d2e309 #d2e320" xml:id="figDesc_2.d2e553" xml:lang="ar">Reproduction of the Ottoman coat of arms / Sultanic seal</figDesc>
+               </figure>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_11.d2e557">
+                  <head change="#d2e309 #d2e320" xml:id="head_4.d2e559" xml:lang="ar">كومب اميركا</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_21.d2e562" xml:lang="ar">يشرف هذا الكوكب في جانب الغرب الاقصى تذكاراً<lb change="#d2e309" xml:id="lb_23.d2e564"/>جميلاً به هلال الدولة والامة
+                     والوطن فيرسم شعارها<lb change="#d2e309" xml:id="lb_24.d2e566"/>وفخارها من وراءِ الاتلانتيك رسماً جليلاً له في
+                     قلوب<lb change="#d2e309" xml:id="lb_25.d2e568"/>الشرقيين في هذه الديار ...</p>
+                  <p change="#d2e309" xml:id="p_22.d2e571"/>
+               </div>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_12.d2e574">
+                  <head change="#d2e309 #d2e320" xml:id="head_5.d2e576" xml:lang="ar">فليعش سلطاننا عبد الحميد</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_23.d2e579" xml:lang="ar">بل لا عجب اذا عد هذا الكوكب من احدى السيارات التي<lb change="#d2e309" xml:id="lb_26.d2e581"/>تدور حول ذلك القطب الثابت
+                     على ضفاف البوسفور<lb change="#d2e309" xml:id="lb_27.d2e583"/>الذي سدور حوله البران والبحران ترتد عنها اعين
+                     الحاسدين<lb change="#d2e309" xml:id="lb_28.d2e585"/>...<cb n="2" change="#d2e309" xml:id="cb_10.d2e587"/></p>
+                  <p change="#d2e309" xml:id="p_24.d2e589"/>
+                  <cb n="3" change="#d2e309" xml:id="cb_11.d2e591"/>
+               </div>
+               <cb n="4" change="#d2e309" xml:id="cb_12.d2e594"/>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_13.d2e597">
+                  <head change="#d2e309 #d2e320" xml:id="head_6.d2e599" xml:lang="ar">اعتذار</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_25.d2e602" xml:lang="ar">كان في النية اصدار جريدتنا هذه في اليوم السادس<lb change="#d2e309" xml:id="lb_29.d2e604"/>عشر من شهر شعبان تيمناً بيوم
+                     جلالة سلطاننا الاعظم<lb change="#d2e309" xml:id="lb_30.d2e606"/>وقد اعلنا ذلك في بعض جرائد سوريا بلسان وكيلنا
+                     العام<lb change="#d2e309" xml:id="lb_31.d2e608"/>وانيس افندي بتراكيان مدير تلغراف مركز متصرفية جبل<lb change="#d2e309" xml:id="lb_32.d2e610"/>لبنان لكن تأخر
+                     ورود مواد الطباعة في العربية عنا<lb change="#d2e309" xml:id="lb_33.d2e612"/>لوجود الكورنتينات سبب تاجيل اصدارها الى
+                     هذا اليوم<lb change="#d2e309" xml:id="lb_34.d2e615"/>وهي على كل حال لا تفتر عن ذكر مولاها العادل في<lb change="#d2e309" xml:id="lb_35.d2e617"/>كل آ ن</p>
+                  <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_7.d2e620" xml:lang="ar">---</ab>
+               </div>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_14.d2e624">
+                  <head change="#d2e309 #d2e320" xml:id="head_7.d2e626" xml:lang="ar">لمحة طارق</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_26.d2e629" xml:lang="ar">مرَّ على اوريا دور لم نسمع به سوى تجهيز العساكر<lb change="#d2e309" xml:id="lb_36.d2e631"/>ونجميع الذخائر حتى اصبحت
+                     ممالكها تنتفض خشية نسيم<lb change="#d2e309" xml:id="lb_37.d2e633"/>حادث ...</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_27.d2e636" xml:lang="ar">
+               <pb ed="print" facs="#facs_i1_2" n="2" change="#d2e309" xml:id="pb_1.d2e638"/><cb n="1" change="#d2e309" xml:id="cb_13.d2e639"/></p><p change="#d2e309" xml:id="p_28.d2e640"/></div>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_15.d2e642">
+                  <head change="#d2e309 #d2e320" xml:id="head_8.d2e644" xml:lang="ar">عودة لامح</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_29.d2e647" xml:lang="ar">نازل القحط ارض الروس فاشتف ماء الاجساد<lb change="#d2e309" xml:id="lb_38.d2e649"/>وحل فيهم ثقيلا وبيلا في يقعة من
+                     دبارهم فيها اثنان<lb change="#d2e309" xml:id="lb_39.d2e651"/><cb n="2" change="#d2e309" xml:id="cb_14.d2e652"/></p>
+                  <p change="#d2e309" xml:id="p_30.d2e654"/>
+                  <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_8.d2e656" xml:lang="ar">---</ab>
+               </div>
+               <div type="section" xml:lang="ar" change="#d2e309" xml:id="div_16.d2e660">
+                  <head change="#d2e309 #d2e320" xml:id="head_9.d2e662" xml:lang="ar">اخبار محلية</head>
+                  <p change="#d2e309" xml:id="p_31.d2e665"/>
+                  <p change="#d2e309" xml:id="p_32.d2e667"/>
+               </div>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_17.d2e670">
+                  <head change="#d2e309 #d2e320" xml:id="head_10.d2e672" xml:lang="ar">مباداة خيرٍ بشر</head>
+                  <p change="#d2e309" xml:id="p_33.d2e675"/>
+                  <p change="#d2e309" xml:id="p_34.d2e677"/>
+                  <ab rend="center" change="#d2e309 #d2e320" xml:id="ab_9.d2e679" xml:lang="ar">---</ab>
+               </div>
+               <cb n="4" change="#d2e309" xml:id="cb_15.d2e683"/>
+               <div type="article" xml:lang="ar" change="#d2e309" xml:id="div_18.d2e686">
+                  <head change="#d2e309" xml:id="head_11.d2e688"/>
+                  <p change="#d2e309" xml:id="p_35.d2e690"/>
+                  <p change="#d2e309" xml:id="p_36.d2e692"/>
+               </div>
+               <pb ed="print" facs="#facs_i1_3" n="3" change="#d2e309" xml:id="pb_2.d2e695"/>
+               <pb ed="print" facs="#facs_i1_4" n="4" change="#d2e309" xml:id="pb_3.d2e697"/>
+            </body>
+         </text>
+         <text n="1" type="issue" xml:lang="en" xml:id="i1_en" corresp="#i1_ar">
+            <front change="#d2e309 #d2e320" xml:id="front_3.d2e703" xml:lang="en">
+               <!-- the main body, which usually does not change between issues -->
+               <div style="border-bottom:double black" change="#d2e309 #d2e320" xml:id="div_19.d2e707" xml:lang="en">
+                  <bibl xml:lang="en" change="#d2e309" xml:id="bibl_6.d2e709"><title level="j" change="#d2e309 #d2e320" xml:id="title_9.d2e710" xml:lang="en">Kawkab America</title><lb change="#d2e309" xml:id="lb_40.d2e712"/>
+                     </bibl>
+               </div>
+               
+               <!-- the bottom line, commonly containing dating information -->
+               <div style="border-bottom:solid black" xml:lang="en" change="#d2e309" xml:id="div_20.d2e718">
+                  <bibl xml:lang="en" change="#d2e309" xml:id="bibl_7.d2e720"><biblScope unit="volume" n="1" change="#d2e309 #d2e320" xml:id="biblScope_4.d2e721" xml:lang="en">Vo. 1.</biblScope> <biblScope unit="issue" n="1" change="#d2e309 #d2e320" xml:id="biblScope_5.d2e724" xml:lang="en">No. 1</biblScope> <cb change="#d2e309" xml:id="cb_16.d2e727"/><pubPlace change="#d2e309 #d2e320" xml:id="pubPlace_3.d2e728" xml:lang="en">New York</pubPlace>, <date when="1892-04-15" change="#d2e309 #d2e320" xml:id="date_14.d2e731" xml:lang="en">Friday, April 15, 1892</date>.</bibl>
+               </div>
+            </front>
+            <body change="#d2e309 #d2e320" xml:id="body_2.d2e737" xml:lang="en">
+               <pb ed="print" facs="#facs_i1_4" n="1" change="#d2e309" xml:id="pb_4.d2e739"/>
+               <div xml:lang="en" change="#d2e309" xml:id="div_21.d2e741">
+                  <bibl change="#d2e309 #d2e320" xml:id="bibl_8.d2e743" xml:lang="en"><title level="j" change="#d2e309 #d2e320" xml:id="title_10.d2e744" xml:lang="en">Kawkab <gap change="#d2e309" xml:id="gap_1.d2e746"/>erica</title></bibl>
+                  <bibl change="#d2e309 #d2e320" xml:id="bibl_9.d2e749" xml:lang="en">Vo.1. No.1. <cb change="#d2e309" xml:id="cb_17.d2e751"/>New York, Friday, <gap change="#d2e309" xml:id="gap_2.d2e753"/></bibl>
+               </div>
+               <cb n="1" change="#d2e309" xml:id="cb_18.d2e756"/>
+               <div xml:lang="en" change="#d2e309" xml:id="div_22.d2e758">
+                  <head change="#d2e309 #d2e320" xml:id="head_12.d2e760" xml:lang="en">"Kawkab America"</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_37.d2e763" xml:lang="en">Office. 45 Pearl Street</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_38.d2e766" xml:lang="en">An Oriental Weekly devoted to the development of direct helpful relations and good understanding between the East and the West</p>
+               </div>
+               <div type="article" xml:lang="en" change="#d2e309" xml:id="div_23.d2e770">
+                  <head change="#d2e309 #d2e320" xml:id="head_13.d2e772" xml:lang="en">Introduction.</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_39.d2e775" xml:lang="en">In entering the field of journalism, so ably occuped by a host of the most
+                     accomplished and progressive writers of the age, we feel called upon for a word
+                     of explanation. We desire that our position may be clearly understood.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_40.d2e778" xml:lang="en">From time immemorial a wide gulf has separated the nations of the East from
+                     those of the West, and this has been the result of diametrically opposite
+                     conceptions of character, of customs and civilization entertained by each
+                     toward the other, all arising from ignorance of the nature and condition of the
+                     respective peoples.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_41.d2e781" xml:lang="en">It is an undoubted fact that the western man does not undertsand the oriental
+                     as the latter really is, and persists in placing him in an imaginary sphere
+                     utterly at variance with the reality.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_42.d2e784" xml:lang="en">On the other hand, to the western mind the people of the west, with their
+                     matchless activity and awe inspiring progress in the field of practical science
+                     and discovery, are still objects of suspicion. They are looked upon as people
+                     with whom might makes right, ready to utilize every chance for
+                     self-aggrandisement, regardless of the methods or means they employ. The
+                     conquest and interference of the European powers in the various sections of
+                     Asia and Africa strengthen this belief. There has been no step taken toward a
+                     better understanding. The west has seemed to forget that notwithstanding the
+                     lack of progress in eastern civilization caused by long-continued wars and
+                     other disadvatages, there are quite as many virtues and noble traits of
+                     character among the sons of Shem as among those of Japhet.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_43.d2e788" xml:lang="en">...</p>
+               </div>
+               <div type="article" xml:lang="en" change="#d2e309" xml:id="div_24.d2e793">
+                  <head change="#d2e309 #d2e320" xml:id="head_14.d2e795" xml:lang="en"><choice change="#d2e309 #d2e320" xml:id="choice_1.d2e796" xml:lang="en"><abbr change="#d2e309 #d2e320" xml:id="abbr_1.d2e797" xml:lang="en">H.I.</abbr><expan change="#d2e309 #d2e320" xml:id="expan_1.d2e799" xml:lang="en">His Imperial</expan></choice> Majesty Abdul-Hamid Khan.</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_44.d2e803" xml:lang="en">Among all the Sultans who have sat upon the throne of the Ottoman Empire, none
+                     has achieved greater success in raising the Ottoman people to a higher position
+                     among the nations of the Earth, than the present "Great Price of the Faithful"
+                     Abdul-Hamid.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_45.d2e806" xml:lang="en">At the time of his coming into power, the financial condition and internal
+                     affairs of the Empire, presented one of the most difficult and perplexing
+                     problems that have ever confronted a ruler assuming the great responsibilities
+                     of government. The severe reaction from the war with Russia and the trying
+                     condition of affairs at that time, combined with the reckless machinations and
+                     intrigues of European diplomats, required unusual ability and wisdom for their
+                     management and counteracting their effects. They seemed to have appealed at the
+                     outset to the unbounded patriotism and matchless energy of this wonderful
+                     Padishah who determined to protect the interests of his people at all hazards
+                     and make them feel the beneficent results of a pure, vigorous, and progressive
+                     Ottoman Policy.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_46.d2e809" xml:lang="en">...</p>
+               </div>
+               <div type="article" xml:lang="en" change="#d2e309" xml:id="div_25.d2e813">
+                  <head change="#d2e309 #d2e320" xml:id="head_15.d2e815" xml:lang="en">The outrages on the Syrian Colony.</head>
+                  <p change="#d2e309 #d2e320" xml:id="p_47.d2e818" xml:lang="en">For some time past a certain class of ruffians infested the neighborhood of
+                     lower Washington and Greenwich Sts, have annouyed many of our countrymen, and
+                     people of other nationalities with molestations and persecutions, that could
+                     barely be expected from Barbarians in the Wilds of Africa.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_48.d2e821" xml:lang="en">It seems as if it has become a sport for some of these thugs and rascals to vie
+                     with each other in their abuse of inoffensive and peaceful people who have
+                     patiently and in the interest of peace, stood gross insults and aggressive
+                     maltreatments, which should have been made impossible not only by the proper
+                     authorities, but also by the aggrieved parties themselves, who ought never to
+                     forget that "Self-protection in America, as well as in Syria, is among the
+                     first laws of Nature."</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_49.d2e824" xml:lang="en">These outrages and acts of lawlessness have been brought time and again to the
+                     attention of those whose duty it is to see that they are stopped, and their
+                     perpetrators brought to speedy punishment, so that a wholeseome and profitable
+                     lesson may be taught to soem of those who are most notorious in their
+                     commission. The matter was also brought before the Supt. of Police in the form
+                     of a memorial from the "Syrian Union of America," and was laid before Public
+                     through various articles in the Press, which was unanimous in its unqualified
+                     condemnation and urgent recommendation for the adoption of vigorous measures to
+                     prevent similar shameful occurances. All these things seemed to have availed
+                     nothing</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_50.d2e827" xml:lang="en">More disgraceful assaults were committed again recently on several of our
+                     countrymen under the eyes of the police, and resulted in the crippling of
+                     several, and almost the murder of a young and respectable woman.</p>
+                  <p change="#d2e309 #d2e320" xml:id="p_51.d2e831" xml:lang="en">...</p>
+               </div>
+               <div type="article" xml:lang="en" change="#d2e309" xml:id="div_26.d2e835">
+                  <head change="#d2e309 #d2e320" xml:id="head_16.d2e837" xml:lang="en">Persia of To-day.</head>
+                  <byline change="#d2e309 #d2e320" xml:id="byline_1.d2e840" xml:lang="en">[By <persName change="#d2e309 #d2e320" xml:id="persName_7.d2e842" xml:lang="en">S. Al-Saiyid</persName>]</byline>
+                  <p change="#d2e309" xml:id="p_52.d2e846"/>
+                  <p change="#d2e309" xml:id="p_53.d2e848"/>
+               </div>
+               <div type="article" xml:lang="en" change="#d2e309" xml:id="div_27.d2e851">
+                  <head change="#d2e309 #d2e320" xml:id="head_17.d2e853" xml:lang="en">Oriental Miscealany.</head>
+                  <p change="#d2e309" xml:id="p_54.d2e856"/>
+                  <p change="#d2e309" xml:id="p_55.d2e858"/>
+               </div>
+            </body>
+         </text>
+      </group>
+      <back change="#d2e309 #d2e320" xml:id="back_1.d2e864" xml:lang="">
+            <!-- back of a volume, potentially gathering indeces, appendices, etc.  -->
+         </back>
+   </text>
+</TEI>

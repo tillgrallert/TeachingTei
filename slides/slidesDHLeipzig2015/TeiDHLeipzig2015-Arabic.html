@@ -64,25 +64,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   /* xml element names */
   .xml > code > span.kw {
-  	color: #0F0F9C;
-  	font-weight: bold;
+    color: #0F0F9C;
+    font-weight: bold;
   }
   /* xml attribute names */
   .xml > code > span.ot {
-  	color:#FF8041;
+    color:#FF8041;
   }
   /* xml attribute values */
   .xml > code > span.st {
-  	color:#993300;
+    color:#993300;
   }
   /* xml comments */
   .xml > code > span.co {
-  	color:#167116;
-  	font-style: italic;
+    color:#167116;
+    font-style: italic;
   }
   /* xml computing instructions: not implemented in Pandoc syntax highlighting */
   /* .xml > code > span {
-  	color:#9132CC;
+    color:#9132CC;
   } */
   </style>
   <style type="text/css">
@@ -102,7 +102,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <script type="text/javascript" src="../js/slidy.js"></script>
   <style type="text/css">
   .cImportant {
-  	color:red;
+    color:red;
   }
   </style>
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
@@ -126,10 +126,10 @@ Till Grallert
 <h1>XML, Unicode, Arabic</h1>
 <ul>
 <li>The good: XML follows the Unicode standard by design!</li>
-<li>The bad: Each unicode sign is an independent entity
+<li>The bad: Each Unicode sign is an independent entity
 <ul>
-<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for “الى” will not return instances of “إلى” or “إِلى”, “ان” will neither return “إن” nor “أن” out of the box.</li>
-<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>): a search for “1326” will not return instances of “١٣٢٦” and vice versa.</li>
+<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for “الى” will not return instances of “إلى” or “إِلى”.</li>
+<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>).</li>
 <li>ة is not ت!<br />
 </li>
 </ul></li>
@@ -138,7 +138,7 @@ Till Grallert
 </div>
 <div id="the-good" class="slide section level1">
 <h1>1. The good</h1>
-<p>TEI and XML can represent any text written in any sign-system. If this system is part of the unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.</p>
+<p>TEI and XML can represent any text written in any sign-system. If this system is part of the Unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.</p>
 <p>BUT: mixing two writing systems, while unambiguous for the computer, will cause confusion for the human reader / editor:</p>
 </div>
 <div id="facsimile" class="slide section level1">

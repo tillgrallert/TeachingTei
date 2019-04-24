@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?><!--<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>--><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?>
+<teiCorpus  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" change="#d2e259" xml:lang="">
+    <teiHeader change="#d2e259" xml:lang="">
+        <fileDesc change="#d2e259" xml:lang="">
+            <titleStmt change="#d2e259" xml:lang="">
+                <title change="#d2e259" xml:lang="">PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway,
+                    reports on local politics etc., 1908</title>
+                <respStmt change="#d2e259" xml:lang="">
+                    <resp change="#d2e259" xml:lang="">Transcription and encoding in TEI</resp>
+                    <persName xml:id="pers_TG" change="#d2e259" xml:lang="">Till Grallert</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt xml:id="publicationStmt_1.d1e61" xml:lang="en">
+                <authority xml:id="authority_1.d1e63" xml:lang="en">
+                    <persName xml:id="persName_4.d1e65" xml:lang="en">Till Grallert</persName>
+                </authority>
+                <pubPlace xml:id="pubPlace_1.d1e69" xml:lang="en">Beirut</pubPlace>
+                <date when="2015" xml:id="date_1.d1e72" xml:lang="en">2015</date>
+                <availability status="restricted" xml:id="availability_1.d1e75" xml:lang="en">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/" xml:id="licence_1.d1e77" xml:lang="en">Distributed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</licence>
+                </availability>
+             </publicationStmt>
+            <sourceDesc change="#d2e259" xml:lang="">
+                <p change="#d2e259" xml:lang="">This text is a partical transcription of British consular reports from the
+                    consulate in Damascus to the Embassy in Constantinople as found in the National
+                    Archives, Kew Gardens, Great Britain (formerly known as Public Record Office)
+                    kept in the file PRO FO 618/3, Despatches to Constantinople etc., 1908</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc change="#d2e259" xml:lang="">
+            <samplingDecl change="#d2e259" xml:lang="">
+                <p change="#d2e259" xml:lang="">Some of the letters in this file have been transcribed as detailed as possible to demonstrate the application of TEI P5 to an introductory course</p>
+            </samplingDecl>
+            <editorialDecl change="#d2e259" xml:lang="">
+                <hyphenation eol="none" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">Hyphenation that might occur at the end of a line has been silently removed</p>
+                </hyphenation>
+                <normalization method="silent" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">In case spelling or punctuation have been corrected in the transcription, it has been done without further comment.</p>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc change="#d2e259" xml:lang="">
+            <!-- as we deal with sources from an area and period which also used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
+            <calendarDesc change="#d2e259" xml:lang="">
+                <calendar xml:id="cal_gregorian" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">Following the hegemonial approach of standards rooted in the English
+                        language, the Gregorian calendar is presumed as the norm and must not be
+                        specified.</p>
+                    <p change="#d2e259" xml:lang="">The <att change="#d2e259" xml:lang="">when</att> attribute always provides W3C dates, while the <att change="#d2e259" xml:lang="">when-custom</att>
+                        attribute follows the inherent logic of the chosen calendar.</p>
+                    <p change="#d2e259" xml:lang="">E.g. <date when="1841-05-23" change="#d2e259" xml:lang="">23 May 1841, Sunday</date>, <date when="1908-03-05" change="#d2e259" xml:lang="">5 Mar 1908, Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_islamic" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">Islamic <hi change="#d2e259" xml:lang="">hijrī</hi> calendar: lunar calendar beginning the Year with 1
+                        Muḥarram. Dates differ between locations as the beginning of the month is
+                        based on sightings of the new moon.</p>
+                    <p change="#d2e259" xml:lang="">E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01" change="#d2e259" xml:lang="">1 Rab II 1257, Sunday</date>,
+                            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01" change="#d2e259" xml:lang="">1 Ṣaf 1326,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_julian" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">Reformed Julian calendar beginning the Year with 1 January. In the Ottoman
+                        context usually referred to as <hi change="#d2e259" xml:lang="">rūmī</hi>. Arabic newspapers usually
+                        labelled this calendar as <hi change="#d2e259" xml:lang="">sharqī</hi>.</p>
+                    <p change="#d2e259" xml:lang="">All solar calendars add an intercalated 366th day every fourth (and, in the
+                        case of Gregorian and rūmī calendars, even-numbered) year at the end of
+                        February (the last day of the old Julian calendar). The Gregorian calendar
+                        suppresses this rule in centesimal years that cannot be divided by 400. This
+                        difference creates a growing offset between Gregorian and Julian calendars:
+                        while 1900 R was a leap year, 1900 was not, which in turn caused the
+                        difference between the Gregorian calendar, on the one hand, and the
+                            <hi change="#d2e259" xml:lang="">mālī</hi> and <hi change="#d2e259" xml:lang="">rūmī</hi> calendars, on the other, to grow from 12
+                        to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900)
+                        onwards.</p>
+                    <p change="#d2e259" xml:lang="">E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11" change="#d2e259" xml:lang="">11 Ayyār 1841, Sunday</date>,
+                            <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21" change="#d2e259" xml:lang="">21 Shub 1908,
+                        Thursday</date>.</p>
+                </calendar>
+                <calendar xml:id="cal_ottomanfiscal" change="#d2e259" xml:lang="">
+                    <p change="#d2e259" xml:lang="">Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+                        calendar beginning the Year with 1 March. Introduced as fiscal calendar in
+                        1676 and in the Ottoman context usually referred to as <hi change="#d2e259" xml:lang="">mālī</hi> and
+                        sometimes, confusingly, also as <hi change="#d2e259" xml:lang="">rūmī</hi>. Every 33 lunar years, a
+                            <hi change="#d2e259" xml:lang="">hijrī</hi> year would complete within a single solar <hi change="#d2e259" xml:lang="">mālī</hi>
+                        year. In this case the counting of the <hi change="#d2e259" xml:lang="">mālī</hi> years skipped a year to
+                        catch up with the faster <hi change="#d2e259" xml:lang="">hijrī</hi> calendar. Due to a printing error in
+                        the coupon booklets for the consolidated debt repayment program for 1872
+                        (1288 M instead of 1289 M), synchronisation of <hi change="#d2e259" xml:lang="">mālī</hi> and
+                            <hi change="#d2e259" xml:lang="">hijrī</hi> years was henceforth abolished. As <hi change="#d2e259" xml:lang="">mālī</hi> years
+                        began with 1 March, <hi change="#d2e259" xml:lang="">mālī</hi> leap years preceded their <hi change="#d2e259" xml:lang="">rūmī</hi>
+                        and Gregorian counterpart (the leap year 1315 M commenced on 13 March
+                        1899).</p>
+                    <p change="#d2e259" xml:lang="">E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11" change="#d2e259" xml:lang="">11 Māyis 1257, Sunday</date>,
+                            <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21" change="#d2e259" xml:lang="">21 Shub 1323,
+                        Thursday</date>.</p>
+                </calendar>
+            </calendarDesc>
+            <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
+               IJMES transcription of Arabic in Latin script. -->
+            <langUsage change="#d2e259" xml:lang="">
+                <language ident="ar" change="#d2e259" xml:lang="">Arabic</language>
+                <language ident="ar-Latn-x-ijmes" change="#d2e259" xml:lang="">Arabic transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="ar-Latn-EN" change="#d2e259" xml:lang="">Arabic transcribed into Latin script following common
+                    English practices</language>
+                <language ident="ar-Latn-FR" change="#d2e259" xml:lang="">Arabic transcribed into Latin script following common
+                    French practices</language>
+                <language ident="en" change="#d2e259" xml:lang="">English</language>
+                <language ident="fa" change="#d2e259" xml:lang="">Farsi</language>
+                <language ident="fa-Latn-x-ijmes" change="#d2e259" xml:lang="">Farsi transcribed into Latin script following the
+                    IJMES conventions</language>
+                <language ident="fr" change="#d2e259" xml:lang="">French</language>
+                <language ident="ota" change="#d2e259" xml:lang="">Ottoman</language>
+                <language ident="ota-Latn-x-ijmes" change="#d2e259" xml:lang="">Ottoman transcribed into Latin script following
+                    the IJMES conventions</language>
+                <language ident="tr" change="#d2e259" xml:lang="">Turkish</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc xml:lang="en"><tei:change when="2019-04-24" who="#pers_TG" change="d2e259" xml:lang="en">Added the <tei:att xml:lang="en">xml:lang</tei:att> attribute to all nodes that lacked this attribute. The value is based on the closest ancestor.</tei:change><change when="2019-04-24" who="#pers_TG" xml:id="d2e248" xml:lang="en">Added automated <tei:att xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
+            <change who="#pers_TG" when="2015" change="#d2e259" xml:lang="en">Created this file for the TEI course at DHSI from my transcriptions of the archival material.</change>
+        </revisionDesc>
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus-30_19080803" xml:lang="en">
+        <teiHeader change="#d2e248 #d2e259" xml:id="teiHeader_2.d2e255" xml:lang="en">
+            <fileDesc change="#d2e248 #d2e259" xml:id="fileDesc_2.d2e257" xml:lang="en">
+                <titleStmt change="#d2e248 #d2e259" xml:id="titleStmt_2.d2e259" xml:lang="en">
+                    <title change="#d2e248 #d2e259" xml:id="title_2.d2e261" xml:lang="en">PRO FO 618/3 Damascus Draft 30, Devey to Lowther 3 Aug. 1908</title>
+                    <author change="#d2e248 #d2e259" xml:id="author_1.d2e264" xml:lang="en">George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt change="#d2e248 #d2e259" xml:id="publicationStmt_2.d2e268" xml:lang="en">
+                    <p change="#d2e248" xml:id="p_15.d2e270"/>
+                </publicationStmt>
+                <sourceDesc change="#d2e248 #d2e259" xml:id="sourceDesc_2.d2e273" xml:lang="en">
+                   <msDesc change="#d2e248 #d2e259" xml:id="msDesc_1.d2e275" xml:lang="en">
+                       <msIdentifier change="#d2e248 #d2e259" xml:id="msIdentifier_1.d2e277" xml:lang="en">
+                           <!--<msName>Damascus Draft 30</msName>-->
+                           <repository change="#d2e248 #d2e259" xml:id="repository_1.d2e281" xml:lang="en">National Archives, former Public Record Office</repository>
+                           <idno type="classMark" change="#d2e248 #d2e259" xml:id="idno_1.d2e284" xml:lang="en">PRO FO 618/3</idno>
+                       </msIdentifier>
+                       <physDesc change="#d2e248 #d2e259" xml:id="physDesc_1.d2e288" xml:lang="en">
+                           <handDesc change="#d2e248 #d2e259" xml:id="handDesc_1.d2e290" xml:lang="en">
+                               <handNote xml:id="hand_1" change="#d2e259" xml:lang="en">black ink, hand written</handNote>
+                               <handNote xml:id="hand_2" change="#d2e259" xml:lang="en">pencil, hand written</handNote>
+                           </handDesc>
+                       </physDesc>
+                   </msDesc>
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc change="#d2e248 #d2e259" xml:id="profileDesc_2.d2e303" xml:lang="en">
+                <!-- correspDesc is a new element added in version 2.8.0 of the TEI  -->
+                <correspDesc change="#d2e248 #d2e259" xml:id="correspDesc_1.d2e307" xml:lang="en">
+                    <correspAction type="sent" change="#d2e248 #d2e259" xml:id="correspAction_1.d2e309" xml:lang="en">
+                        <persName change="#d2e248 #d2e259" xml:id="persName_3.d2e311" xml:lang="en">George Pollard Devey</persName>
+                        <placeName change="#d2e248 #d2e259" xml:id="placeName_1.d2e314" xml:lang="en">Damascus</placeName>
+                        <date when="1908-08-03" change="#d2e248 #d2e259" xml:id="date_10.d2e317" xml:lang="en">August 3, 1908</date>
+                    </correspAction>
+                    <correspAction type="received" change="#d2e248 #d2e259" xml:id="correspAction_2.d2e321" xml:lang="en">
+                        <persName change="#d2e248 #d2e259" xml:id="persName_4.d2e323" xml:lang="en">Sir Gerald A. Lowther</persName>
+                        <placeName change="#d2e248 #d2e259" xml:id="placeName_2.d2e326" xml:lang="en">Constantinople</placeName>
+                    </correspAction>
+                </correspDesc>
+            </profileDesc>
+        </teiHeader>
+        <facsimile change="#d2e248" xml:id="facsimile_1.d2e333">
+            <surface xml:id="facs_1">
+                <graphic url="../../images/pro-fo/618-3/DSCN9874_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_1.d2e337"/>
+            </surface>
+            <surface xml:id="facs_2">
+                <graphic url="../../images/pro-fo/618-3/DSCN9875_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_2.d2e342"/>
+                <zone lrx="820" lry="1182" ulx="58" uly="46" xml:id="facs_2_z1"/>
+                <zone lrx="1535" lry="1158" ulx="1034" uly="65" xml:id="facs_2_z2"/>
+            </surface>
+        </facsimile>
+        <text change="#d2e248 #d2e259" xml:id="text_1.d2e350" xml:lang="en">
+            <body change="#d2e248 #d2e259" xml:id="body_1.d2e352" xml:lang="en">
+                <pb ed="print" facs="#facs_1" n="1" change="#d2e248" xml:id="pb_1.d2e354"/>
+                <div change="#d2e248 #d2e259" xml:id="div_1.d2e356" xml:lang="en">
+                    <head change="#d2e248 #d2e259" xml:id="head_1.d2e358" xml:lang="en">Ex-Mushir Fuad P. released</head>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_1.d2e361" xml:lang="en"><date change="#d2e248 #d2e259" xml:id="date_11.d2e362" xml:lang="en">August 3, 1908</date></dateline>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_2.d2e365" xml:lang="en">Dft<lb change="#d2e248" xml:id="lb_1.d2e367"/>
+                        <persName change="#d2e248 #d2e259" xml:id="persName_5.d2e369" xml:lang="en">Sir Gerald A. Lowther</persName><lb change="#d2e248" xml:id="lb_2.d2e371"/> K.C.M.G.,C.B., <lb change="#d2e248" xml:id="lb_3.d2e373"/>
+                        <placeName change="#d2e248 #d2e259" xml:id="placeName_3.d2e375" xml:lang="en"><choice change="#d2e248 #d2e259" xml:id="choice_1.d2e376" xml:lang="en">
+                                <abbr change="#d2e248 #d2e259" xml:id="abbr_1.d2e378" xml:lang="en">Cple</abbr>
+                                <expan change="#d2e248 #d2e259" xml:id="expan_1.d2e381" xml:lang="en">Constantinople</expan>
+                            </choice></placeName>
+                        <lb change="#d2e248" xml:id="lb_4.d2e385"/> No. <del change="#d2e248 #d2e259" xml:id="del_1.d2e388" xml:lang="en">30</del>
+                        <del change="#d2e248 #d2e259" xml:id="del_2.d2e391" xml:lang="en">29</del> 30</dateline>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_3.d2e395" xml:lang="en">42 Emb.</dateline>
+                    <p change="#d2e248 #d2e259" xml:id="p_16.d2e398" xml:lang="en">Sir, <lb change="#d2e248" xml:id="lb_5.d2e400"/>I have the honour to report to Y.E. that the General Amnesty
+                        granted by <persName change="#d2e248 #d2e259" xml:id="persName_6.d2e402" xml:lang="en"><choice change="#d2e248 #d2e259" xml:id="choice_2.d2e403" xml:lang="en">
+                                <abbr change="#d2e248 #d2e259" xml:id="abbr_2.d2e405" xml:lang="en">H.I.M.</abbr>
+                                <expan change="#d2e248 #d2e259" xml:id="expan_2.d2e408" xml:lang="en">His Imperial Majesty</expan>
+                            </choice> the Sultan</persName> to <del change="#d2e248 #d2e259" xml:id="del_3.d2e413" xml:lang="en">all</del> Political
+                            <del change="#d2e248 #d2e259" xml:id="del_4.d2e416" xml:lang="en">criminals was after some hesitation taken to</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_1.d2e419" xml:lang="en">exciles was after some hesitation taken to</add> include the Ex-Mushir
+                            <persName change="#d2e248 #d2e259" xml:id="persName_7.d2e423" xml:lang="en">Fuad Pasha</persName> who has been imprisoned under the
+                        strictest confinement for the last six and a half years; and <del change="#d2e248 #d2e259" xml:id="del_5.d2e426" xml:lang="en">on the
+                            evening of</del><del change="#d2e248" xml:id="del_6.d2e428"><unclear change="#d2e248" xml:id="unclear_1.d2e429"/></del>
+                        <add change="#d2e248 #d2e259" xml:id="add_2.d2e431" xml:lang="en">about <unclear change="#d2e248" xml:id="unclear_2.d2e433"/> on</add> the <date change="#d2e248 #d2e259" xml:id="date_12.d2e436" xml:lang="en">30th. ultimo</date> the
+                            <del change="#d2e248 #d2e259" xml:id="del_7.d2e439" xml:lang="en">Commander of the 5th A.C.</del><add change="#d2e248 #d2e259" xml:id="add_3.d2e441" xml:lang="en">Colonel of Gendarmerie</add>
+                        went in person, dismissed the numerous guards around the prisoner’s house of
+                        confinement and communicated to him the news of his being at liberty to go
+                        wherever he likes. On the <date change="#d2e248 #d2e259" xml:id="date_13.d2e445" xml:lang="en">following day</date>
+                        <persName change="#d2e248 #d2e259" xml:id="persName_8.d2e448" xml:lang="en">Fuad P<choice change="#d2e248 #d2e259" xml:id="choice_3.d2e450" xml:lang="en">
+                                <am change="#d2e248 #d2e259" xml:id="am_1.d2e452" xml:lang="en">.</am>
+                                <ex change="#d2e248 #d2e259" xml:id="ex_1.d2e455" xml:lang="en">asha</ex>
+                            </choice></persName>
+                        <del change="#d2e248 #d2e259" xml:id="del_8.d2e459" xml:lang="en">w</del> while going for the prayer in the <placeName change="#d2e248 #d2e259" xml:id="placeName_4.d2e462" xml:lang="en">Great
+                            Mosque</placeName>, was very enthusiastically applauded &amp; cheered by
+                            <pb ed="print" facs="#facs_2_z1" n="2" change="#d2e248" xml:id="pb_2.d2e465"/>
+                        <del change="#d2e248 #d2e259" xml:id="del_9.d2e467" xml:lang="en">the thousands</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_4.d2e471" xml:lang="en">crowds</add> of people <del change="#d2e248 #d2e259" xml:id="del_10.d2e474" xml:lang="en">who assembled &amp; walked before &amp;
+                            after his</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_5.d2e477" xml:lang="en">mobbing his</add> carriage &amp; showing <del change="#d2e248 #d2e259" xml:id="del_11.d2e480" xml:lang="en">their</del> extreme
+                            <del change="#d2e248 #d2e259" xml:id="del_12.d2e483" xml:lang="en">joy for</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_6.d2e486" xml:lang="en">happiness at</add> his release<del change="#d2e248 #d2e259" xml:id="del_13.d2e490" xml:lang="en">, in every possible way</del>.
+                            <add change="#d2e248 #d2e259" xml:id="add_7.d2e493" xml:lang="en">Even inside the Mosque after the usual <add change="#d2e248 #d2e259" xml:id="add_7.d2e495" xml:lang="en">Friday</add> prayers he
+                            was surrounded &amp; his hand shaken or kissed by great numbers with
+                            much emotion. It is credible that had he not been set at liberty for the
+                                <date change="#d2e248 #d2e259" xml:id="date_14.d2e498" xml:lang="en">31st</date> being Friday some noisy <del change="#d2e248 #d2e259" xml:id="del_14.d2e501" xml:lang="en">demonstration</del>
+                            <add change="#d2e248 #d2e259" xml:id="add_8.d2e504" xml:lang="en">manifestation</add> w<choice change="#d2e248 #d2e259" xml:id="choice_4.d2e507" xml:lang="en">
+                                <am change="#d2e248 #d2e259" xml:id="am_2.d2e509" xml:lang="en">.</am>
+                                <ex change="#d2e248 #d2e259" xml:id="ex_2.d2e512" xml:lang="en">oul</ex>
+                            </choice>d have been called to protest against his detention.</add></p>
+                    <p change="#d2e248 #d2e259" xml:id="p_17.d2e518" xml:lang="en">On the evening of the <date change="#d2e248 #d2e259" xml:id="date_15.d2e520" xml:lang="en">31st ultimo</date> he attended the demonstration
+                        held in the <placeName change="#d2e248 #d2e259" xml:id="placeName_5.d2e523" xml:lang="en">Defterdar Garden</placeName> in honour of the
+                        Constitution and his presence there <del change="#d2e248 #d2e259" xml:id="del_15.d2e526" xml:lang="en">added very greatly
+                            to</del><add change="#d2e248 #d2e259" xml:id="add_10.d2e528" xml:lang="en">accentuated</add> the zeal and joy <del change="#d2e248 #d2e259" xml:id="del_16.d2e531" xml:lang="en">manifested
+                            by</del><add change="#d2e248 #d2e259" xml:id="add_11.d2e533" xml:lang="en">of</add> the <del change="#d2e248 #d2e259" xml:id="del_17.d2e537" xml:lang="en">public crowded in the garden</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_12.d2e540" xml:lang="en">crowd</add>. Most of the notables and chief officials have already
+                        called <del change="#d2e248 #d2e259" xml:id="del_18.d2e543" xml:lang="en">at</del> on <persName change="#d2e248 #d2e259" xml:id="persName_9.d2e546" xml:lang="en">Fuad Pasha</persName> in his house &amp;
+                        expressed sympathy. He will probably leave <placeName change="#d2e248 #d2e259" xml:id="placeName_6.d2e549" xml:lang="en">Damascus</placeName>
+                        for <placeName change="#d2e248 #d2e259" xml:id="placeName_7.d2e552" xml:lang="en">Cple.</placeName>
+                        <del change="#d2e248 #d2e259" xml:id="del_19.d2e556" xml:lang="en">by the end of this week</del> the <date change="#d2e248 #d2e259" xml:id="date_16.d2e559" xml:lang="en">6th</date> or <date change="#d2e248 #d2e259" xml:id="date_17.d2e562" xml:lang="en">7th
+                            inst.</date>
+                        <del change="#d2e248 #d2e259" xml:id="del_20.d2e565" xml:lang="en">&amp; meet his</del><add change="#d2e248 #d2e259" xml:id="add_13.d2e567" xml:lang="en">&amp; reunite his numerous</add> family
+                            <add change="#d2e248 #d2e259" xml:id="add_14.d2e570" xml:lang="en">of 12 sons &amp; 8 daughters</add>:<del change="#d2e248 #d2e259" xml:id="del_21.d2e574" xml:lang="en">for the last <del change="#d2e248 #d2e259" xml:id="del_21.d2e576" xml:lang="en">a</del> 3
+                            years his son aged <add change="#d2e248 #d2e259" xml:id="add_15.d2e579" xml:lang="en">13</add>aged 11 years old son has been boarding
+                            for the last 3 years in the local Idadie <add change="#d2e248 #d2e259" xml:id="add_16.d2e582" xml:lang="en">high</add> school &amp;
+                            permitted to visit his father a month, but <unclear change="#d2e248" xml:id="unclear_3.d2e585"/> on each occasion
+                            with a company here.</del><add change="#d2e248 #d2e259" xml:id="add_17.d2e587" xml:lang="en">During his stay here he had the society
+                            of one wife, two daughters and one son now 14 yrs. old.</add></p>
+                    <p change="#d2e248 #d2e259" xml:id="p_18.d2e590" xml:lang="en">Some of the foreign Consuls had called in the Friday afternoon, &amp; I
+                        arranged to visit him on the morning of the <date change="#d2e248 #d2e259" xml:id="date_18.d2e592" xml:lang="en">1st inst.</date> when I
+                        had the privilege of an affecting <pb ed="print" facs="#facs_2_z2" n="3" change="#d2e248" xml:id="pb_3.d2e595"/>interview, as
+                        he was still deeply moved by long suffering. Many visitors were present
+                        &amp; <add change="#d2e248 #d2e259" xml:id="add_18.d2e597" xml:lang="en">constantly</add> coming &amp; going, as also the <rs change="#d2e248 #d2e259" xml:id="rs_1.d2e600" xml:lang="en">Acting
+                            Russian Consul</rs> &amp; <rs change="#d2e248 #d2e259" xml:id="rs_2.d2e603" xml:lang="en">Russian Dragoman</rs> &amp;
+                            <del change="#d2e248 #d2e259" xml:id="del_23.d2e607" xml:lang="en">Ferik</del><add change="#d2e248 #d2e259" xml:id="add_19.d2e609" xml:lang="en">Liva</add>
+                        <persName change="#d2e248 #d2e259" xml:id="persName_10.d2e612" xml:lang="en">Husini Pasha</persName> of <del change="#d2e248 #d2e259" xml:id="del_24.d2e615" xml:lang="en">of</del>
+                        <del change="#d2e248 #d2e259" xml:id="del_25.d2e618" xml:lang="en">the Technical</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_20.d2e621" xml:lang="en">fortification <del change="#d2e248 #d2e259" xml:id="del_26.d2e623" xml:lang="en">works</del></add>Department &amp; various officers
+                        &amp; Ulema, many being known to H. Exy. of you. In the afternoon he
+                        returned my visit at the Consulate &amp; I understand is punctiliously
+                        returning as many visits of great &amp; small as possible. When I took
+                        leave, he courteously accompanied on a little way &amp; made profession to
+                        my private care of continued Anglophile sentiments.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_19.d2e627" xml:lang="en">On <date change="#d2e248 #d2e259" xml:id="date_19.d2e629" xml:lang="en">Sat. afternoon</date> I felt that I <choice change="#d2e248 #d2e259" xml:id="choice_5.d2e632" xml:lang="en">
+                            <abbr change="#d2e248 #d2e259" xml:id="abbr_3.d2e634" xml:lang="en">cd.</abbr>
+                            <expan change="#d2e248 #d2e259" xml:id="expan_3.d2e637" xml:lang="en">could</expan>
+                        </choice> not but let H<del change="#d2e248 #d2e259" xml:id="del_27.d2e641" xml:lang="en">im</del><add change="#d2e248 #d2e259" xml:id="add_21.d2e643" xml:lang="en">.</add> Exy. know that Hr. M.y has
+                        offered congratulations in the matter of the inestimable boon of the
+                        reestablished Constitution, &amp; trusted that <del change="#d2e248 #d2e259" xml:id="del_28.d2e646" xml:lang="en">recent <unclear change="#d2e248" xml:id="unclear_4.d2e648"/> wd.
+                            lead with a</del><add change="#d2e248 #d2e259" xml:id="add_22.d2e650" xml:lang="en">the</add> new departure may tend to better Gov.t
+                        &amp; true reforms in Turkey. <del change="#d2e248 #d2e259" xml:id="del_29.d2e654" xml:lang="en"><lb change="#d2e248" xml:id="lb_6.d2e655"/>I have etc.
+                                <persName change="#d2e248 #d2e259" xml:id="persName_11.d2e657" xml:lang="en">G.P.D.</persName></del><add change="#d2e248 #d2e259" xml:id="add_23.d2e659" xml:lang="en">The Marshal’s very
+                            outspoken opinions show that he abides by the well known liberal
+                            opinions professed throughout his career.</add></p>
+                    <byline change="#d2e248 #d2e259" xml:id="byline_1.d2e662" xml:lang="en">I have etc. <persName change="#d2e248 #d2e259" xml:id="persName_12.d2e664" xml:lang="en"><choice change="#d2e248 #d2e259" xml:id="choice_6.d2e665" xml:lang="en">
+                                <abbr change="#d2e248 #d2e259" xml:id="abbr_4.d2e667" xml:lang="en">G.P.D.</abbr>
+                                <expan change="#d2e248 #d2e259" xml:id="expan_4.d2e670" xml:lang="en">George Pollard Devey</expan>
+                            </choice></persName></byline>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus-33_19080912" xml:lang="en">
+        <teiHeader change="#d2e248 #d2e259" xml:id="teiHeader_3.d2e680" xml:lang="en">
+            <fileDesc change="#d2e248 #d2e259" xml:id="fileDesc_3.d2e682" xml:lang="en">
+                <titleStmt change="#d2e248 #d2e259" xml:id="titleStmt_3.d2e684" xml:lang="en">
+                    <title change="#d2e248 #d2e259" xml:id="title_3.d2e686" xml:lang="en">PRO FO 618/3 Damascus Draft 33, Devey to Lowther 12 Aug. 1908</title>
+                    <author change="#d2e248 #d2e259" xml:id="author_2.d2e689" xml:lang="en">George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt change="#d2e248 #d2e259" xml:id="publicationStmt_3.d2e693" xml:lang="en">
+                    <p change="#d2e248" xml:id="p_20.d2e695"/>
+                </publicationStmt>
+                <sourceDesc change="#d2e248 #d2e259" xml:id="sourceDesc_3.d2e698" xml:lang="en">
+                    <p change="#d2e248" xml:id="p_21.d2e700"/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <facsimile change="#d2e248" xml:id="facsimile_2.d2e705">
+            <surface xml:id="facs_3">
+                <graphic url="../../images/pro-fo/618-3/DSCN9862_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_3.d2e709"/>
+            </surface>
+            <surface xml:id="facs_4">
+                <graphic url="../../images/pro-fo/618-3/DSCN9863_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_4.d2e714"/>
+            </surface>
+            <surface xml:id="facs_5">
+                <graphic url="../../images/pro-fo/618-3/DSCN9864_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_5.d2e719"/>
+            </surface>
+            <surface xml:id="facs_6">
+                <graphic url="../../images/pro-fo/618-3/DSCN9865_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_6.d2e724"/>
+            </surface>
+        </facsimile>
+        <text change="#d2e248 #d2e259" xml:id="text_2.d2e728" xml:lang="en">
+            <body change="#d2e248 #d2e259" xml:id="body_2.d2e730" xml:lang="en">
+                <pb ed="print" facs="#facs_3" n="1" change="#d2e248" xml:id="pb_4.d2e732"/>
+                <div change="#d2e248 #d2e259" xml:id="div_2.d2e734" xml:lang="en">
+                    <head change="#d2e248 #d2e259" xml:id="head_2.d2e736" xml:lang="en">State of affairs in Damascus relating to the new Regime</head>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_4.d2e739" xml:lang="en">Damascus.<lb change="#d2e248" xml:id="lb_7.d2e741"/>August 12. 1908.</dateline>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_5.d2e744" xml:lang="en">Dft<lb change="#d2e248" xml:id="lb_8.d2e746"/>Sir G.A. Lowther<lb change="#d2e248" xml:id="lb_9.d2e748"/>Cple<lb change="#d2e248" xml:id="lb_10.d2e750"/>No. 33</dateline>
+                    <p change="#d2e248 #d2e259" xml:id="p_22.d2e753" xml:lang="en">Sir,<lb change="#d2e248" xml:id="lb_11.d2e755"/>with ref.ce to my <ref change="#d2e248 #d2e259" xml:id="ref_1.d2e757" xml:lang="en">des.ch No. 29 of the <date when="1908-08-03" change="#d2e248 #d2e259" xml:id="date_20.d2e759" xml:lang="en">3.rd ins.</date></ref> I have the honour
+                        to report <del change="#d2e248 #d2e259" xml:id="del_30.d2e762" xml:lang="en">some of the</del><add change="#d2e248 #d2e259" xml:id="add_24.d2e764" xml:lang="en">upon the more</add> interesting
+                        proceedings that took place here since that date
+                            <del change="#d2e248 #d2e259" xml:id="del_31.d2e767" xml:lang="en">respecting</del><add change="#d2e248 #d2e259" xml:id="add_25.d2e769" xml:lang="en">connected with</add> the new Constitutional
+                        movement.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_23.d2e773" xml:lang="en"><del change="#d2e248 #d2e259" xml:id="del_32.d2e774" xml:lang="en">The Many</del><del change="#d2e248 #d2e259" xml:id="del_33.d2e776" xml:lang="en"><add change="#d2e248 #d2e259" xml:id="add_26.d2e777" xml:lang="en">Loud</add></del> Popular demonstrations and
+                            <del change="#d2e248 #d2e259" xml:id="del_34.d2e780" xml:lang="en">happy</del><add change="#d2e248 #d2e259" xml:id="add_27.d2e782" xml:lang="en">great</add> manifestations <add change="#d2e248 #d2e259" xml:id="add_28.d2e785" xml:lang="en">of joy</add> with
+                        illuminations and street decorations <del change="#d2e248 #d2e259" xml:id="del_35.d2e788" xml:lang="en">have been going on in all the
+                            quarters of the city showing the utmost zeal and enthusiasm on the part
+                            of the public who hardly understand the situation or appreciate the
+                            foundation of their joy; but fortunately no</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_29.d2e791" xml:lang="en">throughout the city <del change="#d2e248 #d2e259" xml:id="del_36.d2e793" xml:lang="en">from</del> were continuous from the <date from="1908-07-31" to="1908-08-11" change="#d2e248 #d2e259" xml:id="date_21.d2e796" xml:lang="en">31st ult<choice change="#d2e248 #d2e259" xml:id="choice_7.d2e798" xml:lang="en"><am change="#d2e248 #d2e259" xml:id="am_3.d2e799" xml:lang="en">.</am><ex change="#d2e248 #d2e259" xml:id="ex_3.d2e801" xml:lang="en">im</ex></choice>o
+                            until yesterday</date>, some of them attended also by <del change="#d2e248 #d2e259" xml:id="del_37.d2e805" xml:lang="en">numerous
+                                masses</del>
+                            <add change="#d2e248 #d2e259" xml:id="add_29.d2e808" xml:lang="en">throngs</add> from neighbouring villages; though indeed few
+                                <add change="#d2e248 #d2e259" xml:id="add_30.d2e811" xml:lang="en">present</add> could have really appreciated at their true value
+                            the great privileges accorded. Happily scarcely a</add>
+                        <add change="#d2e248 #d2e259" xml:id="add_32.d2e816" xml:lang="en">slight</add> accident<del change="#d2e248 #d2e259" xml:id="del_38.d2e819" xml:lang="en">s</del> occurred, though
+                            <del change="#d2e248 #d2e259" xml:id="del_39.d2e822" xml:lang="en">with</del><del change="#d2e248 #d2e259" xml:id="del_40.d2e824" xml:lang="en">fearing</del> the excessive use of rifles +
+                        revolvers <del change="#d2e248 #d2e259" xml:id="del_41.d2e827" xml:lang="en">bullets was continuous</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_33.d2e830" xml:lang="en">was at first rather dangerous</add>; except that a bullet broke the
+                        tramway electric wire which fell on the mob &amp; the current killed three
+                        people &amp; <sic change="#d2e248 #d2e259" xml:id="sic_1.d2e834" xml:lang="en">injoured</sic>
+                        <del change="#d2e248 #d2e259" xml:id="del_42.d2e837" xml:lang="en">three</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_34.d2e840" xml:lang="en">two</add> others.</p><pb change="#d2e248" xml:id="pb_5.d2e843"/>
+                    <p change="#d2e248 #d2e259" xml:id="p_24.d2e846" xml:lang="en">Five general meetings were held in honour of the Constitution four of which
+                        in two public gardens attended by several thousands of spectators including
+                        the Vali and the three Mushirs now in Damascus, and one in a large theatre;
+                        these meetings were given by provisional societies, military and civil, and
+                        on each occasion more than a dozen speeches were delivered by various
+                        speakers of liberal views, which were almost without exception temperate and
+                        conducive to allay excitement.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_25.d2e849" xml:lang="en">Army officers started a club under the name of ‘<orgName change="#d2e248 #d2e259" xml:id="orgName_1.d2e851" xml:lang="en">Liberty</orgName>’
+                        and inaugurated it on the <date change="#d2e248 #d2e259" xml:id="date_22.d2e854" xml:lang="en">10th instant</date>; one of the conditions
+                        for joining the club being supporting the Constitution; and the membership
+                        may be granted to worthy civilians also. The members amount now to more than
+                        a hundred officers who joined in the last two days.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_26.d2e858" xml:lang="en">The liberal civilians are now forming another club with nearly similar
+                        conditions as those of the <pb change="#d2e248" xml:id="pb_6.d2e860"/> of the “<orgName change="#d2e248 #d2e259" xml:id="orgName_2.d2e862" xml:lang="en">Liberty Club</orgName>”
+                        and undoubtedly most of the chief notables will join it.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_27.d2e866" xml:lang="en">No serious steps have been taken as yet on any side towards the elections for
+                        the Parliament but the clubs above mentioned intend to give their influence
+                        for the choice of competent persons who are not yet indicated.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_28.d2e869" xml:lang="en">The <orgName change="#d2e248 #d2e259" xml:id="orgName_3.d2e871" xml:lang="en">Union &amp; Progress Society</orgName>, whose individual members
+                        can only be conjectend [?] vaguely here, is practically directed[?], the
+                        Government gestation, military and administration in a prudent and energetic
+                        way. The Vali at the Society’s demand began on the <date change="#d2e248 #d2e259" xml:id="date_23.d2e874" xml:lang="en">10th instant</date>
+                        to dismiss or compel resignation of corrupt and mischievous officials such
+                        as the the Chief of Police <persName change="#d2e248 #d2e259" xml:id="persName_13.d2e877" xml:lang="en">Oman Jamal</persName>, <persName change="#d2e248 #d2e259" xml:id="persName_14.d2e880" xml:lang="en">Said
+                            Effendi Banna</persName>, the Muhassebji, the Caim.ms of
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_8.d2e883" xml:lang="en">Douma</placeName>, <placeName change="#d2e248 #d2e259" xml:id="placeName_9.d2e887" xml:lang="en">Zibadan</placeName> &amp;
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_10.d2e890" xml:lang="en">Dera’a</placeName> Cazas, the last being a cousin of
+                            <persName change="#d2e248 #d2e259" xml:id="persName_15.d2e893" xml:lang="en">Izzet Pasha</persName>. The Alai Bey of Gendarmerie is also
+                        likely to be dismissed with a particularly corrupt <persName change="#d2e248 #d2e259" xml:id="persName_16.d2e896" xml:lang="en">Major Ahmed
+                            Bey</persName> of the Zaptiehs and several other functionaries of ill
+                        repute will be in similar case [?], for the <pb change="#d2e248" xml:id="pb_7.d2e899"/> the society intend to
+                        improve the government departments gradually so as to replace the old
+                        corrupt system by a new hones set of officials who are not to be found at
+                        once.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_29.d2e902" xml:lang="en">There is some discontent on the part of the ulema and certain leaders in town
+                        for the <orgName change="#d2e248 #d2e259" xml:id="orgName_4.d2e904" xml:lang="en">Union &amp; Progress Society</orgName>, is going forward in
+                        its own way and removing officials without consulting them, but there seem
+                        no reason to fear that such discontent might provoke any substantial
+                        resistance, at present.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_30.d2e909" xml:lang="en"><persName change="#d2e248 #d2e259" xml:id="persName_17.d2e910" xml:lang="en">Izzet Pasha</persName>’s partisans and creatures here are not few,
+                        but, having the public sentiments against them, they are rather afraid for
+                        their own safety and trying to gain as many liberal friends as possible.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_31.d2e914" xml:lang="en">It is a good <sic change="#d2e248 #d2e259" xml:id="sic_2.d2e916" xml:lang="en">things</sic> that the demonstrations &amp; calling together
+                        of crowds are now at an end for it is evident that the loss of the <pb change="#d2e248" xml:id="pb_8.d2e919"/>
+                        prestige o the government and the palpable decrease of its influence might
+                        easily afford an opportunity for malcontents to provoke disturbance and
+                        cause trouble in order to show the bad results of the liberal views.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_32.d2e922" xml:lang="en">It is true that there are no symptoms of animosity here between Moslems and
+                        Christians but, as is always the case when the government power relaxes and
+                        the public order endangered the weaker element would be the actual sufferer.
+                        For this reason the Christians and Jews here rather felt a certain amount of
+                        anxiety during the last fortnight, but the liberal chiefs among Moslems have
+                        been all the time preaching equality and emphasising the necessity of order
+                        and good behaviour.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_33.d2e925" xml:lang="en">As to the effect of promulgating the constitution in the other towns of this
+                        Vilayet, very little can be said, for the people of the <pb change="#d2e248" xml:id="pb_9.d2e927"/>
+                        <placeName change="#d2e248 #d2e259" xml:id="placeName_11.d2e929" xml:lang="en">Hauran</placeName> and <placeName change="#d2e248 #d2e259" xml:id="placeName_12.d2e932" xml:lang="en">Kerak</placeName> Sanjak are
+                        too ignorant to appreciate the difference between autocratic and
+                        constitutional government” […]</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_34.d2e936" xml:lang="en"><del change="#d2e248 #d2e259" xml:id="del_43.d2e937" xml:lang="en"> In conclusion, I might add here that a pessimistic observer does not
+                            fail to see some faint reasons for anxiety in Damascus and would, but
+                            not without hesitation, foretell the rise of antagonistic parties who
+                            might deal with each other corporally and endanger the public security.
+                            The garrison of the town, I am sorry to say, is rather too small to cope
+                            with such emergencies if they would ever come to action </del>
+                        <add change="#d2e248 #d2e259" xml:id="add_35.d2e940" xml:lang="en">Trouble so easily arises out of small incidents, e.g. the Bab Tuma
+                            tumult (v. No. 30 of Aug 2/07[?]) or again the death of a policeman in
+                            1902 that one cannot but feel some slight uneasiness without being
+                            unduly pessimistic. Then again the conditions of the city are very
+                            dissimilar from those of most others, in having here great notables of
+                            various classes, races, &amp; ideas, accustomed to influence and power;
+                            and there is a <pb change="#d2e248" xml:id="pb_10.d2e942"/>
+                        </add> new element in the presence of the <orgName change="#d2e248 #d2e259" xml:id="orgName_5.d2e945" xml:lang="en">Hamidiyye
+                            troops</orgName> still in temporary camp here the wide +rambling extent
+                        of the town with the relative fewness of troops in garrison, so many being
+                        employed in the <orgName change="#d2e248 #d2e259" xml:id="orgName_6.d2e948" xml:lang="en">Hejaz railway</orgName> construction, do not concur
+                        to allay such apprehension, at a moment when local police are likely to be
+                        called to a reckoning as in general more or less corrupt + inefficient.</p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader change="#d2e248 #d2e259" xml:id="teiHeader_4.d2e958" xml:lang="en">
+            <fileDesc change="#d2e248 #d2e259" xml:id="fileDesc_4.d2e960" xml:lang="en">
+                <titleStmt change="#d2e248 #d2e259" xml:id="titleStmt_4.d2e962" xml:lang="en">
+                    <title change="#d2e248 #d2e259" xml:id="title_4.d2e964" xml:lang="en">PRO FO 618/3 Damascus 51 draft, General Report for September Quarter,
+                        Devey to Lowther 1 Oct. 1908</title>
+                    <author change="#d2e248 #d2e259" xml:id="author_3.d2e967" xml:lang="en">George Pollard Devey</author>
+                </titleStmt>
+                <publicationStmt change="#d2e248 #d2e259" xml:id="publicationStmt_4.d2e971" xml:lang="en">
+                    <p change="#d2e248" xml:id="p_35.d2e973"/>
+                </publicationStmt>
+                <sourceDesc change="#d2e248 #d2e259" xml:id="sourceDesc_4.d2e976" xml:lang="en">
+                    <p change="#d2e248" xml:id="p_36.d2e978"/>
+                </sourceDesc>
+            </fileDesc>
+        </teiHeader>
+        <facsimile change="#d2e248" xml:id="facsimile_3.d2e983">
+            <surface xml:id="facs_7">
+                <graphic url="../../images/pro-fo/618-3/DSCN9840_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_7.d2e987"/>
+            </surface>
+            <surface xml:id="facs_8">
+                <graphic url="../../images/pro-fo/618-3/DSCN9841_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_8.d2e992"/>
+            </surface>
+            <surface xml:id="facs_9">
+                <graphic url="../../images/pro-fo/618-3/DSCN9842_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_9.d2e997"/>
+            </surface>
+            <surface xml:id="facs_10">
+                <graphic url="../../images/pro-fo/618-3/DSCN9843_150dpi.jpg" mimeType="image/jpeg" change="#d2e248" xml:id="graphic_10.d2e1002"/>
+            </surface>
+        </facsimile>
+        <text change="#d2e248 #d2e259" xml:id="text_3.d2e1006" xml:lang="en">
+            <body change="#d2e248 #d2e259" xml:id="body_3.d2e1008" xml:lang="en">
+                <div change="#d2e248 #d2e259" xml:id="div_3.d2e1010" xml:lang="en">
+                    <pb ed="print" n="1" change="#d2e248" xml:id="pb_11.d2e1012"/>
+                    <head change="#d2e248 #d2e259" xml:id="head_3.d2e1014" xml:lang="en">General Report for September Quarter</head>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_6.d2e1017" xml:lang="en">Damascus<lb change="#d2e248" xml:id="lb_12.d2e1019"/>October 1. 1908.</dateline>
+                    <dateline change="#d2e248 #d2e259" xml:id="dateline_7.d2e1022" xml:lang="en">Dft<lb change="#d2e248" xml:id="lb_13.d2e1024"/>Sir G.A. Lowther<lb change="#d2e248" xml:id="lb_14.d2e1026"/>Cple<lb change="#d2e248" xml:id="lb_15.d2e1028"/>No. 51</dateline>
+                    <p change="#d2e248 #d2e259" xml:id="p_37.d2e1031" xml:lang="en">Sir,<lb change="#d2e248" xml:id="lb_16.d2e1033"/>I have the honour to submit herwith <del change="#d2e248 #d2e259" xml:id="del_44.d2e1035" xml:lang="en">my</del><add change="#d2e248 #d2e259" xml:id="add_36.d2e1037" xml:lang="en">a</add>
+                        general report <del change="#d2e248 #d2e259" xml:id="del_45.d2e1040" xml:lang="en">for</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_37.d2e1043" xml:lang="en">on events during</add> the last quarter.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_38.d2e1048" xml:lang="en"> The great ‘coup d’Etat’ which took place in <placeName change="#d2e248 #d2e259" xml:id="placeName_13.d2e1050" xml:lang="en">Turkey</placeName> on
+                        the <date when="1908-07-24" change="#d2e248 #d2e259" xml:id="date_24.d2e1053" xml:lang="en">24th July</date> occupied all minds and <del change="#d2e248 #d2e259" xml:id="del_46.d2e1056" xml:lang="en">engaged</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_38.d2e1059" xml:lang="en">aroused</add> every emotion with the proclamation of the Constitution,
+                        in <placeName change="#d2e248 #d2e259" xml:id="placeName_14.d2e1062" xml:lang="en">Damascus</placeName> as in all other important centres in the
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_15.d2e1066" xml:lang="en">Empire</placeName>. <del change="#d2e248 #d2e259" xml:id="del_47.d2e1069" xml:lang="en">The chief <unclear change="#d2e248" xml:id="unclear_5.d2e1071"/> interests</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_39.d2e1074" xml:lang="en">Among its results worthy of remark</add> here <del change="#d2e248 #d2e259" xml:id="del_48.d2e1077" xml:lang="en">during this
+                            time</del> were <list change="#d2e248 #d2e259" xml:id="list_1.d2e1080" xml:lang="en">
+                            <item change="#d2e248 #d2e259" xml:id="item_1.d2e1082" xml:lang="en">(a) celebrations and festivities</item>
+                            <item change="#d2e248 #d2e259" xml:id="item_2.d2e1085" xml:lang="en">(b) dismissal or <del change="#d2e248 #d2e259" xml:id="del_49.d2e1087" xml:lang="en">withdrawal</del><add change="#d2e248 #d2e259" xml:id="add_40.d2e1089" xml:lang="en">resignation</add> of
+                                notoriously corrupt officials</item>
+                            <item change="#d2e248 #d2e259" xml:id="item_3.d2e1093" xml:lang="en">(c) formation of clubs and associations</item>
+                            <item change="#d2e248 #d2e259" xml:id="item_4.d2e1096" xml:lang="en">(d) parliamentary elections</item>
+                            <item change="#d2e248 #d2e259" xml:id="item_5.d2e1099" xml:lang="en">(e) reforms in various governmental departments.</item>
+                            <item change="#d2e248 #d2e259" xml:id="item_6.d2e1103" xml:lang="en">(f) release or <del change="#d2e248" xml:id="del_50.d2e1105"><unclear change="#d2e248" xml:id="unclear_6.d2e1106"/></del><add change="#d2e248 #d2e259" xml:id="add_41.d2e1107" xml:lang="en">rehabilitation</add>
+                                <add change="#d2e248 #d2e259" xml:id="add_42.d2e1110" xml:lang="en"><del change="#d2e248 #d2e259" xml:id="del_51.d2e1111" xml:lang="en">made to</del> of political exiles or persons</add></item>
+                        </list></p>
+                    <p change="#d2e248 #d2e259" xml:id="p_39.d2e1116" xml:lang="en">Rejoicings and joyful manifestation <del change="#d2e248 #d2e259" xml:id="del_52.d2e1118" xml:lang="en">came now</del>
+                        <add change="#d2e248 #d2e259" xml:id="add_43.d2e1121" xml:lang="en">are only coming now</add> to an end, after lasting more than two
+                        months: more than <add change="#d2e248 #d2e259" xml:id="add_44.d2e1124" xml:lang="en">25 well organized</add> great meetings were held int
+                        he different quarters of the<pb ed="print" n="2" change="#d2e248" xml:id="pb_12.d2e1127"/> city, mostly attended by several
+                        thousands demonstrators and spectators, and hundreds of speeches were
+                        delivered, all condemning autocracy as despotic &amp; tyrannical and
+                        eulogizing liberty and constitutional government. About £2000 were spent on
+                        the festivities and had not notables of <placeName change="#d2e248 #d2e259" xml:id="placeName_16.d2e1129" xml:lang="en">Damascus</placeName> with
+                        the <orgName change="#d2e248 #d2e259" xml:id="orgName_7.d2e1133" xml:lang="en">young Turks</orgName> lately recommended their cessation they
+                        might have continued for another month or more. It is to be remarked with
+                        pleasure that all these gathering &amp; demonstrations were conducted most
+                        orderly without any dispute or ill feeling among those who assembled.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_40.d2e1137" xml:lang="en">Many corrupt officials were either dismissed or withdrew themselves.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_41.d2e1140" xml:lang="en">The Alaybey of Gendarmerie, the Chief of Police, the Muhassebeji, six
+                        Caimacams of Cazas, <persName change="#d2e248 #d2e259" xml:id="persName_18.d2e1142" xml:lang="en">Moh.d P. Adm</persName> of <orgName change="#d2e248 #d2e259" xml:id="orgName_8.d2e1145" xml:lang="en">Idara
+                            Mejliss</orgName> with about 30 other minor officials vacated their
+                        posts, mostly to the general satisfaction of the public and it is debated
+                        now among ‘<orgName change="#d2e248 #d2e259" xml:id="orgName_9.d2e1148" xml:lang="en">Young Turkey</orgName>’ adherents whether it would be
+                        right to punish the officials who were led to bribery by the littleness of
+                        their pay &amp; its frequent irregularity. Doubtless the proper course will
+                        be followed in leaving this matter to the jurisdiction <pb change="#d2e248" xml:id="pb_13.d2e1151"/> of Parliament
+                        when it assembles, and the ignorious[?] dismissal of the more corrupt,
+                        rapacious &amp; outrageous among officials suffices for the moment.
+                        Moreover, the vacancies are not being easily filled up by really good
+                        substitutes, for such persons are at present rare, and often unwilling to
+                        serve. </p>
+                    <p change="#d2e248 #d2e259" xml:id="p_42.d2e1154" xml:lang="en">Damascus Clubs &amp; associations, besides the <orgName change="#d2e248 #d2e259" xml:id="orgName_10.d2e1156" xml:lang="en">Union &amp;
+                            Progress</orgName> number now five viz <orgName change="#d2e248 #d2e259" xml:id="orgName_11.d2e1159" xml:lang="en">Hurriyet</orgName>,
+                            <orgName change="#d2e248 #d2e259" xml:id="orgName_12.d2e1162" xml:lang="en">Ulema</orgName>, <orgName change="#d2e248 #d2e259" xml:id="orgName_13.d2e1165" xml:lang="en">Medical</orgName>,
+                            <orgName change="#d2e248 #d2e259" xml:id="orgName_14.d2e1168" xml:lang="en">Commercial</orgName>, <orgName change="#d2e248 #d2e259" xml:id="orgName_15.d2e1172" xml:lang="en">Free Ottoman</orgName> besides a
+                            <orgName change="#d2e248 #d2e259" xml:id="orgName_16.d2e1175" xml:lang="en">Shoemaker</orgName> guild. the first two are showing much
+                        activity wh.[ich] is likely to excite mutation . The misapprehension &amp;
+                        with uncalled solicitude <orgName change="#d2e248 #d2e259" xml:id="orgName_17.d2e1178" xml:lang="en">Ulema</orgName> are anxious to
+                            <sic change="#d2e248 #d2e259" xml:id="sic_3.d2e1181" xml:lang="en">comcure</sic> &amp; uphold Islam against the liberal views of the
+                            <orgName change="#d2e248 #d2e259" xml:id="orgName_18.d2e1184" xml:lang="en">Young Turks</orgName>, while the latter have no intention at
+                        present to interfere with religious precepts. The first point of dispute was
+                        about women’s wear which the Ulema wanted to be cut on a very simple mode,
+                        one piece enveloping the whole body, and the liberals denied them the right
+                        of interfering with this matter which should be regarded as pertaining to
+                        individual free choice. In this campaign the Ulema were defeated but not
+                        without their rivals using threats of applying force.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_43.d2e1188" xml:lang="en">There is little record as to practical work effected [?] by other clubs
+                        though their moral influence cannot be other than good.</p>
+                    <pb change="#d2e248" xml:id="pb_14.d2e1192"/>
+                    <p change="#d2e248 #d2e259" xml:id="p_44.d2e1194" xml:lang="en">The Parliamentary elections are under preparation the last two months and in
+                        some cazas the voters have already voted for the electors, but in
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_17.d2e1196" xml:lang="en">Damascus</placeName> city this process will begin in a week’s
+                        time. It is not even announced yet how many deputies will represent this
+                        Vilayet in the Parliament but it is supposed that they will be seven or
+                        eight. The <placeName change="#d2e248 #d2e259" xml:id="placeName_18.d2e1199" xml:lang="en">Hauran</placeName> people still reject their privilege
+                        to elect a deputy and the efforts of the government in dissuading them from
+                        this self-inflicted loss seem to be futile. The Mutessarif of
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_19.d2e1202" xml:lang="en">Kerak</placeName> lately resigned on grounds of health, but
+                        before doing so had been able to set going a local society or club for
+                        instruction of the people of his district who indeed are little less
+                        backward &amp;ignorant than this of <placeName change="#d2e248 #d2e259" xml:id="placeName_20.d2e1205" xml:lang="en">Hauran</placeName>.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_45.d2e1209" xml:lang="en">The reforms in the various departments of the government proceed slowly. The
+                            <orgName change="#d2e248 #d2e259" xml:id="orgName_19.d2e1211" xml:lang="en">Municipality</orgName> suppressed most improperly awarded
+                        pensions paid to persons doing nothing for it and succeeded in amassing
+                        about £3000 through various economies. The <orgName change="#d2e248 #d2e259" xml:id="orgName_20.d2e1214" xml:lang="en">Public Instruction
+                            Department</orgName> formed a new chamber to consider the reorganization
+                        of the educational system in this Vilayet. In the departments no special
+                        reforms worth mentioning have been introduced but many are being talked of
+                        &amp; discussed. </p>
+                    <p change="#d2e248 #d2e259" xml:id="p_46.d2e1218" xml:lang="en">The political exiles who had been releases or rehabilitated included many
+                        persons of rank, both military and civil. <persName change="#d2e248 #d2e259" xml:id="persName_19.d2e1220" xml:lang="en">Mushir Fuad
+                            Pasha</persName>’s release was the occasion of great demonstrations in
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_21.d2e1223" xml:lang="en">Damascus</placeName>, but the rehabilitation of others, with
+                        a few exceptions, was not publicly noticed, for this disgraces persons were
+                        always enjoying personal freedom <pb change="#d2e248" xml:id="pb_15.d2e1226"/> and a very few persons knew that they
+                        were ‘Ikamet Mamours’ [iqāma maʾmūr]. The chief names among these were,
+                            <persName change="#d2e248 #d2e259" xml:id="persName_20.d2e1228" xml:lang="en">Nouri P.</persName> Ferik of Cavalry, another Ferik called
+                            <persName change="#d2e248 #d2e259" xml:id="persName_21.d2e1231" xml:lang="en">Nouri Pasha</persName> sent to live here without duties,
+                            <persName change="#d2e248 #d2e259" xml:id="persName_22.d2e1235" xml:lang="en">Ferik Ibrahim Pasha</persName> (those three Feriks kept for
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_22.d2e1238" xml:lang="en">Constantinople</placeName>), <persName change="#d2e248 #d2e259" xml:id="persName_23.d2e1241" xml:lang="en">Ferik Lt. Osman
+                            P.</persName>, <persName change="#d2e248 #d2e259" xml:id="persName_24.d2e1244" xml:lang="en">Liva Behjet Pasha</persName> (those two died
+                        recently), <persName change="#d2e248 #d2e259" xml:id="persName_25.d2e1247" xml:lang="en">Colonel Bedri Bey</persName> (now of <persName change="#d2e248 #d2e259" xml:id="persName_26.d2e1250" xml:lang="en">Liva
+                            Bedri P.</persName> in <placeName change="#d2e248 #d2e259" xml:id="placeName_23.d2e1254" xml:lang="en">Constantinople</placeName>). The
+                        Maàriz Mushiri [?] &amp; his assistant, and many minor officials or private
+                        persons; such as members of the <persName change="#d2e248 #d2e259" xml:id="persName_27.d2e1257" xml:lang="en">Bedr Khan</persName> family,
+                        numbering more than a hundred. Further as reported in <ref change="#d2e248 #d2e259" xml:id="ref_2.d2e1260" xml:lang="en">desp. No.
+                            32</ref>, the Ismailians subjected to religious persecution were
+                        pardoned. Happily no sort of disorder or riotous intention was displayed
+                        here for the purpose of releasing prisoners and ordinary criminals
+                        generally, as took place in some other places.”</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_47.d2e1264" xml:lang="en">Ḥijāz railway was completed in seven years and inaugurated on 1 Sep 1908.
+                        four of the five battalions employed for earthworks on the line were allowed
+                        to return to their garrisons. </p>
+                    <p change="#d2e248 #d2e259" xml:id="p_48.d2e1267" xml:lang="en">“about 1400 of these battalions on expiry of service were disbanded.
+                        Moreover, the four battalions of the <orgName change="#d2e248 #d2e259" xml:id="orgName_21.d2e1269" xml:lang="en">40th Reg</orgName>, sent to
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_24.d2e1272" xml:lang="en">Medina</placeName> from this Army Corps in <date change="#d2e248 #d2e259" xml:id="date_25.d2e1275" xml:lang="en">June
+                            last</date>, to guard the line, are also ordered back to their
+                        headquarters. At present only two battalions are to be kept there to take
+                        care of the line as regards repairs &amp; protection.” No aspirations to
+                        commence construction beyond Medina due to increasing Bedouin raids
+                        <pb change="#d2e248" xml:id="pb_16.d2e1278"/></p>
+                    <p change="#d2e248 #d2e259" xml:id="p_49.d2e1281" xml:lang="en">“Public security in the Vilayet has been during the quarter satisfactory and
+                        order was properly kept. The Bedouins have been quiet &amp; peaceful during
+                        the summer, and only on two or three occasions made petty rais &amp; drove
+                        or carried away animals or goods but the spoils were restored to their
+                        owners without great difficulties.” Druze and Bedouins seem under the spell
+                        of the government and calmly wait for the implementation of the promised
+                        reforms</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_50.d2e1284" xml:lang="en">“the crops this year were in general very good and the grain harvest in most
+                        of the districts of the Province was exceptionally abundant. The apricot
+                        produce was above the average while walnuts were much below. All prices of
+                        fruit and cereals are still high and the peasants this year will do well. An
+                        exception might be mentioned as <pb change="#d2e248" xml:id="pb_17.d2e1286"/> as regards locusts which made a
+                        perceptible damage in the <placeName change="#d2e248 #d2e259" xml:id="placeName_25.d2e1288" xml:lang="en"><placeName change="#d2e248 #d2e259" xml:id="placeName_25.d2e1289" xml:lang="en">Kalamoun</placeName>
+                            district</placeName> but had a very slight effect in some other Cazas.
+                        But the loss to the Vilayet in general has been small.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_51.d2e1294" xml:lang="en">As respects trade, no special remarks need be made; strikes at
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_27.d2e1296" xml:lang="en">Beirut</placeName> at the Customs and on local railways have
+                        produced only exiguous loss here. With reference to the latter we may note
+                        that public opinion judges that the smaller employés were underpaid, while
+                        the profits of the Company &amp; of its directors were considerable and the
+                        public at the same time ill served.</p>
+                    <p change="#d2e248 #d2e259" xml:id="p_52.d2e1300" xml:lang="en">Public health has been satisfactory on the whole this summer, but the
+                            <placeName change="#d2e248 #d2e259" xml:id="placeName_28.d2e1302" xml:lang="en">Ain Fijeh</placeName> water has not been received the general
+                        approbation anticipated which is to be regretted, as theres is absolute
+                        proof the it is the best &amp; purest spring water of al this neighbourhood.
+                        Its distribution to all quarters of the city proceeds slowly.”</p>
+                </div>
+            </body>
+        </text>
+    </TEI>
+</teiCorpus>

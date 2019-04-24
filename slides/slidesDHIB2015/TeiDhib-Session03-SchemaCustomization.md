@@ -2,7 +2,7 @@
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # Customising the TEI
 
@@ -21,10 +21,10 @@ We will cover: <!-- check these claims against the final syllabus -->
 - Each module contains a number of *element specifications*
 - Each element specification contains:
     + a canonical name (`<gi>`) for the element, and optionally other names in other languages
-    + a canonical description (also possibly translated) of its function 
+    + a canonical description (also possibly translated) of its function
     + a declaration of the *classes* to which it belongs
-    + a definition for each of its *attributes* 
-    + a definition of its *content model* 
+    + a definition for each of its *attributes*
+    + a definition of its *content model*
     + usage examples and notes
 - a TEI *schema* specification (`<schemaSpec>`) is made by selecting modules or elements and (optionally) modifying their contents
 - a TEI document containing a schema specification is called an *ODD* (One Document Does it all)
@@ -74,19 +74,19 @@ Here comes <hi style="color:red">Roma</hi> acommand line script,with a web front
 
 # Roma: design a new schema
 
-![Screen shot of Roma](images/ScreenShot-Roma1.png)
+![Screen shot of Roma](../images/ScreenShot-Roma1.png)
 
 # Roma: customise
 
-![Screen shot of Roma](images/ScreenShot-Roma2.png)
+![Screen shot of Roma](../images/ScreenShot-Roma2.png)
 
 # Roma: schema
 
-![Screen shot of Roma](images/ScreenShot-Roma3.png)
+![Screen shot of Roma](../images/ScreenShot-Roma3.png)
 
 # Roma: documentation
 
-![Screen shot of Roma](images/ScreenShot-Roma4.png)
+![Screen shot of Roma](../images/ScreenShot-Roma4.png)
 
 # What did we just do?
 
@@ -121,11 +121,11 @@ We selected four modules, deleted loads of elements, and also deleted an attribu
 
 # Roma: select modules
 
-![Screen shot of Roma](images/ScreenShot-Roma5.png)
+![Screen shot of Roma](../images/ScreenShot-Roma5.png)
 
 # Roma: edit modules
 
-![Screen shot of Roma](images/ScreenShot-Roma6.png)
+![Screen shot of Roma](../images/ScreenShot-Roma6.png)
 
 # What do we need for our newspapers?
 
@@ -143,7 +143,7 @@ We can express these constraints in our ODD meta-schema, and then generate a for
 
 - TEI schemas can be generated in
     + ISO RELAX NG language
-    + W3C Schema Language 
+    + W3C Schema Language
     + XML DTD language
 - ODD itself defines an element's content models using a subset of RELAX NG syntax
 - Datatypes are defined in terms of W3C datatypes
@@ -152,15 +152,15 @@ We can express these constraints in our ODD meta-schema, and then generate a for
 
 # Roma: select attributes
 
-![Screen shot of Roma](images/ScreenShot-Roma7.png)
+![Screen shot of Roma](../images/ScreenShot-Roma7.png)
 
 # Roma: constrain attribute values
 
-![Screen shot of Roma](images/ScreenShot-Roma8.png)
+![Screen shot of Roma](../images/ScreenShot-Roma8.png)
 
 # What did we just do?
 
-Our ODD now includes something like this: 
+Our ODD now includes something like this:
 
     <elementSpec ident="div" mode="change" module="textstructure">
         <attList>
@@ -199,8 +199,8 @@ The TEI class system helps us answer all these questions (except the first).
 
 - The TEI distinguishes over 500 elements,
 - Having these organised into classes aids comprehension, modularity, and modification.
-- *Attribute class*: the members share common attributes 
-- *Model class*: they can appear in the same locations (and are often semantically related) 
+- *Attribute class*: the members share common attributes
+- *Model class*: they can appear in the same locations (and are often semantically related)
 - Classes may contain other classes
 - An element can be a member of any number of classes, irrespective of the module it belongs to.
 
@@ -222,11 +222,11 @@ All elements are usually members of att.global; this class provides, among other
 # Model Classes
 
 - Model classes contain groups of elements which are allowed in the same place. e.g. if you are adding an element which is wanted wherever the `<bibl>` is allowed, add it to the `model.biblLike` class
-- Model classes are usually named with a *Like* or *Part* suffix: 
-    + members of `model.pLike` are all things that ‘behave like’ paragraphs, and are permitted in the same places as paragraphs 
+- Model classes are usually named with a *Like* or *Part* suffix:
+    + members of `model.pLike` are all things that 'behave like' paragraphs, and are permitted in the same places as paragraphs
     + members of `model.pPart` are all things which can appear within paragraphs. This class is subdivided into
         * `model.pPart.edit` elements for simple editorial intervention such as `<corr>`, `<del>` etc.
-        * `model.pPart.data` ‘data-like’ elements such as `<name>`, `<num>`, `<date>` etc.
+        * `model.pPart.data` 'data-like' elements such as `<name>`, `<num>`, `<date>` etc.
         * `model.pPart.msdesc` extra elements for manuscript description such as `<seal>` or `<origPlace>`
 
 
@@ -238,7 +238,7 @@ Simplifying wildly, one may say that the TEI recognises three kinds of element:
 - chunks: elements such as paragraphs appearing within texts or divisions, but not other chunks
 - phrase-level elements: elements such as highlighted phrases which can occur only within chunks
 
-There are ‘base model classes’ corresponding with each of these, and also with the following groupings:
+There are 'base model classes' corresponding with each of these, and also with the following groupings:
 
 - inter-level elements: elements such as lists which can appear either in or between chunks
 - components: elements which can appear directly within texts or text divisions
@@ -251,7 +251,7 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 # Defining a new element
 
 - What other elements is it like?
-- What other elements can contain it? 
+- What other elements can contain it?
 - What can it contain?
 - Conclusions:
     + What model do we select?
@@ -259,16 +259,16 @@ And yes, there is a class `model.global` for elements that can appear anywhere i
 
 # Roma: Defining a new element
 
-![Screen shot of Roma](images/ScreenShot-Roma9.png)
+![Screen shot of Roma](../images/ScreenShot-Roma9.png)
 
 # Defining a content model
 
 - A typical TEI element defines its content by referencing classes of element which it can contain, rather than using specific elements.
-- Content models are defined using the RELAXNG vocabulary 
-- Here are some very common predefined content models: 
+- Content models are defined using the RELAXNG vocabulary
+- Here are some very common predefined content models:
     + macro.paraContent content of paragraphs and similar elements
-    + macro.limitedContent content of prose elements that are not used for transcription of extant materials 
-    + macro.phraseSeq a sequence of character data and phrase-level elements 
+    + macro.limitedContent content of prose elements that are not used for transcription of extant materials
+    + macro.phraseSeq a sequence of character data and phrase-level elements
     + macro.phraseSeq.limited a sequence of character data and those phrase-level elements that are not typically used for transcribing extant documents
     + macro.specialPara the content model of elements which either contain a series of component-level elements or else contain a series of phrase-level elements
 
@@ -285,7 +285,7 @@ We added a new element specification to our ODD, like this:
             <memberOf key="att.typed"/>
         </classes>
         <content>
-            <rng:ref name="someThing"/> 
+            <rng:ref name="someThing"/>
             <rng:oneOrMore>
                 <rng:ref name="model.pLike"/>
             </rng:oneOrMore>
@@ -298,11 +298,11 @@ Note that this new element is not in the TEI namespace. It belongs to this speci
 
 - You can also constrain the content of an element or the value of an attribute to be of a particular datatype (for example, to insist that the @when attribute of the element `<date>` contains only a date)
 - This can be done by using one of a set of predefined macros to define the content. Examples include
-    + `data.word` a single word or token 
+    + `data.word` a single word or token
     + `data.name` an XML Name
     + `data.enumerated` a single XML name taken from a documented list
-    + `data.temporal.w3c` a W3C date 
-    + `data.truthValue` a truth value (true/false) 
+    + `data.temporal.w3c` a W3C date
+    + `data.truthValue` a truth value (true/false)
     + `data.language` a human language
     + `data.sex` human or animal sex
 - Or you can define a more complex constraint, e.g. using

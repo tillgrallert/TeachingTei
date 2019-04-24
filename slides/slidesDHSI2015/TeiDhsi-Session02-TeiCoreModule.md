@@ -8,45 +8,45 @@ author: Till Grallert
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.
 
-Slides were produced using [MultiMarkDown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
 
 # Manuscripts:
 
-![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-draft.png)
+![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-draft.png)
 
 --------------------
 
-![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](images/quarterly-report-1908-typed.jpg)
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-typed.jpg)
 
 # Postcards
 
-![Postcard, Damascus to Istanbul, 27 Sep 1916](images/postcard-ottoman2.png)
+![Postcard, Damascus to Istanbul, 27 Sep 1916](../images/postcard-ottoman2.png)
 
-![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
 
 ---------------------
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-front.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-front.jpg)
 
 # Newspapers
 
-![Kawkab America #55, 28 Apr 1893, p.1 (English)](images/kawkab-img.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab-img.jpg)
 
 ---------------------
 
-![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](images/kawkab-img2.jpg)
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab-img2.jpg)
 
 # Looking at the material, what do we need to mark up?
 
 - Identification information, page numbers, sources
 - "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination thereof
 - within the chunks, we can identify formal units such as
-    + a picture, 
+    + a picture,
     + a caption
-    + stanzas, 
-    + lines 
+    + stanzas,
+    + lines
     + paragraphs
     + and more...
 
@@ -67,9 +67,9 @@ The text may be in the form of:
 - a `<sourceDoc>`: a pure transcription, or
 - a `<text>`: an edited document
 
-# TEI basic structure 
+# TEI basic structure
 
-~~~{.xml}
+```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <!-- required -->
@@ -84,11 +84,11 @@ The text may be in the form of:
         <!-- required if no facsimile or sourceDoc-->
     </text>
 </TEI>
-~~~
+```
 
 # TEI basic structure 2
 
-~~~{.xml}
+```xml
 <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <!-- required -->
@@ -98,7 +98,7 @@ The text may be in the form of:
     </TEI>
     <!-- More <TEI>elements -->
 </teiCorpus>
-~~~
+```
 
 # The `<text>` element
 
@@ -107,7 +107,7 @@ What is a text? (remember that one?)
 - A text may be unitary or composite
     + unitary: forming an organic whole
     + composite: consisting of several components which are in some important sense independent of each other
-- a unitary text contains 
+- a unitary text contains
     + `<front>`: optional front matter
     + `<body>`: (required)
     + `<back>`: optional back matter
@@ -116,79 +116,83 @@ What is a text? (remember that one?)
 
 A simple document:
 
-    <text>
-        <front>
-            <!-- optional -->
-        </front>
-        <body>
-            <!-- required -->
-        </body>
-        <back>
-            <!-- optional -->
-        </back>
-    </text>
+```xml
+<text>
+    <front>
+        <!-- optional -->
+    </front>
+    <body>
+        <!-- required -->
+    </body>
+    <back>
+        <!-- optional -->
+    </back>
+</text>
+```
 
 # Macrostructure: composite texts, `<teiCorpus>`
 
-Consular letters, such as the ones above are usually kept in files. If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<teiCorpus>` element: 
+Consular letters, such as the ones above are usually kept in files. If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<teiCorpus>` element:
 
-    <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-            <!-- some metadata relating to the file, the letters etc. are kept in -->
-            <fileDesc>
-                <titleStmt>
-                    <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway, reports on local politics etc., 1908</title>
-                </titleStmt>
-                <!-- ... -->
-            </fileDesc>
+```xml
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- some metadata relating to the file, the letters etc. are kept in -->
+        <fileDesc>
+            <titleStmt>
+                <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway, reports on local politics etc., 1908</title>
+            </titleStmt>
             <!-- ... -->
+        </fileDesc>
+        <!-- ... -->
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader>
+            <!-- metadate relating to the individual letter etc. -->
         </teiHeader>
-        <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
-            <teiHeader>
-                <!-- metadate relating to the individual letter etc. -->
-            </teiHeader>
-            <facsimile>
-                <!-- links to image files -->
-            </facsimile>
-            <text>
-                <!-- transcription of the document -->
-            </text>
-        </TEI>
-        <!-- More <TEI>elements -->
-    </teiCorpus>
+        <facsimile>
+            <!-- links to image files -->
+        </facsimile>
+        <text>
+            <!-- transcription of the document -->
+        </text>
+    </TEI>
+    <!-- More <TEI>elements -->
+</teiCorpus>
+```
 
-
-# Macrostructure: composite texts 2
+# Macrostructure: composite texts 2, `<group>`
 
 Newspaper issues are usually grouped into volumes (or years). If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<group>` element:
 
-    <text n="35" xml:id="v35" xml:lang="ar">
-        <front>
-            <!-- some introductory material for the current volume -->
-        </front>
-        <group>
-            <text n="1869" xml:id="v35-i1869" xml:lang="ar">
-                <front>
-                    <!-- the masthead of issue 1869 -->
-                </front>
-                <body>
-                    <!-- issue 1869 -->
-                </body>
-            </text>
-            <text n="1870" xml:id="v35-i1870" xml:lang="ar">
-                <front>
-                    <!-- the masthead of issue 1870 -->
-                </front>
-                <body>
-                    <!-- issue 1870 -->
-                </body>
-            </text>
-        </group>
-        <back>
-            <!-- volume index, appendices etc. -->
-        </back>
-    </text>
-
+```xml
+<text n="35" xml:id="v35" xml:lang="ar">
+    <front>
+        <!-- some introductory material for the current volume -->
+    </front>
+    <group>
+        <text n="1869" xml:id="v35-i1869" xml:lang="ar">
+            <front>
+                <!-- the masthead of issue 1869 -->
+            </front>
+            <body>
+                <!-- issue 1869 -->
+            </body>
+        </text>
+        <text n="1870" xml:id="v35-i1870" xml:lang="ar">
+            <front>
+                <!-- the masthead of issue 1870 -->
+            </front>
+            <body>
+                <!-- issue 1870 -->
+            </body>
+        </text>
+    </group>
+    <back>
+        <!-- volume index, appendices etc. -->
+    </back>
+</text>
+```
 
 # The high level structure
 
@@ -196,68 +200,71 @@ Each identifiable division within `<text>` is a `<div>` element. It can optional
 
 For example, page 1 has two divisions:
 
-~~~{.xml}
+```xml
 <pb n="1"/>
 <div type="article">
-    <p>....</p> 
+    <p>....</p>
 </div>
-<div type="poem"> 
-    <head>Strange Meeting</head> 
+<div type="poem">
+    <head>Strange Meeting</head>
     <lg>
-        <l>....</l> 
+        <l>....</l>
     </lg>
 </div>
-~~~
+```
 
 # Why divisions rather than pages?
 
 Because a division can start on one page and finish on another, or
 cross other physical boundaries, we use an **empty** element `<pb/>` (page break) to mark the boundary between pages, rather than enclosing each page in a `<div type="page">`.
 
-~~~{.xml}
+```xml
 <pb n="5"/>
 <div type="article">
-    <p>...</p> 
+    <p>...</p>
 </div>
 <div type="poem">
     <head>Strange Meeting</head>
-    <lg> ...
-    <pb n="6"/>
+    <lg>
+        <l>....</l>
+        <pb n="6"/>
     ...
     </lg>
 </div>
 <div type="article">
     <p>...</p>
 </div>
-~~~
+```
 
 
 # Divisions can contain divisions ...
 
-    <div type="postcard">
-        <div type="postmark">
-            <div type="advert">
-                <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
-            </div>
-            <div type="dateStamp">
-                <dateline>
-                    <placeName>SCARBOROUGH</placeName>
-                    <lb/>
-                    <time>6.30 PM</time>
-                    <lb/>
-                </dateline>
-            </div>
-            <div type="advert">
-                <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
-            </div>
+```xml
+<div type="postcard">
+    <div type="postmark">
+        <div type="advert">
+            <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
         </div>
-        <div type="address">
-            <!-- <address> here -->
+        <div type="dateStamp">
+            <dateline>
+                <placeName>SCARBOROUGH</placeName>
+                <lb/>
+                <time>6.30 PM</time>
+                <lb/>
+            </dateline>
         </div>
-        <div type="prose">
-            <!-- text here -->
+        <div type="advert">
+            <ab>BUY NATIONAL <lb/>WAR BONDS</ab>
         </div>
     </div>
+    <div type="address">
+        <!-- <address> here -->
+    </div>
+    <div type="prose">
+        <!-- text here -->
+    </div>
+</div>
+```
 
 # More about divisions
 
@@ -271,30 +278,34 @@ cross other physical boundaries, we use an **empty** element `<pb/>` (page break
 
 `<div>`s must tesselate over the entire text
 
-    <div1>
-        <div2>
-            <!-- content -->
-        </div2>
-        <div2>
-            <!-- content -->
-        </div2>
-    </div1>
-
-is valid, while 
-
-    <div1>
+```xml
+<div1>
+    <div2>
         <!-- content -->
-        <div2>
-            <!-- content -->
-        </div2>
+    </div2>
+    <div2>
         <!-- content -->
-    </div1>
+    </div2>
+</div1>
+```
 
-is not valid!
+is valid, while
+
+```xml
+<div1>
+    <!-- content -->
+    <div2>
+        <!-- content -->
+    </div2>
+    <!-- content -->
+</div1>
+```
+
+is **invalid**!
 
 # Divisions may have heads and trailer
 
-~~~{.xml}
+```xml
 <div>
     <head>Preface</head>
     <p>
@@ -302,7 +313,7 @@ is not valid!
     </p>
     <trailer>...</trailer>
 </div>
-~~~
+```
 
 # Numbered and unnumbered divisions
 
@@ -310,7 +321,7 @@ The level can be made explicit by using 'numbered' divs (div1, div2). Opinions v
 
 `<div1>` vs. `<div n="1">`
 
-- numbered: the number indicates the depth of this particular division within the hierarchy, the largest such division being ‘div1’, any subdivision within it being ‘div2’, etc.
+- numbered: the number indicates the depth of this particular division within the hierarchy, the largest such division being 'div1', any subdivision within it being 'div2', etc.
 - unnumbered: nest recursively to indicate their hierarchic depth. (And computers can count very well!)
 - The two styles must not be combined within a single `<front>`, `<body>`, or `<back>` element.
 
@@ -324,7 +335,7 @@ The `<group>` element should be used to represent a collection of independent te
 
 The `<floatingText>` element can appear within any division level element in the same way as a paragraph.
 
-~~~{.xml}
+```xml
 <p>She was thus ruminating, when a Gentleman enter'd the Room, the Door being a jar... calling for a Candle, she beg'd a thousandPardons, engaged him to sit down, and let her know, what had so long conceal'd him from her Correspondence. </p>
 <pb n="5"/>
 <floatingText>
@@ -336,10 +347,10 @@ The `<floatingText>` element can appear within any division level element in the
     </body>
 </floatingText>
 <pb n="37"/>
-<p>The Gentleman having finish'd his Story ... 
+<p>The Gentleman having finish'd his Story ...
     <!-- more -->
 </p>
-~~~
+```
 
 # Document order vs. XML order 1
 
@@ -348,45 +359,47 @@ The order of XML encoding does not necessarily reflect the order of the source d
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
 
-![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](images/postcard-1911-Damascus-back.jpg)
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
 
 --------------
 
 ... to that:
 
-    <div type="postcard">
-        <div type="address">
-          <p>Mr. &amp; Mrs. Robt. Graves
-          <lb/>Skiff St.
-          <lb/>Centreville
-          <lb/>Hamden
-          <lb/> Conn.
-          <lb/>United States, America</p>
+```xml
+<div type="postcard">
+    <div type="address">
+      <p>Mr. &amp; Mrs. Robt. Graves
+      <lb/>Skiff St.
+      <lb/>Centreville
+      <lb/>Hamden
+      <lb/> Conn.
+      <lb/>United States, America</p>
+    </div>
+    <div type="prose">
+        <dateline><date when="1912-04-25">Apr. 25/12</date></dateline>
+        <p>Dear Friends,
+        <lb/>Heartiest greetings
+        <lb/>from the Holy Land.</p>
+        <byline>Your Pastor
+        <lb/><persName>Fredie Lent</persName></byline>
+    </div>
+    <div type="postmark">
+        <div type="dateStamp">
+            <dateline xml:lang="de">
+                <placeName>BEIRUT</placeName>
+                <lb/><date when="1912-04-26">26/4</date>
+                <lb/><orgName>Deutsche Post</orgName>
+            </dateline>
         </div>
-        <div type="prose">
-            <dateline><date when="1912-04-25">Apr. 25/12</date></dateline>
-            <p>Dear Friends,
-            <lb/>Heartiest greetings
-            <lb/>from the Holy Land.</p>
-            <byline>Your Pastor
-            <lb/><persName>Fredie Lent</persName></byline>
-        </div>
-        <div type="postmark">
-            <div type="dateStamp">
-                <dateline xml:lang="de">
-                    <placeName>BEIRUT</placeName>
-                    <lb/><date when="1912-04-26">26/4</date>
-                    <lb/><orgName>Deutsche Post</orgName>
-                </dateline>
-            </div>
-            <div type="postageStamp" xml:lang="de">
-                <graphic>
-                    <desc>a postage stamp</desc>
-                </graphic>
-                <add><measure commodity="currency" unit="frc" quantity="0.10">10 Centimes</measure></add>
-            </div>
+        <div type="postageStamp" xml:lang="de">
+            <graphic>
+                <desc>a postage stamp</desc>
+            </graphic>
+            <add><measure commidity="currency" unit="frc" quanity="0.10">10 Centimes</measure></add>
         </div>
     </div>
+</div>
+```
 
 # Document order vs. XML order 2
 
@@ -395,13 +408,13 @@ The order of XML encoding does not necessarily reflect the order of the source d
 <!-- This is a good point and should be emphasized. The example should be changed -->
 <!-- If the aim is to mirror the layout and structure of the source document as close as possible, use the `<sourceDoc>` element of the `<teiHeader>` instead of `<text>`   -->
 
-![Postcard, Damascus to Istanbul, 15 Jun 1917](images/postcard-ottoman1.png)
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
 
 --------------
 
 ... to that:
 
-~~~{.xml}
+```xml
 <div type="postcard">
     <div type="address">
         <!-- <address>here -->
@@ -428,11 +441,11 @@ The order of XML encoding does not necessarily reflect the order of the source d
         </div>
         <div type="postageStamp" xml:lang="ota">
             <graphic><!-- the image --></graphic>
-            <measure commodity="currency" unit="ops" quantity="0.25">10 Paras</measure>
+            <measure commidity="currency" unit="ops" quanity="0.25">10 Paras</measure>
         </div>
     </div>
 </div>
-~~~
+```
 
 
 # Core elements
@@ -442,17 +455,17 @@ The *core* module of the TEI groups together elements which may appear in any ki
 - paragraphs
 - highlighting, emphasis and quotation
 - simple editorial changes
-- basic names numbers, dates, addresses 
+- basic names numbers, dates, addresses
 - simple links and cross-references
-- lists, notes, annotation, indexing 
+- lists, notes, annotation, indexing
 - graphics
-- reference systems, bibliographic 
+- reference systems, bibliographic
 - citations simple verse and drama
 
 # Paragraphs
 
 `<p>`: paragraph; marks paragraphs in prose
- 
+
 - Fundamental unit for prose texts
 - `<p>` can contain all the phrase-level elements in the core
 - `<p>` can appear directly inside `<body>` or inside `<div>`
@@ -482,13 +495,16 @@ By *highlighting* we mean the use of any combination of typographic features (fo
 
 Example
 
-    <calendar xml:id="cal_islamic">
-        <p>Islamic  <hi rend="italics">hijrī</hi>calendar: lunar calendar beginning the Year with 1 <hi rend="italics">Muḥarram</hi>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
-        <p>E.g. 
-            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,   
-            <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.
-            </p>
-    </calendar>
+```xml
+<calendar xml:id="cal_islamic">
+    <p>Islamic  <hi rend="italics">hijrī</hi>calendar: lunar calendar beginning the Year with 1 <hi rend="italics">Muḥarram</hi>. Dates differ between locations as the beginning of the month is based on sightings of the new moon.</p>
+    <p>E.g.
+        <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II 1257, Sunday</date>,
+        <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01">1 Ṣaf 1326,
+                        Thursday</date>.
+        </p>
+</calendar>
+```
 
 # Quotation
 
@@ -502,19 +518,18 @@ Quotation marks can be used to set off text for many reasons, so the TEI has the
 
 Example
 
-~~~{.xml}
+```xml
 <quote>
     The Sheikh <lb/>who from childhood hours had learned to <lb/>praise Allah for every blessing of life, <lb/>must have shouted a hearty "<said><foreign xml:lang="ar-Latn-EN">Alhamduli<lb/>la!</foreign></said> and <said><foreign xml:lang="ar-Latn-EN">Allah<gap/> Kariem!</foreign></said>" when after a <lb/>journey of some weeks and months by <lb/>land and by sea he saw in <placeName>New York</placeName> har<lb/>bor the majestic form of the Goddess of <lb/>Liberty with the beacon of light in her<lb/> outstretched hand bidding him welcome<lb/> to the "<q>home of the brave and the land of <lb/>the free.</q>"
     <bibl>Kawkab America #55, 28 Apr 1893, p.1 (English)</bibl>
 </quote>
-~~~
-
+```
 <!-- <bibl>
             <title level="j">Kawkab America</title>
             <date when="1917-07"/>
         </bibl>
 -->
-<!--      
+<!--
     <quote>
         <bibl>ترجمة التلغراف السامي الوارد من مقام الصدارة العظمى</bibl>
         <lb/>صدرت ارادة حضرة صاحب الخلافة العظمى
@@ -528,7 +543,7 @@ Example
     </quote>
 -->
 
-# Lists 
+# Lists
 
 - `<list>`: a sequence of items forming a list
 - `<item>`: one component of a list
@@ -536,17 +551,19 @@ Example
 
 # Example: simple list
 
-    <p> The great <q>'coup d’Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were 
-    <list>
-        <item>(a) celebrations and festivities</item>
-        <item>(b) dismissal or <del>withdrawal</del><add>resignation</add> of
-            notoriously corrupt officials</item>
-        <item>(c) formation of clubs and associations</item>
-        <item>(d) parliamentary elections</item>
-        <item>(e) reforms in various governmental departments.</item>
-        <item>(f) release or <del><unclear/></del><add>rehabilitation</add>
-            <add><del>made to</del> of political exiles or persons</add></item>
-    </list></p>
+```xml
+<p>The great <q>'coup d'Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were
+<list>
+    <item>(a) celebrations and festivities</item>
+    <item>(b) dismissal or <del>withdrawal</del><add>resignation</add> of
+        notoriously corrupt officials</item>
+    <item>(c) formation of clubs and associations</item>
+    <item>(d) parliamentary elections</item>
+    <item>(e) reforms in various governmental departments.</item>
+    <item>(f) release or <del><unclear/></del><add>rehabilitation</add>
+        <add><del>made to</del> of political exiles or persons</add></item>
+</list></p>
+```
 
 <!-- we can stop here and move to an exercise -->
 <!-- shift in topics -->
@@ -560,7 +577,9 @@ Example
 
 Example:
 
-    <note place="foot">Painted by <persName>John Singer Sargent</persName>, 1.918</note>
+```xml
+<note place="bottom">Painted by <persName>John Singer Sargent</persName>, 1.918</note>
+```
 
 # Simple editorial changes: `<choice>` and friends
 
@@ -580,32 +599,34 @@ Example:
 
 # Example: choice 1
 
-    <dateline>Dft
-        <lb/><persName>Sir Gerald A. Lowther</persName>
-        <lb/> K.C.M.G.,C.B., 
-        <lb/><placeName>
-            <choice>
-                <abbr>Cple</abbr>
-                <expan>Constantinople</expan>
-            </choice></placeName>
-        <lb/> No. <del>30</del><del>29</del> 30
-        <date when="1908-07-31">31st ult
-            <choice>
-                <am>.</am>
-                <ex>im</ex>
-            </choice>o
-        </date>
-    </dateline>
+```xml
+<dateline>Dft
+    <lb/><persName>Sir Gerald A. Lowther</persName>
+    <lb/> K.C.M.G.,C.B.,
+    <lb/><placeName>
+        <choice>
+            <abbr>Cple</abbr>
+            <expan>Constantinople</expan>
+        </choice></placeName>
+    <lb/> No. <del>30</del><del>29</del> 30
+    <date when="1908-07-31">31st ult
+        <choice>
+            <am>.</am>
+            <ex>im</ex>
+        </choice>o
+    </date>
+</dateline>
+```
 
-<!--    
+<!--
     <dateline xml:lang="ar">
-        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز 
+        <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-07-27" when-custom="1908-07-14">١٤ تموز
             <choice>
                 <abbr>ش</abbr>
                 <expan>شرقي</expan>
             </choice>
         </date>
-        <date>٢٧ 
+        <date>٢٧
             <choice>
                 <abbr>غ</abbr>
                 <expan>غربي</expan>
@@ -625,7 +646,9 @@ We can:
 
 Example:
 
-    ...a nice little <choice><orig>dawg</orig><reg>dog</reg></choice>?
+```xml
+...a nice little <choice><orig>dawg</orig><reg>dog</reg></choice>?
+```
 
 # Additions, Deletions, and Omissions
 
@@ -638,21 +661,22 @@ Example:
 
 Consider this:
 
-![PRO FO 618/3 Damascus Draft 33, "State of affairs in Damascus relating to the new Regime", Devey to Lowther 12 Aug. 1908](images/pro-fo/618-3/DSCN9862_150dpi.jpg)
+![PRO FO 618/3 Damascus Draft 33, "State of affairs in Damascus relating to the new Regime", Devey to Lowther 12 Aug. 1908](../images/pro-fo/618-3/DSCN9862_150dpi.jpg)
 
 # Example: additions, deletions, omissions
 
 Which might be encoded like that:
 
-    <p><del>The Many</del><del><add>Loud</add></del> Popular demonstrations and <del>happy</del> <add>great</add> manifestations <add>of joy</add> with illuminations and street decorations <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del> <add>throughout the city <del>from</del> were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by <del>numerous masses</del><add>throngs</add> from neighbouring villages; though indeed few <add>present</add> could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add> <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
-
+```xml
+<p><del>The Many</del><del><add>Loud</add></del> Popular demonstrations and <del>happy</del> <add>great</add> manifestations <add>of joy</add> with illuminations and street decorations <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del> <add>throughout the city <del>from</del> were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by <del>numerous masses</del><add>throngs</add> from neighbouring villages; though indeed few <add>present</add> could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add> <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
+```
 
 <!-- further shift in topics to named entities and linking -->
 
 # Basic names
 
 - `<name>`: a name in the text, contains a proper noun or noun phrase
-- `<rs>`: a general-purpose name or referencing string 
+- `<rs>`: a general-purpose name or referencing string
 
 The `@type` attribute is useful for categorizing these, and they both
 also have `@key`, `@ref`, and `@nymRef` attributes.
@@ -677,8 +701,10 @@ also have `@key`, `@ref`, and `@nymRef` attributes.
 
 Example: numbers and measures
 
-    <l>With a <num value="1000">thousand</num> pains that vision's face was grained;</l>
-    ... only <measure type="distance" unit="m" quantity="3218.69">two miles</measure> from the front....
+```xml
+<l>With a <num value="1000">thousand</num> pains that vision's face was grained;</l>
+... only <measure type="distance" unit="m" quantity="3218.69">two miles</measure> from the front....
+```
 
 # Dates
 
@@ -687,7 +713,9 @@ Example: numbers and measures
 
 Example
 
-    <date when="1917-07">July 1917.<lb/> Wednesday</date>
+```xml
+<date when="1917-07">July 1917.<lb/> Wednesday</date>
+```
 
 # Simple Linking
 
@@ -699,13 +727,15 @@ Example
 
 Example
 
-    See <ref target="#Section12">section 12 on page 34</ref>.
-    See <ptr target="#Section12"/>.
-    The <ref target="http://www.bbc.co.uk/">BBC web site</ref> has a good sports section
+```xml
+See <ref target="#Section12">section 12 on page 34</ref>.
+See <ptr target="#Section12"/>.
+The <ref target="http://www.bbc.co.uk/">BBC web site</ref> has a good sports section
+```
 
 # Indexing
 
-- If converting an existing index, use nested lists. 
+- If converting an existing index, use nested lists.
 - For auto-generated indexes:
     + `<index>` (marks an index entry) with optional `@indexName` attribute
     + The `<term>` element is used to mark a term inside an `<index>` element
@@ -713,13 +743,14 @@ Example
 
 Example
 
-    <p>Last week I wrote (to order) a strong <lb/>bit of Blank<index>
-        <term>Verse</term>
-        <index>
-            <term>Blank Verse</term>
-        </index>
-    </index>:</p>
-
+```xml
+<p>Last week I wrote (to order) a strong <lb/>bit of Blank<index>
+    <term>Verse</term>
+    <index>
+        <term>Blank Verse</term>
+    </index>
+</index>:</p>
+```
 # Graphics
 
 - `<graphic>`: indicates the location of an inline graphic, illustration, or figure
@@ -728,34 +759,38 @@ Example
 
 # Example: Graphics
 
-    <div type="article" xml:lang="ar">
-        <head>تعريب الفرمان العالي السلطاني</head>
-        <figure>
-            <graphic url="#facs-2-1-z-1"/>
-            <head xml:lang="en">The Ottoman Tughra</head>
-            <figDesc>Reproduction of the Ottoman coat of arms / Sultanic seal</figDesc>
-        </figure>
-        <q>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي</q>
-    </div>
+```xml
+<div type="article" xml:lang="ar">
+    <head>تعريب الفرمان العالي السلطاني</head>
+    <figure>
+        <graphic url="#facs-2-1-z-1"/>
+        <head xml:lang="en">The Ottoman Tughra</head>
+        <figDesc>Reproduction of the Ottoman coat of arms / Sultanic seal</figDesc>
+    </figure>
+    <q>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي</q>
+</div>
+```
 
-![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](images/tughra-thamarat2.png)
+![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
 
 # Simple verse
 
-    <lg type="stanza">
-        <l>It seemed that out of battle I escaped</l>
-        <l>Down some profound dull tunnel, long since scooped</l>
-        <l>Through granites which titanic wars had groined.</l>
-    </lg>
-    <lg type="stanza">
-        <l>Yet also there encumbered sleepers groaned, </l>
-        <l>Too fast in thought or death to be bestirred. </l>
-        <l>Then, as I probed them, one sprang up, and stared </l>
-        <l>With piteous recognition in fixed eyes, </l>
-        <l>Lifting distressful hands, as if to bless. </l>
-        <l>And by his smile, I knew that sullen hall,--- </l>
-        <l>By his dead smile I knew we stood in Hell.</l>
-    </lg>
+```xml
+<lg type="stanza">
+    <l>It seemed that out of battle I escaped</l>
+    <l>Down some profound dull tunnel, long since scooped</l>
+    <l>Through granites which titanic wars had groined.</l>
+</lg>
+<lg type="stanza">
+    <l>Yet also there encumbered sleepers groaned, </l>
+    <l>Too fast in thought or death to be bestirred. </l>
+    <l>Then, as I probed them, one sprang up, and stared </l>
+    <l>With piteous recognition in fixed eyes, </l>
+    <l>Lifting distressful hands, as if to bless. </l>
+    <l>And by his smile, I knew that sullen hall,--- </l>
+    <l>By his dead smile I knew we stood in Hell.</l>
+</lg>
+```
 
 # Next
 
