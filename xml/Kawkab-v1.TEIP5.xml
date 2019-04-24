@@ -157,20 +157,20 @@
    </teiHeader>
    <facsimile>
       <surface xml:id="facs_i1_1">
-         <graphic url="../images/kawkab/dds-54628_Page_08_Image_0001.tif"
+         <graphic url="../images/kawkab/dds-54628_Page_08_Image_0001.tif" mimeType="image/tiff"
             xml:id="facs_i1_1_source"/>
          <zone ulx="2835" uly="295" lrx="3178" lry="614" xml:id="facs_i1_1_z1"/>
       </surface>
       <surface xml:id="facs_i1_2">
-         <graphic url="../images/kawkab/dds-54628_Page_07_Image_0001.tif"
+         <graphic url="../images/kawkab/dds-54628_Page_07_Image_0001.tif" mimeType="image/tiff"
             xml:id="facs_i1_2_source"/>
       </surface>
       <surface xml:id="facs_i1_3">
-         <graphic url="../images/kawkab/dds-54628_Page_06_Image_0001.tif"
+         <graphic url="../images/kawkab/dds-54628_Page_06_Image_0001.tif" mimeType="image/tiff"
             xml:id="facs_i1_3_source"/>
       </surface>
       <surface xml:id="facs_i1_4">
-         <graphic url="../images/kawkab/dds-54628_Page_05_Image_0001.tif"
+         <graphic url="../images/kawkab/dds-54628_Page_05_Image_0001.tif" mimeType="image/tiff"
             xml:id="facs_i1_4_source"/>
       </surface>
    </facsimile>
@@ -292,7 +292,7 @@
                   <p>مرَّ على اوريا دور لم نسمع به سوى تجهيز العساكر<lb/>ونجميع الذخائر حتى اصبحت
                      ممالكها تنتفض خشية نسيم<lb/>حادث ...</p>
                   <p>
-               <pb facs="#facs_i1_2" n="2"/><cb n="1"/></p><p></p></div>
+               <pb ed="print" facs="#facs_i1_2" n="2"/><cb n="1"/></p><p></p></div>
                <div type="article" xml:lang="ar">
                   <head>عودة لامح</head>
                   <p>نازل القحط ارض الروس فاشتف ماء الاجساد<lb/>وحل فيهم ثقيلا وبيلا في يقعة من
@@ -317,8 +317,8 @@
                   <p></p>
                   <p></p>
                </div>
-               <pb facs="#facs_i1_3" n="3"/>
-               <pb facs="#facs_i1_4" n="4"/>
+               <pb ed="print" facs="#facs_i1_3" n="3"/>
+               <pb ed="print" facs="#facs_i1_4" n="4"/>
             </body>
          </text>
          <text n="1" type="issue" xml:lang="en" xml:id="i1_en" corresp="#i1_ar">
@@ -335,7 +335,7 @@
                </div>
             </front>
             <body>
-               <pb facs="#facs_i1_4" n="1"/>
+               <pb ed="print" facs="#facs_i1_4" n="1"/>
                <div xml:lang="en">
                   <bibl><title level="j">Kawkab <gap/>erica</title></bibl>
                   <bibl>Vo.1. No.1. <cb/>New York, Friday, <gap/></bibl>

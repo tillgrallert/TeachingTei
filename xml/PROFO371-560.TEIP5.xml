@@ -47,20 +47,20 @@
    </teiHeader>
    <facsimile>
       <surface xml:id="facs_1">
-         <graphic url="../images/pro-fo/371-560/DSCN7960_150dpi.jpg"/>
+         <graphic url="../images/pro-fo/371-560/DSCN7960_150dpi.jpg" mimeType="image/jpeg"/>
          <zone xml:id="facs_1_z1" ulx="3" uly="129" lrx="349" lry="222"/>        <zone ulx="91" uly="232" lrx="587" lry="296"/>      </surface>
       <surface xml:id="facs_2">
-         <graphic url="../images/pro-fo/371-560/DSCN7961_150dpi.jpg"/>
+         <graphic url="../images/pro-fo/371-560/DSCN7961_150dpi.jpg" mimeType="image/jpeg"/>
       </surface>
       <surface xml:id="facs_3">
-         <graphic url="../images/pro-fo/371-560/DSCN7962_150dpi.jpg"/>
+         <graphic url="../images/pro-fo/371-560/DSCN7962_150dpi.jpg" mimeType="image/jpeg"/>
       </surface>
    </facsimile>
    <text>
       <group>
          <text>
             <body>
-               <pb n="1" facs="#facs_1"/>
+               <pb ed="print" n="1" facs="#facs_1"/>
                <div n="2">
                   <head facs="#facs_1_z1">ASIATIC TURKEY AND ARABIA<lb/>CONFIDENTIAL</head>
                   <head>[37930] No.1</head>
@@ -205,7 +205,7 @@
                      away animals or goods, but the spoils were restored to their owners without
                      great difficulties. It seems that the Druzes and Bedouins are to some extent
                      under the spell of the system of Government promising the application of strict
-                     justice and <pb n="3" facs="#facs_3"/>the execution of law, and are calmly waiting to see the
+                     justice and <pb ed="print" n="3" facs="#facs_3"/>the execution of law, and are calmly waiting to see the
                      results of this movement whilst there is no evident cause just now for arousing
                      dormant animosity.</p>
                   <p>The crops this year were in general very good, and the grain harvest in most of

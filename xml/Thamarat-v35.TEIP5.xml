@@ -309,67 +309,67 @@
     <!-- providing links to the actual image files either remote or local -->
     <facsimile>
         <surface xml:id="facs-1-1">
-            <graphic url="../images/thamarat/small/TF-1908-0215_150dpi.jpg" xml:id="facs-1-1_source"/>
+            <graphic url="../images/thamarat/small/TF-1908-0215_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-1_source"/>
             <zone lrx="443" lry="816" ulx="230" uly="573" xml:id="facs-1-1-z-1"/>
         </surface>
         <surface xml:id="facs-1-2">
-            <graphic url="../images/thamarat/small/TF-1908-0216_150dpi.jpg" xml:id="facs-1-2_source"
+            <graphic url="../images/thamarat/small/TF-1908-0216_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-2_source"
             />
         </surface>
         <surface xml:id="facs-1-3">
-            <graphic url="../images/thamarat/small/TF-1908-0217_150dpi.jpg" xml:id="facs-1-3_source"
+            <graphic url="../images/thamarat/small/TF-1908-0217_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-3_source"
             />
         </surface>
         <surface xml:id="facs-1-4">
-            <graphic url="../images/thamarat/small/TF-1908-0218_150dpi.jpg" xml:id="facs-1-4_source"
+            <graphic url="../images/thamarat/small/TF-1908-0218_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-4_source"
             />
         </surface>
         <surface xml:id="facs-1-5">
-            <graphic url="../images/thamarat/small/TF-1908-0219_150dpi.jpg" xml:id="facs-1-5_source"
+            <graphic url="../images/thamarat/small/TF-1908-0219_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-5_source"
             />
         </surface>
         <surface xml:id="facs-1-6">
-            <graphic url="../images/thamarat/small/TF-1908-0220_150dpi.jpg" xml:id="facs-1-6_source"
+            <graphic url="../images/thamarat/small/TF-1908-0220_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-6_source"
             />
         </surface>
         <surface xml:id="facs-1-7">
-            <graphic url="../images/thamarat/small/TF-1908-0221_150dpi.jpg" xml:id="facs-1-7_source"
+            <graphic url="../images/thamarat/small/TF-1908-0221_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-7_source"
             />
         </surface>
         <surface xml:id="facs-1-8">
-            <graphic url="../images/thamarat/small/TF-1908-0222_150dpi.jpg" xml:id="facs-1-8_source"
+            <graphic url="../images/thamarat/small/TF-1908-0222_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-8_source"
             />
         </surface>
         <surface xml:id="facs-2-1">
-            <graphic url="../images/thamarat/small/TF-1908-0223_150dpi.jpg" xml:id="facs-2-1_source"/>
+            <graphic url="../images/thamarat/small/TF-1908-0223_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-1_source"/>
             <zone lrx="443" lry="816" ulx="230" uly="573" xml:id="facs-2-1-z-1"/>
         </surface>
         <surface xml:id="facs-2-2">
-            <graphic url="../images/thamarat/small/TF-1908-0224_150dpi.jpg" xml:id="facs-2-2_source"
+            <graphic url="../images/thamarat/small/TF-1908-0224_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-2_source"
             />
         </surface>
         <surface xml:id="facs-2-3">
-            <graphic url="../images/thamarat/small/TF-1908-0225_150dpi.jpg" xml:id="facs-2-3_source"
+            <graphic url="../images/thamarat/small/TF-1908-0225_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-3_source"
             />
         </surface>
         <surface xml:id="facs-2-4">
-            <graphic url="../images/thamarat/small/TF-1908-0226_150dpi.jpg" xml:id="facs-2-4_source"
+            <graphic url="../images/thamarat/small/TF-1908-0226_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-4_source"
             />
         </surface>
         <surface xml:id="facs-2-5">
-            <graphic url="../images/thamarat/small/TF-1908-0227_150dpi.jpg" xml:id="facs-2-5_source"
+            <graphic url="../images/thamarat/small/TF-1908-0227_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-5_source"
             />
         </surface>
         <surface xml:id="facs-2-6">
-            <graphic url="../images/thamarat/small/TF-1908-0228_150dpi.jpg" xml:id="facs-2-6_source"
+            <graphic url="../images/thamarat/small/TF-1908-0228_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-6_source"
             />
         </surface>
         <surface xml:id="facs-2-7">
-            <graphic url="../images/thamarat/small/TF-1908-0229_150dpi.jpg" xml:id="facs-2-7_source"
+            <graphic url="../images/thamarat/small/TF-1908-0229_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-7_source"
             />
         </surface>
         <surface xml:id="facs-2-8">
-            <graphic url="../images/thamarat/small/TF-1908-0230_150dpi.jpg" xml:id="facs-2-8_source"
+            <graphic url="../images/thamarat/small/TF-1908-0230_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-2-8_source"
             />
         </surface>
     </facsimile>
@@ -379,7 +379,7 @@
         </front>
         <group>
             <text n="1683" type="issue" xml:id="v35-i1683" xml:lang="ar">
-                <pb facs="#facs-1-1" n="1"/>
+                <pb ed="print" facs="#facs-1-1" n="1"/>
                 <!-- the masthead of the issue comprising all the bibliographic information -->
                 <front xml:lang="ar">
                     <!-- the masthead has a main block of three columns with a line of bibliographic information above and below -->
@@ -544,7 +544,7 @@
                                 <lb/> قابليثهما الفطرية وتقدم صنوف التبعة في <lb/> طريق الرقي
                                 بالتعاون والاتحاد اقتضى لاجل <lb/> الوصول الى هذا المقصد ان تتخذ
                                 الحكومة <lb/> قاعدة سالمة ومنتظمة وهذا ايضا يتوقف على <lb/> تأمين
-                                هذه ... <pb facs="#facs-1-2" n="2"/>
+                                هذه ... <pb ed="print" facs="#facs-1-2" n="2"/>
                                 <cb n="1"/></p>
                         </div>
                         <div corresp="#law-ottoman-constitution-1876" type="bill" xml:lang="ar">
@@ -665,7 +665,7 @@
                                 <div n="40" type="article"/>
                                 <div n="41" type="article"/>
                             </div>
-                            <pb facs="#facs-1-3" n="3"/>
+                            <pb ed="print" facs="#facs-1-3" n="3"/>
                             <cb n="1"/>
                             <div n="5" type="section">
                                 <head>في المجلس العمومي</head>
@@ -692,7 +692,7 @@
                                 </div>
                                 <cb n="3"/>
                             </div>
-                            <pb facs="#facs-1-4" n="4"/>
+                            <pb ed="print" facs="#facs-1-4" n="4"/>
                             <cb n="1"/>
                             <div n="8" type="section">
                                 <head>في المحاكم</head>
@@ -719,7 +719,7 @@
                             <dateline>في <date>٧ ذي الحجة ١٢٩٣</date></dateline>
                         </div>
                     </div>
-                    <pb facs="#facs-1-5" n="5"/>
+                    <pb ed="print" facs="#facs-1-5" n="5"/>
                     <cb n="1"/>
                     <div type="section">
                         <head>الاستانة العالية</head>
@@ -897,7 +897,7 @@
                                     فرح</persName>(في <placeName> بناية <orgName> الشركة السورية
                                         <lb/> التجارية الانكليزية</orgName>
                                 </placeName>) فالتهم اللهيب كل <lb/>
-                                <pb facs="#facs-1-6" n="6"/>
+                                <pb ed="print" facs="#facs-1-6" n="6"/>
                                 <cb n="1"/> ما كان في المستودع من الاخشاب وتقدر <lb/> قيمتها بنحو
                                 ثلاثج الاف ليرة </p>
                             <p>وانا لنحمد الله تعال ان كان الحريق <lb/> نهاراً فان في جانب المستودع
@@ -1020,7 +1020,7 @@
                             <p>هي ( <placeName>سوفالو</placeName> ) من ولاية ( <placeName> سوث <lb/>
                                     داكوتا</placeName>) في ...</p>
                             <p>
-                                <pb facs="#facs-1-7" n="7"/>
+                                <pb ed="print" facs="#facs-1-7" n="7"/>
                                 <cb n="1"/>
                             </p>
                             <cb n="2"/>
@@ -1051,7 +1051,7 @@
                             </head>
                             <p/>
                             <p>
-                                <pb facs="#facs-1-8" n="8"/>
+                                <pb ed="print" facs="#facs-1-8" n="8"/>
                                 <cb n="1"/>
                             </p>
                             <p>
@@ -1119,7 +1119,7 @@
                 <!--<closer><signed><persName xml:lang="ar">عبد القادر القباني</persName></signed></closer>-->
             </text>
             <text n="1684" type="issue" xml:id="v35-i1684" xml:lang="ar">
-                <pb facs="#facs-2-1" n="1"/>
+                <pb ed="print" facs="#facs-2-1" n="1"/>
                 <!-- the masthead of the issue comprising all the bibliographic information -->
                 <front xml:lang="ar">
                     <!-- the masthead has a main block of three columns with a line of bibliographic information above and below -->
@@ -1313,7 +1313,7 @@
                         <p/>
                         <p/>
                         <p>
-                            <pb facs="#facs-2-3" n="3"/>
+                            <pb ed="print" facs="#facs-2-3" n="3"/>
                             <cb n="1"/>
                         </p>
                         <p/>
@@ -1353,7 +1353,7 @@
                             <ab rend="center">---</ab>
                         </div>
                     </div>
-                    <pb facs="#facs-2-4" n="4"/>
+                    <pb ed="print" facs="#facs-2-4" n="4"/>
                     <cb n="1"/>
                     <div type="section">
                         <head>عيد الحرية</head>
@@ -1389,7 +1389,7 @@
                         <div type="article">
                             <head>ليلة السبت</head>
                             <p>
-                                <pb facs="#facs-2-5" n="5"/>
+                                <pb ed="print" facs="#facs-2-5" n="5"/>
                                 <cb n="1"/>
                             </p>
                             <ab rend="center">* * *</ab>
@@ -1411,7 +1411,7 @@
                                 <cb n="4"/>
                             </p>
                             <p>
-                                <pb facs="#facs-2-6" n="6"/>
+                                <pb ed="print" facs="#facs-2-6" n="6"/>
                                 <cb n="1"/>
                                 <cb n="2"/>
                                 <cb n="3"/>
@@ -1422,7 +1422,7 @@
                         <div type="article">
                             <head>الامل</head>
                             <p>
-                                <pb facs="#facs-2-7" n="7"/>
+                                <pb ed="print" facs="#facs-2-7" n="7"/>
                                 <cb n="1"/>
                                 <cb n="2"/>
                                 <cb n="3"/>
@@ -1439,7 +1439,7 @@
                     <div type="article">
                         <head>الدستور للنفع لا لللذة</head>
                         <p>
-                            <pb facs="#facs-2-8" n="8"/>
+                            <pb ed="print" facs="#facs-2-8" n="8"/>
                             <cb n="1"/>
                         </p>
                     </div>

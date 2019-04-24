@@ -166,17 +166,17 @@
         </teiHeader>
         <facsimile>
             <surface xml:id="facs_1">
-                <graphic url="../images/pro-fo/618-3/DSCN9874_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9874_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_2">
-                <graphic url="../images/pro-fo/618-3/DSCN9875_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9875_150dpi.jpg" mimeType="image/jpeg"/>
                 <zone lrx="820" lry="1182" ulx="58" uly="46" xml:id="facs_2_z1"/>
                 <zone lrx="1535" lry="1158" ulx="1034" uly="65" xml:id="facs_2_z2"/>
             </surface>
         </facsimile>
         <text>
             <body>
-                <pb facs="#facs_1" n="1"/>
+                <pb ed="print" facs="#facs_1" n="1"/>
                 <div>
                     <head>Ex-Mushir Fuad P. released</head>
                     <dateline><date>August 3, 1908</date></dateline>
@@ -210,7 +210,7 @@
                             </choice></persName>
                         <del>w</del> while going for the prayer in the <placeName>Great
                             Mosque</placeName>, was very enthusiastically applauded &amp; cheered by
-                            <pb facs="#facs_2_z1" n="2"/>
+                            <pb ed="print" facs="#facs_2_z1" n="2"/>
                         <del>the thousands</del>
                         <add>crowds</add> of people <del>who assembled &amp; walked before &amp;
                             after his</del>
@@ -245,7 +245,7 @@
                             of one wife, two daughters and one son now 14 yrs. old.</add></p>
                     <p>Some of the foreign Consuls had called in the Friday afternoon, &amp; I
                         arranged to visit him on the morning of the <date>1st inst.</date> when I
-                        had the privilege of an affecting <pb facs="#facs_2_z2" n="3"/>interview, as
+                        had the privilege of an affecting <pb ed="print" facs="#facs_2_z2" n="3"/>interview, as
                         he was still deeply moved by long suffering. Many visitors were present
                         &amp; <add>constantly</add> coming &amp; going, as also the <rs>Acting
                             Russian Consul</rs> &amp; <rs>Russian Dragoman</rs> &amp;
@@ -266,13 +266,13 @@
                         reestablished Constitution, &amp; trusted that <del>recent <unclear/> wd.
                             lead with a</del><add>the</add> new departure may tend to better Gov.t
                         &amp; true reforms in Turkey. <del><lb/>I have etc.
-                                <signatures>G.P.D.</signatures></del><add>The Marshal’s very
+                                <persName>G.P.D.</persName></del><add>The Marshal’s very
                             outspoken opinions show that he abides by the well known liberal
                             opinions professed throughout his career.</add></p>
-                    <byline>I have etc. <signatures><choice>
+                    <byline>I have etc. <persName><choice>
                                 <abbr>G.P.D.</abbr>
                                 <expan>George Pollard Devey</expan>
-                            </choice></signatures></byline>
+                            </choice></persName></byline>
                 </div>
             </body>
         </text>
@@ -294,21 +294,21 @@
         </teiHeader>
         <facsimile>
             <surface xml:id="facs_3">
-                <graphic url="../images/pro-fo/618-3/DSCN9862_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9862_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_4">
-                <graphic url="../images/pro-fo/618-3/DSCN9863_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9863_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_5">
-                <graphic url="../images/pro-fo/618-3/DSCN9864_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9864_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_6">
-                <graphic url="../images/pro-fo/618-3/DSCN9865_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9865_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
         </facsimile>
         <text>
             <body>
-                <pb facs="#facs_3" n="1"/>
+                <pb ed="print" facs="#facs_3" n="1"/>
                 <div>
                     <head>State of affairs in Damascus relating to the new Regime</head>
                     <dateline>Damascus.<lb/>August 12. 1908.</dateline>
@@ -438,22 +438,22 @@
         </teiHeader>
         <facsimile>
             <surface xml:id="facs_7">
-                <graphic url="../images/pro-fo/618-3/DSCN9840_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9840_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_8">
-                <graphic url="../images/pro-fo/618-3/DSCN9841_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9841_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_9">
-                <graphic url="../images/pro-fo/618-3/DSCN9842_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9842_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
             <surface xml:id="facs_10">
-                <graphic url="../images/pro-fo/618-3/DSCN9843_150dpi.jpg"/>
+                <graphic url="../images/pro-fo/618-3/DSCN9843_150dpi.jpg" mimeType="image/jpeg"/>
             </surface>
         </facsimile>
         <text>
             <body>
                 <div>
-                    <pb n="1"/>
+                    <pb ed="print" n="1"/>
                     <head>General Report for September Quarter</head>
                     <dateline>Damascus<lb/>October 1. 1908.</dateline>
                     <dateline>Dft<lb/>Sir G.A. Lowther<lb/>Cple<lb/>No. 51</dateline>
@@ -479,7 +479,7 @@
                     <p>Rejoicings and joyful manifestation <del>came now</del>
                         <add>are only coming now</add> to an end, after lasting more than two
                         months: more than <add>25 well organized</add> great meetings were held int
-                        he different quarters of the<pb n="2"/> city, mostly attended by several
+                        he different quarters of the<pb ed="print" n="2"/> city, mostly attended by several
                         thousands demonstrators and spectators, and hundreds of speeches were
                         delivered, all condemning autocracy as despotic &amp; tyrannical and
                         eulogizing liberty and constitutional government. About £2000 were spent on

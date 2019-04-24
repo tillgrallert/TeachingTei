@@ -122,7 +122,7 @@
     </teiHeader>
     <facsimile>
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg"
+            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg" mimeType="image/jpeg"
                 xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_source"/>
             <zone lrx="2348" lry="1520" ulx="2045" uly="1159" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-1"/>
             <zone xml:id="zone.sck_ntg_15" ulx="1810" uly="278" lrx="2354" lry="926"/>
@@ -135,7 +135,7 @@
             <zone ulx="65" uly="97" lrx="2400" lry="976" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2"/>
         </surface>
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg"
+            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg" mimeType="image/jpeg"
                 xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2_source"/>
         </surface>
     </facsimile>
@@ -144,7 +144,7 @@
             <!-- some introductory material for the current volume --> </front>
         <group>
             <text type="issue" n="1869" xml:lang="ar">
-                <pb facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1" n="1" xml:id="pb_1"/>
+                <pb ed="print" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1" n="1" xml:id="pb_1"/>
                 <front facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2">
                     <!-- top line, commonly containing the information on issue numbers and sometimes dates -->
                     <div facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-3" style="border-top:double black; border-bottom:solid black">
@@ -520,7 +520,7 @@
                                 </div>
                                 <div n="51" type="article">
                                     <head>٥١</head>
-                                    <p>لا يبادر للمذاكرة في كلتا هيئتي<pb facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2" n="2"
+                                    <p>لا يبادر للمذاكرة في كلتا هيئتي<pb ed="print" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2" n="2"
                                         xml:id="pb_2"/> المجلس العمومي، ما لم تكن الأعضاء المرتبة في كل
                                         منهما زائدة واحداً بالعدد عن النصف، وكافة المذاكرات تتقرر بالأكثرية المطلقة من الأعضاء الموجودين،
                                         خلا تلك الخصوصات التي يشترط تقريرها بأكثرية الثلثين. ويعتبر رأي الرئيس رأيين عند تساوي الآراء. </p>

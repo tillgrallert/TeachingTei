@@ -163,7 +163,7 @@
    <!-- providing links to the image files either remote or local -->
    <facsimile>
       <surface xml:id="facs-1-1">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" xml:id="facs-1-1_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0118_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-1_source"/>
          <zone lrx="3596" lry="459" ulx="261" uly="258" xml:id="facs-1-1-z-1"/>
          <zone lrx="3677" lry="1678" ulx="159" uly="431" xml:id="facs-1-1-z-2"/>
          <zone lrx="3628" lry="2016" ulx="195" uly="1635" xml:id="facs-1-1-z-3"/>
@@ -172,25 +172,25 @@
          <zone lrx="1093" lry="1670" ulx="167" uly="439" xml:id="facs-1-1-z-6"/>
       </surface>
       <surface xml:id="facs-1-2">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg" xml:id="facs-1-2_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0119_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-2_source"/>
       </surface>
       <surface xml:id="facs-1-3">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg" xml:id="facs-1-3_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0120_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-3_source"/>
       </surface>
       <surface xml:id="facs-1-4">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg" xml:id="facs-1-4_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0121_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-4_source"/>
       </surface>
       <surface xml:id="facs-1-5">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg" xml:id="facs-1-5_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0122_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-5_source"/>
       </surface>
       <surface xml:id="facs-1-6">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg" xml:id="facs-1-6_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0123_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-6_source"/>
       </surface>
       <surface xml:id="facs-1-7">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg" xml:id="facs-1-7_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0124_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-7_source"/>
       </surface>
       <surface xml:id="facs-1-8">
-         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg" xml:id="facs-1-8_source"/>
+         <graphic url="../images/iqbal/small/mic164_alikbal_1908-1909_0125_150dpi.jpg" mimeType="image/jpeg" xml:id="facs-1-8_source"/>
       </surface>
 
    </facsimile>
@@ -201,7 +201,7 @@
       <group>
             <!-- individual issues -->
             <text n="254" type="issue" xml:lang="ar" xml:id="v7-i254">
-               <pb n="1"/>
+               <pb ed="print" n="1"/>
                <front>
                   <div style="border-top:double black; border-bottom:sing black">
                      <bibl xml:lang="ar"><biblScope n="254" unit="issue">العدد ٢٥٤</biblScope><title
@@ -275,7 +275,7 @@
             </text>
             <!-- individual issue -->
             <text n="257" type="issue" xml:lang="ar" xml:id="v7-i257">
-               <pb facs="#facs-1-1" n="1"/>
+               <pb ed="print" facs="#facs-1-1" n="1"/>
                <!-- the masthead -->
                <front>
                   <!-- the top line -->
@@ -406,7 +406,7 @@
                   <head>جزيرة سيسام</head>
                   <p/>
                </div>
-               <pb facs="#facs-1-2" n="2"/>
+               <pb ed="print" facs="#facs-1-2" n="2"/>
                <cb n="1"/>
                <div type="section">
                   <head><orgName>السكة الحميدية الحجازية</orgName></head>
@@ -442,7 +442,7 @@
                      <p> اما في موقف ذات الحج ...</p>
                      <p>وفي <placeName>تبوك</placeName> ينابيع كثيرة واعظمها نبع القلعة، ...</p>
                      <p>ولا يوجد اثر الماء بين <placeName>الاخضر</placeName> و<placeName>مدائن
-                           صالح</placeName><lb/>ويبلغ طول مسافته ١٩٥ كيلومتراً سوى ...<pb n="3" facs="#facs-1-3"
+                           صالح</placeName><lb/>ويبلغ طول مسافته ١٩٥ كيلومتراً سوى ...<pb ed="print" n="3" facs="#facs-1-3"
                         /></p>
                   </div>
                </div>
@@ -542,7 +542,7 @@
                   <p>بناء على صدور الارادة السنية القاضية بتصليح<lb/>وترميم <placeName>جامع سيدنا
                      يونس</placeName> عليه ...</p>
                </div>
-               <pb n="4" facs="#facs-1-4"/>
+               <pb ed="print" n="4" facs="#facs-1-4"/>
                <cb n="1"/>
                <div type="article">
                   <head>جامع سلطان سليم</head>
@@ -595,7 +595,7 @@
                      <head>الترامواي الكهربائي<lb/>في الثغر</head>
                      <p>لا ننكر ان الترامواي الكهربائي في الثغر فوائد<lb/>جليلة يقرب الاطراف
                         المتنائية ويسهل المواصولات<lb/>وينفخ في التجارج روحاً جديدة يجعلها تنشط الى
-                        الحياة<lb/>باكثر مما هي عليه الآن ...<pb n="5" facs="#facs-1-5"/><cb n="1"/></p>
+                        الحياة<lb/>باكثر مما هي عليه الآن ...<pb ed="print" n="5" facs="#facs-1-5"/><cb n="1"/></p>
                      
                      <p/>
                      <p></p>
@@ -660,7 +660,7 @@
                      <head>تعيين</head>
                      <p></p>
                   </div>
-                  <pb n="6" facs="#facs-1-6"/>
+                  <pb ed="print" n="6" facs="#facs-1-6"/>
                   <cb n="1"/>
                   <div type="article">
                      <head>والي بيروت الجديد</head>
@@ -733,7 +733,7 @@
                      <p>درس <persName>محمد افندي رشدي</persName> الخبير بالمحاكم طبائع<lb/>الارض
                         والبقاع وعرف مواقع ...</p>
                   </div>
-                  <pb n="7" facs="#facs-1-7"/>
+                  <pb ed="print" n="7" facs="#facs-1-7"/>
                   <cb n="1"/>
                   <div type="article">
                      <head>اخبار صحية</head>
@@ -809,7 +809,7 @@
                   <byline><persName>محمد فارس الدرويش</persName></byline>
                </div>
                   
-                  <pb n="8" facs="#facs-1-8"/>
+                  <pb ed="print" n="8" facs="#facs-1-8"/>
                   <cb n="1"/>
                <div type="section">
                   <head>فوائد منزيلة</head>
