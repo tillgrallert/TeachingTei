@@ -9,46 +9,79 @@
   <meta name="author" content="Till Grallert" />
   <meta name="date" content="2019-04-23" />
   <title>TEI@DHIB2019: XML, TEI, and rtl-languages</title>
-  <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!-- <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" /> -->
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
    href="../css/slidy_custom_sh.css" />
   <meta name="copyright" content="CC BY-SA 4.0" />
@@ -119,8 +152,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   }
   </style>
   <script type="text/javascript" src="../js/slidy.js"></script>
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
-    charset="utf-8" type="text/javascript"></script>
+  <!-- <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script> -->
 </head>
 <body>
 <div class="slide titlepage">
@@ -132,135 +165,122 @@ Till Grallert
 </div>
 <div class="slide section level1">
 
-<p>Many slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015.</p>
+<!-- Many slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015. -->
 <p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
 <p>The slides are available at <a href="https://www.github.com/tillgrallert/TeachingTei/slides" class="uri">https://www.github.com/tillgrallert/TeachingTei/slides</a>.</p>
-</div>
-<div id="xml-unicode-arabic" class="slide section level1">
-<h1>XML, Unicode, Arabic</h1>
+<h2 id="xml-unicode-arabic">XML, Unicode, Arabic</h2>
 <ul>
-<li>The good: XML follows the Unicode standard by design!</li>
-<li>The bad: Each Unicode sign is an independent entity
+<li>The <strong>good</strong>: XML follows the Unicode standard by design!</li>
+<li>The <strong>bad</strong>: Each Unicode sign is an independent entity
 <ul>
-<li>Common but &quot;defective&quot; writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for &quot;الى&quot; will not return instances of &quot;إلى&quot; or &quot;إِلى&quot;.</li>
-<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>).</li>
+<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling: a search for “الى” will not return instances of “إلى” or “إِلى”.</li>
+<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>).</li>
 <li>ة is not ت!</li>
 </ul></li>
-<li>The ugly: XML and TEI are based in the western tradition of modelling a text and named entities as well as in LTR writing systems</li>
+<li>The <strong>ugly</strong>: XML and TEI are based in the western tradition of modelling a text and named entities as well as in LTR writing systems</li>
 </ul>
 </div>
 <div id="the-good" class="slide section level1">
 <h1>1. The good</h1>
+<h2 id="the-good-unicode">The good: unicode</h2>
 <p>TEI and XML can represent any text written in any sign-system. If this system is part of the Unicode standard, the TEI file can comprise a digital text as opposed to mere facsimiles.</p>
-<p>BUT: mixing two writing systems, while unambiguous for the computer, will cause confusion for the human reader / editor:</p>
-</div>
-<div id="facsimile" class="slide section level1">
-<h1>facsimile</h1>
+<p>BUT: unicode is an industry consortium incoporated in California with only marginal interest in Arabic.</p>
+<p>BUT: mixing two writing systems, while unambiguous for the computer, will cause confusion for the human reader / editor.</p>
+<h2 id="facsimile">facsimile</h2>
 <div class="figure">
 <img src="../images/constitution-thamarat.png" alt="Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
-</div>
-<div id="neat-xml" class="slide section level1">
-<h1>&quot;neat&quot; XML</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>الصدارة العظمى<span class="kw">&lt;/head&gt;</span>
-    <span class="kw">&lt;p&gt;</span>بشرة الانباء البرقية بصدور الارادة
-    <span class="kw">&lt;lb/&gt;</span> السنية السلطانية باسناد مسند الصدارة
-    <span class="kw">&lt;lb/&gt;</span>العظمى الى عهدة الوزير الخطير <span class="kw">&lt;persName&gt;</span> حضرة
-    <span class="kw">&lt;lb/&gt;</span> صاحب الفخامة الدولة سعيد باشا<span class="kw">&lt;/persName&gt;</span>الصدر
-    <span class="kw">&lt;lb/&gt;</span> الأعظم الأسبق، فسر الكل بهذا التوجيه
-    <span class="kw">&lt;lb/&gt;</span> الوجيه لما عرف به الصدر المشار اليه من
-    <span class="kw">&lt;lb/&gt;</span> التفاني في خدمة الجناب العالي السلطاني
-    <span class="kw">&lt;lb/&gt;</span> بنبالة قصد وسعة علم مع اقتدار باهر
-    <span class="kw">&lt;lb/&gt;</span> واخلاص عظيم فنرفع لفخامته فروض
-    <span class="kw">&lt;lb/&gt;</span> التهاني والتبريك ونضرع الى المولى المتعال
-    <span class="kw">&lt;lb/&gt;</span> ان يقرن اموره بالتوفيق وتنفيذ نيات حضرة
-    <span class="kw">&lt;lb/&gt;</span> مولانا الخليفة الاعظم المنصرف في خير
-    <span class="kw">&lt;lb/&gt;</span> العباد وعمران البلاد،<span class="kw">&lt;/p&gt;</span>
-    <span class="kw">&lt;p&gt;</span>وهذا تعريب التلغراف السامي الوارد
-    <span class="kw">&lt;lb/&gt;</span> من فخامته الى مقام الولاية الجليلة:<span class="kw">&lt;/p&gt;</span>
-    <span class="kw">&lt;p&gt;</span>
-        <span class="kw">&lt;quote&gt;</span>سنحت عواطف الحضرة العلية
-        <span class="kw">&lt;lb/&gt;</span> السلطانية بتوجيه خدمة الصدارة هذه
-        <span class="kw">&lt;lb/&gt;</span> المرة ايضاً على عهدة هذا المثنى . ان
-        <span class="kw">&lt;lb/&gt;</span> وظيفة مأموري المملكية الاساسية هي المحافظة
-        <span class="kw">&lt;lb/&gt;</span> على الامن والراحة وحسن رؤْية المصالح
-        <span class="kw">&lt;lb/&gt;</span> ووظائف الادارة العدلية والحكام هي
-        <span class="kw">&lt;lb/&gt;</span> اجراء العدالة في الحقوق العمومية والشخصية
-        <span class="kw">&lt;lb/&gt;</span> ضمن دائرة القوانين العدلية الموضوعة مع
-        <span class="kw">&lt;lb/&gt;</span> قيام كل مأمور بوظيفة مأموريته بكمال
-        <span class="kw">&lt;lb/&gt;</span> العفة والاستقامة لهذا نخطركم ان الذين
-        <span class="kw">&lt;lb/&gt;</span> يقومون بالخدمات الصحيحة الصادقة تكون
-        <span class="kw">&lt;lb/&gt;</span> مساعيهم مظهراً لشرف تقدير <span class="kw">&lt;rs</span><span class="ot"> ref=</span><span class="st">&quot;#pers-1&quot;</span><span class="kw">&gt;</span> حضرة
-        <span class="kw">&lt;lb/&gt;</span> صاحب الخلافة العظمى<span class="kw">&lt;/rs&gt;</span>كما ان من يخالف
-        <span class="kw">&lt;lb/&gt;</span>ذلك يقع بالطبع تحت ظائلة المسؤلية
-        <span class="kw">&lt;lb/&gt;</span> في <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span>
-<span class="ot">                datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1324-05-09&quot;</span><span class="kw">&gt;</span>٩ تموز سنة
-            ٣٢٤<span class="kw">&lt;/date&gt;&lt;/quote&gt;</span>
-    <span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
-</div>
-<div id="actual-xml-in-an-xml-editor" class="slide section level1">
-<h1>&quot;actual&quot; XML in an XML editor</h1>
+<h2 id="neat-xml">“neat” XML</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">&lt;?xml</span> version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;<span class="kw">?&gt;</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">&lt;div</span><span class="ot"> xmlns=</span><span class="st">&quot;http://www.tei-c.org/ns/1.0&quot;</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="kw">&lt;head</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>الصدارة العظمى<span class="kw">&lt;/head&gt;</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    <span class="kw">&lt;p&gt;</span>بشرة الانباء البرقية بصدور الارادة</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    <span class="kw">&lt;lb/&gt;</span> السنية السلطانية باسناد مسند الصدارة</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">    <span class="kw">&lt;lb/&gt;</span>العظمى الى عهدة الوزير الخطير <span class="kw">&lt;persName&gt;</span> حضرة</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="kw">&lt;lb/&gt;</span> صاحب الفخامة الدولة سعيد باشا<span class="kw">&lt;/persName&gt;</span>الصدر</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">    <span class="kw">&lt;lb/&gt;</span> الأعظم الأسبق، فسر الكل بهذا التوجيه</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="kw">&lt;lb/&gt;</span> الوجيه لما عرف به الصدر المشار اليه من</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">    <span class="kw">&lt;lb/&gt;</span> التفاني في خدمة الجناب العالي السلطاني</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="kw">&lt;lb/&gt;</span> بنبالة قصد وسعة علم مع اقتدار باهر</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">    <span class="kw">&lt;lb/&gt;</span> واخلاص عظيم فنرفع لفخامته فروض</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">    <span class="kw">&lt;lb/&gt;</span> التهاني والتبريك ونضرع الى المولى المتعال</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">    <span class="kw">&lt;lb/&gt;</span> ان يقرن اموره بالتوفيق وتنفيذ نيات حضرة</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    <span class="kw">&lt;lb/&gt;</span> مولانا الخليفة الاعظم المنصرف في خير</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    <span class="kw">&lt;lb/&gt;</span> العباد وعمران البلاد،<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17">    <span class="kw">&lt;p&gt;</span>وهذا تعريب التلغراف السامي الوارد</a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">    <span class="kw">&lt;lb/&gt;</span> من فخامته الى مقام الولاية الجليلة:<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">    <span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">        <span class="kw">&lt;quote&gt;</span>سنحت عواطف الحضرة العلية</a>
+<a class="sourceLine" id="cb1-21" data-line-number="21">        <span class="kw">&lt;lb/&gt;</span> السلطانية بتوجيه خدمة الصدارة هذه</a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">        <span class="kw">&lt;lb/&gt;</span> المرة ايضاً على عهدة هذا المثنى . ان</a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">        <span class="kw">&lt;lb/&gt;</span> وظيفة مأموري المملكية الاساسية هي المحافظة</a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">        <span class="kw">&lt;lb/&gt;</span> على الامن والراحة وحسن رؤْية المصالح</a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">        <span class="kw">&lt;lb/&gt;</span> ووظائف الادارة العدلية والحكام هي</a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">        <span class="kw">&lt;lb/&gt;</span> اجراء العدالة في الحقوق العمومية والشخصية</a>
+<a class="sourceLine" id="cb1-27" data-line-number="27">        <span class="kw">&lt;lb/&gt;</span> ضمن دائرة القوانين العدلية الموضوعة مع</a>
+<a class="sourceLine" id="cb1-28" data-line-number="28">        <span class="kw">&lt;lb/&gt;</span> قيام كل مأمور بوظيفة مأموريته بكمال</a>
+<a class="sourceLine" id="cb1-29" data-line-number="29">        <span class="kw">&lt;lb/&gt;</span> العفة والاستقامة لهذا نخطركم ان الذين</a>
+<a class="sourceLine" id="cb1-30" data-line-number="30">        <span class="kw">&lt;lb/&gt;</span> يقومون بالخدمات الصحيحة الصادقة تكون</a>
+<a class="sourceLine" id="cb1-31" data-line-number="31">        <span class="kw">&lt;lb/&gt;</span> مساعيهم مظهراً لشرف تقدير <span class="kw">&lt;rs</span><span class="ot"> ref=</span><span class="st">&quot;#pers-1&quot;</span><span class="kw">&gt;</span> حضرة</a>
+<a class="sourceLine" id="cb1-32" data-line-number="32">        <span class="kw">&lt;lb/&gt;</span> صاحب الخلافة العظمى<span class="kw">&lt;/rs&gt;</span>كما ان من يخالف</a>
+<a class="sourceLine" id="cb1-33" data-line-number="33">        <span class="kw">&lt;lb/&gt;</span>ذلك يقع بالطبع تحت ظائلة المسؤلية</a>
+<a class="sourceLine" id="cb1-34" data-line-number="34">        <span class="kw">&lt;lb/&gt;</span> في <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span></a>
+<a class="sourceLine" id="cb1-35" data-line-number="35"><span class="ot">                datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1324-05-09&quot;</span><span class="kw">&gt;</span>٩ تموز سنة</a>
+<a class="sourceLine" id="cb1-36" data-line-number="36">            ٣٢٤<span class="kw">&lt;/date&gt;&lt;/quote&gt;</span></a>
+<a class="sourceLine" id="cb1-37" data-line-number="37">    <span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb1-38" data-line-number="38"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
+<h2 id="actual-xml-in-an-xml-editor">“actual” XML in an XML editor</h2>
 <div class="figure">
 <img src="../images/constitution-thamarat-xml-text.png" alt="Text view in oXygen: XML for Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" />
 <p class="caption">Text view in oXygen: XML for Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
-</div>
-<div id="hiding-the-tags-in-an-xml-editor" class="slide section level1">
-<h1>hiding the tags in an XML editor</h1>
+<h2 id="hiding-the-tags-in-an-xml-editor">hiding the tags in an XML editor</h2>
 <div class="figure">
 <img src="../images/constitution-thamarat-xml-author.png" alt="Author view in oXygen: XML for Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" />
 <p class="caption">Author view in oXygen: XML for Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
-</div>
-<div id="set-up-your-work-environment-to-correctly-display-arabic-etc." class="slide section level1">
-<h1>Set up your work environment to correctly display Arabic etc.</h1>
+<h2 id="set-up-your-work-environment-to-correctly-display-arabic-etc.">Set up your work environment to correctly display Arabic etc.</h2>
 <p>oXygen supports bidirectional texts already for a couple of years and correctly deduces the order of writing through Unicode support. However, in order to <strong>render</strong> Arabic TEI correctly in the Author mode as aligned to the right side one needs to do two things:</p>
-</div>
-<div id="xmllang" class="slide section level1">
-<h1><code>@xml:lang</code></h1>
+<h2 id="xmllang"><code>@xml:lang</code></h2>
 <ol style="list-style-type: decimal">
-<li>consistently use the <code>@xml:lang</code> attribute on all elements. <code>@xml:lang</code> should follow <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">BCP 47</a>; i.e. any text in Arabic must be marked as <code>@xml:lang=&quot;ar&quot;</code>. For Arabic in Latin transcription, BCP 47 specifies &quot;ar-Latn&quot;. The specific type of transcription should be added as a private use subtag, i.e.
+<li>consistently use the <code>@xml:lang</code> attribute on all elements. <code>@xml:lang</code> should follow <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">BCP 47</a>; i.e. any text in Arabic must be marked as <code>@xml:lang=&quot;ar&quot;</code>. For Arabic in Latin transcription, BCP 47 specifies “ar-Latn”. The specific type of transcription should be added as a private use subtag, i.e.
 <ul>
-<li>&quot;ar-Latn-x-ijmes&quot; for the IJMES transcription of Arabic in Latin script.</li>
-<li>&quot;ota-Latn-x-ijmes&quot; for the IJMES transcription of Ottoman in Latin script.</li>
+<li>“ar-Latn-x-ijmes” for the IJMES transcription of Arabic in Latin script.</li>
+<li>“ota-Latn-x-ijmes” for the IJMES transcription of Ottoman in Latin script.</li>
 </ul></li>
 </ol>
-</div>
-<div id="css" class="slide section level1">
-<h1>CSS</h1>
+<h2 id="css">CSS</h2>
 <ol start="2" style="list-style-type: decimal">
-<li>add a tiny bit of CSS to the file &quot;tei_oxygen.css&quot; either directly or through the import of an external CSS.</li>
+<li>add a tiny bit of CSS to the file “tei_oxygen.css” either directly or through the import of an external CSS.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="ch">[xml\:lang=</span><span class="st">&quot;ar&quot;</span><span class="ch">]</span>, <span class="ch">[xml\:lang=</span><span class="st">&quot;ota&quot;</span><span class="ch">]</span><span class="kw">{</span>
-    <span class="kw">direction:</span><span class="dt">rtl</span><span class="kw">;</span>
-    <span class="kw">text-align:</span><span class="dt">right</span><span class="kw">;</span>
-    <span class="kw">font-family:</span> <span class="dt">Serif</span>, <span class="dt">Sans-Serif</span><span class="kw">;</span>
-    <span class="kw">font-weight:</span><span class="dt">normal</span><span class="kw">;</span>
-    <span class="co">/*In CSS nested relative sizes accumulate*/</span>
-    <span class="co">/*font-size:120%;*/</span>
-<span class="kw">}</span>
-<span class="ch">[xml\:lang=</span><span class="st">&quot;en&quot;</span><span class="ch">]</span>, <span class="ch">[xml\:lang=</span><span class="st">&quot;fr&quot;</span><span class="ch">]</span>, <span class="ch">[xml\:lang*=</span><span class="st">&quot;-Latn-&quot;</span><span class="ch">]</span><span class="kw">{</span>
-    <span class="kw">direction:</span><span class="dt">ltr</span><span class="kw">;</span>
-    <span class="kw">text-align:</span><span class="dt">left</span><span class="kw">;</span>
-    <span class="kw">font-family:</span> <span class="dt">Serif</span>, <span class="dt">Sans-Serif</span><span class="kw">;</span>
-    <span class="kw">font-weight:</span><span class="dt">normal</span><span class="kw">;</span>
-<span class="kw">}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">[xml\:lang=</span><span class="st">&quot;ar&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang=</span><span class="st">&quot;ota&quot;</span><span class="ex">]</span>{</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">    <span class="kw">direction</span>:<span class="dv">rtl</span>;</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">text-align</span>:<span class="dv">right</span>;</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="kw">font-family</span>: <span class="dv">Serif</span>, <span class="dv">Sans-Serif</span>;</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">    <span class="kw">font-weight</span>:<span class="dv">normal</span>;</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">    <span class="co">/*In CSS nested relative sizes accumulate*/</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="co">/*font-size:120%;*/</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">}</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="ex">[xml\:lang=</span><span class="st">&quot;en&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang=</span><span class="st">&quot;fr&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang*=</span><span class="st">&quot;-Latn-&quot;</span><span class="ex">]</span>{</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">    <span class="kw">direction</span>:<span class="dv">ltr</span>;</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11">    <span class="kw">text-align</span>:<span class="dv">left</span>;</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">    <span class="kw">font-family</span>: <span class="dv">Serif</span>, <span class="dv">Sans-Serif</span>;</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13">    <span class="kw">font-weight</span>:<span class="dv">normal</span>;</a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">}</a></code></pre></div>
 </div>
 <div id="the-bad" class="slide section level1">
 <h1>2. The bad</h1>
+<h2 id="the-bad-1">The bad</h2>
 <ul>
-<li>Common but &quot;defective&quot; writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the correct spelling:
+<li>Common but “defective” writing of Arabic without the initial <em>hamza</em> and without <em>ḥarakāt</em> is different from the “correct” spelling:
 <ul>
-<li>a search for &quot;الى&quot; will not return instances of &quot;إلى&quot; or &quot;إِلى&quot;</li>
-<li>&quot;ان&quot; will neither return &quot;إن&quot; nor &quot;أن&quot; out of the box.</li>
+<li>a search for “الى” will not return instances of “إلى” or “إِلى”</li>
+<li>“ان” will neither return “إن” nor “أن” out of the box.</li>
 </ul></li>
-<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>)
+<li>Arabic numerals are not considered as numerals by the computer (i.e. data type is <code>xs:string</code> and not <code>xs:integer</code>)
 <ul>
-<li>a search for &quot;1326&quot; will not return instances of &quot;١٣٢٦&quot; and vice versa.</li>
+<li>a search for “1326” will not return instances of “١٣٢٦” and vice versa.</li>
 </ul></li>
 <li>ة is not ت!
 <ul>
@@ -268,46 +288,39 @@ Till Grallert
 </ul></li>
 <li>Some words in Ottoman might need an internal whitespace to avoid letters from being connected by the computer: غزته سي</li>
 </ul>
-</div>
-<div id="solution-normalisation" class="slide section level1">
-<h1>Solution: normalisation</h1>
-<p>The solution is normalisation---silently or with explicit mark-up (sounds familiar, doesn't it). If a text shall be machine-readable, it must be normalised!</p>
+<h2 id="solution-normalisation">Solution: normalisation</h2>
+<p>The solution is normalisation—silently or with explicit mark-up (sounds familiar, doesn’t it). If a text shall be machine-readable, it must be normalised!</p>
 <ol style="list-style-type: decimal">
 <li>Normalise spelling with <code>&lt;choice&gt;</code>, <code>&lt;orig&gt;</code>, and <code>&lt;reg&gt;</code>:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;choice&gt;</span>
-    <span class="kw">&lt;orig&gt;</span>الى<span class="kw">&lt;/orig&gt;</span>
-    <span class="kw">&lt;reg&gt;</span>إلى<span class="kw">&lt;/reg&gt;</span>
-<span class="kw">&lt;/choice&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">&lt;choice&gt;</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">    <span class="kw">&lt;orig&gt;</span>الى<span class="kw">&lt;/orig&gt;</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="kw">&lt;reg&gt;</span>إلى<span class="kw">&lt;/reg&gt;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw">&lt;/choice&gt;</span></a></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Explicitly mark up numerals with <code>&lt;num&gt;</code>:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;num</span><span class="ot"> value=</span><span class="st">&quot;1285&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>١٢٨٥<span class="kw">&lt;/num&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">&lt;num</span><span class="ot"> value=</span><span class="st">&quot;1285&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>١٢٨٥<span class="kw">&lt;/num&gt;</span></a></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Explicitly mark up words with <code>&lt;w&gt;</code>:</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;w&gt;</span>غزته سي<span class="kw">&lt;/w&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">&lt;w&gt;</span>غزته سي<span class="kw">&lt;/w&gt;</span></a></code></pre></div>
 </div>
 <div id="the-ugly" class="slide section level1">
 <h1>3. The ugly</h1>
-<p>XML, XPath, and the TEI adhere to hegemonic European/ Western models and concepts, which are not explicitly marked as such and thus silently accepted as the norm. Everything that is not written in English or, more general, in Latin scripts should be marked as such; every date that is not Gregorian, cannot be readily computed; and the TEI's concept of personal names is absolutely inadequate to mark up Arabic, Ottoman, etc. names.</p>
-</div>
-<div id="names-people-and-places" class="slide section level1">
-<h1>Names, people, and places</h1>
+<h2 id="the-ugly-1">3. The ugly</h2>
+<p>XML, XPath, and the TEI adhere to hegemonic European/ Western models and concepts, which are not explicitly marked as such and thus silently accepted as the norm. Everything that is not written in English or, more general, in Latin scripts should be marked as such; every date that is not Gregorian, cannot be readily computed; and the TEI’s concept of personal names is absolutely inadequate to mark up Arabic, Ottoman, etc. names.</p>
+<h2 id="names-people-and-places">Names, people, and places</h2>
 <p>We are going to look at <strong>names</strong> of things first. Instances of names are distinct from the entities which they reference. One entity (person, place, organisation) might be known by many names.</p>
-</div>
-<div id="names-in-the-tei" class="slide section level1">
-<h1>Names in the TEI</h1>
+<h2 id="names-in-the-tei">Names in the TEI</h2>
 <p>TEI provides several ways of marking up names and nominal expressions:</p>
 <ul>
-<li><code>&lt;rs&gt;</code> (&quot;referring string&quot;): any phrase which refers to a person or place, e.g. 'the girl you mentioned', 'my husband'...</li>
-<li><code>&lt;name&gt;</code>: any lexical item recognized as a proper name e.g. 'Siegfried Sassoon' , 'Calais', 'John Doe' ...</li>
-<li><code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code>, <code>&lt;orgName&gt;</code>: 'syntactic sugar' for <code>&lt;name type=&quot;person&quot;&gt;</code> etc.</li>
+<li><code>&lt;rs&gt;</code> (“referring string”): any phrase which refers to a person or place, e.g. ‘the girl you mentioned’, ‘my husband’…</li>
+<li><code>&lt;name&gt;</code>: any lexical item recognized as a proper name e.g. ‘Siegfried Sassoon’ , ‘Calais’, ‘John Doe’ …</li>
+<li><code>&lt;persName&gt;</code>, <code>&lt;placeName&gt;</code>, <code>&lt;orgName&gt;</code>: ‘syntactic sugar’ for <code>&lt;name type=&quot;person&quot;&gt;</code> etc.</li>
 <li>A rich set of elements for the components of such nominal expressions, e.g. <code>&lt;surname&gt;</code>, <code>&lt;forename&gt;</code>, <code>&lt;geogName&gt;</code>, <code>&lt;geogFeat&gt;</code> etc.</li>
 </ul>
-</div>
-<div id="entities" class="slide section level1">
-<h1>Entities</h1>
+<h2 id="entities">Entities</h2>
 <p>Recognising the need to distinguish clearly the encoding of references from the encoding of referenced entities (occurrences in the real world) themselves, the TEI provides provides:</p>
 <ul>
 <li><code>&lt;person&gt;</code> corresponding with <code>&lt;persName&gt;</code></li>
@@ -315,117 +328,102 @@ Till Grallert
 <li><code>&lt;org&gt;</code> corresponding with <code>&lt;orgName&gt;</code></li>
 <li>and in addition <code>&lt;relation&gt;</code>, <code>&lt;event&gt;</code> and others</li>
 </ul>
-</div>
-<div id="why" class="slide section level1">
-<h1>Why?</h1>
+<h2 id="why">Why?</h2>
 <ul>
 <li>To facilitate a more detailed and explicit encoding source documents (historical materials for example) which are primarily of interest because they concern objects in the real world</li>
-<li>To support the encoding of &quot;data-centric&quot; documents, such as authority files, biographical or geographical dictionaries and gazeteers etc.</li>
+<li>To support the encoding of “data-centric” documents, such as authority files, biographical or geographical dictionaries and gazeteers etc.</li>
 <li>To represent and model in a uniform way data which is only implicit in readings of many different documents</li>
 </ul>
-</div>
-<div id="reference-theory" class="slide section level1">
-<h1>Reference theory</h1>
-<p><em>Reference</em> is a fundamental semiotic concept</p>
+<h2 id="reference-theory">Reference theory</h2>
+<p><strong>Reference</strong> is a fundamental semiotic concept</p>
 <ul>
 <li>We can talk about the real world using natural languages because we know that some types of word are closely associated with real, specific, objects</li>
 <li>Proper names and technical terms are canonical examples of this kind of word</li>
-<li>'<em>ʿUṭūfetli Meḥmet ʿAlī Bey Efendi</em>' refers to a single real world entity; 'Lyon' and 'River Thames' to others: a specific place, a specific river respectively</li>
-<li>When we translate between natural languages, usually the proper names don't change, or are conventionally equivalent</li>
+<li>‘<em>ʿUṭūfetli Meḥmet ʿAlī Bey Efendi</em>’ refers to a single real world entity; ‘Lyon’ and ‘River Thames’ to others: a specific place, a specific river respectively</li>
+<li>When we translate between natural languages, usually the proper names don’t change, or are conventionally equivalent</li>
 </ul>
-</div>
-<div id="how-do-we-represent-this-association" class="slide section level1">
-<h1>How do we represent this association?</h1>
+<h2 id="how-do-we-represent-this-association">How do we represent this association?</h2>
 <p>Every element which is a member of the <code>att.naming</code> class inherits two attributes from the <code>att.canonical</code> class:</p>
 <ul>
 <li><code>@key</code>: provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</li>
 <li><code>@ref</code>: provides an explicit means of locating a full definition for the entity being named by means of one or more URIs.</li>
 </ul>
-<p>Note: Arguably, <code>@key</code> is redundant, since <code>@ref</code> is defined as anyURI, this can point from the name instance to the <span class="citation">@xml:id</span> of metadata about the entity, prefixing it with a '#' if in the same file.</p>
-</div>
-<div id="other-linking-attributes" class="slide section level1">
-<h1>Other linking attributes</h1>
+<p>Note: Arguably, <code>@key</code> is redundant, since <code>@ref</code> is defined as anyURI, this can point from the name instance to the <span class="citation">@xml:id</span> of metadata about the entity, prefixing it with a ‘#’ if in the same file.</p>
+<h2 id="other-linking-attributes">Other linking attributes</h2>
 <ul>
 <li><code>@role</code>: may be used to specify further information about the entity referenced by this name, for example the occupation of a person, or the status of a place.</li>
 <li><code>@nymRef</code>: provides a means of locating the canonical form (<code>&lt;nym&gt;</code>) of the <em>names</em> associated with the object named by the element bearing it.</li>
 </ul>
 <p>Note: <code>@nymRef</code> is particularly important for our multi-lingual examples:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/addName&gt;</span>
-<span class="kw">&lt;/persName&gt;</span>
-    <span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota-Latn-x-ijmes&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>Şükrü<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>Paşa<span class="kw">&lt;/addName&gt;</span>
-<span class="kw">&lt;/persName&gt;</span>
-<span class="er">&lt;</span>/persName&gt;
-    <span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar-Latn-EN&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>Shukri<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>Pasha<span class="kw">&lt;/addName&gt;</span>
-<span class="kw">&lt;/persName&gt;</span></code></pre></div>
-</div>
-<div id="examples" class="slide section level1">
-<h1>Examples</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>... <span class="kw">&lt;name</span><span class="ot"> ref=</span><span class="st">&quot;#jsbach&quot;</span><span class="ot"> type=</span><span class="st">&quot;person&quot;</span><span class="kw">&gt;</span>Johann Sebastian Bach<span class="kw">&lt;/name&gt;</span> the German composer was born in 1685... <span class="kw">&lt;/p&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">    <span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota-Latn-x-ijmes&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>Şükrü&lt;/forename&gt;</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>Paşa<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">    <span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar-Latn-EN&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>Shukri<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>Pasha<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="kw">&lt;/persName&gt;</span></a></code></pre></div>
+<h2 id="examples">Examples</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">&lt;p</span><span class="ot"> xml:lang=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span>... <span class="kw">&lt;name</span><span class="ot"> ref=</span><span class="st">&quot;#jsbach&quot;</span><span class="ot"> type=</span><span class="st">&quot;person&quot;</span><span class="kw">&gt;</span>Johann Sebastian Bach<span class="kw">&lt;/name&gt;</span> the German composer was born in 1685... <span class="kw">&lt;/p&gt;</span></a></code></pre></div>
 <p>or:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;p</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>نقل الينا البرق خبر صدور الارادة
-<span class="kw">&lt;lb/&gt;</span> السنية بتعيين <span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#orp&quot;</span><span class="kw">&gt;</span>حضرة دولتلو عمر رشدي
-<span class="kw">&lt;lb/&gt;</span>باشا<span class="kw">&lt;/persName&gt;</span> قومندان الفيلق الهمايون الخامس
-<span class="kw">&lt;lb/&gt;</span>سابقاً ناظراً لل<span class="kw">&lt;orgName</span><span class="ot"> ref=</span><span class="st">&quot;entities:mow&quot;</span><span class="kw">&gt;</span>حربية<span class="kw">&lt;/orgName&gt;</span> وهو دليل على ان نياب
-<span class="kw">&lt;lb/&gt;</span>عظمته منصرفة الى ما فيه اعلآء شان
-<span class="kw">&lt;lb/&gt;</span>جيشه الهمايوني وترقيبته سائر الفنون
-<span class="kw">&lt;lb/&gt;</span>والشؤون العسكرية فلا زالت غيوث
-<span class="kw">&lt;lb/&gt;</span>اياديه البيضاء تهطل على البلاد من
-<span class="kw">&lt;lb/&gt;</span>وابل النعم والآلاء ما ينطق الالسنة
-<span class="kw">&lt;lb/&gt;</span>بالشكر مشفوعاً بالدعاء<span class="kw">&lt;/p&gt;</span></code></pre></div>
-</div>
-<div id="references-take-many-forms" class="slide section level1">
-<h1>References take many forms</h1>
+<div class="sourceCode" id="cb8"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">&lt;p</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>نقل الينا البرق خبر صدور الارادة</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">&lt;lb/&gt;</span> السنية بتعيين <span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#orp&quot;</span><span class="kw">&gt;</span>حضرة دولتلو عمر رشدي</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">&lt;lb/&gt;</span>باشا<span class="kw">&lt;/persName&gt;</span> قومندان الفيلق الهمايون الخامس</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="kw">&lt;lb/&gt;</span>سابقاً ناظراً لل<span class="kw">&lt;orgName</span><span class="ot"> ref=</span><span class="st">&quot;entities:mow&quot;</span><span class="kw">&gt;</span>حربية<span class="kw">&lt;/orgName&gt;</span> وهو دليل على ان نياب</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">&lt;lb/&gt;</span>عظمته منصرفة الى ما فيه اعلآء شان</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">&lt;lb/&gt;</span>جيشه الهمايوني وترقيبته سائر الفنون</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="kw">&lt;lb/&gt;</span>والشؤون العسكرية فلا زالت غيوث</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="kw">&lt;lb/&gt;</span>اياديه البيضاء تهطل على البلاد من</a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="kw">&lt;lb/&gt;</span>وابل النعم والآلاء ما ينطق الالسنة</a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="kw">&lt;lb/&gt;</span>بالشكر مشفوعاً بالدعاء<span class="kw">&lt;/p&gt;</span></a></code></pre></div>
+<h2 id="references-take-many-forms">References take many forms</h2>
 <p>Even within a single language, in a single document, there may be many ways of referencing the same person:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span>.... <span class="kw">&lt;persName&gt;</span>Leslie<span class="kw">&lt;/persName&gt;</span> .... <span class="er">&lt;</span>. rs&gt;Wilfred&#39;s cousin<span class="er">&lt;</span>/rs&gt;</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">&lt;persName&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span>.... <span class="kw">&lt;persName&gt;</span>Leslie<span class="kw">&lt;/persName&gt;</span> .... <span class="kw">&lt;rs&gt;</span>Wilfred&#39;s cousin<span class="kw">&lt;/rs&gt;</span></a></code></pre></div>
 <p>The <code>@ref</code> can be used simply to combine all references to a specified person:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span>....
-<span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Leslie<span class="kw">&lt;/persName&gt;</span> ....
-<span class="kw">&lt;rs</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Wilfred&#39;s cousin<span class="kw">&lt;/rs&gt;</span>
-<span class="co">&lt;!-- ... elsewhere --&gt;</span>
-<span class="kw">&lt;person</span><span class="ot"> xml:id=</span><span class="st">&quot;LG&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;persName&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span>
-<span class="co">&lt;!-- everything we want to say about Leslie --&gt;</span>
-<span class="kw">&lt;/person&gt;</span></code></pre></div>
-</div>
-<div id="references-are-also-ambiguous" class="slide section level1">
-<h1>References are also ambiguous</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;s&gt;</span>Jean likes <span class="kw">&lt;name</span><span class="ot"> ref=</span><span class="st">&quot;#NN123&quot;</span><span class="kw">&gt;</span>Nancy<span class="kw">&lt;/name&gt;&lt;/s&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span>....</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">&lt;persName</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Leslie<span class="kw">&lt;/persName&gt;</span> ....</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">&lt;rs</span><span class="ot"> ref=</span><span class="st">&quot;#LG&quot;</span><span class="kw">&gt;</span>Wilfred&#39;s cousin<span class="kw">&lt;/rs&gt;</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">&lt;!-- ... elsewhere --&gt;</span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="kw">&lt;person</span><span class="ot"> xml:id=</span><span class="st">&quot;LG&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6">    <span class="kw">&lt;persName&gt;</span>Leslie Gunston<span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">&lt;!-- everything we want to say about Leslie --&gt;</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="kw">&lt;/person&gt;</span></a></code></pre></div>
+<h2 id="references-are-also-ambiguous">References are also ambiguous</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">&lt;s&gt;</span>Jean likes <span class="kw">&lt;name</span><span class="ot"> ref=</span><span class="st">&quot;#NN123&quot;</span><span class="kw">&gt;</span>Nancy<span class="kw">&lt;/name&gt;&lt;/s&gt;</span></a></code></pre></div>
 <p>Using a more precise element (<code>&lt;persName&gt;</code> or <code>&lt;placeName&gt;</code>) is one way of resolving the ambiguity; another is to follow the pointer:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;person</span><span class="ot"> xml:id=</span><span class="st">&quot;NN123&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;persName&gt;</span>
-        <span class="kw">&lt;forename&gt;</span>Nancy<span class="kw">&lt;/forename&gt;</span>
-        <span class="kw">&lt;surname&gt;</span>Ide<span class="kw">&lt;/surname&gt;</span>
-    <span class="kw">&lt;/persName&gt;</span>
-    <span class="co">&lt;!-- ... --&gt;</span>
-<span class="kw">&lt;/person&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">&lt;person</span><span class="ot"> xml:id=</span><span class="st">&quot;NN123&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">    <span class="kw">&lt;persName&gt;</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">        <span class="kw">&lt;forename&gt;</span>Nancy<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">        <span class="kw">&lt;surname&gt;</span>Ide<span class="kw">&lt;/surname&gt;</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">    <span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">    <span class="co">&lt;!-- ... --&gt;</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="kw">&lt;/person&gt;</span></a></code></pre></div>
 <p>or:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;place</span><span class="ot"> xml:id=</span><span class="st">&quot;N123&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;placeName</span><span class="ot"> notBefore=</span><span class="st">&quot;1400&quot;</span><span class="kw">&gt;</span>Nancy<span class="kw">&lt;/placeName&gt;</span>
-    <span class="kw">&lt;placeName</span><span class="ot"> notAfter=</span><span class="st">&quot;0056&quot;</span><span class="kw">&gt;</span>Nantium<span class="kw">&lt;/placeName&gt;</span>
-    <span class="co">&lt;!-- ... --&gt;</span>
-<span class="kw">&lt;/place&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">&lt;place</span><span class="ot"> xml:id=</span><span class="st">&quot;N123&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">    <span class="kw">&lt;placeName</span><span class="ot"> notBefore=</span><span class="st">&quot;1400&quot;</span><span class="kw">&gt;</span>Nancy<span class="kw">&lt;/placeName&gt;</span></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">    <span class="kw">&lt;placeName</span><span class="ot"> notAfter=</span><span class="st">&quot;0056&quot;</span><span class="kw">&gt;</span>Nantium<span class="kw">&lt;/placeName&gt;</span></a>
+<a class="sourceLine" id="cb13-4" data-line-number="4">    <span class="co">&lt;!-- ... --&gt;</span></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="kw">&lt;/place&gt;</span></a></code></pre></div>
 </div>
-<div id="components-of-persname-elements" class="slide section level1">
-<h1>Components of <code>&lt;persName&gt;</code> elements</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="ot"> ref=</span><span class="st">&quot;pers1&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/addName&gt;</span>
-<span class="kw">&lt;/persName&gt;</span>
-<span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> ref=</span><span class="st">&quot;pers2&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym3&quot;</span><span class="kw">&gt;</span>بك<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;surname</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym4&quot;</span><span class="kw">&gt;</span>العسلي<span class="kw">&lt;/surname&gt;</span>
-<span class="kw">&lt;/persName&gt;</span></code></pre></div>
-<p>Not to mention: <code>&lt;roleName&gt;</code> (e.g. 'Emperor'), <code>&lt;genName&gt;</code> (eg 'the Elder') <code>&lt;addName&gt;</code> (e.g. 'Hammer of the Scots'), <code>&lt;nameLink&gt;</code> a link between components (e.g. 'van') etc. all of which can carry <code>@type</code> attributes</p>
-</div>
-<div id="persname-works-well-for-western-names-but-arabic-or-ottoman" class="slide section level1">
-<h1><code>&lt;persName&gt;</code> works well for Western names, but Arabic or Ottoman?</h1>
+<div id="modelling-names" class="slide section level1">
+<h1>Modelling names</h1>
+<h2 id="components-of-persname-elements">Components of <code>&lt;persName&gt;</code> elements</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="ot"> ref=</span><span class="st">&quot;pers1&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym2&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="kw">&lt;/persName&gt;</span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="ot"> ref=</span><span class="st">&quot;pers2&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">    <span class="kw">&lt;forename</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym1&quot;</span><span class="kw">&gt;</span>شكري<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7">    <span class="kw">&lt;addName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym3&quot;</span><span class="kw">&gt;</span>بك<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8">    <span class="kw">&lt;surname</span><span class="ot"> nymRef=</span><span class="st">&quot;#nym4&quot;</span><span class="kw">&gt;</span>العسلي&lt;/surname&gt;</a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="kw">&lt;/persName&gt;</span></a></code></pre></div>
+<p>Not to mention: <code>&lt;roleName&gt;</code> (e.g. ‘Emperor’), <code>&lt;genName&gt;</code> (eg ‘the Elder’) <code>&lt;addName&gt;</code> (e.g. ‘Hammer of the Scots’), <code>&lt;nameLink&gt;</code> a link between components (e.g. ‘van’) etc. all of which can carry <code>@type</code> attributes</p>
+<h2 id="persname-works-well-for-western-names-but-arabic-or-ottoman"><code>&lt;persName&gt;</code> works well for Western names, but Arabic or Ottoman?</h2>
 <p>The canonical scheme of <code>&lt;surname&gt;</code> and <code>&lt;forename&gt;</code> is insufficient to markup the components of personal names in pre-modern and/or non-Western contexts: How should we mark up the following names?</p>
 <ul>
 <li>حضرة صاحب الدولة المشير عبد الله باشا</li>
@@ -434,66 +432,61 @@ Till Grallert
 <li>جناب عزتلو صبحي بك ابو النصر</li>
 <li>جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني</li>
 </ul>
-</div>
-<div id="soualah-and-hassouns-proposal-for-classical-arabic-names" class="slide section level1">
-<h1>Soualah and Hassoun's proposal for classical Arabic names</h1>
+<h2 id="soualah-and-hassouns-proposal-for-classical-arabic-names">Soualah and Hassoun’s proposal for classical Arabic names</h2>
 <p><a href="http://jtei.revues.org/398">Soulah and Hassoun 2012</a> propose to use available elements <code>&lt;surname&gt;</code>, <code>&lt;forename&gt;</code>, and <code>&lt;addName&gt;</code> with a controlled vocabulary of <code>@type</code> and <code>@subtype</code> attributes.</p>
 <ul>
 <li><code>&lt;surname&gt;</code>: to encode the <em>laqab</em> evoking a real or assigned quality</li>
 <li><code>&lt;forename&gt;</code>: for the <em>ism</em></li>
 <li><code>&lt;addName&gt;</code> with <code>@type</code>
 <ul>
-<li>&quot;patronym&quot;: introduced by &quot;ibn&quot; or &quot;ibnat&quot;</li>
-<li>&quot;kunyah&quot;: a mark of distinction applied to prominent figures to honor them. For example, “Abū Yūsuf” is often used for someone called Yaʿqūb</li>
-<li>&quot;khitab&quot;: an honorific name, which is usually ended by the suffix al-Dīn</li>
-<li>&quot;nisbah&quot;: an adjective formed by using the suffix ī in order to indicate the person origin, his birth place, or his residence. It represents the relationship name, which can be a genealogical, political or ideological affiliation of a person.</li>
+<li>“nasab”: Patronym, introduced by <em>ibn</em> or <em>ibnat</em>.</li>
+<li>“kunyah”: Teknonym, beginning with <em>Abū</em> or <em>Umm</em>. Also a mark of distinction applied to prominent figures to honor them. For example, “Abū Yūsuf” is often used for someone called Yaʿqūb</li>
+<li>“khitab”: an honorific name, which is usually ended by the suffix <em>al-Dīn</em></li>
+<li>“nisbah”: an adjective formed by using the suffix <em>ī</em> in order to indicate the person origin, his birth place, or his residence. It represents the relationship name, which can be a genealogical, political or ideological affiliation of a person.</li>
 </ul></li>
 </ul>
-</div>
-<div id="extended-proposal-for-late-ottoman-contexts" class="slide section level1">
-<h1>Extended proposal for late Ottoman contexts</h1>
-<p>I suggest to add the following values to the <code>@type</code> attribute of <code>&lt;addName&gt;</code></p>
+<h2 id="extended-proposal-for-late-ottoman-contexts">Extended proposal for late Ottoman contexts</h2>
+<p>I suggest to add the following values to the <code>@type</code> attribute of <code>&lt;roleName&gt;</code></p>
 <ul>
-<li>&quot;title&quot;: covering the wide range of Ottoman titles, e.g. Pasha, Bey, Efendi</li>
-<li>&quot;honorific&quot;: for the highly regularised honorific addresses and salutations, e.g. rif'etli, saadetli, utufetli, lizetli, devletli</li>
+<li>“title”: covering the wide range of Ottoman titles, e.g. Pasha, Bey, Efendi.</li>
+<li>“rank”: for formal ranks in administrative, military or religious hierarchies.</li>
+<li>“honorific”: for the highly regularised honorific addresses and salutations, e.g. rif’etli, saadetli, utufetli, lizetli, devletli</li>
+<li>“nickname”: such as “owner of <em>al-Muqtabas</em>”</li>
+<li>“nobility”:</li>
 </ul>
-</div>
-<div id="example" class="slide section level1">
-<h1>Example</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span> جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني<span class="kw">&lt;/persName&gt;</span></code></pre></div>
+<h2 id="example">Example</h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span> جزائري زاده الامير علي باشا ابن عبد القادر افندي الحسني<span class="kw">&lt;/persName&gt;</span></a></code></pre></div>
 <p>Could be marked up as:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;nisbah&quot;</span><span class="kw">&gt;</span>جزائري<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;honorific&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>زاده<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="kw">&gt;</span>الامير<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;forename&gt;</span>علي<span class="kw">&lt;/forename&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;patronym&quot;</span><span class="kw">&gt;</span>ابن
-        <span class="kw">&lt;forename&gt;</span>عبد القادر<span class="kw">&lt;/forename&gt;</span>
-        <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>افندي<span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;/addName&gt;</span>
-    <span class="kw">&lt;surname</span><span class="ot"> type=</span><span class="st">&quot;laqab&quot;</span><span class="kw">&gt;</span>الحسني<span class="kw">&lt;/surname&gt;</span>
-<span class="kw">&lt;/persName&gt;</span></code></pre></div>
-</div>
-<div id="components-of-place-names" class="slide section level1">
-<h1>Components of place names</h1>
+<div class="sourceCode" id="cb16"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">&lt;persName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">    <span class="kw">&lt;surname&gt;</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">        <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;nisbah&quot;</span><span class="kw">&gt;</span>جزائري<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb16-4" data-line-number="4">    <span class="kw">&lt;/surname&gt;</span></a>
+<a class="sourceLine" id="cb16-5" data-line-number="5">    <span class="kw">&lt;roleName</span><span class="ot"> type=</span><span class="st">&quot;honorific&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>زاده<span class="kw">&lt;/roleName&gt;</span></a>
+<a class="sourceLine" id="cb16-6" data-line-number="6">    <span class="kw">&lt;roleName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="kw">&gt;</span>الامير<span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb16-7" data-line-number="7">    <span class="kw">&lt;forename&gt;</span>علي<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb16-8" data-line-number="8">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>باشا<span class="kw">&lt;/roleName&gt;</span></a>
+<a class="sourceLine" id="cb16-9" data-line-number="9">    <span class="kw">&lt;addName</span><span class="ot"> type=</span><span class="st">&quot;patronym&quot;</span><span class="kw">&gt;</span>ابن</a>
+<a class="sourceLine" id="cb16-10" data-line-number="10">        <span class="kw">&lt;forename&gt;</span>عبد القادر<span class="kw">&lt;/forename&gt;</span></a>
+<a class="sourceLine" id="cb16-11" data-line-number="11">        <span class="kw">&lt;roleName</span><span class="ot"> type=</span><span class="st">&quot;title&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ota&quot;</span><span class="kw">&gt;</span>افندي<span class="kw">&lt;/roleName&gt;</span></a>
+<a class="sourceLine" id="cb16-12" data-line-number="12">    <span class="kw">&lt;/addName&gt;</span></a>
+<a class="sourceLine" id="cb16-13" data-line-number="13">    <span class="kw">&lt;surname</span><span class="ot"> type=</span><span class="st">&quot;laqab&quot;</span><span class="kw">&gt;</span>الحسني<span class="kw">&lt;/surname&gt;</span></a>
+<a class="sourceLine" id="cb16-14" data-line-number="14"><span class="kw">&lt;/persName&gt;</span></a></code></pre></div>
+<h2 id="components-of-place-names">Components of place names</h2>
 <ul>
 <li><code>&lt;placeName&gt;</code> (names can be made up of other names)</li>
 <li><code>&lt;geogName&gt;</code> a name associated with some geographical feature such as a mountain or river</li>
-<li><code>&lt;geogFeat&gt;</code> a term for some particular kind of geographical feature e.g. 'Mount', 'Lake'</li>
+<li><code>&lt;geogFeat&gt;</code> a term for some particular kind of geographical feature e.g. ‘Mount’, ‘Lake’</li>
 </ul>
 <p>For example:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;placeName</span><span class="ot"> xml:lang=</span><span class="st">&quot;fr&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;geogFeat&gt;</span>Mont<span class="kw">&lt;/geogFeat&gt;</span>
-    <span class="kw">&lt;geogName&gt;</span>Blanc<span class="kw">&lt;/geogName&gt;</span>
-<span class="kw">&lt;/placeName&gt;</span>
-<span class="kw">&lt;placeName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;geogFeat&gt;</span>نهر<span class="kw">&lt;/geogFeat&gt;</span>
-    <span class="kw">&lt;geogName&gt;</span>بيروت<span class="kw">&lt;/geogName&gt;</span>
-<span class="kw">&lt;/placeName&gt;</span></code></pre></div>
-</div>
-<div id="geo-political-place-names" class="slide section level1">
-<h1>Geo-political place names</h1>
+<div class="sourceCode" id="cb17"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">&lt;placeName</span><span class="ot"> xml:lang=</span><span class="st">&quot;fr&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb17-2" data-line-number="2">    <span class="kw">&lt;geogFeat&gt;</span>Mont<span class="kw">&lt;/geogFeat&gt;</span></a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">    <span class="kw">&lt;geogName&gt;</span>Blanc<span class="kw">&lt;/geogName&gt;</span></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="kw">&lt;/placeName&gt;</span></a>
+<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="kw">&lt;placeName</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6">    <span class="kw">&lt;geogFeat&gt;</span>نهر<span class="kw">&lt;/geogFeat&gt;</span></a>
+<a class="sourceLine" id="cb17-7" data-line-number="7">    <span class="kw">&lt;geogName&gt;</span>بيروت&lt;/geogName&gt;</a>
+<a class="sourceLine" id="cb17-8" data-line-number="8"><span class="kw">&lt;/placeName&gt;</span></a></code></pre></div>
+<h2 id="geo-political-place-names">Geo-political place names</h2>
 <ol style="list-style-type: decimal">
 <li><code>&lt;bloc&gt;</code>: name of a geo-political unit consisting of two or more nation states or countries.</li>
 <li><code>&lt;country&gt;</code>: name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc.</li>
@@ -502,28 +495,27 @@ Till Grallert
 <li><code>&lt;district&gt;</code>: contains the name of any kind of subdivision of a settlement, such as a parish, ward, or other administrative or geographic unit.</li>
 </ol>
 </div>
-<div id="the-date-element" class="slide section level1">
-<h1>The <code>&lt;date&gt;</code> element</h1>
+<div id="modelling-temporal-information" class="slide section level1">
+<h1>Modelling temporal information</h1>
+<h2 id="the-date-element">The <code>&lt;date&gt;</code> element</h2>
 <p>Temporal information can be encoded with:</p>
 <ul>
 <li><code>&lt;date&gt;</code>: contains a date in any format.</li>
 <li><code>&lt;time&gt;</code> contains a phrase defining a time of day in any format. <!-- - `<offset>` marks that part of a relative temporal or spatial expression which indicates the direction of the offset between the two place names, dates, or times involved in the expression.--></li>
 </ul>
 <p>Example:</p>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;p&gt;</span>
-        <span class="kw">&lt;date&gt;</span>يوم السبت الماضي<span class="kw">&lt;/date&gt;</span>عاد الينا على
-        <span class="kw">&lt;lb/&gt;</span>الباخرة الافرنسية <span class="kw">&lt;persName&gt;</span>جناب الوجيه الخواجا
-        <span class="kw">&lt;lb/&gt;</span>سركست<span class="kw">&lt;/persName&gt;</span> صاحب محل وبر المشهور
-        <span class="kw">&lt;lb/&gt;</span>وقنصل كل من <span class="kw">&lt;placeName&gt;</span>الداتمرك<span class="kw">&lt;/placeName&gt;</span> و<span class="kw">&lt;placeName&gt;</span>اسوج<span class="kw">&lt;/placeName&gt;</span> فلقيه
-        <span class="kw">&lt;lb/&gt;</span>على البحر موظفو المحل وعدد من
-        <span class="kw">&lt;lb/&gt;</span>الاصدقاء فنهنئه بالعود سالماً<span class="kw">&lt;/p&gt;</span>
-    <span class="kw">&lt;ab</span><span class="ot"> rend=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span>---<span class="kw">&lt;/ab&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
-</div>
-<div id="w3c-date-formats" class="slide section level1">
-<h1>W3C Date Formats</h1>
-<p>All the elements above are 'datable' and so can be associated with a more or less exact date or date range using any combination of the following attributes (class <code>att.datable</code>):</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb18-2" data-line-number="2">    <span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb18-3" data-line-number="3">        <span class="kw">&lt;date&gt;</span>يوم السبت الماضي<span class="kw">&lt;/date&gt;</span> عاد الينا على</a>
+<a class="sourceLine" id="cb18-4" data-line-number="4">        <span class="kw">&lt;lb/&gt;</span>الباخرة الافرنسية <span class="kw">&lt;persName&gt;</span>جناب الوجيه الخواجا</a>
+<a class="sourceLine" id="cb18-5" data-line-number="5">        <span class="kw">&lt;lb/&gt;</span>سركست&lt;/persName&gt; صاحب محل وبر المشهور</a>
+<a class="sourceLine" id="cb18-6" data-line-number="6">        <span class="kw">&lt;lb/&gt;</span>وقنصل كل من <span class="kw">&lt;placeName&gt;</span>الداتمرك<span class="kw">&lt;/placeName&gt;</span> و<span class="kw">&lt;placeName&gt;</span>اسوج<span class="kw">&lt;/placeName&gt;</span> فلقيه</a>
+<a class="sourceLine" id="cb18-7" data-line-number="7">        <span class="kw">&lt;lb/&gt;</span>على البحر موظفو المحل وعدد من</a>
+<a class="sourceLine" id="cb18-8" data-line-number="8">        <span class="kw">&lt;lb/&gt;</span>الاصدقاء فنهنئه بالعود سالماً<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb18-9" data-line-number="9">    <span class="kw">&lt;ab</span><span class="ot"> rend=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span>---<span class="kw">&lt;/ab&gt;</span></a>
+<a class="sourceLine" id="cb18-10" data-line-number="10"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
+<h2 id="w3c-date-formats">W3C Date Formats</h2>
+<p>All the elements above are ‘datable’ and so can be associated with a more or less exact date or date range using any combination of the following attributes (class <code>att.datable</code>):</p>
 <ul>
 <li><code>@when</code>: supplies the value of a date or time in a standard form</li>
 <li><code>@notBefore</code>: specifies the earliest possible date for the event in standard form</li>
@@ -531,11 +523,9 @@ Till Grallert
 <li><code>@from</code>: indicates the starting point of the period in standard form</li>
 <li><code>@to</code>: indicates the ending point of the period in standard form</li>
 </ul>
-</div>
-<div id="calendars" class="slide section level1">
-<h1>Calendars</h1>
-<p>Similar to the conceptualisation of personal names, current dating standards favour the contemporary Western model--i.e. without further specification all dated attributes refer to the Gregorian calendar.</p>
-<p>All other calendars--in our case this means <em>hijrī</em>, <em>mālī</em>, and <em>rūmī</em>--should be declared and documented using the <code>&lt;calendarDesc&gt;</code> in the <code>&lt;profileDesc&gt;</code> in the TEI header. They can then be referenced through:</p>
+<h2 id="calendars">Calendars</h2>
+<p>Similar to the conceptualisation of personal names, current dating standards favour the contemporary Western model–i.e. without further specification all dated attributes refer to the Gregorian calendar.</p>
+<p>All other calendars–in our case this means <em>hijrī</em>, <em>mālī</em>, and <em>rūmī</em>–should be declared and documented using the <code>&lt;calendarDesc&gt;</code> in the <code>&lt;profileDesc&gt;</code> in the TEI header. They can then be referenced through:</p>
 <ul>
 <li><code>@calendar</code>: indicates the system or calendar to which the date represented by the content of this element belongs.</li>
 <li><code>@datingMethod</code>: supplies a pointer to a <code>&lt;calendar&gt;</code> element or other means of interpreting the values of the custom dating attributes:
@@ -545,40 +535,34 @@ Till Grallert
 </ul>
 </div>
 <div id="the-islamic-calendar-hijrī" class="slide section level1">
-<h1>The islamic calendar: <em>hijrī</em></h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_islamic&quot;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;p&gt;</span>Islamic <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as the beginning of the month is based on sightings of the new moon.<span class="kw">&lt;/p&gt;</span>
-  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1257-04-01&quot;</span><span class="kw">&gt;</span>1 Rab II 1257, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1326-02-01&quot;</span><span class="kw">&gt;</span>1 Ṣaf 1326, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/calendar&gt;</span></code></pre></div>
+<h1>#The islamic calendar: <em>hijrī</em></h1>
+<div class="sourceCode" id="cb19"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_islamic&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">  <span class="kw">&lt;p&gt;</span>Islamic <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as the beginning of the month is based on sightings of the new moon.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb19-3" data-line-number="3">  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1257-04-01&quot;</span><span class="kw">&gt;</span>1 Rab II 1257, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1326-02-01&quot;</span><span class="kw">&gt;</span>1 Ṣaf 1326, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="kw">&lt;/calendar&gt;</span></a></code></pre></div>
 <p>Note: The official <strong>XPath</strong> specifications have a bug that prevents the computation of Islamic <em>hijrī</em> dates. To remedy this and other issues, I wrote a number of <em>XSLT stylesheets</em> for converting dates between the four calendars in use in the Ottoman Empire, which can be found on <a href="https://github.com/tillgrallert/xslt-calendar-conversion">GitHub</a> (<a href="https://github.com/tillgrallert/xslt-calendar-conversion" class="uri">https://github.com/tillgrallert/xslt-calendar-conversion</a>).</p>
-</div>
-<div id="the-reformed-julian-calendar-rūmī-sharqī" class="slide section level1">
-<h1>The (reformed) Julian calendar: <em>rūmī</em>, <em>sharqī</em></h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_julian&quot;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;p&gt;</span>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span>. Arabic newspapers usually labelled this calendar as <span class="kw">&lt;hi&gt;</span>sharqī<span class="kw">&lt;/hi&gt;</span>.<span class="kw">&lt;/p&gt;</span>
-  <span class="kw">&lt;p&gt;</span>All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars, even-numbered) year at the end of February (the last day of the old Julian calendar). The Gregorian calendar suppresses this rule in centesimal years that cannot be divided by 400. This difference creates a growing offset between Gregorian and Julian calendars: while 1900 R was a leap year, 1900 was not, which in turn caused the difference between the Gregorian calendar, on the one hand, and the <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span> calendars, on the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900) onwards.<span class="kw">&lt;/p&gt;</span>
-  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1841-05-11&quot;</span><span class="kw">&gt;</span>11 Ayyār 1841, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1908-02-21&quot;</span><span class="kw">&gt;</span>21 Shub 1908, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/calendar&gt;</span></code></pre></div>
-</div>
-<div id="the-ottoman-fiscal-calendar-mālī-rūmī-sic" class="slide section level1">
-<h1>The Ottoman fiscal calendar: <em>mālī</em>, <em>rūmī</em> (sic!)</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_ottomanfiscal&quot;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;p&gt;</span>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and sometimes, confusingly, also as <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span>. Every 33 lunar years, a <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> year would complete within a single solar <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> year. In this case the counting of the <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> years skipped a year to catch up with the faster <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> calendar. Due to a printing error in the coupon booklets for the consolidated debt repayment program for 1872 (1288 M instead of 1289 M), synchronisation of <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> years was henceforth abolished. As <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> years began with 1 March, <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> leap years preceded their <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span> and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).<span class="kw">&lt;/p&gt;</span>
-  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1257-03-11&quot;</span><span class="kw">&gt;</span>11 Māyis 1257, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1323-12-21&quot;</span><span class="kw">&gt;</span>21 Shub 1323, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span>
-<span class="kw">&lt;/calendar&gt;</span></code></pre></div>
-</div>
-<div id="example-1" class="slide section level1">
-<h1>Example</h1>
-<div class="sourceCode"><pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span>
-    <span class="kw">&lt;p&gt;</span>
-        <span class="kw">&lt;date</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1307-03-08&quot;</span><span class="ot"> when=</span><span class="st">&quot;1889-11-02&quot;</span><span class="kw">&gt;</span>يوم السبت الماضي<span class="kw">&lt;/date&gt;</span>عاد الينا على
-        <span class="kw">&lt;lb/&gt;</span>الباخرة الافرنسية <span class="kw">&lt;persName&gt;</span>جناب الوجيه الخواجا
-        <span class="kw">&lt;lb/&gt;</span>سركست<span class="kw">&lt;/persName&gt;</span> صاحب محل وبر المشهور
-        <span class="kw">&lt;lb/&gt;</span>وقنصل كل من <span class="kw">&lt;placeName&gt;</span>الداتمرك<span class="kw">&lt;/placeName&gt;</span> و<span class="kw">&lt;placeName&gt;</span>اسوج<span class="kw">&lt;/placeName&gt;</span> فلقيه
-        <span class="kw">&lt;lb/&gt;</span>على البحر موظفو المحل وعدد من
-        <span class="kw">&lt;lb/&gt;</span>الاصدقاء فنهنئه بالعود سالماً<span class="kw">&lt;/p&gt;</span>
-    <span class="kw">&lt;ab</span><span class="ot"> rend=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span>---<span class="kw">&lt;/ab&gt;</span>
-<span class="kw">&lt;/div&gt;</span></code></pre></div>
+<h2 id="the-reformed-julian-calendar-rūmī-sharqī">The (reformed) Julian calendar: <em>rūmī</em>, <em>sharqī</em></h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_julian&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">  <span class="kw">&lt;p&gt;</span>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span>. Arabic newspapers usually labelled this calendar as <span class="kw">&lt;hi&gt;</span>sharqī<span class="kw">&lt;/hi&gt;</span>.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">  <span class="kw">&lt;p&gt;</span>All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars, even-numbered) year at the end of February (the last day of the old Julian calendar). The Gregorian calendar suppresses this rule in centesimal years that cannot be divided by 400. This difference creates a growing offset between Gregorian and Julian calendars: while 1900 R was a leap year, 1900 was not, which in turn caused the difference between the Gregorian calendar, on the one hand, and the <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span> calendars, on the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900) onwards.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1841-05-11&quot;</span><span class="kw">&gt;</span>11 Ayyār 1841, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_julian&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1908-02-21&quot;</span><span class="kw">&gt;</span>21 Shub 1908, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb20-5" data-line-number="5"><span class="kw">&lt;/calendar&gt;</span></a></code></pre></div>
+<h2 id="the-ottoman-fiscal-calendar-mālī-rūmī-sic">The Ottoman fiscal calendar: <em>mālī</em>, <em>rūmī</em> (sic!)</h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">&lt;calendar</span><span class="ot"> xml:id=</span><span class="st">&quot;cal_ottomanfiscal&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">  <span class="kw">&lt;p&gt;</span>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and sometimes, confusingly, also as <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span>. Every 33 lunar years, a <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> year would complete within a single solar <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> year. In this case the counting of the <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> years skipped a year to catch up with the faster <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> calendar. Due to a printing error in the coupon booklets for the consolidated debt repayment program for 1872 (1288 M instead of 1289 M), synchronisation of <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> and <span class="kw">&lt;hi&gt;</span>hijrī<span class="kw">&lt;/hi&gt;</span> years was henceforth abolished. As <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> years began with 1 March, <span class="kw">&lt;hi&gt;</span>mālī<span class="kw">&lt;/hi&gt;</span> leap years preceded their <span class="kw">&lt;hi&gt;</span>rūmī<span class="kw">&lt;/hi&gt;</span> and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb21-3" data-line-number="3">  <span class="kw">&lt;p&gt;</span>E.g. <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when=</span><span class="st">&quot;1841-05-23&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1257-03-11&quot;</span><span class="kw">&gt;</span>11 Māyis 1257, Sunday<span class="kw">&lt;/date&gt;</span>, <span class="kw">&lt;date</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_ottomanfiscal&quot;</span><span class="ot"> when=</span><span class="st">&quot;1908-03-05&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1323-12-21&quot;</span><span class="kw">&gt;</span>21 Shub 1323, Thursday<span class="kw">&lt;/date&gt;</span>.<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb21-4" data-line-number="4"><span class="kw">&lt;/calendar&gt;</span></a></code></pre></div>
+<h2 id="example-1">Example</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="kw">&gt;</span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">    <span class="kw">&lt;p&gt;</span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3">        <span class="kw">&lt;date</span><span class="ot"> datingMethod=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> calendar=</span><span class="st">&quot;#cal_islamic&quot;</span><span class="ot"> when-custom=</span><span class="st">&quot;1307-03-08&quot;</span><span class="ot"> when=</span><span class="st">&quot;1889-11-02&quot;</span><span class="kw">&gt;</span>يوم السبت الماضي<span class="kw">&lt;/date&gt;</span>عاد الينا على</a>
+<a class="sourceLine" id="cb22-4" data-line-number="4">        <span class="kw">&lt;lb/&gt;</span>الباخرة الافرنسية <span class="kw">&lt;persName&gt;</span>جناب الوجيه الخواجا</a>
+<a class="sourceLine" id="cb22-5" data-line-number="5">        <span class="kw">&lt;lb/&gt;</span>سركست&lt;/persName&gt; صاحب محل وبر المشهور</a>
+<a class="sourceLine" id="cb22-6" data-line-number="6">        <span class="kw">&lt;lb/&gt;</span>وقنصل كل من <span class="kw">&lt;placeName&gt;</span>الداتمرك<span class="kw">&lt;/placeName&gt;</span> و<span class="kw">&lt;placeName&gt;</span>اسوج<span class="kw">&lt;/placeName&gt;</span> فلقيه</a>
+<a class="sourceLine" id="cb22-7" data-line-number="7">        <span class="kw">&lt;lb/&gt;</span>على البحر موظفو المحل وعدد من</a>
+<a class="sourceLine" id="cb22-8" data-line-number="8">        <span class="kw">&lt;lb/&gt;</span>الاصدقاء فنهنئه بالعود سالماً<span class="kw">&lt;/p&gt;</span></a>
+<a class="sourceLine" id="cb22-9" data-line-number="9">    <span class="kw">&lt;ab</span><span class="ot"> rend=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span>---<span class="kw">&lt;/ab&gt;</span></a>
+<a class="sourceLine" id="cb22-10" data-line-number="10"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 </div>
 </body>
 </html>

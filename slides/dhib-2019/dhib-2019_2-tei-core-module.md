@@ -430,7 +430,7 @@ The order of XML encoding **does not necessarily reflect** the order of the sour
 # Core elements
 ## Core elements
 
-The *core* module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:
+The **core** module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:
 
 - paragraphs
 - highlighting, emphasis and quotation
@@ -638,7 +638,22 @@ Example:
 ``` -->
 
 ```xml
-<p><del rend="stroked">The Many</del><del><add place="above">Loud</add></del> Popular demonstrations and <del>happy</del> <add>great</add> manifestations <add>of joy</add> with illuminations and street decorations <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del> <add>throughout the city <del>from</del> were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by <del>numerous masses</del><add>throngs</add> from neighbouring villages; though indeed few <add>present</add> could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add> <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
+<p>
+    <del rend="stroked">The Many</del>
+    <del><add place="above">Loud</add></del>
+    <add place="above">Popular</add>
+    demonstrations and
+    <del>happy</del><add>great</add>
+    manifestations <add>of joy</add> with illuminations and street decorations
+    <del>have been going on in all <unclear/> of the city showing the utmost zeal and enthusiasm on the part of the public who hardly understand the situation or appreciate the foundation of their joy; but fortunately no</del>
+    <add>throughout the city
+        <del>from</del>
+        were continuous <date from="1908-07-31" to="1908-08-11">from the 31st ult.o until yesterday</date>, some of them attended also by
+        <del>numerous masses</del><add>throngs</add>
+        from neighbouring villages; though indeed few
+        <add>present</add>
+        could have really appreciated at their true value the great privileges accorded. Happily scarcely a</add>
+    <add>slight</add> accident<del>s</del> occurred, though <del>with</del><del>fearing</del> the excessive use of rifles + revolvers <del>bullets was continuous</del> <add>was at first rather dangerous</add>; except that a bullet broke the tramway electric wire which fell on the mob &amp; the current killed three people &amp; <sic>injoured</sic> <del>three</del> <add>two</add> others.</p>
 ```
 
 <!-- further shift in topics to named entities and linking -->
@@ -747,6 +762,31 @@ Example
 ## Simple verse
 
 ```xml
+<head>السجن</head>
+<byline><placeName>بغداد</placeName> <persName>معروف الرصافي</persName></byline>
+<lg>
+    <l type="bayt">
+        <seg>سكنا ولم يسكن حراك التبدد </seg>
+        <seg>مواطن فيها اليوم ايمن من غد</seg>
+    </l>
+    <l type="bayt">
+        <seg>عفا رسم مغنى العز منها كما عفت </seg>
+        <seg>(لخولة اطلال ببرقة ثهمد)</seg>
+    </l>
+    <l type="bayt">
+        <seg>بلاد اناخ الذل فيها بكلكل </seg>
+        <seg>على كل مفتول السبالين اصيد</seg>
+    </l>
+    <l type="bayt">
+        <seg>معاهد عنها ضل سابق عزها </seg>
+        <seg>فهل هو من بعد الضلالة مهتد</seg>
+    </l>
+    <!-- ... -->
+</lg>
+<ab>***</ab>
+```
+
+<!-- ```xml
 <lg type="stanza">
     <l>It seemed that out of battle I escaped</l>
     <l>Down some profound dull tunnel, long since scooped</l>
@@ -761,7 +801,7 @@ Example
     <l>And by his smile, I knew that sullen hall,--- </l>
     <l>By his dead smile I knew we stood in Hell.</l>
 </lg>
-```
+``` -->
 
 ## Next
 

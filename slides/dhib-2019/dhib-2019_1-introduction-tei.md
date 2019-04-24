@@ -1,5 +1,5 @@
 ---
-title: "TEI@DHIB2019: Brief introduction to XML and TEI"
+title: "TEI@DHIB2019: Introduction to XML and TEI"
 author: Till Grallert
 date: 2019-04-23
 ---
@@ -28,35 +28,33 @@ When we talk about text encoding, what do we mean by a **text**? What is in a te
 
 ![Ḳānūn-i Esāsī in *al-Bashīr*, 3 August 1908](../images/constitution-bashir.png)
 
-
--------------------
+## What is a text?
 
 ![Ḳānūn-i Esāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/constitution-thamarat.png)
 
--------------------
-
+## What is a text?
 
 ![Ḳānūn-i Esāsī in *Lisān al-Ḥāl*, 27 July 1908](../images/constitution-lisan.png)
 
---------------------
+## What is a text?
 
 ![Ḳānūn-i Esāsī in *al-Jinān*, 15 January 1877](../images/constitution-jinan.png)
 
--------------------
+## What is a text?
 
 ![Ḳānūn-i Esāsī, 1876](../images/constitution-ottoman.png)
 
 <!-- # What is a text? -->
 
--------------------
+## What is a text?
 
 ![Ḳānūn-i Esāsī in *Sālnāme-yi Vilāyet-i Sūriye* #24, 1892](../images/constitution-salname1.png)
 
--------------------
+## What is a text?
 
 ![Three Arabic translations of the Ottoman constitution in a digital parallel edition](../images/constitution-parallel-arabic.png)
 
--------------------
+## What is a text?
 
 ![Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation](../images/constitution-parallel-ottoman.png)
 
@@ -79,17 +77,17 @@ which we can **encode**.
 ## Encoding of texts
 
 - A text is more than a sequence of encoded glyphs or lexical tokens
-    + It has a *structure* and a *communicative function*
-    + It also has multiple possible *readings*
+    + It has a **structure** and a **communicative function**
+    + It also has multiple possible **readings**
 - Encoding, or mark-up, is a way of making these things explicit
 
 Note: <hi class="cImportant">Only that which is explicit can be reliably found again and displayed</hi>
 
 ## Mark-up: What is the point?
 
-- To make *explicit* (to a machine) what is *implicit* (to a person)
-- To add value by supplying *multiple annotations*
-- To facilitate *re-use* of the same material
+- To make **explicit** (to a machine) what is **implicit** (to a person)
+- To add value by supplying **multiple annotations**
+- To facilitate **re-use** of the same material
     + in different formats
     + in different contexts
     + by different users
@@ -99,8 +97,8 @@ Note: <hi class="cImportant">We don't have to be limited to the view of one edit
 <!--
 # Mark-up: styles
 
-- In the beginning there was *procedural* mark-up: `RED INK ON; print balance; RED INK OFF`
-- which being generalised became *descriptive* or *semantic* mark-up: `<balance type="overdrawn">some numbers</balance>`
+- In the beginning there was **procedural** mark-up: `RED INK ON; print balance; RED INK OFF`
+- which being generalised became **descriptive** or **semantic** mark-up: `<balance type="overdrawn">some numbers</balance>`
 - also known as **encoding** or **annotation**
 
 Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of data</hi>
@@ -108,8 +106,8 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 
 ## Mark-up: separation of form and content
 
-- *Presentational* mark-up cares more about fonts and layout than meaning
-- *Descriptive* mark-up says what things are, and leaves the rendition of them for a separate step. This is also known as *encoding* or *annotation*
+- **Presentational** mark-up cares more about fonts and layout than meaning
+- **Descriptive** mark-up says what things are, and leaves the rendition of them for a separate step. This is also known as **encoding** or **annotation**
 - Separating the form of something from its content makes its re-use more flexible
 - It also allows easy changes of presentation across a large number of documents
 
@@ -118,7 +116,7 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 
 - mark-up makes explicit the distinctions we want to make when processing a string of bytes
 - mark-up is a way of naming and characterising the parts of a text in a formalized way
-- It's (usually) more useful to mark up what we think things *are* than what they *look* like
+- It's (usually) more useful to mark up what we think things **are** than what they **look** like
 
 
 ## Mark-up is a scholarly activity!
@@ -165,13 +163,13 @@ Why would you want those things?
 # 3. XML
 ## XML: what it is and why you should care
 
-- XML is *structured data* represented as strings of text encoded in Unicode
+- XML is **structured data** represented as strings of text encoded in Unicode
 - XML looks like HTML, except that:
-    + XML is *extensible*
-    + XML must be *well-formed*
-    + XML can be *validated*
+    + XML is **extensible**
+    + XML must be **well-formed**
+    + XML can be **validated**
 - XML is application-, platform-, and vendor- independent
-- XML empowers the *content provider* and facilitates data integration
+- XML empowers the **content provider** and facilitates data integration
 
 ## Characteristics of XML: internal structure
 
@@ -192,15 +190,15 @@ An XML document might contain:
     + nodes can only nest,
     + all nodes/elements must be closed,
     + element / attribute names and values are case-sensitive,
-    + the document contains only a single *root* node
+    + the document contains only a single **root** node
 - **can** be validated against schema(s)
-   + can contain xml valid against different schemas if differentiated by *namespaces*
+   + can contain xml valid against different schemas if differentiated by **namespaces**
 - can be styled for display in a web-browser using CSS (Cascading Style Sheets). Most web-browsers can also transform XML on the fly with XSLT 1.
 
 ## Characteristics of XML: schemas and namespaces
 
-+ Informally, a *namespace* is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.
-+ a *schema* allows you to
++ Informally, a **namespace** is a way of identifying the provenance of a bunch of elements: a schema does the same, but it also specifies some rules about how those elements should be used.
++ a **schema** allows you to
     * ensure that your documents use only predefined elements, attributes, and entities
     * enforce structural rules such as "every chapter must begin with a heading" or "recipes must include an ingredient list"
 + a namespace is just a URI; a schema is a formal specification written in a formal language
@@ -224,14 +222,14 @@ An XML document might contain:
 ## Characteristics of TEI XML in one slide
 
 - all of XML
-- *must* be valid against the schema TEI all
+- **must** be valid against the schema TEI all
   + TEI all: `<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>`
   + "valid": the XML adheres to a specific schema, a set of conventions that tell the computer as well as the human reader about the structure of the element and the data to be expected at any given point in the document.
-  + this provides *interchangability* and a certain degree of *interoperability* (the letter is often only theoretically applicable)
+  + this provides **interchangability** and a certain degree of **interoperability** (the letter is often only theoretically applicable)
 
 ## Conformance issues
 
-A document is *TEI Conformant* if and only if it:
+A document is **TEI Conformant** if and only if it:
 
 - is a well-formed XML document
 - can be validated against a TEI Schema, that is, a schema derived from the TEI Guidelines
@@ -239,7 +237,7 @@ A document is *TEI Conformant* if and only if it:
 - uses the TEI Namespace (and other namespaces where relevant) correctly
 - is documented by means of a TEI Conformant ODD file which refers to the TEI Guidelines
 
-or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered *TEI-conformable*).
+or if it can be transformed automatically using some TEI-defined procedures into such a document (it is then considered **TEI-conformable**).
 
 ## A final note on standardisation
 
@@ -252,15 +250,15 @@ Instead of an abstract set of rules and norms, standardisation should be thought
 
 - as a hermeneutic tool, XML could be written with pen and paper
 - on a computer it can be edited with the most simple text editing software
-- in order to get the most out of it, the editor should be *syntax aware* (and thus support *code highlighting*) and *schema aware* (i.e. validate the XML against a schema and suggest available elements and attributes on the basis of that schema)
+- in order to get the most out of it, the editor should be **syntax aware** (and thus support **code highlighting**) and **schema aware** (i.e. validate the XML against a schema and suggest available elements and attributes on the basis of that schema)
 
 ## Editing XML 2/2: software
 
-- **oXygen** is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.
+- [**oXygen**](https://www.oxygenxml.com/download_oxygenxml_editor.html) is the quasi-standard for editing and processing XML files and it comes with TEI support built-in. Unfortunately, oXygen is neither open-source nor free and licenses can be costly. I would nevertheless suggest that everyone signs up for a one-month trial.
     + provides an "author" mode that does shows only the text inside notes, styled according to CSS associated to a specific schema
     + has an XSLT processor built-in
     + supports XQuery and XML databases
-- **Sublime Text** is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
+- [**Sublime Text**](https://www.sublimetext.com/) is a superb text editor for programmers that provides an unlimited trial period. It is syntax aware and can render Arabic with the help of the following plug-in:
     + [https://github.com/praveenvijayan/Sublime-Text-2-BIDI](https://github.com/praveenvijayan/Sublime-Text-2-BIDI) **CAUTION**: the plug-in rearranges Arabic to make it look correct, but the actual order of characters in the file is changed and wrong.
 
 # Thank you!
