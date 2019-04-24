@@ -92,27 +92,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
   code.sourceCode {
       font-weight:normal;
+      color: black;
   }
   /* provide a readible font-size */
   .sourceCode * {
       font-size: 16px;
   }
   /* xml element names */
-  .xml > code > span.kw {
-  	color: #0F0F9C;
+  .xml > code span.kw {
+  	/*color: #0F0F9C;*/
+  	color: #000096;
   	font-weight: bold;
   }
   /* xml attribute names */
-  .xml > code > span.ot {
-  	color:#FF8041;
+  .xml > code span.ot {
+  	/*color:#FF8041;*/
+  	color: #FF9159;
   }
   /* xml attribute values */
-  .xml > code > span.st {
-  	color:#993300;
+  .xml > code span.st {
+  	/*color:#993300;*/
+  	color: #993300;
   }
   /* xml comments */
-  .xml > code > span.co {
-  	color:#167116;
+  .xml > code span.co {
+  	/*color:#167116;*/
+  	color: #2F8132;
   	font-style: italic;
   }
   /* xml computing instructions: not implemented in Pandoc syntax highlighting */
@@ -163,8 +168,8 @@ Till Grallert
   </p>
   <p class="date">2019-04-23</p>
 </div>
-<div id="tei-core-module-introducing-structural-markup" class="slide section level2">
-<h1>TEI core module: Introducing structural markup</h1>
+<div class="slide section level2">
+
 <p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the example of Arabic newspapers.</p>
 <p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
 </div>
@@ -844,8 +849,14 @@ Till Grallert
 <li><code>&lt;binaryObject&gt;</code>: encoded binary data embedding a graphic or other object</li>
 <li>The figures module provides <code>&lt;figure&gt;</code> and <code>&lt;figDesc&gt;</code> for more complex graphics</li>
 </ul>
-<p>Example</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
+<div class="c_width-50 c_left">
+<div class="figure">
+<img src="../images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" />
+<p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+</div>
+</div>
+<div class="c_width-50 c_right">
+<div class="sourceCode" id="cb26"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb26-1" data-line-number="1"> <span class="kw">&lt;div</span><span class="ot"> type=</span><span class="st">&quot;article&quot;</span><span class="ot"> xml:lang=</span><span class="st">&quot;ar&quot;</span><span class="kw">&gt;</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2">    <span class="kw">&lt;head&gt;</span>تعريب الفرمان العالي السلطاني<span class="kw">&lt;/head&gt;</span></a>
 <a class="sourceLine" id="cb26-3" data-line-number="3">    <span class="kw">&lt;figure&gt;</span></a>
 <a class="sourceLine" id="cb26-4" data-line-number="4">        <span class="kw">&lt;graphic</span><span class="ot"> url=</span><span class="st">&quot;#facs-2-1-z-1&quot;</span><span class="kw">/&gt;</span></a>
@@ -853,10 +864,7 @@ Till Grallert
 <a class="sourceLine" id="cb26-6" data-line-number="6">        <span class="kw">&lt;figDesc&gt;</span>Reproduction of the Ottoman coat of arms / Sultanic seal<span class="kw">&lt;/figDesc&gt;</span></a>
 <a class="sourceLine" id="cb26-7" data-line-number="7">    <span class="kw">&lt;/figure&gt;</span></a>
 <a class="sourceLine" id="cb26-8" data-line-number="8">    <span class="kw">&lt;q&gt;</span>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي<span class="kw">&lt;/q&gt;</span></a>
-<a class="sourceLine" id="cb26-9" data-line-number="9"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
-<div class="figure">
-<img src="../images/tughra-thamarat2.png" alt="Ṭughrā at the head of the Qānūn al-Asāsī in Thamarāt al-Funūn, 27 July 1908" />
-<p class="caption">Ṭughrā at the head of the Qānūn al-Asāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
+<a class="sourceLine" id="cb26-9" data-line-number="9"> <span class="kw">&lt;/div&gt;</span></a></code></pre></div>
 </div>
 </div><div id="simple-verse" class="slide section level2">
 <h1>Simple verse</h1>

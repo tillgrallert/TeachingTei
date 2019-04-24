@@ -4,8 +4,6 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
-## TEI core module: Introducing structural markup
-
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
 
 Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
@@ -743,10 +741,12 @@ Example
 - `<binaryObject>`: encoded binary data embedding a graphic or other object
 - The figures module provides `<figure>` and `<figDesc>` for more complex graphics
 
-Example
+<div class="c_width-50 c_left">
+![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
+</div><div class="c_width-50 c_right">
 
 ```xml
-<div type="article" xml:lang="ar">
+ <div type="article" xml:lang="ar">
     <head>تعريب الفرمان العالي السلطاني</head>
     <figure>
         <graphic url="#facs-2-1-z-1"/>
@@ -754,10 +754,10 @@ Example
         <figDesc>Reproduction of the Ottoman coat of arms / Sultanic seal</figDesc>
     </figure>
     <q>افتخار الاعلام والاعظام مختار الاكابر والافخم مستجمع جميع المعالي</q>
-</div>
+ </div>
 ```
 
-![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
+</div>
 
 ## Simple verse
 
