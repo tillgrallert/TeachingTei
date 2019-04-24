@@ -1,110 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
-<?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online-local-facsimiles/xslt-boilerplate/custom.xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt xml:lang="en">
-                <title>al-Bashīr, volume 39, 1908</title>
-                <title type="sub">Digital Edition</title>
-                <respStmt>
-                    <resp>TEI version</resp>
-                    <persName>Till Grallert</persName>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online-local-facsimiles/xslt-boilerplate/custom.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <teiHeader change="#d2e273" xml:id="teiHeader_1.d2e6">
+        <fileDesc change="#d2e273" xml:id="fileDesc_1.d2e8">
+            <titleStmt xml:lang="en" change="#d2e273" xml:id="titleStmt_1.d2e10">
+                <title change="#d2e273" xml:id="title_1.d2e12">al-Bashīr, volume 39, 1908</title>
+                <title type="sub" change="#d2e273" xml:id="title_2.d2e15">Digital Edition</title>
+                <respStmt change="#d2e273" xml:id="respStmt_1.d2e18">
+                    <resp change="#d2e273" xml:id="resp_1.d2e20">TEI version</resp>
+                    <persName change="#d2e273" xml:id="persName_1.d2e23">Till Grallert</persName>
                 </respStmt>
             </titleStmt>
-            <editionStmt>
-                <edition> <date when="2015-02-19">19 Feb. 2015</date> </edition>
-                <respStmt>
-                    <resp>Created the original TEI P5 XML file</resp>
+            <editionStmt change="#d2e273" xml:id="editionStmt_1.d2e28">
+                <edition change="#d2e273" xml:id="edition_1.d2e30"> <date when="2015-02-19" change="#d2e273" xml:id="date_1.d2e32">19 Feb. 2015</date> </edition>
+                <respStmt change="#d2e273" xml:id="respStmt_2.d2e36">
+                    <resp change="#d2e273" xml:id="resp_2.d2e38">Created the original TEI P5 XML file</resp>
                     <persName xml:id="pers_TG">Till Grallert</persName>
                 </respStmt>
             </editionStmt>
-            <publicationStmt>
-                <p>This should be replaced with some description</p>
+            <publicationStmt change="#d2e273" xml:id="publicationStmt_1.d2e46">
+                <p change="#d2e273" xml:id="p_1.d2e48">This should be replaced with some description</p>
             </publicationStmt>
-            <sourceDesc>
-                <biblStruct xml:lang="ar-Latn-x-ijmes">
-                    <monogr>
-                        <title level="j">al-Bashīr</title>
-                        <imprint>
-                            <publisher>Maṭbaʿat al-Ābāʾ al-Yasūʿiyīn</publisher>
-                            <pubPlace>Bayrūt</pubPlace>
-                            <date when="1908" xml:lang="en">1908</date>
-                            <biblScope unit="vol" n="39">39</biblScope>
+            <sourceDesc change="#d2e273" xml:id="sourceDesc_1.d2e52">
+                <biblStruct xml:lang="ar-Latn-x-ijmes" change="#d2e273" xml:id="biblStruct_1.d2e54">
+                    <monogr change="#d2e273" xml:id="monogr_1.d2e56">
+                        <title level="j" change="#d2e273" xml:id="title_3.d2e58">al-Bashīr</title>
+                        <imprint change="#d2e273" xml:id="imprint_1.d2e61">
+                            <publisher change="#d2e273" xml:id="publisher_1.d2e63">Maṭbaʿat al-Ābāʾ al-Yasūʿiyīn</publisher>
+                            <pubPlace change="#d2e273" xml:id="pubPlace_1.d2e66">Bayrūt</pubPlace>
+                            <date when="1908" xml:lang="en" change="#d2e273" xml:id="date_2.d2e69">1908</date>
+                            <biblScope unit="vol" n="39" change="#d2e273" xml:id="biblScope_1.d2e72">39</biblScope>
                         </imprint>
                     </monogr>
-                    <idno type="callNumber">Mic-Na:54</idno>
+                    <idno type="callNumber" change="#d2e273" xml:id="idno_1.d2e77">Mic-Na:54</idno>
                 </biblStruct>
             </sourceDesc>
         </fileDesc>
-        <encodingDesc>
-            <projectDesc>
-                <p>The TEI file was produced for teaching a course on the basics of scholarly encoding using TEI P5 and XML.</p>
+        <encodingDesc change="#d2e273" xml:id="encodingDesc_1.d2e83">
+            <projectDesc change="#d2e273" xml:id="projectDesc_1.d2e85">
+                <p change="#d2e273" xml:id="p_2.d2e87">The TEI file was produced for teaching a course on the basics of scholarly encoding using TEI P5 and XML.</p>
             </projectDesc>
-            <editorialDecl>
-                <p>providing information on our decisions concerning the actual transcription of a newspaper structure into a TEI P5 XML
+            <editorialDecl change="#d2e273" xml:id="editorialDecl_1.d2e91">
+                <p change="#d2e273" xml:id="p_3.d2e93">providing information on our decisions concerning the actual transcription of a newspaper structure into a TEI P5 XML
                     file</p>
             </editorialDecl>
         </encodingDesc>
-        <profileDesc>
+        <profileDesc change="#d2e273" xml:id="profileDesc_1.d2e98">
             <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
-            <calendarDesc>
-                <calendar>
-                    <p>Following the hegemonial approach of standards rooted in the English language, the Gregorian calendar is presumed as
+            <calendarDesc change="#d2e273" xml:id="calendarDesc_1.d2e102">
+                <calendar change="#d2e273" xml:id="calendar_1.d2e104">
+                    <p change="#d2e273" xml:id="p_4.d2e106">Following the hegemonial approach of standards rooted in the English language, the Gregorian calendar is presumed as
                         the norm and must not be specified.</p>
-                    <p>The @when attribute always provides W3C dates, while the @when-custom attribute follows the inherent logic of the
+                    <p change="#d2e273" xml:id="p_5.d2e109">The @when attribute always provides W3C dates, while the @when-custom attribute follows the inherent logic of the
                         chosen calendar.</p>
-                    <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5 Mar 1908, Thursday</date>.</p>
+                    <p change="#d2e273" xml:id="p_6.d2e112">E.g. <date when="1841-05-23" change="#d2e273" xml:id="date_3.d2e114">23 May 1841, Sunday</date>, <date when="1908-03-05" change="#d2e273" xml:id="date_4.d2e117">5 Mar 1908, Thursday</date>.</p>
                 </calendar>
                 <calendar xml:id="cal_islamic">
-                    <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as
+                    <p change="#d2e273" xml:id="p_7.d2e124">Islamic <hi change="#d2e273" xml:id="hi_1.d2e126">hijrī</hi> calendar: lunar calendar beginning the Year with 1 Muḥarram. Dates differ between locations as
                         the beginning of the month is based on sightings of the new moon.</p>
-                    <p>E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01">1 Rab II
-                        1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05"
-                        when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
+                    <p change="#d2e273" xml:id="p_8.d2e130">E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01" change="#d2e273" xml:id="date_5.d2e132">1 Rab II
+                        1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01" change="#d2e273" xml:id="date_6.d2e135">1 Ṣaf 1326, Thursday</date>.</p>
                 </calendar>
                 <calendar xml:id="cal_julian">
-                    <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as
-                        <hi>rūmī</hi>. Arabic newspapers usually labelled this calendar as <hi>sharqī</hi>.</p>
-                    <p>All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars,
+                    <p change="#d2e273" xml:id="p_9.d2e142">Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context usually referred to as
+                        <hi change="#d2e273" xml:id="hi_2.d2e144">rūmī</hi>. Arabic newspapers usually labelled this calendar as <hi change="#d2e273" xml:id="hi_3.d2e147">sharqī</hi>.</p>
+                    <p change="#d2e273" xml:id="p_10.d2e151">All solar calendars add an intercalated 366th day every fourth (and, in the case of Gregorian and rūmī calendars,
                         even-numbered) year at the end of February (the last day of the old Julian calendar). The Gregorian calendar
                         suppresses this rule in centesimal years that cannot be divided by 400. This difference creates a growing offset
                         between Gregorian and Julian calendars: while 1900 R was a leap year, 1900 was not, which in turn caused the
-                        difference between the Gregorian calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on
+                        difference between the Gregorian calendar, on the one hand, and the <hi change="#d2e273" xml:id="hi_4.d2e153">mālī</hi> and <hi change="#d2e273" xml:id="hi_5.d2e156">rūmī</hi> calendars, on
                         the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M (13 March 1900) onwards.</p>
-                    <p>E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11">11 Ayyār
-                        1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05"
-                        when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
+                    <p change="#d2e273" xml:id="p_11.d2e160">E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11" change="#d2e273" xml:id="date_7.d2e162">11 Ayyār
+                        1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21" change="#d2e273" xml:id="date_8.d2e165">21 Shub 1908, Thursday</date>.</p>
                 </calendar>
                 <calendar xml:id="cal_ottomanfiscal">
-                    <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1
-                        March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as <hi>mālī</hi> and
-                        sometimes, confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year would complete within a
-                        single solar <hi>mālī</hi> year. In this case the counting of the <hi>mālī</hi> years skipped a year to catch up
-                        with the faster <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the consolidated debt
-                        repayment program for 1872 (1288 M instead of 1289 M), synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was
-                        henceforth abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years preceded their
-                        <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).</p>
-                    <p>E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11"
-                        >11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal"
-                        when="1908-03-05" when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
+                    <p change="#d2e273" xml:id="p_12.d2e172">Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian calendar beginning the Year with 1
+                        March. Introduced as fiscal calendar in 1676 and in the Ottoman context usually referred to as <hi change="#d2e273" xml:id="hi_6.d2e174">mālī</hi> and
+                        sometimes, confusingly, also as <hi change="#d2e273" xml:id="hi_7.d2e177">rūmī</hi>. Every 33 lunar years, a <hi change="#d2e273" xml:id="hi_8.d2e180">hijrī</hi> year would complete within a
+                        single solar <hi change="#d2e273" xml:id="hi_9.d2e183">mālī</hi> year. In this case the counting of the <hi change="#d2e273" xml:id="hi_10.d2e186">mālī</hi> years skipped a year to catch up
+                        with the faster <hi change="#d2e273" xml:id="hi_11.d2e190">hijrī</hi> calendar. Due to a printing error in the coupon booklets for the consolidated debt
+                        repayment program for 1872 (1288 M instead of 1289 M), synchronisation of <hi change="#d2e273" xml:id="hi_12.d2e193">mālī</hi> and <hi change="#d2e273" xml:id="hi_13.d2e196">hijrī</hi> years was
+                        henceforth abolished. As <hi change="#d2e273" xml:id="hi_14.d2e199">mālī</hi> years began with 1 March, <hi change="#d2e273" xml:id="hi_15.d2e202">mālī</hi> leap years preceded their
+                        <hi change="#d2e273" xml:id="hi_16.d2e205">rūmī</hi> and Gregorian counterpart (the leap year 1315 M commenced on 13 March 1899).</p>
+                    <p change="#d2e273" xml:id="p_13.d2e209">E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11" change="#d2e273" xml:id="date_9.d2e211">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21" change="#d2e273" xml:id="date_10.d2e214">21 Shub 1323, Thursday</date>.</p>
                 </calendar>
             </calendarDesc>
             <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
                IJMES transcription of Arabic in Latin script. -->
-            <langUsage>
-                <language ident="ar">Arabic</language>
-                <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the IJMES conventions</language>
-                <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common English practices</language>
-                <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common French practices</language>
-                <language ident="en">English</language>
-                <language ident="fa">Farsi</language>
-                <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the IJMES conventions</language>
-                <language ident="fr">French</language>
-                <language ident="ota">Ottoman</language>
-                <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following the IJMES conventions</language>
-                <language ident="tr">Turkish</language>
+            <langUsage change="#d2e273" xml:id="langUsage_1.d2e222">
+                <language ident="ar" change="#d2e273" xml:id="language_1.d2e224">Arabic</language>
+                <language ident="ar-Latn-x-ijmes" change="#d2e273" xml:id="language_2.d2e227">Arabic transcribed into Latin script following the IJMES conventions</language>
+                <language ident="ar-Latn-EN" change="#d2e273" xml:id="language_3.d2e230">Arabic transcribed into Latin script following common English practices</language>
+                <language ident="ar-Latn-FR" change="#d2e273" xml:id="language_4.d2e233">Arabic transcribed into Latin script following common French practices</language>
+                <language ident="en" change="#d2e273" xml:id="language_5.d2e236">English</language>
+                <language ident="fa" change="#d2e273" xml:id="language_6.d2e240">Farsi</language>
+                <language ident="fa-Latn-x-ijmes" change="#d2e273" xml:id="language_7.d2e243">Farsi transcribed into Latin script following the IJMES conventions</language>
+                <language ident="fr" change="#d2e273" xml:id="language_8.d2e246">French</language>
+                <language ident="ota" change="#d2e273" xml:id="language_9.d2e249">Ottoman</language>
+                <language ident="ota-Latn-x-ijmes" change="#d2e273" xml:id="language_10.d2e252">Ottoman transcribed into Latin script following the IJMES conventions</language>
+                <language ident="tr" change="#d2e273" xml:id="language_11.d2e255">Turkish</language>
             </langUsage>
             <!--<particDesc>
                 <listPerson>
@@ -115,15 +107,14 @@
                 </listPerson>
             </particDesc>-->
         </profileDesc>
-        <revisionDesc>
-            <change when="2015-11-15" who="#pers_TG">Added the <gi>zone</gi> elements with the help of the updated <ref target="https://github.com/oxygenxml/TEI-Facsimile-Plugin">Image-Markup Tool</ref>.</change>
-            <change when="2015-02-19" who="#pers_TG">File created by automatic conversion from Sente XML.</change>
+        <revisionDesc><change when="2019-04-24" who="#pers_TG" xml:id="d2e273" xml:lang="en">Added automated <tei:att xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
+            <change when="2015-11-15" who="#pers_TG" change="#d2e273" xml:id="change_1.d2e264">Added the <gi change="#d2e273" xml:id="gi_1.d2e266">zone</gi> elements with the help of the updated <ref target="https://github.com/oxygenxml/TEI-Facsimile-Plugin" change="#d2e273" xml:id="ref_1.d2e269">Image-Markup Tool</ref>.</change>
+            <change when="2015-02-19" who="#pers_TG" change="#d2e273" xml:id="change_2.d2e273">File created by automatic conversion from Sente XML.</change>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile change="#d2e273" xml:id="facsimile_1.d2e278">
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg" mimeType="image/jpeg"
-                xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_source"/>
+            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0175_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_source"/>
             <zone lrx="2348" lry="1520" ulx="2045" uly="1159" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-1"/>
             <zone xml:id="zone.sck_ntg_15" ulx="1810" uly="278" lrx="2354" lry="926"/>
             <zone xml:id="zone.kxs_ltg_15" ulx="784" uly="289" lrx="1718" lry="928"/>
@@ -135,472 +126,467 @@
             <zone ulx="65" uly="97" lrx="2400" lry="976" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2"/>
         </surface>
         <surface xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2">
-            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg" mimeType="image/jpeg"
-                xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2_source"/>
+            <graphic url="../images/bashir/small/mic54_albashir_1907-19011_0176_150dpi.jpg" mimeType="image/jpeg" xml:id="facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2_source"/>
         </surface>
     </facsimile>
-    <text xml:lang="ar" n="35" type="vol">
-        <front>
+    <text xml:lang="ar" n="35" type="vol" change="#d2e273" xml:id="text_1.d2e310">
+        <front change="#d2e273" xml:id="front_1.d2e312">
             <!-- some introductory material for the current volume --> </front>
-        <group>
-            <text type="issue" n="1869" xml:lang="ar">
+        <group change="#d2e273" xml:id="group_1.d2e317">
+            <text type="issue" n="1869" xml:lang="ar" change="#d2e273" xml:id="text_1.d2e319">
                 <pb ed="print" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1" n="1" xml:id="pb_1"/>
-                <front facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2">
+                <front facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-2" change="#d2e273" xml:id="front_2.d2e323">
                     <!-- top line, commonly containing the information on issue numbers and sometimes dates -->
-                    <div facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-3" style="border-top:double black; border-bottom:solid black">
-                        <cb n="1"/>
-                        <bibl xml:lang="ar"><date when="1908-08-03">الاثنين في ٣ آب سنة ١٩٠٨</date> <biblScope unit="vol" n="39">السنة
-                            التاسع والثلاثون</biblScope> <biblScope unit="issue" n="1869">العدد ١٨٦٩</biblScope></bibl>
-                        <cb n="2"/>
-                        <ab xml:lang="ar" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-4">تعرفون الحق والق يحرركم</ab>
-                        <cb n="3"/>
-                        <bibl xml:lang="fr" facs="#zone.ony_dtg_15"><pubPlace><placeName>BEYROUTH</placeName></pubPlace> <date
-                            when="1908-08-03">3 Aout 1908</date> <biblScope unit="vol" n="39">39me ANNÉE</biblScope> <biblScope unit="issue"
-                            n="1869">No 1869</biblScope></bibl>
+                    <div facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-3" style="border-top:double black; border-bottom:solid black" change="#d2e273" xml:id="div_1.d2e327">
+                        <cb n="1" change="#d2e273" xml:id="cb_1.d2e329"/>
+                        <bibl xml:lang="ar" change="#d2e273" xml:id="bibl_1.d2e331"><date when="1908-08-03" change="#d2e273" xml:id="date_11.d2e332">الاثنين في ٣ آب سنة ١٩٠٨</date> <biblScope unit="vol" n="39" change="#d2e273" xml:id="biblScope_2.d2e335">السنة
+                            التاسع والثلاثون</biblScope> <biblScope unit="issue" n="1869" change="#d2e273" xml:id="biblScope_3.d2e338">العدد ١٨٦٩</biblScope></bibl>
+                        <cb n="2" change="#d2e273" xml:id="cb_2.d2e341"/>
+                        <ab xml:lang="ar" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-4" change="#d2e273" xml:id="ab_1.d2e343">تعرفون الحق والق يحرركم</ab>
+                        <cb n="3" change="#d2e273" xml:id="cb_3.d2e346"/>
+                        <bibl xml:lang="fr" facs="#zone.ony_dtg_15" change="#d2e273" xml:id="bibl_2.d2e349"><pubPlace change="#d2e273" xml:id="pubPlace_2.d2e350"><placeName change="#d2e273" xml:id="placeName_1.d2e351">BEYROUTH</placeName></pubPlace> <date when="1908-08-03" change="#d2e273" xml:id="date_12.d2e354">3 Aout 1908</date> <biblScope unit="vol" n="39" change="#d2e273" xml:id="biblScope_4.d2e357">39me ANNÉE</biblScope> <biblScope unit="issue" n="1869" change="#d2e273" xml:id="biblScope_5.d2e360">No 1869</biblScope></bibl>
                     </div>
                     <!-- the main body, which usually does not change between issues -->
-                    <div facs="#zone.sgc_3tg_15" style="border-bottom:double black;">
-                        <cb n="1"/>
-                        <div facs="#zone.sck_ntg_15" style="width:33%;float:right" xml:lang="ar">
-                            <div>
-                                <head>قيمة الاشتراك</head>
-                                <p>في <placeName>بيروت</placeName> عم سنة ٨ فرنكات وعن ستة اشهر ٥</p>
-                                <p>في خارج <placeName>بيروت</placeName> ١١ فرنك " " " ٧</p>
-                                <p>(خالص اجرة البريد)</p>
-                                <ab rend="center">---</ab>
+                    <div facs="#zone.sgc_3tg_15" style="border-bottom:double black;" change="#d2e273" xml:id="div_2.d2e366">
+                        <cb n="1" change="#d2e273" xml:id="cb_4.d2e368"/>
+                        <div facs="#zone.sck_ntg_15" style="width:33%;float:right" xml:lang="ar" change="#d2e273" xml:id="div_2.d2e370">
+                            <div change="#d2e273" xml:id="div_2.d2e372">
+                                <head change="#d2e273" xml:id="head_1.d2e374">قيمة الاشتراك</head>
+                                <p change="#d2e273" xml:id="p_14.d2e377">في <placeName change="#d2e273" xml:id="placeName_2.d2e379">بيروت</placeName> عم سنة ٨ فرنكات وعن ستة اشهر ٥</p>
+                                <p change="#d2e273" xml:id="p_15.d2e383">في خارج <placeName change="#d2e273" xml:id="placeName_3.d2e385">بيروت</placeName> ١١ فرنك " " " ٧</p>
+                                <p change="#d2e273" xml:id="p_16.d2e389">(خالص اجرة البريد)</p>
+                                <ab rend="center" change="#d2e273" xml:id="ab_2.d2e392">---</ab>
                             </div>
-                            <div>
-                                <head>اجرة الاعلانات</head>
-                                <p>في الصفحة الاخيرة السطر ٢٠ سنتيماً وللمشتركين ١٥</p>
-                                <p>في الثانية والثالثة — ٣٠ — ٢٠</p>
-                                <p>في الاولى — ٩٠ — ٧٥</p>
-                                <p>(والدافع سلفاً)</p>
-                                <ab rend="center">---</ab>
+                            <div change="#d2e273" xml:id="div_3.d2e396">
+                                <head change="#d2e273" xml:id="head_2.d2e398">اجرة الاعلانات</head>
+                                <p change="#d2e273" xml:id="p_17.d2e401">في الصفحة الاخيرة السطر ٢٠ سنتيماً وللمشتركين ١٥</p>
+                                <p change="#d2e273" xml:id="p_18.d2e404">في الثانية والثالثة — ٣٠ — ٢٠</p>
+                                <p change="#d2e273" xml:id="p_19.d2e407">في الاولى — ٩٠ — ٧٥</p>
+                                <p change="#d2e273" xml:id="p_20.d2e410">(والدافع سلفاً)</p>
+                                <ab rend="center" change="#d2e273" xml:id="ab_3.d2e414">---</ab>
                             </div>
-                            <div>
-                                <p>ادارة البشير وتحريره ووكالته وطبعه ب<orgName>مطبعة المرسلين اليسوعيين</orgName> في
-                                    <placeName>بيروت</placeName></p>
-                                <ab rend="center">---</ab>
-                                <p>لا ترجع المراسلات الى اصحابها سواء طبعت او لم تطبع</p>
+                            <div change="#d2e273" xml:id="div_4.d2e418">
+                                <p change="#d2e273" xml:id="p_21.d2e420">ادارة البشير وتحريره ووكالته وطبعه ب<orgName change="#d2e273" xml:id="orgName_1.d2e422">مطبعة المرسلين اليسوعيين</orgName> في
+                                    <placeName change="#d2e273" xml:id="placeName_4.d2e425">بيروت</placeName></p>
+                                <ab rend="center" change="#d2e273" xml:id="ab_4.d2e428">---</ab>
+                                <p change="#d2e273" xml:id="p_22.d2e431">لا ترجع المراسلات الى اصحابها سواء طبعت او لم تطبع</p>
                             </div>
                         </div>
 
 
-                        <cb n="2"/>
-                        <div facs="#zone.kxs_ltg_15" style="width:33%;float:right" xml:lang="ar">
-                            <bibl><title level="j">البشير</title><lb/><title level="j" type="sub">جريدة اسبوعية كاثوليكية دينية
+                        <cb n="2" change="#d2e273" xml:id="cb_5.d2e436"/>
+                        <div facs="#zone.kxs_ltg_15" style="width:33%;float:right" xml:lang="ar" change="#d2e273" xml:id="div_6.d2e438">
+                            <bibl change="#d2e273" xml:id="bibl_3.d2e440"><title level="j" change="#d2e273" xml:id="title_4.d2e441">البشير</title><lb change="#d2e273" xml:id="lb_1.d2e443"/><title level="j" type="sub" change="#d2e273" xml:id="title_5.d2e444">جريدة اسبوعية كاثوليكية دينية
                                 اخبارية</title></bibl>
                         </div>
-                        <cb n="3"/>
-                        <div facs="#zone.mtt_jtg_15" style="width:33%;float:right" xml:lang="fr">
-                            <bibl><title level="j">AL-BACHIR</title> <lb/><title level="j" type="sub">JOURNAL ARABE
+                        <cb n="3" change="#d2e273" xml:id="cb_6.d2e448"/>
+                        <div facs="#zone.mtt_jtg_15" style="width:33%;float:right" xml:lang="fr" change="#d2e273" xml:id="div_7.d2e451">
+                            <bibl change="#d2e273" xml:id="bibl_4.d2e453"><title level="j" change="#d2e273" xml:id="title_6.d2e454">AL-BACHIR</title> <lb change="#d2e273" xml:id="lb_2.d2e457"/><title level="j" type="sub" change="#d2e273" xml:id="title_7.d2e458">JOURNAL ARABE
                                 HEBDOMADAIRE</title></bibl>
-                            <ab rend="center">---</ab>
-                            <div>
-                                <head>ABONNEMENTS.</head>
-                                <p><placeName>Beyrouth</placeName>: un an Fr. 8 —; six mois Fr. 5 —</p>
-                                <p>Hors de <placeName>Beyrouth</placeName>: id. " 11 —; id. " 7 —</p>
-                                <p>(port compris)</p>
-                                <ab rend="center">---</ab>
+                            <ab rend="center" change="#d2e273" xml:id="ab_5.d2e461">---</ab>
+                            <div change="#d2e273" xml:id="div_7.d2e464">
+                                <head change="#d2e273" xml:id="head_3.d2e466">ABONNEMENTS.</head>
+                                <p change="#d2e273" xml:id="p_23.d2e469"><placeName change="#d2e273" xml:id="placeName_5.d2e470">Beyrouth</placeName>: un an Fr. 8 —; six mois Fr. 5 —</p>
+                                <p change="#d2e273" xml:id="p_24.d2e474">Hors de <placeName change="#d2e273" xml:id="placeName_6.d2e476">Beyrouth</placeName>: id. " 11 —; id. " 7 —</p>
+                                <p change="#d2e273" xml:id="p_25.d2e480">(port compris)</p>
+                                <ab rend="center" change="#d2e273" xml:id="ab_6.d2e483">---</ab>
                             </div>
-                            <div>
-                                <head>INSERTIONS ET ANNONCES</head>
-                                <p>Page: 4me la ligne Fr. 0,20 c.</p>
-                                <p>" 2me et 3me — " 0,30 c.</p>
-                                <p>" 1re — " 0,90 c.</p>
-                                <ab rend="center">---</ab>
+                            <div change="#d2e273" xml:id="div_8.d2e487">
+                                <head change="#d2e273" xml:id="head_4.d2e489">INSERTIONS ET ANNONCES</head>
+                                <p change="#d2e273" xml:id="p_26.d2e492">Page: 4me la ligne Fr. 0,20 c.</p>
+                                <p change="#d2e273" xml:id="p_27.d2e495">" 2me et 3me — " 0,30 c.</p>
+                                <p change="#d2e273" xml:id="p_28.d2e498">" 1re — " 0,90 c.</p>
+                                <ab rend="center" change="#d2e273" xml:id="ab_7.d2e501">---</ab>
                             </div>
-                            <div>
-                                <p>S'adresée à <lb/> l'Administration du journal <orgName>Al-Bachir</orgName>
-                                    <lb/><placeName>Beyrouth</placeName> (<placeName>Syrie</placeName>) </p>
+                            <div change="#d2e273" xml:id="div_9.d2e505">
+                                <p change="#d2e273" xml:id="p_29.d2e507">S'adresée à <lb change="#d2e273" xml:id="lb_3.d2e509"/> l'Administration du journal <orgName change="#d2e273" xml:id="orgName_2.d2e511">Al-Bachir</orgName>
+                                    <lb change="#d2e273" xml:id="lb_4.d2e514"/><placeName change="#d2e273" xml:id="placeName_7.d2e515">Beyrouth</placeName> (<placeName change="#d2e273" xml:id="placeName_8.d2e518">Syrie</placeName>) </p>
                             </div>
                         </div>
                     </div>
                 </front>
-                <body>
-                    <cb n="1"/>
-                    <div xml:lang="ar">
-                        <head>بيروت في ٣ آب</head>
+                <body change="#d2e273" xml:id="body_1.d2e526">
+                    <cb n="1" change="#d2e273" xml:id="cb_7.d2e528"/>
+                    <div xml:lang="ar" change="#d2e273" xml:id="div_12.d2e530">
+                        <head change="#d2e273" xml:id="head_5.d2e532">بيروت في ٣ آب</head>
                     </div>
-                    <div type="section" xml:lang="ar">
-                        <head>(ملحق)</head>
-                        <figure facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-1"/>
-                        <head>القانون الاساسي</head>
-                        <div type="letter">
-                            <salute>وزيري سمير المعالي <persName><forename>مدحت</forename> <addName type="title"
-                                >باشا</addName></persName></salute>
-                            <p> <cb n="2"/> </p>
-                            <dateline>في <date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1293-11-07">٧ ذي الحجة سنة
+                    <div type="section" xml:lang="ar" change="#d2e273" xml:id="div_13.d2e536">
+                        <head change="#d2e273" xml:id="head_6.d2e538">(ملحق)</head>
+                        <figure facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_1_z-1" change="#d2e273" xml:id="figure_1.d2e541"/>
+                        <head change="#d2e273" xml:id="head_7.d2e543">القانون الاساسي</head>
+                        <div type="letter" change="#d2e273" xml:id="div_13.d2e546">
+                            <salute change="#d2e273" xml:id="salute_1.d2e548">وزيري سمير المعالي <persName change="#d2e273" xml:id="persName_3.d2e550"><forename change="#d2e273" xml:id="forename_1.d2e551">مدحت</forename> <addName type="title" change="#d2e273" xml:id="addName_1.d2e554">باشا</addName></persName></salute>
+                            <p change="#d2e273" xml:id="p_30.d2e557"> <cb n="2" change="#d2e273" xml:id="cb_8.d2e559"/> </p>
+                            <dateline change="#d2e273" xml:id="dateline_1.d2e562">في <date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1293-11-07" change="#d2e273" xml:id="date_13.d2e564">٧ ذي الحجة سنة
                                 ١٢٩٣</date></dateline>
                         </div>
-                        <div corresp="#law-ottoman-constitution-1876" type="bill" xml:lang="ar">
-                            <head><supplied>القانون الاساسي</supplied></head>
-                            <div n="1" type="section">
-                                <head>في ممالك الدولة العثمانية</head>
-                                <div n="1" type="article">
-                                    <head>المادة ١</head>
-                                    <p>إنّ <orgName>الدولة العثمانية</orgName> تحتوي على الممالك والقطع الحاضرة وعلى الايالات الممتازة
+                        <div corresp="#law-ottoman-constitution-1876" type="bill" xml:lang="ar" change="#d2e273" xml:id="div_14.d2e568">
+                            <head change="#d2e273" xml:id="head_8.d2e570"><supplied change="#d2e273" xml:id="supplied_1.d2e571">القانون الاساسي</supplied></head>
+                            <div n="1" type="section" change="#d2e273" xml:id="div_14.d2e574">
+                                <head change="#d2e273" xml:id="head_9.d2e576">في ممالك الدولة العثمانية</head>
+                                <div n="1" type="article" change="#d2e273" xml:id="div_14.d2e579">
+                                    <head change="#d2e273" xml:id="head_10.d2e581">المادة ١</head>
+                                    <p change="#d2e273" xml:id="p_31.d2e584">إنّ <orgName change="#d2e273" xml:id="orgName_3.d2e586">الدولة العثمانية</orgName> تحتوي على الممالك والقطع الحاضرة وعلى الايالات الممتازة
                                         وجميعها جسم واحد لا يمكن تفريقه أو تجزيئه بوقت من الأوقات أو بسبب من الأسباب. </p>
                                 </div>
-                                <div n="2" type="article">
-                                    <head>٢</head>
-                                    <p>إن مدينة <placeName>استانبول</placeName> هي عاصمة <orgName>الدولة العثمانية</orgName> ومقرها وهذه
+                                <div n="2" type="article" change="#d2e273" xml:id="div_15.d2e591">
+                                    <head change="#d2e273" xml:id="head_11.d2e593">٢</head>
+                                    <p change="#d2e273" xml:id="p_32.d2e596">إن مدينة <placeName change="#d2e273" xml:id="placeName_9.d2e598">استانبول</placeName> هي عاصمة <orgName change="#d2e273" xml:id="orgName_4.d2e601">الدولة العثمانية</orgName> ومقرها وهذه
                                         المدينة غير معفاة أو ممتازة عما سواها من جميع البلاد العثمانية. </p>
                                 </div>
-                                <div n="3" type="article">
-                                    <head>٣</head>
-                                    <p>إن السلطنة السنية العثمانية الحائزة على الخلافة الكبرى الإسلامية تكون لأكبر أولاد سلالة آل عثمان بحسب
+                                <div n="3" type="article" change="#d2e273" xml:id="div_16.d2e606">
+                                    <head change="#d2e273" xml:id="head_12.d2e608">٣</head>
+                                    <p change="#d2e273" xml:id="p_33.d2e611">إن السلطنة السنية العثمانية الحائزة على الخلافة الكبرى الإسلامية تكون لأكبر أولاد سلالة آل عثمان بحسب
                                         الأصول القديمة. </p>
                                 </div>
-                                <div n="4" type="article">
-                                    <head>٤</head>
-                                    <p>إن حضرة السلطان حسب الخلافة هو الحامي لدين الإسلام وهو ملك جميع التبعة العثمانية وسلطانها. </p>
+                                <div n="4" type="article" change="#d2e273" xml:id="div_17.d2e615">
+                                    <head change="#d2e273" xml:id="head_13.d2e617">٤</head>
+                                    <p change="#d2e273" xml:id="p_34.d2e620">إن حضرة السلطان حسب الخلافة هو الحامي لدين الإسلام وهو ملك جميع التبعة العثمانية وسلطانها. </p>
                                 </div>
-                                <div n="5" type="article">
-                                    <head>٥</head>
-                                    <p>إنّ نفس ذات الحضرة السلطانية هي مقدسة وغير مسؤولة. </p>
+                                <div n="5" type="article" change="#d2e273" xml:id="div_18.d2e625">
+                                    <head change="#d2e273" xml:id="head_14.d2e627">٥</head>
+                                    <p change="#d2e273" xml:id="p_35.d2e630">إنّ نفس ذات الحضرة السلطانية هي مقدسة وغير مسؤولة. </p>
                                 </div>
-                                <div n="6" type="article">
-                                    <head>٦</head>
-                                    <p>إنّ حقوق حرية سلالة آل عثمان وأموالهم وأملاكهم الذاتية وتخصيصاتهم المالية مادامت الحياة جميعها تحت
+                                <div n="6" type="article" change="#d2e273" xml:id="div_19.d2e634">
+                                    <head change="#d2e273" xml:id="head_15.d2e636">٦</head>
+                                    <p change="#d2e273" xml:id="p_36.d2e639">إنّ حقوق حرية سلالة آل عثمان وأموالهم وأملاكهم الذاتية وتخصيصاتهم المالية مادامت الحياة جميعها تحت
                                         التكافل العمومي. </p>
                                 </div>
-                                <div n="7" type="article">
-                                    <head>٧</head>
-                                    <p>إنّ عزل الوكلاء ونصبهم، وتوجيه المناصب والرتب، وإعطاء النياشين وتوجيهات الايالات الممتازة توفيقاً
+                                <div n="7" type="article" change="#d2e273" xml:id="div_20.d2e643">
+                                    <head change="#d2e273" xml:id="head_16.d2e645">٧</head>
+                                    <p change="#d2e273" xml:id="p_37.d2e648">إنّ عزل الوكلاء ونصبهم، وتوجيه المناصب والرتب، وإعطاء النياشين وتوجيهات الايالات الممتازة توفيقاً
                                         لشروط امتيازهم، وضرب المسكوكات، وذكر اسمه في الخطب، وعقد المعاهدات مع الدول الأجنبية وإعلان الحرب
-                                        <cb/>والصلح، والترأس على القوة البحرية والبرية، وإجراء الحركات العسكرية والأحكام الشرعية والقانونية،
+                                        <cb change="#d2e273" xml:id="cb_9.d2e650"/>والصلح، والترأس على القوة البحرية والبرية، وإجراء الحركات العسكرية والأحكام الشرعية والقانونية،
                                         وتنظيم النظامات المتعلقة بمعاملات دوائر الإدارة، وتخفيف المجازاة القانونية أو العفو عنها، وعقد
                                         المجلس العمومي أو فضه وتعطيله، وفسخ هيئة المبعوثان لدى الاقتضاء على شرط انتخاب الأعضاء مجدداً، ذلك
                                         جميعه من جملة حقوق الحضرة السلطانية المقدسة.</p>
                                 </div>
                             </div>
-                            <div n="2" type="section" xml:lang="ar">
-                                <head> في حقوق تبعة الدولة العثمانية العمومية </head>
-                                <div n="8" type="article">
-                                    <head>٨</head>
-                                    <p>يطلق اسم عثماني بدون استثناء على كافة أفراد التبعة العثمانية، من أي دين ومذهب كانوا، وهذه الصفة
+                            <div n="2" type="section" xml:lang="ar" change="#d2e273" xml:id="div_22.d2e655">
+                                <head change="#d2e273" xml:id="head_17.d2e657"> في حقوق تبعة الدولة العثمانية العمومية </head>
+                                <div n="8" type="article" change="#d2e273" xml:id="div_22.d2e660">
+                                    <head change="#d2e273" xml:id="head_18.d2e662">٨</head>
+                                    <p change="#d2e273" xml:id="p_38.d2e665">يطلق اسم عثماني بدون استثناء على كافة أفراد التبعة العثمانية، من أي دين ومذهب كانوا، وهذه الصفة
                                         العثمانية تفقد أو تستحصل على مقتضي الأحوال المعينة قانونياً. </p>
                                 </div>
-                                <div n="9" type="article">
-                                    <head>٩</head>
-                                    <p>العثمانيون بأجمعهم يملكون حريتهم الشخصية ومكلفون بأن لا يتسلطوا على حقوق حرية الآخرين. </p>
+                                <div n="9" type="article" change="#d2e273" xml:id="div_23.d2e669">
+                                    <head change="#d2e273" xml:id="head_19.d2e671">٩</head>
+                                    <p change="#d2e273" xml:id="p_39.d2e674">العثمانيون بأجمعهم يملكون حريتهم الشخصية ومكلفون بأن لا يتسلطوا على حقوق حرية الآخرين. </p>
                                 </div>
-                                <div n="10" type="article">
-                                    <head>١٠</head>
-                                    <p>تصان الحرية الشخصية من كافة أنواع التعرض ولا يجازى أحد تحت أي حجة كانت خارجاً عن الصور والأسباب
+                                <div n="10" type="article" change="#d2e273" xml:id="div_24.d2e678">
+                                    <head change="#d2e273" xml:id="head_20.d2e680">١٠</head>
+                                    <p change="#d2e273" xml:id="p_40.d2e683">تصان الحرية الشخصية من كافة أنواع التعرض ولا يجازى أحد تحت أي حجة كانت خارجاً عن الصور والأسباب
                                         المعينة في القانون. </p>
                                 </div>
-                                <div n="11" type="article">
-                                    <head>١١</head>
-                                    <p>إنّ دين الدولة العثمانية هو دين الإسلام. مع المحافظة على هذا الأساس، تكون حرية جميع الأديان المعروفة
+                                <div n="11" type="article" change="#d2e273" xml:id="div_25.d2e687">
+                                    <head change="#d2e273" xml:id="head_21.d2e689">١١</head>
+                                    <p change="#d2e273" xml:id="p_41.d2e692">إنّ دين الدولة العثمانية هو دين الإسلام. مع المحافظة على هذا الأساس، تكون حرية جميع الأديان المعروفة
                                         في الممالك العثمانية وكافة الامتيازات الممنوحة إلى الجماعات المختلفة، تحت حماية الدولة، على شرط أن
                                         لا تخل براحة الخلق ولا بالآداب العمومية. </p>
                                 </div>
-                                <div n="12" type="article">
-                                    <head>١٢</head>
-                                    <p>تكون المطبوعات مطلقة في دائرة القانون. </p>
+                                <div n="12" type="article" change="#d2e273" xml:id="div_26.d2e697">
+                                    <head change="#d2e273" xml:id="head_22.d2e699">١٢</head>
+                                    <p change="#d2e273" xml:id="p_42.d2e702">تكون المطبوعات مطلقة في دائرة القانون. </p>
                                 </div>
-                                <div n="13" type="article">
-                                    <head>١٣</head>
-                                    <p>التبعة العثمانية مأذونة أن تشكل ضمن دائرة النظام والقانون كل أنواع الشركات لأجل التجارة والصناعة
+                                <div n="13" type="article" change="#d2e273" xml:id="div_27.d2e706">
+                                    <head change="#d2e273" xml:id="head_23.d2e708">١٣</head>
+                                    <p change="#d2e273" xml:id="p_43.d2e711">التبعة العثمانية مأذونة أن تشكل ضمن دائرة النظام والقانون كل أنواع الشركات لأجل التجارة والصناعة
                                         والفلاحة. </p>
                                 </div>
-                                <div n="14" type="article">
-                                    <head>١٤</head>
-                                    <p>إذا رأى أحد التبعة العثمانية، أو عدة أشخاص منهم، قضية متعلقة بهم أو بالعموم مخالفة للقوانين والنظامات
+                                <div n="14" type="article" change="#d2e273" xml:id="div_28.d2e715">
+                                    <head change="#d2e273" xml:id="head_24.d2e717">١٤</head>
+                                    <p change="#d2e273" xml:id="p_44.d2e720">إذا رأى أحد التبعة العثمانية، أو عدة أشخاص منهم، قضية متعلقة بهم أو بالعموم مخالفة للقوانين والنظامات
                                         يحق لهم أن يقدموا بخصوصها عرض حال لمرجعها، ويحق لهم كذلك أن يقدموا للمجلس العمومي عرض حال ممضياً
                                         منهم بصفة مدعين وأن يشتكوا من أفعال المأمورين. </p>
                                 </div>
-                                <div n="15" type="article">
-                                    <head>١٥</head>
-                                    <p>أمر التدريس يكون مطلقاً وكل عثماني مأذون بالتدريس خصوصياً كان أو عمومياً على شرط إتباع القانون
+                                <div n="15" type="article" change="#d2e273" xml:id="div_29.d2e724">
+                                    <head change="#d2e273" xml:id="head_25.d2e726">١٥</head>
+                                    <p change="#d2e273" xml:id="p_45.d2e729">أمر التدريس يكون مطلقاً وكل عثماني مأذون بالتدريس خصوصياً كان أو عمومياً على شرط إتباع القانون
                                         المعين. </p>
                                 </div>
-                                <div n="16" type="article">
-                                    <head>١٦</head>
-                                    <p>توضع جميع المكاتب تحت نظارة الدولة ويجب التشبث في الأسباب التي تجعل التربية العثمانية على نسق واحد في
+                                <div n="16" type="article" change="#d2e273" xml:id="div_30.d2e733">
+                                    <head change="#d2e273" xml:id="head_26.d2e735">١٦</head>
+                                    <p change="#d2e273" xml:id="p_46.d2e738">توضع جميع المكاتب تحت نظارة الدولة ويجب التشبث في الأسباب التي تجعل التربية العثمانية على نسق واحد في
                                         الاتحاد والانتظام ولا يقع خلل في أصول التعليم المتعلق بأمور معتقدات الملل المختلفة. </p>
                                 </div>
-                                <div n="17" type="article">
-                                    <head>١٧</head>
-                                    <p>يكون كافة العثمانيين متساوين أمام القانون وفي حقوق المملكة ووظائفها فيما عدا الأحوال المذهبية
+                                <div n="17" type="article" change="#d2e273" xml:id="div_31.d2e742">
+                                    <head change="#d2e273" xml:id="head_27.d2e744">١٧</head>
+                                    <p change="#d2e273" xml:id="p_47.d2e747">يكون كافة العثمانيين متساوين أمام القانون وفي حقوق المملكة ووظائفها فيما عدا الأحوال المذهبية
                                         والدينية. </p>
                                 </div>
-                                <div n="18" type="article">
-                                    <head>١٨</head>
-                                    <p>يشترط في مطلب استخدام التبعة العثمانية في خدمات الدولة أن يعرفوا اللسان التركي الذي هو لسان الدولة
+                                <div n="18" type="article" change="#d2e273" xml:id="div_32.d2e752">
+                                    <head change="#d2e273" xml:id="head_28.d2e754">١٨</head>
+                                    <p change="#d2e273" xml:id="p_48.d2e757">يشترط في مطلب استخدام التبعة العثمانية في خدمات الدولة أن يعرفوا اللسان التركي الذي هو لسان الدولة
                                         الرسمي. </p>
                                 </div>
-                                <div n="19" type="article">
-                                    <head>١٩</head>
-                                    <p>تقبل عموم التبعة في مأموريات الدولة ويستخدمون فيما يناسب منها بحسب أهليتهم ولياقتهم. </p>
+                                <div n="19" type="article" change="#d2e273" xml:id="div_33.d2e761">
+                                    <head change="#d2e273" xml:id="head_29.d2e763">١٩</head>
+                                    <p change="#d2e273" xml:id="p_49.d2e766">تقبل عموم التبعة في مأموريات الدولة ويستخدمون فيما يناسب منها بحسب أهليتهم ولياقتهم. </p>
                                 </div>
-                                <div n="20" type="article">
-                                    <head>٢٠</head>
-                                    <p>تطرح التكاليف المقررة وتتوزع على التبعة بنسبة اقتدار كل فرد منهم توفيقاً <cb/>لنظاماتها المخصوصة.
+                                <div n="20" type="article" change="#d2e273" xml:id="div_34.d2e770">
+                                    <head change="#d2e273" xml:id="head_30.d2e772">٢٠</head>
+                                    <p change="#d2e273" xml:id="p_50.d2e775">تطرح التكاليف المقررة وتتوزع على التبعة بنسبة اقتدار كل فرد منهم توفيقاً <cb change="#d2e273" xml:id="cb_10.d2e777"/>لنظاماتها المخصوصة.
                                     </p>
                                 </div>
-                                <div n="21" type="article">
-                                    <head>٢١</head>
-                                    <p>يكون كل فرد أميناً على ماله وعلى ملكه المتصرف فيه تصرفاً أصولياً، ولا يؤخذ من أحد الملك الذي في تصرفه
+                                <div n="21" type="article" change="#d2e273" xml:id="div_35.d2e781">
+                                    <head change="#d2e273" xml:id="head_31.d2e783">٢١</head>
+                                    <p change="#d2e273" xml:id="p_51.d2e786">يكون كل فرد أميناً على ماله وعلى ملكه المتصرف فيه تصرفاً أصولياً، ولا يؤخذ من أحد الملك الذي في تصرفه
                                         ما لم يثبت لزومه للمنافع العمومية وما لم يدفع له ما يساويه من الثمن نقداً على موجب القانون. </p>
                                 </div>
-                                <div n="22" type="article">
-                                    <head>٢٢</head>
-                                    <p>يصان مسكن كل فرد في الممالك العثمانية ومنزله من التعرض وليس في وسع الحكومة أن تدخل جبراً إلى مسكن أحد
+                                <div n="22" type="article" change="#d2e273" xml:id="div_36.d2e790">
+                                    <head change="#d2e273" xml:id="head_32.d2e792">٢٢</head>
+                                    <p change="#d2e273" xml:id="p_52.d2e795">يصان مسكن كل فرد في الممالك العثمانية ومنزله من التعرض وليس في وسع الحكومة أن تدخل جبراً إلى مسكن أحد
                                         أو منزله بسبب من الأسباب فيما عدا الأحوال التي يعينها القانون. </p>
                                 </div>
-                                <div n="23" type="article">
-                                    <head>٢٣</head>
-                                    <p>على موجب حكم قانون أصول المحاكمة المقرر وضعه لا يجبر أحد البتة على الذهاب إلى محكمة غير المحكمة
+                                <div n="23" type="article" change="#d2e273" xml:id="div_37.d2e799">
+                                    <head change="#d2e273" xml:id="head_33.d2e801">٢٣</head>
+                                    <p change="#d2e273" xml:id="p_53.d2e804">على موجب حكم قانون أصول المحاكمة المقرر وضعه لا يجبر أحد البتة على الذهاب إلى محكمة غير المحكمة
                                         المنسوب إليها قانونياً. </p>
                                 </div>
-                                <div n="24" type="article">
-                                    <head>٢٤</head>
-                                    <p>السخرة والمصادرة والجريمة ممنوعات ويستثنى من ذلك التكاليف والأحوال التي تعين أصولياً في أثناء
+                                <div n="24" type="article" change="#d2e273" xml:id="div_38.d2e809">
+                                    <head change="#d2e273" xml:id="head_34.d2e811">٢٤</head>
+                                    <p change="#d2e273" xml:id="p_54.d2e814">السخرة والمصادرة والجريمة ممنوعات ويستثنى من ذلك التكاليف والأحوال التي تعين أصولياً في أثناء
                                         المحاربة. </p>
                                 </div>
-                                <div n="25" type="article">
-                                    <head>٢٥</head>
-                                    <p>لا يؤخذ من أحد بارة واحدة تحت اسم ويركو ورسومات أو تحت أي اسم آخر من غير أن يكون ذلك مستنداً على
+                                <div n="25" type="article" change="#d2e273" xml:id="div_39.d2e818">
+                                    <head change="#d2e273" xml:id="head_35.d2e820">٢٥</head>
+                                    <p change="#d2e273" xml:id="p_55.d2e823">لا يؤخذ من أحد بارة واحدة تحت اسم ويركو ورسومات أو تحت أي اسم آخر من غير أن يكون ذلك مستنداً على
                                         قانون. </p>
                                 </div>
-                                <div n="26" type="article">
-                                    <head>٢٦</head>
-                                    <p>التعذيب وكل أنواع الأذية ممنوع بالكلية بالوجه القطعي. </p>
+                                <div n="26" type="article" change="#d2e273" xml:id="div_40.d2e827">
+                                    <head change="#d2e273" xml:id="head_36.d2e829">٢٦</head>
+                                    <p change="#d2e273" xml:id="p_56.d2e832">التعذيب وكل أنواع الأذية ممنوع بالكلية بالوجه القطعي. </p>
                                 </div>
                             </div>
-                            <div n="3" type="section">
-                                <head>في وكلاء الدولة<note> (الوزراء)</note> </head>
-                                <div n="27" type="article">
-                                    <head>٢٧</head>
-                                    <p>يحال مسند الصدارة والمشيخة الإسلامية إلى من تأمنهم الحضرة السلطانية وتجرى كذلك مأمورية كافة الوكلاء
+                            <div n="3" type="section" change="#d2e273" xml:id="div_42.d2e837">
+                                <head change="#d2e273" xml:id="head_37.d2e839">في وكلاء الدولة<note change="#d2e273" xml:id="note_1.d2e841"> (الوزراء)</note> </head>
+                                <div n="27" type="article" change="#d2e273" xml:id="div_42.d2e845">
+                                    <head change="#d2e273" xml:id="head_38.d2e847">٢٧</head>
+                                    <p change="#d2e273" xml:id="p_57.d2e850">يحال مسند الصدارة والمشيخة الإسلامية إلى من تأمنهم الحضرة السلطانية وتجرى كذلك مأمورية كافة الوكلاء
                                         بموجب الإرادة السنية. </p>
                                 </div>
-                                <div n="28" type="article">
-                                    <head>٢٨</head>
-                                    <p>يعقد مجلس الوكلاء تحت رئاسة الصدر الأعظم وهذا المجلس هو مرجع الأمور الداخلية والخارجية وما يحتاج من
+                                <div n="28" type="article" change="#d2e273" xml:id="div_43.d2e854">
+                                    <head change="#d2e273" xml:id="head_39.d2e856">٢٨</head>
+                                    <p change="#d2e273" xml:id="p_58.d2e859">يعقد مجلس الوكلاء تحت رئاسة الصدر الأعظم وهذا المجلس هو مرجع الأمور الداخلية والخارجية وما يحتاج من
                                         قرار مذاكرته للاستئذان يجرى بالإرادة السلطانية. </p>
                                 </div>
-                                <div n="29" type="article">
-                                    <head>٢٩</head>
-                                    <p>كل من الوكلاء يجري على وفق الأصول كل ما يكون داخلاً تحت مأذونيته من الأمور العائدة لدائرته، وما كان
+                                <div n="29" type="article" change="#d2e273" xml:id="div_44.d2e863">
+                                    <head change="#d2e273" xml:id="head_40.d2e865">٢٩</head>
+                                    <p change="#d2e273" xml:id="p_59.d2e868">كل من الوكلاء يجري على وفق الأصول كل ما يكون داخلاً تحت مأذونيته من الأمور العائدة لدائرته، وما كان
                                         خارجاً عنها يعرض على الصدر الأعظم فيجري الصدر مقتضى ما يكون منها غير محتاج للمذاكرة أو يستأذن عنه من
                                         الحضرة السلطانية، والذي يحتاج إلى المذاكرة يعرضه على مذاكرة مجلس الوكلاء ويجري مقتضاه على موجب
                                         الإرادة السنية. أما أنواع هذه المصالح ودرجاتها فتعين بنظام مخصوص. </p>
                                 </div>
-                                <div n="30" type="article">
-                                    <head>٣٠</head>
-                                    <p>وكلاء الدولة مسؤولون عن الأحوال والإجراءات المتعلقة بمأمورياتهم. </p>
+                                <div n="30" type="article" change="#d2e273" xml:id="div_45.d2e872">
+                                    <head change="#d2e273" xml:id="head_41.d2e874">٣٠</head>
+                                    <p change="#d2e273" xml:id="p_60.d2e877">وكلاء الدولة مسؤولون عن الأحوال والإجراءات المتعلقة بمأمورياتهم. </p>
                                 </div>
-                                <div n="31" type="article">
-                                    <head>٣١</head>
-                                    <p>إذا أورد أحد أعضاء المبعوثان أو عدة منهم، شكاية على أحد الوكلاء توجب عليه المسؤولية من قبيل بعض
+                                <div n="31" type="article" change="#d2e273" xml:id="div_46.d2e882">
+                                    <head change="#d2e273" xml:id="head_42.d2e884">٣١</head>
+                                    <p change="#d2e273" xml:id="p_61.d2e887">إذا أورد أحد أعضاء المبعوثان أو عدة منهم، شكاية على أحد الوكلاء توجب عليه المسؤولية من قبيل بعض
                                         الأحوال الداخلة ضمن دائرة وظيفة هيئة المبعوثان يرسل رئيس الهيئة تقرير الشكاية المتقدم له في ظرف
                                         ثلاثة أيام إلى الشعبة المأمورة بالتدقيق. على ما يماثل هذه المواد لتنظر هل نظام هيئة المبعوثان
                                         الداخلي يوجب تحويلها إلى الهيئة أو لا. وبعد أن تجري الشعبة التحقيقات اللازمة، وتستحصل من المشتكى
                                         عليه الإيضاحات الكافلة، يتلى لدى هيئة المبعوثان قرارها الذي يترتب بأكثرية الآراء بلزوم التذاكر على
                                         الشكلية. وإذا مست الحاجة تستدعي الهيئة ذلك الذات المشتكى عليه وتسمع منه رأساً أو من وكيله الإيضاحات
-                                        التي يوردها في هذا <cb/>الباب ومتى قر القرار بالأكثرية المطلقة من ثلثي الأعضاء الموجودين على قبول
+                                        التي يوردها في هذا <cb change="#d2e273" xml:id="cb_11.d2e889"/>الباب ومتى قر القرار بالأكثرية المطلقة من ثلثي الأعضاء الموجودين على قبول
                                         الشكلية تقدم مضبطة طلب المحاكمة إلى مقام الصدارة فيقدمها الصدر للعرض وتحال الكيفية إلى الديوان
                                         العالي بعد تعلق الإرادة السنية عليها. </p>
                                 </div>
-                                <div n="32" type="article">
-                                    <head>٣٢</head>
-                                    <p>إنّ أصول محاكمة المتهمين من الوكلاء ستعيّن بنظام مخصوص. </p>
+                                <div n="32" type="article" change="#d2e273" xml:id="div_47.d2e893">
+                                    <head change="#d2e273" xml:id="head_43.d2e895">٣٢</head>
+                                    <p change="#d2e273" xml:id="p_62.d2e898">إنّ أصول محاكمة المتهمين من الوكلاء ستعيّن بنظام مخصوص. </p>
                                 </div>
-                                <div n="33" type="article">
-                                    <head>٣٣</head>
-                                    <p>لا فرق بين الوكلاء وسائر أفراد العثمانيين في كل أنواع الدعاوى المتعلقة بأنفسهم خاصة خارجة عن
+                                <div n="33" type="article" change="#d2e273" xml:id="div_48.d2e902">
+                                    <head change="#d2e273" xml:id="head_44.d2e904">٣٣</head>
+                                    <p change="#d2e273" xml:id="p_63.d2e907">لا فرق بين الوكلاء وسائر أفراد العثمانيين في كل أنواع الدعاوى المتعلقة بأنفسهم خاصة خارجة عن
                                         مأموريتهم، أما محاكمة ما شاكل هذه الدعاوى والخصومات فتجرى في المحاكم العمومية المنوط بها رؤيتها.
                                     </p>
                                 </div>
-                                <div n="34" type="article">
-                                    <head>٣٤</head>
-                                    <p>يسقط من الوكالة كل الوكلاء الذين يقر قرار دائرة الاتهام في الديوان العالي على كونهم متهمين وذلك إلى
+                                <div n="34" type="article" change="#d2e273" xml:id="div_49.d2e911">
+                                    <head change="#d2e273" xml:id="head_45.d2e913">٣٤</head>
+                                    <p change="#d2e273" xml:id="p_64.d2e916">يسقط من الوكالة كل الوكلاء الذين يقر قرار دائرة الاتهام في الديوان العالي على كونهم متهمين وذلك إلى
                                         أن تتبرأ ذمتهم. </p>
                                 </div>
-                                <div n="35" type="article">
-                                    <head>٣٥</head>
-                                    <p>إذا أصرّ الوكلاء على قبول أحد المواد المختلف عليها بينهم وبين هيئة المبعوثان وكرر المبعوثان رفضها
+                                <div n="35" type="article" change="#d2e273" xml:id="div_50.d2e920">
+                                    <head change="#d2e273" xml:id="head_46.d2e922">٣٥</head>
+                                    <p change="#d2e273" xml:id="p_65.d2e925">إذا أصرّ الوكلاء على قبول أحد المواد المختلف عليها بينهم وبين هيئة المبعوثان وكرر المبعوثان رفضها
                                         قطعياً بأكثرية الآراء المشفوعة بتفصيل الأسباب الموجبة لرفضها فيكون حينئذ بيد اقتدار الحضرة السلطانية
                                         تبديل الوكلاء أو فسخ هيئة المبعوثان على شرط تجديد انتخابها في المدة القانونية. </p>
                                 </div>
-                                <div n="36" type="article">
-                                    <head>٣٦</head>
-                                    <p>إذا ظهر في بعض أزمنة انعقاد المجلس العمومي واجتماعه ضرورة مبرمة لوقاية الدولة من خطر أو للأمن العام
+                                <div n="36" type="article" change="#d2e273" xml:id="div_51.d2e929">
+                                    <head change="#d2e273" xml:id="head_47.d2e931">٣٦</head>
+                                    <p change="#d2e273" xml:id="p_66.d2e934">إذا ظهر في بعض أزمنة انعقاد المجلس العمومي واجتماعه ضرورة مبرمة لوقاية الدولة من خطر أو للأمن العام
                                         من خلل في وقت غير مساعد على جلب المجلس المذكور وجمعه لأجل التذاكر في القانون الذي يرى لزوم لوضعه في
                                         تلك النازلة، فما تعطيه الوكلاء حينئذ من القرارات التي لا تغاير أحكام القانون الأساسي تعتبر موقتة
                                         بموجب الإرادة السنية في قوة حكم القانون، وذلك إلى أن تجتمع هيئة المبعوثان وتعطي قراراً بخصوصها. </p>
                                 </div>
-                                <div n="37" type="article">
-                                    <head>٣٧</head>
-                                    <p>كل من الوكلاء يستطيع متى أراد أن يحضر في الهيئتين أو يوجد بهما بالوكالة عنه أحد رؤساء مأموري معيته
+                                <div n="37" type="article" change="#d2e273" xml:id="div_52.d2e939">
+                                    <head change="#d2e273" xml:id="head_48.d2e941">٣٧</head>
+                                    <p change="#d2e273" xml:id="p_67.d2e944">كل من الوكلاء يستطيع متى أراد أن يحضر في الهيئتين أو يوجد بهما بالوكالة عنه أحد رؤساء مأموري معيته
                                         وله حق التقدم على الأعضاء في إيراد النطق. </p>
                                 </div>
-                                <div n="38" type="article">
-                                    <head>٣٨</head>
-                                    <p>إذا قرّ قرار هيئة المبعوثان بالأكثرية على أن تستدعي لحضورها أحد الوكلاء للاستيضاح عن مادة ففي وسع
+                                <div n="38" type="article" change="#d2e273" xml:id="div_53.d2e948">
+                                    <head change="#d2e273" xml:id="head_49.d2e950">٣٨</head>
+                                    <p change="#d2e273" xml:id="p_68.d2e953">إذا قرّ قرار هيئة المبعوثان بالأكثرية على أن تستدعي لحضورها أحد الوكلاء للاستيضاح عن مادة ففي وسع
                                         الوزير المدعو أن يذهب إلى الهيئة بالذات أو يرسل أحد رؤساء مأموري معيته ليجيب عما يسأل عنه وفي وسعه
                                         أيضاً أن يؤخر الجواب إذا وجد لزوماً على شرط أن تكون مسؤولية التأخير عليه. </p>
                                 </div>
                             </div>
-                            <div n="4" type="section">
-                                <head>في المأمورين</head>
-                                <div n="39" type="article">
-                                    <head>٣٩</head>
-                                    <p>جميع المأمورين ينتخبون للمأموريات التي يكونون أهلاً لها، على وفق الشروط التي سيتعين نظامها.
+                            <div n="4" type="section" change="#d2e273" xml:id="div_55.d2e958">
+                                <head change="#d2e273" xml:id="head_50.d2e960">في المأمورين</head>
+                                <div n="39" type="article" change="#d2e273" xml:id="div_55.d2e963">
+                                    <head change="#d2e273" xml:id="head_51.d2e965">٣٩</head>
+                                    <p change="#d2e273" xml:id="p_69.d2e968">جميع المأمورين ينتخبون للمأموريات التي يكونون أهلاً لها، على وفق الشروط التي سيتعين نظامها.
                                         والمأمورون المنتخبون على هذا الوجه لا يعزلون أو يستعفوا من تلقاء أنفسهم ما لم ير لدى الدولة سبب
                                         ضروري لعزلهم. أما من كان منهم مستقيماً وحسن السلوك وانفصل عن مأموريته لسبب مقتض لدى الدولة فله حق
                                         بالترقي أو بالتقاعد أو بمعاش معزولـيته حسبما يتعين في نظام هذا المطلب المخصوص. </p>
                                 </div>
-                                <div n="40" type="article">
-                                    <head>٤٠</head>
-                                    <p>سيتعين نظام مخصوص لوظائف كل مأمورية على حدتها وكل مأمور مسؤول <cb/>ضمن دائرة وظيفته. </p>
+                                <div n="40" type="article" change="#d2e273" xml:id="div_56.d2e972">
+                                    <head change="#d2e273" xml:id="head_52.d2e974">٤٠</head>
+                                    <p change="#d2e273" xml:id="p_70.d2e977">سيتعين نظام مخصوص لوظائف كل مأمورية على حدتها وكل مأمور مسؤول <cb change="#d2e273" xml:id="cb_12.d2e979"/>ضمن دائرة وظيفته. </p>
                                 </div>
-                                <div n="41" type="article">
-                                    <head>٤١</head>
-                                    <p>كل مأمور ملزوم باحترام أمره وإطاعته ضمن الدائرة التي يعينها القانون أما إطاعته للآمر في الأمور
+                                <div n="41" type="article" change="#d2e273" xml:id="div_57.d2e983">
+                                    <head change="#d2e273" xml:id="head_53.d2e985">٤١</head>
+                                    <p change="#d2e273" xml:id="p_71.d2e988">كل مأمور ملزوم باحترام أمره وإطاعته ضمن الدائرة التي يعينها القانون أما إطاعته للآمر في الأمور
                                         المخالفة للقانون لا تكون مداراً لتخليصه من المسؤولية. </p>
                                 </div>
                             </div>
-                            <div n="5" type="section">
-                                <head> في المجلس العمومي</head>
-                                <div n="42" type="article">
-                                    <head>٤٢</head>
-                                    <p>المجلس العمومي يحتوي على هيئتين إحداهما تدعى هيئة الأعيان والثانية هيئة المبعوثان. </p>
+                            <div n="5" type="section" change="#d2e273" xml:id="div_59.d2e994">
+                                <head change="#d2e273" xml:id="head_54.d2e996"> في المجلس العمومي</head>
+                                <div n="42" type="article" change="#d2e273" xml:id="div_59.d2e999">
+                                    <head change="#d2e273" xml:id="head_55.d2e1001">٤٢</head>
+                                    <p change="#d2e273" xml:id="p_72.d2e1004">المجلس العمومي يحتوي على هيئتين إحداهما تدعى هيئة الأعيان والثانية هيئة المبعوثان. </p>
                                 </div>
-                                <div n="43" type="article">
-                                    <head>٤٣</head>
-                                    <p>اجتماع هيئتي المجلس العمومي في كل سنة يكون في بداية تشرين الثاني والمجلس المذكور يفتح أو يغلق بموجب
+                                <div n="43" type="article" change="#d2e273" xml:id="div_60.d2e1008">
+                                    <head change="#d2e273" xml:id="head_56.d2e1010">٤٣</head>
+                                    <p change="#d2e273" xml:id="p_73.d2e1013">اجتماع هيئتي المجلس العمومي في كل سنة يكون في بداية تشرين الثاني والمجلس المذكور يفتح أو يغلق بموجب
                                         الإرادة السنية وغلقه يكون في بداية مارت ولا تعقد إحدى الهيئتين في زمان تكون به الأخرى غير مجتمعة.
                                     </p>
                                 </div>
-                                <div n="44" type="article">
-                                    <head>٤٤</head>
-                                    <p>للحضرة السلطانية أن تفتح المجلس العمومي قبل وقته إذا وجد لدى الدولة لزوم لذلك وأن تنقص مدة الاجتماع
+                                <div n="44" type="article" change="#d2e273" xml:id="div_61.d2e1017">
+                                    <head change="#d2e273" xml:id="head_57.d2e1019">٤٤</head>
+                                    <p change="#d2e273" xml:id="p_74.d2e1022">للحضرة السلطانية أن تفتح المجلس العمومي قبل وقته إذا وجد لدى الدولة لزوم لذلك وأن تنقص مدة الاجتماع
                                         المعينة أو تزيدها. </p>
                                 </div>
-                                <div n="45" type="article">
-                                    <head>٤٥</head>
-                                    <p>يتم افتتاح المجلس العمومي بحضور الحضرة السلطانية بالذات أو بالوكالة بحضور الصدر الأعظم ووكلاء الدولة
+                                <div n="45" type="article" change="#d2e273" xml:id="div_62.d2e1026">
+                                    <head change="#d2e273" xml:id="head_58.d2e1028">٤٥</head>
+                                    <p change="#d2e273" xml:id="p_75.d2e1031">يتم افتتاح المجلس العمومي بحضور الحضرة السلطانية بالذات أو بالوكالة بحضور الصدر الأعظم ووكلاء الدولة
                                         وأعضاء الهيئتين معاً ويتلى في ذلك اليوم نطق سلطاني متعلق بأحوال داخلية الدولة ومناسباتها الخارجية في
                                         ظرف السنة الجارية وفيما يجب اتخاذه من الوسائل والتدابير في السنة الآتية. </p>
                                 </div>
-                                <div n="46" type="article">
-                                    <head>٤٦</head>
-                                    <p>في يوم افتتاح المجلس، يحلف بحضور الصدر الأعظم، كل من الذوات المنتخبين أو المنصوبين أعضاء للمجلس
+                                <div n="46" type="article" change="#d2e273" xml:id="div_63.d2e1036">
+                                    <head change="#d2e273" xml:id="head_59.d2e1038">٤٦</head>
+                                    <p change="#d2e273" xml:id="p_76.d2e1041">في يوم افتتاح المجلس، يحلف بحضور الصدر الأعظم، كل من الذوات المنتخبين أو المنصوبين أعضاء للمجلس
                                         العمومي، على أن يكون صادقاً ناصحاً للحضرة السلطانية ولوطنه، وأن يراعي أحكام القانون الأساسي والوظيفة
                                         المودعة لعهدته، وأن يجتنب كل ما يخالف ذلك. ومن لم يحضر في ذلك اليوم من الأعضاء يحلف على الوجه
                                         المشروح عند اجتماع الهيئة بمعرفة رئيس هيئته. </p>
                                 </div>
-                                <div n="47" type="article">
-                                    <head>٤٧</head>
-                                    <p>أعضاء المجلس العمومي يكونون أحراراً في آرائهم ومطالعاتهم، ولا يكون أحد منهم تحت قيد تعليمات ووعد
+                                <div n="47" type="article" change="#d2e273" xml:id="div_64.d2e1045">
+                                    <head change="#d2e273" xml:id="head_60.d2e1047">٤٧</head>
+                                    <p change="#d2e273" xml:id="p_77.d2e1050">أعضاء المجلس العمومي يكونون أحراراً في آرائهم ومطالعاتهم، ولا يكون أحد منهم تحت قيد تعليمات ووعد
                                         ووعيد، ولا يتهم البتة من قبيل الآراء التي يعطيها ولا من جهة المطالعات التي يبينها في أثناء مذاكرات
                                         المجلس إذا لم تقع منه في جميع ذلك حركة مخالفة لنظام المجلس الداخلي، فإذا وقع يعامل بحكم النظام
                                         المذكور. </p>
                                 </div>
-                                <div n="48" type="article">
-                                    <head>٤٨</head>
-                                    <p>إذا اتهم أحد أعضاء المجلس العمومي بالخيانة، أو بالتصدي لإلغاء القانون الأساسي أو نقضه أو في إحدى تهم
+                                <div n="48" type="article" change="#d2e273" xml:id="div_65.d2e1054">
+                                    <head change="#d2e273" xml:id="head_61.d2e1056">٤٨</head>
+                                    <p change="#d2e273" xml:id="p_78.d2e1059">إذا اتهم أحد أعضاء المجلس العمومي بالخيانة، أو بالتصدي لإلغاء القانون الأساسي أو نقضه أو في إحدى تهم
                                         الارتكاب، وتقرر اتهامه بثلثي الأكثرية المطلقة من هيئة الأعضاء الموجودين في الدائرة المنسوب إليها، أو
                                         حكم عليه بجزاء موجب لحبسه أو نفيه قانونياً، تسقط عنه صفة العضوية. أما محاكمة هذه الأفعال ومجازاتها
                                         فتجريها المحكمة المنوط بها ذلك. </p>
                                 </div>
-                                <div n="49" type="article">
-                                    <head>٤٩</head>
-                                    <p>لكل فرد من أعضاء المجلس العمومي أن يعطي رأيه بالذات أو لا يعطيه في رد تلك المادة الواقع عليها التذاكر
+                                <div n="49" type="article" change="#d2e273" xml:id="div_66.d2e1063">
+                                    <head change="#d2e273" xml:id="head_62.d2e1065">٤٩</head>
+                                    <p change="#d2e273" xml:id="p_79.d2e1068">لكل فرد من أعضاء المجلس العمومي أن يعطي رأيه بالذات أو لا يعطيه في رد تلك المادة الواقع عليها التذاكر
                                         أو في قبولها. </p>
                                 </div>
-                                <div n="50" type="article">
-                                    <head>٥٠</head>
-                                    <p>لا يمكن لأحد أن يكون عضواً في الهيئتين معاً في وقت واحد. </p>
+                                <div n="50" type="article" change="#d2e273" xml:id="div_67.d2e1072">
+                                    <head change="#d2e273" xml:id="head_63.d2e1074">٥٠</head>
+                                    <p change="#d2e273" xml:id="p_80.d2e1077">لا يمكن لأحد أن يكون عضواً في الهيئتين معاً في وقت واحد. </p>
                                 </div>
-                                <div n="51" type="article">
-                                    <head>٥١</head>
-                                    <p>لا يبادر للمذاكرة في كلتا هيئتي<pb ed="print" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2" n="2"
-                                        xml:id="pb_2"/> المجلس العمومي، ما لم تكن الأعضاء المرتبة في كل
+                                <div n="51" type="article" change="#d2e273" xml:id="div_68.d2e1081">
+                                    <head change="#d2e273" xml:id="head_64.d2e1083">٥١</head>
+                                    <p change="#d2e273" xml:id="p_81.d2e1086">لا يبادر للمذاكرة في كلتا هيئتي<pb ed="print" facs="#facs_1911E4FF-B256-43A1-B399-AC9E6235B356_2" n="2" xml:id="pb_2"/> المجلس العمومي، ما لم تكن الأعضاء المرتبة في كل
                                         منهما زائدة واحداً بالعدد عن النصف، وكافة المذاكرات تتقرر بالأكثرية المطلقة من الأعضاء الموجودين،
                                         خلا تلك الخصوصات التي يشترط تقريرها بأكثرية الثلثين. ويعتبر رأي الرئيس رأيين عند تساوي الآراء. </p>
                                 </div>
-                                <div n="52" type="article">
-                                    <head>٥٢</head>
-                                    <p>إذا قدم أحد إلى إحدى هيئتي المجلس العمومي عرض حال في دعوى متعلقة بشخصه، وتبين أنه لم يراجع في ذلك
+                                <div n="52" type="article" change="#d2e273" xml:id="div_69.d2e1093">
+                                    <head change="#d2e273" xml:id="head_65.d2e1095">٥٢</head>
+                                    <p change="#d2e273" xml:id="p_82.d2e1098">إذا قدم أحد إلى إحدى هيئتي المجلس العمومي عرض حال في دعوى متعلقة بشخصه، وتبين أنه لم يراجع في ذلك
                                         مأموري الدولة العائدة لهم تلك الدعوى، أو لم يراجع المرجع التابع له أولئك المأمورين، فعرض حاله يرد.
                                     </p>
                                 </div>
-                                <div n="53" type="article">
-                                    <head>٥٣</head>
-                                    <p>التكليف بتنظيم قانون مجدد، أو بتعديل أحد القوانين الموجودة، منوط بهيئة وكلاء الدولة. ويحق لهيئة
+                                <div n="53" type="article" change="#d2e273" xml:id="div_70.d2e1102">
+                                    <head change="#d2e273" xml:id="head_66.d2e1104">٥٣</head>
+                                    <p change="#d2e273" xml:id="p_83.d2e1107">التكليف بتنظيم قانون مجدد، أو بتعديل أحد القوانين الموجودة، منوط بهيئة وكلاء الدولة. ويحق لهيئة
                                         الأعيان وهيئة المبعوثان أن تستدعيا بتنظيم قانون لأجل المواد الموجودة في دائرة وظائفهم المعينة، أو
                                         بتعديل أحد القوانين الموجودة، وحينئذ يستأذن عنها أولاً من الحضرة السلطانية بواسطة مقام الصدارة، ومتى
                                         تعلقت الإرادة السنية يحال إلى شورى الدولة تنظيم لوائحها على مقتضى الإيضاحات والتفصيلات التي تعطى من
                                         الدوائر المتعلق بها ذلك. </p>
                                 </div>
-                                <div n="54" type="article">
-                                    <head>٥٤</head>
-                                    <p>لوائح القوانين التي تنتظم بالمذاكرة في شورى الدولة، بعد أن يجرى عليها التدقيق والقبول في هيئة
+                                <div n="54" type="article" change="#d2e273" xml:id="div_71.d2e1111">
+                                    <head change="#d2e273" xml:id="head_67.d2e1113">٥٤</head>
+                                    <p change="#d2e273" xml:id="p_84.d2e1116">لوائح القوانين التي تنتظم بالمذاكرة في شورى الدولة، بعد أن يجرى عليها التدقيق والقبول في هيئة
                                         المبعوثان ثم في هيئة الأعيان تكون دستوراً للعمل إذا تعلقت الإرادة السنية بإجراء أحكامها ولائحة
                                         القانون المردودة من إحدى الهيئتين رداً قطعياً لا يتكرر وضعها في موقع المذاكرة في المدة الاجتماعية
                                         بتلك السنة. </p>
                                 </div>
-                                <div n="55" type="article">
-                                    <head>٥٥</head>
-                                    <p>لا يعتبر أحد القوانين مقبولاً ما لم تقرأ لائحته بنداً فبنداً في هيئة المبعوثان ثم في هيئة الأعيان.
+                                <div n="55" type="article" change="#d2e273" xml:id="div_72.d2e1120">
+                                    <head change="#d2e273" xml:id="head_68.d2e1122">٥٥</head>
+                                    <p change="#d2e273" xml:id="p_85.d2e1125">لا يعتبر أحد القوانين مقبولاً ما لم تقرأ لائحته بنداً فبنداً في هيئة المبعوثان ثم في هيئة الأعيان.
                                         ويعطى على كل بند على حدته رأي، ويقر عليه القرار بأكثرية الآراء، ثم يقر القرار بعد ذلك على مجموع
                                         هيئتها تكراراً بالأكثرية. </p>
                                 </div>
-                                <div n="56" type="article">
-                                    <head>٥٦</head>
-                                    <p>على الهيئتين أن لا تقبلا أحداً يأتي إليهما بالأصالة عن نفسها أو بالوكالة عن جماعة لأجل إفادة مادة من
+                                <div n="56" type="article" change="#d2e273" xml:id="div_73.d2e1129">
+                                    <head change="#d2e273" xml:id="head_69.d2e1131">٥٦</head>
+                                    <p change="#d2e273" xml:id="p_86.d2e1134">على الهيئتين أن لا تقبلا أحداً يأتي إليهما بالأصالة عن نفسها أو بالوكالة عن جماعة لأجل إفادة مادة من
                                         المواد، ولا تسمعا إفادته، إذا لم يكن من الوكلاء أو من موكليهم أو من نفس أعضاء الهيئتين أو من أحد
                                         المأمورين المدعو رسماً بالحضور إليهما. </p>
                                 </div>
-                                <div n="57" type="article">
-                                    <head>٥٧</head>
-                                    <p>مذاكرات الهيئتين تكون باللغة التركية واللوائح المقتضى إجراء المذاكرة عليها تطبع صورها وتتوزع على
+                                <div n="57" type="article" change="#d2e273" xml:id="div_74.d2e1138">
+                                    <head change="#d2e273" xml:id="head_70.d2e1140">٥٧</head>
+                                    <p change="#d2e273" xml:id="p_87.d2e1143">مذاكرات الهيئتين تكون باللغة التركية واللوائح المقتضى إجراء المذاكرة عليها تطبع صورها وتتوزع على
                                         الأعضاء قبل يوم المذاكرة. </p>
                                 </div>
-                                <div n="58" type="article">
-                                    <head>٥٨</head>
-                                    <p>الآراء التي تعطيها الهيئتان تكون بتعيين الأسماء، أو بإشارات مخصوصة، أو بالرأي الخفي. أما إجراء أصول
+                                <div n="58" type="article" change="#d2e273" xml:id="div_75.d2e1148">
+                                    <head change="#d2e273" xml:id="head_71.d2e1150">٥٨</head>
+                                    <p change="#d2e273" xml:id="p_88.d2e1153">الآراء التي تعطيها الهيئتان تكون بتعيين الأسماء، أو بإشارات مخصوصة، أو بالرأي الخفي. أما إجراء أصول
                                         الرأي الخفي فيتوقف إعطاء قراره على أكثرية آراء الأعضاء الموجودين. </p>
                                 </div>
-                                <div n="59" type="article">
-                                    <head>٥٩</head>
-                                    <p>إنّ انضباط داخلية كل هيئة على حدتها محصور برئيسها. </p>
+                                <div n="59" type="article" change="#d2e273" xml:id="div_76.d2e1157">
+                                    <head change="#d2e273" xml:id="head_72.d2e1159">٥٩</head>
+                                    <p change="#d2e273" xml:id="p_89.d2e1162">إنّ انضباط داخلية كل هيئة على حدتها محصور برئيسها. </p>
                                 </div>
                             </div>
-                            <div n="6" type="section">
-                                <head>في هيئة الأعيان</head>
-                                <div n="60" type="article">
-                                    <head>٦٠</head>
-                                    <p>لا يتجاوز عدد أعضاء هيئة الأعيان ورئيسها نهاية ما يكون ثلث مقدار هيئة المبعوثان. وتوظيفهم هو منوط
+                            <div n="6" type="section" change="#d2e273" xml:id="div_78.d2e1167">
+                                <head change="#d2e273" xml:id="head_73.d2e1169">في هيئة الأعيان</head>
+                                <div n="60" type="article" change="#d2e273" xml:id="div_78.d2e1172">
+                                    <head change="#d2e273" xml:id="head_74.d2e1174">٦٠</head>
+                                    <p change="#d2e273" xml:id="p_90.d2e1177">لا يتجاوز عدد أعضاء هيئة الأعيان ورئيسها نهاية ما يكون ثلث مقدار هيئة المبعوثان. وتوظيفهم هو منوط
                                         رأساً بالحضرة السلطانية. </p>
                                 </div>
-                                <div n="61" type="article">
-                                    <head>٦١</head>
-                                    <p>لا يمكن أن يكون عضواً في هيئة الأعيان إلا من كان بالأقل بالغاً سن الأربعين وهو من الذوات الذين حازت
+                                <div n="61" type="article" change="#d2e273" xml:id="div_79.d2e1181">
+                                    <head change="#d2e273" xml:id="head_75.d2e1183">٦١</head>
+                                    <p change="#d2e273" xml:id="p_91.d2e1186">لا يمكن أن يكون عضواً في هيئة الأعيان إلا من كان بالأقل بالغاً سن الأربعين وهو من الذوات الذين حازت
                                         آثارهـم وأفعـالهم وثوق العامـة واعتمادهـا والمشهود لهم بحـسن الخدمات المسبوقة في أمور الدولة. </p>
                                 </div>
-                                <div n="62" type="article">
-                                    <head>٦٢</head>
-                                    <p>عضوية هيئة الأعيان تبقى ما دامت الحياة، ويتعين بهذه المأموريات ذوات من معزولي الوكلاء والولاة ومشيري
+                                <div n="62" type="article" change="#d2e273" xml:id="div_80.d2e1190">
+                                    <head change="#d2e273" xml:id="head_76.d2e1192">٦٢</head>
+                                    <p change="#d2e273" xml:id="p_92.d2e1195">عضوية هيئة الأعيان تبقى ما دامت الحياة، ويتعين بهذه المأموريات ذوات من معزولي الوكلاء والولاة ومشيري
                                         المعسكرات وقضاة العسكر والسفراء والبطاركة ورؤساء الحاخامات ومن فرقاء البرية والبحرية ومن سائر الذوات
                                         الجامعي الصفات اللازمة، ومن يتعين منهم من غير مأموريات من مأموريات الدولة بناءً على طلبه يسقط من
                                         مأمورية العضوية. </p>
                                 </div>
-                                <div n="63" type="article">
-                                    <head>٦٣</head>
-                                    <p>إنّ المعاش الشهري لكل من أعضاء هيئة الأعيان هو عشرة آلاف قرش. وإذا كان أقل من عشرة آلاف قرش فهو
+                                <div n="63" type="article" change="#d2e273" xml:id="div_81.d2e1199">
+                                    <head change="#d2e273" xml:id="head_77.d2e1201">٦٣</head>
+                                    <p change="#d2e273" xml:id="p_93.d2e1204">إنّ المعاش الشهري لكل من أعضاء هيئة الأعيان هو عشرة آلاف قرش. وإذا كان أقل من عشرة آلاف قرش فهو
                                         يبلغها وإذا كان عشرة آلاف قرش أو أزيد يبقى على حاله. </p>
                                 </div>
-                                <div n="64" type="article">
-                                    <head>٦٤</head>
-                                    <p>على هيئة الأعيان أن تجري التدقيق على لوائح القوانين والموازنة التي تعطى لها من هيئة المبعوثان، فإذا
-                                        رأت فيها أساسياً ما يمسّ الأمور الدينية وحقوق حضرة الذات السلطانية السنية، <cb/>أو ما يمس الحرية
+                                <div n="64" type="article" change="#d2e273" xml:id="div_82.d2e1209">
+                                    <head change="#d2e273" xml:id="head_78.d2e1211">٦٤</head>
+                                    <p change="#d2e273" xml:id="p_94.d2e1214">على هيئة الأعيان أن تجري التدقيق على لوائح القوانين والموازنة التي تعطى لها من هيئة المبعوثان، فإذا
+                                        رأت فيها أساسياً ما يمسّ الأمور الدينية وحقوق حضرة الذات السلطانية السنية، <cb change="#d2e273" xml:id="cb_13.d2e1216"/>أو ما يمس الحرية
                                         وأحكام القانون الأساسي وتمام ملكية الدولة، أو ما يخل بأمنية داخلية المملكة وبأسباب المدافعة
                                         والمحافظة على الوطن، أو ما يخل بالآداب العمومية، فلها حينئذ أن تورد مطالعتها وتردها وترفضها قطعياً
                                         أو تعيدها إلى هيئة المبعوثان مصحوبة بملاحظاتها لأجل التعديل والتصحيح. واللوائح التي تقبلها تصادق
@@ -608,25 +594,25 @@
                                         إلى مقام الصدارة مشفوعة بالمطالعات إذا رأت لذلك لزوماً. </p>
                                 </div>
                             </div>
-                            <div n="7" type="section">
-                                <head>في هيئة المبعوثان</head>
-                                <div n="65" type="article">
-                                    <head>٦٥</head>
-                                    <p>إنّ مقدار أعضاء هيئة المبعوثان يترتب باعتبار نفر واحد لكل خمسين ألفاً من ذكور التبعة العثمانية. </p>
+                            <div n="7" type="section" change="#d2e273" xml:id="div_84.d2e1221">
+                                <head change="#d2e273" xml:id="head_79.d2e1223">في هيئة المبعوثان</head>
+                                <div n="65" type="article" change="#d2e273" xml:id="div_84.d2e1226">
+                                    <head change="#d2e273" xml:id="head_80.d2e1228">٦٥</head>
+                                    <p change="#d2e273" xml:id="p_95.d2e1231">إنّ مقدار أعضاء هيئة المبعوثان يترتب باعتبار نفر واحد لكل خمسين ألفاً من ذكور التبعة العثمانية. </p>
                                 </div>
-                                <div n="66" type="article">
-                                    <head>٦٦</head>
-                                    <p>أمر الانتخاب مؤسس على قاعدة الرأي الخفي وصورة إجرائه ستعين بقانون مخصوص. </p>
+                                <div n="66" type="article" change="#d2e273" xml:id="div_85.d2e1235">
+                                    <head change="#d2e273" xml:id="head_81.d2e1237">٦٦</head>
+                                    <p change="#d2e273" xml:id="p_96.d2e1240">أمر الانتخاب مؤسس على قاعدة الرأي الخفي وصورة إجرائه ستعين بقانون مخصوص. </p>
                                 </div>
-                                <div n="67" type="article">
-                                    <head>٦٧</head>
-                                    <p>لا يمكن أن يجتمع بعهدة ذات واحدة عضوية هيئة المبعوثان ومأمورية الحكومة معاً، وإنما تجوز العضوية لمن
+                                <div n="67" type="article" change="#d2e273" xml:id="div_86.d2e1244">
+                                    <head change="#d2e273" xml:id="head_82.d2e1246">٦٧</head>
+                                    <p change="#d2e273" xml:id="p_97.d2e1249">لا يمكن أن يجتمع بعهدة ذات واحدة عضوية هيئة المبعوثان ومأمورية الحكومة معاً، وإنما تجوز العضوية لمن
                                         ينتخب من الوكلاء. وإذا انتخب لعضوية المبعوثان واحد من المأمورين فله الخيار في قبولها أو رفضها ولكن
                                         إذا قبلها ينفصل عن مأموريته. </p>
                                 </div>
-                                <div n="68" type="article">
-                                    <head>٦٨</head>
-                                    <p>إنّ الذين لا يجوز انتخابهم لهيئة المبعوثان هم: أولاً: الذين ليسوا من تبعة الدولة العلية. ثانياً:
+                                <div n="68" type="article" change="#d2e273" xml:id="div_87.d2e1253">
+                                    <head change="#d2e273" xml:id="head_83.d2e1255">٦٨</head>
+                                    <p change="#d2e273" xml:id="p_98.d2e1258">إنّ الذين لا يجوز انتخابهم لهيئة المبعوثان هم: أولاً: الذين ليسوا من تبعة الدولة العلية. ثانياً:
                                         الحائزون مؤقتاً بموجب النظام المخصوص امتياز الخدمة الأجنبية. ثالثاً: الذين لا يعرفون اللغة التركية.
                                         رابعاً: الذين لم يكملوا سن الثلاثين. خامساً: من كان في خدمة أحد حين الانتخاب. سادساً: من كان محكوماً
                                         عليه بالإفلاس ولم يعد اعتباره. سابعاً: من اشتهر بسوء الأحوال. ثامناً: من حكم عليه بالحجر ولم يتمكن
@@ -634,305 +620,304 @@
                                         يكونوا أعضاء في هيئة المبعوثان. ويشترط في الانتخابات التي تجرى بعد أربع سنين على من يلزم أن يكون
                                         مبعوثاً أن يقرأ اللغة التركية وأن يكتب بها أيضاً على قدر الإمكان. </p>
                                 </div>
-                                <div n="69" type="article">
-                                    <head>٦٩</head>
-                                    <p>إن انتخاب المبعوثان العمومي يجري مرة واحدة في كل أربع سنين، ومدة مأمورية كل مبعوث عبارة عنها. ويجوز
+                                <div n="69" type="article" change="#d2e273" xml:id="div_88.d2e1263">
+                                    <head change="#d2e273" xml:id="head_84.d2e1265">٦٩</head>
+                                    <p change="#d2e273" xml:id="p_99.d2e1268">إن انتخاب المبعوثان العمومي يجري مرة واحدة في كل أربع سنين، ومدة مأمورية كل مبعوث عبارة عنها. ويجوز
                                         تكرار انتخابه. </p>
                                 </div>
-                                <div n="70" type="article">
-                                    <head>٧٠</head>
-                                    <p>يبتدأ بانتخاب المبعوثان العمومي من مدة لا أقل من أربعة أشهر قبل تشرين الثاني، الذي هو مبدأ اجتماع
+                                <div n="70" type="article" change="#d2e273" xml:id="div_89.d2e1272">
+                                    <head change="#d2e273" xml:id="head_85.d2e1274">٧٠</head>
+                                    <p change="#d2e273" xml:id="p_100.d2e1277">يبتدأ بانتخاب المبعوثان العمومي من مدة لا أقل من أربعة أشهر قبل تشرين الثاني، الذي هو مبدأ اجتماع
                                         الهيئة. </p>
                                 </div>
-                                <div n="71" type="article">
-                                    <head>٧١</head>
-                                    <p>كل عضو من هيئة المبعوثان لا يعتبر وكيلاً عن الدائرة التي انتخبته وإنما يكون في حكم وكيل عموم
+                                <div n="71" type="article" change="#d2e273" xml:id="div_90.d2e1281">
+                                    <head change="#d2e273" xml:id="head_86.d2e1283">٧١</head>
+                                    <p change="#d2e273" xml:id="p_101.d2e1286">كل عضو من هيئة المبعوثان لا يعتبر وكيلاً عن الدائرة التي انتخبته وإنما يكون في حكم وكيل عموم
                                         العثمانيين. </p>
                                 </div>
-                                <div n="72" type="article">
-                                    <head>٧٢</head>
-                                    <p>المنتخبون يلتزمون بانتخاب المبعوثان من أهالي دائرة الولاية المنسوبين إليها. </p>
+                                <div n="72" type="article" change="#d2e273" xml:id="div_91.d2e1290">
+                                    <head change="#d2e273" xml:id="head_87.d2e1292">٧٢</head>
+                                    <p change="#d2e273" xml:id="p_102.d2e1295">المنتخبون يلتزمون بانتخاب المبعوثان من أهالي دائرة الولاية المنسوبين إليها. </p>
                                 </div>
-                                <div n="73" type="article">
-                                    <head>٧٣</head>
-                                    <p>إذا فسخت هيئة المبعوثان وتفرقت بالإرادة السنية يبتدأ بانتخاب عموم المبعوثان مجدداً على وجه أن يجتمعوا
+                                <div n="73" type="article" change="#d2e273" xml:id="div_92.d2e1299">
+                                    <head change="#d2e273" xml:id="head_88.d2e1301">٧٣</head>
+                                    <p change="#d2e273" xml:id="p_103.d2e1304">إذا فسخت هيئة المبعوثان وتفرقت بالإرادة السنية يبتدأ بانتخاب عموم المبعوثان مجدداً على وجه أن يجتمعوا
                                         في مدة لا تتجاوز ستة أشهر بعد الفسخ. </p>
                                 </div>
-                                <div n="74" type="article">
-                                    <head>٧٤</head>
-                                    <p>إذا مات أحد أعضاء هيئة المبعوثان، أو وقع في أحد الأسباب المشروعة الحجرية أو لم يداوم على المجلس مدة
+                                <div n="74" type="article" change="#d2e273" xml:id="div_93.d2e1308">
+                                    <head change="#d2e273" xml:id="head_89.d2e1310">٧٤</head>
+                                    <p change="#d2e273" xml:id="p_104.d2e1313">إذا مات أحد أعضاء هيئة المبعوثان، أو وقع في أحد الأسباب المشروعة الحجرية أو لم يداوم على المجلس مدة
                                         طويلة، أو استعفى، أو سقط من الاعضاوية لمحكومية، أو لقبوله مأمورية، فينتخب لمحله خلافه حسب الأصول
                                         بحيث يلحق الاجتماع الآتي. </p>
                                 </div>
-                                <div n="75" type="article">
-                                    <head>٧٥</head>
-                                    <p>إن الأعضاء التي تنتخب لتحل في مقام الأعضاء المنحلين من العضوين تكون مأموريتهم حتى الانتخاب العمومي
+                                <div n="75" type="article" change="#d2e273" xml:id="div_94.d2e1318">
+                                    <head change="#d2e273" xml:id="head_90.d2e1320">٧٥</head>
+                                    <p change="#d2e273" xml:id="p_105.d2e1323">إن الأعضاء التي تنتخب لتحل في مقام الأعضاء المنحلين من العضوين تكون مأموريتهم حتى الانتخاب العمومي
                                         الآتي. </p>
                                 </div>
-                                <div n="76" type="article">
-                                    <head>٧٦</head>
-                                    <p>يعطى من الخزينة عشرون ألف قرش لكل من المبعوثان عن كل اجتماع سنوي، ويعطى له كذلك مصاريف الذهاب والإياب
+                                <div n="76" type="article" change="#d2e273" xml:id="div_95.d2e1327">
+                                    <head change="#d2e273" xml:id="head_91.d2e1329">٧٦</head>
+                                    <p change="#d2e273" xml:id="p_106.d2e1332">يعطى من الخزينة عشرون ألف قرش لكل من المبعوثان عن كل اجتماع سنوي، ويعطى له كذلك مصاريف الذهاب والإياب
                                         حكم المأمور الذي يكون معاشه خمسة آلاف قرش شهرياً توفيقاً لنظام مأموري الملكية. </p>
                                 </div>
-                                <div n="77" type="article">
-                                    <head>٧٧</head>
-                                    <p>ينتخب من طرف الهيئة ثلاثة أنفار لرئاسة هيئة المبعوثان وثلاثة أنفار لكل من الرئاسة الثانية والثالثة،
+                                <div n="77" type="article" change="#d2e273" xml:id="div_96.d2e1336">
+                                    <head change="#d2e273" xml:id="head_92.d2e1338">٧٧</head>
+                                    <p change="#d2e273" xml:id="p_107.d2e1341">ينتخب من طرف الهيئة ثلاثة أنفار لرئاسة هيئة المبعوثان وثلاثة أنفار لكل من الرئاسة الثانية والثالثة،
                                         مجموع ذلك تسع ذوات، فيعرضون على الحضرة السلطانية فيترجح أحدهم بالإرادة السنية السلطانية للرئاسة،
                                         واثنان منهم كذلك لوكالتي الرئاسة، وتجرى مأموريتهم. </p>
                                 </div>
-                                <cb/>
-                                <div n="78" type="article">
-                                    <head>٧٨</head>
-                                    <p>مذكرات هيئة المبعوثان تكون علانية، ولكن إذا وقع التكليف من جانب الوكلاء، أو من طرف خمس عشرة ذاتاً من
+                                <cb change="#d2e273" xml:id="cb_14.d2e1345"/>
+                                <div n="78" type="article" change="#d2e273" xml:id="div_97.d2e1347">
+                                    <head change="#d2e273" xml:id="head_93.d2e1349">٧٨</head>
+                                    <p change="#d2e273" xml:id="p_108.d2e1352">مذكرات هيئة المبعوثان تكون علانية، ولكن إذا وقع التكليف من جانب الوكلاء، أو من طرف خمس عشرة ذاتاً من
                                         هيئة المبعوثان، على أن تكون المذاكرات خفية على إحدى المواد المهمة، فيخلى محل هيئة الاجتماع من
                                         الحاضرين فيه دون الأعضاء، وتتراجع حينئذ الآراء في رد هذا التكليف أو قبوله. </p>
                                 </div>
-                                <div n="79" type="article">
-                                    <head>٧٩</head>
-                                    <p>لا يحاكم أحد الأعضاء، أو يوقف في مدة اجتماع هيئة المبعوثان، ما لم يعط قرار من الهيئة بأكثرية الآراء
+                                <div n="79" type="article" change="#d2e273" xml:id="div_98.d2e1356">
+                                    <head change="#d2e273" xml:id="head_94.d2e1358">٧٩</head>
+                                    <p change="#d2e273" xml:id="p_109.d2e1361">لا يحاكم أحد الأعضاء، أو يوقف في مدة اجتماع هيئة المبعوثان، ما لم يعط قرار من الهيئة بأكثرية الآراء
                                         على سبب كاف لاتهامه، أو يقبض عليه في حال إجراء الجناية أو الجنحة أو عقيب إجراء ذلك. </p>
                                 </div>
-                                <div n="80" type="article">
-                                    <head>٨٠</head>
-                                    <p>إن هيئة المبعوثان تتذاكر على لوائح القوانين المحولة لها، ولها أن تقبل من ذلك المواد المتعلقة بالأمور
+                                <div n="80" type="article" change="#d2e273" xml:id="div_99.d2e1366">
+                                    <head change="#d2e273" xml:id="head_95.d2e1368">٨٠</head>
+                                    <p change="#d2e273" xml:id="p_110.d2e1371">إن هيئة المبعوثان تتذاكر على لوائح القوانين المحولة لها، ولها أن تقبل من ذلك المواد المتعلقة بالأمور
                                         المالية والقانون الأساسي أو ترفضها أو تعدلها، وبعد أن يجرى التدقيق بالتفصيل في هيئة المبعوثان على
                                         المصارف العمومية، حسبما هو موضح في قانون الموازنة، يعطى القرار على مقدارها مع الوكلاء، ثم يتعين كذلك
                                         مع الوكلاء سوية كمية وكيفية ما يقابل ذلك من الواردات وصورة توزيعها وتداركها. </p>
                                 </div>
                             </div>
-                            <div n="8" type="section">
-                                <head>في المحاكم</head>
-                                <div n="81" type="article">
-                                    <head>٨١</head>
-                                    <p>لا يعزل القضاة المنتخبون توفيقاً للأصول المخصوصة المنصوبون من طرف الدولة بموجب براءة شريفة بأيديهم،
+                            <div n="8" type="section" change="#d2e273" xml:id="div_101.d2e1376">
+                                <head change="#d2e273" xml:id="head_96.d2e1378">في المحاكم</head>
+                                <div n="81" type="article" change="#d2e273" xml:id="div_101.d2e1381">
+                                    <head change="#d2e273" xml:id="head_97.d2e1383">٨١</head>
+                                    <p change="#d2e273" xml:id="p_111.d2e1386">لا يعزل القضاة المنتخبون توفيقاً للأصول المخصوصة المنصوبون من طرف الدولة بموجب براءة شريفة بأيديهم،
                                         وإنما يقبل استعفاؤهم أما ترقيات هؤلاء الحكام ومسلكهم وتبديل مأمورياتهم وتقاعدهم أو عزلهم لجرم محكوم
                                         به عليهم ذلك جميعه تابع لحكم قانونه المخصوص. وهذا القانون يوضح الأوصاف المطلوبة من القضاة ومن مأموري
                                         المحاكم. </p>
                                 </div>
-                                <div n="82" type="article">
-                                    <head>٨٢</head>
-                                    <p>كل أنواع المحاكمات تجري علانية في المحاكم، ويؤذن بنشر الإعلامات دائماً، وإنما تستطيع المحكمة أن تجري
+                                <div n="82" type="article" change="#d2e273" xml:id="div_102.d2e1390">
+                                    <head change="#d2e273" xml:id="head_98.d2e1392">٨٢</head>
+                                    <p change="#d2e273" xml:id="p_112.d2e1395">كل أنواع المحاكمات تجري علانية في المحاكم، ويؤذن بنشر الإعلامات دائماً، وإنما تستطيع المحكمة أن تجري
                                         المحاكمة خفية بناءً على الأسباب المصرحة في قانونها. </p>
                                 </div>
-                                <div n="83" type="article">
-                                    <head>٨٣</head>
-                                    <p>يستطيع كل شخص أن يستعمل بحضور المحكمة كل ما يراه لازماً من الوسائط المشروعة لمحافظة حقوقه. </p>
+                                <div n="83" type="article" change="#d2e273" xml:id="div_103.d2e1399">
+                                    <head change="#d2e273" xml:id="head_99.d2e1401">٨٣</head>
+                                    <p change="#d2e273" xml:id="p_113.d2e1404">يستطيع كل شخص أن يستعمل بحضور المحكمة كل ما يراه لازماً من الوسائط المشروعة لمحافظة حقوقه. </p>
                                 </div>
-                                <div n="84" type="article">
-                                    <head>٨٤</head>
-                                    <p>لا يمكن للمحكمة، بأيّ حجة كانت، أن تمتنع عن رؤية الدعوة الداخلة ضمن دائرة وظيفتها. وبعد البداءة بفحص
+                                <div n="84" type="article" change="#d2e273" xml:id="div_104.d2e1408">
+                                    <head change="#d2e273" xml:id="head_100.d2e1410">٨٤</head>
+                                    <p change="#d2e273" xml:id="p_114.d2e1413">لا يمكن للمحكمة، بأيّ حجة كانت، أن تمتنع عن رؤية الدعوة الداخلة ضمن دائرة وظيفتها. وبعد البداءة بفحص
                                         الدعوى، أو بما لزم من التحقيقات الأولية، لا يجوز كذلك تعطيلها أو تعويقها، ما لم يكف المدعي يده. أما
                                         في الدعاوي الجزائية في مطلب الحقوق العائدة للحكومة فالدعوى تستمر في مجراها على وفق النظام. </p>
                                 </div>
-                                <div n="85" type="article">
-                                    <head>٨٥</head>
-                                    <p>كل دعوى تنظر في المحكمة المتعلقة بها أما الدعاوي الواقعة بين الحكومة والأشخاص فترى في المحاكم
+                                <div n="85" type="article" change="#d2e273" xml:id="div_105.d2e1418">
+                                    <head change="#d2e273" xml:id="head_101.d2e1420">٨٥</head>
+                                    <p change="#d2e273" xml:id="p_115.d2e1423">كل دعوى تنظر في المحكمة المتعلقة بها أما الدعاوي الواقعة بين الحكومة والأشخاص فترى في المحاكم
                                         العمومية. </p>
                                 </div>
-                                <div n="86" type="article">
-                                    <head>٨٦</head>
-                                    <p>المحاكم معتوقة من كل أنواع المداخلات. </p>
+                                <div n="86" type="article" change="#d2e273" xml:id="div_106.d2e1427">
+                                    <head change="#d2e273" xml:id="head_102.d2e1429">٨٦</head>
+                                    <p change="#d2e273" xml:id="p_116.d2e1432">المحاكم معتوقة من كل أنواع المداخلات. </p>
                                 </div>
-                                <div n="87" type="article">
-                                    <head>٨٧</head>
-                                    <p>الدعاوي الشرعية ترى في المحاكم الشرعية، والنظامية في المحاكم النظامية. </p>
+                                <div n="87" type="article" change="#d2e273" xml:id="div_107.d2e1436">
+                                    <head change="#d2e273" xml:id="head_103.d2e1438">٨٧</head>
+                                    <p change="#d2e273" xml:id="p_117.d2e1441">الدعاوي الشرعية ترى في المحاكم الشرعية، والنظامية في المحاكم النظامية. </p>
                                 </div>
-                                <div n="88" type="article">
-                                    <head>٨٨</head>
-                                    <p>إنّ صنوف المحاكم ودرجات وظائفها وصلاحياتها وتقسيماتها وتوظيف الحكام جميعه مستند إلى القوانين. </p>
+                                <div n="88" type="article" change="#d2e273" xml:id="div_108.d2e1445">
+                                    <head change="#d2e273" xml:id="head_104.d2e1447">٨٨</head>
+                                    <p change="#d2e273" xml:id="p_118.d2e1450">إنّ صنوف المحاكم ودرجات وظائفها وصلاحياتها وتقسيماتها وتوظيف الحكام جميعه مستند إلى القوانين. </p>
                                 </div>
-                                <div n="89" type="article">
-                                    <head>٨٩</head>
-                                    <p>لا يجوز البتة أن يتشكل خارجاً عن المحاكم العمومية محكمة فوق العادة أو قومسيون يكون في وسعهما النظر في
+                                <div n="89" type="article" change="#d2e273" xml:id="div_109.d2e1454">
+                                    <head change="#d2e273" xml:id="head_105.d2e1456">٨٩</head>
+                                    <p change="#d2e273" xml:id="p_119.d2e1459">لا يجوز البتة أن يتشكل خارجاً عن المحاكم العمومية محكمة فوق العادة أو قومسيون يكون في وسعهما النظر في
                                         بعض مواد مخصوصة والحكم عليها، وإنما يجوز تعيين موليين والتحكيم فقط كما هو معين بالقانون. </p>
                                 </div>
-                                <div n="90" type="article">
-                                    <head>٩٠</head>
-                                    <p>لا يمكن لأحد الحكام حال كونه بصفة الحاكمية أن يجمع في عهدته مأمورية أخرى ذات معاش من الدولة. </p>
+                                <div n="90" type="article" change="#d2e273" xml:id="div_110.d2e1463">
+                                    <head change="#d2e273" xml:id="head_106.d2e1465">٩٠</head>
+                                    <p change="#d2e273" xml:id="p_120.d2e1468">لا يمكن لأحد الحكام حال كونه بصفة الحاكمية أن يجمع في عهدته مأمورية أخرى ذات معاش من الدولة. </p>
                                 </div>
-                                <div n="91" type="article">
-                                    <head>٩١</head>
-                                    <p>يعين مدعون عموميون مأمورون بالمحاماة عن حقوق العامة في الأمور الجزائية وتتعين وظائفهم ودرجاتهم
+                                <div n="91" type="article" change="#d2e273" xml:id="div_111.d2e1473">
+                                    <head change="#d2e273" xml:id="head_107.d2e1475">٩١</head>
+                                    <p change="#d2e273" xml:id="p_121.d2e1478">يعين مدعون عموميون مأمورون بالمحاماة عن حقوق العامة في الأمور الجزائية وتتعين وظائفهم ودرجاتهم
                                         بقانون. في الديوان العالي </p>
                                 </div>
                             </div>
-                            <div n="9" type="section">
-                                <head>في الديوان العالي</head>
-                                <div n="92" type="article">
-                                    <head>٩٢</head>
-                                    <p>الديوان العالي يركب من ثلاثين عضواً، عشرة منهم من هيئة الأعيان، وعشرة من شورى الدولة، وعشرة يفرزون
+                            <div n="9" type="section" change="#d2e273" xml:id="div_113.d2e1483">
+                                <head change="#d2e273" xml:id="head_108.d2e1485">في الديوان العالي</head>
+                                <div n="92" type="article" change="#d2e273" xml:id="div_113.d2e1488">
+                                    <head change="#d2e273" xml:id="head_109.d2e1490">٩٢</head>
+                                    <p change="#d2e273" xml:id="p_122.d2e1493">الديوان العالي يركب من ثلاثين عضواً، عشرة منهم من هيئة الأعيان، وعشرة من شورى الدولة، وعشرة يفرزون
                                         بالقرعة من رؤساء محكمتي التمييز والاستئناف وأعضائهما. ويعقد هذا الديوان في دائرة هيئة الأعيان
                                         بالإرادة السنية عند اللزوم، ووظيفته إنما هي محاكمة الوكلاء ورؤساء محكمة التمييز وأعضائها ومحاكمة كل
-                                        من اعتدى <cb/>على ذات الحضرة السلطانية وعلى حقوقها، وكل من تصدى لإلقاء الدولة في خطر. </p>
+                                        من اعتدى <cb change="#d2e273" xml:id="cb_15.d2e1495"/>على ذات الحضرة السلطانية وعلى حقوقها، وكل من تصدى لإلقاء الدولة في خطر. </p>
                                 </div>
-                                <div n="93" type="article">
-                                    <head>٩٣</head>
-                                    <p>يقسم الديوان العالي إلى دائرتين إحداهما الدائرة الاتهامية، والثانية ديوان الحكم. فأعضاء الدائرة
+                                <div n="93" type="article" change="#d2e273" xml:id="div_114.d2e1499">
+                                    <head change="#d2e273" xml:id="head_110.d2e1501">٩٣</head>
+                                    <p change="#d2e273" xml:id="p_123.d2e1504">يقسم الديوان العالي إلى دائرتين إحداهما الدائرة الاتهامية، والثانية ديوان الحكم. فأعضاء الدائرة
                                         الاتهامية تسعة: منهم ثلاثة من هيئة الأعيان، وثلاثة من ديوان التمييز والاستئناف، وثلاثة من أعضاء شورى
                                         الدولة، وجميعهم ينتخبون بالقرعة من الأعضاء الذين يؤخذون للديوان العالي. </p>
                                 </div>
-                                <div n="94" type="article">
-                                    <head>٩٤</head>
-                                    <p>إنّ هذه الدائرة تعطي القرار بأكثرية الثلثين في اتهام الذوات المشتكى عليهم أو عدمه. والموجودون في
+                                <div n="94" type="article" change="#d2e273" xml:id="div_115.d2e1508">
+                                    <head change="#d2e273" xml:id="head_111.d2e1510">٩٤</head>
+                                    <p change="#d2e273" xml:id="p_124.d2e1513">إنّ هذه الدائرة تعطي القرار بأكثرية الثلثين في اتهام الذوات المشتكى عليهم أو عدمه. والموجودون في
                                         الدائرة الاتهامية لا يوجدون في ديوان الحكم. </p>
                                 </div>
-                                <div n="95" type="article">
-                                    <head>٩٥</head>
-                                    <p>إنّ ديوان الحكم تكون أعضاؤه: سبعة من هيئة الأعيان، وسبعة من ديوان التمييز والاستئناف، وسبعة من رؤساء
+                                <div n="95" type="article" change="#d2e273" xml:id="div_116.d2e1517">
+                                    <head change="#d2e273" xml:id="head_112.d2e1519">٩٥</head>
+                                    <p change="#d2e273" xml:id="p_125.d2e1522">إنّ ديوان الحكم تكون أعضاؤه: سبعة من هيئة الأعيان، وسبعة من ديوان التمييز والاستئناف، وسبعة من رؤساء
                                         شورى الدولة وأعضائها، فيكون مركباً إذاً من واحد وعشرين نفراً من أعضاء الديوان العالي. والأعضاء
                                         المرتبة كما ذكر، يحكمون بأكثرية الثلثين قطعياً، وتطبيقاً للقوانين الموضوعة على الدعاوي التي قر قرار
                                         الدائرة الاتهامية على لزوم محاكمتها. وحكمهم غير قابل الاستئناف والتمييز. </p>
                                 </div>
                             </div>
-                            <div n="10" type="section">
-                                <head>في أمور المالية</head>
-                                <div n="96" type="article">
-                                    <head>٩٦</head>
-                                    <p>لا يمكن وضع أحد تكاليف الدولة وتوزيعه واستحصاله ما لم يتعين بقانون. </p>
+                            <div n="10" type="section" change="#d2e273" xml:id="div_118.d2e1527">
+                                <head change="#d2e273" xml:id="head_113.d2e1529">في أمور المالية</head>
+                                <div n="96" type="article" change="#d2e273" xml:id="div_118.d2e1532">
+                                    <head change="#d2e273" xml:id="head_114.d2e1534">٩٦</head>
+                                    <p change="#d2e273" xml:id="p_126.d2e1537">لا يمكن وضع أحد تكاليف الدولة وتوزيعه واستحصاله ما لم يتعين بقانون. </p>
                                 </div>
-                                <div n="97" type="article">
-                                    <head>٩٧</head>
-                                    <p>إن ميزانية (بودجه Budget) الدولة هي قانون مبين بالتقريب وارداتها ومصارفاتها، وهو القانون المستند عليه
+                                <div n="97" type="article" change="#d2e273" xml:id="div_119.d2e1541">
+                                    <head change="#d2e273" xml:id="head_115.d2e1543">٩٧</head>
+                                    <p change="#d2e273" xml:id="p_127.d2e1546">إن ميزانية (بودجه Budget) الدولة هي قانون مبين بالتقريب وارداتها ومصارفاتها، وهو القانون المستند عليه
                                         بوضع تكاليف الدولة وتوزيعها وتحصيلها. </p>
                                 </div>
-                                <div n="98" type="article">
-                                    <head>٩٨</head>
-                                    <p>إن البودجه، أعني قانون الموازنة، العمومية يقبل في المجلس العمومي بعد التدقيق عليه مادة فمادة،
+                                <div n="98" type="article" change="#d2e273" xml:id="div_120.d2e1550">
+                                    <head change="#d2e273" xml:id="head_116.d2e1552">٩٨</head>
+                                    <p change="#d2e273" xml:id="p_128.d2e1555">إن البودجه، أعني قانون الموازنة، العمومية يقبل في المجلس العمومي بعد التدقيق عليه مادة فمادة،
                                         والجداول المربوطة به الجامعة لمفردات الواردات والمصارفات المخمنة تنقسم إلى أقسام وفصول ومواد متعددة
                                         توفيقاً لأنموذجها المتعين نظاماً. والمذاكرات عليها أيضاً تجرى فصلاً ففصلاً. </p>
                                 </div>
-                                <div n="99" type="article">
-                                    <head>٩٩</head>
-                                    <p>إنّ لائحة قانون الموازنة العمومية تعطى لهيئة المبعوثان عقب فتح المجلس العمومي ليمكن وضعه في موقع
+                                <div n="99" type="article" change="#d2e273" xml:id="div_121.d2e1559">
+                                    <head change="#d2e273" xml:id="head_117.d2e1561">٩٩</head>
+                                    <p change="#d2e273" xml:id="p_129.d2e1564">إنّ لائحة قانون الموازنة العمومية تعطى لهيئة المبعوثان عقب فتح المجلس العمومي ليمكن وضعه في موقع
                                         الإجراء قبل دخول السنة المتعلق بها. </p>
                                 </div>
-                                <div n="100" type="article">
-                                    <head>١٠٠</head>
-                                    <p>لا يجوز صرف مال من أموال الدولة خارجاً عن الموازنة ما لم يتعين ذلك بقانون مخصوص. </p>
+                                <div n="100" type="article" change="#d2e273" xml:id="div_122.d2e1569">
+                                    <head change="#d2e273" xml:id="head_118.d2e1571">١٠٠</head>
+                                    <p change="#d2e273" xml:id="p_130.d2e1574">لا يجوز صرف مال من أموال الدولة خارجاً عن الموازنة ما لم يتعين ذلك بقانون مخصوص. </p>
                                 </div>
-                                <div n="101" type="article">
-                                    <head>١٠١</head>
-                                    <p>إذا تحقق لزوم قوي لاختيار مصاريف خارجة عن الموازنة، لأسباب مجبرة فوق العادة، في الوقت الذي لا يكون
+                                <div n="101" type="article" change="#d2e273" xml:id="div_123.d2e1578">
+                                    <head change="#d2e273" xml:id="head_119.d2e1580">١٠١</head>
+                                    <p change="#d2e273" xml:id="p_131.d2e1583">إذا تحقق لزوم قوي لاختيار مصاريف خارجة عن الموازنة، لأسباب مجبرة فوق العادة، في الوقت الذي لا يكون
                                         فيه المجلس العمومي منعقداً، يجوز تدارك المبلغ اللازم لتسوية ذلك المصروف وصرفه بعد عرضه على الحضرة
                                         السلطانية والاستئذان وصدور الإرادة السنية بخصوصه على وجه أن تكون مسؤولية ذلك على هيئة الوكلاء، وأنهم
                                         يعطون لائحة القانون المتعلقة به إلى المجلس العمومي عقب فتحه. </p>
                                 </div>
-                                <div n="102" type="article">
-                                    <head>١٠٢</head>
-                                    <p>إن حكم قانون الموازنة هو عن سنة واحدة، ولا يجري حكمه خارجاً عن تلك السنة، وإنما إذا فسخ مجلس
+                                <div n="102" type="article" change="#d2e273" xml:id="div_124.d2e1587">
+                                    <head change="#d2e273" xml:id="head_120.d2e1589">١٠٢</head>
+                                    <p change="#d2e273" xml:id="p_132.d2e1592">إن حكم قانون الموازنة هو عن سنة واحدة، ولا يجري حكمه خارجاً عن تلك السنة، وإنما إذا فسخ مجلس
                                         المبعوثان لبعض أحوال خارقة للعادة قبل أن يقرر الموازنة فوكلاء الدولة إذاً يمدون جريان أحكام موازنة
                                         السنة السابقة إلى حين اجتماع مجلس المبعوثان الآتي، وذلك بقرار تتعلق عليه الإرادة السنية على وجه أن
                                         حكم القرار لا يتجاوز السنة الواحدة. </p>
                                 </div>
-                                <div n="103" type="article">
-                                    <head>١٠٣</head>
-                                    <p>إنّ قانون المحاسبة القطعية يبين صحة المبالغ المتحصلة من واردات تلك السنة ومقدار الصرفيات الواقعة
+                                <div n="103" type="article" change="#d2e273" xml:id="div_125.d2e1596">
+                                    <head change="#d2e273" xml:id="head_121.d2e1598">١٠٣</head>
+                                    <p change="#d2e273" xml:id="p_133.d2e1601">إنّ قانون المحاسبة القطعية يبين صحة المبالغ المتحصلة من واردات تلك السنة ومقدار الصرفيات الواقعة
                                         لمصاريفها، ويكون شكله وتقسيماته مطابقين بالتمام لقانون الموازنة العمومية. </p>
                                 </div>
-                                <div n="104" type="article">
-                                    <head>١٠٤</head>
-                                    <p>تعطى لائحة قانون المحاسبة القطعية إلى المجلس العمومي بعد أربع سنين من اعتبار ختام السنة المتعلقة بها
+                                <div n="104" type="article" change="#d2e273" xml:id="div_126.d2e1605">
+                                    <head change="#d2e273" xml:id="head_122.d2e1607">١٠٤</head>
+                                    <p change="#d2e273" xml:id="p_134.d2e1610">تعطى لائحة قانون المحاسبة القطعية إلى المجلس العمومي بعد أربع سنين من اعتبار ختام السنة المتعلقة بها
                                         بشرط أن لا تتجاوز هذه المدة. </p>
                                 </div>
-                                <div n="105" type="article">
-                                    <head>١٠٥</head>
-                                    <p>يترتب ديوان محاسبات لرؤية محاسبات مأموري قبض أموال الدولة وصرفها، والتدقيق على محاسبات السنة التي
+                                <div n="105" type="article" change="#d2e273" xml:id="div_127.d2e1614">
+                                    <head change="#d2e273" xml:id="head_123.d2e1616">١٠٥</head>
+                                    <p change="#d2e273" xml:id="p_135.d2e1619">يترتب ديوان محاسبات لرؤية محاسبات مأموري قبض أموال الدولة وصرفها، والتدقيق على محاسبات السنة التي
                                         تنظمها الدوائر، على وجه أن الديوان المذكور يعرض على هيئة المبعوثان مرة في السنة خلاصة تدقيقاتها
                                         ونتيجة مطالعاته بتقرير مخصوص، وعليه أيضاً أن يعرض على الحضرة السلطانية مرة في كل ثلاثة أشهر تقريراً
                                         عن أحوال المالية بواسطة رئاسة الوكلاء. </p>
                                 </div>
-                                <cb/>
-                                <div n="106" type="article">
-                                    <head>١٠٦</head>
-                                    <p>تتركب أعضاء ديوان المحاسبات من اثنا عشر شخصاً، وينصب كل منهم بالإرادة السنية، ويستمر في مأموريته
+                                <cb change="#d2e273" xml:id="cb_16.d2e1624"/>
+                                <div n="106" type="article" change="#d2e273" xml:id="div_128.d2e1626">
+                                    <head change="#d2e273" xml:id="head_124.d2e1628">١٠٦</head>
+                                    <p change="#d2e273" xml:id="p_136.d2e1631">تتركب أعضاء ديوان المحاسبات من اثنا عشر شخصاً، وينصب كل منهم بالإرادة السنية، ويستمر في مأموريته
                                         مادامت الحياة، ولا يفصل عنها ما لم تصادق هيئة المبعوثان بالأكثرية على لزوم عزله. </p>
                                 </div>
-                                <div n="107" type="article">
-                                    <head>١٠٧</head>
-                                    <p>تتعين أوصاف أعضاء ديوان المحاسبات وتفصيل وظائفهم وصورة استعفائهم أو تبديلهم أو ترقيهم أو تقاعدهم
+                                <div n="107" type="article" change="#d2e273" xml:id="div_129.d2e1635">
+                                    <head change="#d2e273" xml:id="head_125.d2e1637">١٠٧</head>
+                                    <p change="#d2e273" xml:id="p_137.d2e1640">تتعين أوصاف أعضاء ديوان المحاسبات وتفصيل وظائفهم وصورة استعفائهم أو تبديلهم أو ترقيهم أو تقاعدهم
                                         وكيفية تشكيل أقلامهم وترتيبها بنظام مخصوص. </p>
                                 </div>
                             </div>
-                            <div n="11" type="section">
-                                <head> في الولايات</head>
-                                <div n="108" type="article">
-                                    <head>١٠٨</head>
-                                    <p>تؤسس أصول إدارة الولايات على قاعدة توسيع دائرة المأذونية وتفريق الوظائف وتعين درجاتها بنظام مخصوص.
+                            <div n="11" type="section" change="#d2e273" xml:id="div_131.d2e1646">
+                                <head change="#d2e273" xml:id="head_126.d2e1648"> في الولايات</head>
+                                <div n="108" type="article" change="#d2e273" xml:id="div_131.d2e1651">
+                                    <head change="#d2e273" xml:id="head_127.d2e1653">١٠٨</head>
+                                    <p change="#d2e273" xml:id="p_138.d2e1656">تؤسس أصول إدارة الولايات على قاعدة توسيع دائرة المأذونية وتفريق الوظائف وتعين درجاتها بنظام مخصوص.
                                     </p>
                                 </div>
-                                <div n="109" type="article">
-                                    <head>١٠٩</head>
-                                    <p>توسع بقانون مخصوص صورة انتخاب أعضاء مجالس الإدارة في مراكز الولايات والألوية والقضاوات وانتخاب أعضاء
+                                <div n="109" type="article" change="#d2e273" xml:id="div_132.d2e1660">
+                                    <head change="#d2e273" xml:id="head_128.d2e1662">١٠٩</head>
+                                    <p change="#d2e273" xml:id="p_139.d2e1665">توسع بقانون مخصوص صورة انتخاب أعضاء مجالس الإدارة في مراكز الولايات والألوية والقضاوات وانتخاب أعضاء
                                         المجلس العمومي الذي يجتمع مرة واحدة في السنة في مركز كل ولاية على حدتها. </p>
                                 </div>
-                                <div n="110" type="article">
-                                    <head>١١٠</head>
-                                    <p>تبين وظائف أعضاء المجلس العمومية في الولايات بقانون مخصوص يوضع لها، ويشتمل كذلك على المذاكرات في مطلب
+                                <div n="110" type="article" change="#d2e273" xml:id="div_133.d2e1669">
+                                    <head change="#d2e273" xml:id="head_129.d2e1671">١١٠</head>
+                                    <p change="#d2e273" xml:id="p_140.d2e1674">تبين وظائف أعضاء المجلس العمومية في الولايات بقانون مخصوص يوضع لها، ويشتمل كذلك على المذاكرات في مطلب
                                         تنظيم الطرق والمعابر، وتشكيل صناديق الاعتبار، وتسهيل الصنائع والتجارة والفلاحة، وما يجري مجراها من
                                         الأمور النافعة وعلى ما يتعلق أيضاً بانتشار المعارف والتربية التي تعود منفعتهما على العموم، ويحتوي
                                         على ما لهذا المجلس من الصلاحية بعرض الاشتكاء للمقامات والمواقع التي يقتضى تبليغ الشكايات إليها عندما
                                         يرى ما يخالف أحكام القوانين والنظامات الموضوعة في مطلب صورة توزيع التكاليف والمرتبات الأميرية
                                         واستحصالها وفي مطالب سائر المعاملات، وذلك لمقصد سد الخلل وإصلاحه. </p>
                                 </div>
-                                <div n="111" type="article">
-                                    <head>١١١</head>
-                                    <p>يكون في كل قضاء، لكل ملة على حـدتها، مجلس جماعـة للنظـارة على صرف أمـوال الـوصية للموصى لهم على مـا
+                                <div n="111" type="article" change="#d2e273" xml:id="div_134.d2e1678">
+                                    <head change="#d2e273" xml:id="head_130.d2e1680">١١١</head>
+                                    <p change="#d2e273" xml:id="p_141.d2e1683">يكون في كل قضاء، لكل ملة على حـدتها، مجلس جماعـة للنظـارة على صرف أمـوال الـوصية للموصى لهم على مـا
                                         هو محـرر في الوصايا على وجه أن تصرف حاصلات المسقفات والمستغلات والنقود الموقوفة إلى المشروط لهم وإلى
                                         الخيرات والمبرات وفاقاً لشرط الوقفية والتعامل القديم وللنظارة كذلك على صورة إدارة أموال الأيتام
                                         توفيقاً لنظامها المخصوص. وهذه المجالس تتركب من أفراد منتخبين من كل ملة على حدة، على مقتضى النظامات
                                         المخصوصة التي تترتب في هذا المطلب، وعلى هاته المجالس أن تعترف بأن مرجعها إنما هو حكوماتها المحلية
                                         ومجالس الولايات العمومية. </p>
                                 </div>
-                                <div n="112" type="article">
-                                    <head>١١٢</head>
-                                    <p>تدار الأمور البلدية في دار السعادة، والمحلات الخارجة عنها بواسطة مجالس الدوائر البلدية التي تترتب
+                                <div n="112" type="article" change="#d2e273" xml:id="div_135.d2e1688">
+                                    <head change="#d2e273" xml:id="head_131.d2e1690">١١٢</head>
+                                    <p change="#d2e273" xml:id="p_142.d2e1693">تدار الأمور البلدية في دار السعادة، والمحلات الخارجة عنها بواسطة مجالس الدوائر البلدية التي تترتب
                                         بالانتخاب. وصورة تشكيل هذه الدوائر ووظائفها وكيفية انتخاب أعضائها سيتعين بقانون مخصوص. </p>
                                 </div>
                             </div>
-                            <div n="12" type="section">
-                                <head>في مواد شتى</head>
-                                <div n="113" type="article">
-                                    <head>١١٣</head>
-                                    <p>إذا شهد إمارات وآثار تؤيد ظهور اختلال في إحدى جهات الممالك فيحق للحكومة السنية والحالة هذه أن تعلن
+                            <div n="12" type="section" change="#d2e273" xml:id="div_137.d2e1698">
+                                <head change="#d2e273" xml:id="head_132.d2e1700">في مواد شتى</head>
+                                <div n="113" type="article" change="#d2e273" xml:id="div_137.d2e1703">
+                                    <head change="#d2e273" xml:id="head_133.d2e1705">١١٣</head>
+                                    <p change="#d2e273" xml:id="p_143.d2e1708">إذا شهد إمارات وآثار تؤيد ظهور اختلال في إحدى جهات الممالك فيحق للحكومة السنية والحالة هذه أن تعلن
                                         موقتاً ومخصوصاً (الإدارة العرفية) في ذلك المحل. والإدارة العرفية إنما هي تعطيل القوانين والنظامات
                                         الملكية مؤقتاً، والمحل الذي يوضع تحت الإدارة العرفية تتعين صورة إدارته بنظام مخصوص. ومن ثبت عليهم
                                         بتحقيقات إدارة الضابطة الموثوقة بأنهم أخلوا بأمنية الحكومة يكون إخراجهم من الممالك المحروسة وتبعيدهم
                                         عنها منحصراً بيد اقتدار الحضرة السلطانية. </p>
                                 </div>
-                                <div n="114" type="article">
-                                    <head>١١٤</head>
-                                    <p>أفراد العثمانيين مجبورون على تحصيل المرتبة الأولى من المعارف وستتعين درجات ذلك وفروعه بنظام مخصوص.
+                                <div n="114" type="article" change="#d2e273" xml:id="div_138.d2e1712">
+                                    <head change="#d2e273" xml:id="head_134.d2e1714">١١٤</head>
+                                    <p change="#d2e273" xml:id="p_144.d2e1717">أفراد العثمانيين مجبورون على تحصيل المرتبة الأولى من المعارف وستتعين درجات ذلك وفروعه بنظام مخصوص.
                                     </p>
                                 </div>
-                                <div n="115" type="article">
-                                    <head>١١٥</head>
-                                    <p>لا تعطل البتة مادة من مواد القانون الأساسي ولا تسقط من الإجراء بأيّ حجة أو سبب كان. </p>
+                                <div n="115" type="article" change="#d2e273" xml:id="div_139.d2e1721">
+                                    <head change="#d2e273" xml:id="head_135.d2e1723">١١٥</head>
+                                    <p change="#d2e273" xml:id="p_145.d2e1726">لا تعطل البتة مادة من مواد القانون الأساسي ولا تسقط من الإجراء بأيّ حجة أو سبب كان. </p>
                                 </div>
-                                <div n="116" type="article">
-                                    <head>١١٦</head>
-                                    <p>إذا شهد لزوم صحيح قطعي، حسب إيجاب الوقت والحال، لتغيير بعض مواد القانون الأساسي وتعديلها، يجوز
+                                <div n="116" type="article" change="#d2e273" xml:id="div_140.d2e1730">
+                                    <head change="#d2e273" xml:id="head_136.d2e1732">١١٦</head>
+                                    <p change="#d2e273" xml:id="p_146.d2e1735">إذا شهد لزوم صحيح قطعي، حسب إيجاب الوقت والحال، لتغيير بعض مواد القانون الأساسي وتعديلها، يجوز
                                         تعديلها على الشروط الآتية وهي أولاً أن يقع التكليف المتعلق بالتعديل من هيئة الوكلاء أو من هيئة
-                                        الأعيان أو من هيئة المبعوثان. ثانياً ان يقبل<cb/> التكليف المذكور في هيئة المبعوثان بأكثرية الثلثين،
+                                        الأعيان أو من هيئة المبعوثان. ثانياً ان يقبل<cb change="#d2e273" xml:id="cb_17.d2e1737"/> التكليف المذكور في هيئة المبعوثان بأكثرية الثلثين،
                                         ثم يصادق على قبوله من هيئة الأعيان أيضاً بأكثرية الثلثين، فمتى تم ذلك وتعلقت على هذا المركز الإرادة
                                         السنية تصير حينئذ تلك التعديلات دستوراً للعمل. أما المادة الواقع التكليف على تعديلها من القانون
                                         الأساسي فتستمر مرعية الإجراء من غير أن تفقد قوتها وحكمها إلى أن تتمّ المذاكرات اللازمة بتعديلها
                                         وتتعلق بخصوصها الإرادة السنية. </p>
                                 </div>
-                                <div n="117" type="article">
-                                    <head>١١٧</head>
-                                    <p>إذا لزم الأمر لتفسير مادة قانونية، وكانت متعلقة بالأمور العدلية فعلى محكمة التمييز تعيين معناها، وإذا
+                                <div n="117" type="article" change="#d2e273" xml:id="div_141.d2e1742">
+                                    <head change="#d2e273" xml:id="head_137.d2e1744">١١٧</head>
+                                    <p change="#d2e273" xml:id="p_147.d2e1747">إذا لزم الأمر لتفسير مادة قانونية، وكانت متعلقة بالأمور العدلية فعلى محكمة التمييز تعيين معناها، وإذا
                                         كانت متعلقة بالإدارة الملكية يناط تعيين معناها بشورى الدولة، أما إذا كانت من متعلقات هذا القانون
                                         الأساسي فتعيين معناها منوط بهيئة الأعيان. </p>
                                 </div>
-                                <div n="118" type="article">
-                                    <head>١١٨</head>
-                                    <p>إنّ النظامات والتعامل والعادات الموجودة الآن دستوراً للعمل تستمر مرعية الإجراء مادامت لا تلغى أو تعدل
+                                <div n="118" type="article" change="#d2e273" xml:id="div_142.d2e1751">
+                                    <head change="#d2e273" xml:id="head_138.d2e1753">١١٨</head>
+                                    <p change="#d2e273" xml:id="p_148.d2e1756">إنّ النظامات والتعامل والعادات الموجودة الآن دستوراً للعمل تستمر مرعية الإجراء مادامت لا تلغى أو تعدل
                                         بالقوانين والنظامات التي توضع في المستقبل. </p>
                                 </div>
-                                <div n="119" type="article">
-                                    <head>١١٩</head>
-                                    <p>إنّ أحكام التعليمات المؤقتة المتعلقة بالمجلس العمومي المؤرخة في <date calendar="#cal_islamic"
-                                        datingMethod="#cal_islamic" when-custom="1293-10-10">١٠ شوال سنة ١٢٩٣</date> تجرى فقط لختام مدة
+                                <div n="119" type="article" change="#d2e273" xml:id="div_143.d2e1760">
+                                    <head change="#d2e273" xml:id="head_139.d2e1762">١١٩</head>
+                                    <p change="#d2e273" xml:id="p_149.d2e1765">إنّ أحكام التعليمات المؤقتة المتعلقة بالمجلس العمومي المؤرخة في <date calendar="#cal_islamic" datingMethod="#cal_islamic" when-custom="1293-10-10" change="#d2e273" xml:id="date_14.d2e1767">١٠ شوال سنة ١٢٩٣</date> تجرى فقط لختام مدة
                                         انعقاد المجلس العمومي الذي يجتمع في المرة الأولى ولا يكون حكمها جارياً بعد ذلك.</p>
                                 </div>
                             </div>

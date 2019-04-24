@@ -1,233 +1,229 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/TeiJaraid.rnc" type="application/relax-ng-compact-syntax"?> 
-<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
-<?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title xml:lang="ota-Latn-x-ijmes">Ḳānūn-i Esāsī</title>
-            <title type="sub">Digital Edition</title>
-            <respStmt>
-               <resp>TEI version</resp>
-               <persName>Till Grallert</persName>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schema/TeiJaraid.rnc" type="application/relax-ng-compact-syntax"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader change="#" xml:id="teiHeader_1.d2e6">
+      <fileDesc change="#" xml:id="fileDesc_1.d2e8">
+         <titleStmt change="#" xml:id="titleStmt_1.d2e10">
+            <title xml:lang="ota-Latn-x-ijmes" change="#" xml:id="title_1.d2e12">Ḳānūn-i Esāsī</title>
+            <title type="sub" change="#" xml:id="title_2.d2e15">Digital Edition</title>
+            <respStmt change="#" xml:id="respStmt_1.d2e18">
+               <resp change="#" xml:id="resp_1.d2e20">TEI version</resp>
+               <persName change="#" xml:id="persName_1.d2e23">Till Grallert</persName>
             </respStmt>
          </titleStmt>
-         <publicationStmt>
-            <p>Publication Information</p>
+         <publicationStmt change="#" xml:id="publicationStmt_1.d2e28">
+            <p change="#" xml:id="p_1.d2e30">Publication Information</p>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
+         <sourceDesc change="#" xml:id="sourceDesc_1.d2e34">
+            <p change="#" xml:id="p_2.d2e36">Information about the source</p>
          </sourceDesc>
       </fileDesc>
   </teiHeader>
-  <text>
-      <body>
-         <div type="bill" xml:lang="ota"  corresp="#law-ottoman-constitution-1876" >
-            <head>قانون اساسى</head>
-            <div type="section" n="1">
-               <head>ممالك دولت عثمانيه</head>
-               <div type="article" n="1">
-                  <head>برنجى ماده</head>
-                  <p> - دولت عثمانيه ممالك وقطعات حاضره يى وايالات ممتازه يي محتويى ويكوجود اولمغله هيج بر زمانده هيج بر سببله تفريق قبول ايتمز.</p>
+  <text change="#" xml:id="text_1.d2e42">
+      <body change="#" xml:id="body_1.d2e44">
+         <div type="bill" xml:lang="ota" corresp="#law-ottoman-constitution-1876" change="#" xml:id="div_1.d2e46">
+            <head change="#" xml:id="head_1.d2e48">قانون اساسى</head>
+            <div type="section" n="1" change="#" xml:id="div_1.d2e51">
+               <head change="#" xml:id="head_2.d2e53">ممالك دولت عثمانيه</head>
+               <div type="article" n="1" change="#" xml:id="div_1.d2e56">
+                  <head change="#" xml:id="head_3.d2e58">برنجى ماده</head>
+                  <p change="#" xml:id="p_3.d2e61"> - دولت عثمانيه ممالك وقطعات حاضره يى وايالات ممتازه يي محتويى ويكوجود اولمغله هيج بر زمانده هيج بر سببله تفريق قبول ايتمز.</p>
                </div>
-            <div type="article" n="2">
-               <head>ايكنجى ماده</head>
-               <p>- دولت عثمانيه نك پاى نختى استانبول شهريدر وشهر مذكورك سائر بلاد عثمانيه دن آيرو
+            <div type="article" n="2" change="#" xml:id="div_2.d2e65">
+               <head change="#" xml:id="head_4.d2e67">ايكنجى ماده</head>
+               <p change="#" xml:id="p_4.d2e70">- دولت عثمانيه نك پاى نختى استانبول شهريدر وشهر مذكورك سائر بلاد عثمانيه دن آيرو
                   اوله رق بر كونه امتياز ومعافيتى يوقدر.</p>
             </div>
-               <div type="article" n="3" >
-                  <head>اوچنجى ماده</head>
-                  <p>سلطنت سنيه عثمانيه خلافت كبراى اسلاميه يى حائز اوله رق سلاله آل عماندن اصول
+               <div type="article" n="3" change="#" xml:id="div_3.d2e74">
+                  <head change="#" xml:id="head_5.d2e76">اوچنجى ماده</head>
+                  <p change="#" xml:id="p_5.d2e79">سلطنت سنيه عثمانيه خلافت كبراى اسلاميه يى حائز اوله رق سلاله آل عماندن اصول
                      قديمه سى وجهله اكبر اولاده عائددر.</p>
                </div>
-               <div type="article" n="4">
-                  <head>دردنجى ماده</head>
-                  <p>ذات حضرت پادشاهى حسب الخلافه دين اسلامك حاميسى وبالجملخ تبعه عثمانيه نك حكمدار
+               <div type="article" n="4" change="#" xml:id="div_4.d2e83">
+                  <head change="#" xml:id="head_6.d2e85">دردنجى ماده</head>
+                  <p change="#" xml:id="p_6.d2e88">ذات حضرت پادشاهى حسب الخلافه دين اسلامك حاميسى وبالجملخ تبعه عثمانيه نك حكمدار
                      وپادشاهيدر.</p>
                </div>
-               <div type="article" n="5">
-                  <head>بشنجى ماده</head>
-                  <p>ذات حضرت پادشاهينك نفس همايونى مقدس وغير مسؤلدر. </p>
+               <div type="article" n="5" change="#" xml:id="div_5.d2e93">
+                  <head change="#" xml:id="head_7.d2e95">بشنجى ماده</head>
+                  <p change="#" xml:id="p_7.d2e98">ذات حضرت پادشاهينك نفس همايونى مقدس وغير مسؤلدر. </p>
                </div>
-               <div type="article" n="6">
-                  <head>التنجى ماده</head>
-                  <p>سلاله آل عثمانك حقوق حريه واموال واملاك ذاتيه ومادام الحاة تخصيصات ماليه لرى
+               <div type="article" n="6" change="#" xml:id="div_6.d2e102">
+                  <head change="#" xml:id="head_8.d2e104">التنجى ماده</head>
+                  <p change="#" xml:id="p_8.d2e107">سلاله آل عثمانك حقوق حريه واموال واملاك ذاتيه ومادام الحاة تخصيصات ماليه لرى
                      تكافل عمومى تحتنده در.</p>
                </div>
-               <div type="article" n="7">
-                  <head>يدنجى ماده</head>
-                  <p>وكالنك عزل ونصبى ورتبه ومناصب توجيهى ونشان اعطاسى وايالات ممتازه نك شرايط
-                     امتيازيه لرينه توفيقا اجراى توجيهاتى ومسكوكات<cb/> ...</p>
+               <div type="article" n="7" change="#" xml:id="div_7.d2e111">
+                  <head change="#" xml:id="head_9.d2e113">يدنجى ماده</head>
+                  <p change="#" xml:id="p_9.d2e116">وكالنك عزل ونصبى ورتبه ومناصب توجيهى ونشان اعطاسى وايالات ممتازه نك شرايط
+                     امتيازيه لرينه توفيقا اجراى توجيهاتى ومسكوكات<cb change="#" xml:id="cb_1.d2e118"/> ...</p>
                </div>
             </div>
-         <div type="section" n="2">
-            <head>تبعه دولت عثمانيه نك حقوق عموميه سى</head>
-               <div type="article" n="8">
-                  <head>سكزنجى ماده</head>
-                  <p>دولت عثمانيه تابعيتنه بولنان افرادك جمله سنه هرقنغى دين ومذهبدن اولورايسه
+         <div type="section" n="2" change="#" xml:id="div_9.d2e123">
+            <head change="#" xml:id="head_10.d2e125">تبعه دولت عثمانيه نك حقوق عموميه سى</head>
+               <div type="article" n="8" change="#" xml:id="div_9.d2e128">
+                  <head change="#" xml:id="head_11.d2e130">سكزنجى ماده</head>
+                  <p change="#" xml:id="p_10.d2e133">دولت عثمانيه تابعيتنه بولنان افرادك جمله سنه هرقنغى دين ومذهبدن اولورايسه
                      اولسون بلا استثنا عثمانلى تعبير اوانور وعثمانلى صفتى قانونا معين اولان الحواله
                      كوره استحصال واضاعه ايديلير.</p>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_10.d2e137">
+                  <head change="#" xml:id="head_12.d2e139"/>
+                  <p change="#" xml:id="p_11.d2e141"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_11.d2e144">
+                  <head change="#" xml:id="head_13.d2e146"/>
+                  <p change="#" xml:id="p_12.d2e148"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_12.d2e151">
+                  <head change="#" xml:id="head_14.d2e153"/>
+                  <p change="#" xml:id="p_13.d2e155"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_13.d2e159">
+                  <head change="#" xml:id="head_15.d2e161"/>
+                  <p change="#" xml:id="p_14.d2e163"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_14.d2e166">
+                  <head change="#" xml:id="head_16.d2e168"/>
+                  <p change="#" xml:id="p_15.d2e170"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_15.d2e173">
+                  <head change="#" xml:id="head_17.d2e175"/>
+                  <p change="#" xml:id="p_16.d2e177"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_16.d2e180">
+                  <head change="#" xml:id="head_18.d2e182"/>
+                  <p change="#" xml:id="p_17.d2e184"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_17.d2e187">
+                  <head change="#" xml:id="head_19.d2e189"/>
+                  <p change="#" xml:id="p_18.d2e191"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_18.d2e194">
+                  <head change="#" xml:id="head_20.d2e196"/>
+                  <p change="#" xml:id="p_19.d2e198"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_19.d2e202">
+                  <head change="#" xml:id="head_21.d2e204"/>
+                  <p change="#" xml:id="p_20.d2e206"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_20.d2e209">
+                  <head change="#" xml:id="head_22.d2e211"/>
+                  <p change="#" xml:id="p_21.d2e213"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_21.d2e216">
+                  <head change="#" xml:id="head_23.d2e218"/>
+                  <p change="#" xml:id="p_22.d2e220"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_22.d2e223">
+                  <head change="#" xml:id="head_24.d2e225"/>
+                  <p change="#" xml:id="p_23.d2e227"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_23.d2e230">
+                  <head change="#" xml:id="head_25.d2e232"/>
+                  <p change="#" xml:id="p_24.d2e234"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_24.d2e237">
+                  <head change="#" xml:id="head_26.d2e239"/>
+                  <p change="#" xml:id="p_25.d2e241"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_25.d2e245">
+                  <head change="#" xml:id="head_27.d2e247"/>
+                  <p change="#" xml:id="p_26.d2e249"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_26.d2e252">
+                  <head change="#" xml:id="head_28.d2e254"/>
+                  <p change="#" xml:id="p_27.d2e256"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_27.d2e259">
+                  <head change="#" xml:id="head_29.d2e261"/>
+                  <p change="#" xml:id="p_28.d2e263"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_28.d2e266">
+                  <head change="#" xml:id="head_30.d2e268"/>
+                  <p change="#" xml:id="p_29.d2e270"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_29.d2e273">
+                  <head change="#" xml:id="head_31.d2e275"/>
+                  <p change="#" xml:id="p_30.d2e277"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_30.d2e280">
+                  <head change="#" xml:id="head_32.d2e282"/>
+                  <p change="#" xml:id="p_31.d2e284"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_31.d2e288">
+                  <head change="#" xml:id="head_33.d2e290"/>
+                  <p change="#" xml:id="p_32.d2e292"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_32.d2e295">
+                  <head change="#" xml:id="head_34.d2e297"/>
+                  <p change="#" xml:id="p_33.d2e299"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_33.d2e302">
+                  <head change="#" xml:id="head_35.d2e304"/>
+                  <p change="#" xml:id="p_34.d2e306"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_34.d2e309">
+                  <head change="#" xml:id="head_36.d2e311"/>
+                  <p change="#" xml:id="p_35.d2e313"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_35.d2e316">
+                  <head change="#" xml:id="head_37.d2e318"/>
+                  <p change="#" xml:id="p_36.d2e320"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_36.d2e323">
+                  <head change="#" xml:id="head_38.d2e325"/>
+                  <p change="#" xml:id="p_37.d2e327"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_37.d2e331">
+                  <head change="#" xml:id="head_39.d2e333"/>
+                  <p change="#" xml:id="p_38.d2e335"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_38.d2e338">
+                  <head change="#" xml:id="head_40.d2e340"/>
+                  <p change="#" xml:id="p_39.d2e342"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_39.d2e345">
+                  <head change="#" xml:id="head_41.d2e347"/>
+                  <p change="#" xml:id="p_40.d2e349"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_40.d2e352">
+                  <head change="#" xml:id="head_42.d2e354"/>
+                  <p change="#" xml:id="p_41.d2e356"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_41.d2e359">
+                  <head change="#" xml:id="head_43.d2e361"/>
+                  <p change="#" xml:id="p_42.d2e363"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_42.d2e366">
+                  <head change="#" xml:id="head_44.d2e368"/>
+                  <p change="#" xml:id="p_43.d2e370"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_43.d2e374">
+                  <head change="#" xml:id="head_45.d2e376"/>
+                  <p change="#" xml:id="p_44.d2e378"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_44.d2e381">
+                  <head change="#" xml:id="head_46.d2e383"/>
+                  <p change="#" xml:id="p_45.d2e385"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_45.d2e388">
+                  <head change="#" xml:id="head_47.d2e390"/>
+                  <p change="#" xml:id="p_46.d2e392"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_46.d2e395">
+                  <head change="#" xml:id="head_48.d2e397"/>
+                  <p change="#" xml:id="p_47.d2e399"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_47.d2e402">
+                  <head change="#" xml:id="head_49.d2e404"/>
+                  <p change="#" xml:id="p_48.d2e406"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_48.d2e409">
+                  <head change="#" xml:id="head_50.d2e411"/>
+                  <p change="#" xml:id="p_49.d2e413"/>
                </div>
-               <div type="article" n="">
-                  <head></head>
-                  <p></p>
+               <div type="article" n="" change="#" xml:id="div_49.d2e417">
+                  <head change="#" xml:id="head_51.d2e419"/>
+                  <p change="#" xml:id="p_50.d2e421"/>
                </div>
             </div>
          </div>

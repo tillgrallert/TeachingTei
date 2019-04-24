@@ -1,255 +1,230 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>
-<?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt xml:lang="en">
-            <title xml:lang="ar-Latn-x-ijmes">Kawkab Amīrkā</title>
-            <title type="sub">Digital Edition</title>
-            <editor><persName>Dr. A. Arbeely</persName></editor>
-            <editor><persName>N.J. Arbeely</persName></editor>
-            <respStmt>
-               <resp>TEI version</resp>
-               <persName>Till Grallert</persName>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader change="#d2e501" xml:id="teiHeader_1.d2e6">
+      <fileDesc change="#d2e501" xml:id="fileDesc_1.d2e8">
+         <titleStmt xml:lang="en" change="#d2e501" xml:id="titleStmt_1.d2e10">
+            <title xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="title_1.d2e12">Kawkab Amīrkā</title>
+            <title type="sub" change="#d2e501" xml:id="title_2.d2e15">Digital Edition</title>
+            <editor change="#d2e501" xml:id="editor_1.d2e18"><persName change="#d2e501" xml:id="persName_1.d2e19">Dr. A. Arbeely</persName></editor>
+            <editor change="#d2e501" xml:id="editor_2.d2e22"><persName change="#d2e501" xml:id="persName_2.d2e23">N.J. Arbeely</persName></editor>
+            <respStmt change="#d2e501" xml:id="respStmt_1.d2e26">
+               <resp change="#d2e501" xml:id="resp_1.d2e28">TEI version</resp>
+               <persName change="#d2e501" xml:id="persName_3.d2e31">Till Grallert</persName>
             </respStmt>
          </titleStmt>
-         <editionStmt>
-            <edition>
-               <date when="2015-05-01">1 May 2015</date>
+         <editionStmt change="#d2e501" xml:id="editionStmt_1.d2e36">
+            <edition change="#d2e501" xml:id="edition_1.d2e38">
+               <date when="2015-05-01" change="#d2e501" xml:id="date_1.d2e40">1 May 2015</date>
             </edition>
-            <respStmt>
-               <resp>Created the original TEI P5 XML file</resp>
+            <respStmt change="#d2e501" xml:id="respStmt_2.d2e44">
+               <resp change="#d2e501" xml:id="resp_2.d2e46">Created the original TEI P5 XML file</resp>
                <persName xml:id="pTG">Till Grallert</persName>
             </respStmt>
          </editionStmt>
-         <publicationStmt>
-            <p>The digital text is freely available for re-use.</p>
-            <p>The image files are subject to the following copyright and provided by the Center for Research Libraries:</p>
-            <p>Materials digitized by the Center for Research Libraries are intended for the personal educational and research use of students, scholars, and other researchers of the CRL member community. Copyrighted images and texts are not to be reproduced, displayed, distributed, broadcast, or downloaded for other purposes without the expressed, written permission of the copyright owner.</p>
+         <publicationStmt change="#d2e501" xml:id="publicationStmt_1.d2e54">
+            <p change="#d2e501" xml:id="p_1.d2e56">The digital text is freely available for re-use.</p>
+            <p change="#d2e501" xml:id="p_2.d2e59">The image files are subject to the following copyright and provided by the Center for Research Libraries:</p>
+            <p change="#d2e501" xml:id="p_3.d2e62">Materials digitized by the Center for Research Libraries are intended for the personal educational and research use of students, scholars, and other researchers of the CRL member community. Copyrighted images and texts are not to be reproduced, displayed, distributed, broadcast, or downloaded for other purposes without the expressed, written permission of the copyright owner.</p>
          </publicationStmt>
-         <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <title level="j" xml:lang="ar-Latn-x-ijmes">Kawkab Amīrkā</title>
-                  <title level="j" xml:lang="en">The Star of America</title>
-                  <title level="j" type="alternative" xml:lang="en">Kawkab America</title>
-                  <title level="j" type="sub" xml:lang="ar-Latn-x-ijmes">Jarīda siyāsiyya ʿilmiyya
+         <sourceDesc change="#d2e501" xml:id="sourceDesc_1.d2e66">
+            <biblStruct change="#d2e501" xml:id="biblStruct_1.d2e68">
+               <monogr change="#d2e501" xml:id="monogr_1.d2e70">
+                  <title level="j" xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="title_3.d2e72">Kawkab Amīrkā</title>
+                  <title level="j" xml:lang="en" change="#d2e501" xml:id="title_4.d2e75">The Star of America</title>
+                  <title level="j" type="alternative" xml:lang="en" change="#d2e501" xml:id="title_5.d2e78">Kawkab America</title>
+                  <title level="j" type="sub" xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="title_6.d2e81">Jarīda siyāsiyya ʿilmiyya
                      tijāriyya adabiyya</title>
-                  <editor xml:lang="ar-Latn-x-ijmes"><persName><addName type="title">Dr.</addName>
-                        <forename>Ibrāhīm</forename>
-                        <surname>Arbīlī</surname></persName></editor>
-                  <editor xml:lang="ar-Latn-x-ijmes"><persName><forename>Najīb</forename>
-                        <forename>Yūsuf</forename>
-                        <surname>Arbīlī</surname></persName></editor>
-                  <imprint>
-                     <publisher xml:lang="ar-Latn-x-ijmes">al-Maṭbaʿat al-Sharqiyya</publisher>
-                     <pubPlace xml:lang="ar-Latn-x-ijmes">Niyū Yūrk</pubPlace>
-                     <publisher xml:lang="en">The Oriental Publishing House</publisher>
-                     <pubPlace xml:lang="en">New York</pubPlace>
-                     <date notAfter="1894-04-14" notBefore="1893-04-15" xml:lang="en"
-                        >1893-1894</date>
-                     <biblScope unit="volume">2</biblScope>
+                  <editor xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="editor_3.d2e84"><persName change="#d2e501" xml:id="persName_5.d2e85"><addName type="title" change="#d2e501" xml:id="addName_1.d2e86">Dr.</addName>
+                        <forename change="#d2e501" xml:id="forename_1.d2e89">Ibrāhīm</forename>
+                        <surname change="#d2e501" xml:id="surname_1.d2e92">Arbīlī</surname></persName></editor>
+                  <editor xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="editor_4.d2e96"><persName change="#d2e501" xml:id="persName_6.d2e97"><forename change="#d2e501" xml:id="forename_2.d2e98">Najīb</forename>
+                        <forename change="#d2e501" xml:id="forename_3.d2e101">Yūsuf</forename>
+                        <surname change="#d2e501" xml:id="surname_2.d2e104">Arbīlī</surname></persName></editor>
+                  <imprint change="#d2e501" xml:id="imprint_1.d2e107">
+                     <publisher xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="publisher_1.d2e109">al-Maṭbaʿat al-Sharqiyya</publisher>
+                     <pubPlace xml:lang="ar-Latn-x-ijmes" change="#d2e501" xml:id="pubPlace_1.d2e112">Niyū Yūrk</pubPlace>
+                     <publisher xml:lang="en" change="#d2e501" xml:id="publisher_2.d2e115">The Oriental Publishing House</publisher>
+                     <pubPlace xml:lang="en" change="#d2e501" xml:id="pubPlace_2.d2e118">New York</pubPlace>
+                     <date notAfter="1894-04-14" notBefore="1893-04-15" xml:lang="en" change="#d2e501" xml:id="date_2.d2e121">1893-1894</date>
+                     <biblScope unit="volume" change="#d2e501" xml:id="biblScope_1.d2e125">2</biblScope>
                   </imprint>
                </monogr>
-               <idno type="callNumber"/>
+               <idno type="callNumber" change="#d2e501" xml:id="idno_1.d2e130"/>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <projectDesc>
-            <p>The TEI file was produced for teaching a course on the basics of scholarly encoding
+      <encodingDesc change="#d2e501" xml:id="encodingDesc_1.d2e135">
+         <projectDesc change="#d2e501" xml:id="projectDesc_1.d2e137">
+            <p change="#d2e501" xml:id="p_4.d2e139">The TEI file was produced for teaching a course on the basics of scholarly encoding
                using TEI P5 and XML.</p>
-            <p>The newspaper "Kawkab America" was published between 1892 and 1896 in New York. The first 55 issues were bi-lingual editions of three Arabic pages and a single English page. From issue 54 onwards, despite continuing its English masthead on page 4, the paper was a monolingual Arabic one.</p>
+            <p change="#d2e501" xml:id="p_5.d2e142">The newspaper "Kawkab America" was published between 1892 and 1896 in New York. The first 55 issues were bi-lingual editions of three Arabic pages and a single English page. From issue 54 onwards, despite continuing its English masthead on page 4, the paper was a monolingual Arabic one.</p>
          </projectDesc>
-         <editorialDecl>
-            <p>providing information on our decisions concerning the actual transcription of the
+         <editorialDecl change="#d2e501" xml:id="editorialDecl_1.d2e146">
+            <p change="#d2e501" xml:id="p_6.d2e148">providing information on our decisions concerning the actual transcription of the
                newspaper structure into a TEI P5 XML file</p>
          </editorialDecl>
       </encodingDesc>
-      <profileDesc>
+      <profileDesc change="#d2e501" xml:id="profileDesc_1.d2e153">
          <!-- as we deal with sources from an area and period which primarily used non-Latin scripts and preferred a number of calenders over the Gregorian, this should be declared here -->
-         <calendarDesc>
-            <calendar>
-               <p>Following the hegemonial approach of standards rooted in the English language, the
+         <calendarDesc change="#d2e501" xml:id="calendarDesc_1.d2e157">
+            <calendar change="#d2e501" xml:id="calendar_1.d2e159">
+               <p change="#d2e501" xml:id="p_7.d2e161">Following the hegemonial approach of standards rooted in the English language, the
                   Gregorian calendar is presumed as the norm and must not be specified.</p>
-               <p>The @when attribute always provides W3C dates, while the @when-custom attribute
+               <p change="#d2e501" xml:id="p_8.d2e164">The @when attribute always provides W3C dates, while the @when-custom attribute
                   follows the inherent logic of the chosen calendar.</p>
-               <p>E.g. <date when="1841-05-23">23 May 1841, Sunday</date>, <date when="1908-03-05">5
+               <p change="#d2e501" xml:id="p_9.d2e167">E.g. <date when="1841-05-23" change="#d2e501" xml:id="date_3.d2e169">23 May 1841, Sunday</date>, <date when="1908-03-05" change="#d2e501" xml:id="date_4.d2e172">5
                      Mar 1908, Thursday</date>.</p>
             </calendar>
             <calendar xml:id="cal_islamic">
-               <p>Islamic <hi>hijrī</hi> calendar: lunar calendar beginning the Year with 1
+               <p change="#d2e501" xml:id="p_10.d2e179">Islamic <hi change="#d2e501" xml:id="hi_1.d2e181">hijrī</hi> calendar: lunar calendar beginning the Year with 1
                   Muḥarram. Dates differ between locations as the beginning of the month is based on
                   sightings of the new moon.</p>
-               <p>E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23"
-                     when-custom="1257-04-01">1 Rab II 1257, Sunday</date>, <date
-                     calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05"
-                     when-custom="1326-02-01">1 Ṣaf 1326, Thursday</date>.</p>
+               <p change="#d2e501" xml:id="p_11.d2e185">E.g. <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1841-05-23" when-custom="1257-04-01" change="#d2e501" xml:id="date_5.d2e187">1 Rab II 1257, Sunday</date>, <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1908-03-05" when-custom="1326-02-01" change="#d2e501" xml:id="date_6.d2e190">1 Ṣaf 1326, Thursday</date>.</p>
             </calendar>
             <calendar xml:id="cal_julian">
-               <p>Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
-                  usually referred to as <hi>rūmī</hi>. Arabic newspapers usually labelled this
-                  calendar as <hi>sharqī</hi>.</p>
-               <p>All solar calendars add an intercalated 366th day every fourth (and, in the case
+               <p change="#d2e501" xml:id="p_12.d2e197">Reformed Julian calendar beginning the Year with 1 January. In the Ottoman context
+                  usually referred to as <hi change="#d2e501" xml:id="hi_2.d2e199">rūmī</hi>. Arabic newspapers usually labelled this
+                  calendar as <hi change="#d2e501" xml:id="hi_3.d2e202">sharqī</hi>.</p>
+               <p change="#d2e501" xml:id="p_13.d2e206">All solar calendars add an intercalated 366th day every fourth (and, in the case
                   of Gregorian and rūmī calendars, even-numbered) year at the end of February (the
                   last day of the old Julian calendar). The Gregorian calendar suppresses this rule
                   in centesimal years that cannot be divided by 400. This difference creates a
                   growing offset between Gregorian and Julian calendars: while 1900 R was a leap
                   year, 1900 was not, which in turn caused the difference between the Gregorian
-                  calendar, on the one hand, and the <hi>mālī</hi> and <hi>rūmī</hi> calendars, on
+                  calendar, on the one hand, and the <hi change="#d2e501" xml:id="hi_4.d2e208">mālī</hi> and <hi change="#d2e501" xml:id="hi_5.d2e211">rūmī</hi> calendars, on
                   the other, to grow from 12 to 13 days from 29 Shubāṭ (February) 1900 R / 1315 M
                   (13 March 1900) onwards.</p>
-               <p>E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23"
-                     when-custom="1841-05-11">11 Ayyār 1841, Sunday</date>, <date
-                     calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05"
-                     when-custom="1908-02-21">21 Shub 1908, Thursday</date>.</p>
+               <p change="#d2e501" xml:id="p_14.d2e215">E.g. <date calendar="#cal_julian" datingMethod="#cal_julian" when="1841-05-23" when-custom="1841-05-11" change="#d2e501" xml:id="date_7.d2e217">11 Ayyār 1841, Sunday</date>, <date calendar="#cal_julian" datingMethod="#cal_julian" when="1908-03-05" when-custom="1908-02-21" change="#d2e501" xml:id="date_8.d2e220">21 Shub 1908, Thursday</date>.</p>
             </calendar>
             <calendar xml:id="cal_ottomanfiscal">
-               <p>Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
+               <p change="#d2e501" xml:id="p_15.d2e227">Ottoman fiscal calendar: a lunosolar calendar. It is based on the Old Julian
                   calendar beginning the Year with 1 March. Introduced as fiscal calendar in 1676
-                  and in the Ottoman context usually referred to as <hi>mālī</hi> and sometimes,
-                  confusingly, also as <hi>rūmī</hi>. Every 33 lunar years, a <hi>hijrī</hi> year
-                  would complete within a single solar <hi>mālī</hi> year. In this case the counting
-                  of the <hi>mālī</hi> years skipped a year to catch up with the faster
-                     <hi>hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
+                  and in the Ottoman context usually referred to as <hi change="#d2e501" xml:id="hi_6.d2e229">mālī</hi> and sometimes,
+                  confusingly, also as <hi change="#d2e501" xml:id="hi_7.d2e232">rūmī</hi>. Every 33 lunar years, a <hi change="#d2e501" xml:id="hi_8.d2e235">hijrī</hi> year
+                  would complete within a single solar <hi change="#d2e501" xml:id="hi_9.d2e238">mālī</hi> year. In this case the counting
+                  of the <hi change="#d2e501" xml:id="hi_10.d2e241">mālī</hi> years skipped a year to catch up with the faster
+                     <hi change="#d2e501" xml:id="hi_11.d2e245">hijrī</hi> calendar. Due to a printing error in the coupon booklets for the
                   consolidated debt repayment program for 1872 (1288 M instead of 1289 M),
-                  synchronisation of <hi>mālī</hi> and <hi>hijrī</hi> years was henceforth
-                  abolished. As <hi>mālī</hi> years began with 1 March, <hi>mālī</hi> leap years
-                  preceded their <hi>rūmī</hi> and Gregorian counterpart (the leap year 1315 M
+                  synchronisation of <hi change="#d2e501" xml:id="hi_12.d2e248">mālī</hi> and <hi change="#d2e501" xml:id="hi_13.d2e251">hijrī</hi> years was henceforth
+                  abolished. As <hi change="#d2e501" xml:id="hi_14.d2e254">mālī</hi> years began with 1 March, <hi change="#d2e501" xml:id="hi_15.d2e257">mālī</hi> leap years
+                  preceded their <hi change="#d2e501" xml:id="hi_16.d2e260">rūmī</hi> and Gregorian counterpart (the leap year 1315 M
                   commenced on 13 March 1899).</p>
-               <p>E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal"
-                     when="1841-05-23" when-custom="1257-03-11">11 Māyis 1257, Sunday</date>, <date
-                     calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal"
-                     when="1908-03-05" when-custom="1323-12-21">21 Shub 1323, Thursday</date>.</p>
+               <p change="#d2e501" xml:id="p_16.d2e264">E.g. <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1841-05-23" when-custom="1257-03-11" change="#d2e501" xml:id="date_9.d2e266">11 Māyis 1257, Sunday</date>, <date calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" when="1908-03-05" when-custom="1323-12-21" change="#d2e501" xml:id="date_10.d2e269">21 Shub 1323, Thursday</date>.</p>
             </calendar>
          </calendarDesc>
          <!-- According to TEI P5 @xml:lang should follow BCP 47 <note target="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"/>, which specifies for Arabic in Latin transcription "ar-Latn". The specific type of transcription should be added as a private use subtag, i.e. "ar-Latn-x-ijmes" for the
                IJMES transcription of Arabic in Latin script. -->
-         <langUsage>
-            <language ident="ar">Arabic</language>
-            <language ident="ar-Latn-x-ijmes">Arabic transcribed into Latin script following the
+         <langUsage change="#d2e501" xml:id="langUsage_1.d2e277">
+            <language ident="ar" change="#d2e501" xml:id="language_1.d2e279">Arabic</language>
+            <language ident="ar-Latn-x-ijmes" change="#d2e501" xml:id="language_2.d2e282">Arabic transcribed into Latin script following the
                IJMES conventions</language>
-            <language ident="ar-Latn-EN">Arabic transcribed into Latin script following common
+            <language ident="ar-Latn-EN" change="#d2e501" xml:id="language_3.d2e285">Arabic transcribed into Latin script following common
                English practices</language>
-            <language ident="ar-Latn-FR">Arabic transcribed into Latin script following common
+            <language ident="ar-Latn-FR" change="#d2e501" xml:id="language_4.d2e288">Arabic transcribed into Latin script following common
                French practices</language>
-            <language ident="en">English</language>
-            <language ident="fa">Farsi</language>
-            <language ident="fa-Latn-x-ijmes">Farsi transcribed into Latin script following the
+            <language ident="en" change="#d2e501" xml:id="language_5.d2e291">English</language>
+            <language ident="fa" change="#d2e501" xml:id="language_6.d2e295">Farsi</language>
+            <language ident="fa-Latn-x-ijmes" change="#d2e501" xml:id="language_7.d2e298">Farsi transcribed into Latin script following the
                IJMES conventions</language>
-            <language ident="fr">French</language>
-            <language ident="ota">Ottoman</language>
-            <language ident="ota-Latn-x-ijmes">Ottoman transcribed into Latin script following the
+            <language ident="fr" change="#d2e501" xml:id="language_8.d2e301">French</language>
+            <language ident="ota" change="#d2e501" xml:id="language_9.d2e304">Ottoman</language>
+            <language ident="ota-Latn-x-ijmes" change="#d2e501" xml:id="language_10.d2e307">Ottoman transcribed into Latin script following the
                IJMES conventions</language>
-            <language ident="tr">Turkish</language>
+            <language ident="tr" change="#d2e501" xml:id="language_11.d2e310">Turkish</language>
          </langUsage>
-         <particDesc>
-            <listPerson>
-               <head>People mentioned in the text</head>
+         <particDesc change="#d2e501" xml:id="particDesc_1.d2e314">
+            <listPerson change="#d2e501" xml:id="listPerson_1.d2e316">
+               <head change="#d2e501" xml:id="head_1.d2e318">People mentioned in the text</head>
                <person xml:id="pers_1">
-                  <persName xml:lang="ar">عبد الحميد الثاني</persName>
-                  <persName xml:lang="en">Abdulhamid II</persName>
-                  <birth>
-                     <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1842"
-                        when-custom="1258-08-16" xml:lang="ar">١٦ شعبان ١٢٥٨ </date>
+                  <persName xml:lang="ar" change="#d2e501" xml:id="persName_7.d2e323">عبد الحميد الثاني</persName>
+                  <persName xml:lang="en" change="#d2e501" xml:id="persName_8.d2e326">Abdulhamid II</persName>
+                  <birth change="#d2e501" xml:id="birth_1.d2e329">
+                     <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1842" when-custom="1258-08-16" xml:lang="ar" change="#d2e501" xml:id="date_11.d2e331">١٦ شعبان ١٢٥٨ </date>
                   </birth>
-                  <death>
-                     <date when="1918" xml:lang="ar">١٩١٨</date>
+                  <death change="#d2e501" xml:id="death_1.d2e335">
+                     <date when="1918" xml:lang="ar" change="#d2e501" xml:id="date_12.d2e337">١٩١٨</date>
                   </death>
-                  <idno type="GND">118646435</idno>
-                  <idno type="VIAF">9880442</idno>
-                  <state calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal"
-                     notBefore-custom="1876-06-18" xml:lang="en">
-                     <p>Sultan of the Ottoman Empire, 1876-1909</p>
+                  <idno type="GND" change="#d2e501" xml:id="idno_2.d2e341">118646435</idno>
+                  <idno type="VIAF" change="#d2e501" xml:id="idno_3.d2e345">9880442</idno>
+                  <state calendar="#cal_ottomanfiscal" datingMethod="#cal_ottomanfiscal" notBefore-custom="1876-06-18" xml:lang="en" change="#d2e501" xml:id="state_1.d2e348">
+                     <p change="#d2e501" xml:id="p_17.d2e350">Sultan of the Ottoman Empire, 1876-1909</p>
                   </state>
-                  <note xml:lang="en">
-                     <ref target="https://en.wikipedia.org/wiki/Abdul_Hamid_II">Wikipedia
+                  <note xml:lang="en" change="#d2e501" xml:id="note_1.d2e354">
+                     <ref target="https://en.wikipedia.org/wiki/Abdul_Hamid_II" change="#d2e501" xml:id="ref_1.d2e356">Wikipedia
                         article</ref>
-                     <ref target="http://d-nb.info/gnd/118646435">PND</ref> 
+                     <ref target="http://d-nb.info/gnd/118646435" change="#d2e501" xml:id="ref_2.d2e359">PND</ref> 
                   </note>
                </person>
                <person xml:id="pers_2">
-                  <persName xml:lang="ar"><addName type="title" nymRef="#nym1">الدكتور</addName> <forename nymRef="#nym2">ابراهيم</forename> <surname nymRef="#nym3">عربيلي</surname></persName>
-                  <persName xml:lang="en"><addName type="title" nymRef="#nym1">Dr.</addName> <forename nymRef="#nym2">Abraham</forename> <surname nymRef="#nym3">Arbeely</surname></persName>
-                  <birth>
-                     <date when="1850">1850</date>, in <placeName>Damascus</placeName>
+                  <persName xml:lang="ar" change="#d2e501" xml:id="persName_9.d2e366"><addName type="title" nymRef="#nym1" change="#d2e501" xml:id="addName_2.d2e367">الدكتور</addName> <forename nymRef="#nym2" change="#d2e501" xml:id="forename_4.d2e370">ابراهيم</forename> <surname nymRef="#nym3" change="#d2e501" xml:id="surname_3.d2e373">عربيلي</surname></persName>
+                  <persName xml:lang="en" change="#d2e501" xml:id="persName_10.d2e376"><addName type="title" nymRef="#nym1" change="#d2e501" xml:id="addName_3.d2e377">Dr.</addName> <forename nymRef="#nym2" change="#d2e501" xml:id="forename_5.d2e380">Abraham</forename> <surname nymRef="#nym3" change="#d2e501" xml:id="surname_4.d2e383">Arbeely</surname></persName>
+                  <birth change="#d2e501" xml:id="birth_2.d2e386">
+                     <date when="1850" change="#d2e501" xml:id="date_13.d2e388">1850</date>, in <placeName change="#d2e501" xml:id="placeName_1.d2e391">Damascus</placeName>
                   </birth>
-                  <event when="1878">
-                     <p>Migration to the <placeName>USA</placeName></p>
+                  <event when="1878" change="#d2e501" xml:id="event_1.d2e395">
+                     <p change="#d2e501" xml:id="p_18.d2e397">Migration to the <placeName change="#d2e501" xml:id="placeName_2.d2e399">USA</placeName></p>
                   </event>
-                  <state from="1892-04-15" xml:lang="en">
-                     <p>Editor of <orgName>Kawkab America</orgName>.</p>
+                  <state from="1892-04-15" xml:lang="en" change="#d2e501" xml:id="state_2.d2e403">
+                     <p change="#d2e501" xml:id="p_19.d2e405">Editor of <orgName change="#d2e501" xml:id="orgName_1.d2e407">Kawkab America</orgName>.</p>
                   </state>
                </person>
                <person xml:id="pers_3">
-                  <persName xml:lang="ar">
-                     <forename nymRef="#nym4">نجيب</forename> <forename nymRef="#nym5">يوسف</forename> <surname nymRef="#nym3">عربيلي</surname></persName>
-                  <persName xml:lang="en">
-                     <forename  nymRef="#nym4">Najeeb</forename> <forename  nymRef="#nym5">Joseph</forename> <surname nymRef="#nym3">Arbeely</surname></persName>
-                  <birth>
-                     <date when="1861">1861</date>, in <placeName>Damascus</placeName>
+                  <persName xml:lang="ar" change="#d2e501" xml:id="persName_11.d2e415">
+                     <forename nymRef="#nym4" change="#d2e501" xml:id="forename_6.d2e417">نجيب</forename> <forename nymRef="#nym5" change="#d2e501" xml:id="forename_7.d2e420">يوسف</forename> <surname nymRef="#nym3" change="#d2e501" xml:id="surname_5.d2e423">عربيلي</surname></persName>
+                  <persName xml:lang="en" change="#d2e501" xml:id="persName_12.d2e426">
+                     <forename nymRef="#nym4" change="#d2e501" xml:id="forename_8.d2e428">Najeeb</forename> <forename nymRef="#nym5" change="#d2e501" xml:id="forename_9.d2e431">Joseph</forename> <surname nymRef="#nym3" change="#d2e501" xml:id="surname_6.d2e434">Arbeely</surname></persName>
+                  <birth change="#d2e501" xml:id="birth_3.d2e437">
+                     <date when="1861" change="#d2e501" xml:id="date_14.d2e439">1861</date>, in <placeName change="#d2e501" xml:id="placeName_3.d2e442">Damascus</placeName>
                   </birth>
-                  <death>
-                     <date when="1904">1904, February</date>, in <placeName>New York</placeName>
+                  <death change="#d2e501" xml:id="death_2.d2e446">
+                     <date when="1904" change="#d2e501" xml:id="date_15.d2e448">1904, February</date>, in <placeName change="#d2e501" xml:id="placeName_4.d2e451">New York</placeName>
                   </death>
-                  <event when="1878">
-                     <p>Migration to the <placeName>USA</placeName></p>
+                  <event when="1878" change="#d2e501" xml:id="event_2.d2e455">
+                     <p change="#d2e501" xml:id="p_20.d2e457">Migration to the <placeName change="#d2e501" xml:id="placeName_5.d2e459">USA</placeName></p>
                   </event>
-                  <state from="1885">
-                     <p>American consul in <placeName>Jerusalem</placeName></p>
+                  <state from="1885" change="#d2e501" xml:id="state_3.d2e464">
+                     <p change="#d2e501" xml:id="p_21.d2e466">American consul in <placeName change="#d2e501" xml:id="placeName_6.d2e468">Jerusalem</placeName></p>
                   </state>
-                  <state notBefore="1886">
-                     <p>Inspector in the <orgName>Bureau of Immigration</orgName> at the port of <placeName>New York</placeName></p>
+                  <state notBefore="1886" change="#d2e501" xml:id="state_4.d2e472">
+                     <p change="#d2e501" xml:id="p_22.d2e474">Inspector in the <orgName change="#d2e501" xml:id="orgName_2.d2e476">Bureau of Immigration</orgName> at the port of <placeName change="#d2e501" xml:id="placeName_7.d2e479">New York</placeName></p>
                   </state>
-                  <state from="1892-04-15" xml:lang="en">
-                     <p>Editor of <orgName>Kawkab America</orgName>.</p>
+                  <state from="1892-04-15" xml:lang="en" change="#d2e501" xml:id="state_5.d2e483">
+                     <p change="#d2e501" xml:id="p_23.d2e485">Editor of <orgName change="#d2e501" xml:id="orgName_3.d2e487">Kawkab America</orgName>.</p>
                   </state>
                </person>
             </listPerson>
          </particDesc>
       </profileDesc>
-      <revisionDesc>
-         <change when="2015-08-18" who="#pTG">Changed encoding of a quotation from "quote" to "said".</change>
-         <change when="2015-02-19" who="#pTG">File created by automatic conversion from Sente
+      <revisionDesc><change when="2019-04-24" who="#pers_TG" xml:id="d2e501" xml:lang="en">Added automated <tei:att xml:lang="en">xml:id</tei:att>s for every element that is a descendant of <tei:gi xml:lang="en">tei:text</tei:gi> and had no existing <tei:att xml:lang="en">xml:id</tei:att> following the pattern "name()_generate-id()".</change>
+         <change when="2015-08-18" who="#pTG" change="#d2e501" xml:id="change_1.d2e498">Changed encoding of a quotation from "quote" to "said".</change>
+         <change when="2015-02-19" who="#pTG" change="#d2e501" xml:id="change_2.d2e501">File created by automatic conversion from Sente
             XML.</change>
       </revisionDesc>
    </teiHeader>
-   <facsimile>
+   <facsimile change="#d2e501" xml:id="facsimile_1.d2e506">
       <surface xml:id="facs_v2-i53_1">
-         <graphic url="../images/kawkab/dds-54634_Page_07_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_1_source"
-         />
+         <graphic url="../images/kawkab/dds-54634_Page_07_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_1_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_2">
-         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_2R.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i53_2_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i53_2_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_3">
-         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_1L.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i53_3_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_06_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i53_3_source"/>
       </surface>
       <surface xml:id="facs_v2-i53_4">
-         <graphic url="../images/kawkab/dds-54634_Page_05_Image_0001.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i53_4_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_05_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i53_4_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_1">
-         <graphic url="../images/kawkab/dds-54634_Page_11_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i55_1_source"
-         />
+         <graphic url="../images/kawkab/dds-54634_Page_11_Image_0001.tif" mimeType="image/tiff" xml:id="facs_v2-i55_1_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_2">
-         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_2R.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i55_2_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_2_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_3">
-         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_1L.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i55_3_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_10_Image_0001_1L.tif" mimeType="image/tiff" xml:id="facs_v2-i55_3_source"/>
       </surface>
       <surface xml:id="facs_v2-i55_4">
-         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif" mimeType="image/tiff"
-            xml:id="facs_v2-i55_4_source"/>
-         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg" mimeType="image/jpeg"
-            xml:id="facs_v2-i55_4_web"/>
+         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.tif" mimeType="image/tiff" xml:id="facs_v2-i55_4_source"/>
+         <graphic url="../images/kawkab/dds-54634_Page_09_Image_0001_2R.jpg" mimeType="image/jpeg" xml:id="facs_v2-i55_4_web"/>
          <zone ulx="71" uly="33" lrx="1344" lry="270" xml:id="facs_v2-i55_4_z1" facs="#facs_v2-i55_4_web">
          </zone>
          <zone ulx="59" uly="253" lrx="326" lry="964" xml:id="facs_v2-i55_4_z2" facs="#facs_v2-i55_4_web"/>
@@ -258,496 +233,486 @@
       </surface>
 
    </facsimile>
-   <text n="2" type="volume">
-      <front>
+   <text n="2" type="volume" change="#d2e501" xml:id="text_1.d2e562">
+      <front change="#d2e501" xml:id="front_1.d2e564">
          <!-- some introductory material for the current volume -->
       </front>
-      <group>
+      <group change="#d2e501" xml:id="group_1.d2e569">
          <text xml:lang="ar" type="issue" xml:id="v2-i53_ar" corresp="#v2-i53_en" n="53">
-            <front>
+            <front change="#d2e501" xml:id="front_2.d2e573">
                <!-- top line, commonly containing the information on issue numbers and sometimes dates -->
-               <div style="border-bottom:solid black">
-                  <cb n="1"/>
-                  <bibl xml:lang="ar">
-                     <biblScope n="53" unit="issue">العدد ٥٣</biblScope></bibl>
-                  <cb n="2"/>
-                  <figure rend="center">
-                     <figDesc xml:lang="en">Ottoman crescent and star</figDesc>
+               <div style="border-bottom:solid black" change="#d2e501" xml:id="div_1.d2e577">
+                  <cb n="1" change="#d2e501" xml:id="cb_1.d2e579"/>
+                  <bibl xml:lang="ar" change="#d2e501" xml:id="bibl_1.d2e581">
+                     <biblScope n="53" unit="issue" change="#d2e501" xml:id="biblScope_2.d2e583">العدد ٥٣</biblScope></bibl>
+                  <cb n="2" change="#d2e501" xml:id="cb_2.d2e586"/>
+                  <figure rend="center" change="#d2e501" xml:id="figure_1.d2e588">
+                     <figDesc xml:lang="en" change="#d2e501" xml:id="figDesc_1.d2e590">Ottoman crescent and star</figDesc>
                   </figure>
-                  <cb n="3"/>
-                  <bibl xml:lang="ar"><biblScope n="2" unit="volume">السنة
+                  <cb n="3" change="#d2e501" xml:id="cb_3.d2e594"/>
+                  <bibl xml:lang="ar" change="#d2e501" xml:id="bibl_2.d2e597"><biblScope n="2" unit="volume" change="#d2e501" xml:id="biblScope_3.d2e598">السنة
                      الثانية</biblScope></bibl>
                </div>
                <!-- the main body, which usually does not change between issues -->
-               <div style="border-bottom:solid black;">
-                  <cb n="1"/>
-                  <div style="width:33%;float:right" xml:lang="ar">
-                     <div>
-                        <head>قيمة الاشتراك</head>
-                        <p>في <placeName>نيو يورك</placeName> ريالات اميركية<lb/>وفي سائر مدن
-                           <placeName>الولايات المتحدة</placeName> ثلاثة ريالات و ٥٢ سنتاً<lb/>
+               <div style="border-bottom:solid black;" change="#d2e501" xml:id="div_2.d2e604">
+                  <cb n="1" change="#d2e501" xml:id="cb_4.d2e606"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e501" xml:id="div_2.d2e608">
+                     <div change="#d2e501" xml:id="div_2.d2e610">
+                        <head change="#d2e501" xml:id="head_2.d2e612">قيمة الاشتراك</head>
+                        <p change="#d2e501" xml:id="p_24.d2e615">في <placeName change="#d2e501" xml:id="placeName_8.d2e617">نيو يورك</placeName> ريالات اميركية<lb change="#d2e501" xml:id="lb_1.d2e620"/>وفي سائر مدن
+                           <placeName change="#d2e501" xml:id="placeName_9.d2e622">الولايات المتحدة</placeName> ثلاثة ريالات و ٥٢ سنتاً<lb change="#d2e501" xml:id="lb_2.d2e625"/>
                            وفي الممالك الخارجية ثمانية عشر فرنكًا خالصة اجرة البريد </p>
-                        <ab rend="center">---</ab>
+                        <ab rend="center" change="#d2e501" xml:id="ab_1.d2e628">---</ab>
                      </div>
-                     <div>
-                        <p>جميع الرسائل التي ترد الينا ينبغي ان تكون خالصة اجرة البريد باسم
-                           <lb/><persName ref="#pers_2">الدكتور ابراهيم</persName> و
-                           <persName ref="#pers_3">نجيب يوسف عربيلي</persName> منشئي الجريدة ولا ترد لاصحابها
+                     <div change="#d2e501" xml:id="div_3.d2e632">
+                        <p change="#d2e501" xml:id="p_25.d2e634">جميع الرسائل التي ترد الينا ينبغي ان تكون خالصة اجرة البريد باسم
+                           <lb change="#d2e501" xml:id="lb_3.d2e636"/><persName ref="#pers_2" change="#d2e501" xml:id="persName_13.d2e637">الدكتور ابراهيم</persName> و
+                           <persName ref="#pers_3" change="#d2e501" xml:id="persName_14.d2e640">نجيب يوسف عربيلي</persName> منشئي الجريدة ولا ترد لاصحابها
                            نشرت ام لم تنشر</p>
-                        <ab rend="center">---</ab>
-                        <p>اجرة الاعلانات والرسائل الخصوصية<lb/>يتفق عليها بعد مخابرتنا راساً</p>
-                        <ab rend="center">---</ab>
-                        <p>العنوان التلغرافي - عربيلي نيو يورك</p>
-                        <ab rend="center">---</ab>
-                        <p>ومتعلقات المطبعة الشرقية مع مديرها <persName>ارتين افندي
-                           بتركيان</persName><lb/>الدفع سلفًا</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_2.d2e644">---</ab>
+                        <p change="#d2e501" xml:id="p_26.d2e647">اجرة الاعلانات والرسائل الخصوصية<lb change="#d2e501" xml:id="lb_4.d2e649"/>يتفق عليها بعد مخابرتنا راساً</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_3.d2e652">---</ab>
+                        <p change="#d2e501" xml:id="p_27.d2e655">العنوان التلغرافي - عربيلي نيو يورك</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_4.d2e659">---</ab>
+                        <p change="#d2e501" xml:id="p_28.d2e662">ومتعلقات المطبعة الشرقية مع مديرها <persName change="#d2e501" xml:id="persName_15.d2e664">ارتين افندي
+                           بتركيان</persName><lb change="#d2e501" xml:id="lb_5.d2e666"/>الدفع سلفًا</p>
                      </div>
                   </div>
-                  <cb n="2"/>
-                  <div style="width:33%;float:right" xml:lang="ar">
-                     <bibl><title level="j">كوكب اميركا</title><lb/>
-                        <title level="j" type="sub">جريدة سياسية علمية تجارية ادبية</title></bibl>
+                  <cb n="2" change="#d2e501" xml:id="cb_5.d2e671"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e501" xml:id="div_5.d2e673">
+                     <bibl change="#d2e501" xml:id="bibl_3.d2e675"><title level="j" change="#d2e501" xml:id="title_7.d2e676">كوكب اميركا</title><lb change="#d2e501" xml:id="lb_6.d2e678"/>
+                        <title level="j" type="sub" change="#d2e501" xml:id="title_8.d2e680">جريدة سياسية علمية تجارية ادبية</title></bibl>
                   </div>
-                  <cb n="3"/>
-                  <div style="width:33%;float:right" xml:lang="en">
-                     <head>Subscription Rates.</head>
-                     <ab rend="center">---</ab>
-                     <p>For <placeName>New York</placeName>, per annum, - $ 3.00,<lb/>To which will
-                        be added tho postage to all cities in the <lb/><placeName>United
-                           States</placeName>.<lb/>In all Foreign Countries, - 18
-                        Frcs.<lb/>including Postage.<lb/>All communications relating to busines with
-                        <orgName>The Oriental <lb/>Publishing House</orgName>, must be addressed
-                        to its Manager,<lb/><persName>ARTEEN EFFENDI PETRAKIAN</persName>,<lb/>and
-                        those relating to "<orgName>Kawkab America</orgName>," to<lb/><persName
-                           ref="#pers_2">Dr. A. </persName>&amp; <persName ref="#pers_3">N.J.
-                              Arbeely,</persName><lb/>Editors<lb/>45 Pearl Street,<lb/>New York,
+                  <cb n="3" change="#d2e501" xml:id="cb_6.d2e684"/>
+                  <div style="width:33%;float:right" xml:lang="en" change="#d2e501" xml:id="div_6.d2e687">
+                     <head change="#d2e501" xml:id="head_3.d2e689">Subscription Rates.</head>
+                     <ab rend="center" change="#d2e501" xml:id="ab_5.d2e692">---</ab>
+                     <p change="#d2e501" xml:id="p_29.d2e695">For <placeName change="#d2e501" xml:id="placeName_10.d2e697">New York</placeName>, per annum, - $ 3.00,<lb change="#d2e501" xml:id="lb_7.d2e700"/>To which will
+                        be added tho postage to all cities in the <lb change="#d2e501" xml:id="lb_8.d2e702"/><placeName change="#d2e501" xml:id="placeName_11.d2e703">United
+                           States</placeName>.<lb change="#d2e501" xml:id="lb_9.d2e706"/>In all Foreign Countries, - 18
+                        Frcs.<lb change="#d2e501" xml:id="lb_10.d2e708"/>including Postage.<lb change="#d2e501" xml:id="lb_11.d2e711"/>All communications relating to busines with
+                        <orgName change="#d2e501" xml:id="orgName_4.d2e713">The Oriental <lb change="#d2e501" xml:id="lb_12.d2e715"/>Publishing House</orgName>, must be addressed
+                        to its Manager,<lb change="#d2e501" xml:id="lb_13.d2e718"/><persName change="#d2e501" xml:id="persName_16.d2e719">ARTEEN EFFENDI PETRAKIAN</persName>,<lb change="#d2e501" xml:id="lb_14.d2e722"/>and
+                        those relating to "<orgName change="#d2e501" xml:id="orgName_5.d2e724">Kawkab America</orgName>," to<lb change="#d2e501" xml:id="lb_15.d2e728"/><persName ref="#pers_2" change="#d2e501" xml:id="persName_17.d2e729">Dr. A. </persName>&amp; <persName ref="#pers_3" change="#d2e501" xml:id="persName_18.d2e732">N.J.
+                              Arbeely,</persName><lb change="#d2e501" xml:id="lb_16.d2e734"/>Editors<lb change="#d2e501" xml:id="lb_17.d2e736"/>45 Pearl Street,<lb change="#d2e501" xml:id="lb_18.d2e738"/>New York,
                         U.S.A.</p>
                   </div>
                </div>
                <!-- the bottom line, commonly containing dating information -->
-               <div style="border-bottom:double black" xml:lang="ar">
-                  <dateline xml:lang="ar"><cb n="1"/><placeName type="city">نيو يورك</placeName>
-                     الجمعة في <date when="1893-04-28"> ٢٨ نيسان غ</date> و<date
-                        calendar="#cal_julian" datingMethod="#cal_julian" when="1893-04-28"
-                        when-custom="1893-04-16">١٦ ش سنة ١٨٩٣</date>
-                     <cb n="2"/> تصدر كل يوم الجمعة من كل اسبوع <cb n="3"/>موافق <date
-                        calendar="#cal_islamic" datingMethod="#cal_islamic" when="1893-04-28"
-                        when-custom="1311-10-11">١١ شوال سنة ١٣١٠</date></dateline>
+               <div style="border-bottom:double black" xml:lang="ar" change="#d2e501" xml:id="div_8.d2e746">
+                  <dateline xml:lang="ar" change="#d2e501" xml:id="dateline_1.d2e748"><cb n="1" change="#d2e501" xml:id="cb_7.d2e749"/><placeName type="city" change="#d2e501" xml:id="placeName_12.d2e750">نيو يورك</placeName>
+                     الجمعة في <date when="1893-04-28" change="#d2e501" xml:id="date_16.d2e753"> ٢٨ نيسان غ</date> و<date calendar="#cal_julian" datingMethod="#cal_julian" when="1893-04-28" when-custom="1893-04-16" change="#d2e501" xml:id="date_17.d2e756">١٦ ش سنة ١٨٩٣</date>
+                     <cb n="2" change="#d2e501" xml:id="cb_8.d2e759"/> تصدر كل يوم الجمعة من كل اسبوع <cb n="3" change="#d2e501" xml:id="cb_9.d2e761"/>موافق <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1893-04-28" when-custom="1311-10-11" change="#d2e501" xml:id="date_18.d2e764">١١ شوال سنة ١٣١٠</date></dateline>
                </div>
             </front>
-            <body>
-               <pb ed="print" n="1" facs="#facs_v2-i53_4"/>
-               <div type="article">
+            <body change="#d2e501" xml:id="body_1.d2e769">
+               <pb ed="print" n="1" facs="#facs_v2-i53_4" change="#d2e501" xml:id="pb_1.d2e771"/>
+               <div type="article" change="#d2e501" xml:id="div_9.d2e773">
                   
                </div>
             </body>
          </text>
          <text xml:lang="en" type="issue" xml:id="v2-i53_en" corresp="#v2-i53_ar">
-            <front>
+            <front change="#d2e501" xml:id="front_3.d2e780">
                <!-- the main body, which usually does not change between issues -->
-               <div style="border-bottom:double black">
-                  <bibl xml:lang="en"><title level="j">Kawkab America</title><lb/>
-                     <title level="j" type="sub">"The Star of America"</title></bibl>
-                  <bibl rend="center" xml:lang="ar"><title level="j">كوكب اميركا</title><lb/>
-                     <title level="j" type="sub">جريدة سياسية علمية تجارية ادبية</title></bibl>
+               <div style="border-bottom:double black" change="#d2e501" xml:id="div_10.d2e784">
+                  <bibl xml:lang="en" change="#d2e501" xml:id="bibl_4.d2e786"><title level="j" change="#d2e501" xml:id="title_9.d2e787">Kawkab America</title><lb change="#d2e501" xml:id="lb_19.d2e789"/>
+                     <title level="j" type="sub" change="#d2e501" xml:id="title_10.d2e791">"The Star of America"</title></bibl>
+                  <bibl rend="center" xml:lang="ar" change="#d2e501" xml:id="bibl_5.d2e794"><title level="j" change="#d2e501" xml:id="title_11.d2e795">كوكب اميركا</title><lb change="#d2e501" xml:id="lb_20.d2e797"/>
+                     <title level="j" type="sub" change="#d2e501" xml:id="title_12.d2e799">جريدة سياسية علمية تجارية ادبية</title></bibl>
                </div>
                
                <!-- the bottom line, commonly containing dating information -->
-               <div style="border-bottom:solid black" xml:lang="en">
-                  <bibl xml:lang="en"><biblScope n="2" unit="volume">Vol. 2.</biblScope>
-                     <biblScope n="53" unit="issue">No. 53</biblScope>
-                     <cb/><pubPlace>New York</pubPlace>, <date when="1893-04-14">Friday, April 14, 1893</date>.</bibl>
+               <div style="border-bottom:solid black" xml:lang="en" change="#d2e501" xml:id="div_11.d2e805">
+                  <bibl xml:lang="en" change="#d2e501" xml:id="bibl_6.d2e807"><biblScope n="2" unit="volume" change="#d2e501" xml:id="biblScope_4.d2e808">Vol. 2.</biblScope>
+                     <biblScope n="53" unit="issue" change="#d2e501" xml:id="biblScope_5.d2e811">No. 53</biblScope>
+                     <cb change="#d2e501" xml:id="cb_10.d2e814"/><pubPlace change="#d2e501" xml:id="pubPlace_3.d2e815">New York</pubPlace>, <date when="1893-04-14" change="#d2e501" xml:id="date_19.d2e818">Friday, April 14, 1893</date>.</bibl>
                </div>
             </front>
-            <body>
-               <div type="article">
-                  <head xml:lang="ar">سنة كوكب اميركا الجديدة</head>
-                  <head xml:lang="en">"Kawkab America's new year."</head>
-                  <p>Standing on the threshold of another year in the journalistic field, Kawkab
+            <body change="#d2e501" xml:id="body_2.d2e824">
+               <div type="article" change="#d2e501" xml:id="div_12.d2e826">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_4.d2e828">سنة كوكب اميركا الجديدة</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_5.d2e831">"Kawkab America's new year."</head>
+                  <p change="#d2e501" xml:id="p_30.d2e834">Standing on the threshold of another year in the journalistic field, Kawkab
                      America takes great pleasure in greeting its many readers throughout the world,
                      and thanking them for their generous support.</p>
-                  <p></p>
+                  <p change="#d2e501" xml:id="p_31.d2e837"/>
                </div>
-               <div type="article">
-                  <head xml:lang="ar">الكتابة التخيلية عن الهند</head>
-                  <head xml:lang="en">Fiction about India.</head>
-                  <p></p>
-                  <p></p>
+               <div type="article" change="#d2e501" xml:id="div_13.d2e840">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_6.d2e842">الكتابة التخيلية عن الهند</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_7.d2e845">Fiction about India.</head>
+                  <p change="#d2e501" xml:id="p_32.d2e848"/>
+                  <p change="#d2e501" xml:id="p_33.d2e850"/>
                </div>
-               <div type="article">
-                  <head xml:lang="ar">تجارة الرقيق في افريقيا</head>
-                  <head xml:lang="en">The African slave trade.</head>
-                  <p></p>
-                  <p></p>
+               <div type="article" change="#d2e501" xml:id="div_14.d2e853">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_8.d2e855">تجارة الرقيق في افريقيا</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_9.d2e858">The African slave trade.</head>
+                  <p change="#d2e501" xml:id="p_34.d2e861"/>
+                  <p change="#d2e501" xml:id="p_35.d2e863"/>
                </div>
-               <div type="article">
-                  <head xml:lang="ar">عطايا جلالة السلطان</head>
-                  <head xml:lang="en">Gifts of H.I.M., the Sultan.</head>
-                  <p></p>
-                  <p></p>
+               <div type="article" change="#d2e501" xml:id="div_15.d2e866">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_10.d2e868">عطايا جلالة السلطان</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_11.d2e871">Gifts of H.I.M., the Sultan.</head>
+                  <p change="#d2e501" xml:id="p_36.d2e874"/>
+                  <p change="#d2e501" xml:id="p_37.d2e876"/>
                </div>
-               <div type="article">
-                  <head xml:lang="ar">نساء مصر</head>
-                  <head xml:lang="en">The women of Egypt.</head>
-                  <p></p>
-                  <p></p>
+               <div type="article" change="#d2e501" xml:id="div_16.d2e879">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_12.d2e881">نساء مصر</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_13.d2e884">The women of Egypt.</head>
+                  <p change="#d2e501" xml:id="p_38.d2e887"/>
+                  <p change="#d2e501" xml:id="p_39.d2e889"/>
                </div>
-               <div type="article">
-                  <head xml:lang="ar">الليمونة الحامضة المقدسة</head>
-                  <head xml:lang="en">The "Holy Citron."</head>
-                  <p>One of the most curios species of known fruit is the "holy or sacred citron" of
+               <div type="article" change="#d2e501" xml:id="div_17.d2e893">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_14.d2e895">الليمونة الحامضة المقدسة</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_15.d2e898">The "Holy Citron."</head>
+                  <p change="#d2e501" xml:id="p_40.d2e901">One of the most curios species of known fruit is the "holy or sacred citron" of
                      the Jews. Its virtues are lauded to the skies and it is celebrated in legend,
                      romance, poetry and song, and yet it appears that it is never eaten. ...</p>
-                  <p></p>
+                  <p change="#d2e501" xml:id="p_41.d2e904"/>
                </div>
             </body>
          </text>
          <text corresp="#v2-i55_en" n="55ar" type="issue" xml:id="v2-i55_ar" xml:lang="ar">
-            <front>
+            <front change="#d2e501" xml:id="front_4.d2e911">
                <!-- top line, commonly containing the information on issue numbers and sometimes dates -->
-               <div style="border-bottom:solid black">
-                  <cb n="1"/>
-                  <bibl xml:lang="ar">
-                     <biblScope n="55" unit="issue">العدد ٥٥</biblScope></bibl>
-                  <cb n="2"/>
-                  <figure rend="center">
-                     <figDesc xml:lang="en">Ottoman crescent and star</figDesc>
+               <div style="border-bottom:solid black" change="#d2e501" xml:id="div_18.d2e915">
+                  <cb n="1" change="#d2e501" xml:id="cb_11.d2e917"/>
+                  <bibl xml:lang="ar" change="#d2e501" xml:id="bibl_7.d2e919">
+                     <biblScope n="55" unit="issue" change="#d2e501" xml:id="biblScope_6.d2e921">العدد ٥٥</biblScope></bibl>
+                  <cb n="2" change="#d2e501" xml:id="cb_12.d2e924"/>
+                  <figure rend="center" change="#d2e501" xml:id="figure_2.d2e926">
+                     <figDesc xml:lang="en" change="#d2e501" xml:id="figDesc_2.d2e928">Ottoman crescent and star</figDesc>
                   </figure>
-                  <cb n="3"/>
-                  <bibl xml:lang="ar"><biblScope n="2" unit="volume">السنة
+                  <cb n="3" change="#d2e501" xml:id="cb_13.d2e932"/>
+                  <bibl xml:lang="ar" change="#d2e501" xml:id="bibl_8.d2e935"><biblScope n="2" unit="volume" change="#d2e501" xml:id="biblScope_7.d2e936">السنة
                      الثانية</biblScope></bibl>
                </div>
                <!-- the main body, which usually does not change between issues -->
-               <div style="border-bottom:solid black;">
-                  <cb n="1"/>
-                  <div style="width:33%;float:right" xml:lang="ar">
-                     <div>
-                        <head>قيمة الاشتراك</head>
-                        <p>في <placeName>نيو يورك</placeName> ريالات اميركية<lb/>وفي سائر مدن
-                              <placeName>الولايات المتحدة</placeName> ثلاثة ريالات و ٥٢ سنتاً<lb/>
+               <div style="border-bottom:solid black;" change="#d2e501" xml:id="div_19.d2e942">
+                  <cb n="1" change="#d2e501" xml:id="cb_14.d2e944"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e501" xml:id="div_19.d2e946">
+                     <div change="#d2e501" xml:id="div_19.d2e948">
+                        <head change="#d2e501" xml:id="head_16.d2e950">قيمة الاشتراك</head>
+                        <p change="#d2e501" xml:id="p_42.d2e953">في <placeName change="#d2e501" xml:id="placeName_13.d2e955">نيو يورك</placeName> ريالات اميركية<lb change="#d2e501" xml:id="lb_21.d2e958"/>وفي سائر مدن
+                              <placeName change="#d2e501" xml:id="placeName_14.d2e960">الولايات المتحدة</placeName> ثلاثة ريالات و ٥٢ سنتاً<lb change="#d2e501" xml:id="lb_22.d2e963"/>
                            وفي الممالك الخارجية ثمانية عشر فرنكًا خالصة اجرة البريد </p>
-                        <ab rend="center">---</ab>
+                        <ab rend="center" change="#d2e501" xml:id="ab_6.d2e966">---</ab>
                      </div>
-                     <div>
-                        <p>جميع الرسائل التي ترد الينا ينبغي ان تكون خالصة اجرة البريد باسم
-                              <lb/><persName ref="#pers_1">الدكتور ابراهيم</persName> و
-                              <persName>نجيب يوسف عربيلي</persName> منشئي الجريدة ولا ترد لاصحابها
+                     <div change="#d2e501" xml:id="div_20.d2e970">
+                        <p change="#d2e501" xml:id="p_43.d2e972">جميع الرسائل التي ترد الينا ينبغي ان تكون خالصة اجرة البريد باسم
+                              <lb change="#d2e501" xml:id="lb_23.d2e974"/><persName ref="#pers_1" change="#d2e501" xml:id="persName_19.d2e975">الدكتور ابراهيم</persName> و
+                              <persName change="#d2e501" xml:id="persName_20.d2e978">نجيب يوسف عربيلي</persName> منشئي الجريدة ولا ترد لاصحابها
                            نشرت ام لم تنشر</p>
-                        <ab rend="center">---</ab>
-                        <p>اجرة الاعلانات والرسائل الخصوصية<lb/>يتفق عليها بعد مخابرتنا راساً</p>
-                        <ab rend="center">---</ab>
-                        <p>العنوان التلغرافي - عربيلي نيو يورك</p>
-                        <ab rend="center">---</ab>
-                        <p>ومتعلقات المطبعة الشرقية مع مديرها <persName>ارتين افندي
-                              بتركيان</persName><lb/>الدفع سلفًا</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_7.d2e982">---</ab>
+                        <p change="#d2e501" xml:id="p_44.d2e985">اجرة الاعلانات والرسائل الخصوصية<lb change="#d2e501" xml:id="lb_24.d2e987"/>يتفق عليها بعد مخابرتنا راساً</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_8.d2e990">---</ab>
+                        <p change="#d2e501" xml:id="p_45.d2e993">العنوان التلغرافي - عربيلي نيو يورك</p>
+                        <ab rend="center" change="#d2e501" xml:id="ab_9.d2e997">---</ab>
+                        <p change="#d2e501" xml:id="p_46.d2e1000">ومتعلقات المطبعة الشرقية مع مديرها <persName change="#d2e501" xml:id="persName_21.d2e1002">ارتين افندي
+                              بتركيان</persName><lb change="#d2e501" xml:id="lb_25.d2e1004"/>الدفع سلفًا</p>
                      </div>
                   </div>
-                  <cb n="2"/>
-                  <div style="width:33%;float:right" xml:lang="ar">
-                     <bibl><title level="j">كوكب اميركا</title><lb/>
-                        <title level="j" type="sub">جريدة سياسية علمية تجارية ادبية</title></bibl>
+                  <cb n="2" change="#d2e501" xml:id="cb_15.d2e1009"/>
+                  <div style="width:33%;float:right" xml:lang="ar" change="#d2e501" xml:id="div_22.d2e1011">
+                     <bibl change="#d2e501" xml:id="bibl_9.d2e1013"><title level="j" change="#d2e501" xml:id="title_13.d2e1014">كوكب اميركا</title><lb change="#d2e501" xml:id="lb_26.d2e1016"/>
+                        <title level="j" type="sub" change="#d2e501" xml:id="title_14.d2e1018">جريدة سياسية علمية تجارية ادبية</title></bibl>
                   </div>
-                  <cb n="3"/>
-                  <div style="width:33%;float:right" xml:lang="en">
-                     <head>Subscription Rates.</head>
-                     <ab rend="center">---</ab>
-                     <p>For <placeName>New York</placeName>, per annum, - $ 3.00,<lb/>To which will
-                        be added tho postage to all cities in the <lb/><placeName>United
-                           States</placeName>.<lb/>In all Foreign Countries, - 18
-                        Frcs.<lb/>including Postage.<lb/>All communications relating to busines with
-                           <orgName>The Oriental <lb/>Publishing House</orgName>, must be addressed
-                        to its Manager,<lb/><persName>ARTEEN EFFENDI PETRAKIAN</persName>,<lb/>and
-                        those relating to "<orgName>Kawkab America</orgName>," to<lb/><persName
-                           ref="#pers_1">Dr. A. </persName>&amp; <persName>N.J.
-                        Arbeely,</persName><lb/>Editors<lb/>45 Pearl Street,<lb/>New York,
+                  <cb n="3" change="#d2e501" xml:id="cb_16.d2e1022"/>
+                  <div style="width:33%;float:right" xml:lang="en" change="#d2e501" xml:id="div_23.d2e1025">
+                     <head change="#d2e501" xml:id="head_17.d2e1027">Subscription Rates.</head>
+                     <ab rend="center" change="#d2e501" xml:id="ab_10.d2e1030">---</ab>
+                     <p change="#d2e501" xml:id="p_47.d2e1033">For <placeName change="#d2e501" xml:id="placeName_15.d2e1035">New York</placeName>, per annum, - $ 3.00,<lb change="#d2e501" xml:id="lb_27.d2e1038"/>To which will
+                        be added tho postage to all cities in the <lb change="#d2e501" xml:id="lb_28.d2e1040"/><placeName change="#d2e501" xml:id="placeName_16.d2e1041">United
+                           States</placeName>.<lb change="#d2e501" xml:id="lb_29.d2e1044"/>In all Foreign Countries, - 18
+                        Frcs.<lb change="#d2e501" xml:id="lb_30.d2e1046"/>including Postage.<lb change="#d2e501" xml:id="lb_31.d2e1049"/>All communications relating to busines with
+                           <orgName change="#d2e501" xml:id="orgName_6.d2e1051">The Oriental <lb change="#d2e501" xml:id="lb_32.d2e1053"/>Publishing House</orgName>, must be addressed
+                        to its Manager,<lb change="#d2e501" xml:id="lb_33.d2e1056"/><persName change="#d2e501" xml:id="persName_22.d2e1057">ARTEEN EFFENDI PETRAKIAN</persName>,<lb change="#d2e501" xml:id="lb_34.d2e1060"/>and
+                        those relating to "<orgName change="#d2e501" xml:id="orgName_7.d2e1062">Kawkab America</orgName>," to<lb change="#d2e501" xml:id="lb_35.d2e1066"/><persName ref="#pers_1" change="#d2e501" xml:id="persName_23.d2e1067">Dr. A. </persName>&amp; <persName change="#d2e501" xml:id="persName_24.d2e1070">N.J.
+                        Arbeely,</persName><lb change="#d2e501" xml:id="lb_36.d2e1072"/>Editors<lb change="#d2e501" xml:id="lb_37.d2e1074"/>45 Pearl Street,<lb change="#d2e501" xml:id="lb_38.d2e1076"/>New York,
                         U.S.A.</p>
                   </div>
                </div>
                <!-- the bottom line, commonly containing dating information -->
-               <div style="border-bottom:double black" xml:lang="ar">
-                  <dateline xml:lang="ar"><cb n="1"/><placeName type="city">نيو يورك</placeName>
-                     الجمعة في <date when="1893-04-28"> ٢٨ نيسان غ</date> و<date
-                        calendar="#cal_julian" datingMethod="#cal_julian" when="1893-04-28"
-                        when-custom="1893-04-16">١٦ ش سنة ١٨٩٣</date>
-                     <cb n="2"/> تصدر كل يوم الجمعة من كل اسبوع <cb n="3"/>موافق <date
-                        calendar="#cal_islamic" datingMethod="#cal_islamic" when="1893-04-28"
-                        when-custom="1311-10-11">١١ شوال سنة ١٣١٠</date></dateline>
+               <div style="border-bottom:double black" xml:lang="ar" change="#d2e501" xml:id="div_25.d2e1084">
+                  <dateline xml:lang="ar" change="#d2e501" xml:id="dateline_2.d2e1086"><cb n="1" change="#d2e501" xml:id="cb_17.d2e1087"/><placeName type="city" change="#d2e501" xml:id="placeName_17.d2e1088">نيو يورك</placeName>
+                     الجمعة في <date when="1893-04-28" change="#d2e501" xml:id="date_20.d2e1091"> ٢٨ نيسان غ</date> و<date calendar="#cal_julian" datingMethod="#cal_julian" when="1893-04-28" when-custom="1893-04-16" change="#d2e501" xml:id="date_21.d2e1094">١٦ ش سنة ١٨٩٣</date>
+                     <cb n="2" change="#d2e501" xml:id="cb_18.d2e1097"/> تصدر كل يوم الجمعة من كل اسبوع <cb n="3" change="#d2e501" xml:id="cb_19.d2e1099"/>موافق <date calendar="#cal_islamic" datingMethod="#cal_islamic" when="1893-04-28" when-custom="1311-10-11" change="#d2e501" xml:id="date_22.d2e1102">١١ شوال سنة ١٣١٠</date></dateline>
                </div>
             </front>
-            <body>
-               <pb ed="print" facs="#facs_v2-i55_1" n="1"/>
-               <div type="article" xml:lang="ar">
-                  <head>مكاتب الهرالد والمسالة المصرية</head>
-                  <p>خاض هذا المكاتب في السياسة المصرية اثنآ<lb/>سياحته في
-                           <placeName><geogFeat>وادي</geogFeat>
-                        <geogName>النيل</geogName></placeName> واجتمع اعظمآ
-                        <placeName>مصر</placeName> وفضلاتها<lb/>...</p>
+            <body change="#d2e501" xml:id="body_3.d2e1107">
+               <pb ed="print" facs="#facs_v2-i55_1" n="1" change="#d2e501" xml:id="pb_2.d2e1109"/>
+               <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_26.d2e1111">
+                  <head change="#d2e501" xml:id="head_18.d2e1113">مكاتب الهرالد والمسالة المصرية</head>
+                  <p change="#d2e501" xml:id="p_48.d2e1116">خاض هذا المكاتب في السياسة المصرية اثنآ<lb change="#d2e501" xml:id="lb_39.d2e1118"/>سياحته في
+                           <placeName change="#d2e501" xml:id="placeName_18.d2e1120"><geogFeat change="#d2e501" xml:id="geogFeat_1.d2e1121">وادي</geogFeat>
+                        <geogName change="#d2e501" xml:id="geogName_1.d2e1124">النيل</geogName></placeName> واجتمع اعظمآ
+                        <placeName change="#d2e501" xml:id="placeName_19.d2e1127">مصر</placeName> وفضلاتها<lb change="#d2e501" xml:id="lb_40.d2e1130"/>...</p>
                </div>
-               <div type="article" xml:lang="ar">
-                  <p>هذا هو رسم <persName>جلالة الملك جورج الاول</persName> ملك اليونان<lb/>الحالي
-                     الذي كان معروفاً قبلاً بالبرنس جورج<lb/>الدانيماركي وقع عليه الانتخاب من قبل
-                     الثلاث دول<lb/><placeName>روسيا</placeName> و<placeName>فرنسا</placeName>
-                        و<placeName>انكلترا</placeName> الذين اتفقوا ...</p>
-                  <figure>
-                     <head xml:lang="ar">جلالة الملك جورج الاول ملك اليونان</head>
-                     <head xml:lang="en">His Majesty the King of Greece</head>
+               <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_27.d2e1134">
+                  <p change="#d2e501" xml:id="p_49.d2e1136">هذا هو رسم <persName change="#d2e501" xml:id="persName_25.d2e1138">جلالة الملك جورج الاول</persName> ملك اليونان<lb change="#d2e501" xml:id="lb_41.d2e1141"/>الحالي
+                     الذي كان معروفاً قبلاً بالبرنس جورج<lb change="#d2e501" xml:id="lb_42.d2e1143"/>الدانيماركي وقع عليه الانتخاب من قبل
+                     الثلاث دول<lb change="#d2e501" xml:id="lb_43.d2e1145"/><placeName change="#d2e501" xml:id="placeName_20.d2e1146">روسيا</placeName> و<placeName change="#d2e501" xml:id="placeName_21.d2e1149">فرنسا</placeName>
+                        و<placeName change="#d2e501" xml:id="placeName_22.d2e1153">انكلترا</placeName> الذين اتفقوا ...</p>
+                  <figure change="#d2e501" xml:id="figure_3.d2e1157">
+                     <head xml:lang="ar" change="#d2e501" xml:id="head_19.d2e1159">جلالة الملك جورج الاول ملك اليونان</head>
+                     <head xml:lang="en" change="#d2e501" xml:id="head_20.d2e1162">His Majesty the King of Greece</head>
                   </figure>
-                  <p/>
+                  <p change="#d2e501" xml:id="p_50.d2e1166"/>
                </div>
-               <div type="section" xml:lang="ar">
-                  <head xml:lang="ar">اخبار محلية</head>
-                  <head xml:lang="en">Local news.</head>
-                  <div type="section" xml:lang="ar">
-                     <head>قدوم</head>
-                     <p/>
+               <div type="section" xml:lang="ar" change="#d2e501" xml:id="div_28.d2e1169">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_21.d2e1171">اخبار محلية</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_22.d2e1174">Local news.</head>
+                  <div type="section" xml:lang="ar" change="#d2e501" xml:id="div_28.d2e1177">
+                     <head change="#d2e501" xml:id="head_23.d2e1179">قدوم</head>
+                     <p change="#d2e501" xml:id="p_51.d2e1182"/>
                   </div>
-                  <div type="article" xml:lang="ar">
-                     <head><orgName>المرمح الحميدي</orgName></head>
-                     <p>كان وصول الباخيرة "<orgName>سنتيانا</orgName>" التي نقل<lb/><orgName>شركة
-                           المرمح الحميدي</orgName> مساء <date when="1893-04-24">الاثنين في ٢٤
-                           الشهر<lb/>الحالي</date> وهو مؤلف من اربعين فارساً سورياً ورتدين<lb/>يلباس
-                        العربان ساكني الخيام ولكل منهم جواد من<lb/>الخيول العربية المطهمة وبعض
-                        بدويات يعلون<lb/>ظهور الهجن والجمال ومعهم ايضاً كثير من الملابس<lb/>الفاخرة
-                        والسيوف والرماح ومن جميع الادوات التي<lb/>تيتخدمها قبائل البدو في ايام
-                        مسراتهم ماحزائهم<lb/>...</p>
-                     <p><cb/></p>
+                  <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_29.d2e1185">
+                     <head change="#d2e501" xml:id="head_24.d2e1187"><orgName change="#d2e501" xml:id="orgName_8.d2e1188">المرمح الحميدي</orgName></head>
+                     <p change="#d2e501" xml:id="p_52.d2e1191">كان وصول الباخيرة "<orgName change="#d2e501" xml:id="orgName_9.d2e1193">سنتيانا</orgName>" التي نقل<lb change="#d2e501" xml:id="lb_44.d2e1196"/><orgName change="#d2e501" xml:id="orgName_10.d2e1197">شركة
+                           المرمح الحميدي</orgName> مساء <date when="1893-04-24" change="#d2e501" xml:id="date_23.d2e1200">الاثنين في ٢٤
+                           الشهر<lb change="#d2e501" xml:id="lb_45.d2e1202"/>الحالي</date> وهو مؤلف من اربعين فارساً سورياً ورتدين<lb change="#d2e501" xml:id="lb_46.d2e1205"/>يلباس
+                        العربان ساكني الخيام ولكل منهم جواد من<lb change="#d2e501" xml:id="lb_47.d2e1207"/>الخيول العربية المطهمة وبعض
+                        بدويات يعلون<lb change="#d2e501" xml:id="lb_48.d2e1210"/>ظهور الهجن والجمال ومعهم ايضاً كثير من الملابس<lb change="#d2e501" xml:id="lb_49.d2e1212"/>الفاخرة
+                        والسيوف والرماح ومن جميع الادوات التي<lb change="#d2e501" xml:id="lb_50.d2e1214"/>تيتخدمها قبائل البدو في ايام
+                        مسراتهم ماحزائهم<lb change="#d2e501" xml:id="lb_51.d2e1216"/>...</p>
+                     <p change="#d2e501" xml:id="p_53.d2e1219"><cb change="#d2e501" xml:id="cb_20.d2e1220"/></p>
                   </div>
-                  <div type="article" xml:lang="ar">
-                     <head>محاكم <persName>الدوكتور بوكانان</persName></head>
-                     <p/>
+                  <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_30.d2e1223">
+                     <head change="#d2e501" xml:id="head_25.d2e1225">محاكم <persName change="#d2e501" xml:id="persName_26.d2e1227">الدوكتور بوكانان</persName></head>
+                     <p change="#d2e501" xml:id="p_54.d2e1230"/>
                   </div>
-                  <div type="article" xml:lang="ar">
-                     <head>تمثال <persName>اريكسون</persName></head>
-                     <p>في <date>٢٦ منه</date> صار احتفال تدشين كشف الستار<cb/><lb/>عن تمثال
-                           <persName>جون اريكسون</persName> بحضور موظفي الحكومة<lb/>ماموري مجالس
-                        القضاء واغنياء اهالي نيو يورك<lb/>وعدة من موظفي وضباط العساكر والبوليس
-                        لابساً<lb/></p>
-                     <ab rend="center">* * *</ab>
+                  <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_31.d2e1234">
+                     <head change="#d2e501" xml:id="head_26.d2e1236">تمثال <persName change="#d2e501" xml:id="persName_27.d2e1238">اريكسون</persName></head>
+                     <p change="#d2e501" xml:id="p_55.d2e1241">في <date change="#d2e501" xml:id="date_24.d2e1243">٢٦ منه</date> صار احتفال تدشين كشف الستار<cb change="#d2e501" xml:id="cb_21.d2e1246"/><lb change="#d2e501" xml:id="lb_52.d2e1247"/>عن تمثال
+                           <persName change="#d2e501" xml:id="persName_28.d2e1249">جون اريكسون</persName> بحضور موظفي الحكومة<lb change="#d2e501" xml:id="lb_53.d2e1252"/>ماموري مجالس
+                        القضاء واغنياء اهالي نيو يورك<lb change="#d2e501" xml:id="lb_54.d2e1254"/>وعدة من موظفي وضباط العساكر والبوليس
+                        لابساً<lb change="#d2e501" xml:id="lb_55.d2e1257"/></p>
+                     <ab rend="center" change="#d2e501" xml:id="ab_11.d2e1259">* * *</ab>
                   </div>
-                  <div type="article" xml:lang="ar">
-                     <p/>
+                  <div type="article" xml:lang="ar" change="#d2e501" xml:id="div_32.d2e1263">
+                     <p change="#d2e501" xml:id="p_56.d2e1265"/>
                   </div>
                </div>
-               <div type="section" xml:lang="ar">
-                  <head>تلغرافات</head>
-                  <p/>
+               <div type="section" xml:lang="ar" change="#d2e501" xml:id="div_34.d2e1269">
+                  <head change="#d2e501" xml:id="head_27.d2e1271">تلغرافات</head>
+                  <p change="#d2e501" xml:id="p_57.d2e1274"/>
                </div>
-               <pb ed="print" facs="#facs_v2-i55_2" n="2"/>
-               <pb ed="print" facs="#facs_v2-i55_3" n="3"/>
-               <pb ed="print" facs="#facs_v2-i55_4" n="4"/>
+               <pb ed="print" facs="#facs_v2-i55_2" n="2" change="#d2e501" xml:id="pb_3.d2e1278"/>
+               <pb ed="print" facs="#facs_v2-i55_3" n="3" change="#d2e501" xml:id="pb_4.d2e1280"/>
+               <pb ed="print" facs="#facs_v2-i55_4" n="4" change="#d2e501" xml:id="pb_5.d2e1282"/>
             </body>
          </text>
          <text corresp="#v2-i55_ar" n="55en" type="issue" xml:id="v2-i55_en" xml:lang="en">
-            <pb ed="print" facs="#facs_v2-i55_4" n="1"/>
-            <front facs="#facs_v2-i55_4_z1">
+            <pb ed="print" facs="#facs_v2-i55_4" n="1" change="#d2e501" xml:id="pb_6.d2e1288"/>
+            <front facs="#facs_v2-i55_4_z1" change="#d2e501" xml:id="front_5.d2e1290">
                <!-- the masthead -->
                <!-- the main body, which usually does not change between issues -->
-               <div style="border-bottom:double black">
-                  <bibl xml:lang="en"><title level="j">Kawkab America</title><lb/>
-                     <title level="j" type="sub">"The Star of America"</title></bibl>
-                  <bibl rend="center" xml:lang="ar" facs="#facs_v2-i55_4_z3"><title level="j">كوكب اميركا</title><lb/>
-                     <title level="j" type="sub">جريدة سياسية علمية تجارية ادبية</title></bibl>
+               <div style="border-bottom:double black" change="#d2e501" xml:id="div_35.d2e1296">
+                  <bibl xml:lang="en" change="#d2e501" xml:id="bibl_10.d2e1298"><title level="j" change="#d2e501" xml:id="title_15.d2e1299">Kawkab America</title><lb change="#d2e501" xml:id="lb_56.d2e1301"/>
+                     <title level="j" type="sub" change="#d2e501" xml:id="title_16.d2e1303">"The Star of America"</title></bibl>
+                  <bibl rend="center" xml:lang="ar" facs="#facs_v2-i55_4_z3" change="#d2e501" xml:id="bibl_11.d2e1306"><title level="j" change="#d2e501" xml:id="title_17.d2e1307">كوكب اميركا</title><lb change="#d2e501" xml:id="lb_57.d2e1309"/>
+                     <title level="j" type="sub" change="#d2e501" xml:id="title_18.d2e1311">جريدة سياسية علمية تجارية ادبية</title></bibl>
                </div>
                <!-- the bottom line, commonly containing dating information -->
-               <div style="border-bottom:solid black" xml:lang="en" facs="#facs_v2-i55_4_z4">
-                  <bibl xml:lang="en"><biblScope n="2" unit="volume">Vol. 2.</biblScope>
-                     <biblScope n="55" unit="issue">No. 55</biblScope>
-                     <cb/><pubPlace>New York</pubPlace>, <date when="1893-04-28">Friday, April 28,
+               <div style="border-bottom:solid black" xml:lang="en" facs="#facs_v2-i55_4_z4" change="#d2e501" xml:id="div_36.d2e1317">
+                  <bibl xml:lang="en" change="#d2e501" xml:id="bibl_12.d2e1319"><biblScope n="2" unit="volume" change="#d2e501" xml:id="biblScope_8.d2e1320">Vol. 2.</biblScope>
+                     <biblScope n="55" unit="issue" change="#d2e501" xml:id="biblScope_9.d2e1323">No. 55</biblScope>
+                     <cb change="#d2e501" xml:id="cb_22.d2e1326"/><pubPlace change="#d2e501" xml:id="pubPlace_4.d2e1327">New York</pubPlace>, <date when="1893-04-28" change="#d2e501" xml:id="date_25.d2e1330">Friday, April 28,
                         1893</date>.</bibl>
                   <!-- alternative encoding -->
                   <!--<dateline xml:lang="en"><placeName>New York</placeName>, <date when="1893-04-28">Friday, April 28, 1893</date>.</dateline>-->
                </div>
             </front>
-            <body>
-               <div type="article" xml:lang="en">
-                  <head xml:lang="ar">متفرقات شرقية</head>
-                  <head xml:lang="en">Oriental items.</head>
-                  <p>The author of "Morroco as it is" had, as leader of his caravan, a man named
+            <body change="#d2e501" xml:id="body_4.d2e1340">
+               <div type="article" xml:lang="en" change="#d2e501" xml:id="div_37.d2e1342">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_28.d2e1344">متفرقات شرقية</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_29.d2e1347">Oriental items.</head>
+                  <p change="#d2e501" xml:id="p_58.d2e1350">The author of "Morroco as it is" had, as leader of his caravan, a man named
                      Salem, who styled himself the khalifa, or second in command, This man had a
                      small English vocabulary, and one day surprised the traveller with an
                      unexpected display of borrowed patriotism</p>
-                  <p>The party had stoppedn in the midst of a boar hunt to take luncheons, and as
+                  <p change="#d2e501" xml:id="p_59.d2e1353">The party had stoppedn in the midst of a boar hunt to take luncheons, and as
                      they were sitting on the mountain side, overlooking the sea, the khalifa
                      suddely prposed the toast of "The Star Spangled Banner."</p>
-                  <p/>
-                  <p/>
-                  <p/>
-                  <ab rend="center">---</ab>
+                  <p change="#d2e501" xml:id="p_60.d2e1356"/>
+                  <p change="#d2e501" xml:id="p_61.d2e1359"/>
+                  <p change="#d2e501" xml:id="p_62.d2e1361"/>
+                  <ab rend="center" change="#d2e501" xml:id="ab_12.d2e1363">---</ab>
 
                </div>
-               <div type="article" xml:lang="en">
-                  <head xml:lang="ar">المرمح الحميدي</head>
-                  <head xml:lang="en">The Hamidieh Hipodrome</head>
-                  <ab rend="center">---</ab>
-                  <p>At the <orgName>U.S. Immigration Bureau</orgName> the steamer
-                        <orgName>Cyntiana</orgName> whitch sailed from
-                        <placeName>Beyrouth</placeName> on the <date when="1893-03-29">29th of
-                        March</date> arrived <date when="1893-04-24">Monday evening, April the 24th,
-                        <time>at 7 P.M.</time></date> She brought over 12 first-class passengers and 262 steerage
-                     including the horsemen, performers and attendants of the <orgName>Hamidieh
+               <div type="article" xml:lang="en" change="#d2e501" xml:id="div_38.d2e1367">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_30.d2e1369">المرمح الحميدي</head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_31.d2e1372">The Hamidieh Hipodrome</head>
+                  <ab rend="center" change="#d2e501" xml:id="ab_13.d2e1375">---</ab>
+                  <p change="#d2e501" xml:id="p_63.d2e1378">At the <orgName change="#d2e501" xml:id="orgName_11.d2e1380">U.S. Immigration Bureau</orgName> the steamer
+                        <orgName change="#d2e501" xml:id="orgName_12.d2e1383">Cyntiana</orgName> whitch sailed from
+                        <placeName change="#d2e501" xml:id="placeName_23.d2e1386">Beyrouth</placeName> on the <date when="1893-03-29" change="#d2e501" xml:id="date_26.d2e1389">29th of
+                        March</date> arrived <date when="1893-04-24" change="#d2e501" xml:id="date_27.d2e1392">Monday evening, April the 24th,
+                        <time change="#d2e501" xml:id="time_1.d2e1394">at 7 P.M.</time></date> She brought over 12 first-class passengers and 262 steerage
+                     including the horsemen, performers and attendants of the <orgName change="#d2e501" xml:id="orgName_13.d2e1398">Hamidieh
                         Hipodrome Company</orgName> to which we made reference in out last issue,
                      promissing to write a special article on its arrival.</p>
-                  <p>From the conversation held with one of the company's representatives we come to
-                     <cb/> to the conclusion that never in the history of this country has such a
+                  <p change="#d2e501" xml:id="p_64.d2e1402">From the conversation held with one of the company's representatives we come to
+                     <cb change="#d2e501" xml:id="cb_23.d2e1404"/> to the conclusion that never in the history of this country has such a
                      collection of specialists, men, and women of real Arabian horses, camels and
                      dromedaries, been seen on this side of the Atlantic.</p>
-                  <ab rend="center">---</ab>
+                  <ab rend="center" change="#d2e501" xml:id="ab_14.d2e1408">---</ab>
 
                </div>
-               <div type="article" xml:lang="en">
-                  <head xml:lang="ar">الشرق في معرض <placeName>شيكاغو</placeName></head>
-                  <head xml:lang="en">The orient at fair.</head>
-                  <p>Is there anybody left in <placeName>Syria</placeName>,
-                        <placeName>Egypt</placeName>,<lb/>
-                     <placeName>Turkey</placeName>, <placeName>Morocco</placeName>, and the other
-                     countries<lb/> of the Orient? Were the questions asked<lb/> by officers at
-                        <placeName>Ellis Island</placeName> and the Orient<lb/>als of <placeName>New
-                        York</placeName> within the last few<lb/> weeks. The long expected
-                     concessioners,<lb/> exhibitors and participants in the <orgName>World's<lb/>
-                        Fair</orgName>, who for many days and weeks have<lb/> been directing their
-                     footsteps from the<lb/> various lands of the rising sun towards<lb/> the "new
-                     land of promise" have arrived<lb/> in large numbers, and set foot upon the<lb/>
-                     soil of the new world which they have<lb/> sought with feelings of high
-                     expectation,<lb/> and an eagerness to which long distance<lb/> had added many
-                     charms. The Sheikh<lb/> who from childhood hours had learned to<lb/> praise
-                     Allah for every blessing of life,<lb/> must have shouted a hearty
-                        <said>"<foreign xml:lang="ar-Latn-EN">Alhamduli<lb/>la!</foreign>"</said> and 
-                     <said>"<foreign xml:lang="ar-Latn-EN">Allah<gap/> Kariem!</foreign>"</said> when after a<lb/>
-                     journey of some weeks and months by<lb/> land and by sea he saw in
-                        <placeName>New York</placeName> har<lb/>bor the majestic form of the Goddess
-                     of<lb/> Liberty with the beacon of light in her<lb/> outstretched hand bidding
-                     him welcome<lb/> to the <q>"home of the brave and the land of<lb/> the
+               <div type="article" xml:lang="en" change="#d2e501" xml:id="div_39.d2e1412">
+                  <head xml:lang="ar" change="#d2e501" xml:id="head_32.d2e1414">الشرق في معرض <placeName change="#d2e501" xml:id="placeName_24.d2e1416">شيكاغو</placeName></head>
+                  <head xml:lang="en" change="#d2e501" xml:id="head_33.d2e1419">The orient at fair.</head>
+                  <p change="#d2e501" xml:id="p_65.d2e1422">Is there anybody left in <placeName change="#d2e501" xml:id="placeName_25.d2e1424">Syria</placeName>,
+                        <placeName change="#d2e501" xml:id="placeName_26.d2e1427">Egypt</placeName>,<lb change="#d2e501" xml:id="lb_58.d2e1430"/>
+                     <placeName change="#d2e501" xml:id="placeName_27.d2e1432">Turkey</placeName>, <placeName change="#d2e501" xml:id="placeName_28.d2e1435">Morocco</placeName>, and the other
+                     countries<lb change="#d2e501" xml:id="lb_59.d2e1439"/> of the Orient? Were the questions asked<lb change="#d2e501" xml:id="lb_60.d2e1441"/> by officers at
+                        <placeName change="#d2e501" xml:id="placeName_29.d2e1443">Ellis Island</placeName> and the Orient<lb change="#d2e501" xml:id="lb_61.d2e1446"/>als of <placeName change="#d2e501" xml:id="placeName_30.d2e1448">New
+                        York</placeName> within the last few<lb change="#d2e501" xml:id="lb_62.d2e1451"/> weeks. The long expected
+                     concessioners,<lb change="#d2e501" xml:id="lb_63.d2e1454"/> exhibitors and participants in the <orgName change="#d2e501" xml:id="orgName_14.d2e1456">World's<lb change="#d2e501" xml:id="lb_64.d2e1458"/>
+                        Fair</orgName>, who for many days and weeks have<lb change="#d2e501" xml:id="lb_65.d2e1461"/> been directing their
+                     footsteps from the<lb change="#d2e501" xml:id="lb_66.d2e1463"/> various lands of the rising sun towards<lb change="#d2e501" xml:id="lb_67.d2e1465"/> the "new
+                     land of promise" have arrived<lb change="#d2e501" xml:id="lb_68.d2e1467"/> in large numbers, and set foot upon the<lb change="#d2e501" xml:id="lb_69.d2e1470"/>
+                     soil of the new world which they have<lb change="#d2e501" xml:id="lb_70.d2e1472"/> sought with feelings of high
+                     expectation,<lb change="#d2e501" xml:id="lb_71.d2e1474"/> and an eagerness to which long distance<lb change="#d2e501" xml:id="lb_72.d2e1476"/> had added many
+                     charms. The Sheikh<lb change="#d2e501" xml:id="lb_73.d2e1478"/> who from childhood hours had learned to<lb change="#d2e501" xml:id="lb_74.d2e1480"/> praise
+                     Allah for every blessing of life,<lb change="#d2e501" xml:id="lb_75.d2e1483"/> must have shouted a hearty
+                        <said change="#d2e501" xml:id="said_1.d2e1485">"<foreign xml:lang="ar-Latn-EN" change="#d2e501" xml:id="foreign_1.d2e1487">Alhamduli<lb change="#d2e501" xml:id="lb_76.d2e1489"/>la!</foreign>"</said> and 
+                     <said change="#d2e501" xml:id="said_2.d2e1493">"<foreign xml:lang="ar-Latn-EN" change="#d2e501" xml:id="foreign_2.d2e1495">Allah<gap change="#d2e501" xml:id="gap_1.d2e1497"/> Kariem!</foreign>"</said> when after a<lb change="#d2e501" xml:id="lb_77.d2e1501"/>
+                     journey of some weeks and months by<lb change="#d2e501" xml:id="lb_78.d2e1503"/> land and by sea he saw in
+                        <placeName change="#d2e501" xml:id="placeName_31.d2e1505">New York</placeName> har<lb change="#d2e501" xml:id="lb_79.d2e1509"/>bor the majestic form of the Goddess
+                     of<lb change="#d2e501" xml:id="lb_80.d2e1511"/> Liberty with the beacon of light in her<lb change="#d2e501" xml:id="lb_81.d2e1513"/> outstretched hand bidding
+                     him welcome<lb change="#d2e501" xml:id="lb_82.d2e1515"/> to the <q change="#d2e501" xml:id="q_1.d2e1517">"home of the brave and the land of<lb change="#d2e501" xml:id="lb_83.d2e1519"/> the
                         free."</q></p>
-                  <p>Never in the history of the world has the East manifested its interest in the
+                  <p change="#d2e501" xml:id="p_66.d2e1522">Never in the history of the world has the East manifested its interest in the
                      West to such an extent as has been evidenced since the inauguration of the
                      ideas and plans of establishing an International Exposition in the city of
-                        <placeName>Chicago</placeName>.</p>
-                  <p>A great and restless wave of enthusiasm has swept over the Orient and turned
-                     its attention towards <placeName>America</placeName>, the land of gigantic
+                        <placeName change="#d2e501" xml:id="placeName_32.d2e1524">Chicago</placeName>.</p>
+                  <p change="#d2e501" xml:id="p_67.d2e1528">A great and restless wave of enthusiasm has swept over the Orient and turned
+                     its attention towards <placeName change="#d2e501" xml:id="placeName_33.d2e1530">America</placeName>, the land of gigantic
                      realities in such a manner as has never been known before, what is very queer
                      and interesting to notice is that all Orientals come here with the hope of
                      making fortunes sufficiently large to insure them against poverty for the rest
                      of their lives.</p>
-                  <p>Several of them who have tasted the "sweets" of financial prosperity at the
-                        <placeName>Paris</placeName> Exposition, have doubled their energies and
+                  <p change="#d2e501" xml:id="p_68.d2e1535">Several of them who have tasted the "sweets" of financial prosperity at the
+                        <placeName change="#d2e501" xml:id="placeName_34.d2e1537">Paris</placeName> Exposition, have doubled their energies and
                      efforts for excelling their exhibits and sections in the French capital. The
                      result is that the countries of the Orient have made a better and more
-                     extensive showing at <placeName>Chicago</placeName> than they have done in any
+                     extensive showing at <placeName change="#d2e501" xml:id="placeName_35.d2e1540">Chicago</placeName> than they have done in any
                      exposition before.</p>
-                  <p>We mentioned before brief notices in our former issue about the various
-                     Oriental attractions intended for the <orgName>World's Fair</orgName>. We spoke
+                  <p change="#d2e501" xml:id="p_69.d2e1544">We mentioned before brief notices in our former issue about the various
+                     Oriental attractions intended for the <orgName change="#d2e501" xml:id="orgName_15.d2e1546">World's Fair</orgName>. We spoke
                      briefly of the various troupes which were on the way to this country. Today we
                      desire to announce the arrival and give few pertinent facts of what we haev
                      learned from the leaders and managers of those troupes which passed recently at
-                     the <orgName>U.S. Immigration Bureau</orgName>.</p>
-                  <p>The Turkish section of which Messrs. <persName>Sadullah</persName>,
-                        <persName>Suhamy</persName> and <persName>Bistani</persName> are
+                     the <orgName change="#d2e501" xml:id="orgName_16.d2e1549">U.S. Immigration Bureau</orgName>.</p>
+                  <p change="#d2e501" xml:id="p_70.d2e1553">The Turkish section of which Messrs. <persName change="#d2e501" xml:id="persName_29.d2e1555">Sadullah</persName>,
+                        <persName change="#d2e501" xml:id="persName_30.d2e1558">Suhamy</persName> and <persName change="#d2e501" xml:id="persName_31.d2e1561">Bistani</persName> are
                      concessioners have received many new additions and reinforcements among which
-                     may be mentioned the 23 Persians who came recently with <persName>Mr. Khalil
+                     may be mentioned the 23 Persians who came recently with <persName change="#d2e501" xml:id="persName_32.d2e1564">Mr. Khalil
                         Jureydini</persName>, and who will represent in the Persian section under
                      the auspices of the above mentioned Turkish concessioners, the customs and
                      manners of the land of the Shahs. A restaurant and a mangificently embroidered
                      tent which was used by one of the great rulers of that country, and which
-                        <orgName>Messrs. <persName>Mussallam</persName> Bros. &amp; Co.</orgName>
+                        <orgName change="#d2e501" xml:id="orgName_17.d2e1567">Messrs. <persName change="#d2e501" xml:id="persName_33.d2e1569">Mussallam</persName> Bros. &amp; Co.</orgName>
                      have secured for exhibition purposes, will form part of the Persian
                      section.</p>
-                  <p>The <orgName>Oriental Theatre Company</orgName> numbering 54 people, and under
-                     the direction of <persName>Mr. Butros Tanfous</persName> arrived this week at
-                     the <orgName>U.S. Immigration Bureau</orgName>. Several Oriental specialists
+                  <p change="#d2e501" xml:id="p_71.d2e1574">The <orgName change="#d2e501" xml:id="orgName_18.d2e1576">Oriental Theatre Company</orgName> numbering 54 people, and under
+                     the direction of <persName change="#d2e501" xml:id="persName_34.d2e1579">Mr. Butros Tanfous</persName> arrived this week at
+                     the <orgName change="#d2e501" xml:id="orgName_19.d2e1582">U.S. Immigration Bureau</orgName>. Several Oriental specialists
                      from various parts of Turkey have been secured in order to give the American
                      public a correct idea of the customs and manners of the people in different
                      parts of the Empire.</p>
-                  <p>The members of the company have taken special pains for accurate reproduction
-                     of "<q>Eastern Life</q>." The famous Arabic composer and actor <persName>Sheikh Abou
+                  <p change="#d2e501" xml:id="p_72.d2e1586">The members of the company have taken special pains for accurate reproduction
+                     of "<q change="#d2e501" xml:id="q_2.d2e1588">Eastern Life</q>." The famous Arabic composer and actor <persName change="#d2e501" xml:id="persName_35.d2e1591">Sheikh Abou
                         Khalil Kabany</persName> has the stage management of the plays and pieces
                      which are to be presented to World's Fair visitors in true and beautiful
                      Oriental style. We understand that people from
-                     <placeName>Bethlehem</placeName>, <placeName>Jerusalem</placeName>,
-                        <placeName>Mt. Lebanon</placeName>, <placeName>Constantinople</placeName>,
-                        <placeName>Anatolia</placeName>, <placeName>Arabia</placeName>,
-                        <placeName>Syria</placeName> and <placeName>Palestine</placeName> will take
-                     part in the performance of the <orgName>Oriental Theatre</orgName> of the
-                     Turkish section.<cb/></p>
-                  <p>Cafe life amusements, social gatherings, singing, dancing, etc. will be very
-                     extensively illustrated by the <orgName>Oriental Cafe Company</orgName> whose
-                     personel arrived from <placeName>Beyrouth</placeName> this week. From a
-                     conversation with Messrs. <persName>Korani</persName>,
-                        <persName>Fadel</persName> and <persName>Jureydini</persName> we understood
+                     <placeName change="#d2e501" xml:id="placeName_36.d2e1594">Bethlehem</placeName>, <placeName change="#d2e501" xml:id="placeName_37.d2e1597">Jerusalem</placeName>,
+                        <placeName change="#d2e501" xml:id="placeName_38.d2e1600">Mt. Lebanon</placeName>, <placeName change="#d2e501" xml:id="placeName_39.d2e1604">Constantinople</placeName>,
+                        <placeName change="#d2e501" xml:id="placeName_40.d2e1607">Anatolia</placeName>, <placeName change="#d2e501" xml:id="placeName_41.d2e1610">Arabia</placeName>,
+                        <placeName change="#d2e501" xml:id="placeName_42.d2e1613">Syria</placeName> and <placeName change="#d2e501" xml:id="placeName_43.d2e1616">Palestine</placeName> will take
+                     part in the performance of the <orgName change="#d2e501" xml:id="orgName_20.d2e1619">Oriental Theatre</orgName> of the
+                     Turkish section.<cb change="#d2e501" xml:id="cb_24.d2e1623"/></p>
+                  <p change="#d2e501" xml:id="p_73.d2e1625">Cafe life amusements, social gatherings, singing, dancing, etc. will be very
+                     extensively illustrated by the <orgName change="#d2e501" xml:id="orgName_21.d2e1627">Oriental Cafe Company</orgName> whose
+                     personel arrived from <placeName change="#d2e501" xml:id="placeName_44.d2e1630">Beyrouth</placeName> this week. From a
+                     conversation with Messrs. <persName change="#d2e501" xml:id="persName_36.d2e1633">Korani</persName>,
+                        <persName change="#d2e501" xml:id="persName_37.d2e1636">Fadel</persName> and <persName change="#d2e501" xml:id="persName_38.d2e1639">Jureydini</persName> we understood
                      that their preparations are very complete in every respect for taking good care
                      of those who would like to get an idea of how a cup of real Turkish coffee
                      tastes. They selected the very best Oriental furnishing and decorations for
                      their establishment. They imported a beautiful stage inlaid with mother of
                      pearls on which their singers, dancers and performers would appear. Ther
-                     services of the sweet singer and graceful danseuse, <persName>Rugina
-                        Beress</persName> of <placeName>Damascus</placeName>, who will be aided by
+                     services of the sweet singer and graceful danseuse, <persName change="#d2e501" xml:id="persName_39.d2e1643">Rugina
+                        Beress</persName> of <placeName change="#d2e501" xml:id="placeName_45.d2e1646">Damascus</placeName>, who will be aided by
                      her troupe of several male and female artists, in realizing before the visitors
                      the pleasures, amusements and entertainments of cafe life were secured.</p>
-                  <p>The Algerian section had 42 people, comprising athletes, tumblers, artists,
-                     singers, dancers, artisans, etc., who passed in the <orgName>U.S. Immigration
+                  <p change="#d2e501" xml:id="p_74.d2e1651">The Algerian section had 42 people, comprising athletes, tumblers, artists,
+                     singers, dancers, artisans, etc., who passed in the <orgName change="#d2e501" xml:id="orgName_22.d2e1653">U.S. Immigration
                         Bureau</orgName>. They will give performances in the two theatres which
-                        <placeName>Mr. Ganon</placeName> has prepared for his section. The Kabyle
+                        <placeName change="#d2e501" xml:id="placeName_46.d2e1656">Mr. Ganon</placeName> has prepared for his section. The Kabyle
                      performers will be assisted by some very beautiful lady dancers and singers
-                     from the <placeName>Sahara <geogFeat>Desert</geogFeat></placeName>.</p>
-                  <p>Some of the wonderful Siawes from <placeName>Morocco</placeName> will take part
+                     from the <placeName change="#d2e501" xml:id="placeName_47.d2e1659">Sahara <geogFeat change="#d2e501" xml:id="geogFeat_2.d2e1661">Desert</geogFeat></placeName>.</p>
+                  <p change="#d2e501" xml:id="p_75.d2e1665">Some of the wonderful Siawes from <placeName change="#d2e501" xml:id="placeName_48.d2e1667">Morocco</placeName> will take part
                      in this part of the entertainments. We learn from one of the invited guests,
-                     who recently attended <persName>Mr. Ganon</persName>'s Oriental banquet, that
+                     who recently attended <persName change="#d2e501" xml:id="persName_40.d2e1670">Mr. Ganon</persName>'s Oriental banquet, that
                      the "tout ensemble" of his section presents a magnificient and beautiful
                      appearance.</p>
-                  <p>The Egyptian section must appear very lively now with the 200 people who
-                     recently came to this country with the <orgName>S.S. Guildhall</orgName>. Among
+                  <p change="#d2e501" xml:id="p_76.d2e1674">The Egyptian section must appear very lively now with the 200 people who
+                     recently came to this country with the <orgName change="#d2e501" xml:id="orgName_23.d2e1676">S.S. Guildhall</orgName>. Among
                      its interesting sights may be mentioned the Temple which represents the
-                     architecture and decorations of the period of <persName>Ramses the
+                     architecture and decorations of the period of <persName change="#d2e501" xml:id="persName_41.d2e1679">Ramses the
                         II</persName>. The 18 donkeys will do good service in carrying the people
-                     from one end to the other in the "<placeName>Rue de Caire</placeName>," and vie
+                     from one end to the other in the "<placeName change="#d2e501" xml:id="placeName_49.d2e1682">Rue de Caire</placeName>," and vie
                      with the stalwart men carriers of the Sedan chairs in the Turkish section which
                      will be used for the illustration of the mode of travel in
-                        <placeName>Turkey</placeName>.</p>
-                  <p>The Chinese village will be fair specimen of the towns and cities of the
-                        <placeName>Flowery Kingdom</placeName>. A restaurant, a tea establishment, a
+                        <placeName change="#d2e501" xml:id="placeName_50.d2e1685">Turkey</placeName>.</p>
+                  <p change="#d2e501" xml:id="p_77.d2e1689">The Chinese village will be fair specimen of the towns and cities of the
+                        <placeName change="#d2e501" xml:id="placeName_51.d2e1691">Flowery Kingdom</placeName>. A restaurant, a tea establishment, a
                      theatre, and several silk shops will comprise some of its attractions.</p>
-                  <p>The Celestials who numbered 400 persons destined for the Fair were detained in
-                        <placeName>San Francisco</placeName>, and had a very hard time in trying to
+                  <p change="#d2e501" xml:id="p_78.d2e1695">The Celestials who numbered 400 persons destined for the Fair were detained in
+                        <placeName change="#d2e501" xml:id="placeName_52.d2e1697">San Francisco</placeName>, and had a very hard time in trying to
                      satisfy the customs officers that they do not come within the provisions of the
-                     Chinese exclusion<gap/>, which prohibits the lanidng of Chinamen in the
-                        <placeName>United States</placeName>. Their large number coming as they did
+                     Chinese exclusion<gap change="#d2e501" xml:id="gap_2.d2e1700"/>, which prohibits the lanidng of Chinamen in the
+                        <placeName change="#d2e501" xml:id="placeName_53.d2e1702">United States</placeName>. Their large number coming as they did
                      in one ship aroused the suspicions of the authorities, and they suppose that
                      several celestials have profited by this occasion, and came as exhibitors to
-                     the <orgName>World's Fair</orgName>. From all accounts we can safely predict
+                     the <orgName change="#d2e501" xml:id="orgName_24.d2e1705">World's Fair</orgName>. From all accounts we can safely predict
                      that the Chinese section will not be behind the others in the line of Oriental
                      splendor and beauty of decoration.</p>
-                  <p>The Malays whose coming to <placeName>New York</placeName> we have recently
-                     announced are still detained on <placeName>Ellis Island</placeName>.
-                        <persName>Sultan Jawhar</persName> will not make a very good showing of the
+                  <p change="#d2e501" xml:id="p_79.d2e1709">The Malays whose coming to <placeName change="#d2e501" xml:id="placeName_54.d2e1711">New York</placeName> we have recently
+                     announced are still detained on <placeName change="#d2e501" xml:id="placeName_55.d2e1714">Ellis Island</placeName>.
+                        <persName change="#d2e501" xml:id="persName_42.d2e1717">Sultan Jawhar</persName> will not make a very good showing of the
                      life, customs, industries and civilization of his people if his agent does not
-                     hurry up and take his people from the <orgName>U.S. Immigration
+                     hurry up and take his people from the <orgName change="#d2e501" xml:id="orgName_25.d2e1720">U.S. Immigration
                         Bureau</orgName> and put them right to work on the bamboo houses and palm
-                     leave huts of his village in <placeName>Midway Plaisance</placeName>.</p>
-                  <p>The Japanese whose progressiveness has attracted particular attention within
-                     recent years will be very well represented during the <orgName>World's
+                     leave huts of his village in <placeName change="#d2e501" xml:id="placeName_56.d2e1723">Midway Plaisance</placeName>.</p>
+                  <p change="#d2e501" xml:id="p_80.d2e1728">The Japanese whose progressiveness has attracted particular attention within
+                     recent years will be very well represented during the <orgName change="#d2e501" xml:id="orgName_26.d2e1730">World's
                         Fair</orgName>. Many rich New Yorkers intend to eat out of their restaurant
                      and enjoy their tea parties at the exposition. </p>
-                  <p>In addition to the above mentioned Oriental attractions to be seen at
-                        <placeName>Midway Plaisance</placeName> there are others which will be
+                  <p change="#d2e501" xml:id="p_81.d2e1734">In addition to the above mentioned Oriental attractions to be seen at
+                        <placeName change="#d2e501" xml:id="placeName_57.d2e1736">Midway Plaisance</placeName> there are others which will be
                      outside of the Exposition grounds proper. There will be for instance a tourist
                      encampment such as would illustrate the tourists life and mode of tavels in the
-                        <placeName>Holy Land</placeName>. <orgName>Messrs.
-                           <persName>Wardy</persName> &amp; Co.</orgName>, the contractors from
-                        <placeName>Beyrouth</placeName>, have brought with them several tents and
+                        <placeName change="#d2e501" xml:id="placeName_58.d2e1739">Holy Land</placeName>. <orgName change="#d2e501" xml:id="orgName_27.d2e1742">Messrs.
+                           <persName change="#d2e501" xml:id="persName_43.d2e1744">Wardy</persName> &amp; Co.</orgName>, the contractors from
+                        <placeName change="#d2e501" xml:id="placeName_59.d2e1748">Beyrouth</placeName>, have brought with them several tents and
                      performers who would reproduce before the visitors notionly the tent travel and
                      life of the American and European tourists who visit
-                        <placeName>Egypt</placeName>, <placeName>Syria</placeName> and
-                        <placeName>Palestine</placeName>, but also give an idea of the most
+                        <placeName change="#d2e501" xml:id="placeName_60.d2e1751">Egypt</placeName>, <placeName change="#d2e501" xml:id="placeName_61.d2e1755">Syria</placeName> and
+                        <placeName change="#d2e501" xml:id="placeName_62.d2e1758">Palestine</placeName>, but also give an idea of the most
                      interesting things that the tourists see in those historical countries. Among
-                     the people whom <persName>Mr. Wardy</persName> has brought are one or
-                        <sic>Two</sic> Syrian wrestlers, and several musicians, singers, cooks,
-                     <cb/> waiters, etc. who will give series of entertainments in a cafe house
+                     the people whom <persName change="#d2e501" xml:id="persName_44.d2e1761">Mr. Wardy</persName> has brought are one or
+                        <sic change="#d2e501" xml:id="sic_1.d2e1764">Two</sic> Syrian wrestlers, and several musicians, singers, cooks,
+                     <cb change="#d2e501" xml:id="cb_25.d2e1767"/> waiters, etc. who will give series of entertainments in a cafe house
                      secured for the purpose. </p>
-                  <p>There is also the <orgName>Hamidieh Hippodrome Company</orgName> with her 40
-                     Arabian horses, several camels, donkeys, etc., who <sic>will</sic> arrived at
-                     this port on the <date>24th of this month</date>. Their exhibitions no doubt
+                  <p change="#d2e501" xml:id="p_82.d2e1770">There is also the <orgName change="#d2e501" xml:id="orgName_28.d2e1772">Hamidieh Hippodrome Company</orgName> with her 40
+                     Arabian horses, several camels, donkeys, etc., who <sic change="#d2e501" xml:id="sic_2.d2e1775">will</sic> arrived at
+                     this port on the <date change="#d2e501" xml:id="date_28.d2e1778">24th of this month</date>. Their exhibitions no doubt
                      will be interesting, and we reserve writing a special article in the near
                      future about the personel and exihibits of this company.</p>
-                  <p>All in all the East will be well represented in <placeName>Chicago</placeName>,
+                  <p change="#d2e501" xml:id="p_83.d2e1782">All in all the East will be well represented in <placeName change="#d2e501" xml:id="placeName_63.d2e1784">Chicago</placeName>,
                      during the coming seven months. We hope that all of our countrymen and fellow
                      Orientals who will take part in it will realize from it their highest
                      expectations.</p>
@@ -755,7 +720,7 @@
             </body>
          </text>
       </group>
-      <back>
+      <back change="#d2e501" xml:id="back_1.d2e1792">
          <!-- back of a volume, potentially gathering indeces, appendices, etc.  -->
       </back>
    </text>
