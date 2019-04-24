@@ -5,14 +5,15 @@
     xmlns="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs"
-    version="2.0">
+    version="3.0">
     
-    <!-- this stylesheet removes all mark-up from the body of a TEI file -->
+    <!-- this stylesheet removes all mark-up from the body of a TEI file and leaves only the facsimiles in place -->
     
     <xsl:output method="xml"  version="1.0" encoding="UTF-8" indent="yes" omit-xml-declaration="no"  name="xml"/>
     
     <xsl:include href="Functions.xsl"/>
     
+    <!-- identiy transform -->
     <xsl:template match="@* |node()">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -20,16 +21,18 @@
     </xsl:template>
     
     <xsl:template match="/">
-       <xsl:result-document href="{substring-before(base-uri(),'.xml')}-facsimileEdition.xml" format="xml">
+        <!-- the output is set by the transformation scenario -->
+       <!--<xsl:result-document href="{substring-before(base-uri(),'.xml')}-facsimileEdition.xml" format="xml">-->
            <xsl:copy>
                <xsl:apply-templates select="@* | node()"/>
            </xsl:copy>
-       </xsl:result-document>
+       <!--</xsl:result-document>-->
     </xsl:template>
     
     <!-- produce an new empty body for the TEI file -->
     <xsl:template match="text">
         <xsl:copy>
+            <xsl:apply-templates select="@*"/>
             <xsl:element name="body">
                 <xsl:element name="p">
                 </xsl:element>
@@ -37,25 +40,19 @@
         </xsl:copy>
     </xsl:template>
     
-    <!-- create a new revisionDesc -->
+    <!-- update the revisionDesc -->
     <xsl:template match="revisionDesc">
         <xsl:copy>
+            <xsl:apply-templates select="@*"/>
             <xsl:element name="change">
                 <xsl:attribute name="when" select="format-date(current-date(),'[Y0001]-[M01]-[D01]')"/>
-                <xsl:text>Generated this file by stripping the text from </xsl:text>
-                <xsl:value-of select="base-uri()"/>
+                <xsl:attribute name="who" select="concat('#', $p_id-editor)"/>
+                <xsl:attribute name="xml:id" select="$p_id-change"/>
+                <xsl:attribute name="xml:lang" select="'en'"/>
+                <xsl:text>Generated this file by stripping the text from </xsl:text><xsl:value-of select="base-uri()"/><xsl:text>.</xsl:text>
             </xsl:element>
+            <!-- copy the existing child nodes -->
+            <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
-    
-    <!-- create a new sourceDesc -->
-    <xsl:template match="sourceDesc">
-        <xsl:copy>
-            <xsl:element name="p">
-                <xsl:text>Some prose providing information on the source of the text</xsl:text>
-            </xsl:element>
-        </xsl:copy>
-    </xsl:template> 
-  
-    
 </xsl:stylesheet>

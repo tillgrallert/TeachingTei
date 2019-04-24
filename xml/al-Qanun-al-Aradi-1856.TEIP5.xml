@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online-local-facsimiles/xslt-boilerplate/teibp_parameters.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<teiHeader>
 		<fileDesc>
@@ -9,21 +9,32 @@
 				<title xml:lang="ar-Latn-x-ijmes">al-Qānūn al-Arādī (al-ʿUthmānī)</title>
 				<title type="sub">TEI edition</title>
 				<respStmt>
-					<resp>typing the text</resp>
+					<resp>Transcription of the text</resp>
 					<orgName xml:lang="ar-Latn-x-ijmes">Dāʾira al-arādī wa-l-masāḥa</orgName>
 				</respStmt>
-				<respStmt><resp>TEI edition</resp>
-				<persName xml:id="p_TG">Till Grallert</persName></respStmt>
+				<respStmt>
+					<resp>TEI edition</resp>
+					<persName xml:id="p_TG">Till Grallert</persName>
+				</respStmt>
 			</titleStmt>
 			<editionStmt>
-				<edition> <date>2008-09-29T07:07:00</date> </edition>
+				<edition>
+					<date>2008-09-29T07:07:00</date>
+				</edition>
 			</editionStmt>
 			<publicationStmt>
-				<p>Digital text available on <ref
-					target="https://ar.wikisource.org/wiki/قانون_الاراضي_العثماني_رقم_200_عام_1900"
-					>Wikisource</ref> and as wordfile from the <ref target="http://www.dls.gov.jo/uploads/LOW_DEP/low1_1.doc">Ministry of Justice in Jordan</ref>.</p>
-				<p>According to Wikisource, this law is <ref>قانون <idno>رقم (200)</idno> لعام <date when="1900"
-					>1900</date></ref></p>
+				<p>Digital text available on 
+					<ref target="https://ar.wikisource.org/wiki/قانون_الاراضي_العثماني_رقم_200_عام_1900">Wikisource</ref>
+					and as wordfile from the 
+					<ref target="http://www.dls.gov.jo/uploads/LOW_DEP/low1_1.doc">Ministry of Justice in Jordan</ref>
+					.</p>
+				<p>According to Wikisource, this law is 
+					<ref>
+						قانون 
+						<idno>رقم (200)</idno>
+						لعام 
+						<date when="1900">1900</date></ref>
+				</p>
 			</publicationStmt>
 			<sourceDesc>
 				<biblStruct xml:lang="ar-Latn-x-ijmes">
@@ -37,7 +48,9 @@
 			</sourceDesc>
 		</fileDesc>
 		<revisionDesc>
-			<change when="2015-08-24" who="#p_TG">Corrected the mark-up and structured the TEI according to the law itself with nested <gi>div</gi>s.</change>
+			<change when="2015-08-24" who="#p_TG">Corrected the mark-up and structured the TEI according to the law itself with nested 
+				<gi>div</gi>
+				s.</change>
 			<change when="2015-08-24">Created the TEI file by conversion from .doc via
 				OxGarage</change>
 		</revisionDesc>
@@ -45,13 +58,15 @@
 	<text xml:lang="ar">
 		<front>
 			<div>
-				<p rend="center"> مجموعة قوانين وأنظمة دائرة الأراضي والمساحة </p>
+				<p rend="center">مجموعة قوانين وأنظمة دائرة الأراضي والمساحة </p>
 				<p rend="end color(#ff0000)bold">الباب الأول ( اموال غير منقوله ) </p>
 				<p rend="center color(#ff0000)bold">الباب الأول (أموال غير منقولة)</p>
 				<p rend="center color(#ff0000)bold">(قانون الأراضي العثماني)</p>
 				<p rend="center color(#ff0000)bold">صورة الخط الهمايوني</p>
 				<p rend="center color(#ff0000)bold">فليعمل بموجبه</p>
-				<p rend="center color(#ff0000)bold"><title>قانون الأراضي</title></p>
+				<p rend="center color(#ff0000)bold">
+					<title>قانون الأراضي</title>
+				</p>
 			</div>
 		</front>
 		<body xml:lang="ar">
@@ -93,7 +108,8 @@
 							والمعاملات التي تجري على أنواع الأراضي المملوكة الأربعة مبينة في الكتب
 							الفقهية فلا يبحث في قانون الأراضي هذا عن أحكامها.</p>
 						<note>
-							<p rend="end">ملخص الإدارة السنية الصادرة في <date>18 رجب سنة
+							<p rend="end">ملخص الإدارة السنية الصادرة في 
+								<date>18 رجب سنة
 								1278</date></p>
 							<p rend="end">لما كانت أراضي ولاية الشام في الأصل من الأراضي الخراجية
 								التي انقرض معظم أصحابها على مرور الزمن دخلت قانوناً في عداد الأراضي
@@ -138,8 +154,8 @@
 							فراغ و انتقال الأراضي الأميرية الصرفة وبدل محلولاتها عائدة إلى جانب
 							الميري يعود في مثل هذه الأراضي الموقوفة أيضاً إلى وقفه. وبما أن أحكام
 							الأراضي الأميرية التي تبسط وتبين في ما يأتي تجري أيضاً في مثل هذه
-							الأراضي الموقوفة فمتى ذكر في هذا القانون تعبير الأراضي " الأراضي
-							الموقوفة " يكون المراد الأراضي الموقوفة التي هي من قبيل هكذا
+							الأراضي الموقوفة فمتى ذكر في هذا القانون تعبير الأراضي &quot; الأراضي
+							الموقوفة &quot; يكون المراد الأراضي الموقوفة التي هي من قبيل هكذا
 							تخصيصات.</p>
 						<p rend="end">على أنه يوجد نوع آخر من هذه الأراضي الموقوفة وهو الذي تخصصت
 							إلى جهة ما حقوق التصرف به من أعشاره ورسومه في الحالة التي تعود بها
@@ -177,7 +193,7 @@
 				<div>
 					<head>الباب الأول</head>
 					<head>في بيان الأراضي الأميرية</head>
-					<p> ويشتمل على أربعة فصول الفصل الأول في بيان التصرف
+					<p>ويشتمل على أربعة فصول الفصل الأول في بيان التصرف
 						والثاني في الفراغ والثالث في الانتقال والرابع في المحلولات.</p>
 					<div>
 						<head>الفصل الأول</head>
@@ -550,7 +566,9 @@
 								بالوصية والأملاك المتروكة التي لم يوصى بها أو لم يوجد مسوغ في قوانين
 								الدولة العليه لأن توهب ويوصى بها تجري في حقها النظامات الموضوعة
 								للدولة العليه.</p>
-							<p rend="end">ا <hi rend="color(#ff0000)">لمادة 5</hi> : كل أجنبي توافق
+							<p rend="end">ا 
+								<hi rend="color(#ff0000)">لمادة 5</hi>
+								: كل أجنبي توافق
 								دولته على الأصول المنظمة من طرف الدولة العليه بحق الاستملاك يستفيد
 								من أحكام هذا القانون.</p>
 							<p rend="end">آخر جمادى الأول سنة 1284 </p>
@@ -1228,14 +1246,10 @@
 								باحتطاب وانتفاع جملة قرى متعددة تقطع أشجاره أهالي تلك القرى ولا يقدر
 								أهالي غيرها أن يقطعوا منها شيئاً وليس على مثل هذه الأحراش المملوكة
 								أو الفراعية رسم.</p>
-						</div>
-						<div type="article">
-							<head>ذيل</head>
-							<p>إذا تحقق أن أهالي قرية ما احتطبوا تجاوزاً حال كونه ليس لهم حق
-								الاحتطاب من الأحراش الفراعية المخصصة لأهالي قرية أخرى فيصير تحصيل
-								قيمة الأشجار المقطوعة قائمة من المتجاوزين المحتطبين بدون حق ثم يجري
-								تقسيمها بين عموم أهالي القرية المالكين حق الاحتطاب (10 ربيع أول سنة
-								1293).</p>
+							<div type="section">
+								<head>ذيل</head>
+								<p>إذا تحقق أن أهالي قرية ما احتطبوا تجاوزاً حال كونه ليس لهم حق الاحتطاب من الأحراش الفراعية المخصصة لأهالي قرية أخرى فيصير تحصيل قيمة الأشجار المقطوعة قائمة من المتجاوزين المحتطبين بدون حق ثم يجري تقسيمها بين عموم أهالي القرية المالكين حق الاحتطاب (10 ربيع أول سنة 1293).</p>
+							</div>
 						</div>
 						<div type="article">
 							<head>المادة 92</head>
@@ -1693,7 +1707,8 @@
 							الأقلام الشاهانية وجميع المحاكم والمجالس ولا تعتبر النظامات والقوانين
 							العتيقة فيما يخص الأراضي الأميرية والموقوفة لا في قلم الديوان الهمايوني
 							ولا في الدفترخانة العامرة أو باقي المحلات.</p>
-						<p rend="end">في <date>7 رمضان سنة 1274</date></p>
+						<p rend="end">في 
+							<date>7 رمضان سنة 1274</date></p>
 					</div>
 				</div>
 			</div>
