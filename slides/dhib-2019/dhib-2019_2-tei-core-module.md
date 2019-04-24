@@ -11,25 +11,51 @@ The slides are based on those supplied by the various [Digital Humanities Summer
 Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
 # Introduction: what to mark-up
+## Manuscripts:
 
-## *al-Iqbāl*
+![PRO FO 618/3 Damascus 51 draft, General Report for September Quarter, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-draft.png)
 
-![Front page of *al-Iqbāl* #257, 27 July 1908](../images/mic164_alikbal_1908-1909_0118_150dpi.jpg)
+--------------------
 
+![Damascus, Quarterly Report, Devey to Lowther 1 Oct. 1908](../images/quarterly-report-1908-typed.jpg)
 
-## *al-Bashīr*
+## Postcards
 
-![Front page of *al-Bashīr* #1868, 27 July 1908](../images/mic54_albashir_1907-19011_0171_150dpi.jpg)
+![Postcard, Damascus to Istanbul, 27 Sep 1916](../images/postcard-ottoman2.png)
+
+![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
+
+---------------------
+
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
+
+![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-front.jpg)
+
+## Newspapers
+
+![Kawkab America #55, 28 Apr 1893, p.1 (English)](../images/kawkab-img.jpg)
+
+---------------------
+
+![Kawkab America #55, 28 Apr 1893, p.1 (Arabic)](../images/kawkab-img2.jpg)
 
 ------------------
 
-![Front page of *al-Bashīr*, 3 August 1908](../images/mic54_albashir_1907-19011_0175_150dpi.jpg)
+![Front page of *al-Iqbāl* #257, 27 July 1908](../images/mic164_alikbal_1908-1909_0118_150dpi.jpg)
 
-## *Lisān al-Ḥāl*
+------------------
+
+![Front page of *al-Bashīr* #1868, 27 July 1908](../images/mic54_albashir_1907-19011_0171_150dpi.jpg)
+
+<!-- ------------------
+
+![Front page of *al-Bashīr*, 3 August 1908](../images/mic54_albashir_1907-19011_0175_150dpi.jpg) -->
+
+------------------
 
 ![Front page of *Lisān al-Ḥāl* #5773, 27 July 1908](../images/na111_lisanulhal_1907-08_0912_150dpi.jpg)
 
-## *Thamarāt al-Funūn*
+------------------
 
 ![Front page of *Thamarāt al-Funūn* #1683, 27 July 1908](../images/TF-1908-0215_150dpi.jpg)
 
