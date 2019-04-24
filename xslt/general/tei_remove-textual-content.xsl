@@ -5,7 +5,7 @@
     xmlns="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs"
-    version="2.0">
+    version="3.0">
     
     <!-- this stylesheet removes all text() from the body of a TEI file, but keeps the structural mark-up -->
     
@@ -13,6 +13,7 @@
     
     <xsl:include href="Functions.xsl"/>
     
+    <!-- identiy transform -->
     <xsl:template match="@* |node()">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -20,11 +21,12 @@
     </xsl:template>
     
     <xsl:template match="/">
-       <xsl:result-document href="{substring-before(base-uri(),'.xml')}-structuralMarkUpOnly.xml" format="xml">
+        <!-- the output is set by the transformation scenario -->
+<!--       <xsl:result-document href="{substring-before(base-uri(),'.xml')}-structuralMarkUpOnly.xml" format="xml">-->
            <xsl:copy>
-               <xsl:apply-templates select="@* | node()"/>
+               <xsl:apply-templates/>
            </xsl:copy>
-       </xsl:result-document>
+       <!--</xsl:result-document>-->
     </xsl:template>
     
     <xsl:template match="text">
@@ -42,7 +44,7 @@
     <xsl:template match="text()" mode="mClean"/>
     
     <!-- remove semantic mark-up -->
-    <xsl:template match="persName | orgName | addName | surname | forename | placeName | rs | date | time" mode="mClean">
+    <xsl:template match="persName | orgName | addName | surname | forename | placeName | rs | date | time | bibl | title" mode="mClean">
        <xsl:apply-templates mode="mClean"/>
    </xsl:template>
     
@@ -55,9 +57,14 @@
         <xsl:copy>
             <xsl:element name="change">
                 <xsl:attribute name="when" select="format-date(current-date(),'[Y0001]-[M01]-[D01]')"/>
+                <xsl:attribute name="who" select="concat('#', $p_id-editor)"/>
+                <xsl:attribute name="xml:id" select="$p_id-change"/>
+                <xsl:attribute name="xml:lang" select="'en'"/>
                 <xsl:text>Generated this file by stripping all semantic mark-up and text from </xsl:text>
-                <xsl:value-of select="base-uri()"/>
+                <xsl:value-of select="base-uri()"/><xsl:text>.</xsl:text>
             </xsl:element>
+            <!-- copy the existing child nodes -->
+            <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
     

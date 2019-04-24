@@ -24,7 +24,7 @@
         <!-- the output is set by the transformation scenario -->
        <!--<xsl:result-document href="{substring-before(base-uri(),'.xml')}-facsimileEdition.xml" format="xml">-->
            <xsl:copy>
-               <xsl:apply-templates select="@* | node()"/>
+               <xsl:apply-templates/>
            </xsl:copy>
        <!--</xsl:result-document>-->
     </xsl:template>
