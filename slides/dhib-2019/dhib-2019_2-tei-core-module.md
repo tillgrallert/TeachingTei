@@ -4,18 +4,20 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
-# TEI core module: Introducing structural markup
+## TEI core module: Introducing structural markup
 
 The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
 
-Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js), and the [Snippet](http://steamdev.com/snippet/) jQuery Syntax highlighter.
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
-# *al-Iqbāl*
+# Introduction: what to mark-up
+
+## *al-Iqbāl*
 
 ![Front page of *al-Iqbāl* #257, 27 July 1908](../images/mic164_alikbal_1908-1909_0118_150dpi.jpg)
 
 
-# *al-Bashīr*
+## *al-Bashīr*
 
 ![Front page of *al-Bashīr* #1868, 27 July 1908](../images/mic54_albashir_1907-19011_0171_150dpi.jpg)
 
@@ -23,15 +25,15 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
 
 ![Front page of *al-Bashīr*, 3 August 1908](../images/mic54_albashir_1907-19011_0175_150dpi.jpg)
 
-# *Lisān al-Ḥāl*
+## *Lisān al-Ḥāl*
 
 ![Front page of *Lisān al-Ḥāl* #5773, 27 July 1908](../images/na111_lisanulhal_1907-08_0912_150dpi.jpg)
 
-# *Thamarāt al-Funūn*
+## *Thamarāt al-Funūn*
 
 ![Front page of *Thamarāt al-Funūn* #1683, 27 July 1908](../images/TF-1908-0215_150dpi.jpg)
 
-# Looking at the material, what do we need to mark up?
+## Looking at the material, what do we need to mark up?
 
 - Identification information, page numbers, sources
 - "chunks" or divisions of text, which may contain a picture, a poem, some prose, or a combination
@@ -44,10 +46,11 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
     + and more...
 
 # The document structure
+## The document structure
 
 All TEI documents are structured in a particular manner. This section attempts to describe the different variations on this as briefly as possible.
 
-# Structure of a TEI Document
+## Structure of a TEI Document
 
 There are two basic types of TEI document:
 
@@ -60,7 +63,7 @@ The text may be in the form of:
 - a `<sourceDoc>`: a pure transcription, or
 - a `<text>`: an edited document
 
-# TEI basic structure
+## TEI basic structure
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -79,7 +82,7 @@ The text may be in the form of:
 </TEI>
 ```
 
-# TEI basic structure 2
+## TEI basic structure 2
 
 ```xml
 <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
@@ -93,7 +96,7 @@ The text may be in the form of:
 </teiCorpus>
 ```
 
-# The `<text>` element
+## The `<text>` element
 
 What is a text? (remember that one?)
 
@@ -105,7 +108,7 @@ What is a text? (remember that one?)
     + `<body>`: (required)
     + `<back>`: optional back matter
 
-# TEI text structure 1
+## TEI text structure 1
 
 A simple document:
 
@@ -123,7 +126,38 @@ A simple document:
 </text>
 ```
 
-# Macrostructure: composite texts, `<teiCorpus>`
+## Macrostructure: composite texts, `<teiCorpus>`
+
+Consular letters, such as the ones above are usually kept in files. If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<teiCorpus>` element:
+
+```xml
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <!-- some metadata relating to the file, the letters etc. are kept in -->
+        <fileDesc>
+            <titleStmt>
+                <title>PRO FO 618/3, Despatches to Constantinople, quarterly report, Hedjaz railway, reports on local politics etc., 1908</title>
+            </titleStmt>
+            <!-- ... -->
+        </fileDesc>
+        <!-- ... -->
+    </teiHeader>
+    <TEI xml:id="ProFo_618-3_Damascus_19081001_1" xml:lang="en">
+        <teiHeader>
+            <!-- metadate relating to the individual letter etc. -->
+        </teiHeader>
+        <facsimile>
+            <!-- links to image files -->
+        </facsimile>
+        <text>
+            <!-- transcription of the document -->
+        </text>
+    </TEI>
+    <!-- More <TEI>elements -->
+</teiCorpus>
+```
+
+## Macrostructure: composite texts 2, `<group>`
 
 Newspaper issues are usually grouped into volumes (or years). If we consider them as a single composite text, we could treat each issue as a `<div>` within it. Or (even better) we could use the `<group>` element:
 
@@ -157,6 +191,7 @@ Newspaper issues are usually grouped into volumes (or years). If we consider the
 ```
 
 # The high level structure
+## The high level structure
 
 Each identifiable division within `<text>` is a `<div>` element. It can optionally be given a particular type (e.g. cartoon, verse, prose), using a free-text attribute.
 
@@ -175,7 +210,7 @@ For example, page 1 has two divisions:
 </div>
 ```
 
-# Why divisions rather than pages
+## Why divisions rather than pages
 
 Because a division can start on one page and finish on another, or
 cross other physical boundaries
@@ -201,7 +236,7 @@ We use an empty element `<pb/>` to mark the boundary between pages, rather than 
 ```
 
 
-# Divisions can contain divisions ...
+## Divisions can contain divisions ...
 
 ```xml
 <div type="postcard">
@@ -230,7 +265,7 @@ We use an empty element `<pb/>` to mark the boundary between pages, rather than 
 </div>
 ```
 
-# More about divisions
+## More about divisions
 
 - generic, hierarchic subdivisions, each incomplete as a text as a whole
 - the `@type` attribute is used to label a particular level e.g. as 'part' or 'chapter'
@@ -238,7 +273,7 @@ We use an empty element `<pb/>` to mark the boundary between pages, rather than 
 - the `@xml:id` attribute gives a particular division a unique identifier
 - Divisions must always tessellate: once "down" a level, you cannot pop "up" again within the same division (see next slide)
 
-# Tessellation
+## Tessellation
 
 `<div>`s must tesselate over the entire text
 
@@ -267,7 +302,7 @@ is valid, while
 
 is **invalid**!
 
-# Divisions may have heads and trailer
+## Divisions may have heads and trailer
 
 ```xml
 <div>
@@ -279,7 +314,7 @@ is **invalid**!
 </div>
 ```
 
-# Numbered and unnumbered divisions
+## Numbered and unnumbered divisions
 
 The level can be made explicit by using 'numbered' divs (div1, div2). Opinions vary:
 
@@ -289,13 +324,13 @@ The level can be made explicit by using 'numbered' divs (div1, div2). Opinions v
 - unnumbered: nest recursively to indicate their hierarchic depth. (And computers can count very well!)
 - The two styles must not be combined within a single `<front>`, `<body>`, or `<back>` element.
 
-# Groups vs floating texts
+## Groups vs floating texts
 
 The `<group>` element should be used to represent a collection of independent texts which is to be regarded as a single unit for processing or other purposes.
 
 `<floatingText>` contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes.
 
-# Floating text example
+## Floating text example
 
 The `<floatingText>` element can appear within any division level element in the same way as a paragraph.
 
@@ -317,6 +352,7 @@ The `<floatingText>` element can appear within any division level element in the
 ```
 
 # Document order vs. XML order
+## Document order vs. XML order
 
 The order of XML encoding **does not necessarily reflect** the order of the source document. Compare:
 
@@ -366,6 +402,7 @@ The order of XML encoding **does not necessarily reflect** the order of the sour
 ```
 
 # Core elements
+## Core elements
 
 The *core* module of the TEI groups together elements which may appear in any kind of text and the tags used to mark them in all TEI documents. This includes:
 
@@ -379,7 +416,7 @@ The *core* module of the TEI groups together elements which may appear in any ki
 - reference systems, bibliographic
 - citations simple verse and drama
 
-# Paragraphs
+## Paragraphs
 
 `<p>`: paragraph; marks paragraphs in prose
 
@@ -401,7 +438,7 @@ Example
     في<date>١٠ تموز سنة ١٣٢٤</date></p>
 ```
 
-# Highlighting
+## Highlighting
 
 By **highlighting** we mean the use of any combination of typographic features (font, size, hue, etc.) in a printed or written text in order to distinguish some passage of a text from its surroundings. For words and phrases which are:
 
@@ -412,7 +449,7 @@ By **highlighting** we mean the use of any combination of typographic features (
 - attributed to some other agency inside or outside the text (e.g. direct speech, quotation)
 - set apart in another way (e.g. proverbial phrases, words mentioned but not used)
 
-# Example: Highlighting
+## Example: Highlighting
 
 - `<hi>`: general purpose highlighting;
 - `<distinct>`: linguistically distinct
@@ -431,7 +468,7 @@ Example
 </calendar>
 ```
 
-# Quotation
+## Quotation
 
 Quotation marks can be used to set off text for many reasons, so the TEI has the following elements:
 
@@ -469,13 +506,13 @@ Example
 </quote>
 ```
 
-# Lists
+## Lists
 
 - `<list>`: a sequence of items forming a list
 - `<item>`: one component of a list
 - `<label>`: label associated with an item
 
-# Example: simple list
+## Example: simple list
 
 ```xml
 <p>The great <q>'coup d'Etat'</q> which took place in <placeName>Turkey</placeName> on the <date>24th July</date> occupied all minds and <del>engaged</del><add>aroused</add> every emotion with the proclamation of the Constitution, in <placeName>Damascus</placeName> as in all other important centres in the <placeName>Empire</placeName>. <del>The chief <unclear/> interests</del> <add>Among its results worthy of remark</add> here <del>during this time</del> were
@@ -494,7 +531,7 @@ Example
 <!-- we can stop here and move to an exercise -->
 <!-- shift in topics -->
 
-# Notes
+## Notes
 
 - `<note>`: contains a note or annotation
 - Notes can be those existing in the text, or provided by the editor of the electronic text
@@ -507,7 +544,7 @@ Example:
 <note place="bottom">Painted by <persName>John Singer Sargent</persName>, 1.918</note>
 ```
 
-# Simple editorial changes: `<choice>` and friends
+## Simple editorial changes: `<choice>` and friends
 
 - `<choice>`: groups alternative editorial encodings
 - Errors:
@@ -520,7 +557,7 @@ Example:
     + `<abbr>`: abbreviated form
     + `<expan>`: expanded form
 
-# Example: choice 1
+## Example: choice 1
 
 ```xml
 <dateline xml:lang="ar">
@@ -538,7 +575,7 @@ Example:
 </dateline>
 ```
 
-# Example: choice 2
+## Example: choice 2
 
 Consider: "Excuse me sir, but would you like to buy a nice little dawg?"
 
@@ -554,14 +591,14 @@ Example:
 ...a nice little <choice><orig>dawg</orig><reg>dog</reg></choice>?
 ```
 
-# Additions, Deletions, and Omissions
+## Additions, Deletions, and Omissions
 
 - `<add>`: addition to the text, e.g. marginal gloss
 - `<del>`: phrase marked as deleted in the text
 - `<gap>`: indicates point where material is omitted
 -  `<unclear>`: contains text unable to be transcribed clearly
 
-# Example: additions, deletions, omissions
+## Example: additions, deletions, omissions
 
 <!-- ```xml
 <p><add place="left">My </add>
@@ -580,7 +617,7 @@ Example:
 
 <!-- further shift in topics to named entities and linking -->
 
-# Basic names
+## Basic names
 
 - `<name>`: a name in the text, contains a proper noun or noun phrase
 - `<rs>`: a general-purpose name or referencing string
@@ -588,7 +625,7 @@ Example:
 The @type attribute is useful for categorizing these, and they both
 also have @key, @ref, and @nymRef attributes.
 
-# Addresses
+## Addresses
 
 - `<email>`: an electronic mail address
 - `<address>`: a postal address
@@ -599,7 +636,7 @@ also have @key, @ref, and @nymRef attributes.
 - `<name>` can also be used
 - and the 'namesdates' module extends this with more geographic names
 
-# Basic numbers and measures
+## Basic numbers and measures
 
 - `<num>`: marks a number of any sort
 - `<measure>`: marks a quantity or commodity
@@ -613,7 +650,7 @@ Example: numbers and measures
 ... only <measure type="distance" unit="m" quantity="3218.69">two miles</measure> from the front....
 ```
 
-# Dates
+## Dates
 
 - `<date>`: contains a date in any format and includes a @when attribute for a regularised form and a @calendar attribute to specify what calendar system
 - `<time>`: contains a time in any format and includes a @when attribute for a regularised form
@@ -624,7 +661,7 @@ Example
 <date when="1917-07">July 1917.<lb/> Wednesday</date>
 ```
 
-# Simple Linking
+## Simple Linking
 
 - `<ptr>`: defines a pointer to another location
 - `<ref>`: defines a reference to another location, with optional linking text
@@ -640,7 +677,7 @@ See <ptr target="#Section12"/>.
 The <ref target="http://www.bbc.co.uk/">BBC web site</ref> has a good sports section
 ```
 
-# Indexing
+## Indexing
 
 - If converting an existing index, use nested lists.
 - For auto-generated indexes:
@@ -659,7 +696,7 @@ Example
 </index>:</p>
 ```
 
-# Graphics
+## Graphics
 
 - `<graphic>`: indicates the location of an inline graphic, illustration, or figure
 - `<binaryObject>`: encoded binary data embedding a graphic or other object
@@ -681,7 +718,7 @@ Example
 
 ![Ṭughrā at the head of the Qānūn al-Asāsī in *Thamarāt al-Funūn*, 27 July 1908](../images/tughra-thamarat2.png)
 
-# Simple verse
+## Simple verse
 
 ```xml
 <lg type="stanza">
@@ -700,9 +737,9 @@ Example
 </lg>
 ```
 
-# Next
+## Next
 
-And now we're going to move on to another exercise where you get to apply some of the more structural elements you have learned about.
+And now we're going to move on to an exercise where you get to apply some of the more structural elements you have learned about.
 
 <!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
 
