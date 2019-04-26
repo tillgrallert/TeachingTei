@@ -19,15 +19,27 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
 
 ## Postcards
 
+<div class="c_width-50 left">
+
 ![Postcard, Damascus to Istanbul, 27 Sep 1916](../images/postcard-ottoman2.png)
+
+</div><div class="c_width-50 right">
 
 ![Postcard, Damascus to Istanbul, 15 Jun 1917](../images/postcard-ottoman1.png)
 
+</div>
+
 ---------------------
+
+<div class="c_width-50 left">
 
 ![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-back.jpg)
 
+</div><div class="c_width-50 right">
+
 ![Postcard. *Damas. La Grande Place.* Written by Fredie Lent. Beyrouth, Jerusalem: André Terzis & Fils, 1911 [April 25, 1912]](../images/postcard-1911-Damascus-front.jpg)
+
+</div>
 
 ## Newspapers
 
