@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="19.1">
+<project version="21.0">
     <meta>
         <filters directoryPatterns="" filePatterns="teaching_tei.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="19.1" xml:space="preserve">
+            <serialized version="21.0" xml:space="preserve">
                 <serializableOrderedMap>
+                    <entry>
+                        <String>author.format.compatibility</String>
+                        <Integer>2</Integer>
+                    </entry>
+                    <entry>
+                        <String>author.show.comments</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>editor.font</String>
+                        <String>Helvetica Neue,0,13</String>
+                    </entry>
+                    <entry>
+                        <String>font.for.author.v12</String>
+                        <String>Gentium Plus,0,14</String>
+                    </entry>
+                    <entry>
+                        <String>key.author.editor.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.fonts.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
                     <entry>
                         <String>scenarios</String>
                         <scenario-array>
