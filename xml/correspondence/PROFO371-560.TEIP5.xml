@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-   schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" change="#d2e109" xml:lang="">
+   schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-stylesheet type="text/xsl" href="../../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" change="#d2e109" xml:lang="">
    <teiHeader change="#d2e98 #d2e109" xml:id="teiHeader_1.d2e7" xml:lang="">
       <fileDesc change="#d2e98 #d2e109" xml:id="fileDesc_1.d2e9" xml:lang="">
          <titleStmt change="#d2e98 #d2e109" xml:id="titleStmt_1.d2e11" xml:lang="">

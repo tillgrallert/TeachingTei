@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>--><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" change="#d2e663" xml:lang="">
+<?xml version="1.0" encoding="UTF-8"?><!--<?xml-stylesheet type="text/css" href="../css/tei/tei_oxygen.css"?>--><?xml-model href="../schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet type="text/xsl" href="../../xslt-boilerplate/teibp_parameters.xsl"?><TEI xmlns="http://www.tei-c.org/ns/1.0" change="#d2e663" xml:lang="">
     <teiHeader xml:lang="en" change="#d2e652" xml:id="teiHeader_1.d2e6">
         <fileDesc change="#d2e652 #d2e663" xml:id="fileDesc_1.d2e8" xml:lang="en">
             <titleStmt change="#d2e652 #d2e663" xml:id="titleStmt_1.d2e10" xml:lang="en">
