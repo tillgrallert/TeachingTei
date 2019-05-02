@@ -4,7 +4,14 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
-# An ambitious plan:
+## Introduction to Digital Editing using TEI
+
+Till Grallert, Orient-Institut Beirut (OIB)
+
+Digital Humanities Institute --- Beirut 2019
+
+
+## An ambitious plan:
 
 We have five hours for:
 

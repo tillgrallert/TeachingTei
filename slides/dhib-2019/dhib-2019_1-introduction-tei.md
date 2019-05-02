@@ -4,11 +4,13 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
-Many slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of introductory classes to TEI and Arabic texts at DHIB 2019, DHIB 2015, DHSI 2015, and Leipzig 2015.
+## Session one: Introduction to XML and TEI
 
-Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Till Grallert, Orient-Institut Beirut (OIB)
 
-The slides are available at [https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/](https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/index.html).
+Digital Humanities Institute --- Beirut 2019
+
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
 
 ## Content of this session
 
@@ -270,12 +272,21 @@ Instead of an abstract set of rules and norms, standardisation should be thought
 # Thank you!
 ## Useful links / resources
 
-- the TEI Consortium's [website](http://www.tei-c.org/index.xml) at http://www.tei-c.org/index.xml:
-    + the [TEI guidelines](http://www.tei-c.org/Guidelines/P5/) at http://www.tei-c.org/Guidelines/P5/
-    + [TEI by Example](http://www.teibyexample.org/TBE.htm) at http://www.teibyexample.org/TBE.htm
+- the TEI Consortium's [website](http://www.tei-c.org/index.xml) at <http://www.tei-c.org/index.xml>:
+    + the [TEI guidelines](http://www.tei-c.org/Guidelines/P5/) at <http://www.tei-c.org/Guidelines/P5/>
+    + [TEI by Example](http://www.teibyexample.org/TBE.htm) at <http://www.teibyexample.org/TBE.html>
     + the TEI mailing list, <TEI-L@LISTSERV.BROWN.EDU>
-    + the [TEI wiki](http://wiki.tei-c.org/index.php) at http://wiki.tei-c.org/: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.
-- Further resources provided by the TEI council and Oxford computing centre:
-    + [ROMA](http://www.tei-c.org/Roma/) at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation
-    + [OxGarage](http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/) at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
-    + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.
+    + the [TEI wiki](http://wiki.tei-c.org/index.php) at <http://wiki.tei-c.org/>: comprising inter alia [TEI cheatsheets](http://wiki.tei-c.org/index.php/TEI_Cheatsheets) at <http://wiki.tei-c.org/index.php/TEI_Cheatsheets>.
+- Further resources<!--  provided by the TEI council and Oxford computing centre -->:
+    + [ROMA](http://www.tei-c.org/Roma/) at <http://www.tei-c.org/Roma/>: customising TEI schemas for XML validation
+    + [OxGarage](https://oxgarage2.tei-c.org) at <https://oxgarage2.tei-c.org>: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.
+    + [DHOxSS](http://digital.humanities.ox.ac.uk/dhoxss/) at <http://digital.humanities.ox.ac.uk/dhoxss/>: providing the material (including slides and exercises) for years of summer schools.
+    + [dariahTeach](https://teach.dariah.eu/): a number of online courses for TEI
+
+-------------------
+
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
+
+The slides are based on material provided by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under a [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
+
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).

@@ -161,18 +161,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     charset="utf-8" type="text/javascript"></script> -->
 </head>
 <body>
-<div class="slide titlepage">
+<!-- <div class="slide titlepage">
   <h1 class="title">TEI@DHIB2019: Introduction to XML and TEI</h1>
   <p class="author">
 Till Grallert
   </p>
   <p class="date">2019-04-23</p>
-</div>
-<div class="slide section level2">
-
-<p>Many slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of introductory classes to TEI and Arabic texts at DHIB 2019, DHIB 2015, DHSI 2015, and Leipzig 2015.</p>
-<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
-<p>The slides are available at <a href="https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/index.html">https://www.github.com/tillgrallert/TeachingTei/slides/dhib-2019/</a>.</p>
+</div> -->
+<div id="session-one-introduction-to-xml-and-tei" class="slide titlepage">
+<h1>Session one: Introduction to XML and TEI</h1>
+<p>Till Grallert, Orient-Institut Beirut (OIB)</p>
+<p>Digital Humanities Institute — Beirut 2019</p>
+<p>Slides: <a href="https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html">https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/</a></p>
 </div>
 <div id="content-of-this-session" class="slide section level2">
 <h1>Content of this session</h1>
@@ -190,47 +190,58 @@ Till Grallert
 </div><div id="what-is-a-text" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
+<img src="../images/constitution-ottoman.png" alt="Ḳānūn-i Esāsī, 1876" />
+<p class="caption">Ḳānūn-i Esāsī, 1876</p>
+</div>
+</div><div id="what-is-a-text-1" class="slide section level2">
+<h1>What is a text?</h1>
+<div class="figure">
+<img src="../images/constitution-salname2.png" alt="Ḳānūn-i Esāsī in Sālnāme-yi Vilāyet-i Sūriye #24, 1892" />
+<p class="caption">Ḳānūn-i Esāsī in <em>Sālnāme-yi Vilāyet-i Sūriye</em> #24, 1892</p>
+</div>
+</div><div id="what-is-a-text-2" class="slide section level2">
+<h1>What is a text?</h1>
+<div class="figure">
 <img src="../images/constitution-bashir.png" alt="Ḳānūn-i Esāsī in al-Bashīr, 3 August 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>al-Bashīr</em>, 3 August 1908</p>
 </div>
-</div><div id="what-is-a-text-1" class="slide section level2">
+</div><div id="what-is-a-text-3" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-thamarat.png" alt="Ḳānūn-i Esāsī in Thamarāt al-Funūn, 27 July 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>Thamarāt al-Funūn</em>, 27 July 1908</p>
 </div>
-</div><div id="what-is-a-text-2" class="slide section level2">
+</div><div id="what-is-a-text-4" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-lisan.png" alt="Ḳānūn-i Esāsī in Lisān al-Ḥāl, 27 July 1908" />
 <p class="caption">Ḳānūn-i Esāsī in <em>Lisān al-Ḥāl</em>, 27 July 1908</p>
 </div>
-</div><div id="what-is-a-text-3" class="slide section level2">
+</div><div id="what-is-a-text-5" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-jinan.png" alt="Ḳānūn-i Esāsī in al-Jinān, 15 January 1877" />
 <p class="caption">Ḳānūn-i Esāsī in <em>al-Jinān</em>, 15 January 1877</p>
 </div>
-</div><div id="what-is-a-text-4" class="slide section level2">
-<h1>What is a text?</h1>
-<div class="figure">
-<img src="../images/constitution-ottoman.png" alt="Ḳānūn-i Esāsī, 1876" />
-<p class="caption">Ḳānūn-i Esāsī, 1876</p>
-</div>
-<!-- # What is a text? -->
-</div><div id="what-is-a-text-5" class="slide section level2">
-<h1>What is a text?</h1>
-<div class="figure">
-<img src="../images/constitution-salname1.png" alt="Ḳānūn-i Esāsī in Sālnāme-yi Vilāyet-i Sūriye #24, 1892" />
-<p class="caption">Ḳānūn-i Esāsī in <em>Sālnāme-yi Vilāyet-i Sūriye</em> #24, 1892</p>
-</div>
 </div><div id="what-is-a-text-6" class="slide section level2">
+<h1>What is a text?</h1>
+<div class="figure">
+<img src="../images/constitution_beirut-1-xml.png" alt="Ḳānūn-i Esāsī in oXygen (text view)" />
+<p class="caption">Ḳānūn-i Esāsī in oXygen (text view)</p>
+</div>
+</div><div id="what-is-a-text-7" class="slide section level2">
+<h1>What is a text?</h1>
+<div class="figure">
+<img src="../images/constitution_beirut-1-xml-author.png" alt="Ḳānūn-i Esāsī in oXygen (author view)" />
+<p class="caption">Ḳānūn-i Esāsī in oXygen (author view)</p>
+</div>
+</div><div id="what-is-a-text-8" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-parallel-arabic.png" alt="Three Arabic translations of the Ottoman constitution in a digital parallel edition" />
 <p class="caption">Three Arabic translations of the Ottoman constitution in a digital parallel edition</p>
 </div>
-</div><div id="what-is-a-text-7" class="slide section level2">
+</div><div id="what-is-a-text-9" class="slide section level2">
 <h1>What is a text?</h1>
 <div class="figure">
 <img src="../images/constitution-parallel-ottoman.png" alt="Original and latinised text of the Ottoman constitution in a digital parallel edition with an Arabic translation" />
@@ -464,25 +475,31 @@ Note: <hi class="cImportant">descriptive mark-up allows for easier re-use of dat
 <div id="thank-you" class="title-slide slide section level1"><h1>Thank you!</h1></div><div id="useful-links-resources" class="slide section level2">
 <h1>Useful links / resources</h1>
 <ul>
-<li>the TEI Consortium’s <a href="http://www.tei-c.org/index.xml">website</a> at http://www.tei-c.org/index.xml:
+<li>the TEI Consortium’s <a href="http://www.tei-c.org/index.xml">website</a> at <a href="http://www.tei-c.org/index.xml" class="uri">http://www.tei-c.org/index.xml</a>:
 <ul>
-<li>the <a href="http://www.tei-c.org/Guidelines/P5/">TEI guidelines</a> at http://www.tei-c.org/Guidelines/P5/</li>
-<li><a href="http://www.teibyexample.org/TBE.htm">TEI by Example</a> at http://www.teibyexample.org/TBE.htm</li>
+<li>the <a href="http://www.tei-c.org/Guidelines/P5/">TEI guidelines</a> at <a href="http://www.tei-c.org/Guidelines/P5/" class="uri">http://www.tei-c.org/Guidelines/P5/</a></li>
+<li><a href="http://www.teibyexample.org/TBE.htm">TEI by Example</a> at <a href="http://www.teibyexample.org/TBE.html" class="uri">http://www.teibyexample.org/TBE.html</a></li>
 <li>the TEI mailing list, <script type="text/javascript">
 <!--
 h='&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#46;&#66;&#82;&#x4f;&#x57;&#78;&#46;&#x45;&#68;&#x55;';a='&#64;';n='&#84;&#x45;&#x49;&#x2d;&#76;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
 </script><noscript>&#84;&#x45;&#x49;&#x2d;&#76;&#32;&#x61;&#116;&#32;&#76;&#x49;&#x53;&#84;&#x53;&#x45;&#82;&#86;&#32;&#100;&#x6f;&#116;&#32;&#66;&#82;&#x4f;&#x57;&#78;&#32;&#100;&#x6f;&#116;&#32;&#x45;&#68;&#x55;</noscript></li>
-<li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at http://wiki.tei-c.org/: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at http://wiki.tei-c.org/index.php/TEI_Cheatsheets.</li>
+<li>the <a href="http://wiki.tei-c.org/index.php">TEI wiki</a> at <a href="http://wiki.tei-c.org/" class="uri">http://wiki.tei-c.org/</a>: comprising inter alia <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets">TEI cheatsheets</a> at <a href="http://wiki.tei-c.org/index.php/TEI_Cheatsheets" class="uri">http://wiki.tei-c.org/index.php/TEI_Cheatsheets</a>.</li>
 </ul></li>
-<li>Further resources provided by the TEI council and Oxford computing centre:
+<li>Further resources<!--  provided by the TEI council and Oxford computing centre -->:
 <ul>
-<li><a href="http://www.tei-c.org/Roma/">ROMA</a> at http://www.tei-c.org/Roma/: customising TEI schemas for XML validation</li>
-<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/">OxGarage</a> at http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient/: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.</li>
-<li><a href="http://digital.humanities.ox.ac.uk/dhoxss/">DHOxSS</a> at http://digital.humanities.ox.ac.uk/dhoxss/: providing the material (including slides and exercises) for years of summer schools.</li>
+<li><a href="http://www.tei-c.org/Roma/">ROMA</a> at <a href="http://www.tei-c.org/Roma/" class="uri">http://www.tei-c.org/Roma/</a>: customising TEI schemas for XML validation</li>
+<li><a href="https://oxgarage2.tei-c.org">OxGarage</a> at <a href="https://oxgarage2.tei-c.org" class="uri">https://oxgarage2.tei-c.org</a>: online resource for conversion between common file formats, using TEI P5 as pivot format. Can be used to produce TEI P5 XML from a .docx file.</li>
+<li><a href="http://digital.humanities.ox.ac.uk/dhoxss/">DHOxSS</a> at <a href="http://digital.humanities.ox.ac.uk/dhoxss/" class="uri">http://digital.humanities.ox.ac.uk/dhoxss/</a>: providing the material (including slides and exercises) for years of summer schools.</li>
+<li><a href="https://teach.dariah.eu/">dariahTeach</a>: a number of online courses for TEI</li>
 </ul></li>
 </ul>
+</div><div class="slide section level2">
+
+<p>Slides: <a href="https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html">https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/</a></p>
+<p>The slides are based on material provided by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under a <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> license and have been adopted to the example of Arabic newspapers.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
 </div>
 </body>
 </html>

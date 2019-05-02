@@ -161,18 +161,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     charset="utf-8" type="text/javascript"></script> -->
 </head>
 <body>
-<div class="slide titlepage">
+<!-- <div class="slide titlepage">
   <h1 class="title">TEI@DHIB2019: XML, TEI, and rtl-languages</h1>
   <p class="author">
 Till Grallert
   </p>
   <p class="date">2019-04-23</p>
-</div>
-<div class="slide section level1">
+</div> -->
+<div class="slide titlepage">
 
-<!-- Many slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015. -->
-<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
-<p>The slides are available at <a href="https://www.github.com/tillgrallert/TeachingTei/slides" class="uri">https://www.github.com/tillgrallert/TeachingTei/slides</a>.</p>
+<h2 id="session-three-xml-tei-and-rtl-langugaes">Session three: XML, TEI and rtl-langugaes</h2>
+<p>Till Grallert, Orient-Institut Beirut (OIB)</p>
+<p>Digital Humanities Institute — Beirut 2019</p>
+<p>Slides: <a href="https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html">https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/</a></p>
 <h2 id="xml-unicode-arabic">XML, Unicode, Arabic</h2>
 <ul>
 <li>The <strong>good</strong>: XML follows the Unicode standard by design!</li>
@@ -259,7 +260,7 @@ Till Grallert
 <ol start="2" style="list-style-type: decimal">
 <li>add a tiny bit of CSS to the file “tei_oxygen.css” either directly or through the import of an external CSS.</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">[xml\:lang=</span><span class="st">&quot;ar&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang=</span><span class="st">&quot;ota&quot;</span><span class="ex">]</span>{</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">[xml|lang^=</span><span class="st">&quot;ar&quot;</span><span class="ex">]</span>, <span class="ex">[xml|lang^=</span><span class="st">&quot;ota&quot;</span><span class="ex">]</span>{</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">    <span class="kw">direction</span>:<span class="dv">rtl</span>;</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">text-align</span>:<span class="dv">right</span>;</a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="kw">font-family</span>: <span class="dv">Serif</span>, <span class="dv">Sans-Serif</span>;</a>
@@ -267,7 +268,7 @@ Till Grallert
 <a class="sourceLine" id="cb2-6" data-line-number="6">    <span class="co">/*In CSS nested relative sizes accumulate*/</span></a>
 <a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="co">/*font-size:120%;*/</span></a>
 <a class="sourceLine" id="cb2-8" data-line-number="8">}</a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="ex">[xml\:lang=</span><span class="st">&quot;en&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang=</span><span class="st">&quot;fr&quot;</span><span class="ex">]</span>, <span class="ex">[xml\:lang*=</span><span class="st">&quot;-Latn-&quot;</span><span class="ex">]</span>{</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="ex">[xml|lang^=</span><span class="st">&quot;en&quot;</span><span class="ex">]</span>, <span class="ex">[xml|lang^=</span><span class="st">&quot;fr&quot;</span><span class="ex">]</span>, <span class="ex">[xml|lang*=</span><span class="st">&quot;-Latn-&quot;</span><span class="ex">]</span>{</a>
 <a class="sourceLine" id="cb2-10" data-line-number="10">    <span class="kw">direction</span>:<span class="dv">ltr</span>;</a>
 <a class="sourceLine" id="cb2-11" data-line-number="11">    <span class="kw">text-align</span>:<span class="dv">left</span>;</a>
 <a class="sourceLine" id="cb2-12" data-line-number="12">    <span class="kw">font-family</span>: <span class="dv">Serif</span>, <span class="dv">Sans-Serif</span>;</a>
@@ -568,6 +569,10 @@ Till Grallert
 <a class="sourceLine" id="cb22-8" data-line-number="8">        <span class="kw">&lt;lb/&gt;</span>الاصدقاء فنهنئه بالعود سالماً<span class="kw">&lt;/p&gt;</span></a>
 <a class="sourceLine" id="cb22-9" data-line-number="9">    <span class="kw">&lt;ab</span><span class="ot"> rend=</span><span class="st">&quot;center&quot;</span><span class="kw">&gt;</span>---<span class="kw">&lt;/ab&gt;</span></a>
 <a class="sourceLine" id="cb22-10" data-line-number="10"><span class="kw">&lt;/div&gt;</span></a></code></pre></div>
+<h2 id="thank-you">Thank you</h2>
+<p>Slides: <a href="https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html">https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/</a></p>
+<p>Some of the slides are based on material provided by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under a <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> license.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, and <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>.</p>
 </div>
 </body>
 </html>

@@ -4,12 +4,13 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
+## Session three: XML, TEI and rtl-langugaes
 
-<!-- Many slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the needs of the 2015 Introduction to TEI and Arabic texts at DHIB 2015, DHSI 2015, and DH workshop in Leipzig 2015. -->
+Till Grallert, Orient-Institut Beirut (OIB)
 
-Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)[Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Digital Humanities Institute --- Beirut 2019
 
-The slides are available at [https://www.github.com/tillgrallert/TeachingTei/slides](https://www.github.com/tillgrallert/TeachingTei/slides).
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
 
 ## XML, Unicode, Arabic
 
@@ -101,7 +102,7 @@ oXygen supports bidirectional texts already for a couple of years and correctly 
 2. add a tiny bit of CSS to the file "tei_oxygen.css" either directly or through the import of an external CSS.
 
 ```css
-[xml\:lang="ar"], [xml\:lang="ota"]{
+[xml|lang^="ar"], [xml|lang^="ota"]{
     direction:rtl;
     text-align:right;
     font-family: Serif, Sans-Serif;
@@ -109,7 +110,7 @@ oXygen supports bidirectional texts already for a couple of years and correctly 
     /*In CSS nested relative sizes accumulate*/
     /*font-size:120%;*/
 }
-[xml\:lang="en"], [xml\:lang="fr"], [xml\:lang*="-Latn-"]{
+[xml|lang^="en"], [xml|lang^="fr"], [xml|lang*="-Latn-"]{
     direction:ltr;
     text-align:left;
     font-family: Serif, Sans-Serif;
@@ -492,3 +493,11 @@ Note: The official **XPath** specifications have a bug that prevents the computa
     <ab rend="center">---</ab>
 </div>
 ```
+
+## Thank you
+
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
+
+Some of the slides are based on material provided by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under a [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/) license.
+
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).

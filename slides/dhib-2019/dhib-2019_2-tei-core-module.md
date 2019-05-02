@@ -4,9 +4,14 @@ author: Till Grallert
 date: 2019-04-23
 ---
 
-The slides are based on those supplied by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under the [Creative Commons Attribution](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
+## Session two: The TEI core module
 
-Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
+Till Grallert, Orient-Institut Beirut (OIB)
+
+Digital Humanities Institute --- Beirut 2019
+
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
+
 
 # Introduction: what to mark-up
 ## Manuscripts:
@@ -80,6 +85,10 @@ Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdo
     + lines
     + paragraphs
     + and more...
+
+## Get your pens ready!
+
+Let's mark up some paper copies ...
 
 # The document structure
 ## The document structure
@@ -815,9 +824,13 @@ Example
 </lg>
 ``` -->
 
-## Next
+## Thank you!
 
-And now we're going to move on to an exercise where you get to apply some of the more structural elements you have learned about.
+Slides: [https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/](https://tillgrallert.github.io/TeachingTei/slides/dhib-2019/index.html)
+
+The slides are based on material provided by the various [Digital Humanities Summer Schools at the University of Oxford](http://digital.humanities.ox.ac.uk/dhoxss/) under a [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/) license and have been adopted to the example of Arabic newspapers.
+
+Slides were produced using [MultiMarkdown](http://fletcherpenney.net/multimarkdown/), [Pandoc](http://johnmacfarlane.net/pandoc/), and [Slidy JS](https://www.w3.org/Talks/Tools/Slidy/slidy.js).
 
 <!-- Exercise: structural markup. We start with paper copies of the newspapers and draw shapes on them. We then try to replicate some of the structure within oXygen by first generating the skeleton structure and then pasting plain text into this model structure. Otherwise, we can also start by subdividing an XML file containing text() -->
 
