@@ -449,7 +449,7 @@ All other calendars--in our case this means *hijrī*, *mālī*, and *rūmī*--sh
 - `@datingMethod`: supplies a pointer to a `<calendar>` element or other means of interpreting the values of the custom dating attributes:
     + the members of `att.datable.custom`: `@when-custom`, `@notBefore-custom` etc.
 
-# #The islamic calendar: *hijrī*
+## The islamic calendar: *hijrī*
 
 ```xml
 <calendar xml:id="cal_islamic">

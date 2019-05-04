@@ -8,24 +8,90 @@
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Till Grallert" />
   <title>Tei@DHSI 5 — XSLT and XPath</title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
    href="../css/slidy_custom_sh.css" />
-  <!-- this loads the jQuery library amd the jQuery syntax highlighter -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.snippet.js" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="../css/jquery.snippet.css" />
-  <script type="text/javascript">
-              $(document).ready(function(){
-      
-      $("pre").snippet("xml",{style:"emacs", collapse:false,menu:false,transparent:false,showNum:false});
-          // Finds <pre> element
-          // and snippet highlights the CSS code within
-          // using the "emacs" styling.
-      });
-      </script>
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+  <meta name="copyright" content="CC BY-SA 4.0" />
+  <style type="text/css">
+  /* these styles mirror oXygen's highlight colours for XML */
+  pre.sourceCode {
+      background-color:white;
+  }
+  code.sourceCode {
+      font-weight:normal;
+      color: black;
+  }
+  /* provide a readible font-size */
+  .sourceCode * {
+      font-size: 16px;
+  }
+  /* xml element names */
+  .xml > code span.kw {
+  	/*color: #0F0F9C;*/
+  	color: #000096;
+  	font-weight: bold;
+  }
+  /* xml attribute names */
+  .xml > code span.ot {
+  	/*color:#FF8041;*/
+  	color: #FF9159;
+  }
+  /* xml attribute values */
+  .xml > code span.st {
+  	/*color:#993300;*/
+  	color: #993300;
+  }
+  /* xml comments */
+  .xml > code span.co {
+  	/*color:#167116;*/
+  	color: #2F8132;
+  	font-style: italic;
+  }
+  /* xml computing instructions: not implemented in Pandoc syntax highlighting */
+  /* .xml > code > span {
+  	color:#9132CC;
+  } */
+  </style>
+  <style type="text/css">
+  /* styles to split a slide into columns */
+  div.c_width-60 {
+      width:66%;
+      position: relative;
+      float: left;
+  }
+  div.c_width-50 {
+      width:50%;
+      position: relative;
+      float: left;
+  }
+  div.c_width-30 {
+      width:33%;
+      position: relative;
+      float: left;
+  }
+  div.c_left {
+      display: block;
+      float:left;
+  }
+  div.c_right {
+      display: block;
+      float: right;
+  }
+  </style>
+  <style type="text/css">
+  .cImportant {
+  	color:red;
+  }
+  </style>
+  <script type="text/javascript" src="../js/slidy.js"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
@@ -39,7 +105,7 @@ Till Grallert
 <div id="topic-putting-the-files-to-use-xpath-and-xslt" class="slide section level1">
 <h1>Topic: Putting the files to use: XPath and XSLT</h1>
 <p>The slides are based on those supplied by the various <a href="http://digital.humanities.ox.ac.uk/dhoxss/">Digital Humanities Summer Schools at the University of Oxford</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution</a> license and have been adopted to the needs of the 2015 Introduction to TEI at DHSI.</p>
-<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkDown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
+<p>Slides were produced using <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>, <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>, <a href="https://www.w3.org/Talks/Tools/Slidy/slidy.js">Slidy JS</a>, and the <a href="http://steamdev.com/snippet/">Snippet</a> jQuery Syntax highlighter.</p>
 </div>
 <div id="what-is-the-xsl-family" class="slide section level1">
 <h1>What is the XSL family?</h1>
@@ -152,9 +218,9 @@ Till Grallert
 <div id="important-magic" class="slide section level1">
 <h1>Important “magic”</h1>
 <p>Our examples and exercises all start with two important attributes on <code>&lt;stylesheet&gt;</code>:</p>
-<pre><code>&lt;xsl:stylesheet 
-    xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; 
-    xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot; 
+<pre><code>&lt;xsl:stylesheet
+    xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;
+    xpath-default-namespace=&quot;http://www.tei-c.org/ns/1.0&quot;
     version=&quot;2.0&quot;&gt;</code></pre>
 <p>This indicates that</p>
 <ol style="list-style-type: decimal">
@@ -226,30 +292,30 @@ Till Grallert
 <table>
 <thead>
 <tr class="header">
-<th align="left">expression</th>
-<th align="left">meaning</th>
+<th>expression</th>
+<th>meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">/</td>
-<td align="left">the root of document (outside the root element)</td>
+<td>/</td>
+<td>the root of document (outside the root element)</td>
 </tr>
 <tr class="even">
-<td align="left">*</td>
-<td align="left">any element</td>
+<td>*</td>
+<td>any element</td>
 </tr>
 <tr class="odd">
-<td align="left">text()</td>
-<td align="left">only the text content of a node</td>
+<td>text()</td>
+<td>only the text content of a node</td>
 </tr>
 <tr class="even">
-<td align="left">name</td>
-<td align="left">an element called <code>name</code></td>
+<td>name</td>
+<td>an element called <code>name</code></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="citation">@name</span></td>
-<td align="left">an attribute called <code>name</code></td>
+<td><span class="citation">@name</span></td>
+<td>an attribute called <code>name</code></td>
 </tr>
 </tbody>
 </table>
@@ -289,157 +355,183 @@ Till Grallert
 <div id="example-xpath-expressions" class="slide section level1">
 <h1>Example XPath expressions</h1>
 <div class="figure">
-<img src="../images/XPathExercise01.png" alt="XPathExercise 01" /><p class="caption">XPathExercise 01</p>
+<img src="../images/XPathExercise01.png" alt="XPathExercise 01" />
+<p class="caption">XPathExercise 01</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise02.png" alt="XPathExercise 02" /><p class="caption">XPathExercise 02</p>
+<img src="../images/XPathExercise02.png" alt="XPathExercise 02" />
+<p class="caption">XPathExercise 02</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise03.png" alt="XPathExercise 03" /><p class="caption">XPathExercise 03</p>
+<img src="../images/XPathExercise03.png" alt="XPathExercise 03" />
+<p class="caption">XPathExercise 03</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise04.png" alt="XPathExercise 04" /><p class="caption">XPathExercise 04</p>
+<img src="../images/XPathExercise04.png" alt="XPathExercise 04" />
+<p class="caption">XPathExercise 04</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise05.png" alt="XPathExercise 05" /><p class="caption">XPathExercise 05</p>
+<img src="../images/XPathExercise05.png" alt="XPathExercise 05" />
+<p class="caption">XPathExercise 05</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise06.png" alt="XPathExercise 06" /><p class="caption">XPathExercise 06</p>
+<img src="../images/XPathExercise06.png" alt="XPathExercise 06" />
+<p class="caption">XPathExercise 06</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise07.png" alt="XPathExercise 07" /><p class="caption">XPathExercise 07</p>
+<img src="../images/XPathExercise07.png" alt="XPathExercise 07" />
+<p class="caption">XPathExercise 07</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise08.png" alt="XPathExercise 08" /><p class="caption">XPathExercise 08</p>
+<img src="../images/XPathExercise08.png" alt="XPathExercise 08" />
+<p class="caption">XPathExercise 08</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise09.png" alt="XPathExercise 09" /><p class="caption">XPathExercise 09</p>
+<img src="../images/XPathExercise09.png" alt="XPathExercise 09" />
+<p class="caption">XPathExercise 09</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise10.png" alt="XPathExercise 10" /><p class="caption">XPathExercise 10</p>
+<img src="../images/XPathExercise10.png" alt="XPathExercise 10" />
+<p class="caption">XPathExercise 10</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise11.png" alt="XPathExercise 11" /><p class="caption">XPathExercise 11</p>
+<img src="../images/XPathExercise11.png" alt="XPathExercise 11" />
+<p class="caption">XPathExercise 11</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise12.png" alt="XPathExercise 12" /><p class="caption">XPathExercise 12</p>
+<img src="../images/XPathExercise12.png" alt="XPathExercise 12" />
+<p class="caption">XPathExercise 12</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise13.png" alt="XPathExercise 13" /><p class="caption">XPathExercise 13</p>
+<img src="../images/XPathExercise13.png" alt="XPathExercise 13" />
+<p class="caption">XPathExercise 13</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise14.png" alt="XPathExercise 14" /><p class="caption">XPathExercise 14</p>
+<img src="../images/XPathExercise14.png" alt="XPathExercise 14" />
+<p class="caption">XPathExercise 14</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise15.png" alt="XPathExercise 15" /><p class="caption">XPathExercise 15</p>
+<img src="../images/XPathExercise15.png" alt="XPathExercise 15" />
+<p class="caption">XPathExercise 15</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise16.png" alt="XPathExercise 16" /><p class="caption">XPathExercise 16</p>
+<img src="../images/XPathExercise16.png" alt="XPathExercise 16" />
+<p class="caption">XPathExercise 16</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise17.png" alt="XPathExercise 17" /><p class="caption">XPathExercise 17</p>
+<img src="../images/XPathExercise17.png" alt="XPathExercise 17" />
+<p class="caption">XPathExercise 17</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise18.png" alt="XPathExercise 18" /><p class="caption">XPathExercise 18</p>
+<img src="../images/XPathExercise18.png" alt="XPathExercise 18" />
+<p class="caption">XPathExercise 18</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise19.png" alt="XPathExercise 19" /><p class="caption">XPathExercise 19</p>
+<img src="../images/XPathExercise19.png" alt="XPathExercise 19" />
+<p class="caption">XPathExercise 19</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise20.png" alt="XPathExercise 20" /><p class="caption">XPathExercise 20</p>
+<img src="../images/XPathExercise20.png" alt="XPathExercise 20" />
+<p class="caption">XPathExercise 20</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise21.png" alt="XPathExercise 21" /><p class="caption">XPathExercise 21</p>
+<img src="../images/XPathExercise21.png" alt="XPathExercise 21" />
+<p class="caption">XPathExercise 21</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise22.png" alt="XPathExercise 22" /><p class="caption">XPathExercise 22</p>
+<img src="../images/XPathExercise22.png" alt="XPathExercise 22" />
+<p class="caption">XPathExercise 22</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise23.png" alt="XPathExercise 23" /><p class="caption">XPathExercise 23</p>
+<img src="../images/XPathExercise23.png" alt="XPathExercise 23" />
+<p class="caption">XPathExercise 23</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise24.png" alt="XPathExercise 24" /><p class="caption">XPathExercise 24</p>
+<img src="../images/XPathExercise24.png" alt="XPathExercise 24" />
+<p class="caption">XPathExercise 24</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise25.png" alt="XPathExercise 25" /><p class="caption">XPathExercise 25</p>
+<img src="../images/XPathExercise25.png" alt="XPathExercise 25" />
+<p class="caption">XPathExercise 25</p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="../images/XPathExercise26.png" alt="XPathExercise 26" /><p class="caption">XPathExercise 26</p>
+<img src="../images/XPathExercise26.png" alt="XPathExercise 26" />
+<p class="caption">XPathExercise 26</p>
 </div>
 </div>
 <div id="xpath-more-about-paths" class="slide section level1">
@@ -530,7 +622,7 @@ Till Grallert
 <pre><code>&lt;xsl:template match=&quot;name&quot; priority=&quot;1&quot;&gt;
     &lt;xsl:apply-templates/&gt;
 &lt;/xsl:template&gt;
-&lt;xsl:template match=&quot;person/name&quot; priority=&quot;2&quot;&gt; 
+&lt;xsl:template match=&quot;person/name&quot; priority=&quot;2&quot;&gt;
     A name
 &lt;/xsl:template&gt;</code></pre>
 </div>
@@ -661,8 +753,8 @@ Till Grallert
 <div id="useful-links" class="slide section level1">
 <h1>Useful links</h1>
 <ul>
-<li><a href="http://dcl.slis.indiana.edu/teibp/">TEI boilerplate</a> at <a href="http://teiboilerplate.org/">http://teiboilerplate.org/</a>: a leight-weight solution for publishing styled TEI P5 content directly in modern web browsers (the implementation uses XSL which is processed by the browser).</li>
-<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient">OxGarage</a> at <a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient">http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient</a>: a web interface to the XSL stylesheets and its profiles
+<li><a href="http://dcl.slis.indiana.edu/teibp/">TEI boilerplate</a> at <a href="http://teiboilerplate.org/" class="uri">http://teiboilerplate.org/</a>: a leight-weight solution for publishing styled TEI P5 content directly in modern web browsers (the implementation uses XSL which is processed by the browser).</li>
+<li><a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient">OxGarage</a> at <a href="http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient" class="uri">http://oxgarage.oucs.ox.ac.uk:8080/ege-webclient</a>: a web interface to the XSL stylesheets and its profiles
 <ul>
 <li>generate schemas using the same tools as Roma</li>
 <li>convert documentation to HTML, ePub, and DOCX</li>
